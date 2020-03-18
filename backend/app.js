@@ -29,10 +29,10 @@ mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useFindAndMo
 
 
 app.use(cookieParser());
-app.use((req, res, next) => {
-    console.log(req.cookies);
-    next();
-});
+// app.use((req, res, next) => {
+//     console.log(req.cookies);
+//     next();
+// });
 app.use('/api/v1/users', userRouter);
 app.use('/', viewRouter);
 

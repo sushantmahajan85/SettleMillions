@@ -2,7 +2,7 @@ const passvalue = async (email, password) => {
     try {
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:7000/api/v1/users/login',
+            url: 'http://127.0.0.1:4000/api/v1/users/login',
             data: {
                 email,
                 password

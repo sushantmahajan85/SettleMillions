@@ -1,0 +1,42 @@
+.footer-box1{
+    @include respond(phone){
+    margin-left: 3.5rem;
+      }
+}
+.footer-box2{
+  
+    @include respond(phone){
+        margin-left: 3.5rem;
+      }
+    }
+.footer-box3{
+  
+    @include respond(phone){
+        margin-left: 3.5rem;
+          }
+}
+.footer-box4{
+  
+    @include respond(phone){
+        margin-left: 3.5rem;
+          }
+}
+.footer_text{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border-bottom: 0.6px dotted gray;
+    padding: 1rem;
+}
+.footer_para{
+    color:whitesmoke;
+  line-height: 2rem;
+    padding: 0.4rem;
+  font-size: 1.5rem;  
+    font-family: 'Signika';
+    display: inline-block;
+    
+    @include respond(phone){
+        // width: 80%;
+      }
+}

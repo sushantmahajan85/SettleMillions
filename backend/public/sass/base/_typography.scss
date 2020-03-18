@@ -1,0 +1,166 @@
+.heading-main {
+  font-weight: 400;
+  font-size: 5rem;
+  color: rgb(59, 59, 59);
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+  font-family: "Signika", "Amaranth";
+  border-bottom: 1.2px solid grey;
+  padding-bottom: 1rem;
+
+  @include respond(tab-land) {
+    text-align: center;
+  }
+}
+.paragraph {
+  font-size: 1.75rem;
+
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #555555;
+  line-height: 3rem;
+  @include respond(tab-land) {
+    text-align: center;
+  }
+  //  @include respond(achi){
+  //   text-align: center;
+  //  }
+
+  @include respond(tab-port) {
+    font-size: 1.8rem !important;
+  }
+  @include respond(achi2) {
+    text-align: center;
+    line-height: 2.6rem;
+    font-size: 1.4rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+.events_para {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin-bottom: -2rem;
+}
+.event_text {
+  text-align: center;
+}
+.heading-secondary {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 3.8rem;
+  margin-top: 3rem;
+  font-family: "Signika", sans-serif;
+  // -webkit-background-clip: text;
+  // color: transparent;
+  //   background-image: linear-gradient(to right ,rgb(148, 148, 147), rgb(73, 73, 72));
+
+  margin-bottom: 5rem;
+  transition: all 0.3s;
+  @include respond(tab-port) {
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+  @include respond(phone) {
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  /* &:hover{
+transform:  scale(1.3);
+text-shadow: 1rem 3rem 5rem
+rgba(0, 0, 0, 0.349);
+
+} */
+}
+.footer {
+  background-color: #292825;
+  padding: 13rem 0 2rem 0;
+
+  font-family: "Signika", "Amaranth";
+  @include respond(phone) {
+    padding: 15rem 0 0.5rem 0;
+  }
+  font-size: 1.7rem;
+  &_logo-box {
+    margin-top: -16rem;
+    text-align: center;
+    padding: 5rem;
+  }
+  &_logo {
+    height: auto;
+    width: 18rem;
+  }
+
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.copyright {
+  border-top: 1.5px dotted grey;
+  padding-top: 1rem;
+
+  font-family: "Signika", "Amaranth";
+  &_text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: lightgrey;
+
+    display: block;
+    font-weight: 500;
+    @include respond(tab-port) {
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
+  &_span {
+    display: block;
+
+    right: 0;
+  }
+  &_link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: tan;
+
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.center {
+  text-align: center;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem;
+  }
+}
+.youtube {
+  text-align: center;
+  overflow: hidden;
+  @include respond(tab-port) {
+    height: 220px;
+    width: 310px;
+    margin-top: 2rem;
+  }
+}
+.width {
+  @include respond(tab-port) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.phone_center {
+  @include respond(tab-port) {
+    margin-top: -8rem;
+    margin-left: 21rem;
+  }
+}

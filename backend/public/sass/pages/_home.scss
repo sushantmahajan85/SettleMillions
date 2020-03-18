@@ -1,0 +1,19 @@
+.section-about{
+    background-color: #ffffff;
+    // background-image: url(../img/pattern.jpg);
+    padding: 30rem 0 1rem 0;
+    // background-image: url(../img/20087.jpg);
+     
+
+     
+    margin-top: -30vh;
+    @include respond (tab-land){
+        padding: 25rem 0 1rem 0;
+      }
+    @include respond (tab-port){
+        padding: 34rem 0 1rem 0;
+      }
+      @include respond (phone){
+        padding: 37rem 0 1rem 0;
+      }
+}

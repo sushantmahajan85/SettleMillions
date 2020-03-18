@@ -1,0 +1,19 @@
+
+    ::selection{
+        color: red;
+    }
+ .apply{
+     padding: 1.5rem 2.3rem;
+     background-color: gray;
+     color: black;
+     font-size: 1.6rem;
+     font-weight: 800;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+position: absolute;
+top: 100%;
+right: 5%;
+&:hover{
+    color: white;
+    background-color: red;
+}
+ }

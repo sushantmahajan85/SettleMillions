@@ -1,0 +1,36 @@
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box; 
+  backface-visibility: hidden;}
+    html{
+      font-size: 62.5%;
+      backface-visibility: hidden;
+      @include respond(tab-land){
+        font-size: 60.25%;
+      }
+     
+      @include respond(tab-port){
+        font-size: 50%;
+      }
+      @include respond(phone){
+        font-size: 43.625%;
+      }
+      @include respond(small-phone){
+        font-size: 35.625%;
+      }
+      @include respond(big-desktop){
+        font-size: 75%;
+        }
+    }
+  
+  body {
+    background-size: cover;
+    backface-visibility: hidden;
+
+ 
+  }
+  .popup_image{
+    transition:all 0.4s; 
+  }

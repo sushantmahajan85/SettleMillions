@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="sass/css/style.css">
+        <link rel="shortcut icon" type="image/png" href="sass/img/favicon.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+        <title>Thapar Toastmasters</title>
+       
+    
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
+	<script type="text/javascript" src="engine0/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<!--script type="text/javascript" src="engine1/jquery.js"></script-->
+	<!-- End WOWSlider.com HEAD section --></head>
+    <body >
+        
+        <div class="navi">
+            <img src="sass/img/Black-and-White-Logo-PNG.png" alt="#" class="navi_logo">
+<ul class="navi_list">
+    <li class="navi_item" style="border-bottom: 1px solid grey; margin-bottom: 0.3rem"><a href="#" class="navi_listed">ABOUT</a></li>
+    <li class="navi_item"><a href="#" class="navi_listed">EVENTS</a></li>
+    <li class="navi_item"><a href="#"class="navi_listed">Gallery</a></li>
+    <li class="navi_item"><a href="#" class="navi_listed">TEAM</a></li>
+</ul>
+<div class="navi_member"><a href="sass/login.html" >MEMBER LOGIN</a></div>
+</div>
+            <!-- <div id="mySidenav" class="sidenav" style="z-index: 99999999999999999999999999999999999">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <h3 class="nav_tff"> Thapar Toastmasters</h3>
+                  <div class="navigation_link navigation_item">  <a href="#popup" onclick="closeNav()">About</a>
+                    <a href="events.html" onclick="closeNav()">Events</a>
+                    <a href="#team_section" onclick="closeNav()" style="border-bottom: 1px solid grey ; padding-bottom: 2rem">Gallery</a>
+                    <a href="events.html" onclick="closeNav()">Member Login</a>
+                </div>
+                <h3 class="follow_us">Follow Us On </h3>
+                <div class="nav_logos">
+              <a href="https://www.facebook.com/thaparfoodfestival/" class="fa fa-facebook"></a>    
+              <a href="https://www.instagram.com/thaparfoodfestival/?hl=en" class="fa fa-instagram"></a>
+                </div>
+                  </div>
+                  <span class="nav_loga" style="font-size:30px;cursor:pointer;color:white;position: fixed" onclick="openNav()">&#9776; </span>
+                  
+                  <script>
+                  function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("nav_logo").style.visibility = "hidden";
+                  }
+                  
+                  function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                  }
+                  </script>          
+                -->
+          <header class="header">
+<div class="header_full">
+    <div class="header_left"><div class="header-left_text"><h1 class="thapar">THAPAR <span class="toastmasters">TOASTMASTERS</span> <span class="club">CLUB</span></h1>
+    </div><p class="header_para">WHERE LEADERS ARE MADE</p></div>
+    <div class="header_right"><img src="sass/img/Public-Speaking-Word-Cloud.jpg" alt="#" class="header_pic"></div>
+</div>
+
+          </header>
+          <section class="section-about" id="section-about">
+                <div class="row">
+                        <div class="col-1-of-2">
+                    <h1 class="heading-main">Who are we </h1>
+                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolore quod 
+                        assumenda sequi placeat commodi dignissimos animi? Consequuntur, soluta atque neque dicta doloribus, ad odit a molestiae deleniti perferendis, voluptas consectetur nemo accusamus alias nobis quam delectus laborum fuga, ducimus nesciunt eius earum soluta labore repudiandae dolorum dolores.
+                    </p>
+                    <a href="#" style="text-decoration: none; color: black;
+                     font-size: 1.4rem; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                     Learn More &rarr;</a>
+                        </div>
+                   <div class="col-1-of-2">
+                        <iframe width="560" height="315" style="border-radius: 1rem" src="https://www.youtube-nocookie.com/embed/tCH8VYTOJFM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                   </div>
+
+                        
+                        
+                        </div>
+            </section>
+
+            <section class="wow-slider">
+                <div class="event_text">
+                    <div class="center">
+                    <h1 class="heading-secondary">EVENTS</h1></div>
+                   <div class="row"> <p class="paragraph events_para" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ullam! Quam eum quidem ullam nesciunt corporis quos,
+                         quisquam inventore porro repellat rem! Vero saepe incidunt est eaque repudiandae aperiam architecto!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta esse architecto ipsum minima eos eligendi? Repudiandae ipsa, rem laborum dolore sit nobis, sapiente aut laboriosam dicta, quo architecto asperiores possimus!</p>
+                </div>
+    
+                
+                <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+	</div>
+</section>
+
+<!-- <section class="event">
+    <div class="center">
+    <h1 class="heading-secondary">upcoming meeting</h1></div>
+    <div class="row">
+    <div class="col-1-of-3">
+    <div class="event_left" >
+
+    </div>
+</div>
+<div class="col-1-of-2">
+    <div class="event_right">
+        <div class="text_contain">
+    <div class="heading-small">Theme of the meeting</div>
+    <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, facilis? Sed, numquam? Dolorum, voluptate vitae dolorem laudantium reprehenderit laborum odio numquam cum tempora voluptas sint veritatis, voluptates a iure quidem?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sequi, magnam doloremque, placeat laborum repellat quidem minima dolores dicta, velit accusamus sunt nostrum debitis beatae! Nihil voluptates aliquam aperiam sunt.
+    </p>
+</div>
+    </div>
+</div>
+    </div>
+</section> -->
+
+<section class="achievements">
+        <div class="bg-video">
+                <video  class="bg-video_content" autoplay loop muted>
+                    <source src="sass/img/video.mp4" type="video/mp4">
+                </video>
+            </div>  
+    <div class="center">
+<h1 class="heading-secondary">
+	welcome fellow toastmasters</h1>
+    </div>
+<div class="row">
+    <div class="col-1-of-2 achievements_box1">
+<div class="story">
+<figure class="story_shape">
+    <img src="" alt="#">
+</figure>
+
+<div class="story_content">
+    <h3 class="heading-small">Apply Role</h3>
+    <p class="paragraph" >Lorem ipsum dolorelit. Dignillo minima necessitatibu obcaecati dicta quhjvgh jgcgmcm jfgmcm hjcgjm.</p>
+
+</div>
+</div>
+    </div>
+    <div class="col-1-of-2 achievements_box2">
+            <div class="story">
+                    <figure class="story_shape">
+                        <img src="" alt="#">
+                    </figure>
+                    
+                    <div class="story_content">
+                        <h3 class="heading-small">I just love toastmasters</h3>
+                        <p class="paragraph">Lorem ipsum dolar jkbgerhbghj jkbhkvf tur accusan ueritatis et alias pariatur vel obcaecati dicta quo modi sint aliquam.</p>
+                    </div>
+                    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1-of-2 achievements_box3">
+            <div class="story">
+                    <figure class="story_shape">
+                        <img src="" alt="#">
+                    </figure>
+                    <div class="story_content">
+                        <h3 class="heading-small">I just love toastmasters</h3>
+                        <p class="paragraph">Lorem ipsumissimos cveritatis et alias  jngskjgnk jklbglkjdf jklrgnjkler pariatur vel obcaecati dicta quo modi sint aliquam.</p>
+                    </div>
+                    </div>
+    </div>
+    <div class="col-1-of-2 achievements_box4">
+            <div class="story">
+                    <figure class="story_shape">
+                        <img src="" alt="#">
+                    </figure>
+                    <div class="story_content">
+                        <h3 class="heading-small">I just love toastmasters</h3>
+                        <p class="paragraph ">Lorem ipsum dolor sit veritatis et alias fejkwlger gkjflngj gwjklagn pariatur vel obcaecati dicta quo modi sint aliquam.</p>
+                    </div>
+                    </div>          
+    </div>
+</section>
+
+
+
+<section class="section-contact">
+<div class="section-contact_area">
+    <div class="translate_right  section-contact_left">
+<div class="heading-secondary">reach us out</div>
+<form action="#">
+    
+    <input type="text" placeholder="Your Name" id="name" class="input" required>
+ 
+    <input type="email" placeholder="Your Email" class="input" id="email" required >
+    <input type="text" placeholder="Your Query" class="input" id="query" required >
+    <button class="submit">Submit</button>
+</form>
+</div>
+</div>
+</section>
+
+
+<img src="sass/img/footer-background.jpg" alt="" width="100%" style="margin-bottom: -2rem">
+        <footer class="footer" id="footer">
+<!-- <div class="footer_logo-box">
+    <img src="sass/img/white_logo.png" alt="logo" class="footer_logo"></div> -->
+<div class="row">
+    <div class="col-1-of-4 footer-box1"> 
+        <h2 class="footer_text">CONTACT US</h2> 
+     <p class="footer_para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam blanditiis facilis earum magni quibusdam beatae delectu</p> 
+
+    <p class="footer_para">Email &rarr; abcdefhg@thapar.edu </p> 
+     
+     
+    
+     </div>
+   
+    <div class="col-1-of-4  footer-box2">
+        <h2 class="footer_text">facebook</h2>
+    <i class="fb"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThaparToastmastersClub&tabs=timeline&width=260&height=380&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="260" height="380" style="border:none;overflow:hidden;padding-top: 1rem " scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></i>
+    </div>
+    <div class="col-1-of-4 footer-box3"> 
+        <h2 class="footer_text">instagram</h2>
+     <ul class="insta">     
+         <!-- InstaWidget   -->
+        <iframe id="  6da550fc6c7aea21c02074923a107a19d31304a5502d0e6236dc681f8508d4f9" style="border: 0px; width: 260px; height: 380px;padding-top: 1rem; margin: 0px;" 
+        scrolling="yes" frameborder="no" src="https://instawidget.net/embed?u=6da550fc6c7aea21c02074923a107a19d31304a5502d0e6236dc681f8508d4f9"></iframe>    
+    </ul>
+        
+        </div>
+    <div class="col-1-of-4 
+    footer-box4">
+        <h2 class="footer_text">location</h2>
+    <i class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.9312390990526!2d76.361363700999!3d30.352904031681735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102f534a87b5c5%3A0xda1d3ed337e382b3!2sThapar+University%2C+Prem+Nagar%2C+Patiala%2C+Punjab+147004!5e0!3m2!1sen!2sin!4v1563525294236!5m2!1sen!2sin" width="260" height="380" frameborder="0" style="border:0;  padding-top: 1rem" allowfullscreen></iframe></i>    
+    </div>
+  </div> 
+<div class="copyright">
+
+<div class="copyright_text">&COPY; Copyright THAPAR TOASTMASTERS CLUB<span class="copyright_span">Coded with<span style="color: red; font-size: 2rem"> &hearts;</span> by
+    <a href="https://www.linkedin.com/in/sushant-mahajan-3933b5184/" class="copyright_link sushant" > SusHanT MaHajan 
+         </a> 
+</span></div>
+</div>
+
+        </footer>
+        <div class="popup" id="popup">
+                <div class="section-contact_area">
+                        <div class="translate_right  section-contact_left">
+                            
+                    <a href="#section-about" class="popup_cross">&times;</a>
+                    <div class="heading-secondary">Welcome members</div>
+                    <form action="#">
+                        
+                        <input type="password" placeholder="Your Password"  id="name" class="input" required>
+                     
+                        <button class="submit">Submit</button>
+                    </form>
+                    </div>
+                    </div>
+                    
+            <!-- <div class="popup_content">
+                    
+                       
+                 <div class="popup_left"><img src="sass/img/about2.jpeg" alt="hi" class="popup_img">
+                <img src="sass/img/about3.jpeg" alt="hi" class="popup_img"></div>
+                <div class="popup_right">
+                    <a href="#section-about" class="popup_cross">&times;</a>
+                <h1 class="heading-secondary popup_heading u-centre">about us</h1>
+                <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
+                
+                </div>
+            </div> -->
+        </div>
+        
+                        </body>
+</html>

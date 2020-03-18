@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "toasty": "node-sass  sass/main.scss  sass/css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushantmahajan85/TFF-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sushantmahajan85/TFF-Website/issues"
+  },
+  "homepage": "https://github.com/sushantmahajan85/TFF-Website#readme",
+  "description": ""
+}

@@ -1,0 +1,32 @@
+.event{
+    position: relative;
+    padding: 0 0  70rem 0;
+    &_left{
+background-image: url(../img/postermeeting.jpeg);
+padding: 30rem 20rem;
+background-size: 100% 100%;
+z-index: 99;
+position: absolute;
+// outline: 1rem solid green;
+// outline-offset: 1rem;
+box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.658);
+
+    }
+    &_right{
+padding: 5rem 5rem 10rem 15rem;
+position: absolute;
+top: 44%;
+z-index: 1;
+width: 60%;
+left: 35%;
+box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.651);
+background-color: rgb(228, 226, 226);
+    }
+}
+.wow-slider{
+    padding: 7rem 0;
+    background-color: #f8f9fa;
+    margin-bottom: -6rem;
+    // background-color: #000000;
+// background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  }

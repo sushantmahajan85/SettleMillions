@@ -1,0 +1,81 @@
+.countdown{
+    position: relative;
+background-color: white;
+    padding: 10rem;
+    display: flex;
+@include respond(tab-land){
+    transform: translateY(-22rem);
+    // padding: 9rem;
+  }    
+  @include respond(tab-port){
+    transform: translateY(-11rem);
+    padding: 5.6rem;
+}
+@include respond(achi2){
+    padding-right: 1rem;
+    }
+    &_row{
+        border-radius: 1rem;
+        position: absolute;
+        top: -1.6rem;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.267);
+        padding: 5.7rem 0rem 5.5rem 0rem;
+
+    background-color: white;
+    width: 100%;
+    @include respond(tab-port){
+    padding: 4rem 0 4rem 0;
+}
+    }
+    &_col1{
+padding-right: 6rem;
+@include respond(achi2){
+    padding-right: 1rem;
+    }
+}
+    &_col2{
+    
+        padding-left: 6rem;
+        @include respond(tab-port){
+        padding-left: 0rem;
+        }
+    }
+}
+#clock{
+    display: flex;
+justify-content: space-around;
+flex-direction: row;
+align-items: center;
+align-self: center;
+@include respond(tab-land){
+    justify-content: space-evenly;
+    margin-top: 0rem;
+    transform: translateX(3rem);
+  }
+  @include respond(tab-port){
+    margin-top: -2rem;
+    margin-right: 4rem;
+}
+margin-top: 4rem;
+& div{
+    margin: 2rem;  
+}
+& div span:nth-child(1){
+    display: block;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    color:grey;
+    
+}
+& div span:nth-child(2){
+    display: block;
+    font-size: 1.6rem;
+    color: grey;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+}

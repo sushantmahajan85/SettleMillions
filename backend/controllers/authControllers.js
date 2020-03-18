@@ -105,6 +105,7 @@ exports.login = async (req, res, next) => {
         console.log(error);
     }
 };
+
 exports.protect = async (req, res, next) => {
     try {
         let token;
@@ -129,6 +130,7 @@ exports.protect = async (req, res, next) => {
         console.log(err);
     }
 };
+
 exports.resend = async (req, res, next) => {
     try {
         const { email } = req.body;

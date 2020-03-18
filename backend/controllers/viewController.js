@@ -12,3 +12,6 @@ exports.getVerificationForm = (req, res) => {
 exports.getRecruitmentsData = (req, res) => {
     res.status(200).render('recruitments');
 }
+exports.mainPage = (req, res) => {
+    res.status(200).render('main');
+}

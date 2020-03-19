@@ -1074,7 +1074,7 @@ rgba(0, 0, 0, 0.349);
   font-size: 2rem;
   font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: white;
-  font-weight: 300; }
+  font-weight: 100; }
 
 .u-centre {
   text-align: center; }
@@ -1557,11 +1557,11 @@ rgba(0, 0, 0, 0.349);
 .deal_area_box {
   background-color: white;
   margin: 0.5rem;
-  width: 15%;
+  width: 20%;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 0.5rem black; }
   .deal_area_box_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 10rem 5rem;
+    padding: 13rem;
     border-radius: 1rem;
     background-size: 100% 100%; }

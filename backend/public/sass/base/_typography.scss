@@ -168,6 +168,15 @@ rgba(0, 0, 0, 0.349);
   font-size: 2rem;
   font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
-color: white;
-font-weight: 100                                      ;
+color:black;
+font-weight: 100;                                      
+}
+.content_box{
+  // float: left;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  
+}
+.deal_box_nameTime{
+  margin-bottom: 2rem;
 }

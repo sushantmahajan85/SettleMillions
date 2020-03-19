@@ -1506,6 +1506,12 @@ rgba(0, 0, 0, 0.349);
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+.header_logo-box {
+  padding: 3rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem; }
+
 .header {
   display: flex;
   width: 100%;
@@ -1521,6 +1527,293 @@ rgba(0, 0, 0, 0.349);
     .header .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+
+.follow_us {
+  text-align: start;
+  color: white;
+  font-size: 2.5rem;
+  margin-left: 4rem;
+  margin-top: 4rem; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  font-family: "Signika", Verdana, sans-serif; }
+  @media (max-width: 75em) {
+    .nav {
+      opacity: 0;
+      visibility: none;
+      display: none; } }
+  @media (max-width: 1380px) {
+    .nav .p {
+      font-size: 2rem; }
+    .nav .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  .nav_list {
+    list-style: none;
+    margin-top: 1rem; }
+  .nav_links {
+    display: inline-block;
+    margin-top: -0.3em;
+    font-family: "Signika", Verdana, sans-serif;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400; }
+    .nav_links:hover {
+      color: black;
+      transform: translateY(-0.2rem); }
+    .nav_links:not(:last-child) {
+      margin-right: 3rem;
+      padding-right: 1em; }
+  .nav_logo {
+    margin-left: 2.5rem;
+    margin-top: -1.2rem; }
+
+.login {
+  text-decoration: none;
+  margin-right: 2rem;
+  margin-top: 0.2rem;
+  border-radius: 10rem;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white; }
+  .login:hover {
+    color: black; }
+
+.social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; }
+  .social_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.2rem;
+    width: 50px;
+    height: 50px;
+    align-self: stretch;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 1.5rem;
+    border: 1px solid #fff;
+    margin-right: 3rem;
+    color: #fff;
+    border-radius: 50%; }
+    @media (max-width: 56.25em) {
+      .social_icons {
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .social_icons .p {
+        font-size: 2rem; }
+      .social_icons .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  font-family: "Signika", Verdana, sans-serif;
+  z-index: 10000000000000;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 2.3rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.sidenav a:hover {
+  color: #f1f1f1; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 2.6rem;
+  margin-left: 50px; }
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 2.1rem;
+  background-color: black;
+  position: relative;
+  width: inherit;
+  z-index: 10000;
+  display: none;
+  opacity: 0;
+  visibility: hidden; }
+  @media (max-width: 75em) {
+    #main {
+      opacity: 1;
+      visibility: visible;
+      display: unset;
+      background-color: black; } }
+  @media (max-width: 1380px) {
+    #main .p {
+      font-size: 2rem; }
+    #main .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+  .sidenav a {
+    font-size: 18px; } }
+
+.hamburger {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  color: white;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  z-index: 99; }
+  @media (max-width: 75em) {
+    .hamburger {
+      opacity: 1;
+      visibility: visible;
+      display: inline-block;
+      background-color: black;
+      color: white; } }
+  @media (max-width: 1380px) {
+    .hamburger .p {
+      font-size: 2rem; }
+    .hamburger .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+@media (max-width: 75em) {
+  .logo_phone {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif; } }
+
+@media (max-width: 1380px) {
+  .logo_phone .p {
+    font-size: 2rem; }
+  .logo_phone .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+.navigation_list {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  @media (max-width: 56.25em) {
+    .navigation_list {
+      text-align: start; } }
+  @media (max-width: 1380px) {
+    .navigation_list .p {
+      font-size: 2rem; }
+    .navigation_list .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+.navigation_item {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.8rem;
+  width: 100%; }
+
+.material-icons {
+  color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .material-icons:hover {
+    color: black; }
+
+.nav_tff {
+  text-align: start;
+  color: white;
+  font-size: 2.7rem;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+  font-family: "Signika"; }
+
+.navigation_link:link, .navigation_link:visited {
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 220%;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  transition: all 0.4s; }
+
+.navigation_link:hover, .navigation_link:active {
+  color: gray;
+  background-position: 100%; }
+
+.nav_logos {
+  background-image: none;
+  margin-top: 3.5rem; }
+
+.header_content {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .header_content_main {
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    font-size: 4.4rem;
+    margin-top: -9rem;
+    margin-left: -1.5rem;
+    font-family: "Signika"; }
+  .header_content_small {
+    color: white;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-size: 2.1rem;
+    margin-left: -1.5rem;
+    font-weight: 550;
+    font-family: "Signika";
+    letter-spacing: 0.2rem;
+    word-spacing: 0.3rem; }
+    @media (max-width: 56.25em) {
+      .header_content_small {
+        opacity: 0;
+        visibility: hidden; } }
+    @media (max-width: 1380px) {
+      .header_content_small .p {
+        font-size: 2rem; }
+      .header_content_small .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
 
 .nav-links li, a {
   text-decoration: none;
@@ -1552,9 +1845,7 @@ rgba(0, 0, 0, 0.349);
 
 .deal_area {
   width: 85%;
-  float: right;
-  background-color: #f7eaea;
-  display: flex; }
+  background-color: #d4d3d3; }
   .deal_area_content {
     float: right; }
 
@@ -1605,3 +1896,28 @@ rgba(0, 0, 0, 0.349);
   height: 3.8rem;
   width: 3.8rem;
   float: left; }
+
+.cover {
+  width: 100%;
+  height: 20vh;
+  background-color: orangered; }
+
+.profile_area {
+  width: 100%;
+  height: 10vh;
+  background-color: yellowgreen;
+  display: block; }
+  .profile_area_pic {
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left: 5rem;
+    background-color: black; }
+  .profile_area_subs {
+    float: right;
+    margin-top: 1rem;
+    margin-right: 5rem;
+    padding: 1rem 2rem;
+    background-color: red; }

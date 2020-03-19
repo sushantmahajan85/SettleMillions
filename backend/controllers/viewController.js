@@ -15,3 +15,6 @@ exports.getRecruitmentsData = (req, res) => {
 exports.mainPage = (req, res) => {
     res.status(200).render('main');
 }
+exports.getMemberData = (req, res) => {
+    res.status(200).render('members')
+}

@@ -351,7 +351,7 @@
   width: 85%;
   float: right;
   background-color: chocolate;
-
+  display: flex;
 }
 
 .container{
@@ -363,7 +363,8 @@
 .deal_area_box{
   background-color: white;
   margin: 0.5rem;
-  width: 15%;
+  width: 19%;
+  height: 300px;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 0.5rem black;
   &_img{
@@ -372,4 +373,21 @@
     border-radius: 1rem;
     background-size: 100% 100%;
   }
+}
+
+.deal_box_name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.deal_box_time {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.profile_pic {
+  background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+  // border-radius: 50%;
 }

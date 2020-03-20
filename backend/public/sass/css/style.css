@@ -1864,7 +1864,8 @@ rgba(0, 0, 0, 0.349);
   display: flex;
   flex-direction: row;
   border-radius: 1rem;
-  overflow: hidden; }
+  overflow: hidden;
+  line-height: 1; }
   .deal_area_box_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
     padding: 10rem;
@@ -1875,17 +1876,20 @@ rgba(0, 0, 0, 0.349);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 600;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  margin-bottom: -0.5rem; }
 
 .deal_box_time {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  margin-right: 1rem; }
+  font-size: 13px;
+  margin-right: 1rem;
+  margin-bottom: -0.5rem; }
 
 .deal_box_views {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  margin-right: 1rem; }
+  font-size: 13px;
+  margin-right: 1rem;
+  margin-bottom: -0.5rem; }
 
 .profile_pic {
   border-radius: 50%;
@@ -1922,3 +1926,8 @@ rgba(0, 0, 0, 0.349);
     margin-right: 5rem;
     padding: 1rem 2rem;
     background-color: red; }
+
+.deal_box_description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin-right: 1rem; }

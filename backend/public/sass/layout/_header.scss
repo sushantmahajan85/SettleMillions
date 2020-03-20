@@ -351,7 +351,7 @@
 .deal_area{
   width: 85%;
   // float: right;
-  background-color: rgb(212, 211, 211);
+  background-color: whitesmoke;
   // display: flex;
   &_content{
     // padding: 2rem;
@@ -363,8 +363,8 @@
 .container{
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
 }
 .deal_area_box{
   background-color: white;
@@ -461,8 +461,8 @@
 
 .carousel_container {
   position: relative;
-  width: 30%;
-  height: 70%;
+  width: 43%;
+  height: 75%;
 }
 
 .mySlides {
@@ -540,8 +540,9 @@
 }
 
 .deal_info {
+  width: 35%;
   margin-left: 50rem;
-  margin-top: -45rem;
+  margin-top: -49rem;
 }
 
 .deal_heading {
@@ -551,4 +552,12 @@
 .deal_price {
   font-size: 20px;
   margin-top: 2rem;
+}
+.side_deals{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+  background-color: white;
+  padding-bottom: 5rem;
 }

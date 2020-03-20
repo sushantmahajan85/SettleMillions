@@ -1846,15 +1846,13 @@ rgba(0, 0, 0, 0.349);
 
 .deal_area {
   width: 85%;
-  background-color: #d4d3d3; }
+  background-color: whitesmoke; }
   .deal_area_content {
     float: right; }
 
 .container {
   height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row; }
+  width: 100%; }
 
 .deal_area_box {
   background-color: white;
@@ -1937,8 +1935,8 @@ rgba(0, 0, 0, 0.349);
 
 .carousel_container {
   position: relative;
-  width: 30%;
-  height: 70%; }
+  width: 43%;
+  height: 75%; }
 
 .mySlides {
   display: none; }
@@ -2003,8 +2001,9 @@ rgba(0, 0, 0, 0.349);
   margin-top: -5rem; }
 
 .deal_info {
+  width: 35%;
   margin-left: 50rem;
-  margin-top: -45rem; }
+  margin-top: -49rem; }
 
 .deal_heading {
   font-size: 25px; }
@@ -2012,3 +2011,11 @@ rgba(0, 0, 0, 0.349);
 .deal_price {
   font-size: 20px;
   margin-top: 2rem; }
+
+.side_deals {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+  background-color: white;
+  padding-bottom: 5rem; }

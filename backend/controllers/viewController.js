@@ -18,3 +18,6 @@ exports.mainPage = (req, res) => {
 exports.getMemberData = (req, res) => {
     res.status(200).render('members')
 }
+exports.dealPage = (req, res) => {
+    res.status(200).render('deal');
+}

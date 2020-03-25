@@ -55,7 +55,6 @@ userSchema.pre('save', async function (next) {
     this.verification_token = random();
     this.verification_token_time = Date.now() + 10 * 60 * 1000;
     this.timeStamp = Date.now();
-
     next();
 });
 userSchema.post('save', async function () {
@@ -66,7 +65,6 @@ userSchema.post('save', async function () {
         subject: 'your 5 digit otp valid for 10 mins only',
         message
     });
-
 });
 userSchema.methods.verifyPassword = async function (LoginPassword, signUpPassword) {
     return await bcrypt.compare(LoginPassword, signUpPassword);

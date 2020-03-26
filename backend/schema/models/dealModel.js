@@ -58,7 +58,11 @@ const dealSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    corouselImgs: Array
+    corouselImgs: Array,
+    seller: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User'
+    }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
 const Deal = mongoose.model('Deal', dealSchema);

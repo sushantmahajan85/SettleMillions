@@ -1,6 +1,6 @@
 const express = require('express');
 const fs = require('fs');
-const User = require('../schema/models/User');
+const User = require('../schema/models/userModel');
 
 // const userData = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/userData.json`));
 

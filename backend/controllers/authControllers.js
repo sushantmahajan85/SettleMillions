@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
-const User = require('../schema/models/User');
+const User = require('../schema/models/userModel');
 const AppError = require('../utils/appError');
 const sendEmail = require('../utils/email');
 const random = require('../utils/utils');

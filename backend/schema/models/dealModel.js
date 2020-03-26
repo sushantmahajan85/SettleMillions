@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 
-
-
-
 const dealSchema = new mongoose.Schema({
     category: {
         type: String,
@@ -12,7 +9,7 @@ const dealSchema = new mongoose.Schema({
         type: String,
         // default
     },
-    corouselImgs: Array,
+
     affiliateLink: {
         type: URL,
         required: true
@@ -61,7 +58,8 @@ const dealSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    corouselImgs: Array
+}, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
-
-
-}) 
+const Deal = mongoose.model('Deal', dealSchema);
+module.exports = Deal;

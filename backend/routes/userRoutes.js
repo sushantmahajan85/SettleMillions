@@ -30,7 +30,7 @@ router.delete('/deleteMe', userController.deleteMe);
 router.post('/resend', authController.resend);
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-router.use(authController.restrictTo('admin'));
+// router.use(authController.restrictTo('admin'));
 
 router.route('/')
    .get(userController.getAllUsers)

@@ -14,7 +14,7 @@ router.route('/')
    .get(dealController.getAllDeals)
    .post(
       authController.protect,
-      authController.restrictTo('admin'),
+      authController.restrictTo('user'),
       dealController.createDeal);
 
 router.route('/:id')

@@ -7,11 +7,11 @@ const dealSchema = new mongoose.Schema({
     },
     titleImg: {
         type: String,
-        // default
+        default: 'corona.jpg'
     },
 
     affiliateLink: {
-        type: URL,
+        type: String,
         required: true
     },
     views: String,

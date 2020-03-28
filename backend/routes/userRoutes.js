@@ -3,8 +3,12 @@ const express = require('express');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
+const dealRouter = require('../routes/dealRoutes');
+
 //bring back the user router from appjs
 const router = express.Router();
+
+router.use('/:userId/deals', dealRouter);
 
 router.route('/signup').delete(authController.resend).post(authController.signUp);
 router.post('/verify', authController.verify);
@@ -30,7 +34,7 @@ router.delete('/deleteMe', userController.deleteMe);
 router.post('/resend', authController.resend);
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-//router.use(authController.restrictTo('admin'));
+// router.use(authController.restrictTo('admin'));
 
 router.route('/')
    .get(userController.getAllUsers)

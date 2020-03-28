@@ -47,7 +47,8 @@ const userSchema = new mongoose.Schema({
         default: false
     },
     verification_token: {
-        type: Number
+        type: Number,
+        select: false
     },
     verification_token_time: {
         type: Date

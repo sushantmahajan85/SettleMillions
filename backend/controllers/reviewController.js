@@ -1,5 +1,5 @@
 const fs = require('fs');
-const Review = require('./../models/reviewModel');
+const Review = require('./../schema/models/reviewModel');
 const catchAsync = require('./../utils/catchAsync');
 const factory = require('./handlerFactory');
 

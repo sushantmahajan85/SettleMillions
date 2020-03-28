@@ -6,7 +6,7 @@ const authController = require('./../controllers/authController');
 
 const reviewRouter = require('./reviewRoutes');
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
 router.use('/:dealId/reviews', reviewRouter);
 
@@ -14,7 +14,7 @@ router.route('/')
    .get(dealController.getAllDeals)
    .post(
       authController.protect,
-      authController.restrictTo('admin'),
+      authController.restrictTo('user'),
       dealController.createDeal);
 
 router.route('/:id')

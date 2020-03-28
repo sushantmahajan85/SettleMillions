@@ -4,10 +4,11 @@ const express = require('express');
 const dealController = require('./../controllers/dealController');
 const authController = require('./../controllers/authController');
 
+const likedDealRouter = require('./likedDealRoutes');
 const reviewRouter = require('./reviewRoutes');
 
 const router = express.Router({ mergeParams: true });
-
+router.use('/:dealId/likedDeals', likedDealRouter);
 router.use('/:dealId/reviews', reviewRouter);
 
 router.route('/')

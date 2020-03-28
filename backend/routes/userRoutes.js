@@ -1,5 +1,6 @@
 const express = require('express');
 
+const subscribeRouter = require('../routes/subscribeRoutes');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
@@ -9,6 +10,7 @@ const dealRouter = require('../routes/dealRoutes');
 const router = express.Router();
 
 router.use('/:userId/deals', dealRouter);
+router.use('/:userId/subscriber', subscribeRouter);
 
 router.route('/signup').delete(authController.resend).post(authController.signUp);
 router.post('/verify', authController.verify);

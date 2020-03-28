@@ -1,7 +1,7 @@
 const fs = require('fs');
 // const multer = require('multer');
 // const sharp = require('sharp');
-const Deal = require('./../models/dealModel');
+const Deal = require('./../schema/models/dealModel');
 
 const factory = require('./handlerFactory');
 

@@ -22,8 +22,8 @@ router.route('/:id')
    .patch(
       authController.protect,
       authController.restrictTo('admin'),
-      dealController.uploadDealImages,
-      dealController.resizeDealImages,
+      // dealController.uploadDealImages,
+      // dealController.resizeDealImages,
       dealController.updateDeal)
    .delete(authController.protect, authController.restrictTo('admin'), dealController.deleteDeal);
 

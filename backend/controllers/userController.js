@@ -1,7 +1,7 @@
 const fs = require('fs');
 // const multer = require('multer');
 // const sharp = require('sharp');
-const User = require('./../models/userModel');
+const User = require('./../schema/models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const appError = require('./../utils/appError');
 const factory = require('./handlerFactory');
@@ -22,7 +22,6 @@ exports.getAllUsers = factory.getAll(User);
 
 exports.getMe = (req, res, next) => {
     req.params.id = req.user.id;
-
     next();
 };
 

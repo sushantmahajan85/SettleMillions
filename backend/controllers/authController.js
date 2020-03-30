@@ -16,7 +16,8 @@ exports.signUp = async (req, res) => {
             name: req.body.name,
             password: req.body.password,
             email: req.body.email,
-            phoneNo: req.body.phoneNo
+            phoneNo: req.body.phoneNo,
+            passwordConfirm: req.body.passwordConfirm
         });
 
 
@@ -260,8 +261,11 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     user.passwordResetExpires = undefined;
 
     await user.save();
-
-    createSendtoken(user, 200, res);
+    const token = signToken(user._id);
+    res.status(200).json({
+        status: 'success',
+        token
+    });
 
 });
 
@@ -276,7 +280,10 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
     user.passwordConfirm = req.body.passwordConfirm;
 
     await user.save();
-
-    createSendtoken(user, 200, res);
+    const token = signToken(user._id);
+    res.status(200).json({
+        status: 'success',
+        token
+    });
 });
 

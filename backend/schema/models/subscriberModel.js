@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
 const subscriberSchema = new mongoose.Schema({
-    user: {
+    seller: {
+        type: mongoose.Schema.ObjectId, ref: 'User',
+        required: [true, 'subscription Not Possible Without A User']
+    },
+    subscriber: {
         type: mongoose.Schema.ObjectId, ref: 'User',
         required: [true, 'subscription Not Possible Without A User']
     }

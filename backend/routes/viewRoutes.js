@@ -1,6 +1,6 @@
 const express = require('express');
 const viewController = require('../controllers/viewController');
-const authController = require('../controllers/authControllers');
+const authController = require('../controllers/authController');
 const router = express.Router();
 router.get('/login', viewController.getLoginForm);
 router.get('/signup', viewController.getSignupForm);

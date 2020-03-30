@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRoutes');
+const dealRouter = require('./routes/dealRoutes');
+const reviewRouter = require('./routes/reviewRoutes');
+const likedDealRouter = require('./routes/likedDealRoutes');
+const subscriberRouter = require('./routes/subscribeRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const app = express();
 app.use(express.json());
@@ -34,8 +38,11 @@ app.use(cookieParser());
 //     next();
 // });
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/deals', dealRouter);
+app.use('/api/v1/reviews', reviewRouter);
+app.use('/api/v1/likedDeal', likedDealRouter);
+app.use('/api/v1/subscribe', subscriberRouter);
 app.use('/', viewRouter);
-
 
 app.listen(4000, () => {
     console.log('Listening');

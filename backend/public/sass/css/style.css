@@ -1820,11 +1820,7 @@ rgba(0, 0, 0, 0.349);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   padding: 0px 10px;
-  color: white; }
-
-.nav-links li:hover, a:hover {
-  color: grey;
-  background-color: white; }
+  color: black; }
 
 #search {
   min-width: 300px; }

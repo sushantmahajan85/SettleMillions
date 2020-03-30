@@ -45,6 +45,8 @@ exports.getAll = Model => catchAsync(async (req, res, next) => {
    let filter = {};
    if (req.params.dealId) { filter = { deal: req.params.dealId }; }
 
+   if (req.params.userId) { filter = { seller: req.params.userId }; }
+
    const features = new APIFeatures(Model.find(filter), req.query).filter().sort().limitFields().paginate();
 
    const doc = await features.query;

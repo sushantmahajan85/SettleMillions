@@ -1,10 +1,16 @@
 const express = require('express');
 
+const subscribeRouter = require('../routes/subscribeRoutes');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
+const dealRouter = require('../routes/dealRoutes');
+
 //bring back the user router from appjs
 const router = express.Router();
+
+router.use('/:userId/deals', dealRouter);
+router.use('/:userId/subscriber', subscribeRouter);
 
 router.route('/signup').delete(authController.resend).post(authController.signUp);
 router.post('/verify', authController.verify);
@@ -17,21 +23,20 @@ router.patch('/resetPassword/:token', authController.resetPassword);
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-router.use(authController.protect);
+//router.use(authController.protect);
 
 router.patch('/updateMyPassword', authController.updatePassword);
 router.get('/me', userController.getMe, userController.getUser);
-router.patch(
-   '/updateMe',
-   userController.uploadUserPhoto,
-   userController.resizeUserPhoto,
-   userController.updateMe);
+// router.patch('/updateMe',
+//    userController.uploadUserPhoto,
+//    userController.resizeUserPhoto,
+//    userController.updateMe);
 router.delete('/deleteMe', userController.deleteMe);
 
-// router.post('/resend', authController.resend);
+router.post('/resend', authController.resend);
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-router.use(authController.restrictTo('admin'));
+// router.use(authController.restrictTo('admin'));
 
 router.route('/')
    .get(userController.getAllUsers)

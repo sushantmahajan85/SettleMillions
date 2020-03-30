@@ -1,9 +1,14 @@
 const fs = require('fs');
 // const multer = require('multer');
 // const sharp = require('sharp');
-const Deal = require('./../models/dealModel');
+const Deal = require('./../schema/models/dealModel');
 
 const factory = require('./handlerFactory');
+exports.setDealUserIds = async (req, res, next) => {
+    if (!req.body.seller) { req.body.seller = req.params.userId; }
+    // if (!req.body.user) { req.body.user = req.user.id; }
+    next();
+};
 
 exports.getAllDeals = factory.getAll(Deal);
 exports.getDeal = factory.getOne(Deal, { path: 'reviews' });

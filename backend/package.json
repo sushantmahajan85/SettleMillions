@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
+    "heroku": "node app.js",
     "start:prod": "NODE_ENV=production nodemon app.js"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "@popperjs/core": "^2.1.0",
     "@sendgrid/mail": "^6.5.4",
     "bcrypt": "^3.0.8",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
@@ -28,5 +30,11 @@
     "pug": "^2.0.4",
     "url": "^0.11.0",
     "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

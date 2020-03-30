@@ -2,14 +2,14 @@ const passvalue = async (name, email, phoneNo, password) => {
     try {
         await axios({
             method: 'DELETE',
-            url: 'http://127.0.0.1:4000/api/v1/users/signup',
+            url: '/api/v1/users/signup',
             data: {
                 email
             }
         });
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:4000/api/v1/users/signup',
+            url: '/api/v1/users/signup',
             data: {
                 email,
                 phoneNo,
@@ -25,7 +25,7 @@ const passvalue = async (name, email, phoneNo, password) => {
         }
 
     } catch (err) {
-        console.log(err);
+        // console.log(err);
     }
 };
 

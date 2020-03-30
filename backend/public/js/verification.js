@@ -2,7 +2,7 @@ const passvalue = async (verification_token) => {
     try {
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:4000/api/v1/users/verify',
+            url: '/api/v1/users/verify',
             data: {
                 verification_token
             }

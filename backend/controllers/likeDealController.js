@@ -11,7 +11,6 @@ exports.setDealUserIds = async (req, res, next) => {
     next();
 };
 
-
 exports.getLikedDeals = factory.getOne(LikedDeal);
 
 exports.createLikedDeals = factory.createOne(LikedDeal);

@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-
+const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRoutes');
 const dealRouter = require('./routes/dealRoutes');
@@ -12,7 +12,7 @@ const subscriberRouter = require('./routes/subscribeRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const app = express();
 app.use(express.json());
-
+app.use(compression());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -44,7 +44,7 @@ app.use('/api/v1/likedDeal', likedDealRouter);
 app.use('/api/v1/subscribe', subscriberRouter);
 app.use('/', viewRouter);
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('Listening');
 });
 

@@ -2,13 +2,13 @@ const passvalue = async (email, password) => {
     try {
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:4000/api/v1/users/login',
+            url: '/api/v1/users/login',
             data: {
                 email,
                 password
             }
         });
-        console.log(result);
+        // console.log(result);
     } catch (err) {
         console.log(err.response.data);
     }

@@ -45,6 +45,6 @@ app.use('/api/v1/subscribe', subscriberRouter);
 app.use('/', viewRouter);
 
 app.listen(process.env.PORT || 4000, () => {
-    console.log('Listening bro');
+    console.log('Listening');
 });
 

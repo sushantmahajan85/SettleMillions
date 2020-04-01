@@ -10,7 +10,7 @@ const reviewRouter = require('./reviewRoutes');
 const router = express.Router({ mergeParams: true });
 router.use('/:dealId/likedDeals', likedDealRouter);
 router.use('/:dealId/reviews', reviewRouter);
-
+router.route('/trending').get(dealController.getTrending);
 router.route('/')
    .get(dealController.getAllDeals)
    .post(

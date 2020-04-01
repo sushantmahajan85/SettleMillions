@@ -2,6 +2,7 @@ const fs = require('fs');
 // const multer = require('multer');
 // const sharp = require('sharp');
 const Deal = require('./../schema/models/dealModel');
+const catchAsync = require('./../utils/catchAsync');
 
 const factory = require('./handlerFactory');
 exports.setDealUserIds = async (req, res, next) => {
@@ -15,7 +16,17 @@ exports.getDeal = factory.getOne(Deal, { path: 'reviews' });
 exports.createDeal = factory.createOne(Deal);
 exports.updateDeal = factory.updateOne(Deal);
 exports.deleteDeal = factory.deleteOne(Deal);
-
+exports.getTrending = catchAsync(async (req, res) => {
+    const trending = await Deal.find({
+        _id: "5e7fbf7a51f439475cdca1b3"
+    });
+    res.status(200).json({
+        status: 'success',
+        data: {
+            trending
+        }
+    })
+});
 
 
 // FOR IMAGE UPLOADS ///// NEEDED FOR LATER

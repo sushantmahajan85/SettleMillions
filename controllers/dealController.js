@@ -18,10 +18,11 @@ exports.updateDeal = factory.updateOne(Deal);
 exports.deleteDeal = factory.deleteOne(Deal);
 exports.getTrending = catchAsync(async (req, res) => {
     const trending = await Deal.find({
-        _id: "5e7fbf7a51f439475cdca1b3"
+        views: { $gt: 1000 },
     });
     res.status(200).json({
         status: 'success',
+        length: trending.length,
         data: {
             trending
         }

@@ -14,7 +14,7 @@ const dealSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    views: String,
+    views: Number,
     time: {
         type: String,
         default: Date.now()
@@ -28,11 +28,11 @@ const dealSchema = new mongoose.Schema({
         maxlength: 400
     },
     mrp: {
-        type: String,
+        type: Number,
         required: true
     },
     dealPrice: {
-        type: String,
+        type: Number,
         required: true
     },
     dealName: {

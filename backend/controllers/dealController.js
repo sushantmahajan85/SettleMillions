@@ -16,7 +16,25 @@ exports.createDeal = factory.createOne(Deal);
 exports.updateDeal = factory.updateOne(Deal);
 exports.deleteDeal = factory.deleteOne(Deal);
 
+exports.showTrending = async (req,res)=>{
+    try {
+        const x= await sDeal.find();
 
+    res.status(200).json( {
+        status: 'success',
+        requestedAt: req.requestedTime,
+        data: {x}
+
+    })
+}
+    catch (error) {
+        console.log(error);
+        res.status(404).json({
+            status: 'fail',
+            message: error
+        });
+    }
+    };
 
 // FOR IMAGE UPLOADS ///// NEEDED FOR LATER
 
@@ -86,6 +104,4 @@ exports.deleteDeal = factory.deleteOne(Deal);
 //       return res.status(400).json({ status: 'fail', message: 'Missing name or price' });
 //    }
 //    next();
-// }
-
-
+// 

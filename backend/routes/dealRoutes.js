@@ -28,4 +28,12 @@ router.route('/:id')
       dealController.updateDeal)
    .delete(authController.protect, authController.restrictTo('admin'), dealController.deleteDeal);
 
+
+   router.route('/trending')
+      .get(
+         dealController.showTrending);
+      
+      
+
+
 module.exports = router;

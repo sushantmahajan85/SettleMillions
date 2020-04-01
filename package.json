@@ -1,0 +1,40 @@
+{
+  "name": "bajajhealthbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "start:prod": "NODE_ENV=production nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.1.0",
+    "@sendgrid/mail": "^6.5.4",
+    "bcrypt": "^3.0.8",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.4",
+    "nodemailer": "^6.4.5",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "url": "^0.11.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}

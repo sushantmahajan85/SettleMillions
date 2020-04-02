@@ -19,7 +19,7 @@ const dealSchema = new mongoose.Schema({
         default: 1069
     },
     time: {
-        type: String,
+        type: Date,
         default: Date.now()
     },
     titleDis: {

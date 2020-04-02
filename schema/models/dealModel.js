@@ -14,14 +14,18 @@ const dealSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    views: Number,
+    views: {
+        type: Number,
+        default: 1069
+    },
     time: {
         type: String,
         default: Date.now()
     },
     titleDis: {
         type: String,
-        maxlength: [30, 'exceeding the word creteria']
+        maxlength: [30, 'exceeding the word creteria'],
+        default: 'Limited offer'
     },
     biggerDis: {
         type: String,
@@ -49,16 +53,13 @@ const dealSchema = new mongoose.Schema({
     saveLater: Number,
     owner: {
         type: String,
-        // default
+        default: 'Couper Deals'
     },
     buyNow: {
         type: Number
     },
-    trending: {
-        type: Boolean,
-        default: false
-    },
     corouselImgs: Array,
+    discount: Number,
     seller: {
         type: mongoose.Schema.ObjectId,
         ref: 'User'

@@ -1,5 +1,6 @@
 const Deal = require('./../schema/models/dealModel');
 const catchAsync = require('./../utils/catchAsync');
+const appError = require('./../utils/appError');
 
 exports.getLoginForm = (req, res) => {
     res.status(200).render('login')
@@ -23,6 +24,15 @@ exports.mainPage = catchAsync(async (req, res) => {
 exports.getMemberData = (req, res) => {
     res.status(200).render('members')
 }
-exports.dealPage = (req, res) => {
-    res.status(200).render('deal');
-}
+
+exports.dealPage = catchAsync(async (req, res, next) => {
+    const deal = await Deal.findOne({ _id: req.params.id });
+
+    if (!deal) {
+        return next(new appError('No Deal With That Id', 404));
+    }
+
+    res.status(200).render('deal', {
+        deal
+    });
+});

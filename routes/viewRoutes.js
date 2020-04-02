@@ -8,5 +8,5 @@ router.get('/verification', viewController.getVerificationForm);
 router.get('/recruitments', authController.protect, viewController.getRecruitmentsData);
 router.get('/', viewController.mainPage);
 router.get('/member', viewController.getMemberData);
-router.get('/deal', viewController.dealPage);
+router.get('/deal/:id', viewController.dealPage);
 module.exports = router;

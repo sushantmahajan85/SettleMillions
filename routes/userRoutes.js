@@ -5,7 +5,7 @@ const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
 const dealRouter = require('../routes/dealRoutes');
-const upload = multer({ dest: '/public/img/users' });
+// const upload = multer({ dest: '/public/img/users' });
 //bring back the user router from appjs
 const router = express.Router();
 

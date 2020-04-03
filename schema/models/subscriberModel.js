@@ -11,5 +11,17 @@ const subscriberSchema = new mongoose.Schema({
     }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
+subscriberSchema.pre(/^find/, function (next) {
+    this.populate({
+        path: 'seller',
+        // select: 'name'
+    }).populate({
+        path: 'subscriber',
+        // select: 'name'
+    });
+
+    next();
+});
+
 const Subscriber = mongoose.model('Subscriber', subscriberSchema);
 module.exports = Subscriber;

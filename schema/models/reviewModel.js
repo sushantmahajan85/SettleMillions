@@ -22,12 +22,12 @@ const reviewSchema = new mongoose.Schema({
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
 //Not Working, Check
-reviewSchema.index({ deal: 1, user: 1 }, { unique: true });
+// reviewSchema.index({ deal: 1, user: 1 }, { unique: true });
 
 reviewSchema.pre(/^find/, function (next) {
    this.populate({
       path: 'user',
-      select: 'name photo'
+      select: 'name'
    });
 
    next();

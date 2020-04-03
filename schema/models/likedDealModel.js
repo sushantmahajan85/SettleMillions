@@ -11,5 +11,17 @@ const likedDealSchema = new mongoose.Schema({
    }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
+likedDealSchema.pre(/^find/, function (next) {
+   this.populate({
+      path: 'deal',
+      // select: 'name'
+   }).populate({
+      path: 'seller',
+      // select: 'name'
+   });
+
+   next();
+});
+
 const LikedDeal = mongoose.model('LikedDeal', likedDealSchema);
 module.exports = LikedDeal;

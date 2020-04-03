@@ -6,7 +6,7 @@ const factory = require('./handlerFactory');
 exports.getAllSubscriber = factory.getAll(Subscriber);
 
 exports.setDealUserIds = async (req, res, next) => {
-    if (!req.body.seller) { req.body.seller = req.params.userId; }
+    if (!req.body.user) { req.body.user = req.params.userId; }
     if (!req.body.subscriber) { req.body.subscriber = req.user.id; }
     next();
 };

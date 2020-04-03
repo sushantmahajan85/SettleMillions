@@ -5,7 +5,7 @@ const likedDealSchema = new mongoose.Schema({
       type: mongoose.Schema.ObjectId, ref: 'Deal',
       required: [true, 'like Not Possible Without A Deal']
    },
-   seller: {
+   user: {
       type: mongoose.Schema.ObjectId, ref: 'User',
       required: [true, 'like Not Possible Without A User']
    }
@@ -16,7 +16,7 @@ likedDealSchema.pre(/^find/, function (next) {
       path: 'deal',
       // select: 'name'
    }).populate({
-      path: 'seller',
+      path: 'user',
       // select: 'name'
    });
 

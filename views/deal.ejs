@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affiliate</title>
-  <link rel="stylesheet" href="sass/css/style.css">
+  <link rel="stylesheet" href="/sass/css/style.css">
   <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
@@ -159,17 +159,17 @@
           <div class="action_buttons">
 
             <button type="button">Like for later</button>
-            <button type="button">Buy Now</button>
+            <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
             <button type="button">Report</button>
           </div>
 
         </div>
         <div class="deal_info">
           <div class="deal_heading">
-            OnePlus 7T Pro (Haze Blue, 8GB RAM, Fluid AMOLED Display, 256GB Storage, 4085mAH Battery)
+            <%= deal.dealName %>
           </div>
           <div class="deal_price">
-            <%= deal.owner %>
+            <%= `${deal.mrp}` %> 80%OFF <%=` ${deal.dealPrice}` %>
           </div>
           <div class="deal_price" style="display: flex;">
             <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
@@ -178,9 +178,7 @@
             </a>
           </div>
           <div class="paragraph" style="margin-top: 2rem;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur facilis quisquam. Voluptatum
-            velit recusandae incidunt laudantium! Praesentium voluptatibus, numquam asperiores accusantium libero
-            eveniet iure odit beatae. Unde, delectus ab.
+            <%= deal.biggerDis %>
           </div>
         </div>
         <div class="comment_section">
@@ -188,7 +186,12 @@
           <textarea name="comment_section" id="" cols="110" rows="10"></textarea>
           <button type="button">Submit</button>
         </div>
-
+        <% for( var review of deal.reviews ) { %>
+        <div>
+          <h3 style="margin-top: 1rem;"><%= review.user.name %> </h6>
+            <p class="paragraph"> <%= review.review  %> </p>
+        </div>
+        <% } %>
     </section>
 
     <div class="side_deals">

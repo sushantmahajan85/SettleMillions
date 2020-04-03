@@ -37,7 +37,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 });
 
 exports.getMemberData = catchAsync(async (req, res) => {
-    const deals = await Deal.find({ seller: req.params.id });
+    const deals = await Deal.find({ user: req.params.id });
 
     res.status(200).render('members', {
         deals
@@ -45,7 +45,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
 });
 
 exports.dealPage = catchAsync(async (req, res, next) => {
-    const deal = await Deal.findOne({ _id: req.params.id });
+    const deal = await Deal.findOne({ _id: req.params.id }).populate({
+        path: 'reviews',
+    });
 
     if (!deal) {
         return next(new appError('No Deal With That Id', 404));

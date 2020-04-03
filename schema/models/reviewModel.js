@@ -21,7 +21,7 @@ const reviewSchema = new mongoose.Schema({
    }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
-//Not Working, Check
+// Not Working, Check
 // reviewSchema.index({ deal: 1, user: 1 }, { unique: true });
 
 reviewSchema.pre(/^find/, function (next) {
@@ -33,47 +33,47 @@ reviewSchema.pre(/^find/, function (next) {
    next();
 });
 
-reviewSchema.statics.calcAverageRatings = async function (dealId) {
-   const stats = await this.aggregate([
-      {
-         $match: { deal: dealId }
-      },
-      {
-         $group: {
-            _id: '$tour',
-            nRating: { $sum: 1 },
-            avgRating: { $avg: '$rating' }
-         }
-      }
-   ]);
+// reviewSchema.statics.calcAverageRatings = async function (dealId) {
+//    const stats = await this.aggregate([
+//       {
+//          $match: { deal: dealId }
+//       },
+//       {
+//          $group: {
+//             _id: '$tour',
+//             nRating: { $sum: 1 },
+//             avgRating: { $avg: '$rating' }
+//          }
+//       }
+//    ]);
 
-   if (stats.length > 0) {
-      await Deal.findByIdAndUpdate(dealId, {
-         ratingsQuantity: stats[0].nRating,
-         ratingsAverage: stats[0].avgRating
-      });
-   } else {
-      await Deal.findByIdAndUpdate(dealId, {
-         ratingsQuantity: 0,
-         ratingsAverage: 4.5
-      });
-   }
-};
+//    if (stats.length > 0) {
+//       await Deal.findByIdAndUpdate(dealId, {
+//          ratingsQuantity: stats[0].nRating,
+//          ratingsAverage: stats[0].avgRating
+//       });
+//    } else {
+//       await Deal.findByIdAndUpdate(dealId, {
+//          ratingsQuantity: 0,
+//          ratingsAverage: 4.5
+//       });
+//    }
+// };
 
-reviewSchema.post('save', function () {
-   this.constructor.calcAverageRatings(this.deal);
-});
+// reviewSchema.post('save', function () {
+//    this.constructor.calcAverageRatings(this.deal);
+// });
 
-reviewSchema.pre(/^findOneAnd/, async function (next) {
-   this.r = await this.findOne();
-   //console.log(this.r);
+// reviewSchema.pre(/^findOneAnd/, async function (next) {
+//    this.r = await this.findOne();
+//    //console.log(this.r);
 
-   next();
-});
+//    next();
+// });
 
-reviewSchema.post(/^findOneAnd/, async function () {
-   await this.r.constructor.calcAverageRatings(this.r.deal);
-});
+// reviewSchema.post(/^findOneAnd/, async function () {
+//    await this.r.constructor.calcAverageRatings(this.r.deal);
+// });
 
 
 const Review = mongoose.model('Review', reviewSchema);

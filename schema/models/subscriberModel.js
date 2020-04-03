@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const subscriberSchema = new mongoose.Schema({
-    seller: {
+    user: {
         type: mongoose.Schema.ObjectId, ref: 'User',
         required: [true, 'subscription Not Possible Without A User']
     },
@@ -13,7 +13,7 @@ const subscriberSchema = new mongoose.Schema({
 
 subscriberSchema.pre(/^find/, function (next) {
     this.populate({
-        path: 'seller',
+        path: 'user',
         // select: 'name'
     }).populate({
         path: 'subscriber',

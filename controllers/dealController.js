@@ -6,7 +6,7 @@ const catchAsync = require('./../utils/catchAsync');
 
 const factory = require('./handlerFactory');
 exports.setDealUserIds = async (req, res, next) => {
-    if (!req.body.seller) { req.body.seller = req.params.userId; }
+    if (!req.body.user) { req.body.user = req.user.id; }
     // if (!req.body.user) { req.body.user = req.user.id; }
     next();
 };

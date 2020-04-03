@@ -65,6 +65,12 @@ const dealSchema = new mongoose.Schema({
         ref: 'User'
     }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
+//virtual populate
+dealSchema.virtual('reviews', {
+    ref: 'Review',
+    foreignField: 'deal',
+    localField: '_id'
+});
 
 const Deal = mongoose.model('Deal', dealSchema);
 module.exports = Deal;

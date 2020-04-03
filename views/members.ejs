@@ -97,7 +97,7 @@
             </div>
 
 
-
+            <% for(var deal of deals) { %>
             <div class="deal_area_box">
                 <div class="bigImg_container">
                     <div class="deal_area_box_img"></div>
@@ -110,31 +110,32 @@
                         <div class="deal_box_nameTime"
                             style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
 
-                            <div class="deal_box_name">The Moaping Machine Extra text</div>
+                            <div class="deal_box_name"><%= deal.dealName %> </div>
 
                         </div>
                         <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
 
-                            <div class="deal_box_views">Couper Deals</div>
-                            <div class="deal_box_time">Amazon</div>
+                            <div class="deal_box_views"><%= deal.owner %> </div>
+                            <div class="deal_box_time"><%= deal.company %> </div>
 
                         </div>
 
 
                         <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                            <div class="deal_box_views">2000rs</div>
+                            <div class="deal_box_views"><%= deal.dealPrice %> rs</div>
                             <div class="deal_box_time">80% OFF</div>
                             <div class="deal_box_time">200rs</div>
                         </div>
 
                         <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                            <div class="deal_box_views">1.4k views</div>
+                            <div class="deal_box_views"><%= deal.views %> views</div>
                             <div class="deal_box_time">3 days ago</div>
 
                         </div>
                     </div>
                 </div>
             </div>
+            <% } %>
             </div>
         </section>
 

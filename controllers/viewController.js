@@ -12,14 +12,14 @@ exports.getSignupForm = (req, res) => {
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
     const deals = await Deal.find();
-    res.status(200).render('likedDeals', 
-        {deals});
+    res.status(200).render('likedDeals',
+        { deals });
 });
 
 exports.getSubscriptions = catchAsync(async (req, res) => {
     const deals = await Deal.find();
-    res.status(200).render('subscriptions', 
-        {deals});
+    res.status(200).render('subscriptions',
+        { deals });
 });
 
 exports.getVerificationForm = (req, res) => {
@@ -36,9 +36,13 @@ exports.mainPage = catchAsync(async (req, res) => {
         { deals });
 });
 
-exports.getMemberData = (req, res) => {
-    res.status(200).render('members')
-}
+exports.getMemberData = catchAsync(async (req, res) => {
+    const deals = await Deal.find({ seller: req.params.id });
+
+    res.status(200).render('members', {
+        deals
+    });
+});
 
 exports.dealPage = catchAsync(async (req, res, next) => {
     const deal = await Deal.findOne({ _id: req.params.id });

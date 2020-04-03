@@ -10,4 +10,5 @@ router.get('/', viewController.mainPage);
 router.get('/member', viewController.getMemberData);
 router.get('/deal/:id', viewController.dealPage);
 router.get('/likedDeals', viewController.getLikedDeals);
+router.get('/subscriptions', viewController.getSubscriptions);
 module.exports = router;

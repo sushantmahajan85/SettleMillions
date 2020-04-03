@@ -10,6 +10,10 @@ exports.getSignupForm = (req, res) => {
     res.status(200).render('signup')
 }
 
+exports.getLikedDeals = (req, res) => {
+    res.status(200).render('likedDeals')
+}
+
 exports.getVerificationForm = (req, res) => {
     res.status(200).render('verification')
 }

@@ -9,4 +9,5 @@ router.get('/recruitments', authController.protect, viewController.getRecruitmen
 router.get('/', viewController.mainPage);
 router.get('/member', viewController.getMemberData);
 router.get('/deal/:id', viewController.dealPage);
+router.get('/likedDeals', viewController.getLikedDeals);
 module.exports = router;

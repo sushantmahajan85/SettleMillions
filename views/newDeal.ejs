@@ -1,16 +1,18 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form action="">
+    <form id="postADeal">
         <label for="dealName">Deal Name:</label>
         <input type="text" name="dealName" id="dealName">
         <br>
         <label for="affiliateLink">Affiliate Link:</label>
-        <input type="url" name="affiliateLink" id="affiliateLink">
+        <input type="text" name="affiliateLink" id="affiliateLink">
         <br>
         <label for="category">Category:</label>
         <input type="text" name="category" id="category">
@@ -24,7 +26,16 @@
         <label for="dealPrice">Deal Price:</label>
         <input type="number" name="dealPrice" id="dealPrice">
         <br>
-        <input type="submit" name="submit" id="submit">
+        <button class="postDeal" type="submit">
+            Post Deal
+        </button>
     </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script src="js/newDeal.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>

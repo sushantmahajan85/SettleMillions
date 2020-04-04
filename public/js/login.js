@@ -8,6 +8,12 @@ const passvalue = async (email, password) => {
                 password
             }
         });
+        if (result.data.status === 'success') {
+            alert('login successful');
+            window.setTimeout(() => {
+                location.assign('/likedDeals');
+            }, 1000);
+        }
         // console.log(result);
     } catch (err) {
         console.log(err.response.data);

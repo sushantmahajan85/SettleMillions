@@ -1,4 +1,5 @@
 const Deal = require('./../schema/models/dealModel');
+const User = require('./../schema/models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const appError = require('./../utils/appError');
 
@@ -11,11 +12,11 @@ exports.getSignupForm = (req, res) => {
 }
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
-    const deals = await Deal.find().populate({
+    const user = await User.findById(req.user).populate({
         path: 'likedDeals'
     });
     res.status(200).render('likedDeals',
-        { deals });
+        { user });
 });
 
 exports.getSubscriptions = catchAsync(async (req, res) => {

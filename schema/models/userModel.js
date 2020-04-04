@@ -56,6 +56,12 @@ const userSchema = new mongoose.Schema({
     reportChannelCount: { type: Number, default: 0 }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
+userSchema.virtual('likedDeals', {
+    ref: 'LikedDeal',
+    foreignField: 'user',
+    localField: '_id'
+});
+
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) { return next(); }
 

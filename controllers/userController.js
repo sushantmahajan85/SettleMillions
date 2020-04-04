@@ -46,7 +46,7 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
     res.status(204).json({ status: 'success', data: null });
 });
 
-exports.getUser = factory.getOne(User);
+exports.getUser = factory.getOne(User, { path: 'likedDeals' });
 
 
 /////// Never Used Because We Sign Up Users Not Create Them 

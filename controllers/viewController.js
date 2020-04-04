@@ -11,7 +11,9 @@ exports.getSignupForm = (req, res) => {
 }
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
-    const deals = await Deal.find();
+    const deals = await Deal.find().populate({
+        path: 'likedDeals'
+    });
     res.status(200).render('likedDeals',
         { deals });
 });

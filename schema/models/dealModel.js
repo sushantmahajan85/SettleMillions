@@ -72,6 +72,11 @@ dealSchema.virtual('reviews', {
     foreignField: 'deal',
     localField: '_id'
 });
+dealSchema.virtual('likedDeals', {
+    ref: 'LikedDeals',
+    foreignField: 'deal',
+    localField: '_id'
+});
 
 const Deal = mongoose.model('Deal', dealSchema);
 module.exports = Deal;

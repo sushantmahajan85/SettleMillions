@@ -10,7 +10,7 @@ const passvalue = async (verification_token) => {
         if (result.data.status === 'success') {
             alert('sign up successful');
             window.setTimeout(() => {
-                location.assign('/recruitments');
+                location.assign('/likedDeals');
             }, 1000);
         }
     } catch (err) {

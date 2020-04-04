@@ -10,9 +10,11 @@ const reviewRouter = require('./routes/reviewRoutes');
 const likedDealRouter = require('./routes/likedDealRoutes');
 const subscriberRouter = require('./routes/subscribeRoutes');
 const viewRouter = require('./routes/viewRoutes');
+
 const app = express();
 app.use(express.json());
 app.use(compression());
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));

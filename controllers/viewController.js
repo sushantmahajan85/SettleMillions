@@ -25,6 +25,10 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
         { deals });
 });
 
+exports.createNewDeal = (req, res) => {
+    res.status(200).render('newDeal')
+}
+
 exports.getVerificationForm = (req, res) => {
     res.status(200).render('verification')
 }

@@ -20,9 +20,19 @@ exports.getLikedDeals = catchAsync(async (req, res) => {
 });
 
 exports.getSubscriptions = catchAsync(async (req, res) => {
-    const deals = await Deal.find();
+    const xyz = await User.findById(req.user).populate({
+        path: 'subscribers'
+    });
+    console.log(xyz.subscribers[0].subscribedUser);
+    for (var i = 0; i <= xyz.subscribers.length; i++) {
+        var deals = await Deal.find({ user: xyz.subscribers[0].subscribedUser });
+    }
+    // console.log(deals);
     res.status(200).render('subscriptions',
-        { deals });
+        {
+            deals,
+            xyz
+        });
 });
 
 exports.createNewDeal = (req, res) => {

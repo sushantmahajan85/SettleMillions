@@ -61,6 +61,11 @@ userSchema.virtual('likedDeals', {
     foreignField: 'user',
     localField: '_id'
 });
+userSchema.virtual('subscribers', {
+    ref: 'Subscriber',
+    foreignField: 'user',
+    localField: '_id'
+});
 
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) { return next(); }

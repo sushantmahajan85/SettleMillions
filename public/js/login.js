@@ -11,7 +11,7 @@ const passvalue = async (email, password) => {
         if (result.data.status === 'success') {
             alert('login successful');
             window.setTimeout(() => {
-                location.assign('/likedDeals');
+                location.assign('/subscriptions');
             }, 1000);
         }
         // console.log(result);

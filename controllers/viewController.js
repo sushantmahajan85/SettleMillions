@@ -1,4 +1,5 @@
 const Deal = require('./../schema/models/dealModel');
+const Subscriber = require('./../schema/models/subscriberModel');
 const User = require('./../schema/models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const appError = require('./../utils/appError');
@@ -23,7 +24,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     const xyz = await User.findById(req.user).populate({
         path: 'subscribers'
     });
-    console.log(xyz.subscribers);
+    //console.log(xyz.subscribers);
     // for (var i = 0; i <= xyz.subscribers.length; i++) {
 
     // xyz.subscribers[i].subscribedUser
@@ -37,7 +38,12 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     // };
     // console.log(a);
     // }
-    console.log(xyz.subscribers.all.subscribedUser._id);
+
+    const subs = await Subscriber.find({ user: xyz.subscribers[0].subscribedUser._id }).populate({
+        path: 'subscribedDeals'
+    });
+
+    console.log(subs);
     // for (var i = 0; i < xyz.subscribers.length; i++) {
     // const deals = await Deal.find({ user: xyz.subscribers[i].subscribedUser._id });
     const deals = await Deal.find({ user: xyz.subscribers.subscribedUser });

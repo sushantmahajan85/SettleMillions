@@ -39,20 +39,21 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     // console.log(a);
     // }
 
-    const subs = await Subscriber.find({ user: xyz.subscribers[0].subscribedUser._id }).populate({
+    const subs = await Subscriber.find({ user: req.user }).populate({
         path: 'subscribedDeals'
     });
+
 
     console.log(subs);
     // for (var i = 0; i < xyz.subscribers.length; i++) {
     // const deals = await Deal.find({ user: xyz.subscribers[i].subscribedUser._id });
-    const deals = await Deal.find({ user: xyz.subscribers.subscribedUser });
+    // const deals = await Deal.find({ user: xyz.subscribers.subscribedUser });
     // }
     // console.log(deals);
     res.status(200).render('subscriptions',
         {
-            deals,
-            xyz
+            xyz,
+            subs
         });
 });
 

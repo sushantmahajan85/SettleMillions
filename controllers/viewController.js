@@ -27,15 +27,21 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     // for (var i = 0; i <= xyz.subscribers.length; i++) {
 
     // xyz.subscribers[i].subscribedUser
-    xyz.subscribers.forEach(function (el) {
-        console.log(el.subscribedUser._id);
-    });
-
+    // const final = function () {
+    //     xyz.subscribers.forEach(async function (el) {
+    //         const test = await el.subscribedUser._id;
+    //         console.log(test);
+    //         return test;
+    //     }
+    //     )
+    // };
+    // console.log(a);
     // }
-
-    for (var i = 0; i < xyz.subscribers.length; i++) {
-        var deals = await Deal.find({ user: xyz.subscribers[i].subscribedUser._id });
-    }
+    console.log(xyz.subscribers.all.subscribedUser._id);
+    // for (var i = 0; i < xyz.subscribers.length; i++) {
+    // const deals = await Deal.find({ user: xyz.subscribers[i].subscribedUser._id });
+    const deals = await Deal.find({ user: xyz.subscribers.subscribedUser });
+    // }
     // console.log(deals);
     res.status(200).render('subscriptions',
         {

@@ -10,6 +10,11 @@ const subscriberSchema = new mongoose.Schema({
         required: [true, 'subscription Not Possible Without A User']
     }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
+subscriberSchema.virtual('subscribedDeals', {
+    ref: 'Deal',
+    foreignField: 'user',
+    localField: 'subscribedUser'
+});
 
 subscriberSchema.pre(/^find/, function (next) {
     this.populate({

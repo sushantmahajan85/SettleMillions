@@ -11,7 +11,7 @@ exports.setDealUserIds = async (req, res, next) => {
     next();
 };
 
-exports.getSubscriber = factory.getOne(Subscriber);
+exports.getSubscriber = factory.getOne(Subscriber, { path: 'subscribedDeals' });
 
 exports.createSubscriber = factory.createOne(Subscriber);
 

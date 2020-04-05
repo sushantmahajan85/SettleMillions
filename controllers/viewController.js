@@ -44,7 +44,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     });
 
 
-    console.log(subs);
+    console.log(subs.subscribedDeals);
     // for (var i = 0; i < xyz.subscribers.length; i++) {
     // const deals = await Deal.find({ user: xyz.subscribers[i].subscribedUser._id });
     // const deals = await Deal.find({ user: xyz.subscribers.subscribedUser });

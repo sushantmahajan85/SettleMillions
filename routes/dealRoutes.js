@@ -26,6 +26,6 @@ router.route('/:id')
       // dealController.uploadDealImages,
       // dealController.resizeDealImages,
       dealController.updateDeal)
-   .delete(authController.protect, authController.restrictTo('admin'), dealController.deleteDeal);
+   .delete(authController.protect, authController.restrictTo('user'), dealController.deleteDeal);
 
 module.exports = router;

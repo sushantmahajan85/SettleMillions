@@ -25,6 +25,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
         path: 'subscribers'
     });
     //console.log(xyz.subscribers);
+
     // for (var i = 0; i <= xyz.subscribers.length; i++) {
 
     // xyz.subscribers[i].subscribedUser
@@ -43,8 +44,8 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
         path: 'subscribedDeals'
     });
 
-
-    console.log(subs);
+    //console.log(subs[0].subscribedDeals);
+    //console.log(subs[0].subscribedDeals.length);
     // for (var i = 0; i < xyz.subscribers.length; i++) {
     // const deals = await Deal.find({ user: xyz.subscribers[i].subscribedUser._id });
     // const deals = await Deal.find({ user: xyz.subscribers.subscribedUser });

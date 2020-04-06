@@ -1,16 +1,19 @@
 // console.log('hey there');
+//const Deal = require('./../../schema/models/dealModel');
 
 const passvalue = async function () {
     console.log('hey there');
     var url = window.location.pathname;
     var id = url.substring(url.lastIndexOf('/') + 1);
 
+    //const deal = await Deal.findById(id);
+
     try {
         const result = await axios({
             method: 'POST',
             url: '/api/v1/subscribe',
             data: {
-                subscribedUser: id
+                subscribedUser: id//deal.user
             }
         });
         if (result.data.status === 'success') {

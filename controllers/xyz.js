@@ -1,14 +1,14 @@
-// console.log('hey there');
-// const Deal = require('./../../schema/models/dealModel');
+console.log('hey there');
+const Deal = require('./../schema/models/dealModel');
 // import { Deal } from './../../schema/models/dealModel';
-const passvalue2 = async function () {
+const passvalue4 = async function () {
     console.log('hey there');
 
     var url = window.location.pathname;
     var id = url.substring(url.lastIndexOf('/') + 1);
 
-    // const deal = await Deal.findById({ id });
-    // console.log(deal);
+    const deal = await Deal.findById({ id });
+    console.log(deal);
     try {
         const result = await axios({
             method: 'POST',
@@ -33,7 +33,7 @@ const passvalue2 = async function () {
 // var url = 'http://www.site.com/234234234';
 // var id = url.substring(url.lastIndexOf('/') + 1);
 // alert(id);
-document.getElementById('subscribe_btn').addEventListener('click', e => {
+document.getElementById('subscribe').addEventListener('click', e => {
     e.preventDefault();
 
     // const dealName = document.getElementById('dealName').value;
@@ -42,5 +42,5 @@ document.getElementById('subscribe_btn').addEventListener('click', e => {
     // const company = document.getElementById('company').value;
     // const mrp = document.getElementById('mrp').value;
     // const dealPrice = document.getElementById('dealPrice').value;
-    passvalue2();
+    passvalue4();
 })

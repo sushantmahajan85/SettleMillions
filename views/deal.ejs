@@ -110,9 +110,11 @@
         </div>
         <div class="deal_price" style="display: flex;">
           <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
-          <a href="#" class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
-            <h6 class="heading-normal"> Subscribe</h6>
-          </a>
+          <div class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
+
+            <h6 class="heading-normal"><button id="subscribe_btn">Subscribe</button></h6>
+
+          </div>
         </div>
         <div class="paragraph" style="margin-top: 2rem;">
           <%= deal.biggerDis %>
@@ -217,6 +219,12 @@
   </div>
 
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+  <script src="/js/subscribe.js"></script>
+  <!-- <script src="/js/main.js"></script> -->
+
   <script>
     var slideIndex = 1;
     showSlides(slideIndex);

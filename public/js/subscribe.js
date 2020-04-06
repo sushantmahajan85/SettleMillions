@@ -1,11 +1,11 @@
 // console.log('hey there');
 //const Deal = require('./../../schema/models/dealModel');
 
-const passvalue = async function () {
+const passvalue2 = async function () {
     console.log('hey there');
     var url = window.location.pathname;
     var id = url.substring(url.lastIndexOf('/') + 1);
-
+    console.log(id);
     //const deal = await Deal.findById(id);
 
     try {
@@ -41,5 +41,5 @@ document.getElementById('subscribe_btn').addEventListener('click', e => {
     // const company = document.getElementById('company').value;
     // const mrp = document.getElementById('mrp').value;
     // const dealPrice = document.getElementById('dealPrice').value;
-    passvalue();
+    passvalue2();
 })

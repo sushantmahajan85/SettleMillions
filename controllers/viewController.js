@@ -85,7 +85,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
 });
 
 exports.dealPage = catchAsync(async (req, res, next) => {
-    const deal = await Deal.findOne({ _id: req.params.id }).populate({
+    const deal = await Deal.findOne({ _id: req.params.dealId }).populate({
         path: 'reviews',
     });
 

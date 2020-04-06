@@ -33,7 +33,7 @@
         <% for (var i = 0; i < xyz.subscribers.length; i++) { %>
         <h1> <%= xyz.subscribers[i].subscribedUser.name.toUpperCase() %> </h1>
         <% for (var j = 0; j < subs[i].subscribedDeals.length; j++) { %>
-        <a href=<%= `/deal/${subs[i].subscribedDeals[j]._id}` %>>
+        <a href=<%= `/deal/${subs[i].subscribedDeals[j]._id}/postedBy/${subs[i].subscribedDeals[j].user}` %>>
             <div class="deal_area_box">
                 <div class="bigImg_container">
                     <div class="deal_area_box_img"></div>

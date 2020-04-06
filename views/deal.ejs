@@ -98,7 +98,7 @@
         <div class="action_buttons">
 
           <a href="" id="like_deal"> <button type="button">Like for later</button></a>
-          <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
+          <button id="buyNowButton" onClick="window.location.assign('<%= deal.affiliateLink %>')" type="button">Buy Now</button>
           <button type="button">Report</button>
         </div>
 
@@ -259,6 +259,12 @@
       captionText.innerHTML = dots[slideIndex - 1].alt;
     }
   </script>
+
+  <!-- <script>
+    var buyNowButton = document.getElementById('buyNowButton');
+    buyNowButton.onclick = function(){
+    window.location.assign(`https://www.amazon.com/`)
+    } </script> -->
 </body>
 
 </html>

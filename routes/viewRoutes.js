@@ -8,7 +8,7 @@ router.get('/verification', viewController.getVerificationForm);
 router.get('/recruitments', authController.protect, viewController.getRecruitmentsData);
 router.get('/', viewController.mainPage);
 router.get('/member/:id', viewController.getMemberData);
-router.get('/deal/:id', viewController.dealPage);
+router.get('/deal/:dealId/postedBy/:sellerId', viewController.dealPage);
 router.get('/likedDeals', authController.protect, viewController.getLikedDeals);
 router.get('/subscriptions', authController.protect, viewController.getSubscriptions);
 router.get('/newDeal', viewController.createNewDeal);

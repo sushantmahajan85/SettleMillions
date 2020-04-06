@@ -27,7 +27,7 @@
 
     <section class="deal_area">
         <% for(var likedDeal of user.likedDeals) { %>
-        <a href=<%= `/deal/${likedDeal.deal._id}` %>>
+        <a href=<%= `/deal/${likedDeal.deal._id}/postedBy/${likedDeal.deal.user}` %>>
             <div class="deal_area_box">
                 <div class="bigImg_container">
                     <div class="deal_area_box_img"></div>

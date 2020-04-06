@@ -1,14 +1,14 @@
 // console.log('hey there');
-// const Deal = require('./../../schema/models/dealModel');
-// import { Deal } from './../../schema/models/dealModel';
+//const Deal = require('./../../schema/models/dealModel');
+
 const passvalue2 = async function () {
     console.log('hey there');
 
     var url = window.location.pathname;
     var id = url.substring(url.lastIndexOf('/') + 1);
+    console.log(id);
+    //const deal = await Deal.findById(id);
 
-    // const deal = await Deal.findById({ id });
-    // console.log(deal);
     try {
         const result = await axios({
             method: 'POST',

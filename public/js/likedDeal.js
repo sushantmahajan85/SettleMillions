@@ -2,15 +2,17 @@
 
 const passvalue = async function () {
     console.log('hey there');
-    var url = window.location.pathname;
-    var id = url.substring(url.lastIndexOf('/') + 1);
-
+    var full_url = window.location.pathname;
+    // var full_url = document.URL; // Get current url
+    var url_array = full_url.split('/') // Split the string into an array with / as separator
+    var last_segment = url_array[url_array.length - 3];  // Get the last part of the array (-1)
+    // alert(last_segment);
     try {
         const result = await axios({
             method: 'POST',
             url: '/api/v1/likedDeal',
             data: {
-                deal: id
+                deal: last_segment
             }
         });
         if (result.data.status === 'success') {

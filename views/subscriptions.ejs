@@ -11,12 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162360881-1"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'UA-162360881-1');
+        gtag('config', 'UA-162941654-1');
     </script>
 
 </head>
@@ -26,7 +28,7 @@
     <%- include('partials/sidebar.ejs') %>
 
     <section class="deal_area">
- 
+
         <% for (var i = 0; i < xyz.subscribers.length; i++) { %>
         <h1> <%= xyz.subscribers[i].subscribedUser.name.toUpperCase() %> </h1>
         <% for (var j = 0; j < subs[i].subscribedDeals.length; j++) { %>

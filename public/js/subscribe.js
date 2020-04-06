@@ -7,9 +7,9 @@ const passvalue = async function () {
         const result = await axios({
             method: 'POST',
             url: '/api/v1/users/:userId/subscriber',
-            // data: {
+            data: {
 
-            // }
+            }
         });
         if (result.data.status === 'success') {
             alert('subscribed');

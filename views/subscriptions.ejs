@@ -26,11 +26,12 @@
     <%- include('partials/sidebar.ejs') %>
 
     <section class="deal_area">
-        <% for( var s_user of xyz.subscribers ) { %>
+        <!-- <% for( var s_user of xyz.subscribers ) { %>
         <h1> <%= s_user.subscribedUser.name %> </h1>
-        <% } %>
+        <% } %> -->
 
         <% for (var i = 0; i < xyz.subscribers.length; i++) { %>
+        <h1> <%= xyz.subscribers[i].subscribedUser.name.toUpperCase() %> </h1>
         <% for (var j = 0; j < subs[i].subscribedDeals.length; j++) { %>
         <a href=<%= `/deal/${subs[i].subscribedDeals[j]._id}` %>>
             <div class="deal_area_box">

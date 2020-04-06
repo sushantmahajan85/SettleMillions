@@ -11,6 +11,8 @@ const likedDealSchema = new mongoose.Schema({
    }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
+likedDealSchema.index({ deal: 1, user: 1 }, { unique: true });
+
 likedDealSchema.pre(/^find/, function (next) {
    this.populate({
       path: 'deal',

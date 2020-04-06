@@ -10,6 +10,9 @@ const subscriberSchema = new mongoose.Schema({
         required: [true, 'subscription Not Possible Without A User']
     }
 }, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
+
+subscriberSchema.index({ user: 1, subscribedUser: 1 }, { unique: true });
+
 subscriberSchema.virtual('subscribedDeals', {
     ref: 'Deal',
     foreignField: 'user',

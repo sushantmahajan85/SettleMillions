@@ -1,6 +1,8 @@
-console.log('hey there');
+// console.log('hey there');
 
-const passvalue = async () => {
+const passvalue = async function () {
+    console.log('hey there');
+
     try {
         const result = await axios({
             method: 'POST',
@@ -25,8 +27,9 @@ const passvalue = async () => {
 // var url = 'http://www.site.com/234234234';
 // var id = url.substring(url.lastIndexOf('/') + 1);
 // alert(id);
-document.getElementById('subscribe_btn').addEventListener('submit', e => {
+document.getElementById('subscribe_btn').addEventListener('click', e => {
     e.preventDefault();
+
     // const dealName = document.getElementById('dealName').value;
     // const affiliateLink = document.getElementById('affiliateLink').value;
     // const category = document.getElementById('category').value;

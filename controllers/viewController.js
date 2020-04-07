@@ -72,6 +72,7 @@ exports.getRecruitmentsData = (req, res) => {
 
 exports.mainPage = catchAsync(async (req, res) => {
     const deals = await Deal.find();
+
     res.status(200).render('main',
         { deals });
 });
@@ -89,8 +90,22 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         path: 'reviews',
     });
 
+    const cookieOptions = {
+        expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000),
+        // secure: true,
+        httpOnly: true
+    };
+    // let hey = '';
+    for (var i = 0; i <= 4; i++) {
+        const hey = ['one', 'two', 'three', 'four', 'five'];
+        res.cookie(hey[i], deal, cookieOptions);
+        // console.log(req.cookies);
+    }
+    const getCookie = req.cookies;
+    console.log(getCookie.one);
+
     if (!deal) {
-        return next(new appError('No Deal With That Id', 404));
+        return next(new AppError('No Deal With That Id', 404));
     }
 
     res.status(200).render('deal', {

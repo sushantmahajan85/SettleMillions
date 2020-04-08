@@ -121,7 +121,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         cookieCount = 0;
     }
 
-<<<<<<< HEAD
     let dealId = "affiliate" + deal._id;
     
     if(req.cookies.one===undefined){cookieOneDealId = 'affiliate';}
@@ -143,10 +142,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         res.cookie(cookieArray[cookieCount], deal, cookieOptions);
         cookieCount++;
     }
-=======
-    res.cookie(cookieArray[cookieCount], deal, cookieOptions);
-    cookieCount++;
->>>>>>> 316a14ca3f46c102c0f114581757ab054ae50b29
 
     //console.log(dealId);
 

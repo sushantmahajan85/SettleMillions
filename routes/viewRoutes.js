@@ -12,4 +12,5 @@ router.get('/deal/:dealId/postedBy/:sellerId', viewController.dealPage);
 router.get('/likedDeals', authController.protect, viewController.getLikedDeals);
 router.get('/subscriptions', authController.protect, viewController.getSubscriptions);
 router.get('/newDeal', viewController.createNewDeal);
+router.get('/recent', viewController.recently);
 module.exports = router;

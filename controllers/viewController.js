@@ -88,6 +88,14 @@ exports.getMemberData = catchAsync(async (req, res) => {
     });
 });
 
+exports.recently = catchAsync(async (req, res) => {
+    const deals = req.cookies;
+    console.log(deals.one);
+    res.status(200).render('recent', {
+        deals
+    });
+})
+
 exports.dealPage = catchAsync(async (req, res, next) => {
     const deal = await Deal.findOne({ _id: req.params.dealId }).populate({
         path: 'reviews',
@@ -98,28 +106,16 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         // secure: true,
         httpOnly: true
     };
-<<<<<<< HEAD
 
-    for (var i = 0; i <= 4; i++) {
-        const hey = ['one', 'two', 'three', 'four', 'five'];
-        for (var j = 0; j <= i; j++) {
-            res.cookie(hey[i], deal._id, cookieOptions);
-            break;
-        }
+    if (cookieCount === 5) {
 
-        // console.log(req.cookies);
-=======
-    
-    if(cookieCount === 5){
-        
         req.cookies.five = req.cookies.four;
         req.cookies.four = req.cookies.three;
         req.cookies.three = req.cookies.two;
         req.cookies.two = req.cookies.one;
         cookieCount = 0;
->>>>>>> 22769348e18105de8c7e207a2106747a5f6e62e5
     }
-    
+
     res.cookie(cookieArray[cookieCount], deal, cookieOptions);
     cookieCount++;
 

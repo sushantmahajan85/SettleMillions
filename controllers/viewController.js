@@ -95,14 +95,18 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         // secure: true,
         httpOnly: true
     };
-    // let hey = '';
+
     for (var i = 0; i <= 4; i++) {
         const hey = ['one', 'two', 'three', 'four', 'five'];
-        res.cookie(hey[i], deal, cookieOptions);
+        for (var j = 0; j <= i; j++) {
+            res.cookie(hey[i], deal._id, cookieOptions);
+            break;
+        }
+
         // console.log(req.cookies);
     }
     const getCookie = req.cookies;
-    console.log(getCookie.one);
+    console.log(getCookie);
 
     if (!deal) {
         return next(new AppError('No Deal With That Id', 404));

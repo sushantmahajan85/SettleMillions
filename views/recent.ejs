@@ -1,0 +1,262 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate</title>
+    <link rel="stylesheet" href="sass/css/style.css">
+    <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162941654-1');
+    </script>
+
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <%- include('partials/sidebar.ejs') %>
+
+    <section class="deal_area">
+        <% if (!(deals.one === undefined))  { %>
+
+
+        <a href=<%= `/deal/${deals.one._id}/postedBy/${deals.one.user}` %>>
+            <div class="deal_area_box">
+                <div class="bigImg_container">
+                    <div class="deal_area_box_img"></div>
+                </div>
+                <div class="deal_area_content">
+                    <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                         </div> -->
+                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="deal_box_nameTime"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                            <div class="deal_box_name"><%= deals.one.dealName %> </div>
+
+                        </div>
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                            <div class="deal_box_views"><%= deals.one.owner %> </div>
+                            <div class="deal_box_time"><%= deals.one.company %> </div>
+
+                        </div>
+
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                            <div class="deal_box_views"><%=`${deals.one.dealPrice}rs`%></div>
+                            <div class="deal_box_time">80% OFF</div>
+                            <div class="deal_box_time"><%=`${deals.one.mrp}rs`%></div>
+                        </div>
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                            <div class="deal_box_views"><%=`${deals.views} views`%></div>
+                            <div class="deal_box_time">
+                                <%= deals.one.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %></div>
+                        </div>
+                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                            <div><%= deals.one.titleDis %></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% } %>
+        <% if (!(deals.two === undefined)) { %>
+
+
+        <a href=<%= `/deal/${deals.two._id}/postedBy/${deals.two.user}` %>>
+            <div class="deal_area_box">
+                <div class="bigImg_container">
+                    <div class="deal_area_box_img"></div>
+                </div>
+                <div class="deal_area_content">
+                    <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                         </div> -->
+                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="deal_box_nameTime"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                            <div class="deal_box_name"><%= deals.two.dealName %> </div>
+
+                        </div>
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                            <div class="deal_box_views"><%= deals.two.owner %> </div>
+                            <div class="deal_box_time"><%= deals.two.company %> </div>
+
+                        </div>
+
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                            <div class="deal_box_views"><%=`${deals.two.dealPrice}rs`%></div>
+                            <div class="deal_box_time">80% OFF</div>
+                            <div class="deal_box_time"><%=`${deals.two.mrp}rs`%></div>
+                        </div>
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                            <div class="deal_box_views"><%=`${deals.two.views} views`%></div>
+                            <div class="deal_box_time">
+                                <%= deals.two.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %></div>
+                        </div>
+                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                            <div><%= deals.two.titleDis %></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% } %>
+        <% if (!(deals.three === undefined)) { %>
+        <a href=<%= `/deal/${deals.three._id}/postedBy/${deals.three.user}` %>>
+            <div class="deal_area_box">
+                <div class="bigImg_container">
+                    <div class="deal_area_box_img"></div>
+                </div>
+                <div class="deal_area_content">
+                    <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                         </div> -->
+                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="deal_box_nameTime"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                            <div class="deal_box_name"><%= deals.three.dealName %> </div>
+
+                        </div>
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                            <div class="deal_box_views"><%= deals.three.owner %> </div>
+                            <div class="deal_box_time"><%= deals.three.company %> </div>
+
+                        </div>
+
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                            <div class="deal_box_views"><%=`${deals.three.dealPrice}rs`%></div>
+                            <div class="deal_box_time">80% OFF</div>
+                            <div class="deal_box_time"><%=`${deals.three.mrp}rs`%></div>
+                        </div>
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                            <div class="deal_box_views"><%=`${deals.three.views} views`%></div>
+                            <div class="deal_box_time">
+                                <%= deals.three.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %></div>
+                        </div>
+                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                            <div><%= deals.three.titleDis %></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% } %>
+        <% if (!(deals.four === undefined)) { %>
+        <a href=<%= `/deal/${deals.four._id}/postedBy/${deals.four.user}` %>>
+            <div class="deal_area_box">
+                <div class="bigImg_container">
+                    <div class="deal_area_box_img"></div>
+                </div>
+                <div class="deal_area_content">
+                    <!-- <div class="picture_container">
+                            <div class="profile_pic"></div>
+                             </div> -->
+                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="deal_box_nameTime"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                            <div class="deal_box_name"><%= deals.four.dealName %> </div>
+
+                        </div>
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                            <div class="deal_box_views"><%= deals.four.owner %> </div>
+                            <div class="deal_box_time"><%= deals.four.company %> </div>
+
+                        </div>
+
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                            <div class="deal_box_views"><%=`${deals.four.dealPrice}rs`%></div>
+                            <div class="deal_box_time">80% OFF</div>
+                            <div class="deal_box_time"><%=`${deals.four.mrp}rs`%></div>
+                        </div>
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                            <div class="deal_box_views"><%=`${deals.four.views} views`%></div>
+                            <div class="deal_box_time">
+                                <%= deals.four.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %></div>
+                        </div>
+                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                            <div><%= deals.four.titleDis %></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% } %>
+        <% if (!(deals.five === undefined)) { %>
+        <a href=<%= `/deal/${deals.five._id}/postedBy/${deals.five.user}` %>>
+            <div class="deal_area_box">
+                <div class="bigImg_container">
+                    <div class="deal_area_box_img"></div>
+                </div>
+                <div class="deal_area_content">
+                    <!-- <div class="picture_container">
+                                <div class="profile_pic"></div>
+                                 </div> -->
+                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="deal_box_nameTime"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                            <div class="deal_box_name"><%= deals.five.dealName %> </div>
+
+                        </div>
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                            <div class="deal_box_views"><%= deals.five.owner %> </div>
+                            <div class="deal_box_time"><%= deals.five.company %> </div>
+
+                        </div>
+
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                            <div class="deal_box_views"><%=`${deals.five.dealPrice}rs`%></div>
+                            <div class="deal_box_time">80% OFF</div>
+                            <div class="deal_box_time"><%=`${deals.five.mrp}rs`%></div>
+                        </div>
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                            <div class="deal_box_views"><%=`${deals.five.views} views`%></div>
+                            <div class="deal_box_time">
+                                <%= deals.five.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %></div>
+                        </div>
+                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                            <div><%= deals.five.titleDis %></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% } %>
+    </section>
+
+</body>
+
+</html>

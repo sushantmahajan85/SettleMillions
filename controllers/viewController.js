@@ -4,6 +4,9 @@ const User = require('./../schema/models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const appError = require('./../utils/appError');
 
+let cookieCount = 0;
+let cookieArray = ['one', 'two', 'three', 'four', 'five'];
+
 exports.getLoginForm = (req, res) => {
     res.status(200).render('login')
 }
@@ -95,14 +98,21 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         // secure: true,
         httpOnly: true
     };
-    // let hey = '';
-    for (var i = 0; i <= 4; i++) {
-        const hey = ['one', 'two', 'three', 'four', 'five'];
-        res.cookie(hey[i], deal, cookieOptions);
-        // console.log(req.cookies);
+    
+    if(cookieCount === 5){
+        
+        req.cookies.five = req.cookies.four;
+        req.cookies.four = req.cookies.three;
+        req.cookies.three = req.cookies.two;
+        req.cookies.two = req.cookies.one;
+        cookieCount = 0;
     }
+    
+    res.cookie(cookieArray[cookieCount], deal, cookieOptions);
+    cookieCount++;
+
     const getCookie = req.cookies;
-    console.log(getCookie.one);
+    console.log(getCookie);
 
     if (!deal) {
         return next(new AppError('No Deal With That Id', 404));

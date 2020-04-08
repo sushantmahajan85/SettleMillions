@@ -6,6 +6,11 @@ const appError = require('./../utils/appError');
 
 let cookieCount = 0;
 let cookieArray = ['one', 'two', 'three', 'four', 'five'];
+let cookieOneDealId = '';
+let cookieTwoDealId = '';
+let cookieThreeDealId = '';
+let cookieFourDealId = '';
+let cookieFiveDealId = '';
 
 exports.getLoginForm = (req, res) => {
     res.status(200).render('login')
@@ -107,12 +112,30 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         req.cookies.two = req.cookies.one;
         cookieCount = 0;
     }
-    
-    res.cookie(cookieArray[cookieCount], deal, cookieOptions);
-    cookieCount++;
 
-    const getCookie = req.cookies;
-    console.log(getCookie);
+    let dealId = "affiliate" + deal._id;
+    
+    if(req.cookies.one===undefined){cookieOneDealId = 'affiliate';}
+    else{cookieOneDealId = "affiliate" + req.cookies.one._id;}
+
+    if(req.cookies.two===undefined){cookieTwoDealId = 'affiliate';}
+    else{cookieTwoDealId = "affiliate" + req.cookies.two._id;}
+
+    if(req.cookies.three===undefined){cookieThreeDealId = 'affiliate';}
+    else{cookieThreeDealId = "affiliate" + req.cookies.three._id;}
+
+    if(req.cookies.four===undefined){cookieFourDealId = 'affiliate';}
+    else{cookieFourDealId = "affiliate" + req.cookies.four._id;}
+
+    if(req.cookies.five===undefined){cookieFiveDealId = 'affiliate';}
+    else{cookieFiveDealId = 'affiliate' + req.cookies.five._id;}
+    
+    if((cookieOneDealId !== dealId)&&(cookieTwoDealId !== dealId)&&(cookieThreeDealId !== dealId)&&(cookieFourDealId !== dealId)&&(cookieFiveDealId !== dealId)){
+        res.cookie(cookieArray[cookieCount], deal, cookieOptions);
+        cookieCount++;
+    }
+
+    //console.log(dealId);
 
     if (!deal) {
         return next(new AppError('No Deal With That Id', 404));

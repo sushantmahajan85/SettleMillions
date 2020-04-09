@@ -80,12 +80,26 @@ exports.getRecruitmentsData = (req, res) => {
 
 exports.mainPage = catchAsync(async (req, res) => {
     if (req.query.search) {
-        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-        const deals = await Deal.find({
-            dealName: regex,
-            // owner: regex,
+        // await Deal.ensureIndexes({ dealName: 'text' });
+        // const regex = new RegExp(escapeRegex(req.query.search), 'gi');
 
-        });
+        const deals = await Deal.find({ $text: { $search: req.query.search } },
+            { score: { $meta: "textScore" } }).sort({ score: { $meta: "textScore" } });
+        // const deals = await Deal.find({
+        //     dealName: regex,
+        //     // owner: regex,
+
+        // });
+        // const deals = await Deal.find({
+        //     dealName: {
+        //         $regex: new RegExp(req.query.search)
+        //     },
+        //     biggerDis: {
+        //         $regex: new RegExp(req.query.search)
+        //     }
+        // });
+
+        console.log(deals);
         res.status(200).render('main',
             { deals });
     }
@@ -166,6 +180,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         deal
     });
 });
-function escapeRegex(text) {
-    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-};
+// function escapeRegex(text) {
+//     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+// };

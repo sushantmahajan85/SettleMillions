@@ -79,10 +79,23 @@ exports.getRecruitmentsData = (req, res) => {
 }
 
 exports.mainPage = catchAsync(async (req, res) => {
-    const deals = await Deal.find();
+    if (req.query.search) {
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+        const deals = await Deal.find({
+            dealName: regex,
+            owner: regex,
 
-    res.status(200).render('main',
-        { deals });
+        });
+        res.status(200).render('main',
+            { deals });
+    }
+    else {
+        const deals = await Deal.find();
+        res.status(200).render('main',
+            { deals });
+
+    }
+
 });
 
 exports.getMemberData = catchAsync(async (req, res) => {
@@ -122,23 +135,23 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     }
 
     let dealId = "affiliate" + deal._id;
-    
-    if(req.cookies.one===undefined){cookieOneDealId = 'affiliate';}
-    else{cookieOneDealId = "affiliate" + req.cookies.one._id;}
 
-    if(req.cookies.two===undefined){cookieTwoDealId = 'affiliate';}
-    else{cookieTwoDealId = "affiliate" + req.cookies.two._id;}
+    if (req.cookies.one === undefined) { cookieOneDealId = 'affiliate'; }
+    else { cookieOneDealId = "affiliate" + req.cookies.one._id; }
 
-    if(req.cookies.three===undefined){cookieThreeDealId = 'affiliate';}
-    else{cookieThreeDealId = "affiliate" + req.cookies.three._id;}
+    if (req.cookies.two === undefined) { cookieTwoDealId = 'affiliate'; }
+    else { cookieTwoDealId = "affiliate" + req.cookies.two._id; }
 
-    if(req.cookies.four===undefined){cookieFourDealId = 'affiliate';}
-    else{cookieFourDealId = "affiliate" + req.cookies.four._id;}
+    if (req.cookies.three === undefined) { cookieThreeDealId = 'affiliate'; }
+    else { cookieThreeDealId = "affiliate" + req.cookies.three._id; }
 
-    if(req.cookies.five===undefined){cookieFiveDealId = 'affiliate';}
-    else{cookieFiveDealId = 'affiliate' + req.cookies.five._id;}
-    
-    if((cookieOneDealId !== dealId)&&(cookieTwoDealId !== dealId)&&(cookieThreeDealId !== dealId)&&(cookieFourDealId !== dealId)&&(cookieFiveDealId !== dealId)){
+    if (req.cookies.four === undefined) { cookieFourDealId = 'affiliate'; }
+    else { cookieFourDealId = "affiliate" + req.cookies.four._id; }
+
+    if (req.cookies.five === undefined) { cookieFiveDealId = 'affiliate'; }
+    else { cookieFiveDealId = 'affiliate' + req.cookies.five._id; }
+
+    if ((cookieOneDealId !== dealId) && (cookieTwoDealId !== dealId) && (cookieThreeDealId !== dealId) && (cookieFourDealId !== dealId) && (cookieFiveDealId !== dealId)) {
         res.cookie(cookieArray[cookieCount], deal, cookieOptions);
         cookieCount++;
     }
@@ -153,3 +166,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         deal
     });
 });
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};

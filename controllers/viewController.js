@@ -83,7 +83,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
         const deals = await Deal.find({
             dealName: regex,
-            owner: regex,
+            // owner: regex,
 
         });
         res.status(200).render('main',

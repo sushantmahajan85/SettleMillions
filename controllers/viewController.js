@@ -83,7 +83,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         // await Deal.ensureIndexes({ dealName: 'text' });
         // const regex = new RegExp(escapeRegex(req.query.search), 'gi');
 
-        const deals = await Deal.find({ $text: { $search: req.query.search } },
+        const deals = await Deal.find({ $text: { $search: req.cookies.one.dealName } },
             { score: { $meta: "textScore" } }).sort({ score: { $meta: "textScore" } });
         // const deals = await Deal.find({
         //     dealName: regex,

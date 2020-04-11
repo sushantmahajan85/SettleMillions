@@ -88,47 +88,56 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     if (req.cookies.one !== undefined) {
         rec1 = req.cookies.one.dealName + ' ' + req.cookies.one.titleDis + ' ' + req.cookies.one.owner + ' ' + req.cookies.one.company + ' ' + req.cookies.one.category + ' ' + req.cookies.one.user;
-
-        // for(var i = 0; i <req.cookies.one.tags.length; i++){
-        //     rec1 = rec1 + ' ' + req.cookies.one.tags[i];
-        // }
+        if (req.cookies.one.tags) {
+            for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+                rec1 = rec1 + ' ' + req.cookies.one.tags[i];
+            }
+        }
     }
+    console.log(Object.keys(req.cookies.one.tags).length);
     if (req.cookies.two !== undefined) {
         rec2 = req.cookies.two.dealName + ' ' + req.cookies.two.titleDis + ' ' + req.cookies.two.owner + ' ' + req.cookies.two.company + ' ' + req.cookies.two.category + ' ' + req.cookies.two.user;
+        if (req.cookies.two.tags) {
+            for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+                rec2 = rec2 + ' ' + req.cookies.two.tags[i];
+            }
+        }
 
-        // for(var i = 0; i <req.cookies.two.tags.length; i++){
-        //     rec2 = rec2 + ' ' + req.cookies.two.tags[i];
-        // }
     }
     if (req.cookies.three !== undefined) {
         rec3 = req.cookies.three.dealName + ' ' + req.cookies.three.titleDis + ' ' + req.cookies.three.owner + ' ' + req.cookies.three.company + ' ' + req.cookies.three.category + ' ' + req.cookies.three.user;
+        if (req.cookies.three.tags) {
+            for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
+                rec3 = rec3 + ' ' + req.cookies.three.tags[i];
+            }
+        }
 
-        // for(var i = 0; i <req.cookies.three.tags.length; i++){
-        //     rec3 = rec3 + ' ' + req.cookies.three.tags[i];
-        // }
     }
     if (req.cookies.four !== undefined) {
         rec4 = req.cookies.four.dealName + ' ' + req.cookies.four.titleDis + ' ' + req.cookies.four.owner + ' ' + req.cookies.four.company + ' ' + req.cookies.four.category + ' ' + req.cookies.four.user;
+        if (req.cookies.four.tags) {
+            for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
+                rec4 = rec4 + ' ' + req.cookies.four.tags[i];
+            }
+        }
 
-        // for(var i = 0; i <req.cookies.four.tags.length; i++){
-        //     rec4 = rec4 + ' ' + req.cookies.four.tags[i];
-        // }
     }
     if (req.cookies.five !== undefined) {
         rec5 = req.cookies.five.dealName + ' ' + req.cookies.five.titleDis + ' ' + req.cookies.five.owner + ' ' + req.cookies.five.company + ' ' + req.cookies.five.category + ' ' + req.cookies.five.user;
-
-        // for(var i = 0; i <req.cookies.five.tags.length; i++){
-        //     rec5 = rec5 + ' ' + req.cookies.five.tags[i];
-        // }
+        if (req.cookies.five.tags) {
+            for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
+                rec5 = rec5 + ' ' + req.cookies.five.tags[i];
+            }
+        }
     }
 
     rec = rec1 + ' ' + rec2 + ' ' + rec3 + ' ' + rec4 + ' ' + rec5;
 
-    console.log(rec);
+    // console.log(rec);
 
     const recommendedDeals = await Deal.find({ $text: { $search: rec } },
         { score: { $meta: "textScore" } }).sort({ score: { $meta: "textScore" } });
-    console.log(Object.keys(req.cookies).length);
+
     for (var i = 0; i < ((Object.keys(req.cookies).length) - 3); i++) {
         recommendedDeals[i] = undefined;
     }

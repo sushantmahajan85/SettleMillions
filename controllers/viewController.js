@@ -86,7 +86,10 @@ exports.getRecruitmentsData = (req, res) => {
 
 exports.mainPage = catchAsync(async (req, res) => {
 
+    let j = 0;
+
     if (req.cookies.one !== undefined) {
+        j++;
         rec1 = req.cookies.one.dealName + ' ' + req.cookies.one.titleDis + ' ' + req.cookies.one.owner + ' ' + req.cookies.one.company + ' ' + req.cookies.one.category + ' ' + req.cookies.one.user;
         if (req.cookies.one.tags) {
             for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
@@ -94,8 +97,9 @@ exports.mainPage = catchAsync(async (req, res) => {
             }
         }
     }
-    console.log(Object.keys(req.cookies.one.tags).length);
+    //console.log(Object.keys(req.cookies.one.tags).length);
     if (req.cookies.two !== undefined) {
+        j++;
         rec2 = req.cookies.two.dealName + ' ' + req.cookies.two.titleDis + ' ' + req.cookies.two.owner + ' ' + req.cookies.two.company + ' ' + req.cookies.two.category + ' ' + req.cookies.two.user;
         if (req.cookies.two.tags) {
             for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
@@ -105,6 +109,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     }
     if (req.cookies.three !== undefined) {
+        j++;
         rec3 = req.cookies.three.dealName + ' ' + req.cookies.three.titleDis + ' ' + req.cookies.three.owner + ' ' + req.cookies.three.company + ' ' + req.cookies.three.category + ' ' + req.cookies.three.user;
         if (req.cookies.three.tags) {
             for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
@@ -114,6 +119,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     }
     if (req.cookies.four !== undefined) {
+        j++;
         rec4 = req.cookies.four.dealName + ' ' + req.cookies.four.titleDis + ' ' + req.cookies.four.owner + ' ' + req.cookies.four.company + ' ' + req.cookies.four.category + ' ' + req.cookies.four.user;
         if (req.cookies.four.tags) {
             for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
@@ -123,6 +129,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     }
     if (req.cookies.five !== undefined) {
+        j++;
         rec5 = req.cookies.five.dealName + ' ' + req.cookies.five.titleDis + ' ' + req.cookies.five.owner + ' ' + req.cookies.five.company + ' ' + req.cookies.five.category + ' ' + req.cookies.five.user;
         if (req.cookies.five.tags) {
             for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
@@ -138,7 +145,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     const recommendedDeals = await Deal.find({ $text: { $search: rec } },
         { score: { $meta: "textScore" } }).sort({ score: { $meta: "textScore" } });
 
-    for (var i = 0; i < ((Object.keys(req.cookies).length) - 3); i++) {
+    for (var i = 0; i < j; i++) {
         recommendedDeals[i] = undefined;
     }
     console.log(recommendedDeals);

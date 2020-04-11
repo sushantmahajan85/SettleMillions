@@ -80,11 +80,10 @@ exports.getRecruitmentsData = (req, res) => {
 
 exports.mainPage = catchAsync(async (req, res) => {
     if (req.query.search) {
-        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-        const deals = await Deal.find({
-            dealName: regex,
-            // owner: regex,
+        regex = new RegExp(escapeRegex(req.query.search), 'gi');
 
+        const deals = await Deal.find({
+            dealName: regex
         });
         res.status(200).render('main',
             { deals });

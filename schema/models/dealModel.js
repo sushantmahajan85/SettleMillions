@@ -60,6 +60,7 @@ const dealSchema = new mongoose.Schema({
     },
     corouselImgs: Array,
     discount: Number,
+    tags: Array,
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',

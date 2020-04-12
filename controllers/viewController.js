@@ -140,7 +140,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     rec = rec1 + ' ' + rec2 + ' ' + rec3 + ' ' + rec4 + ' ' + rec5;
 
-    // console.log(rec);
+    console.log(rec);
 
     const recommendedDeals = await Deal.find({ $text: { $search: rec } },
         { score: { $meta: "textScore" } }).sort({ score: { $meta: "textScore" } });

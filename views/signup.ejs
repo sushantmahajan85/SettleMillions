@@ -28,6 +28,11 @@
 </head>
 
 <body>
+    <!-- FB SDK -->
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1321461864731329&autoLogAppEvents=1"></script>
+    <!-- FB SDK -->
+
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
@@ -80,7 +85,12 @@
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div>
+
+
                     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState()"></div>
+
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" type="submit">
                             SignUp
@@ -107,6 +117,47 @@
         </div>
     </div>
     </div>
+
+    
+    <!-- FACEBOOK SDK -->
+
+        <script>
+            window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1321461864731329',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v6.0'
+            });
+                
+            FB.AppEvents.logPageView();   
+                
+            };
+        
+            (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <script>
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+
+            function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+            }
+        </script>
+
+    <!-- FACEBOOK SDK END -->
+
+
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>

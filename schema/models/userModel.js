@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
         validate: [validator.isEmail, 'Invalid Email']
     },
     phoneNo: {
-        type: Number, required: [true, 'Phone Number is Required'], unique: true,
+        type: Number, unique: true,
         maxLength: [10, 'Invalid Phone Number'], minLength: [10, 'Invalid Phone Number']
     },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },

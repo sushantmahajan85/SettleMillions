@@ -123,37 +123,37 @@
     <!-- FACEBOOK SDK -->
 
         <script>
-            window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '1321461864731329',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v6.0'
-            });
+            // window.fbAsyncInit = function() {
+            // FB.init({
+            //     appId      : '1321461864731329',
+            //     cookie     : true,
+            //     xfbml      : true,
+            //     version    : 'v6.0'
+            // });
                 
-            FB.AppEvents.logPageView();   
+            // FB.AppEvents.logPageView();   
                 
-            };
+            // };
         
-            (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+            // (function(d, s, id){
+            // var js, fjs = d.getElementsByTagName(s)[0];
+            // if (d.getElementById(id)) {return;}
+            // js = d.createElement(s); js.id = id;
+            // js.src = "https://connect.facebook.net/en_US/sdk.js";
+            // fjs.parentNode.insertBefore(js, fjs);
+            // }(document, 'script', 'facebook-jssdk'));
         </script>
 
         <script>
-            FB.getLoginStatus(function(response) {
-                statusChangeCallback(response);
-            });
+            // FB.getLoginStatus(function(response) {
+            //     statusChangeCallback(response);
+            // });
 
-            function checkLoginState() {
-                FB.getLoginStatus(function(response) {
-                    statusChangeCallback(response);
-                });
-            }
+            // function checkLoginState() {
+            //     FB.getLoginStatus(function(response) {
+            //         statusChangeCallback(response);
+            //     });
+            // }
         </script>
 
     <!-- FACEBOOK SDK END -->
@@ -196,209 +196,10 @@
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/gSignup.js"></script>
+    <script src="js/fbSignup.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- <script>
-        console.log("hey there");
-        var objPeople = [
-            {
-                roll: 101815018
-            },
-            {
-                roll: 101708016
-            },
-            {
-                roll: 101808166
-            },
-            {
-                roll: 101901023
-            },
-            {
-                roll: 101803605
-            },
-            {
-                roll: 101903736
-            },
-            {
-                roll: 101806130
-            },
-            {
-                roll: 101702056
-            },
-            {
-                roll: 101803122
-            },
-            {
-                roll: 101903125
-            },
-            {
-                roll: 101806093
-            },
-            {
-                roll: 101918021
-            },
-            {
-                roll: 101917097
-            },
-            {
-                roll: 101908088
-            },
-            {
-                roll: 101803704
-            },
-            {
-                roll: 101808169
-            },
-            {
-                roll: 701700063
-            },
-            {
-                roll: 101903613
-            },
-            {
-                roll: 101858001
-            },
-            {
-                roll: 101915194
-            },
-            {
-                roll: 101909061
-            },
-            {
-                roll: 101803305
-            },
-            {
-                roll: 101903101
-            },
-            {
-                roll: 101803270
-            },
-            {
-                roll: 101982012
-            },
-            {
-                roll: 101803301
-            },
-            {
-                roll: 101703635
-            },
-            {
-                roll: 101803048
-            },
-            {
-                roll: 401756006
-            },
-            {
-                roll: 101703211
-            },
-            {
-                roll: 101715071
-            },
-            {
-                roll: 101803191
-            },
-            {
-                roll: 101904044
-            },
-            {
-                roll: 101606025
-            },
-            {
-                roll: 101903140
-            },
-            {
-                roll: 101703551
-            },
-            {
-                roll: 101715167
-            },
-            {
-                roll: 101803201
-            },
-            {
-                roll: 101815143
-            },
-            {
-                roll: 101905016
-            },
-            {
-                roll: 101915030
-            },
-            {
-                roll: 101903251
-            },
-            {
-                roll: 101903546
-            },
-            {
-                roll: 701903005
-            },
-            {
-                roll: 401906016
-            },
-            {
-                roll: 101808111
-            },
-            {
-                roll: 101703145
-            },
-            {
-                roll: 101605043
-            },
-            {
-                roll: 101806018
-            },
-            {
-                roll: 101815023
-            },
-            {
-                roll: 101708014
-            },
-            {
-                roll: 101703150
-            },
-            {
-                roll: 101803117
-            },
-            {
-                roll: 101803601
-            },
-            {
-                roll: 101606122
-            },
-            {
-                roll: 101901019
-            },
-            {
-                roll: 101815143
-            },
-            {
-                roll: 101805029
-            },
-            {
-                roll: 101610005
-            },
-            {
-                roll: 401508022
-            }
-        ];
-        function getInfo() {
-            flag = false;
-            var password = document.getElementById("input100").value;
-            console.log(password);
-            for (i = 0; i < objPeople.length; i++) {
-                if (password == objPeople[i].roll) {
-                    flag = true;
-                }
-            }
-            if (flag) return true;
-            else {
-                // window.history.back()
-                alert("Wrong Password!!!! Please Try Again");
-                return false;
-            }
-        }
-    </script> -->
+
 </body>
 
 </html>

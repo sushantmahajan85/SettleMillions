@@ -5,7 +5,7 @@ async function onSignIn(googleUser) {
         const name = profile.getName();
         // console.log('Image URL: ' + profile.getImageUrl());
         const email = profile.getEmail(); // This is null if the 'email' scope is not present.
-        const result = await axios({
+        await axios({
             method: 'POST',
             url: '/api/v1/users/signup',
             data: {

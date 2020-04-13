@@ -6,6 +6,9 @@
     <!-- <meta http-equiv="REFRESH" content="30" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-signin-client_id"
+        content="881941748196-1d26df7lc6jft2q9ki4j38l2q6mvogi3.apps.googleusercontent.com">
+
     <!--===============================================================================================-->
     <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
     <!--===============================================================================================-->
@@ -70,13 +73,14 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Please confirm your password">
-                        <input class="input100" id="password_confirm" type="password" name="input100" placeholder="Password Confirmation" />
+                        <input class="input100" id="password_confirm" type="password" name="input100"
+                            placeholder="Password Confirmation" />
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div>
-
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" type="submit">
                             SignUp
@@ -103,7 +107,7 @@
         </div>
     </div>
     </div>
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->

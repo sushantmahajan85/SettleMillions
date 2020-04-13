@@ -1,4 +1,4 @@
-function onSignIn(googleUser) {
+async function onSignIn(googleUser) {
     try {
         const profile = googleUser.getBasicProfile();
         // alert(profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -18,12 +18,12 @@ function onSignIn(googleUser) {
         if (result.data.status === 'success') {
             alert('sign up successful');
             window.setTimeout(() => {
-                location.assign('/main');
+                location.assign('/');
             }, 1000);
         }
 
     } catch (err) {
-        // console.log(err);
+        console.log(err);
     }
 };
 

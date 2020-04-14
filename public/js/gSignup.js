@@ -6,6 +6,13 @@ async function onSignIn(googleUser) {
         // console.log('Image URL: ' + profile.getImageUrl());
         const email = profile.getEmail(); // This is null if the 'email' scope is not present.
         await axios({
+            method: 'DELETE',
+            url: '/api/v1/users/signup',
+            data: {
+                email
+            }
+        });
+        const result = await axios({
             method: 'POST',
             url: '/api/v1/users/signup',
             data: {

@@ -95,7 +95,7 @@ exports.login = async (req, res, next) => {
         const token = signToken(user._id);
         const cookieOptions = {
             expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000),
-            // secure: true,
+            secure: true,
             httpOnly: true
         };
 
@@ -113,6 +113,7 @@ exports.login = async (req, res, next) => {
 exports.logout = (req, res) => {
     res.cookie('jwt', 'loggedout', {
         expires: new Date(Date.now() + 10 * 1000),
+        secure: true,
         httpOnly: true
     });
 

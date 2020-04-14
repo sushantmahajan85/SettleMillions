@@ -78,25 +78,56 @@
         }(document, 'script', 'facebook-jssdk'));
       
        
-        function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+        function testAPI() {     // Testing Graph API after login. 
+                                //See statusChangeCallback() for  when this call is made.
           console.log('Welcome!  Fetching your information.... ');
           FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-            document.getElementById('status').innerHTML =
-              'Thanks for logging in, ' + response.name + '!';
+          console.log('Successful login for: ' + response.name);
+
+          try {
+                const name = response.name;
+                const email = response.email;
+                const password = 'password';
+                const passwordConfirm = 'password';
+
+                console.log(name);
+
+                const result = await axios({
+                    method: 'POST',
+                    url: '/api/v1/users/signup',
+                    data: {
+                        email,
+                        name,
+                        password,
+                        passwordConfirm
+                    }
+                });
+                if (result.data.status === 'success') {
+                    alert('sign up successful');
+                    window.setTimeout(() => {
+                        location.assign('/');
+                    }, 1000);
+                }
+
+          } catch (err) {
+                console.log(err);
+          }
+
+            // document.getElementById('status').innerHTML =
+            //   'Thanks for logging in, ' + response.name + '!';
           });
         }
       
       </script>
       
       
-      //  The JS SDK Login Button 
+      <!-- //  The JS SDK Login Button 
       
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
       </fb:login-button>
       
       <div id="status">
-      </div>
+      </div> -->
 
     <!-- FB SDK -->
 

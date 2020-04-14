@@ -6,9 +6,9 @@
     <!-- <meta http-equiv="REFRESH" content="30" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-signin-scope" content="profile email">
+    <!-- <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="881941748196-rkhkhj1bq7td9cgoa8r2veh93l2be7ur.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
 
     <!--===============================================================================================-->
     <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
@@ -30,9 +30,9 @@
 
 <body>
     <!-- FB SDK -->
-    <div id="fb-root"></div>
+    <!-- <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1321461864731329&autoLogAppEvents=1"></script>
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1321461864731329&autoLogAppEvents=1"></script> -->
     <!-- FB SDK -->
 
     <div class="limiter">
@@ -88,11 +88,11 @@
                         </span>
                     </div>
 
-
+<!-- 
                     <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
                         data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"
-                        scope="public_profile,email" onlogin="checkLoginState()"></div>
+                        scope="public_profile,email" onlogin="checkLoginState()"></div> -->
 
 
                     <div class="container-login100-form-btn">
@@ -125,7 +125,7 @@
 
     <!-- FACEBOOK SDK -->
 
-    <script>
+    <!-- <script>
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '1321461864731329',
@@ -145,39 +145,9 @@
             js.src = "https://connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <script>
-        FB.getLoginStatus(function (response) {
-            statusChangeCallback(response);
-        });
-
-        function checkLoginState() {
-            FB.getLoginStatus(function (response) {
-                statusChangeCallback(response);
-            });
-        }
-    </script>
+    </script> -->
 
     <!-- FACEBOOK SDK END -->
-
-    <!-- <script>
-        function onSignIn(googleUser) {
-          // Useful data for your client-side scripts:
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log('Full Name: ' + profile.getName());
-          console.log('Given Name: ' + profile.getGivenName());
-          console.log('Family Name: ' + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
-  
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }
-      </script> -->
-
 
     <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
     <!--===============================================================================================-->
@@ -198,8 +168,8 @@
 
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
-    <script src="js/gSignup.js"></script>
-    <script src="js/fbSignup.js"></script>
+    <!-- <script src="js/gSignup.js"></script>
+    <script src="js/fbSignup.js"></script> -->
     <script src="js/main.js"></script>
 
 

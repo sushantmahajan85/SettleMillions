@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     },
     phoneNo: {
         type: Number,
-        maxLength: [10, 'Invalid Phone Number'], minLength: [10, 'Invalid Phone Number']
+        //maxLength: [10, 'Invalid Phone Number'], minLength: [10, 'Invalid Phone Number']
     },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     password: {

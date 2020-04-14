@@ -6,6 +6,8 @@
     <!-- <meta http-equiv="REFRESH" content="30" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-signin-client_id"
+        content="881941748196-g5qm514fj2vk7kg77156rl51gn36d6e4.apps.googleusercontent.com">
     <!--===============================================================================================-->
     <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
     <!--===============================================================================================-->
@@ -53,6 +55,8 @@
                         </span>
                     </div>
 
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" type="submit">
                             Login
@@ -95,10 +99,13 @@
     </script>
     <!--===============================================================================================-->
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <script src="js/login.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/gSignup.js"></script>
 
     <!-- <script>
         console.log("hey there");
@@ -302,5 +309,6 @@
         }
     </script> -->
 </body>
+
 
 </html>

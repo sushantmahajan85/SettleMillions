@@ -12,6 +12,7 @@ const signToken = id => jwt.sign({ id: id }, process.env.JWT_SECRET,
 
 exports.signUp = async (req, res) => {
     try {
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
         const newUser = await User.create({
             name: req.body.name,
             password: req.body.password,

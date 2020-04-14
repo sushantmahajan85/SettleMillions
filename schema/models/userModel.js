@@ -89,11 +89,11 @@ userSchema.pre('save', async function (next) {
 userSchema.post('save', async function () {
     const message = `Here is your 5 digit OTP : ${this.verification_token}`;
 
-    await sendEmail({
-        email: this.email,
-        subject: 'your 5 digit otp valid for 10 mins only',
-        message
-    });
+    // await sendEmail({
+    //     email: this.email,
+    //     subject: 'your 5 digit otp valid for 10 mins only',
+    //     message
+    // });
 
 });
 

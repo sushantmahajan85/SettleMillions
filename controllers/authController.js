@@ -12,6 +12,7 @@ const signToken = id => jwt.sign({ id: id }, process.env.JWT_SECRET,
 
 exports.signUp = async (req, res) => {
     try {
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
         const newUser = await User.create({
             name: req.body.name,
             password: req.body.password,
@@ -58,6 +59,7 @@ exports.verify = async (req, res, next) => {
             // secure: true,
             httpOnly: true
         };
+        if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
 
         res.cookie('jwt', token, cookieOptions);
         res.status(200).json({
@@ -97,6 +99,7 @@ exports.login = async (req, res, next) => {
             // secure: true,
             httpOnly: true
         };
+        if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
 
         res.cookie('jwt', token, cookieOptions);
         res.status(200).json({
@@ -112,8 +115,10 @@ exports.login = async (req, res, next) => {
 exports.logout = (req, res) => {
     res.cookie('jwt', 'loggedout', {
         expires: new Date(Date.now() + 10 * 1000),
+        // secure: true,
         httpOnly: true
     });
+    if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
 
     res.status(200).json({ status: 'success' });
 };
@@ -217,14 +222,14 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
     await user.save({ validateBeforeSave: false });
 
-    // const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
+    const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
 
     try {
-        // await sendEmail({                ////// For Sending Reset Password Mail //////
-        //    email: user.email,
-        //    subject: 'Password Reset Token ( Valid For 10 Minutes )',
-        //    message: message
-        // });
+        await sendEmail({                ////// For Sending Reset Password Mail //////
+            email: user.email,
+            subject: 'Password Reset Token ( Valid For 10 Minutes )',
+            message: message
+        });
 
         const resetURL = `${req.protocol}://${req.get('host')}/api/v1/users/resetPassword/${resetToken}`;
 

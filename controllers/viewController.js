@@ -210,6 +210,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
         // secure: true,
         httpOnly: true
     };
+    if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
 
     if (cookieCount === 5) {
 

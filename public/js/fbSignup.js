@@ -7,7 +7,7 @@ const passvaluefb = async (response) => {
 
        const result = await axios({
            method: 'POST',
-           url: '/api/v1/users/signup',
+           url: 'http://127.0.0.1:4000/api/v1/users/signup',
            data: {
                email,
                name,

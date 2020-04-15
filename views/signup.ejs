@@ -84,6 +84,8 @@
           FB.api('/me', function(response) {
           console.log('Successful login : ' + response.name);
 
+          passvaluefb(response);
+
         //   try {
         //         const name = response.name;
         //         const email = response.email;
@@ -263,7 +265,7 @@
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/gSignup.js"></script>
-    <!-- <script src="js/fbSignup.js"></script> -->
+    <script src="js/fbSignup.js"></script>
     <script src="js/main.js"></script>
 
 

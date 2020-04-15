@@ -5,6 +5,8 @@ const passvaluefb = async (response) => {
       const password = 'password';
       const passwordConfirm = 'password';
 
+      console.log(name, email, password, passwordConfirm);
+
        const result = await axios({
            method: 'POST',
            url: '/api/v1/users/signup',

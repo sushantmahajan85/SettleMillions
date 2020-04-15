@@ -1,11 +1,13 @@
 const passvaluefb = async (response) => {
    try {
       const name = response.name;
-      const email = response.email;
+      const emaill = response.email;
       const password = 'password';
       const passwordConfirm = 'password';
 
-      console.log(name, email, password, passwordConfirm);
+      console.log(name, emaill, password, passwordConfirm);
+
+      const email = 'njkdhsgegdhdjd@j.com';
 
        const result = await axios({
            method: 'POST',

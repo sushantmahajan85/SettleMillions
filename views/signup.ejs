@@ -81,37 +81,40 @@
         function testAPI() {     // Testing Graph API after login. 
                                 //See statusChangeCallback() for  when this call is made.
           console.log('Welcome!  Fetching your information.... ');
-          FB.api('/me', function(response) {
-          console.log('Successful login for: ' + response.name);
+          FB.api('/me', {fields: 'name, email'}, function(response) {
+          console.log(response);
+          console.log('Successful login : ' + response.name);
 
-          try {
-                const name = response.name;
-                const email = response.email;
-                const password = 'password';
-                const passwordConfirm = 'password';
+          passvaluefb(response);
 
-                console.log(name);
+        //   try {
+        //         const name = response.name;
+        //         const email = response.email;
+        //         const password = 'password';
+        //         const passwordConfirm = 'password';
 
-                const result = await axios({
-                    method: 'POST',
-                    url: '/api/v1/users/signup',
-                    data: {
-                        email,
-                        name,
-                        password,
-                        passwordConfirm
-                    }
-                });
-                if (result.data.status === 'success') {
-                    alert('sign up successful');
-                    window.setTimeout(() => {
-                        location.assign('/');
-                    }, 1000);
-                }
+        //         console.log(name);
 
-          } catch (err) {
-                console.log(err);
-          }
+        //         const result = await axios({
+        //             method: 'POST',
+        //             url: '/api/v1/users/signup',
+        //             data: {
+        //                 email,
+        //                 name,
+        //                 password,
+        //                 passwordConfirm
+        //             }
+        //         });
+        //         if (result.data.status === 'success') {
+        //             alert('sign up successful');
+        //             window.setTimeout(() => {
+        //                 location.assign('/');
+        //             }, 1000);
+        //         }
+
+        //   } catch (err) {
+        //         console.log(err);
+        //   }
 
             // document.getElementById('status').innerHTML =
             //   'Thanks for logging in, ' + response.name + '!';
@@ -186,8 +189,7 @@
 
                     <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
-                        data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"
-                        scope="public_profile,email" onlogin="checkLoginState()"></div>
+                        data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile, email" onlogin="checkLoginState()"></div>
 
 
                     <div class="container-login100-form-btn">
@@ -263,7 +265,7 @@
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/gSignup.js"></script>
-    <!-- <script src="js/fbSignup.js"></script> -->
+    <script src="js/fbSignup.js"></script>
     <script src="js/main.js"></script>
 
 

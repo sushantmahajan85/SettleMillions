@@ -140,7 +140,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     rec = rec1 + ' ' + rec2 + ' ' + rec3 + ' ' + rec4 + ' ' + rec5;
 
-    console.log(rec);
+    //console.log(rec);
 
     const recommendedDeals = await Deal.find({ $text: { $search: rec } },
         { score: { $meta: "textScore" } }).sort({ score: { $meta: "textScore" } });
@@ -148,7 +148,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     for (var i = 0; i < j; i++) {
         recommendedDeals[i] = undefined;
     }
-    console.log(recommendedDeals);
+    // console.log(recommendedDeals);
     if (req.query.search) {
         // await Deal.ensureIndexes({ dealName: 'text' });
         // const regex = new RegExp(escapeRegex(req.query.search), 'gi');

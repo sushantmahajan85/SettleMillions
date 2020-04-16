@@ -7,15 +7,31 @@
    <title>Document</title>
 </head>
 
-<body onload="w3_open()">
+<body onload="openSidebar()">
+
+   <script>
+      const openSidebar = (event) => {
+         w3_open();
+         document.getElementById('openBar').style.display = 'none';
+         document.getElementById('closeBar').style.display = 'block'; 
+      }
+      const closeSidebar = (event) => {
+         w3_close();
+         document.getElementById('closeBar').style.display = 'none';  
+         document.getElementById('openBar').style.display = 'block'; 
+      }
+   </script>
 
    <header>
       <div class="header">
 
-        <div class="w3-teal">
-         <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-teal" id="openBar">
+         <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="openSidebar()">&#9776;</button>
         </div>
 
+        <div class="w3-teal" id="closeBar">
+         <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="closeSidebar()">&#9776;</button>
+        </div>
 
          <h2 class="heading-normal"><a href="/">Affiliate</a></h2>
          <form action="/" method="GET">

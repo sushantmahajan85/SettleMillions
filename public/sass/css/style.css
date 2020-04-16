@@ -839,3 +839,6 @@ rgba(0, 0, 0, 0.349);
 
 .comment_section button {
   display: block; }
+
+#closeBar {
+  display: none; }

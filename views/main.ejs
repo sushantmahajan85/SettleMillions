@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affiliate</title>
+
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="/sass/css/style.css">
     <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,8 +29,9 @@
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %>
 
-    <section class="deal_area">
+    <section class="deal_area" style="float: right !important;">
         <% for(var deal of deals) { %>
+
         <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
             <div class="deal_area_box">
                 <div class="bigImg_container">
@@ -70,9 +75,21 @@
 
             </div>
         </a>
-        <% } %>
+        <% } %>s
     </section>
-
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
 </body>
 
 </html>

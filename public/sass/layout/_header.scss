@@ -1,18 +1,23 @@
+.header { display: flex;
+  width: 100%;
+  background: grey;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  // position: fixed;
+  
+  @include respond(tab-port) {
+    height: 109vh;
+  }
+}
+
 .header_logo-box {
   padding: 3rem;
   position: absolute;
   top: 2rem;
   left: 2rem;
 }
-.header { display: flex;
-  width: 100%;
-  background: grey;
-  justify-content: space-between;
-  padding: 18px 10%;
-  @include respond(tab-port) {
-    height: 109vh;
-  }
-}
+
 .follow_us {
   text-align: start;
   color: white;

@@ -550,18 +550,13 @@ rgba(0, 0, 0, 0.349);
 .deal_box_nameTime {
   margin-bottom: 2rem; }
 
-.header_logo-box {
-  padding: 3rem;
-  position: absolute;
-  top: 2rem;
-  left: 2rem; }
-
 .header {
   display: flex;
   width: 100%;
   background: grey;
   justify-content: space-between;
-  padding: 18px 10%; }
+  align-items: center;
+  padding: 1%; }
   @media (max-width: 56.25em) {
     .header {
       height: 109vh; } }
@@ -571,6 +566,12 @@ rgba(0, 0, 0, 0.349);
     .header .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+
+.header_logo-box {
+  padding: 3rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem; }
 
 .follow_us {
   text-align: start;

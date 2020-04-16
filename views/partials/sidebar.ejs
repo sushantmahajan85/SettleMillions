@@ -2,7 +2,18 @@
 <html>
 
 <body>
-   <div id="mySidenav" class="sidenav" style="z-index: 999999999;">
+
+   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  </div>
+
+
+
+
+   <!-- <div id="mySidenav" class="sidenav" style="z-index: 999999999;">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#">About</a>
       <a href="#">Services</a>
@@ -26,7 +37,7 @@
          document.getElementById("mySidenav").style.width = "0";
          document.getElementById("main").style.marginLeft = "0";
       }
-   </script>
+   </script> -->
 
 
 </body>

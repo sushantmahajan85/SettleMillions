@@ -127,6 +127,9 @@
   margin-bottom: 0.5em;
   margin-left: 0.5em; }
 
+.w3-sidebar {
+  max-width: 15%; }
+
 * {
   padding: 0%;
   margin: 0%;
@@ -455,7 +458,7 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -539,7 +542,7 @@ rgba(0, 0, 0, 0.349);
 
 .heading-normal {
   font-size: 2rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: black;
   font-weight: 100; }
 
@@ -556,7 +559,7 @@ rgba(0, 0, 0, 0.349);
   background: grey;
   justify-content: space-between;
   align-items: center;
-  padding: 1%; }
+  padding: 2px; }
   @media (max-width: 56.25em) {
     .header {
       height: 109vh; } }

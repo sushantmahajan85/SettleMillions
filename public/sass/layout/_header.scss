@@ -3,7 +3,7 @@
   background: grey;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
+  padding: 2px;
   // position: fixed;
   
   @include respond(tab-port) {
@@ -191,7 +191,7 @@
     background-size: 100% 100%;
     overflow: hidden;
   }
-}
+} 
 
 .deal_box_name {
   font-family: Arial, Helvetica, sans-serif;

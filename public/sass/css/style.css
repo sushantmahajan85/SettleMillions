@@ -127,6 +127,9 @@
   margin-bottom: 0.5em;
   margin-left: 0.5em; }
 
+.showLess {
+  display: none; }
+
 .w3-sidebar {
   max-width: 15%; }
 

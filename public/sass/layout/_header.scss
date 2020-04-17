@@ -40,8 +40,8 @@ h2{
 }
 
 .header {
-  font-size: 1.4rem;
-  height: 7rem;
+  font-size: 1rem;
+  height: 5rem;
   background-color: #4585F3;
   border-bottom: var(--line);
   display: -webkit-box;
@@ -140,18 +140,18 @@ h2{
       .user-nav__icon-box {
         position: relative; }
       .user-nav__icon {
-        height: 2.25rem;
-        width: 2.25rem;
+        height: 2.5rem;
+        width: 2.5rem;
         fill: var(--color-grey-dark-2); }
       .user-nav__notification {
         font-size: .8rem;
-        height: 1.75rem;
-        width: 1.75rem;
+        height: 1.2rem;
+        width: 1.2rem;
         background-color:orange;
         border-radius: 50%;
         color: #fff;
         position: absolute;
-        top: 1.5rem;
+        top: 1.2rem;
         right: 1.1rem;
         display: -webkit-box;
         display: -ms-flexbox;

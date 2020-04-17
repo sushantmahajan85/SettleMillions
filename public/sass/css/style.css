@@ -346,7 +346,8 @@ h2 {
   display: flex;
   flex: 0 0 25%;
   flex-wrap: wrap;
-  align-content: center; }
+  align-content: center;
+  padding-top: 4rem; }
 
 .card {
   -webkit-perspective: 150rem;

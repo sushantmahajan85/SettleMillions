@@ -358,8 +358,7 @@ h2 {
   -moz-perspective: 150rem;
   position: relative;
   height: 27rem;
-  width: 17rem;
-  margin: 0 auto; }
+  width: 17rem; }
   .card:not(:nth-child(4n)) {
     margin-right: 5rem; }
 

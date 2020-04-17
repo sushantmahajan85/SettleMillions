@@ -10,3 +10,25 @@
   margin: 2px;
   // background-color: red;
 }
+.font_icon{
+  color: rgb(212, 211, 211);
+  margin-right: 1rem;
+  font-size: 1.35rem;
+  &:hover{
+    color: red;
+  }
+}
+.sidebar_link{
+  
+  font-size: 1.1rem;
+  text-decoration: none !important;
+}
+.social_icons{
+  height: 50px;
+  width: 50px;
+  // background-color: black;
+  border-radius: 50%;
+margin: 0 0.3rem 0.3rem -0.2rem;
+// background-image: url(../../images/611sQqu6waL._SL1500_.jpg);
+background-size: 100% 100%;
+}

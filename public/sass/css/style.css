@@ -545,9 +545,8 @@ body {
       margin-right: 1rem; } }
 
 .col-1-of-4 {
-  max-width: 25.5rem;
-  float: left;
-  width: 100% !important; }
+  width: 25.5rem;
+  width: 100%; }
   @media (max-width: 75em) {
     .col-1-of-4 {
       width: 100% !important; } }

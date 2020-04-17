@@ -350,17 +350,18 @@ h2 {
   flex: 0 0 25%;
   flex-wrap: wrap;
   align-content: center;
-  padding-top: 4rem; }
+  padding-top: 3rem; }
 
 .card {
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 27rem;
-  width: 19rem; }
+  height: 24rem;
+  width: 16rem;
+  margin: 0 0 1rem 0.9rem; }
   .card:not(:nth-child(4n)) {
-    margin-right: 3rem; }
+    margin-right: 1rem; }
 
 .card__face {
   background-color: #fff;
@@ -373,7 +374,7 @@ h2 {
   border: 1px solid #aaa; }
 
 .card__picture {
-  width: 17rem;
+  width: inherit;
   height: 18rem; }
 
 .deal-photo {
@@ -386,7 +387,7 @@ h2 {
   text-align: center; }
 
 .card__details {
-  padding: 1rem; }
+  padding: 0.2rem; }
 
 .card__details ul {
   list-style: none;
@@ -395,7 +396,7 @@ h2 {
 .card__details ul li {
   text-align: center;
   font-size: 1rem;
-  padding: 1rem; }
+  padding: 0.2rem; }
 
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .card {

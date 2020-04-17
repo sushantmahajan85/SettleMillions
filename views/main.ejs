@@ -12,15 +12,38 @@
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %>
 
-    <div id="main">
-
-
-
-
+    <div id="main" class="page-content">
 
         <% for(var deal of deals) { %>
 
-        <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+            <div class="card">
+                <div class="card__face">
+                     <div class="card__picture">
+                        <img src="img/favicon.png" alt="Deal Photo" class="deal-photo">
+                     </div>
+                     <h4 class="card__heading">
+                         <span class="card__heading-span">Deal Head</span>
+                     </h4>
+                     <div class="card__details">
+                         <ul>
+                             <li>Deal Details</li>
+                         </ul>
+                     </div>
+                </div>
+                <!-- <div class="card__side card__side--back card__side--back-1">
+                     <div class="card__cta">
+                         <div class="card__price-box">
+                             <p class="card__price-only">Only</p>
+                             <p class="card__price-value">$297</p>
+                         </div>
+                         <a href="#popup" class="btn btn--white">Book now!</a>
+                     </div>
+                 </div> -->
+            </div>
+
+
+
+        <!-- <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
             <div class="deal_area_box">
                 <div class="bigImg_container">
                     <div class="deal_area_box_img"></div>
@@ -60,11 +83,11 @@
                 </div>
 
             </div>
-        </a>
+        </a> -->
         <% } %>
     </div>
 
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 
     <script>

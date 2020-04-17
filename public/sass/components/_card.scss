@@ -3,9 +3,9 @@
            perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 32rem;
+   height: 27rem;
    width: 17rem; 
-   margin: 0.2rem;
+   margin: 0 auto;
 }
    
 .card__face {
@@ -16,8 +16,9 @@
    backface-visibility: hidden;
    border-radius: 3px;
    overflow: hidden;
-   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
+   border: 1px solid #aaa;
+   //-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+   //box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
 }    
 
 .card__picture{
@@ -37,7 +38,7 @@
 }   
       
 .card__details {
-   padding: 3rem; }
+   padding: 1rem; }
 
 .card__details ul {
   list-style: none;

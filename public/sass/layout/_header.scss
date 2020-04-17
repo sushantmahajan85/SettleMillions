@@ -26,49 +26,6 @@
   margin-top: 4rem;
 }
 
-// .nav {
-//   // z-index: 10000;
-//   // transform: translateY(-3rem);
-//   display: flex;
-//   justify-content: space-between;
-//   text-align: center;
-//   padding: 2rem;
-//   color: white;
-//   font-family: "Signika", Verdana, sans-serif;
-//   @include respond(tab-land) {
-//     opacity: 0;
-//     visibility: none;
-//     display: none;
-//   }
-//   &_list {
-//     list-style: none;
-//     margin-top: 1rem;
-//   }
-//   &_links {
-//     display: inline-block;
-//     margin-top: -0.3em;
-//     // margin-right: 10rem;
-//     font-family: "Signika", Verdana, sans-serif;
-//     color: white;
-//     font-size: 2rem;
-//     font-weight: 400;
-//     &:hover {
-//       color: black;
-//       transform: translateY(-0.2rem);
-//     }
-//     &:not(:last-child) {
-//       margin-right: 3rem;
-
-//       padding-right: 1em;
-//     }
-//   }
-//   &_logo {
-//     // font-size: 3rem;
-//     margin-left: 2.5rem;
-//     margin-top: -1.2rem;
-//   }
-// }
-
 .login {
   text-decoration: none;
   // padding: 1.1rem;

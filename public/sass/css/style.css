@@ -358,9 +358,9 @@ h2 {
   -moz-perspective: 150rem;
   position: relative;
   height: 27rem;
-  width: 17rem; }
+  width: 19rem; }
   .card:not(:nth-child(4n)) {
-    margin-right: 5rem; }
+    margin-right: 3rem; }
 
 .card__face {
   background-color: #fff;

@@ -52,20 +52,20 @@
                class="social_icons"> Subscriber 1</a>
       </div>
 
-      <div class="showMore">
+      <div id="showMore">
             <a href="#" class="w3-bar-item w3-button sidebar_link" style="border-bottom: 1px solid rgb(212, 211, 211);" id="more" onclick="read()">
                   <i class="fas fa-sort-down font_icon" id="down" style="color: red;"></i>Show More
             </a>
       </div>
       
-      <div class="showLess">
+      <div id="showLess">
             <a href="#" class="w3-bar-item w3-button sidebar_link" style="border-bottom: 1px solid rgb(212, 211, 211);" id="more" onclick="read()">
                   <i class="fas fa-caret-up font_icon" id="up" style="color: red;"></i>Show Less
             </a>
       </div>
 
    </div>
-   
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
    <script type="text/javascript">
@@ -73,15 +73,15 @@
       function read() {
          if (!i) {
             document.getElementById("hide").style.display = "inline";
-            document.getElementsByClassName("showLess").style.display = "inline";
-            document.getElementsByClassName("showMore").style.display = "none";
+            document.getElementById("showLess").style.display = "inline";
+            document.getElementById("showMore").style.display = "none";
 
             i = 1;
          }
          else {
             document.getElementById("hide").style.display = "none";
-            document.getElementsByClassName("showLess").style.display = "none";
-            document.getElementsByClassName("showMore").style.display = "inline";   
+            document.getElementById("showLess").style.display = "none";
+            document.getElementById("showMore").style.display = "inline";   
             i = 0;
          }
       }

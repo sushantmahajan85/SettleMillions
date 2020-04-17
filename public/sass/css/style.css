@@ -360,6 +360,8 @@ h2 {
   height: 27rem;
   width: 17rem;
   margin: 0 auto; }
+  .card:not(:nth-child(4n)) {
+    margin-right: 5rem; }
 
 .card__face {
   background-color: #fff;

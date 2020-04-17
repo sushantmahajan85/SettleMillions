@@ -102,7 +102,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         j++;
         rec2 = req.cookies.two.dealName + ' ' + req.cookies.two.titleDis + ' ' + req.cookies.two.owner + ' ' + req.cookies.two.company + ' ' + req.cookies.two.category + ' ' + req.cookies.two.user;
         if (req.cookies.two.tags) {
-            for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+            for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
                 rec2 = rec2 + ' ' + req.cookies.two.tags[i];
             }
         }

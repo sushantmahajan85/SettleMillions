@@ -50,8 +50,8 @@
          <a href="#" class="w3-bar-item w3-button sidebar_link"><img src="/images/amazonOffer.jpeg" alt="hi"
                class="social_icons"> Subscriber 1</a>
       </div>
-      <a href="#" class="w3-bar-item w3-button sidebar_link" id="more" onclick="read()"><i
-            class="fas fa-sort-down font_icon" id="updown" style="color: rgb(24, 21, 21);"></i> Show more</a>
+      <a href="#" class="w3-bar-item w3-button sidebar_link" id="more" onclick="read()">
+         <i class="fas fa-sort-down font_icon" id="updown" style="color: red;"></i>Show more</a>
    </div>
 
    <script type="text/javascript">
@@ -60,6 +60,7 @@
          if (!i) {
             document.getElementById("hide").style.display = "inline";
             document.getElementById("more").innerHTML = "Show less";
+
             i = 1;
          }
          else {

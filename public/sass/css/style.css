@@ -359,7 +359,9 @@ h2 {
   position: relative;
   height: 24rem;
   width: 16rem;
-  margin: 0 0.9rem 1rem 0.9rem; }
+  margin: 0 0 1rem 0.9rem; }
+  .card:not(:nth-child(4n)) {
+    margin-right: 1rem; }
 
 .card__face {
   background-color: #fff;
@@ -547,9 +549,8 @@ body {
       margin-right: 1rem; } }
 
 .col-1-of-4 {
-  max-width: 25.5rem;
-  float: left;
-  width: 100% !important; }
+  width: 25.5rem;
+  width: 100%; }
   @media (max-width: 75em) {
     .col-1-of-4 {
       width: 100% !important; } }

@@ -378,11 +378,10 @@ h2 {
 
 .card__picture {
   width: 9.2rem;
-  height: inherit;
-  background-color: orange; }
+  height: inherit; }
 
 .deal-photo {
-  object-fit: fill;
+  object-fit: scale-down;
   height: 100%;
   width: 100%; }
 

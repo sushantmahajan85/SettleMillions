@@ -3,9 +3,8 @@
 <title>Affiliate</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/sass/css/style.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,9 +20,9 @@
     <%- include('partials/sidebar.ejs') %>
 
     <div id="main" class="page-content">
-
+        <%  var i = 0; %>
         <% for(var deal of deals) { %>
-
+        <% i=i++; %>
         <div class="card">
             <div class="card__face">
 
@@ -33,11 +32,14 @@
                 </div>
 
                 <div class="card-text">
-                    <h4 class="card__heading">
-                        <span class="card__heading-span">Deal Head</span>
+
+                    <h4 class="card__head">
+                        Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
                     </h4>
                     <div class="card__details">
                         <ul>
+                            <li>Deal Details</li>
+                            <li>Deal Details</li>
                             <li>Deal Details</li>
                         </ul>
                     </div>
@@ -46,53 +48,12 @@
             </div>
         </div>
 
-
-        <!-- <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
-            <div class="deal_area_box">
-                <div class="bigImg_container">
-                    <div class="deal_area_box_img"></div>
-                </div>
-                <div class="deal_area_content">
-
-                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-                        <div class="deal_box_nameTime"
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-                            <div class="deal_box_name"><%= deal.dealName %> </div>
-
-                        </div>
-                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                            <div class="deal_box_views"><%= deal.owner %> </div>
-                            <div class="deal_box_time"><%= deal.company %> </div>
-
-                        </div>
-
-
-                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                            <div class="deal_box_views"><%=`${deal.dealPrice}rs`%></div>
-                            <div class="deal_box_time">80% OFF</div>
-                            <div class="deal_box_time"><%=`${deal.mrp}rs`%></div>
-                        </div>
-
-                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                            <div class="deal_box_views"><%=`${deal.views} views`%></div>
-                            <div class="deal_box_time">
-                                <%= deal.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %></div>
-                        </div>
-                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                            <div><%= deal.titleDis %></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </a> -->
-        <% } %>
-
-        <% if (deals[11]) { %>
+        <% if (i===7) { %>
         <h2>Show more</h2>
         <% } %>
+        <% } %>
+
+
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 

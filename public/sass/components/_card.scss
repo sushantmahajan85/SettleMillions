@@ -3,11 +3,11 @@
            perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 23rem;
-   width: 16.1rem; 
+   height: 34rem;
+   width: 26rem; 
    margin: 0 0 1rem 1rem;
    &:not(:nth-child(4n)) {
-      margin-right: 1rem;
+      margin-right: 5.5rem;
       }
 }
    
@@ -31,7 +31,7 @@
 
 .card__picture{
    width: inherit;
-   height: 16.1rem;
+   height: 22rem;
    background-color: orange;
 }
 
@@ -43,26 +43,26 @@
 
 .card-text{
    height: inherit;
-   width: 12.8rem;
+   width: 26rem;
+   background-color: red;
 }
 
 .card__heading {
-   font-size: 1.2rem;
-   text-transform: uppercase;
-   text-align: center;
+   font-size: 1rem;
+   text-transform: capitalize;
+   text-align: start;
+   margin-left: 0.5rem;
 }   
       
-.card__details {
-   padding: 0.2rem; }
 
 .card__details ul {
   list-style: none;
-  margin: 0 auto; }
+   }
 
 .card__details ul li {
-   text-align: center;
-   font-size: 1rem;
-   padding: 0.2rem; }
+   text-align: start;
+   font-size: 0.8rem;
+    }
 
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
 
@@ -74,6 +74,10 @@
    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
 
 
-.card__details {
-   padding: 1rem 3rem; }
 }
+// .card__head {
+//    font-size: 1rem;
+//    text-transform: capitalize;
+//    text-align: start;
+//    margin-left: 0.5rem;
+// }   

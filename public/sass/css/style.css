@@ -382,7 +382,7 @@ h2 {
   background-color: orange; }
 
 .deal-photo {
-  object-fit: cover;
+  object-fit: fill;
   height: 100%;
   width: 100%; }
 

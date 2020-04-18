@@ -22,46 +22,118 @@
     <%- include('partials/sidebar.ejs') %>
 
     <div id="main" class="page-content">
-        <%  var i = 0; %>
-        <% for(var deal of deals) { %>
-        <% i=i++; %>
-        <div class="card">
-            <div class="card__face">
 
-                <div class="card__picture">
-                    <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                        class="deal-photo">
-                </div>
+        <div id="trending" class="trending">
+            <%  var i = 0; %>
+            <% for(var deal of deals) { %>
+            <% i++; %>
+            <div class="card">
+                <div class="card__face">
 
-                <div class="card-text">
-
-                    <h4 class="card__head">
-                        Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
-                    </h4>
-                    <div class="card__details">
-                        <ul>
-                            <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                    class="price_mrp">14999</strike> <span class="price_dis">(70%)</span> </li>
-                            <li style="font-weight: 400;"> CouperDeals</li>
-                            <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                    style="margin-left: 0.7rem;">3hr ago</span> </li>
-                        </ul>
+                    <div class="card__picture">
+                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                            class="deal-photo">
                     </div>
-                </div>
 
+                    <div class="card-text">
+
+                        <h4 class="card__head">
+                            Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li class="price"><span class="price_avail"> Rs.3999</span> <strike
+                                        class="price_mrp">14999</strike> <span class="price_dis">(70%)</span> </li>
+                                <li style="font-weight: 400;"> CouperDeals</li>
+                                <li style="font-size: 1.34rem !important;"> 2.6k views <span
+                                        style="margin-left: 0.7rem;">3hr ago</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+            <% if (i === 8){break;}%>
+            <% } %>
         </div>
 
-        <% if (i===7) { %>
-        <h2>Show more</h2>
-        <% } %>
-        <% } %>
+        <div id="hideTrending" class="trending">
+            <% var j = 0; %>
+            <% for(var deal of deals) { %>
+            <% j++; %>
+
+            <% if(j > 8) {%>
+
+            <div class="card">
+                <div class="card__face">
+
+                    <div class="card__picture">
+                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                            class="deal-photo">
+                    </div>
+
+                    <div class="card-text">
+
+                        <h4 class="card__head">
+                            Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li class="price"><span class="price_avail"> Rs.3999</span> <strike
+                                        class="price_mrp">14999</strike> <span class="price_dis">(70%)</span> </li>
+                                <li style="font-weight: 400;"> CouperDeals</li>
+                                <li style="font-size: 1.34rem !important;"> 2.6k views <span
+                                        style="margin-left: 0.7rem;">3hr ago</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                
+            <% } %>
+            <% } %>
+        </div>
+
+        <div id="showMoreBtn">
+            <a href="#trending" class="show-hide-link" id="more" onclick="trendMoreLess()">
+                  <i class="fas fa-sort-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                  <span class="heading-normal"> Show More</span>
+            </a>
+        </div>
+
+        <div id="showLessBtn">
+            <a href="#trending" class="show-hide-link" id="less" onclick="trendMoreLess()">
+                  <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin: 0 1.2rem 0 1rem"></i>
+                  <span class="heading-normal">Show Less</span>
+            </a>
+        </div>
 
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+
+    <script type="text/javascript">
+        var i = 0;
+        function trendMoreLess() {
+              if (!i) {
+                    document.getElementById("hideTrending").style.display = "flex";
+                    document.getElementById("showLessBtn").style.display = "block";
+                    document.getElementById("showMoreBtn").style.display = "none";
+
+                    i = 1;
+              }
+              else {
+                    document.getElementById("hideTrending").style.display = "none";
+                    document.getElementById("showLessBtn").style.display = "none";
+                    document.getElementById("showMoreBtn").style.display = "block";
+                    i = 0;
+              }
+        }
+  </script>
 
 
 </body>

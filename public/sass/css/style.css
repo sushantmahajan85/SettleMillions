@@ -357,10 +357,10 @@ h2 {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 15rem;
-  width: 22rem;
+  height: 23rem;
+  width: 16.1rem;
   margin: 0 0 1rem 1rem; }
-  .card:not(:nth-child(3n)) {
+  .card:not(:nth-child(4n)) {
     margin-right: 1rem; }
 
 .card__face {
@@ -374,11 +374,14 @@ h2 {
   overflow: hidden;
   border: 1px solid #aaa;
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .card__picture {
-  width: 9.2rem;
-  height: inherit; }
+  width: inherit;
+  height: 16.1rem;
+  background-color: orange; }
 
 .deal-photo {
   object-fit: scale-down;

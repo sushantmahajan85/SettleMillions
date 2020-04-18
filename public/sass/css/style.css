@@ -357,13 +357,14 @@ h2 {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 24rem;
-  width: 16rem;
-  margin: 0 0 1rem 0.9rem; }
-  .card:not(:nth-child(4n)) {
+  height: 15rem;
+  width: 22rem;
+  margin: 0 0 1rem 1rem; }
+  .card:not(:nth-child(3n)) {
     margin-right: 1rem; }
 
 .card__face {
+  height: inherit;
   background-color: #fff;
   -webkit-transition: all .8s ease;
   transition: all .8s ease;
@@ -371,16 +372,23 @@ h2 {
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  border: 1px solid #aaa; }
+  border: 1px solid #aaa;
+  display: flex;
+  justify-content: center; }
 
 .card__picture {
-  width: inherit;
-  height: 18rem; }
+  width: 9.2rem;
+  height: inherit;
+  background-color: orange; }
 
 .deal-photo {
-  width: 100%;
+  object-fit: cover;
   height: 100%;
-  object-fit: scale-down; }
+  width: 100%; }
+
+.card-text {
+  height: inherit;
+  width: 12.8rem; }
 
 .card__heading {
   font-size: 1.2rem;

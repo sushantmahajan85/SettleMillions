@@ -3,17 +3,17 @@
            perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 15rem;
-   width: 22rem; 
-   margin: 0 0 1rem 1rem;
+   height: 17rem;
+   width: 25rem; 
+   margin: 1rem 0 1rem 1rem;
    &:not(:nth-child(3n)) {
-      margin-right: 1rem;
+      margin-right: 3rem;
       }
 }
    
 .card__face {
    height: inherit;
-   background-color: #fff;
+   background-color: orange;
    -webkit-transition: all .8s ease;
    transition: all .8s ease;
    -webkit-backface-visibility: hidden;
@@ -28,13 +28,15 @@
 }    
 
 .card__picture{
-   width: 9.2rem;;
+   
+   width: 10rem;
    height: inherit;
-   background-color: orange;
+   // background-color: orange;
 }
 
 .deal-photo{
-  object-fit: fill;
+   // background-color: red;
+  object-fit: scale-down;
   height: 100%;
   width: 100%;
 }

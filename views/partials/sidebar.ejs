@@ -3,7 +3,7 @@
 
 <body>
 
-   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" data-simplebar>
+   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" style="margin-top: 4rem;" data-simplebar>
 
       <a href="#" class="w3-bar-item w3-button sidebar_link" style="margin-top: 1rem;"><i
             class="fas fa-fire font_icon"></i>Home</a>
@@ -51,23 +51,37 @@
          <a href="#" class="w3-bar-item w3-button sidebar_link"><img src="/images/amazonOffer.jpeg" alt="hi"
                class="social_icons"> Subscriber 1</a>
       </div>
-      <a href="#" class="w3-bar-item w3-button sidebar_link" style="border-bottom: 1px solid rgb(212, 211, 211);"
-         id="more" onclick="read()">
-         <i class="fas fa-sort-down font_icon" id="updown" style="color: red;"></i>Show more</a>
+
+      <div id="showMore">
+            <a href="#" class="w3-bar-item w3-button sidebar_link" style="border-bottom: 1px solid rgb(212, 211, 211);" id="more" onclick="read()">
+                  <i class="fas fa-sort-down font_icon" id="down" style="color: red;"></i>Show More
+            </a>
+      </div>
+      
+      <div id="showLess">
+            <a href="#" class="w3-bar-item w3-button sidebar_link" style="border-bottom: 1px solid rgb(212, 211, 211);" id="more" onclick="read()">
+                  <i class="fas fa-caret-up font_icon" id="up" style="color: red;"></i>Show Less
+            </a>
+      </div>
+
    </div>
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
    <script type="text/javascript">
       var i = 0;
       function read() {
          if (!i) {
             document.getElementById("hide").style.display = "inline";
-            document.getElementById("more").innerHTML = "Show less";
+            document.getElementById("showLess").style.display = "inline";
+            document.getElementById("showMore").style.display = "none";
 
             i = 1;
          }
          else {
             document.getElementById("hide").style.display = "none";
-            document.getElementById("more").innerHTML = "Show more";
+            document.getElementById("showLess").style.display = "none";
+            document.getElementById("showMore").style.display = "inline";   
             i = 0;
          }
       }

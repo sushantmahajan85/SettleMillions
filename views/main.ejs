@@ -26,29 +26,25 @@
 
         <div class="card">
             <div class="card__face">
-                <div class="card__picture">
-                    <img src="img/favicon.png" alt="Deal Photo" class="deal-photo">
-                </div>
-                <h4 class="card__heading">
-                    <span class="card__heading-span">Deal Head</span>
-                </h4>
-                <div class="card__details">
-                    <ul>
-                        <li>Deal Details</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- <div class="card__side card__side--back card__side--back-1">
-                     <div class="card__cta">
-                         <div class="card__price-box">
-                             <p class="card__price-only">Only</p>
-                             <p class="card__price-value">$297</p>
-                         </div>
-                         <a href="#popup" class="btn btn--white">Book now!</a>
-                     </div>
-                 </div> -->
-        </div>
 
+                <div class="card__picture">
+                    <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="Deal Photo"
+                        class="deal-photo">
+                </div>
+
+                <div class="card-text">
+                    <h4 class="card__heading">
+                        <span class="card__heading-span">Deal Head</span>
+                    </h4>
+                    <div class="card__details">
+                        <ul>
+                            <li>Deal Details</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
 
         <!-- <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -92,6 +88,10 @@
 
             </div>
         </a> -->
+        <% } %>
+
+        <% if (deals[11]) { %>
+        <h2>Show more</h2>
         <% } %>
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

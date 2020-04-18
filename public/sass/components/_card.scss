@@ -3,12 +3,16 @@
            perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 32rem;
-   width: 17rem; 
-   margin: 0.2rem;
+   height: 23rem;
+   width: 16.1rem; 
+   margin: 0 0 1rem 1rem;
+   &:not(:nth-child(4n)) {
+      margin-right: 1rem;
+      }
 }
    
 .card__face {
+   height: inherit;
    background-color: #fff;
    -webkit-transition: all .8s ease;
    transition: all .8s ease;
@@ -16,18 +20,30 @@
    backface-visibility: hidden;
    border-radius: 3px;
    overflow: hidden;
-   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
+   border: 1px solid #aaa;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   //-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+   //box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
 }    
 
 .card__picture{
-   width: 17rem;
-   height: 18rem;
+   width: inherit;
+   height: 16.1rem;
+   background-color: orange;
 }
 
 .deal-photo{
-   width: 100%;
-   height: 100%;
+  object-fit: scale-down;
+  height: 100%;
+  width: 100%;
+}
+
+.card-text{
+   height: inherit;
+   width: 12.8rem;
 }
 
 .card__heading {
@@ -37,7 +53,7 @@
 }   
       
 .card__details {
-   padding: 3rem; }
+   padding: 0.2rem; }
 
 .card__details ul {
   list-style: none;
@@ -46,7 +62,7 @@
 .card__details ul li {
    text-align: center;
    font-size: 1rem;
-   padding: 1rem; }
+   padding: 0.2rem; }
 
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
 

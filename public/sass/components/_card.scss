@@ -3,17 +3,17 @@
            perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 17rem;
-   width: 25rem; 
-   margin: 1rem 0 1rem 1rem;
-   &:not(:nth-child(3n)) {
-      margin-right: 3rem;
+   height: 23rem;
+   width: 16.1rem; 
+   margin: 0 0 1rem 1rem;
+   &:not(:nth-child(4n)) {
+      margin-right: 1rem;
       }
 }
    
 .card__face {
    height: inherit;
-   background-color: orange;
+   background-color: #fff;
    -webkit-transition: all .8s ease;
    transition: all .8s ease;
    -webkit-backface-visibility: hidden;
@@ -22,20 +22,20 @@
    overflow: hidden;
    border: 1px solid #aaa;
    display: flex;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
    //-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
    //box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
 }    
 
 .card__picture{
-   
-   width: 10rem;
-   height: inherit;
-   // background-color: orange;
+   width: inherit;
+   height: 16.1rem;
+   background-color: orange;
 }
 
 .deal-photo{
-   // background-color: red;
   object-fit: scale-down;
   height: 100%;
   width: 100%;

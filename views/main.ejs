@@ -24,19 +24,19 @@
 
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="/images/amazonOffer.jpeg" style="width:100%;height:30rem">
+            <img src="/images/amazonOffer.jpeg" style="width:100%;height:32rem">
             <div class="text">Caption Text</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="/images/amazonOffer.jpeg" style="width:100%;height:30rem">
+            <img src="/images/amazonOffer.jpeg" style="width:100%;height:32rem">
             <div class="text">Caption Two</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="/images/amazonOffer.jpeg" style="width:100%;height:30rem">
+            <img src="/images/amazonOffer.jpeg" style="width:100%;height:32rem">
             <div class="text">Caption Three</div>
         </div>
 
@@ -121,22 +121,22 @@
 
                 </div>
             </div>
-                
+
             <% } %>
             <% } %>
         </div>
 
         <div id="showMoreBtn">
             <a href="#trending" class="show-hide-link" id="more" onclick="trendMoreLess()">
-                  <i class="fas fa-sort-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                  <span class="heading-normal"> Show More</span>
+                <i class="fas fa-sort-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal"> Show More</span>
             </a>
         </div>
 
         <div id="showLessBtn">
             <a href="#trending" class="show-hide-link" id="less" onclick="trendMoreLess()">
-                  <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin: 0 1.2rem 0 1rem"></i>
-                  <span class="heading-normal">Show Less</span>
+                <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin: 0 1.2rem 0 1rem"></i>
+                <span class="heading-normal">Show Less</span>
             </a>
         </div>
 
@@ -177,21 +177,21 @@
     <script type="text/javascript">
         var i = 0;
         function trendMoreLess() {
-              if (!i) {
-                    document.getElementById("hideTrending").style.display = "flex";
-                    document.getElementById("showLessBtn").style.display = "block";
-                    document.getElementById("showMoreBtn").style.display = "none";
+            if (!i) {
+                document.getElementById("hideTrending").style.display = "flex";
+                document.getElementById("showLessBtn").style.display = "block";
+                document.getElementById("showMoreBtn").style.display = "none";
 
-                    i = 1;
-              }
-              else {
-                    document.getElementById("hideTrending").style.display = "none";
-                    document.getElementById("showLessBtn").style.display = "none";
-                    document.getElementById("showMoreBtn").style.display = "block";
-                    i = 0;
-              }
+                i = 1;
+            }
+            else {
+                document.getElementById("hideTrending").style.display = "none";
+                document.getElementById("showLessBtn").style.display = "none";
+                document.getElementById("showMoreBtn").style.display = "block";
+                i = 0;
+            }
         }
-  </script>
+    </script>
 
 
 </body>

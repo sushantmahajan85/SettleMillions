@@ -414,7 +414,10 @@ a.show-hide-link {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s; }
+  .card__face:hover {
+    transform: scale(1.03); }
 
 .card__picture {
   width: inherit;
@@ -428,7 +431,9 @@ a.show-hide-link {
 .card-text {
   height: inherit;
   width: 26rem;
-  margin-left: 1.9rem; }
+  padding-left: 1.9rem;
+  background-color: #f8f5f5;
+  margin-left: -0.5rem; }
 
 .card__details ul {
   list-style: none; }

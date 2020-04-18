@@ -83,7 +83,7 @@ h2 {
 }
 
 .header {
-  font-size: 2rem;
+  font-size: 1.8rem;
   height: 60px;
   background-color: #4585F3;
   border-bottom: var(--line);
@@ -164,6 +164,9 @@ h2 {
     .user-nav {
       -ms-flex-item-align: stretch;
           align-self: stretch;
+          font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;

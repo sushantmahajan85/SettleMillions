@@ -393,7 +393,9 @@ h2 {
 .card-text {
   height: inherit;
   width: 26rem;
-  margin-left: 1.9rem; }
+  padding-left: 1.9rem;
+  background-color: #f8f5f5;
+  margin-left: -0.5rem; }
 
 .card__details ul {
   list-style: none; }

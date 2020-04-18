@@ -1,5 +1,15 @@
+a.show-hide-link{
+   display: block;
+   width: 100%;
+   padding: 2rem;
+}
+
 .page-content{
    margin-left: 15%;
+   padding-top: 8rem; 
+}
+
+.trending{
    display: flex;
    flex: 0 0 25%;
    flex-wrap: wrap;
@@ -106,4 +116,40 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+#hideTrending{
+   display: none;
+}
+
+.show-hide-btn{
+   font-size: 1.1rem;
+   text-decoration: none !important;
+}
+
+#showMoreBtn{
+   margin: 0;
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgb(212, 211, 211);
+   cursor: pointer;
+   margin-bottom: 1.6rem;
+
+   &:hover{
+      background-color:  rgb(212, 211, 211);
+   }
+}
+
+#showLessBtn{
+   margin: 0;
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgb(212, 211, 211);
+   cursor: pointer;
+   display: none;
+   margin-bottom: 1.6rem;
+
+   &:hover{
+      background-color:  rgb(212, 211, 211);
+   }
 }

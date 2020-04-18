@@ -346,8 +346,16 @@ h2 {
   height: 3.25rem;
   margin-left: 2rem; }
 
+a.show-hide-link {
+  display: block;
+  width: 100%;
+  padding: 2rem; }
+
 .page-content {
   margin-left: 15%;
+  padding-top: 8rem; }
+
+.trending {
   display: flex;
   flex: 0 0 25%;
   flex-wrap: wrap;
@@ -446,6 +454,34 @@ img {
 @media only screen and (max-width: 300px) {
   .prev, .next, .text {
     font-size: 11px; } }
+
+#hideTrending {
+  display: none; }
+
+.show-hide-btn {
+  font-size: 1.1rem;
+  text-decoration: none !important; }
+
+#showMoreBtn {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3;
+  cursor: pointer;
+  margin-bottom: 1.6rem; }
+  #showMoreBtn:hover {
+    background-color: #d4d3d3; }
+
+#showLessBtn {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3;
+  cursor: pointer;
+  display: none;
+  margin-bottom: 1.6rem; }
+  #showLessBtn:hover {
+    background-color: #d4d3d3; }
 
 .card {
   font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;

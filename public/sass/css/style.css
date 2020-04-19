@@ -603,10 +603,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-  transition: all 0.3s; }
-  .card__face:hover {
-    transform: scale(1.03); }
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
 
 .card__picture {
   width: inherit;
@@ -798,7 +795,7 @@ footer {
     line-height: normal;
     font-size: auto; } }
 
-.sliderx {
+.slider {
   width: 50rem;
   height: 50rem; }
 

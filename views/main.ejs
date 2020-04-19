@@ -102,8 +102,26 @@
                 <div class="card__face">
 
                     <div class="card__picture">
-                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                            class="deal-photo">
+                        <div class="sliderx">
+                            <div class="slide">
+                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo">
+
+                            </div>
+                            <div class="slide">
+                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
+                                    alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <div class="slide">
+                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo">
+
+                            </div>
+
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
+                        </div>
                     </div>
 
                     <div class="card-text">
@@ -216,72 +234,29 @@
         </footer>
     </div>
     <script>
-        console.log('hey');
-        $(function () {
-            var speed = 300,
-                $li;
+        $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
 
-            $('.slider').on('init', function (slick) {
-                $(slick.target).find('button').append('<span></span>');
+            speed: 0,
+            fade: true,
+            cssEase: 'linear'
+        });
 
-                $li = $(slick.target).find('.slick-dots li');
-                animateSpan(0, $li);
-            });
+        function slickPause() {
+            $('.slider').slick('slickPause');
+        }
 
-            $('.slider').slick({
-                dots: true,
-                autoplay: false,
-                autoplaySpeed: speed,
-                arrows: false,
-            });
+        slickPause();
 
-            $('.slider').mouseover(function () {
-                $(this).slick('play')
-            });
-            $('.slider').mouseout(function () {
-                $(this).slick('pause')
-            });
-
-            $('.slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-                $li.find('button span').stop(true, true);
-                $li.find('button').removeClass('filled');
-
-                if (currentSlide == 0) {
-                    $li.find('button span').css({
-                        'transform': 'scaleX(0)',
-                        'border-spacing': 0
-                    });
-                } else {
-                    // всем до текущего слайда назначить класс, чтобы они были заполнены
-                    for (var i = 0; i < currentSlide; i++) {
-                        $li.eq(i).find('button').addClass('filled');
-                    }
-
-                    // всем после текущего слайда убрать классы и ширину, чтобы были пустыми
-
-                    for (var i = currentSlide + 1; i < $li.length + 1; i++) {
-                        $li.eq(i - 1).find('button').removeClass('filled')
-                            .find('span').css({
-                                'transform': 'scaleX(0)',
-                                'border-spacing': 0
-                            });
-                    }
-                }
-
-                animateSpan(currentSlide, $li);
-            });
-
-            function animateSpan(currentSlide, $li) {
-                var $currentBtn = $li.eq(currentSlide).find('span');
-
-                $currentBtn.animate({ borderSpacing: 1 }, {
-                    step: function (now, fx) {
-                        $(this).css('transform', 'scaleX(' + now + ')');
-                    },
-                    duration: speed
-                }, 'linear');
-            }
-        })
+        $('.slider').mouseover(function () {
+            $('.slider').slick('slickPlay')
+        });
+        $('.slider').mouseout(function () {
+            slickPause();
+        });
     </script>
     <script>
         var slideIndex = 1;

@@ -2,13 +2,13 @@
 <html>
 <title>Affiliate</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
-
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" /> -->
+<link rel="stylesheet" href="/vendor/slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" href="/vendor/slick-1.8.1/slick/slick-theme.css">
 <link rel="stylesheet" href="/sass/css/style.css">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -61,10 +61,27 @@
             <% i++; %>
             <div class="card">
                 <div class="card__face">
+                    <div class="card__picture slider">
 
-                    <div class="card__picture">
+                        <div class="slide">
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
+
+                        </div>
+                        <div class="slide">
+                            <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
+                                alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                        <div class="slide">
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
+
+                        </div>
+
                         <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
                             class="deal-photo">
+
 
                     </div>
 
@@ -233,8 +250,10 @@
 
         </footer>
     </div>
+    <script src="/vendor/slick-1.8.1/slick/slick.js"></script>
     <script>
-        $('.slider').slick({
+        console.log('hey');
+        $('.card__picture').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
@@ -246,15 +265,15 @@
         });
 
         function slickPause() {
-            $('.slider').slick('slickPause');
+            $('.card__picture').slick('slickPause');
         }
 
         slickPause();
 
-        $('.slider').mouseover(function () {
-            $('.slider').slick('slickPlay')
+        $('.card__picture').mouseover(function () {
+            $('.card__picture').slick('slickPlay')
         });
-        $('.slider').mouseout(function () {
+        $('.card__picture').mouseout(function () {
             slickPause();
         });
     </script>

@@ -2,6 +2,8 @@
 <html>
 <title>Affiliate</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" /> -->
 <!-- <link rel="stylesheet" href="/vendor/slick-1.8.1/slick/slick.css"> -->
 <!-- <link rel="stylesheet" href="/vendor/slick-1.8.1/slick/slick-theme.css"> -->
@@ -12,6 +14,10 @@
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -64,26 +70,25 @@
             <% i++; %>
             <div class="card">
                 <div class="card__face">
-                    <div class="card__picture">
+                    <div class="card__picture" data-pause="true" data-interval="1000">
 
 
-                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                            class="deal-photo" style="z-index: 999999999999999999 !important;">
+                        <div class="carousel-item active" style="background-color: white !important;">
 
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
 
-                        <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+                        </div>
+                        <div class="carousel-item" style="background-color: white !important;">
+                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                alt="Deal Photo" class="deal-photo">
 
+                        </div>
+                        <div class="carousel-item" style="background-color: white !important;">
+                            <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
+                                alt="Deal Photo" class="deal-photo">
 
-
-                        <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                            alt="Deal Photo" class="deal-photo">
-
-
-                        <!-- <div id="CustomSlideshow">
-                            <img src="img/image_0.jpg" alt="Camomile"/>
-                            <img src="img/image_1.jpg" alt="Bumblebees"/>
-                            <img src="img/image_2.jpg" alt="Wood Toothpicks"/>
-                        </div> -->
+                        </div>
                     </div>
 
                     <div class="card-text">
@@ -97,7 +102,8 @@
                                         class="price_mrp">14999</strike> <span class="price_dis">(70%)</span> </li>
                                 <li style="font-weight: 400;"> CouperDeals</li>
                                 <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                        style="margin-left: 0.7rem;">3hr ago</span> </li>
+                                        style="margin-left: 0.7rem;">3hr
+                                        ago</span> </li>
                             </ul>
                         </div>
                     </div>
@@ -175,11 +181,21 @@
         </a>
     </div>
 
-    <div id="showLessBtn">
-        <a href="#trending" class="show-hide-link" id="less" onclick="trendMoreLess()">
-            <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin: 0 1.2rem 0 1rem"></i>
-            <span class="heading-normal">Show Less</span>
+    <div class="news">
+
+        <% for(var i = 0 ; i < 4 ; i++) { %>
+        <a href="#">
+            <figure>
+                <div class="date"><span class="card-date-day">20</span><span class="card-date-month">APR</span>
+                </div>
+                <figcaption>
+                    <h4> <span>The arsonist had oddly shaped feet</span></h4>
+                    <p>The magic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and
+                        that's the vortex of the heart.</p>
+                </figcaption>
+            </figure>
         </a>
+        <% } %>
     </div>
 
     <div class="news">
@@ -254,17 +270,13 @@
 
     </footer>
     </div>
-
-    <script type="text/javascript">
-        //<![CDATA[
-        $(document).ready(function () {
-            $('.card__picture').slideshow({ playHover: true, playFrame: false });
-
+    <script>
+        $(".card__picture").on("mouseenter", function () {
+            $(this).carousel('cycle');
+        }).on("mouseleave", function () {
+            $(this).carousel('pause');
         });
-        //]]>
     </script>
-    <!-- <script src="/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script> -->
-    <!-- <script src="/vendor/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script> -->
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);

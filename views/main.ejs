@@ -6,7 +6,8 @@
 
 <link rel="stylesheet" href="/sass/css/style.css">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+    crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -163,11 +164,13 @@
             <% for(var i = 0 ; i < 4 ; i++) { %>
             <a href="#">
                 <figure>
-                <div class="date"><span class="card-date-day">20</span><span class="card-date-month">APR</span></div>
-                <figcaption>
-                    <h4> <span>The arsonist had oddly shaped feet</span></h4>
-                    <p>The magic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and that's the vortex of the heart.</p>
-                </figcaption>
+                    <div class="date"><span class="card-date-day">20</span><span class="card-date-month">APR</span>
+                    </div>
+                    <figcaption>
+                        <h4> <span>The arsonist had oddly shaped feet</span></h4>
+                        <p>The magic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and
+                            that's the vortex of the heart.</p>
+                    </figcaption>
                 </figure>
             </a>
             <% } %>
@@ -212,7 +215,8 @@
 
                 <p class="footer-company-about">
                     <span>About the company</span>
-                    Your Deal is a spiritual force, and we're going to Cathedral Rock, and that's the vortex of the heart.
+                    Your Deal is a spiritual force, and we're going to Cathedral Rock, and that's the vortex of the
+                    heart.
                 </p>
 
                 <div class="footer-icons">
@@ -228,7 +232,9 @@
 
         </footer>
     </div>
-    <script> $(function () {
+    <script>
+        console.log('hey');
+        $(function () {
             var speed = 300,
                 $li;
 

@@ -798,13 +798,7 @@ footer {
     line-height: normal;
     font-size: auto; } }
 
-.slider {
-  width: 400px; }
-
 .slider__item {
-  padding: 50px;
-  background-color: #666;
-  color: #FFF;
   font-size: 20px;
   text-align: center; }
 

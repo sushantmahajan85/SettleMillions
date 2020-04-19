@@ -153,3 +153,119 @@ img {vertical-align: middle;}
       background-color:  rgb(212, 211, 211);
    }
 }
+
+.news{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+figure {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 24rem;
+	height: 35rem;
+	padding: 1.5rem 1.5rem;
+	background-image: url('https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+	overflow: hidden;
+	&:before,
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		//font-family: $font-awesome;
+	}
+	&:before {
+		content: '';
+		background-color: rgba(black,0.1);
+		z-index: 0;
+	}
+	&:after {
+		content: '';
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5s cubic-bezier(.25,.8,.25,1);;
+		overflow: hidden;
+	}
+	&:hover {
+		background-size: 175%;
+		&:after {
+			content: '♣︎';
+			background-color: rgba(#f1c40f,0.9);
+			color: white;
+			font-size: 6rem;
+			z-index: 2;
+		}
+		.date {
+			bottom: -59px;
+		}
+		figcaption {
+			transform: translateY(-110%);
+		}
+	}
+	.date {
+		position: absolute;
+		bottom: 0;
+		right: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 1rem;
+		background-color: rgba(#f1c40f,0.8);
+		text-shadow: 1px 1px rgba(black,0.7);
+		transition: all 0.5s cubic-bezier(.25,.8,.25,1);;
+		span {
+			color: white;
+			line-height: 1;
+			&:first-child {
+				font-family: 'Source Code Pro', sans-serif;
+				font-size: 2rem;
+				font-weight: 900;
+			}
+			&:last-child {
+				font-size: 1.5rem;
+				font-weight: 400;
+			}
+		}
+	}
+	figcaption {
+		color: white;
+		transition: all 0.5s cubic-bezier(.25,.8,.25,1);;
+		z-index: 1;
+		h4 {
+			margin: 0 0 5px;
+			font-family: 'Source Code Pro', sans-serif;
+			font-size: 2rem;
+			line-height: 1.35;
+			text-shadow: 1px 1px rgba(black,0.7);
+			> span {
+				background-color: rgba(#f1c40f,0.8);
+			}
+		}
+		p {
+			margin: 0;
+			line-height: 1.5;
+		}
+	}
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+}

@@ -611,7 +611,7 @@ figure {
 
 .deal-photo {
   object-fit: scale-down;
-  height: 100%;
+  height: 22rem;
   width: 100%; }
 
 .card-text {
@@ -802,15 +802,6 @@ footer {
 .slick-list, .slick-track {
   width: 100%;
   height: 100%; }
-
-.slide:nth-child(1) {
-  background: red; }
-
-.slide:nth-child(2) {
-  background: yellow; }
-
-.slide:nth-child(3) {
-  background: blue; }
 
 * {
   padding: 0%;

@@ -281,3 +281,61 @@ footer{
 	}
  
 }
+/////////////////////////////////////////////////
+
+.slider {
+   width: 400px;
+ }
+ 
+ .slider__item {
+   padding: 50px;
+   background-color: #666;
+   color: #FFF;
+   font-size: 20px;
+   text-align: center;
+ }
+ 
+ .slider ul {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .slick-dots {
+   text-align: center;
+   display: flex !important;
+   justify-content: stretch;
+ }
+ 
+ .slick-dots li {
+   list-style-type: none;
+   display: inline-block;
+   width: 100%;
+   height: 3px;
+ }
+ 
+ .slick-dots button {
+   width: 100%;
+   height: 3px;
+   margin: 0;
+   border: 0;
+   background-color: #fff;
+   list-style-type: none;
+   position: relative;
+   font-size: 0;
+ }
+ 
+ .slick-dots button span {
+   position: absolute;
+   width: 100%;
+   display: block;
+   height: 100%;
+   background-color: #0000c8;
+   left: 0;
+   top: 0;
+   transform: scaleX(0);
+   transform-origin: left;
+ }
+ 
+ .slick-dots button.filled span {
+   transform: scaleX(1) !important;
+ }

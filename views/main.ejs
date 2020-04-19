@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="/sass/css/style.css">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -61,8 +61,27 @@
                 <div class="card__face">
 
                     <div class="card__picture">
-                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                            class="deal-photo">
+
+                        <ul class="slider">
+                            <li class="slider__item"><img
+                                    src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo"></li>
+                            <li class="slider__item"><img
+                                    src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo"></li>
+                            <li class="slider__item"><img
+                                    src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo"></li>
+                            <li class="slider__item"><img
+                                    src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo"></li>
+                            <li class="slider__item"><img
+                                    src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo"></li>
+                            <li class="slider__item"><img
+                                    src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo"></li>
+                        </ul>
                     </div>
 
                     <div class="card-text">
@@ -203,7 +222,72 @@
 
         </footer>
     </div>
+    <script> $(function () {
+            var speed = 300,
+                $li;
 
+            $('.slider').on('init', function (slick) {
+                $(slick.target).find('button').append('<span></span>');
+
+                $li = $(slick.target).find('.slick-dots li');
+                animateSpan(0, $li);
+            });
+
+            $('.slider').slick({
+                dots: true,
+                autoplay: false,
+                autoplaySpeed: speed,
+                arrows: false,
+            });
+
+            $('.slider').mouseover(function () {
+                $(this).slick('play')
+            });
+            $('.slider').mouseout(function () {
+                $(this).slick('pause')
+            });
+
+            $('.slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                $li.find('button span').stop(true, true);
+                $li.find('button').removeClass('filled');
+
+                if (currentSlide == 0) {
+                    $li.find('button span').css({
+                        'transform': 'scaleX(0)',
+                        'border-spacing': 0
+                    });
+                } else {
+                    // всем до текущего слайда назначить класс, чтобы они были заполнены
+                    for (var i = 0; i < currentSlide; i++) {
+                        $li.eq(i).find('button').addClass('filled');
+                    }
+
+                    // всем после текущего слайда убрать классы и ширину, чтобы были пустыми
+
+                    for (var i = currentSlide + 1; i < $li.length + 1; i++) {
+                        $li.eq(i - 1).find('button').removeClass('filled')
+                            .find('span').css({
+                                'transform': 'scaleX(0)',
+                                'border-spacing': 0
+                            });
+                    }
+                }
+
+                animateSpan(currentSlide, $li);
+            });
+
+            function animateSpan(currentSlide, $li) {
+                var $currentBtn = $li.eq(currentSlide).find('span');
+
+                $currentBtn.animate({ borderSpacing: 1 }, {
+                    step: function (now, fx) {
+                        $(this).css('transform', 'scaleX(' + now + ')');
+                    },
+                    duration: speed
+                }, 'linear');
+            }
+        })
+    </script>
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);

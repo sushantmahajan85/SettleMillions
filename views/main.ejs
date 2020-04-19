@@ -67,14 +67,13 @@
                             <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
                                 class="deal-photo" style="z-index: 999999999999999999 !important;">
                         </div>
-                        <div>
-                            <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                alt="Deal Photo" class="deal-photo">
+                        <div class="slide">
+                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
 
                         </div>
-                        <div>
-                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                class="deal-photo">
+                        <div class="slide">
+                            <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
+                                alt="Deal Photo" class="deal-photo">
 
                         </div>
 
@@ -129,6 +128,9 @@
                                 class="deal-photo">
 
                         </div>
+
+                        <!-- <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                            class="deal-photo"> -->
 
                     </div>
 
@@ -241,15 +243,15 @@
 
         </footer>
     </div>
-    <script src="/vendor/slick-1.8.1/slick/slick.js"></script>
+
     <script>
         console.log('hey');
         $(document).ready(function () {
             $('.card__picture').slick({
-                arrows: false,
+                arrows: true,
                 autoplay: false,
                 autoplaySpeed: 1000,
-                dots: true,
+                dots: false,
                 arrows: true
             });
         });
@@ -267,6 +269,7 @@
             slickPause();
         });
     </script>
+    <script src="/vendor/slick-1.8.1/slick/slick.js"></script>
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);

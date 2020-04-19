@@ -611,7 +611,7 @@ figure {
 
 .deal-photo {
   object-fit: scale-down;
-  height: 100%;
+  height: 22rem;
   width: 100%; }
 
 .card-text {
@@ -796,14 +796,10 @@ footer {
     font-size: auto; } }
 
 .slider {
-  width: inherit;
+  width: 26rem;
   height: 22rem; }
 
 .slick-list, .slick-track {
-  width: 100%;
-  height: 100%; }
-
-.slide {
   width: 100%;
   height: 100%; }
 

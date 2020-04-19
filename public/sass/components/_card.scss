@@ -45,7 +45,7 @@
 
 .deal-photo{
   object-fit: scale-down;
-  height: 100%;
+  height: 22rem;
   width: 100%;
 }
 
@@ -284,7 +284,7 @@ footer{
 /////////////////////////////////////////////////
 
 .slider {
-   width: inherit;
+   width: 26rem;
    height: 22rem;
 }
 
@@ -293,10 +293,7 @@ footer{
 	height: 100%;
 }
 
-.slide {
-	width: 100%;
-	height: 100%;
-	
+.slide img{
 		// &:nth-child(1) {
 		// 	background: red;
 		// }

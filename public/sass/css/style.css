@@ -799,6 +799,7 @@ footer {
     font-size: auto; } }
 
 .slider__item {
+  background-color: yellow;
   font-size: 20px;
   text-align: center; }
 

@@ -62,9 +62,26 @@
             <div class="card">
                 <div class="card__face">
 
-                    <div class="card__picture">
-                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                            class="deal-photo">
+                    <div class="card__picture slider">
+
+                        <div class="slide">
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
+
+                        </div>
+                        <div class="slide">
+                            <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
+                                alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                        <div class="slide">
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
+
+                        </div>
+
+                        <!-- <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                            class="deal-photo"> -->
 
                     </div>
 
@@ -119,8 +136,8 @@
 
                         </div>
 
-                        <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                            class="deal-photo">
+                        <!-- <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                            class="deal-photo"> -->
 
                     </div>
 
@@ -240,7 +257,7 @@
             autoplay: true,
             autoplaySpeed: 1000,
 
-            speed: 0,
+            speed: 10,
             fade: true,
             cssEase: 'linear'
         });
@@ -252,7 +269,8 @@
         slickPause();
 
         $('.slider').mouseover(function () {
-            $('.slider').slick('slickPlay')
+            $('.slider').slick('slickPlay');
+            console.log("arre ooooo");
         });
         $('.slider').mouseout(function () {
             slickPause();

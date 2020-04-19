@@ -796,22 +796,21 @@ footer {
     font-size: auto; } }
 
 .slider {
-  width: 50rem;
-  height: 50rem; }
+  width: 26rem;
+  height: 22rem; }
 
 .slick-list, .slick-track {
   width: 100%;
   height: 100%; }
 
-.slide {
-  width: 100%;
-  height: 100%; }
-  .slide:nth-child(1) {
-    background: red; }
-  .slide:nth-child(2) {
-    background: yellow; }
-  .slide:nth-child(3) {
-    background: blue; }
+.slide:nth-child(1) {
+  background: red; }
+
+.slide:nth-child(2) {
+  background: yellow; }
+
+.slide:nth-child(3) {
+  background: blue; }
 
 * {
   padding: 0%;

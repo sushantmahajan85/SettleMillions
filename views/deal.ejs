@@ -24,201 +24,299 @@
 
 <body>
 
+  <div style="height: 12vh;">
   <%- include('partials/navbar.ejs') %>
-  <%- include('partials/sidebar.ejs') %>
-
-  <section class="deal_area">
-    <div class="row">
-      <div class="carousel_container">
-
-        <div class="mySlides">
-          <div class="numbertext">1 / 6</div>
-          <img src="/images/81xK62lJiML._SL1500_.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">2 / 6</div>
-          <img src="images/611sQqu6waL._SL1500_.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">3 / 6</div>
-          <img src="images/61GGYO9QoML._SL1500_.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">4 / 6</div>
-          <img src="images/61waHuOP9FL._SL1500_.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">5 / 6</div>
-          <img src="images/611sQqu6waL._SL1500_.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">6 / 6</div>
-          <img src="images/61aLZ-Zs8VL._SL1500_.jpg" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
-
-        <div class="row">
-          <div class="column">
-            <img class="demo cursor" src="images/611sQqu6waL._SL1500_.jpg" style="width:100%" onclick="currentSlide(1)"
-              alt="The Woods">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/611sQqu6waL._SL1500_.jpg" style="width:100%" onclick="currentSlide(2)"
-              alt="Cinque Terre">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/611sQqu6waL._SL1500_.jpg" style="width:100%" onclick="currentSlide(3)"
-              alt="Mountains and fjords">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/611sQqu6waL._SL1500_.jpg" style="width:100%" onclick="currentSlide(4)"
-              alt="Northern Lights">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/611sQqu6waL._SL1500_.jpg" style="width:100%" onclick="currentSlide(5)"
-              alt="Nature and sunrise">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/611sQqu6waL._SL1500_.jpg" style="width:100%" onclick="currentSlide(6)"
-              alt="Snowy Mountains">
-          </div>
-        </div>
-        <div class="action_buttons">
-
-          <a href="" id="like_deal"> <button type="button">Like for later</button></a>
-          <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
-          <button type="button">Report</button>
-        </div>
-
-      </div>
-      <div class="deal_info">
-        <div class="deal_heading">
-          <%= deal.dealName %>
-        </div>
-        <div class="deal_price">
-          <%= `${deal.mrp}` %> 80%OFF <%=` ${deal.dealPrice}` %>
-        </div>
-        <div class="deal_price" style="display: flex;">
-          <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
-          <div class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
-
-            <h6 class="heading-normal"><button id="subscribe_btn">Subscribe</button></h6>
-
-          </div>
-        </div>
-        <div class="paragraph" style="margin-top: 2rem;">
-          <%= deal.biggerDis %>
-        </div>
-      </div>
-      <div class="comment_section">
-        <h2>Please Enter your Review</h2>
-        <textarea name="comment_section" id="" cols="110" rows="10"></textarea>
-        <button type="button">Submit</button>
-      </div>
-      <% for( var review of deal.reviews ) { %>
-      <div>
-        <h3 style="margin-top: 1rem;"><%= review.user.name %> </h6>
-          <p class="paragraph"> <%= review.review  %> </p>
-      </div>
-      <% } %>
-  </section>
-
-  <div class="side_deals">
-    <div class=" side_deals_item">
-      <div class="deal_area_box" style="width: 100% !important;">
-        <div class="bigImg_container">
-          <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-        </div>
-        <div class="deal_area_content">
-          <!-- <div class="picture_container">
-                  <div class="profile_pic"></div>
-              </div> -->
-          <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-            <div class="deal_box_nameTime"
-              style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-              <div class="deal_box_name" style="font-size: 15px !important;">The Moaping Machine Extra text</div>
-
-            </div>
-            <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-              <div class="deal_box_views">Couper Deals</div>
-              <div class="deal_box_time">Amazon</div>
-
-            </div>
-
-
-            <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-              <div class="deal_box_views">2000rs</div>
-              <div class="deal_box_time">80% OFF</div>
-              <div class="deal_box_time">200rs</div>
-            </div>
-
-            <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-              <div class="deal_box_views">1.4k views</div>
-              <div class="deal_box_time">3 days ago</div>
-            </div>
-            <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                <div>80% Off only on HDFC Bank Credit Cards</div>
-              </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="side_deals_item">
-      <div class="deal_area_box" style="width: 100% !important;">
-        <div class="bigImg_container">
-          <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-        </div>
-        <div class="deal_area_content">
-          <!-- <div class="picture_container">
-                  <div class="profile_pic"></div>
-              </div> -->
-          <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-            <div class="deal_box_nameTime"
-              style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-              <div class="deal_box_name">The Moaping Machine Extra text</div>
-
-            </div>
-            <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-              <div class="deal_box_views">Couper Deals</div>
-              <div class="deal_box_time">Amazon</div>
-
-            </div>
-
-
-            <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-              <div class="deal_box_views">2000rs</div>
-              <div class="deal_box_time">80% OFF</div>
-              <div class="deal_box_time">200rs</div>
-            </div>
-
-            <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-              <div class="deal_box_views">1.4k views</div>
-              <div class="deal_box_time">3 days ago</div>
-            </div>
-            <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                <div>80% Off only on HDFC Bank Credit Cards</div>
-              </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
+  <div class="dealPageContent">
+
+
+    <div class="deal-with-review">
+        <div class="deal-carousel">
+          <div class="small-slides">
+            <div class="mini-slide">
+              <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(1)"
+                alt="The Woods">
+            </div>
+            <div class="mini-slide">
+              <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(2)"
+                alt="Cinque Terre">
+            </div>
+            <div class="mini-slide">
+              <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
+                alt="Mountains and fjords">
+            </div>
+            <div class="mini-slide">
+              <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(4)"
+                alt="Northern Lights">
+            </div>
+            <div class="mini-slide">
+              <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(5)"
+                alt="Nature and sunrise">
+            </div>
+            <div class="mini-slide">
+              <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(6)"
+                alt="Snowy Mountains">
+            </div>
+          </div>
+        
+          <div class="slideshow-dealpage">
+            <!-- Slideshow container -->
+              <div class="slideshow-container">
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 6</div>
+                  <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%;">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 6</div>
+                  <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 6</div>
+                  <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 6</div>
+                  <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">5 / 6</div>
+                  <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">6 / 6</div>
+                  <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+                </div>
+
+              </div>
+              <br>
+
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+              </div>
+          </div>
+
+          <div class="deal-deets">
+            DEAL
+          </div>
+
+        </div>
+
+        <div class="reviews">
+          <div class="comment_section">
+            <h2>Please Enter your Review</h2>
+          </div>
+        </div>
+
+    </div>
+
+        <!-- <section class="deal_area">
+          <div class="row">
+            <div class="carousel_container">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="row">
+                <div class="mini-slide">
+                  <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(1)"
+                    alt="The Woods">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(2)"
+                    alt="Cinque Terre">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
+                    alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(4)"
+                    alt="Northern Lights">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(5)"
+                    alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(6)"
+                    alt="Snowy Mountains">
+                </div>
+              </div>
+              <div class="action_buttons">
+
+                <a href="" id="like_deal"> <button type="button">Like for later</button></a>
+                <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
+                <button type="button">Report</button>
+              </div>
+
+            </div>
+            <div class="deal_info">
+              <div class="deal_heading">
+                <%= deal.dealName %>
+              </div>
+              <div class="deal_price">
+                <%= `${deal.mrp}` %> 80%OFF <%=` ${deal.dealPrice}` %>
+              </div>
+              <div class="deal_price" style="display: flex;">
+                <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
+                <div class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
+
+                  <h6 class="heading-normal"><button id="subscribe_btn">Subscribe</button></h6>
+
+                </div>
+              </div>
+              <div class="paragraph" style="margin-top: 2rem;">
+                <%= deal.biggerDis %>
+              </div>
+            </div>
+            <div class="comment_section">
+              <h2>Please Enter your Review</h2>
+              <textarea name="comment_section" id="" cols="110" rows="10"></textarea>
+              <button type="button">Submit</button>
+            </div>
+            <% for( var review of deal.reviews ) { %>
+            <div>
+              <h3 style="margin-top: 1rem;"><%= review.user.name %> </h6>
+                <p class="paragraph"> <%= review.review  %> </p>
+            </div>
+            <% } %>
+        </section> -->
+
+        <div class="side_deals">
+          <div class=" side_deals_item">
+            <div class="deal_area_box" style="width: 100% !important;">
+              <div class="bigImg_container">
+                <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+              </div>
+              <div class="deal_area_content">
+                <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                    </div> -->
+                <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                  <div class="deal_box_nameTime"
+                    style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                    <div class="deal_box_name" style="font-size: 15px !important;">The Moaping Machine Extra text</div>
+
+                  </div>
+                  <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                    <div class="deal_box_views">Couper Deals</div>
+                    <div class="deal_box_time">Amazon</div>
+
+                  </div>
+
+
+                  <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                    <div class="deal_box_views">2000rs</div>
+                    <div class="deal_box_time">80% OFF</div>
+                    <div class="deal_box_time">200rs</div>
+                  </div>
+
+                  <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                    <div class="deal_box_views">1.4k views</div>
+                    <div class="deal_box_time">3 days ago</div>
+                  </div>
+                  <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                      <div>80% Off only on HDFC Bank Credit Cards</div>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="side_deals_item">
+            <div class="deal_area_box" style="width: 100% !important;">
+              <div class="bigImg_container">
+                <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+              </div>
+              <div class="deal_area_content">
+                <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                    </div> -->
+                <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                  <div class="deal_box_nameTime"
+                    style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                    <div class="deal_box_name">The Moaping Machine Extra text</div>
+
+                  </div>
+                  <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                    <div class="deal_box_views">Couper Deals</div>
+                    <div class="deal_box_time">Amazon</div>
+
+                  </div>
+
+
+                  <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                    <div class="deal_box_views">2000rs</div>
+                    <div class="deal_box_time">80% OFF</div>
+                    <div class="deal_box_time">200rs</div>
+                  </div>
+
+                  <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                    <div class="deal_box_views">1.4k views</div>
+                    <div class="deal_box_time">3 days ago</div>
+                  </div>
+                  <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                      <div>80% Off only on HDFC Bank Credit Cards</div>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
@@ -243,20 +341,19 @@
     function showSlides(n) {
       var i;
       var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+          slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+          dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      captionText.innerHTML = dots[slideIndex - 1].alt;
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
     }
+
   </script>
 </body>
 

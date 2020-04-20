@@ -1,0 +1,273 @@
+.dealPageContent{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.deal-carousel{
+   display: flex;
+   height: 60rem;
+   width: 120rem;
+}
+
+.deal-deets{
+   background-color:black;
+   height: inherit;
+   width: 44%;
+}
+
+.deal_area_box{
+   background-color: white;
+   margin: 0.5rem;
+   width: 33%;
+   height: 33%;
+   display: flex;
+   flex-direction: row;
+   border-radius: 1rem;
+   overflow: hidden;
+   line-height: 1;
+   &_img{
+     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+     padding: 10rem;
+     // border-radius: 1rem;
+     background-size: 100% 100%;
+     overflow: hidden;
+   }
+ } 
+
+.deal-with-review{
+   display: flex;
+   flex-direction: column;
+   width: inherit;
+}
+
+.reviews{
+    display: flex;
+    color: white;
+    background-color: grey;
+    width: 100%;
+    height: 50rem;
+}
+ 
+ .deal_box_name {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 17px;
+   font-weight: 600;
+   // padding: 10px;
+   // text-align: center;
+   margin-right: 1rem;
+   margin-bottom: -0.5rem;
+ }
+ 
+ .deal_box_time {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   margin-right: 1rem;
+   margin-bottom: -0.5rem;
+ }
+ .deal_box_views{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   margin-right: 1rem;
+   margin-bottom: -0.5rem;
+ }
+ 
+ .profile_pic {
+   // background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+   border-radius: 50%;
+   height: 3.7rem;
+   width: 3.7rem;
+   background-color: black;
+ }
+ .picture_container{
+   height: 3.8rem;
+   width: 3.8rem;
+   float: left;
+ }
+ .cover{
+   width: 100%;
+   height: 20vh;
+   background-color: orangered;
+   
+ }
+ .profile_area{
+   width: 100%;
+   height: 10vh;
+   background-color: yellowgreen;
+   display:block;
+   &_pic{
+     border-radius: 50%;
+     height: 6rem;
+     width: 6rem;
+     display:inline-block;
+     margin-top: 0.5rem;
+     margin-left:5rem ;
+     background-color: black;
+   }
+   &_subs{
+     float: right;
+     margin-top: 1rem;
+     margin-right: 5rem;
+     padding: 1rem 2rem;
+     background-color: red;
+   }
+ }
+ 
+ .deal_box_description {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   margin-right: 1rem;
+ }
+ 
+ * {
+   box-sizing: border-box;
+ }
+ 
+ .carousel_container {
+   position: relative;
+   width: 43%;
+   height: 75%;
+ }
+ 
+ .mySlides {
+   display: none;
+   position: relative;
+   height: inherit;
+ }
+
+ .small-slides{
+    display: flex;
+    flex-direction: column;
+    width: 12%;
+    height: inherit;
+ }
+
+ .mini-slide{
+    height: 16.67%;
+ }
+
+ .small-pic{
+   object-fit: scale-down;
+   height: 100%;
+   width: 100%;
+ }
+ 
+ .deal-carousel-img{
+   object-fit: scale-down;
+   height: 100%;
+   width: 100%;
+ }
+
+ .cursor {
+   cursor: pointer;
+ }
+
+ .slideshow-dealpage{
+    width: 44%;
+    height: 100%;
+ }
+
+ .slideshow-container{
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .prev,
+ .next {
+   cursor: pointer;
+   position: absolute;
+   top: 60%;
+   width: auto;
+   padding: 16px;
+   margin-top: -50px;
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+   -webkit-user-select: none;
+   z-index: 20000000000000;
+ }
+ 
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+ 
+ .prev:hover,
+ .next:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+ }
+ 
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top:0;
+ }
+ 
+ .caption-container {
+   text-align: center;
+   background-color: #222;
+   padding: 2px 16px;
+   color: white;
+ }
+ 
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ .column {
+   float: left;
+   width: 16.66%;
+ }
+ 
+ .demo {
+   opacity: 0.6;
+ }
+ 
+ .active,
+ .demo:hover {
+   opacity: 1;
+ }
+ 
+ .action_buttons {
+   margin-left: 10rem;
+   margin-top: -5rem;
+ }
+ 
+ .deal_info {
+   width: 35%;
+   margin-left: 50rem;
+   margin-top: -49rem;
+ }
+ 
+ .deal_heading {
+   font-size: 25px;
+ }
+ 
+ .deal_price {
+   font-size: 20px;
+   margin-top: 2rem;
+ }
+ .side_deals{
+   display: flex;
+   flex-direction: column;
+   width: 20%;
+   float: right;
+   background-color: white;
+   padding-bottom: 5rem;
+ }
+ 
+ .comment_section {
+   margin-top: 10rem;
+ }
+ 
+ .comment_section button {
+   display: block;
+ }

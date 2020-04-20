@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .section-contact {
   position: relative;
   padding: 35rem 0;
@@ -485,7 +484,7 @@ img {
 
 .news {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center; }
 
 a {
@@ -525,17 +524,7 @@ figure {
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden; }
   figure:hover {
-    background-size: 175%; }
-    figure:hover:after {
-      content: '♣︎';
-      background-color: rgba(241, 196, 15, 0.9);
-      color: white;
-      font-size: 6rem;
-      z-index: 2; }
-    figure:hover .date {
-      bottom: -59px; }
-    figure:hover figcaption {
-      transform: translateY(-110%); }
+    transform: scale(1.1); }
   figure .date {
     position: absolute;
     bottom: 0;

@@ -118,9 +118,53 @@
 
         </div>
 
-        <div class="reviews">
-          <div class="comment_section">
-            <h2>Please Enter your Review</h2>
+        <div class="reviews" id="reviews">
+          <div class="review-section">
+            <span class="review-head"><img src="/images/oneplusback.jpg" alt="User photo" class="user-nav__user-photo review-photo"></span>
+            <input type="textarea" placeholder="Add A Review" class="add-review-text-area">
+
+            <% for(var i = 0 ; i < 3 ; i++) { %>
+                <div class="user-nav__user user-review">
+                    <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+                    
+                    <div class="review-text">
+                      <div class="user-nav__user-name">NJ</div>
+                      <div class="rev">
+                        <%= deal.biggerDis %><%= deal.biggerDis %>
+                      </div>
+                    </div>
+                </div>
+            <% } %>
+
+
+            <div id="hidden-review">
+                <% for(var i = 0 ; i < 3 ; i++) { %>
+                  <div class="user-nav__user user-review">
+                      <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+                      
+                      <div class="review-text">
+                        <div class="user-nav__user-name">NJ</div>
+                        <div class="rev">
+                          <%= deal.biggerDis %><%= deal.biggerDis %>
+                        </div>
+                      </div>
+                  </div>
+                <% } %>
+            </div>
+
+            <div id="showMoreBtn">
+              <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
+                  <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                  <span class="heading-normal">Show More</span>
+              </a>
+          </div>
+          <div id="showLessBtn">
+              <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
+                  <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                  <span class="heading-normal">Show Less</span>
+              </a>
+          </div>
+
           </div>
         </div>
 
@@ -355,6 +399,26 @@
     }
 
   </script>
+
+  <script type="text/javascript">
+    var i = 0;
+    function revMoreLess() {
+        if (!i) {
+            document.getElementById("hidden-review").style.display = "block";
+            document.getElementById("showLessBtn").style.display = "block";
+            document.getElementById("showMoreBtn").style.display = "none";
+
+            i = 1;
+        }
+        else {
+            document.getElementById("hidden-review").style.display = "none";
+            document.getElementById("showLessBtn").style.display = "none";
+            document.getElementById("showMoreBtn").style.display = "block";
+            i = 0;
+        }
+    }
+  </script>
+
 </body>
 
 </html>

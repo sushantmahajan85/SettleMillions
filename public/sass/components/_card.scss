@@ -326,3 +326,43 @@ footer{
 .active{
 	opacity: 1;
 }
+.active, .dot:hover {
+    background-color: unset !important;
+}
+/////////////////////////////////
+
+.main-content {
+	position: relative;
+	padding-top: 5rem;
+
+    .owl-theme {
+        .custom-nav {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+
+            .owl-prev, .owl-next {
+                position: absolute;
+                height: 100px;
+                color: inherit;
+                background: none;
+                border: none;
+                z-index: 100;
+
+                i {
+                    font-size: 2.5rem;
+                    color: #cecece;
+                }
+            }
+
+            .owl-prev {
+                left: 0;
+            }
+
+            .owl-next {
+                right: 0;
+            }
+        }
+    }
+}

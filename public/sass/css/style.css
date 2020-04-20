@@ -619,7 +619,8 @@ figure {
   color: white;
   background-color: grey;
   width: 100%;
-  height: 50rem; }
+  height: 50rem;
+  margin-top: 5rem; }
 
 .deal_box_name {
   font-family: Arial, Helvetica, sans-serif;
@@ -720,7 +721,7 @@ figure {
   width: 44%;
   height: 100%; }
 
-.slideshow-container {
+.slideshow-container-deal {
   position: relative;
   padding: 0;
   width: 100%;
@@ -730,7 +731,7 @@ figure {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 60%;
+  top: 30%;
   width: auto;
   padding: 16px;
   margin-top: -50px;

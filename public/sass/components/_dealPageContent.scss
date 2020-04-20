@@ -10,9 +10,59 @@
 }
 
 .deal-deets{
-   background-color:black;
+   background-color:rgb(248, 242, 242);
    height: inherit;
    width: 44%;
+   &_buttons{
+     display: flex;
+    padding: 1rem 1rem 1rem 1rem;
+   }
+   &_name{
+     border-bottom: 1px solid grey;
+     padding: 2rem 1rem 1rem 1rem;
+     font-size: 4rem !important;
+   }
+   &_price{
+    padding: 1rem 1rem 1rem 1rem;
+    list-style: none;
+    font-size: 2rem;
+  }
+  &_buy{
+background-color: orange;
+color: white;
+padding: 0.67rem 1.6rem;
+margin-right: 6rem;
+border-radius: 1rem;
+font-size: 1.8rem;
+  }
+  &_save{
+background-color: rgb(0, 132, 255);
+color: white;
+padding: 0.67rem 1.6rem;
+
+border-radius: 1rem;
+font-size: 1.8rem;
+
+  }
+  &_subs{
+    padding: 0.67rem 1.6rem;
+
+border-radius: 1rem;
+font-size: 1.8rem;
+color: white;
+background-color: red;
+  }
+  &_user{
+    
+    color: black;
+    // padding: 0.67rem 1.6rem;
+    margin-right: 6rem;
+    margin-top: 0.7rem;
+    margin-left: -0.56rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    
+  }
 }
 
 .deal_area_box{

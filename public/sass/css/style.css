@@ -588,9 +588,46 @@ figure {
   width: 120rem; }
 
 .deal-deets {
-  background-color: black;
+  background-color: #f8f2f2;
   height: inherit;
   width: 44%; }
+  .deal-deets_buttons {
+    display: flex;
+    padding: 1rem 1rem 1rem 1rem; }
+  .deal-deets_name {
+    border-bottom: 1px solid grey;
+    padding: 2rem 1rem 1rem 1rem;
+    font-size: 4rem !important; }
+  .deal-deets_price {
+    padding: 1rem 1rem 1rem 1rem;
+    list-style: none;
+    font-size: 2rem; }
+  .deal-deets_buy {
+    background-color: orange;
+    color: white;
+    padding: 0.67rem 1.6rem;
+    margin-right: 6rem;
+    border-radius: 1rem;
+    font-size: 1.8rem; }
+  .deal-deets_save {
+    background-color: #0084ff;
+    color: white;
+    padding: 0.67rem 1.6rem;
+    border-radius: 1rem;
+    font-size: 1.8rem; }
+  .deal-deets_subs {
+    padding: 0.67rem 1.6rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    color: white;
+    background-color: red; }
+  .deal-deets_user {
+    color: black;
+    margin-right: 6rem;
+    margin-top: 0.7rem;
+    margin-left: -0.56rem;
+    border-radius: 1rem;
+    font-size: 1.8rem; }
 
 .deal_area_box {
   background-color: white;
@@ -1551,3 +1588,23 @@ rgba(0, 0, 0, 0.349);
   flex-direction: row; }
   .item2:hover {
     background-color: lightblue; }
+
+.deal_info {
+  width: 35%;
+  margin-left: 50rem;
+  margin-top: -49rem; }
+
+.deal_heading {
+  font-size: 25px; }
+
+.deal_price {
+  font-size: 20px;
+  margin-top: 2rem; }
+
+.side_deals {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+  background-color: white;
+  padding-bottom: 5rem; }

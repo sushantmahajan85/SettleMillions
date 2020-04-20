@@ -117,9 +117,10 @@
             <h4>Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)</h4>
           </div>
           <div class="deal-deets_price">
-            <li class="price" style="word-spacing: 3rem;"><span class="price_avail"> Rs.3999</span> <strike
-                class="price_mrp" style="color: rgb(122, 122, 122);">Rs.14999</strike> <span class="price_dis"
-                style="font-size: 2.5rem;">(70%)</span>
+            <li class="price" style="word-spacing: 3rem;"><span class="price_avail"
+                style="font-size: 2.5rem !important;">
+                Rs.3999</span> <strike class="price_mrp" style="color: rgb(122, 122, 122);">Rs.14999</strike> <span
+                class="price_dis" style="font-size: 2.5rem;">(70%)</span>
             </li>
           </div>
           <div class="deal-deets_buttons">
@@ -145,59 +146,59 @@
       </div>
 
 
-            <div class="reviews" id="reviews">
-              <div class="review-section">
-                <span class="review-head"><img src="/images/oneplusback.jpg" alt="User photo"
-                    class="user-nav__user-photo review-photo"></span>
-                <input type="textarea" placeholder="Add A Review" class="add-review-text-area">
+      <div class="reviews" id="reviews">
+        <div class="review-section">
+          <span class="review-head"><img src="/images/oneplusback.jpg" alt="User photo"
+              class="user-nav__user-photo review-photo"></span>
+          <input type="textarea" placeholder="Add A Review" class="add-review-text-area">
 
-                <% for(var i = 0 ; i < 3 ; i++) { %>
-                <div class="user-nav__user user-review">
-                  <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+          <% for(var i = 0 ; i < 3 ; i++) { %>
+          <div class="user-nav__user user-review">
+            <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
 
-                  <div class="review-text">
-                    <div class="user-nav__user-name">NJ</div>
-                    <div class="rev">
-                      <%= deal.biggerDis %>
-                    </div>
-                  </div>
+            <div class="review-text">
+              <div class="user-nav__user-name">NJ</div>
+              <div class="rev">
+                <%= deal.biggerDis %>
+              </div>
+            </div>
+          </div>
+          <% } %>
+
+
+          <div id="hidden-review">
+            <% for(var i = 0 ; i < 3 ; i++) { %>
+            <div class="user-nav__user user-review">
+              <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+
+              <div class="review-text">
+                <div class="user-nav__user-name">NJ</div>
+                <div class="rev">
+                  <%= deal.biggerDis %>
                 </div>
-                <% } %>
+              </div>
+            </div>
+            <% } %>
+          </div>
 
-
-                <div id="hidden-review">
-                  <% for(var i = 0 ; i < 3 ; i++) { %>
-                  <div class="user-nav__user user-review">
-                    <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
-
-                    <div class="review-text">
-                      <div class="user-nav__user-name">NJ</div>
-                      <div class="rev">
-                        <%= deal.biggerDis %>
-                      </div>
-                    </div>
-                  </div>
-                  <% } %>
-                </div>
-
-                <div id="showMoreBtn">
-                  <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
-                    <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                    <span class="heading-normal">Show More</span>
-                  </a>
-                </div>
-                <div id="showLessBtn">
-                  <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
-                    <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                    <span class="heading-normal">Show Less</span>
-                  </a>
-                </div>
-
+          <div id="showMoreBtn">
+            <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
+              <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+              <span class="heading-normal">Show More</span>
+            </a>
+          </div>
+          <div id="showLessBtn">
+            <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
+              <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+              <span class="heading-normal">Show Less</span>
+            </a>
           </div>
 
         </div>
 
-        <!-- <section class="deal_area">
+      </div>
+
+      <!-- <section class="deal_area">
           <div class="row">
             <div class="carousel_container">
 
@@ -303,150 +304,150 @@
             </div>
             <% } %>
         </section> -->
-      </div>
+    </div>
 
-      <div class="side_deals">
-        <div class=" side_deals_item">
-          <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container">
-              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-            </div>
-            <div class="deal_area_content">
-              <!-- <div class="picture_container">
-                      <div class="profile_pic"></div>
-                  </div> -->
-              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-                <div class="deal_box_nameTime"
-                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-                  <div class="deal_box_name" style="font-size: 15px !important;">The Moaping Machine Extra text</div>
-
-                </div>
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                  <div class="deal_box_views">Couper Deals</div>
-                  <div class="deal_box_time">Amazon</div>
-
-                </div>
-
-
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                  <div class="deal_box_views">2000rs</div>
-                  <div class="deal_box_time">80% OFF</div>
-                  <div class="deal_box_time">200rs</div>
-                </div>
-
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views">1.4k views</div>
-                  <div class="deal_box_time">3 days ago</div>
-                </div>
-                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                    <div>80% Off only on HDFC Bank Credit Cards</div>
-                  </div> -->
-              </div>
-            </div>
+    <div class="side_deals">
+      <div class=" side_deals_item">
+        <div class="deal_area_box" style="width: 100% !important;">
+          <div class="bigImg_container">
+            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
           </div>
-        </div>
-        <div class="side_deals_item">
-          <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container">
-              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-            </div>
-            <div class="deal_area_content">
-              <!-- <div class="picture_container">
+          <div class="deal_area_content">
+            <!-- <div class="picture_container">
                       <div class="profile_pic"></div>
                   </div> -->
-              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-                <div class="deal_box_nameTime"
-                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+              <div class="deal_box_nameTime"
+                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
 
-                  <div class="deal_box_name">The Moaping Machine Extra text</div>
+                <div class="deal_box_name" style="font-size: 15px !important;">The Moaping Machine Extra text</div>
 
-                </div>
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+              </div>
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
 
-                  <div class="deal_box_views">Couper Deals</div>
-                  <div class="deal_box_time">Amazon</div>
+                <div class="deal_box_views">Couper Deals</div>
+                <div class="deal_box_time">Amazon</div>
 
-                </div>
+              </div>
 
 
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                  <div class="deal_box_views">2000rs</div>
-                  <div class="deal_box_time">80% OFF</div>
-                  <div class="deal_box_time">200rs</div>
-                </div>
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                <div class="deal_box_views">2000rs</div>
+                <div class="deal_box_time">80% OFF</div>
+                <div class="deal_box_time">200rs</div>
+              </div>
 
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views">1.4k views</div>
-                  <div class="deal_box_time">3 days ago</div>
-                </div>
-                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                <div class="deal_box_views">1.4k views</div>
+                <div class="deal_box_time">3 days ago</div>
+              </div>
+              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
                     <div>80% Off only on HDFC Bank Credit Cards</div>
                   </div> -->
-              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="side_deals_item">
+        <div class="deal_area_box" style="width: 100% !important;">
+          <div class="bigImg_container">
+            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+          </div>
+          <div class="deal_area_content">
+            <!-- <div class="picture_container">
+                      <div class="profile_pic"></div>
+                  </div> -->
+            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+              <div class="deal_box_nameTime"
+                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                <div class="deal_box_name">The Moaping Machine Extra text</div>
+
+              </div>
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                <div class="deal_box_views">Couper Deals</div>
+                <div class="deal_box_time">Amazon</div>
+
+              </div>
+
+
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                <div class="deal_box_views">2000rs</div>
+                <div class="deal_box_time">80% OFF</div>
+                <div class="deal_box_time">200rs</div>
+              </div>
+
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                <div class="deal_box_views">1.4k views</div>
+                <div class="deal_box_time">3 days ago</div>
+              </div>
+              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                    <div>80% Off only on HDFC Bank Credit Cards</div>
+                  </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-      <script src="/js/likedDeal.js"></script>
-      <script src="/js/subscribe.js"></script>
-      <!-- <script src="/js/main.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="/js/likedDeal.js"></script>
+  <script src="/js/subscribe.js"></script>
+  <!-- <script src="/js/main.js"></script> -->
 
-      <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) { slideIndex = 1 }
-          if (n < 1) { slideIndex = slides.length }
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-        }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
 
-      </script>
+  </script>
 
-      <script type="text/javascript">
-        var i = 0;
-        function revMoreLess() {
-          if (!i) {
-            document.getElementById("hidden-review").style.display = "block";
-            document.getElementById("showLessBtn").style.display = "block";
-            document.getElementById("showMoreBtn").style.display = "none";
+  <script type="text/javascript">
+    var i = 0;
+    function revMoreLess() {
+      if (!i) {
+        document.getElementById("hidden-review").style.display = "block";
+        document.getElementById("showLessBtn").style.display = "block";
+        document.getElementById("showMoreBtn").style.display = "none";
 
-            i = 1;
-          }
-          else {
-            document.getElementById("hidden-review").style.display = "none";
-            document.getElementById("showLessBtn").style.display = "none";
-            document.getElementById("showMoreBtn").style.display = "block";
-            i = 0;
-          }
-        }
-      </script>
+        i = 1;
+      }
+      else {
+        document.getElementById("hidden-review").style.display = "none";
+        document.getElementById("showLessBtn").style.display = "none";
+        document.getElementById("showMoreBtn").style.display = "block";
+        i = 0;
+      }
+    }
+  </script>
 
 </body>
 

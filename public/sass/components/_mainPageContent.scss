@@ -156,7 +156,7 @@ img {vertical-align: middle;}
 
 .news{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -202,22 +202,27 @@ figure {
 		transition: all 0.5s cubic-bezier(.25,.8,.25,1);;
 		overflow: hidden;
 	}
-	&:hover {
-		background-size: 175%;
-		&:after {
-			content: '♣︎';
-			background-color: rgba(#f1c40f,0.9);
-			color: white;
-			font-size: 6rem;
-			z-index: 2;
+
+		&:hover{
+			transform: scale(1.1);
 		}
-		.date {
-			bottom: -59px;
-		}
-		figcaption {
-			transform: translateY(-110%);
-		}
-	}
+
+	// &:hover {
+	// 	background-size: 175%;
+	// 	&:after {
+	// 		content: '♣︎';
+	// 		background-color: rgba(#f1c40f,0.9);
+	// 		color: white;
+	// 		font-size: 6rem;
+	// 		z-index: 2;
+	// 	}
+	// 	.date {
+	// 		bottom: -59px;
+	// 	}
+	// 	figcaption {
+	// 		transform: translateY(-110%);
+	// 	}
+	// }
 	.date {
 		position: absolute;
 		bottom: 0;

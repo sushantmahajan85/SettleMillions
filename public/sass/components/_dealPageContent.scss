@@ -90,13 +90,60 @@ background-color: red;
    width: inherit;
 }
 
+.review-section{
+   padding: 2rem;
+   width: 100%;
+}
+
+.user-review{
+   display: flex;
+   justify-content: center;
+   margin: 3rem 0;
+}
+
+.review-photo{
+   height: 8rem;
+}
+
+.review-head{
+   font-size: 3rem;
+}
+
+.add-review-text-area{
+   background-color: transparent;
+   border: none;
+   border-bottom: 1px solid white;
+   width: 80%;
+   height: 5rem;
+   margin-bottom: 5rem;
+   color: white;
+   font-size: 2rem;
+}
+
+.review-text{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.rev{
+   margin-top: 1rem;
+}
+
 .reviews{
     display: flex;
     color: white;
-    background-color: grey;
-    width: 100%;
-    height: 50rem;
-    margin-top: 5rem;
+    background-color: #C0C0C0;
+    width: 120rem;
+    margin: 5rem 0;
+}
+
+.review-section{
+   font-size: 2rem;
+}
+
+#hidden-review{
+   display: none;
 }
  
  .deal_box_name {

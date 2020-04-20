@@ -596,8 +596,9 @@ figure {
     padding: 1rem 1rem 1rem 1rem; }
   .deal-deets_name {
     border-bottom: 1px solid grey;
-    padding: 2rem 1rem 1rem 1rem;
-    font-size: 4rem !important; }
+    padding: 2rem 2rem 1rem 1rem;
+    font-size: 2.4rem !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
   .deal-deets_price {
     padding: 1rem 1rem 1rem 1rem;
     list-style: none;
@@ -615,19 +616,43 @@ figure {
     padding: 0.67rem 1.6rem;
     border-radius: 1rem;
     font-size: 1.8rem; }
+  .deal-deets_vt {
+    display: flex;
+    font-size: 1.8rem;
+    padding: 1rem; }
   .deal-deets_subs {
     padding: 0.67rem 1.6rem;
     border-radius: 1rem;
     font-size: 1.8rem;
     color: white;
     background-color: red; }
+  .deal-deets_views {
+    color: #7a7a7a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 2rem;
+    margin-top: 0.7rem;
+    margin-left: 0.56rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    word-spacing: 0.3rem; }
+  .deal-deets_time {
+    color: #7a7a7a;
+    word-spacing: 0.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0.7rem;
+    margin-left: -0.56rem;
+    border-radius: 1rem;
+    font-size: 1.8rem; }
   .deal-deets_user {
+    font-weight: 600;
     color: black;
     margin-right: 6rem;
     margin-top: 0.7rem;
     margin-left: -0.56rem;
     border-radius: 1rem;
     font-size: 1.8rem; }
+  .deal-deets_paragraph {
+    padding: 1rem 2.5rem 1rem 1rem; }
 
 .deal_area_box {
   background-color: white;

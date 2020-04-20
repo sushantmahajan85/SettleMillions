@@ -19,8 +19,9 @@
    }
    &_name{
      border-bottom: 1px solid grey;
-     padding: 2rem 1rem 1rem 1rem;
-     font-size: 4rem !important;
+     padding: 2rem 2rem 1rem 1rem;
+     font-size: 2.4rem !important;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    &_price{
     padding: 1rem 1rem 1rem 1rem;
@@ -44,6 +45,11 @@ border-radius: 1rem;
 font-size: 1.8rem;
 
   }
+  &_vt{
+    display: flex;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
   &_subs{
     padding: 0.67rem 1.6rem;
 
@@ -52,8 +58,31 @@ font-size: 1.8rem;
 color: white;
 background-color: red;
   }
-  &_user{
+  &_views{
+    color:  rgb(122, 122, 122);
+    // padding: 0 1.6rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 2rem;
+    margin-top: 0.7rem;
+    margin-left: 0.56rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+   word-spacing: 0.3rem;
+  }
+  &_time{
+    color:  rgb(122, 122, 122);
     
+    word-spacing: 0.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // margin-right: 6rem;
+    margin-top: 0.7rem;
+    margin-left: -0.56rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+   
+  }
+  &_user{
+    font-weight: 600;
     color: black;
     // padding: 0.67rem 1.6rem;
     margin-right: 6rem;
@@ -62,6 +91,9 @@ background-color: red;
     border-radius: 1rem;
     font-size: 1.8rem;
     
+  }
+  &_paragraph{
+    padding: 1rem 2.5rem 1rem 1rem;
   }
 }
 

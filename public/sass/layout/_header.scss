@@ -93,3 +93,25 @@
 //   flex-direction: row;
 // }
 
+.deal_info {
+  width: 35%;
+  margin-left: 50rem;
+  margin-top: -49rem;
+}
+
+.deal_heading {
+  font-size: 25px;
+}
+
+.deal_price {
+  font-size: 20px;
+  margin-top: 2rem;
+}
+.side_deals{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+  background-color: white;
+  padding-bottom: 5rem;
+}

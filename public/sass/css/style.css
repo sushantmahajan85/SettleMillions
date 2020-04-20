@@ -741,12 +741,15 @@ figure {
   float: left; }
 
 .cover {
-  width: 100%;
+  padding-top: 9rem !important;
+  margin-left: 15%;
+  width: 85%;
   height: 20vh;
   background-color: orangered; }
 
 .profile_area {
-  width: 100%;
+  margin-left: 15%;
+  width: 85%;
   height: 10vh;
   background-color: yellowgreen;
   display: block; }
@@ -1640,6 +1643,9 @@ rgba(0, 0, 0, 0.349);
   flex-direction: row; }
   .item2:hover {
     background-color: lightblue; }
+
+.deal_area {
+  padding-top: 6rem; }
 
 .deal_info {
   width: 35%;

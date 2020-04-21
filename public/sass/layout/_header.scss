@@ -21,7 +21,8 @@
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   // background-image: linear-gradient(to left,orange,rgb(200, 231, 25));
   font-size: 2rem;
   font-weight: 600;
@@ -32,21 +33,18 @@
   }
 }
 
-
-
-
-
-.nav-links li, a {
+.nav-links li,
+a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  padding: 0px 10px;
+  // padding: 0px 10px;
   color: black;
 }
 
 // .nav-links li:hover, a:hover {
 //   color: grey;
-//   background-color: white;  
+//   background-color: white;
 // }
 
 #search {
@@ -57,24 +55,24 @@
   list-style: none;
   display: inline-block;
 }
-.side_bar{
+.side_bar {
   // display: flex;
   // flex-direction: column;
   width: 15%;
   background-color: rgb(241, 238, 238);
   padding-top: 7rem;
 }
-.item2{
+.item2 {
   padding: 0.5rem;
   margin-left: 1.15rem;
   display: flex;
   flex-direction: row;
-  &:hover{
+  &:hover {
     background-color: lightblue;
     // color: white;
   }
 }
-.deal_area{
+.deal_area {
   padding-top: 6rem;
 }
 
@@ -99,7 +97,7 @@
   font-size: 20px;
   margin-top: 2rem;
 }
-.side_deals{
+.side_deals {
   display: flex;
   flex-direction: column;
   width: 30%;

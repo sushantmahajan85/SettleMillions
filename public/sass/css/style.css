@@ -137,7 +137,9 @@
   margin: 2px; }
 
 .simplebar-scrollbar::before {
-  background-color: #969999 !important; }
+  background-color: #969999 !important;
+  height: 50vh;
+  width: 3.2rem; }
 
 .font_icon {
   color: #fa0404;
@@ -1697,8 +1699,7 @@ a {
   width: 15%;
   background-color: #f1eeee;
   margin-top: 6rem;
-  height: 100%;
-  overflow-y: scroll !important; }
+  height: 100%; }
 
 .item2 {
   padding: 0.5rem;

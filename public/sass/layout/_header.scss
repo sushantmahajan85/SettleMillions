@@ -60,11 +60,13 @@ a {
   // flex-direction: column;
   width: 15%;
   background-color: rgb(241, 238, 238);
-  padding-top: 7rem;
+  margin-top: 6rem;
+  height: 100%;
+  overflow-y: scroll !important;
 }
 .item2 {
   padding: 0.5rem;
-  margin-left: 1.15rem;
+  padding-left: 1.15rem;
   display: flex;
   flex-direction: row;
   &:hover {

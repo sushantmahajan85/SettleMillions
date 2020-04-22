@@ -939,7 +939,12 @@ figure {
   width: 26rem;
   padding-left: 1.9rem;
   background-color: #f8f5f5;
-  margin-left: -0.5rem; }
+  margin-left: -0.5rem;
+  position: relative; }
+
+.card__details {
+  width: 80%;
+  display: inline-block; }
 
 .card__details ul {
   list-style: none; }
@@ -948,6 +953,27 @@ figure {
   text-align: start;
   font-size: 1.5rem;
   margin-top: 0.7rem; }
+
+#three-dots {
+  float: right;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem; }
+  #three-dots:hover {
+    background-color: #C0C0C0; }
+
+#three-dots-menu {
+  display: none;
+  position: fixed;
+  width: 10rem;
+  height: 10rem;
+  background-color: black; }
 
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .card {

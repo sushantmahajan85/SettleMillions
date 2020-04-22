@@ -971,11 +971,21 @@ figure {
     background-color: #c0c0c0; }
 
 .three-dots-menu {
-  display: none;
   position: fixed;
-  width: 10rem;
-  height: 10rem;
-  background-color: black; }
+  width: 8rem;
+  height: 8rem;
+  background-color: #73A4CA;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  align-items: flex-start;
+  padding: 0.9rem;
+  justify-content: center; }
+
+.three-dots-menu-item {
+  padding: 0.5rem 0; }
+  .three-dots-menu-item:not(:last-child) {
+    border-bottom: 1px solid black; }
 
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .card {

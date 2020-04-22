@@ -109,7 +109,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 </li>
                             </ul>
                         </div>
-                        <div class="three-dots" onclick="report(this)">&#8230<div class="three-dots-menu"></div></div>
+
+                        <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div>
                         
                     </div>
 
@@ -721,13 +722,14 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     function report(el){
         
     
-        if (!i) {
-        el.innerHTML = "NJ"; i = 1;
-        }else{
+    if (!i) {
+        el.innerHTML = '&#8230<div class="three-dots-menu"><div class="three-dots-menu-item">Report</div><div class="three-dots-menu-item">Like</div></div>'; i = 1;
+    }else{
             el.innerHTML = "&#8230"; i = 0;
-        }
+    }
     
 }
+
 </script>
 
 

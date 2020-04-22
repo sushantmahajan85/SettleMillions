@@ -200,6 +200,10 @@ exports.recently = catchAsync(async (req, res) => {
     });
 })
 
+exports.updateUserSettings = catchAsync(async (req, res) => {
+    res.status(200).render('updateSettings');
+})
+
 exports.dealPage = catchAsync(async (req, res, next) => {
     const deal = await Deal.findOne({ _id: req.params.dealId }).populate({
         path: 'reviews',

@@ -13,5 +13,7 @@ router.get('/likedDeals', authController.protect, viewController.getLikedDeals);
 router.get('/subscriptions', authController.protect, viewController.getSubscriptions);
 router.get('/newDeal', viewController.createNewDeal);
 router.get('/recent', viewController.recently);
+router.get('/updateUserSettings', viewController.updateUserSettings);
+
 
 module.exports = router;

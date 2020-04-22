@@ -956,7 +956,7 @@ figure {
   font-size: 1.5rem;
   margin-top: 0.7rem; }
 
-#three-dots {
+.three-dots {
   float: right;
   position: absolute;
   bottom: 0.5rem;
@@ -967,10 +967,10 @@ figure {
   border-radius: 50%;
   height: 4rem;
   width: 4rem; }
-  #three-dots:hover {
-    background-color: #C0C0C0; }
+  .three-dots:hover {
+    background-color: #c0c0c0; }
 
-#three-dots-menu {
+.three-dots-menu {
   display: none;
   position: fixed;
   width: 10rem;

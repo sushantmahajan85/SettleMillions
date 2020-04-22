@@ -109,7 +109,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 </li>
                             </ul>
                         </div>
-                        <span id="three-dots">&#8230<div id="three-dots-menu"></div></span>
+                        <div class="three-dots" onclick="report(this)">&#8230<div class="three-dots-menu"></div></div>
                         
                     </div>
 
@@ -718,13 +718,16 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
 <script type="text/javascript">
     var i = 0;
-    document.getElementById('three-dots').onclick = function() {
+    function report(el){
+        
+    
         if (!i) {
-        this.innerHTML = "NJ"; i = 1;
+        el.innerHTML = "NJ"; i = 1;
         }else{
-            this.innerHTML = "N"; i = 0;
+            el.innerHTML = "&#8230"; i = 0;
         }
-    };
+    
+}
 </script>
 
 

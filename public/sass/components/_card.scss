@@ -57,7 +57,7 @@
   position: relative;
 }
 
-.card__details{
+.card__details {
   width: 80%;
   display: inline-block;
 }
@@ -72,7 +72,7 @@
   margin-top: 0.7rem;
 }
 
-#three-dots{
+.three-dots {
   float: right;
   position: absolute;
   bottom: 0.5rem;
@@ -84,13 +84,12 @@
   height: 4rem;
   width: 4rem;
 
-  &:hover{
-    background-color: #C0C0C0;
+  &:hover {
+    background-color: #c0c0c0;
   }
-
 }
 
-#three-dots-menu{
+.three-dots-menu {
   display: none;
   position: fixed;
   width: 10rem;

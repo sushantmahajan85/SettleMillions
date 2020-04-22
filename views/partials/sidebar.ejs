@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<body>
-
-      <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" style="margin-top: 4rem;"
+  <body>
+    <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" style="margin-top: 4rem;"
             data-simplebar>
 
             <a href="#" class="w3-bar-item w3-button sidebar_link" style="margin-top: 1rem;"><i
@@ -75,115 +73,244 @@
 
        -->
 
-      <div class="side_bar" style="position: fixed !important;" data-simplebar>
-            <div class="item2">
-                  <h4 class="heading-normal"><i class="fas fa-fire font_icon"></i> Home</h4>
-            </div>
-            <div class="item2">
-                  <h4 class="heading-normal"><i class="fas fa-fire font_icon"></i> Trending</h4>
-            </div>
-            <div class="item2">
-                  <h4 class="heading-normal"><i class="fas fa-fire font_icon"></i> Subscriptions</h4>
-            </div>
-            <div class="item2">
-                  <h4 class="heading-normal"><i class="fas fa-fire font_icon"></i> Your Deals</h4>
-            </div>
-            <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
-                  <h4 class="heading-normal"><i class="fas fa-fire font_icon"></i> Liked Deals</h4>
-            </div>
-            <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">Subscriptions</h3>
-            <div class="item2">
-                  <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                  <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-            </div>
-            <div class="item2">
-                  <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                  <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-            </div>
-            <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                  <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-            </div>
-            <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                  <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-            </div>
-            <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                  <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-            </div>
-            <div id="hide">
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-                  <div class="item2"><img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons">
-                        <h4 class="heading-normal" style="margin-top:0.5rem">Subscriptions</h4>
-                  </div>
-            </div>
-            <div id="showMore">
-                  <a href="#" class="w3-bar-item w3-button sidebar_link"
-                        style="border-bottom: 1px solid rgb(212, 211, 211);" id="more" onclick="read()">
-                        <i class="fas fa-sort-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                        <span class="heading-normal"> Show More</span>
-                  </a>
-            </div>
-
-            <div id="showLess">
-                  <a href="#" class="w3-bar-item w3-button sidebar_link"
-                        style="border-bottom: 1px solid rgb(212, 211, 211);" id="more" onclick="read()">
-                        <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin: 0 1.2rem 0 1rem"></i>
-                        <span class="heading-normal">Show Less</span>
-                  </a>
-            </div>
-
-            <div class="item">
-                  <h4 class="heading-normal">More</h4>
-            </div>
-            <div class="item">
-                  <h4 class="heading-normal">More</h4>
-            </div>
-            <div class="item">
-                  <h4 class="heading-normal">More</h4>
-            </div>
-            <div class="item">
-                  <h4 class="heading-normal">More</h4>
-            </div>
+    <!-- <div
+      class="side_bar"
+      style="position: fixed !important;"
+      data-simplebar-auto-hide="false"
+      data-simplebar
+    > -->
+    <div
+      class="side_bar"
+      style="position: fixed !important;"
+      data-simplebar-timeout="10000"
+      data-simplebar
+    >
+      <div class="item2">
+        <h4 class="heading-normal">
+          <i class="fas fa-fire font_icon"></i> Home
+        </h4>
+      </div>
+      <div class="item2">
+        <h4 class="heading-normal">
+          <i class="fas fa-fire font_icon"></i> Trending
+        </h4>
+      </div>
+      <div class="item2">
+        <h4 class="heading-normal">
+          <i class="fas fa-fire font_icon"></i> Subscriptions
+        </h4>
+      </div>
+      <div class="item2">
+        <h4 class="heading-normal">
+          <i class="fas fa-fire font_icon"></i> Your Deals
+        </h4>
+      </div>
+      <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
+        <h4 class="heading-normal">
+          <i class="fas fa-fire font_icon"></i> Liked Deals
+        </h4>
+      </div>
+      <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
+        Subscriptions
+      </h3>
+      <div class="item2">
+        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
+      </div>
+      <div class="item2">
+        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
+      </div>
+      <div class="item2">
+        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
+      </div>
+      <div class="item2">
+        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
+      </div>
+      <div class="item2">
+        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
+      </div>
+      <div id="hide">
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            Subscriptions
+          </h4>
+        </div>
+      </div>
+      <div id="showMore">
+        <a
+          href="#"
+          class="w3-bar-item w3-button sidebar_link"
+          style="border-bottom: 1px solid rgb(212, 211, 211);"
+          id="more"
+          onclick="read()"
+        >
+          <i
+            class="fas fa-sort-down font_icon"
+            id="down"
+            style="color: red;margin:0 1.2rem 0 1rem;"
+          ></i>
+          <span class="heading-normal"> Show More</span>
+        </a>
       </div>
 
-      <script type="text/javascript">
-            var i = 0;
-            function read() {
-                  if (!i) {
-                        document.getElementById("hide").style.display = "inline";
-                        document.getElementById("showLess").style.display = "inline";
-                        document.getElementById("showMore").style.display = "none";
+      <div id="showLess">
+        <a
+          href="#"
+          class="w3-bar-item w3-button sidebar_link"
+          style="border-bottom: 1px solid rgb(212, 211, 211);"
+          id="more"
+          onclick="read()"
+        >
+          <i
+            class="fas fa-caret-up font_icon"
+            id="up"
+            style="color: red;margin: 0 1.2rem 0 1rem"
+          ></i>
+          <span class="heading-normal">Show Less</span>
+        </a>
+      </div>
 
-                        i = 1;
-                  }
-                  else {
-                        document.getElementById("hide").style.display = "none";
-                        document.getElementById("showLess").style.display = "none";
-                        document.getElementById("showMore").style.display = "inline";
-                        i = 0;
-                  }
-            }
-      </script>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+      <div class="item">
+        <h4 class="heading-normal">More</h4>
+      </div>
+    </div>
 
-</body>
+    <script type="text/javascript">
+      var i = 0;
+      function read() {
+        if (!i) {
+          document.getElementById("hide").style.display = "inline";
+          document.getElementById("showLess").style.display = "inline";
+          document.getElementById("showMore").style.display = "none";
 
+          i = 1;
+        } else {
+          document.getElementById("hide").style.display = "none";
+          document.getElementById("showLess").style.display = "none";
+          document.getElementById("showMore").style.display = "inline";
+          i = 0;
+        }
+      }
+    </script>
+  </body>
 </html>

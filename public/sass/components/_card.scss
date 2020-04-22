@@ -400,11 +400,17 @@ footer {
   height: 26rem;
   width: 42%;
   overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
   // margin-left: 6rem;
   margin-bottom: 4rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid grey;
   border-radius: 0.6rem;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+  }
   &_img {
     height: inherit;
     width: 35%;
@@ -438,8 +444,6 @@ footer {
   &_views {
     margin-right: 2.8rem;
   }
-  &_time {
-  }
   &_user {
     font-size: 1.7rem;
     word-spacing: 0.3rem;
@@ -459,4 +463,9 @@ footer {
 }
 .paragraphx {
   font-size: 1.3rem;
+}
+.edit_dots {
+  float: right;
+  margin-right: 1rem;
+  font-size: 1rem;
 }

@@ -133,11 +133,13 @@
 .w3-sidebar {
   max-width: 15%; }
 
-.simplebar-scrollbar:after {
-  background-color: darkblue !important; }
-
 .simplebar-scrollbar {
   margin: 2px; }
+
+.simplebar-scrollbar::before {
+  background-color: #969999 !important;
+  height: 50vh;
+  width: 3.2rem; }
 
 .font_icon {
   color: #fa0404;
@@ -198,7 +200,7 @@ h2 {
 .header {
   font-size: 1.8rem;
   height: 60px;
-  background-color: #4585F3;
+  background-color: #4585f3;
   border-bottom: var(--line);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,11 +251,11 @@ h2 {
 .search__input {
   background-color: var(--color-grey-light-2);
   border: none;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   border-radius: 100px;
   width: 90%;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   margin-right: -3.25rem; }
 
 .search__input:focus {
@@ -1206,10 +1208,15 @@ footer {
   height: 26rem;
   width: 42%;
   overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
   margin-bottom: 4rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid grey;
-  border-radius: 0.6rem; }
+  border-radius: 0.6rem;
+  transition: all 0.3s; }
+  .big-deal:hover {
+    transform: scale(1.02); }
   .big-deal_img {
     height: inherit;
     width: 35%; }
@@ -1248,6 +1255,11 @@ footer {
 
 .paragraphx {
   font-size: 1.3rem; }
+
+.edit_dots {
+  float: right;
+  margin-right: 1rem;
+  font-size: 1rem; }
 
 * {
   padding: 0%;
@@ -1712,11 +1724,12 @@ a {
 .side_bar {
   width: 15%;
   background-color: #f1eeee;
-  padding-top: 7rem; }
+  margin-top: 6rem;
+  height: 100%; }
 
 .item2 {
   padding: 0.5rem;
-  margin-left: 1.15rem;
+  padding-left: 1.15rem;
   display: flex;
   flex-direction: row; }
   .item2:hover {

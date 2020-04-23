@@ -1214,14 +1214,17 @@ figure {
   position: absolute;
   bottom: 0.5rem;
   right: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem; }
+  height: 2rem;
+  width: 2rem; }
   .three-dots:hover {
     background-color: #c0c0c0; }
+
+.three-dots option {
+  padding: 10rem; }
 
 .three-dots-menu {
   position: fixed;

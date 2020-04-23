@@ -8,7 +8,7 @@
   // position: relative;
   height: 34rem;
   width: 26rem;
-
+  z-index: 1;
   margin: 0 0 4rem 0rem;
   //    &:not(:nth-child(4n)) {
   //       margin-right: 5rem;
@@ -20,14 +20,15 @@
   background-color: #fff;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  // -webkit-backface-visibility: hidden;
+  // backface-visibility: hidden;
   border-radius: 0.5rem;
-  overflow: hidden;
+  // overflow: hidden;
   border: 1px solid #aaa;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  // z-index: 0;
   align-items: center;
   //-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
@@ -90,7 +91,9 @@
 }
 
 .three-dots-menu {
-  position: fixed;
+  position: relative !important;
+  top: 2rem;
+  left: 0;
   width: 8rem;
   height: 8rem;
   background-color: #73a4ca;
@@ -107,6 +110,7 @@
   &:not(:last-child) {
     border-bottom: 1px solid black;
   }
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
   padding: 0.5rem 0;
 }
 

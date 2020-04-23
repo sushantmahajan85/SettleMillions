@@ -1,78 +1,81 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const dealSchema = new mongoose.Schema({
+const dealSchema = new mongoose.Schema(
+  {
     category: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     titleImg: {
-        type: String,
-        default: 'corona.jpg'
+      type: String,
+      default: "corona.jpg",
     },
 
     affiliateLink: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     views: {
-        type: Number,
-        default: 1069
+      type: Number,
+      default: 1069,
     },
     time: {
-        type: Date,
-        default: Date.now()
+      type: Date,
+      default: Date.now(),
     },
     titleDis: {
-        type: String,
-        maxlength: [30, 'exceeding the word creteria'],
-        default: 'Limited offer'
+      type: String,
+      maxlength: [30, "exceeding the word creteria"],
+      default: "Limited offer",
     },
     biggerDis: {
-        type: String,
-        maxlength: 400
+      type: String,
+      maxlength: 400,
     },
     mrp: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     dealPrice: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     dealName: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     company: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     reportCount: {
-        type: Number
+      type: Number,
     },
     saveLater: Number,
     owner: {
-        type: String,
-        default: 'Couper Deals'
+      type: String,
+      default: "Couper Deals",
     },
     buyNow: {
-        type: Number
+      type: Number,
     },
     corouselImgs: Array,
     discount: Number,
     tags: Array,
     user: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'User',
-        required: true
-    }
-}, { toJSON: { virtuals: true }, toObject: { virtuals: true } });
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+      required: true,
+    },
+  },
+  { toJSON: { virtuals: true }, toObject: { virtuals: true } }
+);
 //virtual populate
-dealSchema.virtual('reviews', {
-    ref: 'Review',
-    foreignField: 'deal',
-    localField: '_id'
+dealSchema.virtual("reviews", {
+  ref: "Review",
+  foreignField: "deal",
+  localField: "_id",
 });
 
-const Deal = mongoose.model('Deal', dealSchema);
+const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

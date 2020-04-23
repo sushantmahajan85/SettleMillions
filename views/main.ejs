@@ -65,8 +65,10 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="page-content">
-
+<!-- Start: Copyright 2020 TraceMyIP.org Service Code (232803-04232020)- DO NOT MODIFY //-->
         <div id="trending" class="trending">
+            <!-- Start: Copyright 2020 TraceMyIP.org Service Code (233645-04232020)- DO NOT MODIFY //-->
+<div style="line-height:16px;text-align:center;"><script type="text/javascript" src="//s2.tracemyip.org/tracker/lgUrl.php?stlVar2=1300&amp;rgtype=4684NR-IPIB&amp;pidnVar2=90242&amp;prtVar2=10&amp;scvVar2=12"></script><noscript><a href="https://www.tracemyip.org/tools/cookie-free-tracking-analytics-eu-cookie-law-solution/"><img src="//s2.tracemyip.org/tracker/1300/4684NR-IPIB/90242/10/12/ans/" alt="FREE COOKIE FREE HITS TRACKERS" style="border:0px;"></a></noscript></div> <!-- End: TraceMyIP.org Service Code //-->
             <%  var i = 0; %>
             <% for(var deal of deals) { %>
             <% i++; %>
@@ -641,6 +643,9 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         </footer>
     </div>
     <script>
+        
+    </script>
+    <script>
         console.log('hey');
         function getCookieVal(offset) {
           var endstr = document.cookie.indexOf(";", offset);
@@ -682,7 +687,9 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
           var visit;
           expdate.setTime(expdate.getTime() + 24 * 60 * 60 * 1000 * 365);
           if (!(visit = GetCookie("visit"))) visit = 0;
+          
           visit++;
+          
           SetCookie("visit", visit, expdate, "/", null, false);
           var message;
           if (visit == 1) message = " Welcome to my page!";
@@ -714,7 +721,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
           SetCookie("visit", visit, expdate, "/", null, false);
           history.go(0);
         }
-        window.onload = DisplayInfo();
+        window.onload = DisplayInfo;
       </script>
     <script>
         $('.main-content .owl-carousel').owlCarousel({
@@ -741,6 +748,24 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             }
         });
     </script>
+<!-- <script>
+    function VisitCounter(){
+let visits  = 1;
+        SetCookie("counter", visits);
+        
+        
+        
+        
+        
+        
+        visits = parseInt(visits) + 1;
+         GetCookie("counter")  =   visits; 
+        alert("I note, you have been here " + visits + " times.");
+        
+        
+    }
+    window.onload = VisitCounter;
+</script> -->
 
     <script>
         $(".card__picture").on("mouseenter", function () {
@@ -815,8 +840,6 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 }
 
 </script>
-
-
 </body>
 
 </html>

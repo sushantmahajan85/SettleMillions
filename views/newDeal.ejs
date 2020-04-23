@@ -14,6 +14,51 @@
         rel="stylesheet"
       />
       <style>
+        .tag-container {
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 6px;
+        overflow-x: scroll;
+      }
+
+      .deleteTag{
+        margin-left: 1rem;
+      }
+
+      .tag-container .tag {
+        height: 30px;
+        margin: 5px;
+        padding: 5px 6px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background: #eee;
+        display: flex;
+        align-items: center;
+        color: #333;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+        cursor: default;
+      }
+      .tag i {
+        font-size: 16px;
+        color: #666;
+        margin-left: 0.8rem;
+      }
+      .tag-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: 0;
+        outline: none;
+        font-family: 'Rubik';
+        color: #333;
+        flex: 1;
+      }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////*/
+
         * {
           box-sizing: border-box;
         }
@@ -106,7 +151,7 @@
         }
       </style>
       <body>
-        <form id="regForm" action="/action_page.php">
+        <form id="regForm">
           <h1>Post a Deal:</h1>
           <!-- One "tab" for each step in the form: -->
           <!-- <div class="tab">
@@ -225,11 +270,13 @@
               ></textarea>
             </p>
             <p>
+              <div class="tag-container">
               <input
-                placeholder="Tags..."
+                placeholder="Tags..." type="text"
                 oninput="this.className = ''"
-                name="uname"
+                name="tagtagtag" id="tags"
               />
+              </div>
             </p>
           </div>
           <div style="overflow:auto;">
@@ -371,6 +418,69 @@
 
         <script src="js/newDeal.js"></script>
         <script src="js/main.js"></script>
+
+        
+        <script>
+          // var tag = document.querySelector('input[name=tagtagtag]');
+          // new Tagify(tag);
+          const tagContainer = document.querySelector('.tag-container');
+          const input = document.querySelector('.tag-container input');
+
+          let tags = [];
+
+          function createTag(label) {
+            const div = document.createElement('div');
+            div.setAttribute('class', 'tag');
+            const span = document.createElement('span');
+            span.innerHTML = label;
+            const closeIcon = document.createElement('i');
+            closeIcon.setAttribute('class', 'deleteTag')
+            closeIcon.innerHTML = 'x';
+            // closeIcon.setAttribute('class', 'material-icons');
+            closeIcon.setAttribute('data-item', label);
+            div.appendChild(span);
+            div.appendChild(closeIcon);
+            return div;
+          }
+
+          function clearTags() {
+            document.querySelectorAll('.tag').forEach(tag => {
+              tag.parentElement.removeChild(tag);
+            });
+          }
+
+          function addTags() {
+            clearTags();
+            tags.slice().reverse().forEach(tag => {
+              tagContainer.prepend(createTag(tag));
+            });
+          }
+
+          input.addEventListener('keyup', (e) => {
+              if (e.key === 'Enter') {
+                e.target.value.split(',').forEach(tag => {
+                  tags.push(tag);  
+                });
+                
+                addTags();
+                input.value = '';
+              }
+          });
+          document.addEventListener('click', (e) => {
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'I') {
+              const tagLabel = e.target.getAttribute('data-item');
+              const index = tags.indexOf(tagLabel);
+              tags = [...tags.slice(0, index), ...tags.slice(index+1)];
+              addTags();    
+            }
+          })
+
+          input.focus();
+
+
+        </script>
+
       </body>
     </html>
 
@@ -397,5 +507,3 @@
         Post Deal
       </button>
     </form> -->
-  </body>
-</html>

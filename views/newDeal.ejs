@@ -165,13 +165,25 @@
           <div class="tab">
             Category:
             <p>
-              <select name="hhhh" id="" oninput="this.className = ''">
-                <option value="">Electronics</option>
+              <select
+                id="category"
+                size="1"
+                oninput="this.className = ''"
+                onchange="makeSubmenu(this.value)"
+              >
+                <option value="" disabled selected>Choose Category</option>
+                <option>Mobile</option>
+                <option>Clothes</option>
               </select>
             </p>
             <p>
-              <select name="hhhh" id="" oninput="this.className = ''">
-                <option value="">Remote Car</option>
+              <select
+                id="categorySelect"
+                size="1"
+                oninput="this.className = ''"
+              >
+                <option value="" disabled selected>Choose Subcategory</option>
+                <option></option>
               </select>
             </p>
             <p>
@@ -232,7 +244,39 @@
             <span class="step"></span>
           </div>
         </form>
+        <script type="text/javascript">
+          var subcategory = {
+            Mobile: ["Nokia", "Redmi", "Samsung"],
+            Clothes: ["Shirt", "Pant", "T-shirt"],
+          };
 
+          function makeSubmenu(value) {
+            if (value.length == 0)
+              document.getElementById("categorySelect").innerHTML =
+                "<option></option>";
+            else {
+              var citiesOptions = "";
+              for (categoryId in subcategory[value]) {
+                citiesOptions +=
+                  "<option>" + subcategory[value][categoryId] + "</option>";
+              }
+              document.getElementById(
+                "categorySelect"
+              ).innerHTML = citiesOptions;
+            }
+          }
+
+          function displaySelected() {
+            var country = document.getElementById("category").value;
+            var city = document.getElementById("categorySelect").value;
+            alert(country + "\n" + city);
+          }
+
+          function resetSelection() {
+            document.getElementById("category").selectedIndex = 0;
+            document.getElementById("categorySelect").selectedIndex = 0;
+          }
+        </script>
         <script>
           var currentTab = 0; // Current tab is set to be the first tab (0)
           showTab(currentTab); // Display the current tab

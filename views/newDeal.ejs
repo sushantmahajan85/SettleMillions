@@ -132,28 +132,32 @@
               <input
                 placeholder="Deal Name..."
                 oninput="this.className = ''"
-                name="dealName" class="needed"
+                name="dealName"
+                class="needed"
               />
             </p>
             <p>
               <input
                 placeholder="Link..."
                 oninput="this.className = ''"
-                name="link" class="needed"
+                name="link"
+                class="needed"
               />
             </p>
             <p>
               <input
                 placeholder="Final Price..."
                 oninput="this.className = ''"
-                name="finalPrice" class="needed"
+                name="finalPrice"
+                class="needed"
               />
             </p>
             <p>
               <input
                 placeholder="Discount in percentage..."
                 oninput="this.className = ''"
-                name="discount" class="needed"
+                name="discount"
+                class="needed"
               />
             </p>
             <p>
@@ -168,7 +172,8 @@
               <select
                 id="category"
                 size="1"
-                oninput="this.className = ''"  class="needed"
+                oninput="this.className = ''"
+                class="needed"
                 onchange="makeSubmenu(this.value)"
               >
                 <option value="" disabled selected>Choose Category</option>
@@ -244,6 +249,7 @@
             <span class="step"></span>
           </div>
         </form>
+
         <script type="text/javascript">
           var subcategory = {
             Mobile: ["Nokia", "Redmi", "Samsung"],
@@ -301,7 +307,6 @@
           }
 
           function nextPrev(n) {
-
             console.log(validateForm());
 
             // This function will figure out which tab to display
@@ -325,7 +330,10 @@
 
           function validateForm() {
             // This function deals with validation of the form fields
-            var x,y,i,valid = true;
+            var x,
+              y,
+              i,
+              valid = true;
 
             x = document.getElementsByClassName("tab");
             y = x[currentTab].getElementsByClassName("needed");

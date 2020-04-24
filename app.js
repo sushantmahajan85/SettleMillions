@@ -25,10 +25,10 @@ app.use("/deal", function(req, res, next) {
   const full_url = req.url;
   // var full_url = document.URL; // Get current url
   var url_array = full_url.split("/"); // Split the string into an array with / as separator
-  var last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
+  const last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
   console.log(last_segment);
-  app.use(`/deal/${last_segment}`, limiter);
   next();
+  app.use(`/deal/${last_segment}`, limiter);
 });
 // app.use("/deal/:dealId", limiter, function(req, res, next) {
 //   const full_url = req.url;

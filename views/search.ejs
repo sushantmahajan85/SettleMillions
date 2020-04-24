@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="/sass/css/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-162941654-1');
+   </script>
+   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+       crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+   <%- include('partials/navbar.ejs') %>
+   <%- include('partials/sidebar.ejs') %>
+
+   <div class="page-content">
+      <div id="searchpage" class="searchpage">
+         
+         <%  var i = 0; %>
+         <% for(var deal of deals) { %>
+         <% i++; %>
+         <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> 
+            <div class="big-deal">
+
+               <div class="big-deal_img" data-pause="true" data-interval="1000">
+                  <div
+                  class="carousel-item active"
+                  style="background-color: white !important;"
+                  >
+                  <img
+                     src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg"
+                     alt="Deal Photo"
+                     class="big-deal_picture"
+                  >
+                  </div>
+                  <div
+                  class="carousel-item"
+                  style="background-color: white !important;"
+                  >
+                  <img
+                     src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                     alt="Deal Photo"
+                     class="big-deal_picture"
+                  >
+                  </div>
+                  <div
+                  class="carousel-item"
+                  style="background-color: white !important;"
+                  >
+                  <img
+                     src="/images/jeans.jpeg"
+                     alt="Deal Photo"
+                     class="big-deal_picture"
+                  >
+                  </div>
+               </div>
+               <div class="big-deal_content">
+                  <div class="big-deal_name">
+                  <h4><%= deal.dealName %> </h4>
+                  </div>
+
+                  <div class="big-deal_buttons">
+                  <div class="big-deal_user"><%= deal.owner %> </div>
+                  </div>
+                  <div class="big-deal_vt">
+                  <p class="big-deal_views"><%= deal.views %>  views</p>
+                  <p class="big-deal_time"><%= deal.mrp %> days ago</p>
+                  </div>
+
+                  <div class="big-deal_des">
+                  <p class="paragraphx">
+                     <%= deal.titleDis %> 
+                  </p>
+                  </div>
+                  <div class="big-deal_price">
+                  <h4
+                     class="heading-normal"
+                     style="letter-spacing: 0.2rem;font-size: 2rem"
+                  >
+                     Rs.<%= deal.mrp %> 
+                  </h4>
+                  </div>
+                  <div class="big-deal_dis">
+                  <strike
+                     style="font-size: 1.8rem; color:rgb(82, 80, 80);margin-right: 2rem"
+                     >Rs.<%= deal.dealPrice %> </strike
+                  >
+
+                  <h3 class="big-deal_percent">70% OFF</h3>
+                  </div>
+               </div>
+            </div>
+        </a>
+        <% if (i === 20){break;}%>
+        <% } %>
+        </div>
+    </div>
+
+    <script>
+      $(".big-deal_img")
+        .on("mouseenter", function() {
+          $(this).carousel("cycle");
+        })
+        .on("mouseleave", function() {
+          $(this).carousel("pause");
+        });
+    </script>
+
+</body>
+</html>

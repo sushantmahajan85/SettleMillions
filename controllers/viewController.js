@@ -3,7 +3,7 @@ const Subscriber = require("./../schema/models/subscriberModel");
 const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const appError = require("./../utils/appError");
-
+const exec = require("child_process").exec;
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -81,6 +81,52 @@ exports.getVerificationForm = (req, res) => {
 exports.getRecruitmentsData = (req, res) => {
   res.status(200).render("recruitments");
 };
+
+exports.autocomplete = catchAsync(async (req, res) => {
+  //   const regex = new RegExp(escapeRegex(req.query.search), "gi");
+  //   var result = [];
+  //   await Deal.find({
+  //     dealName: regex,
+  //     // owner: regex,
+  //   }).then((usrs) => {
+  //     if (usrs && usrs.length && usrs.length > 0) {
+  //       usrs.forEach((user) => {
+  //         let obj = {
+  //           id: user._id,
+  //           label: user.dealName,
+  //         };
+
+  //         result.push(obj);
+  //       });
+  //     }
+  //     res.json(result);
+  //   });
+  var regex = new RegExp(req.query["term"], "i");
+  var query = User.find({ dealName: regex }).limit(20);
+
+  // Execute query in a callback and return users list
+  query.exec(function(err, users) {
+    if (!err) {
+      // Method to construct the json result set
+      var result = buildResultSet(users);
+      res.send(
+        result,
+        {
+          "Content-Type": "application/json",
+        },
+        200
+      );
+    } else {
+      res.send(
+        JSON.stringify(err),
+        {
+          "Content-Type": "application/json",
+        },
+        404
+      );
+    }
+  });
+});
 
 exports.mainPage = catchAsync(async (req, res) => {
   let j = 0;
@@ -202,32 +248,34 @@ exports.mainPage = catchAsync(async (req, res) => {
   // console.log(recommendedDeals);
   if (req.query.search) {
     // await Deal.ensureIndexes({ dealName: 'text' });
-    // const regex = new RegExp(escapeRegex(req.query.search), 'gi');
 
     //console.log(req.query.search);
+    // var regex = new RegExp(req.query["term"], "i");
 
     const deals = await Deal.find(
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
     ).sort({ score: { $meta: "textScore" } });
+    // const regex = new RegExp(escapeRegex(req.query.search), "gi");
+    // var result = [];
+    // await Deal.find({
+    //   dealName: regex,
+    //   // owner: regex,
+    // }).then((usrs) => {
+    //   if (usrs && usrs.length && usrs.length > 0) {
+    //     usrs.forEach((user) => {
+    //       let obj = {
+    //         id: user._id,
+    //         label: user.dealName,
+    //       };
 
-    console.log(deals);
-    // const deals = await Deal.find({
-    //     dealName: regex,
-    //     // owner: regex,
-
+    //       result.push(obj);
+    //     });
+    //   }
+    //   res.json(result);
     // });
-    // const deals = await Deal.find({
-    //     dealName: {
-    //         $regex: new RegExp(req.query.search)
-    //     },
-    //     biggerDis: {
-    //         $regex: new RegExp(req.query.search)
-    //     }
-    // });
-
-    //console.log(deals);
-    res.status(200).render("search", { deals/*recommendedDeals*/ });
+    // //console.log(deals);
+    res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
     const deals = await Deal.find();
     res.status(200).render("main", { deals, recommendedDeals });
@@ -332,6 +380,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     deal,
   });
 });
-// function escapeRegex(text) {
-//     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-// };
+function escapeRegex(text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+}

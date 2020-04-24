@@ -103,7 +103,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
                                             class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
                                     <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a><br>
                                         <div style="display: inline-block">
                                             <span><%= deal.views %>k views</span>
                                             <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>

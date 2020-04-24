@@ -70,60 +70,62 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             <%  var i = 0; %>
             <% for(var deal of deals) { %>
             <% i++; %>
-            <div class="card">
-                <div class="card__face">
-                    <div class="card__picture" data-pause="true" data-interval="1000">
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
 
 
-                        <div class="carousel-item active" >
+                            <div class="carousel-item active" >
 
-                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                class="deal-photo">
+                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo">
 
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                    alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                            </div>
                         </div>
-                        <div class="carousel-item" >
-                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                alt="Deal Photo" class="deal-photo">
 
-                        </div>
-                        <div class="carousel-item" >
-                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+                        <div class="card-text">
 
+                            <h4 class="card__head">
+                                <%= deal.dealName %> 
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            
+                            <select class="three-dots">
+                                <!-- <option selected value="empty"></option> -->
+                                <option value="report">Report</option>
+                                <option value="like">Like</option>
+                            </select>
+
+                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
+                            
                         </div>
+
                     </div>
-
-                    <div class="card-text">
-
-                        <h4 class="card__head">
-                            Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
-                        </h4>
-                        <div class="card__details">
-                            <ul>
-                                <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                        class="price_mrp">14999</strike> <span class="price_dis">(70%)</span> </li>
-                                <li style="font-weight: 400;">
-                                    <div style="display: inline-block">CouperDeals</div><br>
-                                    <div style="display: inline-block">
-                                        <span>2.6k views</span>
-                                        <span style="margin-left: 0.7rem;">3hr ago</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        
-                        <select class="three-dots">
-                            <!-- <option selected value="empty"></option> -->
-                            <option value="report">Report</option>
-                            <option value="like">Like</option>
-                        </select>
-
-                        <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
-                        
-                    </div>
-
                 </div>
-            </div>
+            </a>
 
             <% if (i === 8){break;}%>
             <% } %>
@@ -160,16 +162,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                     <div class="card-text">
 
                         <h4 class="card__head">
-                            Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                            <%= deal.dealName %> 
                         </h4>
                         <div class="card__details">
                             <ul>
-                                <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                        class="price_mrp">14999</strike> <span class="price_dis">(70%)</span> </li>
-                                <li style="font-weight: 400;"> CouperDeals</li>
-                                <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                        style="margin-left: 0.7rem;">3hr
-                                        ago</span> </li>
+                                <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                    class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                <li style="font-weight: 400;">
+                                    <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                    <div style="display: inline-block">
+                                        <span><%= deal.views %>k views</span>
+                                        <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -241,17 +246,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -286,17 +293,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -331,17 +340,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -376,17 +387,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -421,17 +434,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -466,17 +481,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -511,17 +528,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>
@@ -556,17 +575,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                         <div class="card-text">
 
                             <h4 class="card__head">
-                                Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)
+                                <%= deal.dealName %> 
                             </h4>
                             <div class="card__details">
                                 <ul>
-                                    <li class="price"><span class="price_avail"> Rs.3999</span> <strike
-                                            class="price_mrp">14999</strike> <span class="price_dis">(70%)</span>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block">
+                                            <span><%= deal.views %>k views</span>
+                                            <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
+                                        </div>
                                     </li>
-                                    <li style="font-weight: 400;"> CouperDeals</li>
-                                    <li style="font-size: 1.34rem !important;"> 2.6k views <span
-                                            style="margin-left: 0.7rem;">3hr
-                                            ago</span> </li>
                                 </ul>
                             </div>
                         </div>

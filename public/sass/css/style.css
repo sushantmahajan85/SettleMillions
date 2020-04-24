@@ -365,6 +365,18 @@ a.show-hide-link {
   justify-content: space-evenly;
   padding-top: 8rem; }
 
+.searchpage {
+  display: flex;
+  flex: 0 0 25%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding-top: 8.1rem; }
+
+.searchpage a {
+  width: 43rem;
+  height: 26rem; }
+
 .mySlides {
   display: none; }
 
@@ -1473,8 +1485,8 @@ footer {
 
 .big-deal {
   display: flex;
-  height: 26rem;
-  width: 42%;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   backface-visibility: hidden;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);

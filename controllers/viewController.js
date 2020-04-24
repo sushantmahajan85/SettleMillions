@@ -210,6 +210,8 @@ exports.mainPage = catchAsync(async (req, res) => {
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
     ).sort({ score: { $meta: "textScore" } });
+
+    console.log(deals);
     // const deals = await Deal.find({
     //     dealName: regex,
     //     // owner: regex,
@@ -225,7 +227,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     // });
 
     //console.log(deals);
-    res.status(200).render("main", { deals, recommendedDeals });
+    res.status(200).render("search", { deals/*recommendedDeals*/ });
   } else {
     const deals = await Deal.find();
     res.status(200).render("main", { deals, recommendedDeals });

@@ -21,7 +21,7 @@ let segment_two; // Get the last part of the array (-1)
 let segment_three;
 
 const limiter = rateLimit({
-  max: 3,
+  max: 130,
   windowMs: 60 * 60 * 1000,
   message: "too many request from this ip..try again in an hour",
 });

@@ -12,11 +12,7 @@ router.get(
 );
 router.get("/", viewController.mainPage);
 router.get("/member/:id", viewController.getMemberData);
-router.get(
-  "/deal/:dealId/postedBy/:sellerId",
-  authController.limiter,
-  viewController.dealPage
-);
+router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get(
   "/subscriptions",

@@ -21,25 +21,9 @@ const limiter = rateLimit({
   windowMs: 60 * 60 * 1000,
   message: "too many request from this ip..try again in an hour",
 });
-app.use("/deal", function(req, res, next) {
-  const full_url = req.url;
-  // var full_url = document.URL; // Get current url
-  var url_array = full_url.split("/"); // Split the string into an array with / as separator
-  const last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
-  console.log(last_segment);
-  next();
-  app.use(`/deal/${last_segment}`, limiter);
-});
-// app.use("/deal/:dealId", limiter, function(req, res, next) {
-//   const full_url = req.url;
-
-//   // var full_url = document.URL; // Get current url
-//   var url_array = full_url.split("/"); // Split the string into an array with / as separator
-//   var last_segment = url_array[url_array.length - 2]; // Get the last part of the array (-1)
-//   console.log(last_segment);
-
-//   next();
-// });
+app.use("/deal", limiter);
+app.use("/api/v1/users", limiter);
+app.use("/api/v1/deals", limiter);
 app.use(compression());
 
 app.set("view engine", "ejs");

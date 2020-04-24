@@ -1,7 +1,5 @@
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
-
-const rateLimit = require("express-rate-limit");
 const User = require("../schema/models/userModel");
 const AppError = require("../utils/appError");
 const sendEmail = require("../utils/email");
@@ -131,15 +129,6 @@ exports.logout = (req, res) => {
   if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
   res.status(200).json({ status: "success" });
-};
-
-exports.limiter = async (req, res, next) => {
-  rateLimit({
-    max: 3,
-    windowMs: 60 * 60 * 1000,
-    message: "too many request from this ip..try again in an hour",
-  });
-  next();
 };
 
 exports.protect = catchAsync(async (req, res, next) => {

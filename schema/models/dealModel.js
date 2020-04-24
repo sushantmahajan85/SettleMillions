@@ -17,7 +17,7 @@ const dealSchema = new mongoose.Schema(
     },
     views: {
       type: Number,
-      default: 1069,
+      default: 0,
     },
     time: {
       type: Date,

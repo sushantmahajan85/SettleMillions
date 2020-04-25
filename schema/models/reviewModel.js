@@ -36,9 +36,18 @@ reviewSchema.pre(/^find/, function(next) {
   this.populate({
     path: "user",
     select: "name",
+  }).populate({
+    path: "deal",
+    select: "dealName",
   });
 
   next();
+});
+reviewSchema.pre(/^find/, async function() {
+  //   const deal = await Deal.findById( req.params);
+  //   this.find({});
+  //   await this.find(this.deal);
+  //console.log(this.r);
 });
 
 // reviewSchema.statics.calcAverageRatings = async function (dealId) {
@@ -70,11 +79,6 @@ reviewSchema.pre(/^find/, function(next) {
 
 // reviewSchema.post('save', function () {
 //    this.constructor.calcAverageRatings(this.deal);
-// });
-
-// reviewSchema.pre(/^find/, async function() {
-//   await this.find();
-//   //console.log(this.r);
 // });
 
 // reviewSchema.post(/^findOneAnd/, async function () {

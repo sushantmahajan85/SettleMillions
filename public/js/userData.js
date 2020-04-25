@@ -1,11 +1,12 @@
-const passvalue = async (email, password) => {
+const passvaluex = async (email, name, photo) => {
   try {
     const result = await axios({
-      method: "POST",
-      url: "/api/v1/users/login",
+      method: "PATCH",
+      url: "/api/v1/users/updateMe",
       data: {
         email,
-        password,
+        name,
+        photo,
       },
     });
     if (result.data.status === "success") {
@@ -20,9 +21,10 @@ const passvalue = async (email, password) => {
   }
 };
 
-document.getElementById("login100-form").addEventListener("submit", (e) => {
+document.getElementById("form-user-data").addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  passvalue(email, password);
+  const name = document.getElementById("name").value;
+  const photo = document.getElementById("photo").value;
+  passvaluex(email, name, photo);
 });

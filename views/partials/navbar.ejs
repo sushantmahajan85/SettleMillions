@@ -52,6 +52,15 @@
       </form>
 
       <nav class="user-nav">
+        <form action="/" method="GET" class=sortx>
+          <select class="sort-drop" name="sort" onchange="this.form.submit()">
+            <option selected disabled value="empty">--Choose Parameter--</option>
+            <option value="mrp">mrp</option>
+            <option value="views">views</option>
+          </select>
+          <div>SortBy</div>
+        </form>
+
         <div>
           <i class="fas fa-fire"></i>
           <div style="margin: 5px;">Trending</div>

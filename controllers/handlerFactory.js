@@ -58,9 +58,7 @@ exports.getAll = (Model) =>
     if (req.params.dealId) {
       filter = { deal: req.params.dealId };
       if (!(await Deal.findById(req.params.dealId))) {
-        return next(
-          new appError("Deleted account or some internal error", 404)
-        );
+        return next(new appError("Deleted deal or some internal error", 404));
       }
     }
 

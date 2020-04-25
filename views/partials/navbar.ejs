@@ -115,6 +115,8 @@
         });
       });
     </script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
       $(function() {
         $("#search").autocomplete({
@@ -125,7 +127,14 @@
               data: request, // request is the value of search input
               success: function(data) {
                 // Map response values to fiedl label and value
-                console.log(data);
+                response(
+                  $.map(data, function(el) {
+                    return {
+                      label: el.dealName,
+                      value: el._id,
+                    };
+                  })
+                );
               },
             });
           },

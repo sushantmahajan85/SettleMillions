@@ -83,49 +83,49 @@ exports.getRecruitmentsData = (req, res) => {
 };
 
 exports.autocomplete = catchAsync(async (req, res) => {
-  const regex = new RegExp(escapeRegex(req.query.search), "gi");
-  var result = [];
-  await Deal.find({
-    dealName: regex,
-    // owner: regex,
-  }).then((usrs) => {
-    if (usrs && usrs.length && usrs.length > 0) {
-      usrs.forEach((user) => {
-        let obj = {
-          id: user._id,
-          label: user.dealName,
-        };
-
-        result.push(obj);
-      });
-    }
-    res.json(result);
-  });
-  //   var regex = new RegExp(req.query["term"], "i");
-  //   var query = User.find({ dealName: regex }).limit(20);
-
-  //   // Execute query in a callback and return users list
-  //   query.exec(function(err, users) {
-  //     if (!err) {
-  //       // Method to construct the json result set
-  //       var result = buildResultSet(users);
-  //       res.send(
-  //         result,
-  //         {
-  //           "Content-Type": "application/json",
-  //         },
-  //         200
-  //       );
-  //     } else {
-  //       res.send(
-  //         JSON.stringify(err),
-  //         {
-  //           "Content-Type": "application/json",
-  //         },
-  //         404
-  //       );
+  //   const regex = new RegExp(escapeRegex(req.query.search), "gi");
+  //   var result = [];
+  //   await Deal.find({
+  //     dealName: regex,
+  //     // owner: regex,
+  //   }).then((usrs) => {
+  //     if (usrs && usrs.length && usrs.length > 0) {
+  //       usrs.forEach((user) => {
+  //         let obj = {
+  //           id: user._id,
+  //           label: user.dealName,
+  //         };
+  //         result.push(obj);
+  //       });
   //     }
+  //     res.json(result);
   //   });
+  const regex = new RegExp(req.query["term"], "i");
+  //   const regex = new RegExp(escapeRegex(req.query.search), "gi");
+  const query = Deal.find({ dealName: regex }).limit(4);
+  // Execute query in a callback and return users list
+  query.exec(function(err, users) {
+    // var result = [];
+    if (!err) {
+      // Method to construct the json result set
+      //   var result = buildResultSet(users);
+      res.send(
+        users,
+        {
+          "Content-Type": "application/json",
+        },
+        200
+      );
+    } else {
+      res.send(
+        JSON.stringify(err),
+        {
+          "Content-Type": "application/json",
+        },
+        404
+      );
+    }
+  });
 });
 
 exports.mainPage = catchAsync(async (req, res) => {

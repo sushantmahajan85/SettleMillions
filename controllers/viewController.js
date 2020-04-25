@@ -277,10 +277,16 @@ exports.mainPage = catchAsync(async (req, res) => {
     // //console.log(deals);
     res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
-    let sortBy = "";
-    let order = 1;
-    console.log(req.query.sort);
-    sortBy+=req.query.sort;
+    let sortBy = "views";
+    let order = -1;
+    if(req.query.sort === "mrp"){
+      sortBy = "" + req.query.sort;
+      order = 1;
+    }
+    if(req.query.sort === "views"){
+      sortBy = "" + req.query.sort;
+      order = -1;
+    }
     const deals = await Deal.find().sort([[`${sortBy}`, order]]);
     res.status(200).render("main", { deals, recommendedDeals });
   }

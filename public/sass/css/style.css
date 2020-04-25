@@ -1994,8 +1994,28 @@ a {
   font-size: 1.6rem;
   color: black; }
 
-#search {
-  min-width: 300px; }
+#searchx {
+  max-width: 400px; }
+
+.sortx {
+  width: 10rem;
+  height: 3.3rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.sort-drop {
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.4rem;
+  background-color: #FFA500; }
+  .sort-drop:hover {
+    background-color: white; }
 
 .nav-links li {
   list-style: none;

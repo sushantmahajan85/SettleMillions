@@ -2,6 +2,7 @@ const catchAsync = require("./../utils/catchAsync");
 const appError = require("./../utils/appError");
 const APIFeatures = require("./../utils/apiFeatures");
 const Deal = require("../schema/models/dealModel");
+const User = require("../schema/models/userModel");
 
 exports.deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
@@ -57,12 +58,19 @@ exports.getAll = (Model) =>
     if (req.params.dealId) {
       filter = { deal: req.params.dealId };
       if (!(await Deal.findById(req.params.dealId))) {
-        return next(new appError("No Document With That Id", 404));
+        return next(
+          new appError("Deleted account or some internal error", 404)
+        );
       }
     }
 
     if (req.params.userId) {
       filter = { user: req.params.userId };
+      if (!(await User.findById(req.params.userId))) {
+        return next(
+          new appError("Deleted account or some internal error", 404)
+        );
+      }
     }
 
     const features = new APIFeatures(Model.find(filter), req.query)

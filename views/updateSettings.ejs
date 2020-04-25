@@ -65,13 +65,13 @@
           <div class="line">&nbsp;</div>
           <div class="user-view__form-container">
             <h2 class="heading-secondary ma-bt-md">Password change</h2>
-            <form class="form form-user-settings">
+            <form class="form form-user-settings " id="pass">
               <div class="form__group">
                 <label class="form__label" for="password-current"
                   >Current password</label
                 ><input
                   class="form__input"
-                  id="password-current"
+                  id="current"
                   type="password"
                   placeholder="••••••••"
                   required="required"
@@ -82,7 +82,7 @@
                 <label class="form__label" for="password">New password</label
                 ><input
                   class="form__input"
-                  id="password"
+                  id="npassword"
                   type="password"
                   placeholder="••••••••"
                   required="required"
@@ -94,7 +94,7 @@
                   >Confirm password</label
                 ><input
                   class="form__input"
-                  id="password-confirm"
+                  id="cpassword"
                   type="password"
                   placeholder="••••••••"
                   required="required"
@@ -114,5 +114,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="/js/userData.js"></script>
+    <script src="/js/password.js"></script>
   </body>
 </html>

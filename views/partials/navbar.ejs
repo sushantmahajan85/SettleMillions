@@ -125,14 +125,7 @@
               data: request, // request is the value of search input
               success: function(data) {
                 // Map response values to fiedl label and value
-                response(
-                  $.map(data, function(el) {
-                    return {
-                      label: el.dealName,
-                      value: el._id,
-                    };
-                  })
-                );
+                console.log(data);
               },
             });
           },
@@ -156,7 +149,6 @@
             // Prevent other event from not being execute
             event.preventDefault();
             // optionnal: submit the form after field has been filled up
-            $("#searchx").submit();
           },
         });
       });

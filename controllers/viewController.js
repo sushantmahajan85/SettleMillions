@@ -277,7 +277,11 @@ exports.mainPage = catchAsync(async (req, res) => {
     // //console.log(deals);
     res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
-    const deals = await Deal.find();
+    let sortBy = "";
+    let order = 1;
+    console.log(req.query.sort);
+    sortBy+=req.query.sort;
+    const deals = await Deal.find().sort([[`${sortBy}`, order]]);
     res.status(200).render("main", { deals, recommendedDeals });
   }
 });

@@ -149,7 +149,7 @@
           },
 
           // The minimum number of characters a user must type before a search is performed.
-          minLength: 1,
+          minLength: 2,
 
           // set an onFocus event to show the result on input field when result is focused
           focus: function(event, ui) {
@@ -167,6 +167,7 @@
             // Prevent other event from not being execute
             event.preventDefault();
             // optionnal: submit the form after field has been filled up
+            $("#searchx").submit();
           },
         });
       });

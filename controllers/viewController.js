@@ -267,11 +267,11 @@ exports.mainPage = catchAsync(async (req, res) => {
   } else {
     let sortBy = "views";
     let order = -1;
-    if(req.query.sort === "mrp"){
+    if (req.query.sort === "mrp") {
       sortBy = "" + req.query.sort;
       order = 1;
     }
-    if(req.query.sort === "views"){
+    if (req.query.sort === "views") {
       sortBy = "" + req.query.sort;
       order = -1;
     }

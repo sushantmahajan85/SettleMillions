@@ -117,6 +117,18 @@ exports.autocomplete = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
+  if(req.query.dealOps){
+    let joChahiye = req.query.dealOps.split('/');
+    console.log(joChahiye[1]);
+
+    if(joChahiye[1] == "report"){
+      await Deal.findOneAndUpdate(
+        { _id: joChahiye[0] },
+        { $inc: { reportCount: 1 } }
+      );
+    }
+  }
+
   let j = 0;
 
   if (req.cookies.one !== undefined) {

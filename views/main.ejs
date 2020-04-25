@@ -109,7 +109,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
                                             class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
                                     <li style="font-weight: 400;">
-                                        <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a><br>
+                                        <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
                                         <div style="display: inline-block">
                                             <span><%= deal.views %>k views</span>
                                             <span style="margin-left: 0.7rem;"><%= deal.mrp %> hr ago</span>
@@ -118,12 +118,13 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 </ul>
                             </div>
 
-                            
-                            <select class="three-dots">
-                                <!-- <option selected value="empty"></option> -->
-                                <option value="report">Report</option>
-                                <option value="like">Like</option>
-                            </select>
+                            <form action="/" method="GET" class=reportx>
+                                <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
+                                    <option selected disabled value="empty"></option>
+                                    <option value=<%= `${deal._id}/report` %>>Report</option>
+                                    <option value=<%= `${deal._id}/like` %>>Like</option>
+                                </select>
+                            </form>
 
                             <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
                             
@@ -783,6 +784,16 @@ let visits  = 1;
 }
 
 </script>
+
+<script>
+    function dealOperations(el){
+        el.form.submit();
+        window.setTimeout(() => {
+                location.assign('/');
+        }, 10);
+    }
+</script>
+
 </body>
 
 </html>

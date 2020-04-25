@@ -50,6 +50,7 @@ const dealSchema = new mongoose.Schema(
     },
     reportCount: {
       type: Number,
+      default: 0
     },
     saveLater: Number,
     owner: {

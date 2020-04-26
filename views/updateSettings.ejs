@@ -26,34 +26,29 @@
             <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
             <form class="form form-user-data" id="form-user-data">
               <div class="form__group">
-                <label class="form__label" for="name">Name</label
-                ><input
-                  class="form__input"
-                  id="name"
-                  type="text"
-                  value="Jonas Schmedtmann"
-                  required="required"
+                <label class="form__label" for="name">Name</label><input
+                class="form__input" id="name" type="text" value=<%= user.name %>
                 />
               </div>
               <div class="form__group ma-bt-md">
                 <label class="form__label" for="email">Email address</label
-                ><input
-                  class="form__input"
-                  id="email"
-                  type="email"
-                  value="admin@natours.io"
-                  required="required"
-                />
+                ><input class="form__input" id="email" type="email" value=<%=
+                user.email %> />
               </div>
               <div class="form__group form__photo-upload">
-                <img
-                  class="form__user-photo"
+                <img class="form__user-photo"
+                src=<%=`/img/users/${user.photo}`%> alt="User photo" />
+                <input
+                  type="file"
+                  accept="image/*"
+                  class="form__upload"
                   id="photo"
-                  src="img/user.jpg"
-                  alt="User photo"
-                /><a class="btn-update-settings-text" href=""
+                  name="photo"
+                />
+                <label for="photo">Choose new photo</label>
+                <!-- <a class="btn-update-settings-text" href=""
                   >Choose new photo</a
-                >
+                > -->
               </div>
               <div class="form__group right">
                 <button class="btn-update-settings btn--small btn--green">

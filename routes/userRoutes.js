@@ -5,8 +5,8 @@ const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 
 const dealRouter = require("../routes/dealRoutes");
-// const upload = multer({ dest: '/public/img/users' });
-//bring back the user router from appjs
+// const upload = multer({ dest: "/public/img/users" });
+// bring back the user router from appjs
 const router = express.Router();
 
 router.use("/:userId/deals", dealRouter);
@@ -32,8 +32,8 @@ router.patch("/updateMyPassword", authController.updatePassword);
 router.get("/me", userController.getMe, userController.getUser);
 router.patch(
   "/updateMe",
-  //   userController.uploadUserPhoto,
-  //   userController.resizeUserPhoto,
+  userController.uploadUserPhoto,
+  userController.resizeUserPhoto,
   userController.updateMe
 );
 router.delete("/deleteMe", userController.deleteMe);

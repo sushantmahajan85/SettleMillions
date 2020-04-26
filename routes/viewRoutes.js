@@ -21,6 +21,10 @@ router.get(
 );
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/recent", viewController.recently);
-router.get("/updateUserSettings", viewController.updateUserSettings);
+router.get(
+  "/updateUserSettings",
+  authController.protect,
+  viewController.updateUserSettings
+);
 router.get("/search", viewController.autocomplete);
 module.exports = router;

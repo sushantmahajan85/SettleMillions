@@ -117,11 +117,11 @@ exports.autocomplete = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
-  if(req.query.dealOps){
-    let joChahiye = req.query.dealOps.split('/');
+  if (req.query.dealOps) {
+    let joChahiye = req.query.dealOps.split("/");
     console.log(joChahiye[1]);
 
-    if(joChahiye[1] == "report"){
+    if (joChahiye[1] == "report") {
       await Deal.findOneAndUpdate(
         { _id: joChahiye[0] },
         { $inc: { reportCount: 1 } }
@@ -309,7 +309,9 @@ exports.recently = catchAsync(async (req, res) => {
 });
 
 exports.updateUserSettings = catchAsync(async (req, res) => {
-  res.status(200).render("updateSettings");
+  const user = await User.findById(req.user.id);
+  console.log(user);
+  res.status(200).render("updateSettings", { user });
 });
 
 exports.dealPage = catchAsync(async (req, res, next) => {
@@ -390,6 +392,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     deal,
   });
 });
-function escapeRegex(text) {
-  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-}
+// function escapeRegex(text) {
+//   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+// }

@@ -85,13 +85,17 @@ dealSchema.virtual("reviews", {
   foreignField: "deal",
   localField: "_id",
 });
-dealSchema.post("save", async function(next) {
+dealSchema.pre("save", async function(next) {
   function kFormatter(el) {
     return Math.abs(el) > 999
       ? Math.sign(el) * (Math.abs(el) / 1000).toFixed(1) + "k"
       : Math.sign(el) * Math.abs(el);
   }
-  this.views = await kFormatter(this.views);
+  console.log(kFormatter(this.views));
+  const vo = kFormatter(this.views);
+  console.log(vo);
+  this.views = vo;
+  next();
 });
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

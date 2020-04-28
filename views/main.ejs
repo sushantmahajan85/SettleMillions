@@ -129,7 +129,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %> views</span><% var now = new Date(Date.now()); %>
+                                            <span><%= viu %> views</span><% var now = new Date(Date.now()); %>
                                             <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
                                         </div>
                                     </li>

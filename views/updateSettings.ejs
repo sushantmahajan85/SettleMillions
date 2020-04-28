@@ -13,11 +13,11 @@
     <div class="containerSettings">
       <div class="leftbox">
         <nav>
-          <a id="profile" class="active"><i class="fa fa-user"></i></a>
+          <!-- <a id="profile" class="active"><i class="fa fa-user"></i></a>
           <a id="payment"><i class="fa fa-credit-card"></i></a>
           <a id="subscription"><i class="fa fa-tv"></i></a>
           <a id="privacy"><i class="fa fa-tasks"></i></a>
-          <a id="settings"><i class="fa fa-cog"></i></a>
+          <a id="settings"><i class="fa fa-cog"></i></a> -->
         </nav>
       </div>
       <div class="rightbox">
@@ -26,34 +26,31 @@
             <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
             <form class="form form-user-data" id="form-user-data">
               <div class="form__group">
-                <label class="form__label" for="name">Name</label
-                ><input
-                  class="form__input"
-                  id="name"
-                  type="text"
-                  value="Jonas Schmedtmann"
-                  required="required"
+                <label class="form__label" for="name">Name</label><input
+                class="form__input" id="name" type="text" value=<%= user.name %>
                 />
               </div>
               <div class="form__group ma-bt-md">
                 <label class="form__label" for="email">Email address</label
-                ><input
-                  class="form__input"
-                  id="email"
-                  type="email"
-                  value="admin@natours.io"
-                  required="required"
-                />
+                ><input class="form__input" id="email" type="email" value=<%=
+                user.email %> />
               </div>
+              <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
+              class="profile1 " /> -->
               <div class="form__group form__photo-upload">
-                <img
-                  class="form__user-photo"
+                <img class="form__user-photo"
+                src=<%=`/img/users/${user.photo}`%> alt="User photo" />
+                <input
+                  type="file"
+                  accept="image/*"
+                  class="form__upload"
                   id="photo"
-                  src="img/user.jpg"
-                  alt="User photo"
-                /><a class="btn-update-settings-text" href=""
+                  name="photo"
+                />
+                <label for="photo">Choose new photo</label>
+                <!-- <a class="btn-update-settings-text" href=""
                   >Choose new photo</a
-                >
+                > -->
               </div>
               <div class="form__group right">
                 <button class="btn-update-settings btn--small btn--green">
@@ -112,6 +109,13 @@
       </div>
     </div>
 
+    <script src="vendor/initial.min.js"></script>
+    <script>
+      $(".profile").initial();
+    </script>
+    <script>
+      $(".profile1").initial();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="/js/userData.js"></script>
     <script src="/js/password.js"></script>

@@ -189,33 +189,32 @@ exports.resend = async (req, res, next) => {
   }
 };
 
-exports.isLoggedIn = async (req, res, next) => {
+exports.isLoggedIn = catchAsync(async (req, res, next) => {
   if (req.cookies.jwt) {
-    try {
-      const decoded = await promisify(jwt.verify)(
-        req.cookies.jwt,
-        process.env.JWT_SECRET
-      );
-      //console.log(decoded);
+    const decoded = await promisify(jwt.verify)(
+      req.cookies.jwt,
+      process.env.JWT_SECRET
+    );
+    //console.log(decoded);
 
-      const freshUser = await User.findById(decoded.id);
-      if (!freshUser) {
-        return next();
-      }
+    const freshUser = await User.findById(decoded.id).populate({
+      path: "subscribers",
+    });
 
-      if (freshUser.changedPasswordAfter(decoded.iat)) {
-        return next();
-      }
-
-      res.locals.user = freshUser;
-      return next();
-    } catch (err) {
+    if (!freshUser) {
       return next();
     }
+
+    if (freshUser.changedPasswordAfter(decoded.iat)) {
+      return next();
+    }
+
+    res.locals.user = freshUser;
+    return next();
   }
 
   next();
-};
+});
 
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {

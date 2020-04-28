@@ -2,6 +2,7 @@ const express = require("express");
 const viewController = require("../controllers/viewController");
 const authController = require("../controllers/authController");
 const router = express.Router();
+router.use(authController.isLoggedIn);
 router.get("/login", viewController.getLoginForm);
 router.get("/signup", viewController.getSignupForm);
 router.get("/verification", viewController.getVerificationForm);
@@ -21,6 +22,10 @@ router.get(
 );
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/recent", viewController.recently);
-router.get("/updateUserSettings", viewController.updateUserSettings);
+router.get(
+  "/updateUserSettings",
+  authController.protect,
+  viewController.updateUserSettings
+);
 router.get("/search", viewController.autocomplete);
 module.exports = router;

@@ -50,7 +50,7 @@ const dealSchema = new mongoose.Schema(
     },
     reportCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     saveLater: Number,
     owner: {
@@ -60,7 +60,7 @@ const dealSchema = new mongoose.Schema(
     buyNow: {
       type: Number,
     },
-    corouselImgs: Array,
+    corouselImgs: [String],
     discount: Number,
     tags: Array,
     user: {

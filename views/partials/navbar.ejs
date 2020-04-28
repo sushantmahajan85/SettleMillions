@@ -82,16 +82,15 @@
           <span class="user-nav__notification">7</span>
         </div>
 
-        <a href="/member/5e7f34cd8772f72fe44cda2a">
-          <div class="user-nav__user">
-            <% if (user) { %> <% if (user.photo) { %> <img src=<%=
-            `/img/users/${user.photo}`%> alt="User photo"
-            class="user-nav__user-photo" /> <% } else { %> <img data-name=<%=
-            user.name %> data-color="#85e0ce" class="profile
-            user-nav__user-photo " /> <% } %>
-            <span class="user-nav__user-name">NJ</span><% } else { %><% } %>
-          </div>
-        </a>
+        <div class="user-nav__user">
+          <% if (user) { %> <% if (user.photo) { %> <img
+          src=<%=`/img/users/${user.photo}` %> alt="User photo"
+          class="user-nav__user-photo" /> <% } else { %> <img
+          data-name=<%=user.name %> data-color="#85e0ce" class="profile
+          user-nav__user-photo"/> <% } %> <% } else { %>
+          <span class="user-nav__user-name">NJ</span>
+          <% } %>
+        </div>
       </nav>
     </section>
     <script src="/vendor/initial.min.js"></script>

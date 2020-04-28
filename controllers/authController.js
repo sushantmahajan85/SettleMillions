@@ -195,22 +195,26 @@ exports.isLoggedIn = catchAsync(async (req, res, next) => {
       req.cookies.jwt,
       process.env.JWT_SECRET
     );
-    console.log(decoded);
+    // console.log(decoded);
 
     const freshUser = await User.findById(decoded.id).populate({
       path: "subscribers",
     });
 
     if (!freshUser) {
+      res.locals.user = null;
       return next();
     }
 
     if (freshUser.changedPasswordAfter(decoded.iat)) {
+      res.locals.user = null;
       return next();
     }
 
     res.locals.user = freshUser;
     return next();
+  } else {
+    res.locals.user = undefined;
   }
   next();
 });

@@ -324,12 +324,18 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
 });
 
 exports.dealPage = catchAsync(async (req, res, next) => {
-  const deal = await Deal.findOneAndUpdate(
+  await Deal.findOneAndUpdate(
     { _id: req.params.dealId },
     { $inc: { views: 1 } }
-  ).populate({
-    path: "reviews",
+  );
+
+  const deal = await Deal.findById({ _id: req.params.dealId }).populate({
+    path: "reviews"
   });
+
+  if (!deal) {
+    return next(new AppError("No Deal With That Id", 404));
+  }
 
   const cookieOptions = {
     expires: new Date(
@@ -393,12 +399,8 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   //console.log(dealId);
 
-  if (!deal) {
-    return next(new AppError("No Deal With That Id", 404));
-  }
-
   res.status(200).render("deal", {
-    deal,
+    deal
   });
 });
 // function escapeRegex(text) {

@@ -52,9 +52,11 @@
       </form>
 
       <nav class="user-nav">
-        <form action="/" method="GET" class=sortx>
+        <form action="/" method="GET" class="sortx">
           <select class="sort-drop" name="sort" onchange="this.form.submit()">
-            <option selected disabled value="empty">--Choose Parameter--</option>
+            <option selected disabled value="empty"
+              >--Choose Parameter--</option
+            >
             <option value="mrp">mrp</option>
             <option value="views">views</option>
           </select>
@@ -77,15 +79,21 @@
         </div>
 
         <div class="user-nav__user">
-          <img
-            src="/img/user.jpg"
-            alt="User photo"
-            class="user-nav__user-photo"
-          />
+          <% if (user) { %> <% if (user.photo) { %> <img src=<%=
+          `/img/users/${user.photo}` %> alt="User photo"
+          class="user-nav__user-photo" /> <% } else { %> <img data-name=<%=
+          user.name %> data-color="#85e0ce" class="profile user-nav__user-photo"
+          /> <% } %> <% } else { %>
+
           <span class="user-nav__user-name">NJ</span>
+          <% } %>
         </div>
       </nav>
     </section>
+    <script src="/vendor/initial.min.js"></script>
+    <script>
+      $(".profile").initial();
+    </script>
     <!-- <script src="/vendor/jquery.bootcomplete.js"></script>
 
     <script>

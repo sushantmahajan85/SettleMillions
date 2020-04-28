@@ -85,102 +85,71 @@
       data-simplebar-timeout="10000"
       data-simplebar
     >
-      <div class="item2">
-        <h4 class="heading-normal">
-          <i class="fas fa-fire font_icon"></i> Home
-        </h4>
-      </div>
-      <div class="item2">
-        <h4 class="heading-normal">
-          <i class="fas fa-fire font_icon"></i> Trending
-        </h4>
-      </div>
-      <div class="item2">
-        <h4 class="heading-normal">
-          <i class="fas fa-fire font_icon"></i> Subscriptions
-        </h4>
-      </div>
-      <div class="item2">
-        <h4 class="heading-normal">
-          <i class="fas fa-fire font_icon"></i> Your Deals
-        </h4>
-      </div>
-      <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
-        <h4 class="heading-normal">
-          <i class="fas fa-fire font_icon"></i> Liked Deals
-        </h4>
-      </div>
+      <a href="#">
+        <div class="item2">
+          <h4 class="heading-normal">
+            <i class="fas fa-fire font_icon"></i> Home
+          </h4>
+        </div>
+      </a>
+      <a href="../trending">
+        <div class="item2">
+          <h4 class="heading-normal">
+            <i class="fas fa-fire font_icon"></i> Trending
+          </h4>
+        </div>
+      </a>
+      <a href="../subscriptions">
+        <div class="item2">
+          <h4 class="heading-normal">
+            <i class="fas fa-fire font_icon"></i> Subscriptions
+          </h4>
+        </div>
+      </a>
+      <a href="#">
+        <div class="item2">
+          <h4 class="heading-normal">
+            <i class="fas fa-fire font_icon"></i> Your Deals
+          </h4>
+        </div>
+      </a>
+      <a href="#">
+        <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
+          <h4 class="heading-normal">
+            <i class="fas fa-fire font_icon"></i> Liked Deals
+          </h4>
+        </div>
+      </a>
       <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
         Subscriptions
       </h3>
-      <div class="item2">
-        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-      </div>
-      <div class="item2">
-        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-      </div>
-      <div class="item2">
-        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-      </div>
-      <div class="item2">
-        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-      </div>
-      <div class="item2">
-        <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-        <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-      </div>
+      <% if (user) { %> <% var i =0 %> <% for( var sub of user.subscribers) { %>
+      <% i++ %>
+      <a href="">
+        <div class="item2">
+          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
+          <h4 class="heading-normal" style="margin-top:0.5rem">
+            <%= sub.subscribedUser.name %>
+          </h4>
+        </div>
+      </a>
+
+      <% if (i==5) { %> break; <% } %> <% } %> <% } %>
       <div id="hide">
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">Subscription</h4>
-        </div>
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
-          </h4>
-        </div>
+        <% var j = 0 %> <% for( var sub of user.subscribers ) { %> <% j++ %> <%
+        if (j>5) { %>
+
         <div class="item2">
           <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
           <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
+            <%= sub.subscribedUser.name %>
           </h4>
         </div>
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
-          </h4>
-        </div>
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
-          </h4>
-        </div>
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
-          </h4>
-        </div>
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
-          </h4>
-        </div>
-        <div class="item2">
-          <img src="/images/amazonOffer.jpeg" alt="hi" class="social_icons" />
-          <h4 class="heading-normal" style="margin-top:0.5rem">
-            Subscriptions
-          </h4>
-        </div>
+        <% } %> <% } %>
       </div>
+      <% var j = 0 %> <% for( var sub of user.subscribers ) { %> <% j++ %> <% if
+      (j>5) { %>
+
       <div id="showMore">
         <a
           href="#"
@@ -214,7 +183,7 @@
           <span class="heading-normal">Show Less</span>
         </a>
       </div>
-
+      <% } %> <% } %>
       <div class="item">
         <h4 class="heading-normal">More</h4>
       </div>

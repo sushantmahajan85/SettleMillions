@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       default: "Channel",
     },
-    photo: { type: String, default: "default.jpg" },
+    photo: { type: String },
     email: {
       type: String,
       required: [true, "Email is Required"],

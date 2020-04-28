@@ -150,30 +150,14 @@
   <body>
     <form id="regForm">
       <h1>Post a Deal:</h1>
-      <!-- One "tab" for each step in the form: -->
-      <!-- <div class="tab">
-            Name:
-            <p>
-              <input
-                placeholder="First name..."
-                oninput="this.className = ''"
-                name="fname"
-              />
-            </p>
-            <p>
-              <input
-                placeholder="Last name..."
-                oninput="this.className = ''"
-                name="lname"
-              />
-            </p>
-          </div> -->
+
       <div class="tab">
         Essentials:
         <p>
           <input
             placeholder="Deal Name..."
             oninput="this.className = ''"
+            id="dealName"
             name="dealName"
             class="needed"
           />
@@ -182,6 +166,7 @@
           <input
             placeholder="Link..."
             oninput="this.className = ''"
+            id="link"
             name="link"
             class="needed"
           />
@@ -190,6 +175,7 @@
           <input
             placeholder="Final Price..."
             oninput="this.className = ''"
+            id="fprice"
             name="finalPrice"
             class="needed"
           />
@@ -198,12 +184,13 @@
           <input
             placeholder="Discount in percentage..."
             oninput="this.className = ''"
+            id="percent"
             name="discount"
             class="needed"
           />
         </p>
         <p>
-          <select name="hhhh" id="" oninput="this.className = ''">
+          <select name="hhhh" id="company" oninput="this.className = ''">
             <option value="">Amazon</option>
           </select>
         </p>
@@ -231,17 +218,23 @@
         </p>
         <p>
           <input
-            placeholder="title img..."
-            oninput="this.className = ''"
-            name="nn"
+            type="file"
+            accept="image/*"
+            class="title_img"
+            id="photo"
+            name="photo"
           />
+          <label for="photo">Choose new photo</label>
         </p>
         <p>
           <input
-            placeholder="other images..."
-            oninput="this.className = ''"
-            name="yyyy"
+            type="file"
+            accept="image/*"
+            class="form__upload"
+            id="corousel"
+            name="corousel"
           />
+          <label for="photo">Choose new photo</label>
         </p>
       </div>
       <div class="tab">
@@ -250,6 +243,7 @@
           <input
             placeholder="Title Description..."
             oninput="this.className = ''"
+            id="titleDis"
             name="uname"
           />
         </p>
@@ -257,6 +251,7 @@
           <textarea
             cols="30"
             rows="10"
+            id="biggerDis"
             placeholder="Product Details..."
             oninput="this.className = ''"
             name="pword"
@@ -415,9 +410,14 @@
         x[n].className += " active";
       }
     </script>
+    <script>
+      var x = document.getElementsByClassName("tab");
+      if (x.length > 1) {
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-
-    <!-- <script src="js/newDeal.js"></script>
+    <script src="js/newDeal.js"></script>
+    <!-- 
     <script src="js/main.js"></script> -->
     <!-- 
     <script>

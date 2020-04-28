@@ -13,11 +13,11 @@
     <div class="containerSettings">
       <div class="leftbox">
         <nav>
-          <a id="profile" class="active"><i class="fa fa-user"></i></a>
+          <!-- <a id="profile" class="active"><i class="fa fa-user"></i></a>
           <a id="payment"><i class="fa fa-credit-card"></i></a>
           <a id="subscription"><i class="fa fa-tv"></i></a>
           <a id="privacy"><i class="fa fa-tasks"></i></a>
-          <a id="settings"><i class="fa fa-cog"></i></a>
+          <a id="settings"><i class="fa fa-cog"></i></a> -->
         </nav>
       </div>
       <div class="rightbox">
@@ -35,6 +35,8 @@
                 ><input class="form__input" id="email" type="email" value=<%=
                 user.email %> />
               </div>
+              <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
+              class="profile1 " /> -->
               <div class="form__group form__photo-upload">
                 <img class="form__user-photo"
                 src=<%=`/img/users/${user.photo}`%> alt="User photo" />
@@ -107,6 +109,13 @@
       </div>
     </div>
 
+    <script src="vendor/initial.min.js"></script>
+    <script>
+      $(".profile").initial();
+    </script>
+    <script>
+      $(".profile1").initial();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="/js/userData.js"></script>
     <script src="/js/password.js"></script>

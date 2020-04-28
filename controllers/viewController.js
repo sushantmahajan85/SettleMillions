@@ -256,6 +256,9 @@ exports.mainPage = catchAsync(async (req, res) => {
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
     ).sort({ score: { $meta: "textScore" } });
+
+    // const user = await User.findById(req.user.id);
+    // console.log(user);
     // const regex = new RegExp(escapeRegex(req.query.search), "gi");
     // var result = [];
     // await Deal.find({
@@ -287,7 +290,11 @@ exports.mainPage = catchAsync(async (req, res) => {
       sortBy = "" + req.query.sort;
       order = -1;
     }
+    // const user = await User.findById(req.user);
     const deals = await Deal.find().sort([[`${sortBy}`, order]]);
+    // const xyz = await User.findById(req.user).populate({
+    //   path: "subscribers",
+    // });
     res.status(200).render("main", { deals, recommendedDeals });
   }
 });
@@ -309,7 +316,10 @@ exports.recently = catchAsync(async (req, res) => {
 });
 
 exports.updateUserSettings = catchAsync(async (req, res) => {
-  const user = await User.findById(req.user.id);
+  const user = await User.findById(req.user);
+  // const xyz = await User.findById(req.user).populate({
+  //   path: "subscribers",
+  // });
   console.log(user);
   res.status(200).render("updateSettings", { user });
 });

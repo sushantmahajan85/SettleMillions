@@ -294,7 +294,9 @@ exports.mainPage = catchAsync(async (req, res) => {
     const deals = await Deal.find().sort([[`${sortBy}`, order]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);
 
-    res.status(200).render("main", { deals, recommendedDeals, liveDeals, cooCount });
+    res
+      .status(200)
+      .render("main", { deals, recommendedDeals, liveDeals, cooCount });
   }
 });
 
@@ -324,6 +326,7 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
 });
 
 exports.dealPage = catchAsync(async (req, res, next) => {
+  console.log(req.cookies);
   const deal = await Deal.findOneAndUpdate(
     { _id: req.params.dealId },
     { $inc: { views: 1 } }

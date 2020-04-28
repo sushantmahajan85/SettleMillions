@@ -125,7 +125,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span><% var now = new Date(Date.now()); %>
+                                            <span><%= deal.views %> views</span><% var now = new Date(Date.now()); %>
                                             <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
                                         </div>
                                     </li>
@@ -969,6 +969,13 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
         </footer>
     </div>
+    <script>
+    function kFormatter(num) {
+        return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+        
+    } 
+</script> 
+    
     <script>
         $('.main-content .owl-carousel').owlCarousel({
 

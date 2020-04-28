@@ -233,7 +233,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             <% for(var deal of recommendedDeals) { %>
             <% i++; %>
 
-            <% if(i > 5) {%>
+            <% if(i > cooCount) {%>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
                     <div class="card__face">
@@ -293,7 +293,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             </a>
 
             <% } %>
-            <% if (i === 9){break;}%>
+            <% if (i === (cooCount+4)){break;}%>
             <% } %>
         </div>
 
@@ -302,7 +302,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             <% for(var deal of recommendedDeals) { %>
             <% j++; %>
 
-            <% if(j > 9) {%>
+            <% if(j > (cooCount+4)) {%>
             <div class="card">
                 <div class="card__face">
                     <div class="card__picture" data-pause="true" data-interval="1000">

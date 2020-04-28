@@ -195,7 +195,7 @@ exports.isLoggedIn = catchAsync(async (req, res, next) => {
       req.cookies.jwt,
       process.env.JWT_SECRET
     );
-    //console.log(decoded);
+    console.log(decoded);
 
     const freshUser = await User.findById(decoded.id).populate({
       path: "subscribers",
@@ -212,7 +212,6 @@ exports.isLoggedIn = catchAsync(async (req, res, next) => {
     res.locals.user = freshUser;
     return next();
   }
-
   next();
 });
 

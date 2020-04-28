@@ -362,7 +362,6 @@ a.show-hide-link {
   flex: 0 0 25%;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: space-evenly;
   padding-top: 8rem; }
 
 .searchpage {
@@ -473,21 +472,27 @@ img {
 #hideTrending {
   display: none; }
 
+#hideRecommended {
+  display: none; }
+
+#hideLive {
+  display: none; }
+
 .show-hide-btn {
   font-size: 1.1rem;
   text-decoration: none !important; }
 
-#showMoreBtn {
+#showMoreT {
   margin: 0;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #d4d3d3;
   cursor: pointer;
   margin-bottom: 1.6rem; }
-  #showMoreBtn:hover {
+  #showMoreT:hover {
     background-color: #d4d3d3; }
 
-#showLessBtn {
+#showLessT {
   margin: 0;
   width: 100%;
   text-align: center;
@@ -495,7 +500,49 @@ img {
   cursor: pointer;
   display: none;
   margin-bottom: 1.6rem; }
-  #showLessBtn:hover {
+  #showLessT:hover {
+    background-color: #d4d3d3; }
+
+#showMoreR {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3;
+  cursor: pointer;
+  margin-bottom: 1.6rem; }
+  #showMoreR:hover {
+    background-color: #d4d3d3; }
+
+#showLessR {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3;
+  cursor: pointer;
+  display: none;
+  margin-bottom: 1.6rem; }
+  #showLessR:hover {
+    background-color: #d4d3d3; }
+
+#showMoreL {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3;
+  cursor: pointer;
+  margin-bottom: 1.6rem; }
+  #showMoreL:hover {
+    background-color: #d4d3d3; }
+
+#showLessL {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3;
+  cursor: pointer;
+  display: none;
+  margin-bottom: 1.6rem; }
+  #showLessL:hover {
     background-color: #d4d3d3; }
 
 .news {
@@ -1176,6 +1223,8 @@ figure {
   width: 26rem;
   z-index: 1;
   margin: 0 0 4rem 0rem; }
+  .card:not(:nth-child(8n)) {
+    margin-right: 5rem; }
 
 .card__face {
   height: inherit;

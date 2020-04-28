@@ -14,9 +14,7 @@ a.show-hide-link{
    flex: 0 0 25%;
    flex-wrap: wrap;
    align-content: center;
-   justify-content: space-evenly;
-   padding-top: 8rem;
-   
+	padding-top: 8rem;   
 }
 
 .searchpage{
@@ -139,12 +137,20 @@ img {vertical-align: middle;}
    display: none;
 }
 
+#hideRecommended{
+   display: none;
+}
+
+#hideLive{
+   display: none;
+}
+
 .show-hide-btn{
    font-size: 1.1rem;
    text-decoration: none !important;
 }
 
-#showMoreBtn{
+#showMoreT{
    margin: 0;
    width: 100%;
    text-align: center;
@@ -157,7 +163,61 @@ img {vertical-align: middle;}
    }
 }
 
-#showLessBtn{
+#showLessT{
+   margin: 0;
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgb(212, 211, 211);
+   cursor: pointer;
+   display: none;
+   margin-bottom: 1.6rem;
+
+   &:hover{
+      background-color:  rgb(212, 211, 211);
+   }
+}
+
+#showMoreR{ 
+   margin: 0;
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgb(212, 211, 211);
+   cursor: pointer;
+   margin-bottom: 1.6rem;
+
+   &:hover{
+      background-color:  rgb(212, 211, 211);
+   }
+}
+
+#showLessR{
+   margin: 0;
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgb(212, 211, 211);
+   cursor: pointer;
+   display: none;
+   margin-bottom: 1.6rem;
+
+   &:hover{
+      background-color:  rgb(212, 211, 211);
+   }
+}
+
+#showMoreL{
+   margin: 0;
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid rgb(212, 211, 211);
+   cursor: pointer;
+   margin-bottom: 1.6rem;
+
+   &:hover{
+      background-color:  rgb(212, 211, 211);
+   }
+}
+
+#showLessL{
    margin: 0;
    width: 100%;
    text-align: center;

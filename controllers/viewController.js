@@ -288,7 +288,9 @@ exports.mainPage = catchAsync(async (req, res) => {
       order = -1;
     }
     const deals = await Deal.find().sort([[`${sortBy}`, order]]);
-    res.status(200).render("main", { deals, recommendedDeals });
+    const liveDeals = await Deal.find().sort([["time", -1]]);
+
+    res.status(200).render("main", { deals, recommendedDeals, liveDeals });
   }
 });
 

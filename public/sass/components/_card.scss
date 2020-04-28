@@ -10,9 +10,10 @@
   width: 26rem;
   z-index: 1;
   margin: 0 0 4rem 0rem;
-  //    &:not(:nth-child(4n)) {
-  //       margin-right: 5rem;
-  //       }
+     
+  &:not(:nth-child(8n)) {
+        margin-right: 5rem;
+  }
 }
 
 .card__face {

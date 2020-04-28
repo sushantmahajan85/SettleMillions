@@ -202,15 +202,19 @@ exports.isLoggedIn = catchAsync(async (req, res, next) => {
     });
 
     if (!freshUser) {
+      res.locals.user = null;
       return next();
     }
 
     if (freshUser.changedPasswordAfter(decoded.iat)) {
+      res.locals.user = null;
       return next();
     }
 
     res.locals.user = freshUser;
     return next();
+  }else{
+    res.locals.user = null;
   }
 
   next();

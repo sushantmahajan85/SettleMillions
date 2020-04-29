@@ -130,6 +130,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
                                         <div style="display: inline-block">
+                                            <% var timu = deal.time.toLocaleString('en-us',{year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'}) %> 
                                             <% if (deal.views > 999) { %>
  
 
@@ -139,7 +140,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                             <% } %>
                                             <% var now = new Date(Date.now()); %>
                                             <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                          <span> <time class="timeout" datetime=<%=` ${deal.time.toLocaleString('en-us',{year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} haha `%> ></time></span>
+
+                                          <span> <time class="timeout" datetime=<%=`${timu}`%> ></time></span>
                                         </div>
                                     </li>
                                 </ul>

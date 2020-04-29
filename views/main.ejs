@@ -139,9 +139,10 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                                 <span><%=`${deal.views} views`%></span>
                                             <% } %>
                                             <% var now = new Date(Date.now()); %>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            <!-- <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span> -->
 
                                           <span> <time class="timeout" datetime=<%=`${timu}`%> ></time></span>
+                                          <span> <time class="timeout" datetime="4/29/2020 01:23:12" ></time></span>
                                         </div>
                                     </li>
                                 </ul>
@@ -989,6 +990,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
    <script>
        $(document).ready(function(){
            $('time.timeout').timeago();
+           $.timeago.settings.allowPast = false;
+       $.timeago.settings.strings.past = "time has elapsed";
        });
    </script> 
     <script>

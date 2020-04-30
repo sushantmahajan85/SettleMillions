@@ -2,7 +2,7 @@ const Deal = require("./../schema/models/dealModel");
 const Subscriber = require("./../schema/models/subscriberModel");
 const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
-const appError = require("./../utils/appError");
+const AppError = require("./../utils/appError");
 const exec = require("child_process").exec;
 const url = require("url");
 let cookieCount = 0;
@@ -338,8 +338,18 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   // var url_array = full_url.split("/"); // Split the string into an array with / as separator
   // var last_segment = url_array[url_array.length - 1]; // Get the last part of the array (-1)
   // var last = parseInt(last_segment);
-  const subModel = await Subscriber.find({ user: req.params.sellerId });
-  console.log(subModel);
+  const xyz = await User.findById(req.logged.id);
+  console.log(xyz);
+  if (xyz) {
+    const subModel = await Subscriber.findOne({
+      subscribedUser: req.params.sellerId,
+      user: xyz._id,
+    });
+    console.log(subModel);
+    res.locals.logged = subModel;
+  } else {
+    res.locals.logged = null;
+  }
 
   // console.log(submodel);
   // if (!subModel) {
@@ -420,7 +430,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   res.status(200).render("deal", {
     deal,
-    subModel,
   });
 });
 // function escapeRegex(text) {

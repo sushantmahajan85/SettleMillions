@@ -155,7 +155,7 @@
         Essentials:
         <p>
           <input
-            placeholder="Deal Name..."
+            placeholder="Deal Name...(Required)"
             oninput="this.className = ''"
             id="dealName"
             name="dealName"
@@ -164,7 +164,7 @@
         </p>
         <p>
           <input
-            placeholder="Link..."
+            placeholder="Link...(Required)"
             oninput="this.className = ''"
             id="link"
             name="link"
@@ -173,7 +173,7 @@
         </p>
         <p>
           <input
-            placeholder="Final Price..."
+            placeholder="Final Price...(Required)"
             oninput="this.className = ''"
             id="fprice"
             name="finalPrice"
@@ -182,7 +182,7 @@
         </p>
         <p>
           <input
-            placeholder="Discount in percentage..."
+            placeholder="Discount in percentage...(Required)"
             oninput="this.className = ''"
             id="percent"
             name="discount"
@@ -205,7 +205,7 @@
             class="needed"
             onchange="makeSubmenu(this.value)"
           >
-            <option value="" disabled selected>Choose Category</option>
+            <option value="" disabled selected>Choose Category (Required)</option>
             <option>Mobile</option>
             <option>Clothes</option>
           </select>
@@ -276,6 +276,9 @@
           <button type="button" id="nextBtn" onclick="nextPrev(1)">
             Next
           </button>
+          <button type="submit" style="display: none;" id="submitBtn" onclick="nextPrev(1)">
+            Submit
+          </button>
         </div>
       </div>
       <!-- Circles which indicates the steps of the form: -->
@@ -341,9 +344,11 @@
           document.getElementById("prevBtn").style.display = "inline";
         }
         if (n == x.length - 1) {
-          document.getElementById("nextBtn").innerHTML = "Submit";
+          document.getElementById("submitBtn").style.display = "inline";
+          document.getElementById("nextBtn").style.display = "none";
         } else {
-          document.getElementById("nextBtn").innerHTML = "Next";
+          document.getElementById("submitBtn").style.display = "none";
+          document.getElementById("nextBtn").style.display = "inline";
         }
         //... and run a function that will display the correct step indicator:
         fixStepIndicator(n);
@@ -364,7 +369,9 @@
         // if you have reached the end of the form...
         if (currentTab >= x.length) {
           // ... the form gets submitted:
-          document.getElementById("regForm").submit();
+          // document.getElementById("regForm").submit((e) => {
+          //   e.preventDefault();
+          // });
           return false;
         }
         // Otherwise, display the correct tab:

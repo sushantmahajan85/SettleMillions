@@ -59,11 +59,13 @@ exports.uploadDealImages = upload.fields([
 exports.resizeDealImages = catchAsync(async (req, res, next) => {
   console.log(req.files);
 
-  //   if (!req.files.titleImg || !req.files.corouselImgs) {
-  //     return next();
-  //   }
+    if (!req.files || !req.files.titleImg || !req.files.corouselImgs) {
+      return next();
+    }
 
   //   const ext = req.file.mimetype.split("/")[1];
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
   req.body.titleImg = `deal-${req.user.id}-${Date.now()}-title.jpeg`;
 
   await sharp(req.files.titleImg[0].buffer)

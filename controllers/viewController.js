@@ -1,5 +1,6 @@
 const Deal = require("./../schema/models/dealModel");
 const Subscriber = require("./../schema/models/subscriberModel");
+const LikedDeal = require("./../schema/models/likedDealModel");
 const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const AppError = require("./../utils/appError");
@@ -339,16 +340,27 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   // var last_segment = url_array[url_array.length - 1]; // Get the last part of the array (-1)
   // var last = parseInt(last_segment);
   const xyz = await User.findById(req.logged.id);
-  console.log(xyz);
+  // console.log(xyz);
+  if (xyz) {
+    const likeModel = await LikedDeal.findOneAndDelete({
+      deal: req.params.dealId,
+      user: xyz._id,
+    });
+    console.log(likeModel);
+    res.locals.like = likeModel;
+  } else {
+    res.locals.like = null;
+  }
+
   if (xyz) {
     const subModel = await Subscriber.findOneAndDelete({
       subscribedUser: req.params.sellerId,
       user: xyz._id,
     });
-    console.log(subModel);
-    res.locals.logged = subModel;
+    // console.log(subModel);
+    res.locals.log = subModel;
   } else {
-    res.locals.logged = null;
+    res.locals.log = null;
   }
 
   // console.log(submodel);

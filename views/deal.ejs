@@ -142,15 +142,21 @@
           </div>
           <div class="deal-deets_buttons">
             <a href="<%= deal.affiliateLink %>" class="deal-deets_buy">Buy now</a>
-            <a href="" class="deal-deets_save" id="like_deal">Save for later</a>
-          </div>
+            <% if (like) { %>
+             
+            <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
+            <% } else { %>
+              <a href="" class="deal-deets_save" id="like_deal">Save for later</a>
+
+            <% } %>
+            </div>
           <div class="deal-deets_vt">
             <p class="deal-deets_views"><%= deal.views %> k views</p>
             <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
           </div>
           <div class="deal-deets_buttons">
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
-            <% if (logged) { %>
+            <% if (log) { %>
               <a href="" class="deal-deets_subs" id="unsubscribe_btn">un</a>
               <% } else { %>
             <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>

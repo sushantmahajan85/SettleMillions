@@ -4,20 +4,21 @@ const dealSchema = new mongoose.Schema(
   {
     category: {
       type: String,
-      required: true,
+      required: true
     },
     titleImg: {
       type: String,
-      default: "corona.jpg",
+      default: "corona.jpg"
     },
 
     affiliateLink: {
       type: String,
       required: true,
+      unique: true
     },
     views: {
       type: Number,
-      default: 0,
+      default: 0
       // validate: {
       //   validator: function kFormatter(el) {
       //     return Math.abs(el) > 999
@@ -29,24 +30,24 @@ const dealSchema = new mongoose.Schema(
     },
     time: {
       type: Date,
-      default: Date.now(),
+      default: Date.now()
     },
     titleDis: {
       type: String,
       maxlength: [30, "exceeding the word creteria"],
-      default: "Limited offer",
+      default: "Limited offer"
     },
     biggerDis: {
       type: String,
-      maxlength: 400,
+      maxlength: 400
     },
     mrp: {
       type: Number,
-      required: true,
+      required: true
     },
     dealPrice: {
       type: Number,
-      required: true,
+      required: true
     },
     dealName: {
       type: String,
@@ -54,19 +55,19 @@ const dealSchema = new mongoose.Schema(
     },
     company: {
       type: String,
-      required: true,
+      required: true
     },
     reportCount: {
       type: Number,
-      default: 0,
+      default: 0
     },
     saveLater: Number,
     owner: {
       type: String,
-      default: "Couper Deals",
+      default: "Couper Deals"
     },
     buyNow: {
-      type: Number,
+      type: Number
     },
     corouselImgs: [String],
     discount: Number,
@@ -74,7 +75,7 @@ const dealSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
-      required: true,
+      required: true
     },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
@@ -84,18 +85,6 @@ dealSchema.virtual("reviews", {
   ref: "Review",
   foreignField: "deal",
   localField: "_id",
-});
-dealSchema.post("save", async function() {
-  function kFormatter(el) {
-    return Math.abs(el) > 999
-      ? Math.sign(el) * (Math.abs(el) / 1000).toFixed(1) + "k"
-      : Math.sign(el) * Math.abs(el);
-  }
-  console.log(kFormatter(this.views));
-  const vo = kFormatter(this.views);
-  console.log(vo);
-  this.views = vo;
-  console.log(this.views);
 });
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

@@ -84,6 +84,10 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
             } 
             var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
             %> 
             <% function timeSince(date) {
 
@@ -161,20 +165,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
                                         <div style="display: inline-block">
-                                            <% var timu = deal.time.toLocaleString('en-IN',{year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'}) %> 
+                                            
                                             <% if (deal.views > 999) { %>
- 
-
-                                            <span><%=`${vui} views`%></span>
+                                                <span><%=`${vui} views`%></span>
                                             <% } else { %>
                                                 <span><%=`${deal.views} views`%></span>
                                             <% } %>
-                                            <% var now = new Date(Date.now()); %>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                            <!-- <span style="margin-left: 0.7rem;"><%= `${titu}`%></span> -->
 
-                                          <span> <time class="timeout" datetime=<%=`${timu}`%> ></time></span>
-                                          <span> <time class="timeout" datetime="4/29/2020 01:59:49 pm" ></time></span>
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -206,7 +211,17 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             <% j++; %>
 
             <% if(j > 8) {%>
-            <div class="card">
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %> 
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
                 <div class="card__face">
                     <div class="card__picture" data-pause="true" data-interval="1000">
 
@@ -243,9 +258,22 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 <li style="font-weight: 400;">
                                     <div style="display: inline-block"><%= deal.owner %> </div><br>
                                     <div style="display: inline-block">
-                                        <span><%= deal.views %>k views</span>
-                                        <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                    </div>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
                                 </li>
                             </ul>
                         </div>
@@ -283,145 +311,15 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
             <% if(i > cooCount) {%>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
-                <div class="card">
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
+                <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
 
-
-                            <div class="carousel-item active" >
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" >
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" >
-                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
-                                        <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <form action="/" method="GET" class=reportx>
-                                <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
-                                    <option selected disabled value="empty"></option>
-                                    <option value=<%= `${deal._id}/report` %>>Report</option>
-                                    <option value=<%= `${deal._id}/like` %>>Like</option>
-                                </select>
-                            </form>
-
-                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
-                            
-                        </div>
-
-                    </div>
-                </div>
-            </a>
-
-            <% } %>
-            <% if (i === (cooCount+4)){break;}%>
-            <% } %>
-        </div>
-
-        <div id="hideRecommended" class="trending">
-            <% var j = 0; %>
-            <% for(var deal of recommendedDeals) { %>
-            <% j++; %>
-
-            <% if(j > (cooCount+4)) {%>
-            <div class="card">
-                <div class="card__face">
-                    <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                        <div class="carousel-item active" style="background-color: white !important;">
-
-                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                class="deal-photo">
-
-                        </div>
-                        <div class="carousel-item" style="background-color: white !important;">
-                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                alt="Deal Photo" class="deal-photo">
-
-                        </div>
-                        <div class="carousel-item" style="background-color: white !important;">
-                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
-
-                        </div>
-                    </div>
-
-                    <div class="card-text">
-
-                        <h4 class="card__head">
-                            <%= deal.dealName %> 
-                        </h4>
-                        <div class="card__details">
-                            <ul>
-                                <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                    class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                <li style="font-weight: 400;">
-                                    <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                    <div style="display: inline-block">
-                                        <span><%= deal.views %>k views</span>
-                                        <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <% } %>
-            <% } %>
-        </div>
-
-        <div id="showMoreR">
-            <a href="#recommended" class="show-hide-link" id="more" onclick="recMoreLess()">
-                <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                <span class="heading-normal">Show More</span>
-            </a>
-        </div>
-        <div id="showLessR">
-            <a href="#hideRecommended" class="show-hide-link" id="more" onclick="recMoreLess()">
-                <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                <span class="heading-normal">Show Less</span>
-            </a>
-        </div>
-
-        <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">LIVE</div>
-        <hr>
-
-        <div id="live" class="trending">
-            
-            <%  var i = 0; %>
-            <% for(var deal of liveDeals) { %>
-            <% i++; %>
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %> 
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
                     <div class="card__face">
@@ -457,8 +355,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -480,17 +391,28 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                 </div>
             </a>
 
-            <% if (i === 4){break;}%>
+            <% } %>
+            <% if (i === (cooCount+4)){break;}%>
             <% } %>
         </div>
 
-        <div id="hideLive" class="trending">
+        <div id="hideRecommended" class="trending">
             <% var j = 0; %>
-            <% for(var deal of liveDeals) { %>
+            <% for(var deal of recommendedDeals) { %>
             <% j++; %>
 
-            <% if(j > 4) {%>
-            <div class="card">
+            <% if(j > (cooCount+4)) {%>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %> 
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
                 <div class="card__face">
                     <div class="card__picture" data-pause="true" data-interval="1000">
 
@@ -524,9 +446,207 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 <li style="font-weight: 400;">
                                     <div style="display: inline-block"><%= deal.owner %> </div><br>
                                     <div style="display: inline-block">
-                                        <span><%= deal.views %>k views</span>
-                                        <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                    </div>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <% } %>
+            <% } %>
+        </div>
+
+        <div id="showMoreR">
+            <a href="#recommended" class="show-hide-link" id="more" onclick="recMoreLess()">
+                <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">Show More</span>
+            </a>
+        </div>
+        <div id="showLessR">
+            <a href="#hideRecommended" class="show-hide-link" id="more" onclick="recMoreLess()">
+                <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">Show Less</span>
+            </a>
+        </div>
+
+        <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">LIVE</div>
+        <hr>
+
+        <div id="live" class="trending">
+            
+            <%  var i = 0; %>
+            <% for(var deal of liveDeals) { %>
+            <% i++; %>
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %> 
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
+
+
+                            <div class="carousel-item active" >
+
+                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                    class="deal-photo">
+
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                    alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                        </div>
+
+                        <div class="card-text">
+
+                            <h4 class="card__head">
+                                <%= deal.dealName %> 
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                    <li style="font-weight: 400;">
+                                        <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br>
+                                        <div style="display: inline-block">
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <form action="/" method="GET" class=reportx>
+                                <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
+                                    <option selected disabled value="empty"></option>
+                                    <option value=<%= `${deal._id}/report` %>>Report</option>
+                                    <option value=<%= `${deal._id}/like` %>>Like</option>
+                                </select>
+                            </form>
+
+                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            <% if (i === 4){break;}%>
+            <% } %>
+        </div>
+
+        <div id="hideLive" class="trending">
+            <% var j = 0; %>
+            <% for(var deal of liveDeals) { %>
+            <% j++; %>
+
+            <% if(j > 4) {%>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %> 
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                <div class="card__face">
+                    <div class="card__picture" data-pause="true" data-interval="1000">
+
+
+                        <div class="carousel-item active" style="background-color: white !important;">
+
+                            <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                                class="deal-photo">
+
+                        </div>
+                        <div class="carousel-item" style="background-color: white !important;">
+                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                        <div class="carousel-item" style="background-color: white !important;">
+                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                    </div>
+
+                    <div class="card-text">
+
+                        <h4 class="card__head">
+                            <%= deal.dealName %> 
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
+                                    class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
+                                <li style="font-weight: 400;">
+                                    <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                    <div style="display: inline-block">
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
                                 </li>
                             </ul>
                         </div>
@@ -611,8 +731,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -658,8 +791,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -705,8 +851,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -752,8 +911,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -799,8 +971,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -846,8 +1031,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -893,8 +1091,21 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -940,9 +1151,27 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
+<<<<<<< HEAD
+                                            
+                                            <% if (deal.views > 999) { %>
+                                                <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                                <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+=======
                                             <span><%= deal.views %>k views</span>
                                             <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
                                             <span> <%=  %>  </span>
+>>>>>>> 2585170f01eb6402ea3475adddc76bddb2ef3dbd
                                         </div>
                                     </li>
                                 </ul>

@@ -1,9 +1,15 @@
-const passvaluec = async (form) => {
+const passvaluec = async (dealName, affiliateLink, category, mrp, dealPrice) => {
   try {
     const result = await axios({
       method: "POST",
       url: "/api/v1/deals",
-      data,
+      data: {
+        dealName,
+        affiliateLink,
+        category,
+        mrp,
+        dealPrice
+      }
       //   dealName,
       //   affiliateLink,
       //   category,
@@ -24,28 +30,39 @@ const passvaluec = async (form) => {
 
 document.getElementById("regForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  const form = new FormData();
-  form.append("dealName", document.getElementById("dealName").value);
-  form.append("link", document.getElementById("link").value);
-  form.append("fprice", document.getElementById("fprice").value);
-  form.append("percent", document.getElementById("percent").value);
-  form.append("category", document.getElementById("category").value);
-  form.append(
-    "categorySelect",
-    document.getElementById("categorySelect").value
-  );
-  form.append("photo", document.getElementById("photo").files[0]);
-  form.append("corousel", document.getElementById("corousel").files[0]);
-  form.append("titleDis", document.getElementById("titleDis").value);
-  form.append("biggerDis", document.getElementById("biggerDis").value);
-  form.append("tags", document.getElementById("tags").value);
+  // let form = new FormData();
+  // form.append("dealName", document.getElementById("dealName").value);
+  // form.append("affiliateLink", document.getElementById("link").value);
+  // form.append("dealPrice", document.getElementById("fprice").value);
+  // form.append("mrp", document.getElementById("percent").value);
+  // form.append("category", document.getElementById("category").value);
+  // form.append(
+  //   "categorySelect",
+  //   document.getElementById("categorySelect").value
+  // );
+  // form.append("photo", document.getElementById("photo").files[0]);
+  // form.append("corousel", document.getElementById("corousel").files[0]);
+  // form.append("titleDis", document.getElementById("titleDis").value);
+  // form.append("biggerDis", document.getElementById("biggerDis").value);
+  // form.append("tags", document.getElementById("tags").value);
 
-  //   const dealName = document.getElementById("dealName").value;
-  //   const affiliateLink = document.getElementById("affiliateLink").value;
-  //   const category = document.getElementById("category").value;
-  //   const company = document.getElementById("company").value;
-  //   const mrp = document.getElementById("mrp").value;
-  //   const dealPrice = document.getElementById("dealPrice").value;
-  //   passvaluec(dealName, affiliateLink, category, company, mrp, dealPrice);
-  passvaluec(form);
+  // passvaluec(form);
+
+
+
+
+
+
+
+
+
+
+
+    const dealName = document.getElementById("dealName").value;
+    const affiliateLink = document.getElementById("link").value;
+    const category = document.getElementById("category").value;
+    // const company = document.getElementById("company").value;
+    const mrp = document.getElementById("percent").value;
+    const dealPrice = document.getElementById("fprice").value;
+    passvaluec(dealName, affiliateLink, category, mrp, dealPrice);
 });

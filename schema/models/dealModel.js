@@ -54,8 +54,7 @@ const dealSchema = new mongoose.Schema(
       required: true,
     },
     company: {
-      type: String,
-      required: true
+      type: String
     },
     reportCount: {
       type: Number,
@@ -75,7 +74,6 @@ const dealSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
-      required: true
     },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }

@@ -49,7 +49,7 @@
       </div>
       <div class="page-content">
         <div id="trending" class="trending">
-          <% for( let i = 0; i < 8; i++ ) { %>
+          <% for(var deal of deals) { %>
 
           <div class="big-deal">
             <div class="big-deal_img" data-pause="true" data-interval="1000">
@@ -86,14 +86,14 @@
             </div>
             <div class="big-deal_content">
               <div class="big-deal_name">
-                <h4>Vivo Z1Pro (Sonic Black, 128 GB) (6 GB RAM)</h4>
+                <h4><%= deal.dealName %></h4>
               </div>
 
               <div class="big-deal_buttons">
-                <a href="" class="big-deal_user">Couper Deals</a>
+                <a href="" class="big-deal_user"><%= deal.owner %></a>
               </div>
               <div class="big-deal_vt">
-                <p class="big-deal_views">34k views</p>
+                <p class="big-deal_views"><%= `${deal.views} views` %>  </p>
                 <p class="big-deal_time">4 days ago</p>
               </div>
 
@@ -119,6 +119,21 @@
 
                 <h3 class="big-deal_percent">70% OFF</h3>
               </div>
+              <form action="/" method="GET" class=reportx>
+                <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
+                    <option selected disabled value="empty"></option>
+                    <option value=<%= `${deal._id}/report` %>>Report</option>
+                    <option value=<%= `${deal._id}/like` %>>Like</option>
+                    <% if (user) { %>
+                      <% if (user.id == deal.user) { %>
+                        <option value=<%= `${deal._id}/like` %>>Edit</option>
+                        <option value=<%= `${deal._id}/report` %>>Delete</option>
+                        <% } %>
+                    <% } %>
+                   
+                </select>
+            </form>
+
             </div>
           </div>
           <% } %>

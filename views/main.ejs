@@ -1151,7 +1151,6 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                     <li style="font-weight: 400;">
                                         <div style="display: inline-block"><%= deal.owner %> </div><br>
                                         <div style="display: inline-block">
-<<<<<<< HEAD
                                             
                                             <% if (deal.views > 999) { %>
                                                 <span><%=`${vui} views`%></span>
@@ -1167,11 +1166,6 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                                 <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
                                             <% } %>
 
-=======
-                                            <span><%= deal.views %>k views</span>
-                                            <span style="margin-left: 0.7rem;"><%= Math.round((now.getTime() - deal.time.getTime())/360000)/10 %> hr ago</span>
-                                            <span> <%=  %>  </span>
->>>>>>> 2585170f01eb6402ea3475adddc76bddb2ef3dbd
                                         </div>
                                     </li>
                                 </ul>
@@ -1247,50 +1241,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
         </footer>
     </div>
-    <script>
-        function timeSince(date) {
 
-            var seconds = Math.floor((new Date() - date) / 1000);
-          
-            var interval = Math.floor(seconds / 31536000);
-          
-            if (interval > 1) {
-              return interval + " years";
-            }
-            interval = Math.floor(seconds / 2592000);
-            if (interval > 1) {
-              return interval + " months";
-            }
-            interval = Math.floor(seconds / 86400);
-            if (interval > 1) {
-              return interval + " days";
-            }
-            interval = Math.floor(seconds / 3600);
-            if (interval > 1) {
-              return interval + " hours";
-            }
-            interval = Math.floor(seconds / 60);
-            if (interval > 1) {
-              return interval + " minutes";
-            }
-            return Math.floor(seconds) + " seconds";
-          }
-          var aDay = 24*60*60*1000;
-          console.log(timeSince(new Date(Date.now()-aDay)));
-          console.log(timeSince(new Date(Date.now()-aDay*2)));
-    </script>
-   <script src="/vendor/jquery.timeago.js"></script>
-   <script>
-       $(document).ready(function(){
-           $('time.timeout').timeago();
-           $.timeago.settings.allowPast = true;
-           $.timeago.settings.allowFuture = false;
-       $.timeago.settings.strings = {
-        suffixAgo: null,
-        suffixFromNow:null,
-    };
-       });
-   </script> 
     <script>
         $('.main-content .owl-carousel').owlCarousel({
 

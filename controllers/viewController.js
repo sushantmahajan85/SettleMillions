@@ -129,6 +129,10 @@ exports.mainPage = catchAsync(async (req, res) => {
         { $inc: { reportCount: 1 } }
       );
     }
+
+    if (joChahiye[1] == "delete") {
+      await Deal.findOneAndDelete({ _id: joChahiye[0] });
+    }
   }
 
   let cooCount = 0;
@@ -303,6 +307,22 @@ exports.mainPage = catchAsync(async (req, res) => {
 });
 
 exports.getMemberData = catchAsync(async (req, res) => {
+  if (req.query.dealOps) {
+    let joChahiye = req.query.dealOps.split("/");
+    console.log(joChahiye[1]);
+
+    if (joChahiye[1] == "report") {
+      await Deal.findOneAndUpdate(
+        { _id: joChahiye[0] },
+        { $inc: { reportCount: 1 } }
+      );
+    }
+
+    if (joChahiye[1] == "delete") {
+      await Deal.findOneAndDelete({ _id: joChahiye[0] });
+    }
+  }
+
   const deals = await Deal.find({ user: req.params.id });
 
   res.status(200).render("members", {

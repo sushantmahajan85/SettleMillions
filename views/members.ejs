@@ -126,8 +126,8 @@
                     <option value=<%= `${deal._id}/like` %>>Like</option>
                     <% if (user) { %>
                       <% if (user.id == deal.user) { %>
-                        <option value=<%= `${deal._id}/like` %>>Edit</option>
-                        <option value=<%= `${deal._id}/report` %>>Delete</option>
+                        <option value=<%= `${deal._id}/edit` %>>Edit</option>
+                        <option value=<%= `${deal._id}/delete` %>>Delete</option>
                         <% } %>
                     <% } %>
                    
@@ -195,6 +195,14 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
+    <script>
+      function dealOperations(el){
+          el.form.submit();
+          window.setTimeout(() => {
+                  location.assign('/');
+          }, 100);
+      }
+  </script>
     <script src="/js/subscribe.js"></script>
   </body>
 </html>

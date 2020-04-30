@@ -150,10 +150,11 @@
           </div>
           <div class="deal-deets_buttons">
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
-            <% if (user == subModel.subscribedUser) { %>
+            <% if (user._id === subModel[0].user._id) { %>
             <a href="" class="deal-deets_subs" id="subscribe_btn" style="color: aqua !important;">UNSubscribe</a>
-            <% } %> 
+            <% } else {%> 
             <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
+            <% } %>
           </div>
           <div class="deal-deets_paragraph">
             <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3>

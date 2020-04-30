@@ -338,7 +338,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   // var url_array = full_url.split("/"); // Split the string into an array with / as separator
   // var last_segment = url_array[url_array.length - 1]; // Get the last part of the array (-1)
   // var last = parseInt(last_segment);
-  const subModel = await Subscriber.find({ user: req.params.sellerId });
+  const subModel = await Subscriber.find({ subscribedUser: req.params.sellerId });
   console.log(subModel);
 
   // console.log(submodel);

@@ -14,25 +14,31 @@ exports.setDealUserIds = async (req, res, next) => {
   }
   next();
 };
-exports.delete = catchAsync(async (req, res, next) => {
-  const subModel = await Subscriber.findById(req.params.id);
+// exports.delete = catchAsync(async (req, res, next) => {
+//   const xyz = await User.findById(req.logged.id);
+//   const subModel = await Subscriber.findOneAndDelete({
+//     subscribedUser: req.params.sellerId,
+//     user: xyz._id,
+//   });
 
-  if (!subModel) {
-    return next();
-  }
-  if (subModel.user._id == req.user.id) {
-    await Subscriber.findByIdAndDelete(req.params.id);
+//   const subModel = await Subscriber.findById(req.params.id);
 
-    // if (!doc) {
-    //   return next(new appError("No Document With That Id", 404));
-    // }
+//   if (!subModel) {
+//     return next();
+//   }
+//   if (subModel.user._id == req.user.id) {
+//     await Subscriber.findByIdAndDelete(req.params.id);
 
-    res.status(204).json({ status: "success", data: null });
-  } else {
-    res.status(204).json({ status: "failed", data: "wrong" });
-  }
-  next();
-});
+//     // if (!doc) {
+//     //   return next(new appError("No Document With That Id", 404));
+//     // }
+
+//     res.status(204).json({ status: "success", data: null });
+//   } else {
+//     res.status(204).json({ status: "failed", data: "wrong" });
+//   }
+//   next();
+// });
 
 exports.getSubscriber = factory.getOne(Subscriber, { path: "subscribedDeals" });
 

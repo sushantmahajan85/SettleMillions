@@ -27,5 +27,5 @@ router
     authController.restrictTo("admin", "user"),
     subscribeController.deleteSubscriber
   );
-router.route("/sub/:id").delete(subscribeController.delete);
+// router.route("/sub/:id").delete(subscribeController.delete);
 module.exports = router;

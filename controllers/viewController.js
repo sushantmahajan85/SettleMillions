@@ -341,7 +341,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   const xyz = await User.findById(req.logged.id);
   console.log(xyz);
   if (xyz) {
-    const subModel = await Subscriber.findOne({
+    const subModel = await Subscriber.findOneAndDelete({
       subscribedUser: req.params.sellerId,
       user: xyz._id,
     });

@@ -4,6 +4,7 @@ const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const appError = require("./../utils/appError");
 const exec = require("child_process").exec;
+const url = require("url");
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -332,7 +333,21 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     { _id: req.params.dealId },
     { $inc: { views: 1 } }
   );
+  // var full_url = req.url;
+  // // var full_url = document.URL; // Get current url
+  // var url_array = full_url.split("/"); // Split the string into an array with / as separator
+  // var last_segment = url_array[url_array.length - 1]; // Get the last part of the array (-1)
+  // var last = parseInt(last_segment);
+  const subModel = await Subscriber.find({ user: req.params.sellerId });
+  console.log(subModel);
 
+  // console.log(submodel);
+  // if (!subModel) {
+  //   return next();
+  // }
+  // if (subModel.user._id == req.user.id) {
+  //   await Subscriber.findByIdAndDelete(req.params.id);
+  // }
   const deal = await Deal.findById({ _id: req.params.dealId }).populate({
     path: "reviews",
   });
@@ -405,6 +420,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   res.status(200).render("deal", {
     deal,
+    subModel,
   });
 });
 // function escapeRegex(text) {

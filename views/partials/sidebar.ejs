@@ -50,10 +50,11 @@
       <% var i = 0; %> 
       <% for( var sub of user.subscribers) { %>
       <% i++; %>
-      <a href="#">
+      
         <% if (sub.subscribedUser) { %>
-          
-          <div class="item2">
+
+          <a href="#">
+          <div class="item2"> 
             <% if (sub.subscribedUser.photo) { %> 
               <img src=<%=`/img/users/${sub.subscribedUser.photo}`%> alt="hi" class="social_icons" /> 
             <% } else { %> 
@@ -62,13 +63,15 @@
             <h4 class="heading-normal" style="margin-top:0.5rem">
               <%= sub.subscribedUser.name %>
             </h4>
+          </div>
+         </a>
 
         <% } %>
-        </div>
+       
         <% if (i === 5){break;}%>
 
         <% } %>
-      </a>
+      
 
       <% } %>
       <div id="hide">

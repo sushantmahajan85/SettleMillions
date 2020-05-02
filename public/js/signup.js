@@ -1,4 +1,4 @@
-const passvalue = async (name, email, password, passwordConfirm) => {
+const passvalue = async (username, email, password, passwordConfirm) => {
     try {
         await axios({
             method: 'DELETE',
@@ -12,7 +12,7 @@ const passvalue = async (name, email, password, passwordConfirm) => {
             url: '/api/v1/users/signup',
             data: {
                 email,
-                name,
+                username,
                 password,
                 passwordConfirm
             }
@@ -30,12 +30,12 @@ const passvalue = async (name, email, password, passwordConfirm) => {
 };
 
 
-document.getElementById('login100-form').addEventListener('submit', e => {
+document.getElementById('signup_form').addEventListener('submit', e => {
     e.preventDefault();
-    const name = document.getElementById('name').value;
+    const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     //const phoneNo = document.getElementById('phoneNo').value;
     const password = document.getElementById('password').value;
     const passwordConfirm = document.getElementById('password_confirm').value;
-    passvalue(name, email, password, passwordConfirm);
+    passvalue(username, email, password, passwordConfirm);
 })

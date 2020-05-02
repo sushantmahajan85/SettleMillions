@@ -28,13 +28,16 @@
           </h4>
         </div>
       </a>
-      <a href="#">
-        <div class="item2">
-          <h4 class="heading-normal">
-            <i class="fas fa-fire font_icon"></i> Your Deals
-          </h4>
-        </div>
-      </a>
+      <% if (user) { %>
+        <a href=<%=`/member/${user._id}`%> >
+          <div class="item2">
+            <h4 class="heading-normal">
+              <i class="fas fa-fire font_icon"></i> Your Deals
+            </h4>
+          </div>
+        </a>
+      <% } %>
+      
       <a href="#">
         <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
           <h4 class="heading-normal">
@@ -61,7 +64,7 @@
         </div>
       </a>
 
-      <% } %> <% if (i === 5){break;}%> <% } %> <% } %>
+      <% } %> <% if (i === 5){break;}%> <% } %> 
       <div id="hide">
         <% var j = 0; %> <% for( var sub of user.subscribers ) { %> <% j++ %> <%
         if (j>5) { %>
@@ -74,7 +77,7 @@
         </div>
         <% } %> <% } %>
       </div>
-
+      <% } %>
       <div id="showMore">
         <a
           href="#"

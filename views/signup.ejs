@@ -1,35 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
-<head>
-    <title>SignUp V1</title>
-    <!-- <meta http-equiv="REFRESH" content="30" /> -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta name="google-signin-scope" content="profile email"> -->
-    <meta name="google-signin-client_id"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-signin-client_id"
         content="881941748196-g5qm514fj2vk7kg77156rl51gn36d6e4.apps.googleusercontent.com">
-    <!--===============================================================================================-->
-    <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
-    <link rel="stylesheet" type="text/css" href="sass/css/main.css" />
-    <!--===============================================================================================-->
-</head>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+        <script src="https://kit.fontawesome.com/6e422c4989.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
+        <link rel="stylesheet" type="text/css" href="sass/css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="img/logo1.png">
+        
+        <title>Your Deal| A plethora of Lightening Deals </title>
+    </head>
+    <body>
 
-<body>
-    <!-- FB SDK -->
-    <div id="fb-root"></div>
+       
+        
+        <%- include('partials/navbar.ejs') %>
+        <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1321461864731329&autoLogAppEvents=1"></script>
 
@@ -134,93 +127,102 @@
 
     <!-- FB SDK -->
 
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <div class="login100-pic js-tilt" data-tilt>
-                    <img src="images/img-01.png" alt="IMG" style="margin-bottom: 10rem; " />
-                </div>
+<section class="form_section">
+          <div class="wrap">
+            <h2 class="wrap_title">Your Deal</h2>
+            <h4 class="wrap_subtext">Sign up to see the best deals from the best platforms.</h4>
+            
+            <button type="button" class="wrap_signup-via-google">
+                Continue with Google 
+            </button>
+            <hr class="hr-text" data-content="OR">
+            <form class="wrap_opt" id="signup_form">
+                <input type ="text" placeholder="Username" id="username" required>
+                <input type ="text" placeholder="Email Address" id="email" required>
+                <input type ="password" placeholder="Password" id="password" required>
+                <input type ="password" placeholder="Password Confirm" id="password+confirm" required>
+                <input type ="submit" value ="Create your account">
+                <p class="wrap_signin">Already have an account? <span>
+                <a href="#">Sign in</a></span>
+                </p>
 
-                <form class="login100-form validate-form" id="login100-form">
-                    <span class="login100-form-title">
-                        Kindly SignUp
-                    </span>
-                    <div class="wrap-input100 validate-input">
-                        <input class="input100" id="name" type="text" name="Name" placeholder="Name">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" id="email" type="text" name="email" placeholder="@thapar.edu email">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="10 digit contact number">
-                        <input class="input100" type="number" id="phoneNo" name="contact"
-                            placeholder="10 digit contact number">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" id="password" type="password" name="input100" placeholder="Password" />
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Please confirm your password">
-                        <input class="input100" id="password_confirm" type="password" name="input100"
-                            placeholder="Password Confirmation" />
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
-                        data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile, email" onlogin="checkLoginState()"></div>
-
-
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" type="submit">
-                            SignUp
-                        </button>
-                    </div>
-
-
-                    <!-- <div class="text-center p-t-12">
-                        <span class="txt1">
-                            Forgot
-                        </span>
-                        <a class="txt2" href="#">
-                            Username / Password?
-                        </a>
-                    </div>
-
-                    <div class="text-center p-t-136">
-                        <a class="txt2" href="#">
-                            Create your Account
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i> -->
-                    <!-- </a> -->
-            </div>
             </form>
-        </div>
-    </div>
-    </div>
+
+          </div>
+        </section>
+          <!-- Page wrapper -->
+          <!-- <div class="page-wrapper">
+
+          </div> -->
+          <!-- //Page wrapper -->
+
+        <!-- footer -->
+
+        <!-- ALL LINKS NEED TO REPLACED AT A LATER STAGE -->
+          <div class="footer"> 
+              <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About</h2>
+                    <br>
+                    <ul>
+                        <a href="#"><li>About Us</li></a>
+                        <a href="#"><li>Contact Us</li></a>
+                        <a href="#"><li>Careers</li></a>
+                        <a href="#"><li>Our Team</li></a>
+                    
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h2>Social</h2>
+                    <br>
+                    <ul>
+                        <li class="icon-twitter"><a href="https://twitter.com/"></svg><i class="fab fa-twitter"></i>Twitter</li></a>
+                        
+                        <li class="icon-twitter"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>Facebook</li></a>
+                        <li class="icon-insta"></li><a href="https://twitter.com/"><i class="fab fa-instagram"></i>Instagram</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section policy">
+                    <h2>Policy</h2>
+                    <br>
+                    <ul>
+                        <a href="#"><li>Terms and Conditions</li></a>
+                        <a href="#"><li>Privacy Policy</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section help">
+                    <h2>Help</h2>
+                    <br>
+                    <ul>
+                        <a href="#"><li>How to Post a Deal</li></a>
+                        <a href="#"><li>FAQ</li></a>
+                        <a href="#"><li>Report</li></a>
+                    </ul> 
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <hr> </hr>
+                  &copy;  2020, Your Deal Inc.
+
+              </div>
+          </div>
 
 
-    <!-- FACEBOOK SDK -->
+
+
+         <!-- //footer -->
+
+          <!-- <div class="sign_up-box">
+              <h2>Your Deal</h2>
+              <h4>Sign up to see the best deals from the best platforms</h4>
+
+              <form>
+                  <input type="text" f
+              </form>
+
+
+          </div> -->
+<!-- FACEBOOK SDK -->
 
     <!-- <script>
         window.fbAsyncInit = function () {
@@ -254,12 +256,6 @@
     <!--===============================================================================================-->
     <script src="vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $(".js-tilt").tilt({
-            scale: 1.1
-        });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <!--===============================================================================================-->
@@ -269,6 +265,6 @@
     <script src="js/main.js"></script>
 
 
-</body>
-
+        
+    </body>  
 </html>

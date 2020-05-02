@@ -290,7 +290,7 @@ h2 {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1215,7 +1215,7 @@ figure {
   height: 100%; }
 
 .card {
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -1320,7 +1320,7 @@ figure {
   text-align: start;
   font-weight: 500;
   margin-right: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .price {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -1917,7 +1917,7 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -2001,7 +2001,7 @@ rgba(0, 0, 0, 0.349);
 
 .heading-normal {
   font-size: 1.76rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #131212; }
 
 .content_box {
@@ -2029,7 +2029,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }
@@ -2121,105 +2121,22 @@ body {
   background: #eee;
   /* color: #333; */
   /* background-image: url("../img/backg.jpg"); */
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   line-height: 1.7;
   /* color: #777777; */
   /* padding: 3rem; */
-  box-sizing: border-box;
-  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58)), url("../img/backg.jpg");
+  box-sizing: border-box; }
+
+.form_section {
+  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58)), url("/img/backg.jpg");
   background-size: cover;
   background-size: cover;
-  box-sizing: border-box;
-  background-position-y: 5rem; }
-
-.Navb {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  /* padding: 0; */
-  font-size: 1.6rem; }
-
-nav {
-  background: #4693ED;
-  padding: 0;
-  height: 6rem; }
-
-.navb_opt {
-  /* float: right; */
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: center; */ }
-
-.Navb_logo-text {
-  display: flex;
-  color: #FF9A41;
-  font-weight: 600;
-  letter-spacing: 0.3rem;
-  text-shadow: .2rem .2rem .2rem #00000085;
-  position: relative;
-  top: 1rem; }
-
-nav ul {
-  list-style-type: none;
-  padding: 0; }
-
-nav a {
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  display: block;
-  /* padding: 12   px; */ }
-
-.search-box {
-  display: flex;
-  position: absolute;
-  top: 1.5%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  background: #FBFAFA;
-  /* #FBFAFA */
-  height: 1.3rem;
-  border-radius: 0.3rem;
-  padding: 1rem;
-  max-width: 50rem;
-  font-size: 1.4rem;
-  flex: 0 1 1; }
-
-/* /* Only icon   */
-/* .search-box:hover > .search-txt{
-      width: 240px;
-      padding: 0 6px;
-  } */
-.search-btn {
-  color: rgba(9, 78, 158, 0.7);
-  float: right;
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  background: #fbfafa;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.search-txt {
-  border: none;
-  background: none;
-  outline: none;
-  color: #000;
-  transition: 0.4s;
-  line-height: 4rem;
-  height: 1.4rem;
-  float: left;
-  width: 48rem;
-  padding: 0;
-  font-size: 1.2rem;
-  justify-content: start;
-  /* Only icon  width: 0px; */ }
+  padding: 10rem 0; }
 
 .wrap {
   max-width: 40rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin: auto;
   background: white;
   box-sizing: border-box;
@@ -2242,21 +2159,22 @@ nav a {
   padding: 0.4rem 5rem;
   /* text-align: center; */ }
 
-.wrap_opt input[type=text], input[type=password] {
+.wrap_opt input[type="text"],
+input[type="password"] {
   width: 100%;
   box-sizing: border-box;
-  padding: 1.5rem .5rem;
+  padding: 1.5rem 0.5rem;
   background: rgba(0, 0, 0, 0.005);
   outline: none;
   border: none;
   border-bottom: 1px solid #494949;
   color: rgba(0, 0, 0, 0.84);
-  border-radius: .1rem;
-  margin: .8rem;
+  border-radius: 0.1rem;
+  margin: 0.8rem;
   font-size: 1.6rem;
   font-weight: 450; }
 
-.wrap_opt input[type=submit] {
+.wrap_opt input[type="submit"] {
   /* for keeping text in center of the button */
   /* justify-content: center; 
     align-items: center; */
@@ -2275,7 +2193,7 @@ nav a {
   /* height: 4rem; */
   color: black; }
 
-.wrap_opt input[type=submit]:hover {
+.wrap_opt input[type="submit"]:hover {
   background: linear-gradient(#cfcfcf, #f8f5f5);
   /* opacity:1; */
   cursor: pointer; }
@@ -2289,7 +2207,7 @@ nav a {
 
 .wrap_signin a {
   text-decoration: none;
-  color: #3E7CA9; }
+  color: #3e7ca9; }
 
 .hr-text {
   line-height: 1em;
@@ -2304,7 +2222,7 @@ nav a {
   margin-left: 2rem; }
 
 .hr-text:before {
-  content: '';
+  content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(#818078));
   background: linear-gradient(#000);
   position: absolute;
@@ -2318,7 +2236,7 @@ nav a {
   position: relative;
   display: inline-block;
   color: black;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   line-height: 1.5em;
   color: #000;
   background-color: #fcfcfa; }

@@ -1,274 +1,146 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
-<head>
-    <title>SignUp V1</title>
-    <!-- <meta http-equiv="REFRESH" content="30" /> -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta name="google-signin-scope" content="profile email"> -->
-    <meta name="google-signin-client_id"
-        content="881941748196-g5qm514fj2vk7kg77156rl51gn36d6e4.apps.googleusercontent.com">
-    <!--===============================================================================================-->
-    <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
-    <link rel="stylesheet" type="text/css" href="sass/css/main.css" />
-    <!--===============================================================================================-->
-</head>
-
-<body>
-    <!-- FB SDK -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1321461864731329&autoLogAppEvents=1"></script>
-
-    <script>
-
-        function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-          console.log('statusChangeCallback');
-          console.log(response);                   // The current login status of the person.
-          if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-            testAPI();  
-          } else {                          // Not logged into your webpage or we are unable to tell.
-            document.getElementById('status').innerHTML = 'Please log ' +
-              'into this webpage.';
-          }
-        }
-      
-      
-        function checkLoginState() {    // Called when a person is finished with the Login Button.
-          FB.getLoginStatus(function(response) {   // See the onlogin handler
-            statusChangeCallback(response);
-          });
-        }
-      
-      
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '{app-id}',
-            cookie     : true,                     // Enable cookies to allow the server to access the session.
-            xfbml      : true,                     // Parse social plugins on this webpage.
-            version    : '{api-version}'           // Use this Graph API version for this call.
-          });
-      
-      
-          FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-            statusChangeCallback(response);        // Returns the login status.
-          });
-        };
-      
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        (function(d, s, id) {                      // Load the SDK asynchronously
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "https://connect.facebook.net/en_US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+        <script src="https://kit.fontawesome.com/6e422c4989.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
+        <link rel="stylesheet" type="text/css" href="sass/css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="img/logo1.png">
+        
+        <title>Your Deal| A plethora of Lightning Deals </title>
+    </head>
+    <body>
+
        
-        function testAPI() {     // Testing Graph API after login. 
-                                //See statusChangeCallback() for  when this call is made.
-          console.log('Welcome!  Fetching your information.... ');
-          FB.api('/me', {fields: 'name, email'}, function(response) {
-          console.log(response);
-          console.log('Successful login : ' + response.name);
-
-          passvaluefb(response);
-
-        //   try {
-        //         const name = response.name;
-        //         const email = response.email;
-        //         const password = 'password';
-        //         const passwordConfirm = 'password';
-
-        //         console.log(name);
-
-        //         const result = await axios({
-        //             method: 'POST',
-        //             url: '/api/v1/users/signup',
-        //             data: {
-        //                 email,
-        //                 name,
-        //                 password,
-        //                 passwordConfirm
-        //             }
-        //         });
-        //         if (result.data.status === 'success') {
-        //             alert('sign up successful');
-        //             window.setTimeout(() => {
-        //                 location.assign('/');
-        //             }, 1000);
-        //         }
-
-        //   } catch (err) {
-        //         console.log(err);
-        //   }
-
-            // document.getElementById('status').innerHTML =
-            //   'Thanks for logging in, ' + response.name + '!';
-          });
-        }
-      
-      </script>
-      
-      
-      <!-- //  The JS SDK Login Button 
-      
-      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-      </fb:login-button>
-      
-      <div id="status">
-      </div> -->
-
-    <!-- FB SDK -->
-
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <div class="login100-pic js-tilt" data-tilt>
-                    <img src="images/img-01.png" alt="IMG" style="margin-bottom: 10rem; " />
-                </div>
-
-                <form class="login100-form validate-form" id="login100-form">
-                    <span class="login100-form-title">
-                        Kindly SignUp
-                    </span>
-                    <div class="wrap-input100 validate-input">
-                        <input class="input100" id="name" type="text" name="Name" placeholder="Name">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" id="email" type="text" name="email" placeholder="@thapar.edu email">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="10 digit contact number">
-                        <input class="input100" type="number" id="phoneNo" name="contact"
-                            placeholder="10 digit contact number">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" id="password" type="password" name="input100" placeholder="Password" />
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Please confirm your password">
-                        <input class="input100" id="password_confirm" type="password" name="input100"
-                            placeholder="Password Confirmation" />
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
-                        data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile, email" onlogin="checkLoginState()"></div>
-
-
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" type="submit">
-                            SignUp
-                        </button>
-                    </div>
-
-
-                    <!-- <div class="text-center p-t-12">
-                        <span class="txt1">
-                            Forgot
-                        </span>
-                        <a class="txt2" href="#">
-                            Username / Password?
-                        </a>
-                    </div>
-
-                    <div class="text-center p-t-136">
-                        <a class="txt2" href="#">
-                            Create your Account
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i> -->
-                    <!-- </a> -->
-            </div>
-            </form>
         </div>
-    </div>
-    </div>
+        <%- include('partials/navbar.ejs') %>
+        <!-- <div class="Navb">
+
+            <nav>
+                <h2 class="Navb_logo-text">YOUR DEAL</h2>
+                <ul class="navb_opt">
+                  <li class="navb_opt_1"><a href=""></li>CATEGORIES</a></li>
+                  <li class="navb_opt_2"><a href="">POST</a></li>
+                  <li class="navb_opt_3"><a href="">SIGNUP</a></li>
+                  <li class="navb_opt_4"><a href="">LOGIN</a></li>
+                </ul>
+
+                <div class= "search-box">
+                    
+                    <input class="search-txt" type="text" name="" placeholder="Type to search">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i> </a>
+                   
+                         
+                <!-- <ul class="social">
+                  <li><a hr  ef="" class="fb">Facebook</a></li>
+                  <li><a href="" class="tw">Twitter</a></li>
+                </ul> -->
+              </nav>
+          </div> -->
+
+          <div class="wrap">
+            <h2 class="wrap_title">Your Deal</h2>
+            <h4 class="wrap_subtext">Sign up to see the best deals from the best platforms.</h4>
+            
+            <button type="button" class="wrap_signup-via-google">
+                Continue with Google 
+            </button>
+            <hr class="hr-text" data-content="OR">
+            <form class="wrap_opt">
+                <input type ="text" placeholder="Username" required>
+                <input type ="text" placeholder="Email Address" required>
+                <input type ="password" placeholder="Password" required>
+                <input type ="password" placeholder="Password Confirm" required>
+                <input type ="submit" value ="Create your account">
+                <p class="wrap_signin">Already have an account? <span>
+                <a href="#">Sign in</a></span>
+                </p>
+
+            </form>
+
+          </div>
+
+          <!-- Page wrapper -->
+          <div class="page-wrapper">
+
+          </div>
+          <!-- //Page wrapper -->
+
+        <!-- footer -->
+
+        <!-- ALL LINKS NEED TO REPLACED AT A LATER STAGE -->
+          <div class="footer"> 
+              <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About</h2>
+                    <br>
+                    <ul>
+                        <a href="#"><li>About Us</li></a>
+                        <a href="#"><li>Contact Us</li></a>
+                        <a href="#"><li>Careers</li></a>
+                        <a href="#"><li>Our Team</li></a>
+                    
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h2>Social</h2>
+                    <br>
+                    <ul>
+                        <li class="icon-twitter"><a href="https://twitter.com/"></svg><i class="fab fa-twitter"></i>Twitter</li></a>
+                        
+                        <li class="icon-twitter"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>Facebook</li></a>
+                        <li class="icon-insta"></li><a href="https://twitter.com/"><i class="fab fa-instagram"></i>Instagram</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section policy">
+                    <h2>Policy</h2>
+                    <br>
+                    <ul>
+                        <a href="#"><li>Terms and Conditions</li></a>
+                        <a href="#"><li>Privacy Policy</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section help">
+                    <h2>Help</h2>
+                    <br>
+                    <ul>
+                        <a href="#"><li>How to Post a Deal</li></a>
+                        <a href="#"><li>FAQ</li></a>
+                        <a href="#"><li>Report</li></a>
+                    </ul> 
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <hr> </hr>
+                  &copy;  2020, Your Deal Inc.
+
+              </div>
+          </div>
 
 
-    <!-- FACEBOOK SDK -->
-
-    <!-- <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '1321461864731329',
-                cookie: true,
-                xfbml: true,
-                version: 'v6.0'
-            });
-
-            FB.AppEvents.logPageView();
-
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script> -->
-
-    <!-- FACEBOOK SDK END -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!--===============================================================================================-->
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $(".js-tilt").tilt({
-            scale: 1.1
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-
-    <!--===============================================================================================-->
-    <script src="js/signup.js"></script>
-    <script src="js/gSignup.js"></script>
-    <script src="js/fbSignup.js"></script>
-    <script src="js/main.js"></script>
 
 
-</body>
+         <!-- //footer -->
 
+          <!-- <div class="sign_up-box">
+              <h2>Your Deal</h2>
+              <h4>Sign up to see the best deals from the best platforms</h4>
+
+              <form>
+                  <input type="text" f
+              </form>
+
+
+          </div> -->
+
+        
+    </body>  
 </html>

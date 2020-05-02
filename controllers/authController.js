@@ -241,21 +241,25 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   await user.save({ validateBeforeSave: false });
 
-  const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
+  const resetURL = `${req.protocol}://${req.get(
+    "host"
+  )}/api/v1/users/resetPassword/${resetToken}`;
+
+  // const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
 
   try {
-    await sendEmail({
-      ////// For Sending Reset Password Mail //////
-      email: user.email,
-      subject: "Password Reset Token ( Valid For 10 Minutes )",
-      message: message,
-    });
+    // await sendEmail({
+    //   ////// For Sending Reset Password Mail //////
+    //   email: user.email,
+    //   subject: "Password Reset Token ( Valid For 10 Minutes )",
+    //   message: message,
+    // });
 
-    const resetURL = `${req.protocol}://${req.get(
-      "host"
-    )}/api/v1/users/resetPassword/${resetToken}`;
+    // const resetURL = `${req.protocol}://${req.get(
+    //   "host"
+    // )}/api/v1/users/resetPassword/${resetToken}`;
 
-    await new Email(user, resetURL).sendPasswordReset();
+    // await new Email(user, resetURL).sendPasswordReset();
 
     res.status(200).json({
       status: "success",

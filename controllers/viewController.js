@@ -359,30 +359,35 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   // var url_array = full_url.split("/"); // Split the string into an array with / as separator
   // var last_segment = url_array[url_array.length - 1]; // Get the last part of the array (-1)
   // var last = parseInt(last_segment);
-  const xyz = await User.findById(req.logged.id);
-  // console.log(xyz);
-  if (xyz) {
-    const likeModel = await LikedDeal.findOneAndDelete({
-      deal: req.params.dealId,
-      user: xyz._id,
-    });
-    console.log(likeModel);
-    res.locals.like = likeModel;
+  if (req.logged) {
+    const xyz = await User.findById(req.logged.id);
+
+    // console.log(xyz);
+    if (xyz) {
+      const likeModel = await LikedDeal.findOneAndDelete({
+        deal: req.params.dealId,
+        user: xyz._id,
+      });
+      console.log(likeModel);
+      res.locals.like = likeModel;
+    } else {
+      res.locals.like = null;
+    }
+
+    if (xyz) {
+      const subModel = await Subscriber.findOneAndDelete({
+        subscribedUser: req.params.sellerId,
+        user: xyz._id,
+      });
+      // console.log(subModel);
+      res.locals.log = subModel;
+    } else {
+      res.locals.log = null;
+    }
   } else {
     res.locals.like = null;
-  }
-
-  if (xyz) {
-    const subModel = await Subscriber.findOneAndDelete({
-      subscribedUser: req.params.sellerId,
-      user: xyz._id,
-    });
-    // console.log(subModel);
-    res.locals.log = subModel;
-  } else {
     res.locals.log = null;
   }
-
   // console.log(submodel);
   // if (!subModel) {
   //   return next();

@@ -121,7 +121,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
 exports.mainPage = catchAsync(async (req, res) => {
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    console.log(joChahiye[1]);
+    console.log(joChahiye[0]);
 
     if (joChahiye[1] == "report") {
       await Deal.findOneAndUpdate(
@@ -132,6 +132,11 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     if (joChahiye[1] == "delete") {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });
+    }
+    if (req.logged) {
+      if (joChahiye[1] == "like") {
+        await LikedDeal.create({ deal: joChahiye[0], user: req.logged._id });
+      }
     }
   }
 
@@ -296,6 +301,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       sortBy = "" + req.query.sort;
       order = -1;
     }
+
     // const user = await User.findById(req.user);
     const deals = await Deal.find().sort([[`${sortBy}`, order]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);

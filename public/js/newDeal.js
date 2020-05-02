@@ -43,7 +43,7 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   // form.append("tags", document.getElementById("tags").value);
   console.log(JSON.stringify(document.getElementById("tags").value));
   var sushant = JSON.parse(document.getElementById("tags").value);
-  console.log(sushant);
+  console.log(sushant[1].value);
   let t = document.getElementById("tags").value;
 
   // let a = st.split("value");

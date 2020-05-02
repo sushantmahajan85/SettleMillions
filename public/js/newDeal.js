@@ -3,7 +3,7 @@ const passvaluec = async (data) => {
     const result = await axios({
       method: "POST",
       url: "/api/v1/deals",
-      data
+      data,
       //   dealName,
       //   affiliateLink,
       //   category,
@@ -34,7 +34,7 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   //   "categorySelect",
   //   document.getElementById("categorySelect").value
   // );
-  if(document.getElementById("photo").files[0]){
+  if (document.getElementById("photo").files[0]) {
     form.append("titleImg", document.getElementById("photo").files[0].name);
   }
   // form.append("corousel", document.getElementById("corousel").files[0]);
@@ -42,28 +42,21 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   form.append("biggerDis", document.getElementById("biggerDis").value);
   // form.append("tags", document.getElementById("tags").value);
   console.log(JSON.stringify(document.getElementById("tags").value));
+  var sushant = JSON.parse(document.getElementById("tags").value);
+  console.log(sushant);
   let t = document.getElementById("tags").value;
+
   // let a = st.split("value");
   // console.log(a);
   console.log(t);
   console.log(document.getElementById("photo").files[0]);
   // passvaluec(form);
 
-
-
-
-
-
-
-
-
-
-
-    // const dealName = document.getElementById("dealName").value;
-    // const affiliateLink = document.getElementById("link").value;
-    // const category = document.getElementById("category").value;
-    // // const company = document.getElementById("company").value;
-    // const mrp = document.getElementById("percent").value;
-    // const dealPrice = document.getElementById("fprice").value;
-    passvaluec(form);
+  // const dealName = document.getElementById("dealName").value;
+  // const affiliateLink = document.getElementById("link").value;
+  // const category = document.getElementById("category").value;
+  // // const company = document.getElementById("company").value;
+  // const mrp = document.getElementById("percent").value;
+  // const dealPrice = document.getElementById("fprice").value;
+  passvaluec(form);
 });

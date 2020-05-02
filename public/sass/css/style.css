@@ -48,26 +48,6 @@
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
-#email {
-  display: block;
-  width: 38%;
-  background: rgba(255, 255, 255, 0.397);
-  margin-bottom: 1.6rem;
-  text-align: start;
-  padding: 1rem 3rem;
-  font-family: 'Signika', Verdana, sans-serif;
-  font-size: 1.4rem;
-  background: rgba(255, 255, 255, 0.397); }
-  @media (max-width: 56.25em) {
-    #email {
-      width: 55%; } }
-  @media (max-width: 1380px) {
-    #email .p {
-      font-size: 2rem; }
-    #email .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-
 #query {
   display: block;
   margin-bottom: 1.6rem;
@@ -290,7 +270,7 @@ h2 {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1215,7 +1195,7 @@ figure {
   height: 100%; }
 
 .card {
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -1320,7 +1300,7 @@ figure {
   text-align: start;
   font-weight: 500;
   margin-right: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .price {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -1917,7 +1897,7 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -2001,7 +1981,7 @@ rgba(0, 0, 0, 0.349);
 
 .heading-normal {
   font-size: 1.76rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #131212; }
 
 .content_box {
@@ -2029,7 +2009,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

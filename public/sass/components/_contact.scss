@@ -39,22 +39,22 @@ font-size: 1.4rem;
     width: 55%;
 }
 }
-#email{
-display: block;
-width: 38%;
-@include respond(tab-port){
-    width: 55%;
-}
-background: rgba(255, 255, 255, 0.397);
-margin-bottom: 1.6rem;
-text-align: start;
-padding: 1rem 3rem;
+// #email{
+// display: block;
+// width: 38%;
+// @include respond(tab-port){
+//     width: 55%;
+// }
+// background: rgba(255, 255, 255, 0.397);
+// margin-bottom: 1.6rem;
+// text-align: start;
+// padding: 1rem 3rem;
 
-font-family: 'Signika', Verdana, sans-serif;
-font-size: 1.4rem;
+// font-family: 'Signika', Verdana, sans-serif;
+// font-size: 1.4rem;
 
-background: rgba(255, 255, 255, 0.397);
-}
+// background: rgba(255, 255, 255, 0.397);
+// }
 #query{
 display: block;
 margin-bottom: 1.6rem;

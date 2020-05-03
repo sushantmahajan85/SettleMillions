@@ -10,7 +10,7 @@ module.exports = class Email {
     this.to = user.email;
     this.firstName = user.name.split(" ")[0];
     this.url = url;
-    this.from = `Sushant Mahajan <${process.env.EMAIL_FROM}>`;
+    this.from = process.env.EMAIL_FROM;
   }
   newTransport() {
     // if (process.env.NODE_ENV === "production") {

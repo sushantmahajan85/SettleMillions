@@ -52,8 +52,8 @@ exports.verify = async (req, res, next) => {
       return next(new AppError("Wrong OTP", 400));
     }
     // aana chahiye
-    const url = "amazon.in";
-    await new Email(user, url).sendWelcome();
+    // const url = "amazon.in";
+    // await new Email(user, url).sendWelcome();
     const token = signToken(user._id);
     const cookieOptions = {
       expires: new Date(

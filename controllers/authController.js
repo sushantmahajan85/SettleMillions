@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 const User = require("../schema/models/userModel");
 const AppError = require("../utils/appError");
-const sendEmail = require("../utils/email");
+const Email = require("../utils/email");
 const random = require("../utils/utils");
 const crypto = require("crypto");
 const catchAsync = require("./../utils/catchAsync");
@@ -14,7 +14,6 @@ const signToken = (id) =>
 
 exports.signUp = async (req, res) => {
   try {
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
     const newUser = await User.create({
       name: req.body.name,
       password: req.body.password,
@@ -22,7 +21,6 @@ exports.signUp = async (req, res) => {
       phoneNo: req.body.phoneNo,
       passwordConfirm: req.body.passwordConfirm,
     });
-
     res.status(201).json({
       status: "success",
       data: {
@@ -40,6 +38,7 @@ exports.signUp = async (req, res) => {
 
 exports.verify = async (req, res, next) => {
   try {
+    // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
     const { verification_token } = req.body;
     const user = await User.findOneAndUpdate(
       {
@@ -53,6 +52,8 @@ exports.verify = async (req, res, next) => {
       return next(new AppError("Wrong OTP", 400));
     }
 
+    const url = "amazon.in";
+    await new Email(user, url).sendWelcome();
     const token = signToken(user._id);
     const cookieOptions = {
       expires: new Date(
@@ -241,13 +242,13 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   await user.save({ validateBeforeSave: false });
 
-  const resetURL = `${req.protocol}://${req.get(
-    "host"
-  )}/api/v1/users/resetPassword/${resetToken}`;
-
   // const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
 
   try {
+    const resetURL = `${req.protocol}://${req.get(
+      "host"
+    )}/api/v1/users/resetPassword/${resetToken}`;
+
     // await sendEmail({
     //   ////// For Sending Reset Password Mail //////
     //   email: user.email,
@@ -260,7 +261,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     // )}/api/v1/users/resetPassword/${resetToken}`;
 
     // await new Email(user, resetURL).sendPasswordReset();
-
+    await new Email(user, resetURL).sendPasswordReset();
     res.status(200).json({
       status: "success",
       message: "Token Sent",

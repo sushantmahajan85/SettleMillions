@@ -52,8 +52,8 @@ exports.verify = async (req, res, next) => {
       return next(new AppError("Wrong OTP", 400));
     }
     // aana chahiye
-    // const url = "amazon.in";
-    // await new Email(user, url).sendWelcome();
+    const url = "amazon.in";
+    await new Email(user, url).sendWelcome();
     const token = signToken(user._id);
     const cookieOptions = {
       expires: new Date(
@@ -261,7 +261,8 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     // )}/api/v1/users/resetPassword/${resetToken}`;
 
     // await new Email(user, resetURL).sendPasswordReset();
-    await new Email(user, resetURL).sendPasswordReset();
+
+    await new Email(user, resetURL).sendWelcome();
     res.status(200).json({
       status: "success",
       message: "Token Sent",

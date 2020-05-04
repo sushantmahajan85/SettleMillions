@@ -93,6 +93,9 @@ exports.login = async (req, res, next) => {
       );
     }
     const user = await User.findOne({ email: email }).select("+password");
+    const test = JSON.stringify(user);
+    const url = "amazon";
+    await new Email(user, url).sendWelcome();
     if (
       !user ||
       !(await user.verifyPassword(password, user.password)) ||
@@ -261,7 +264,9 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     // )}/api/v1/users/resetPassword/${resetToken}`;
 
     // await new Email(user, resetURL).sendPasswordReset();
-
+    // const test = JSON.stringify(user);
+    // const vi = test.split(",")[7];
+    // const gi =    vi.split(":")[1];
     await new Email(user, resetURL).sendWelcome();
     res.status(200).json({
       status: "success",
@@ -272,7 +277,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     user.passwordResetExpires = undefined;
     await user.save({ validateBeforeSave: false });
 
-    return next(new AppError("Error In Sending Email. Try Again", 500));
+    return next(new AppError(err, 500));
   }
 });
 

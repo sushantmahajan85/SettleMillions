@@ -39,6 +39,7 @@ const userSchema = new mongoose.Schema(
       minLength: [8, "Password Too Small"],
       select: false,
     },
+    gSignin: String,
     passwordConfirm: {
       type: String,
       required: [true, "Comfirm Password is Required"],

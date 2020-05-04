@@ -1,12 +1,12 @@
 const passvaluehaha = async (username, email, password, passwordConfirm) => {
   try {
-    await axios({
-      method: "DELETE",
-      url: "/api/v1/users/signup",
-      data: {
-        email,
-      },
-    });
+    // await axios({
+    //   method: "DELETE",
+    //   url: "/api/v1/users/signup",
+    //   data: {
+    //     email,
+    //   },
+    // });
     const result = await axios({
       method: "POST",
 
@@ -21,7 +21,7 @@ const passvaluehaha = async (username, email, password, passwordConfirm) => {
     if (result.data.status === "success") {
       alert("sign up successful");
       window.setTimeout(() => {
-        location.assign("/verification");
+        location.assign("/");
       }, 2000);
     }
   } catch (err) {

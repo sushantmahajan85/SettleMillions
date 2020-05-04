@@ -17,12 +17,25 @@ exports.signUp = async (req, res) => {
     const newUser = await User.create({
       name: req.body.name,
       password: req.body.password,
+      gSignin: req.body.gSignin,
       email: req.body.email,
       phoneNo: req.body.phoneNo,
       passwordConfirm: req.body.passwordConfirm,
     });
+    const token = signToken(newUser._id);
+    const cookieOptions = {
+      expires: new Date(
+        Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+      ),
+      // secure: true,
+      httpOnly: true,
+    };
+    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+
+    res.cookie("jwt", token, cookieOptions);
     res.status(201).json({
       status: "success",
+      token,
       data: {
         newUser,
       },

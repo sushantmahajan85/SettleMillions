@@ -24,7 +24,7 @@ const passvaluec = async (data) => {
 
 document.getElementById("regForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  let form = new FormData();
+  const form = new FormData();
   form.append("dealName", document.getElementById("dealName").value);
   form.append("affiliateLink", document.getElementById("link").value);
   form.append("dealPrice", document.getElementById("fprice").value);
@@ -34,9 +34,9 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   //   "categorySelect",
   //   document.getElementById("categorySelect").value
   // );
-  if (document.getElementById("photo").files[0]) {
-    form.append("photo", document.getElementById("photo").files[0]);
-  }
+
+  form.append("photos", document.getElementById("photos").files[0]);
+
   // form.append("corousel", document.getElementById("corousel").files[0]);
   form.append("titleDis", document.getElementById("titleDis").value);
   form.append("biggerDis", document.getElementById("biggerDis").value);

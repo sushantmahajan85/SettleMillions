@@ -4,8 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="google-signin-client_id"
-        content="881941748196-g5qm514fj2vk7kg77156rl51gn36d6e4.apps.googleusercontent.com">
+        <meta name="google-signin-client_id" content="881941748196-g7mq7257r81aq3abb7k7e0np92rcioaf.apps.googleusercontent.com">
         <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
         <script src="https://kit.fontawesome.com/6e422c4989.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
@@ -131,17 +130,17 @@
           <div class="wrap">
             <h2 class="wrap_title">Your Deal</h2>
             <h4 class="wrap_subtext">Sign up to see the best deals from the best platforms.</h4>
-            
-            <button type="button" class="wrap_signup-via-google">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <!-- <button type="button" class="wrap_signup-via-google g-signin2" data-onsuccess="onSignIn">
                 Continue with Google 
-            </button>
+            </button> -->
             <hr class="hr-text" data-content="OR">
             <form class="wrap_opt" id="signup_form">
                 <input type ="text" placeholder="Username" id="username" required>
                 <input type ="text" placeholder="Email Address" id="email" required>
                 <input type ="password" placeholder="Password" id="password" required>
-                <input type ="password" placeholder="Password Confirm" id="password+confirm" required>
-                <input type ="submit" value ="Create your account">
+                <input type ="password" placeholder="Password Confirm" id="cpassword" required>
+                <input type ="submit" value ="Create your account" id="submit">
                 <p class="wrap_signin">Already have an account? <span>
                 <a href="#">Sign in</a></span>
                 </p>
@@ -206,9 +205,10 @@
 
               </div>
           </div>
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
-
+          <script src="/js/gSignup.js"></script>
 
          <!-- //footer -->
 
@@ -247,7 +247,6 @@
     </script> -->
 
     <!-- FACEBOOK SDK END -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
@@ -260,9 +259,8 @@
 
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
-    <script src="js/gSignup.js"></script>
-    <script src="js/fbSignup.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/fbSignup.js"></script>
+    <script src="js/main.js"></script> -->
 
 
         

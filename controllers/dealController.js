@@ -6,13 +6,10 @@ const catchAsync = require("./../utils/catchAsync");
 
 const factory = require("./handlerFactory");
 exports.setDealUserIds = async (req, res, next) => {
-  if (!req.body.user) {
-    req.body.user = req.user;
-    console.log(req.body.user);
-    console.log(req.user);
+  req.body.user = req.user.id;
+  // console.log(req.file);
+  // req.file.user = req.user.id;
 
-    // req.file.user = req.user.id;
-  }
   // if (!req.body.user) { req.body.user = req.user.id; }
   next();
 };
@@ -84,7 +81,7 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
   }
 
   req.body.corouselImgs = [];
-  //req.body.user = req.user.id;
+  // req.body.user = req.user.id;
   await Promise.all(
     req.files.corouselImgs.map(async (file, i) => {
       const filename = `deal-${req.user.id}-${Date.now()}-${i + 1}.jpeg`;

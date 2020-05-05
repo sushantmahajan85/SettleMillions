@@ -106,9 +106,9 @@ exports.login = async (req, res, next) => {
       );
     }
     const user = await User.findOne({ email: email }).select("+password");
-    const test = JSON.stringify(user);
-    const url = "amazon";
-    await new Email(user, url).sendWelcome();
+    // const test = JSON.stringify(user);
+    // const url = "amazon";
+    // await new Email(user, url).sendWelcome();
     if (
       !user ||
       !(await user.verifyPassword(password, user.password)) ||
@@ -127,9 +127,9 @@ exports.login = async (req, res, next) => {
     };
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-    const resetURL = `${req.protocol}://${req.get(
-      "host"
-    )}/api/v1/users/resetPassword/${resetToken}`;
+    // const resetURL = `${req.protocol}://${req.get(
+    //   "host"
+    // )}/api/v1/users/resetPassword/${resetToken}`;
 
     // await sendEmail({
     //   ////// For Sending Reset Password Mail //////
@@ -144,19 +144,17 @@ exports.login = async (req, res, next) => {
 
     // await new Email(user, resetURL).sendPasswordReset();
 
-    await new Email(user, resetURL).sendWelcome();
-    res.status(200).json({
-      status: "success",
-      message: "Token Sent",
-    });
+    // await new Email(user, resetURL).sendWelcome();
+    // res.status(200).json({
+    //   status: "success",
+    //   message: "Token Sent",
+    // });
 
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({
       status: "success",
       token,
     });
-
-    
   } catch (error) {
     console.log(error);
   }

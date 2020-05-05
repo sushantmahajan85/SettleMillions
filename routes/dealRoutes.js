@@ -16,9 +16,9 @@ router
   .get(dealController.getAllDeals)
   .post(
     authController.protect,
-    dealController.setDealUserIds,
     dealController.uploadDealImages,
     dealController.resizeDealImages,
+    dealController.setDealUserIds,
     dealController.createDeal
   );
 
@@ -27,6 +27,7 @@ router
   .get(dealController.getDeal)
   .patch(
     authController.protect,
+    dealController.setDealUserIds,
     //  authController.restrictTo("admin"),
     dealController.uploadDealImages,
     dealController.resizeDealImages,

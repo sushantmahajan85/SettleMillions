@@ -50,7 +50,7 @@ const upload = multer({
 });
 
 exports.uploadDealImages = upload.fields([
-  { name: "titleImg", maxCount: 1 },
+  { name: "titleImg", maxCount: 2 },
   { name: "corouselImgs", maxCount: 4 },
 ]);
 

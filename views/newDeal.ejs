@@ -205,7 +205,9 @@
             class="needed"
             onchange="makeSubmenu(this.value)"
           >
-            <option value="" disabled selected>Choose Category (Required)</option>
+            <option value="" disabled selected
+              >Choose Category (Required)</option
+            >
             <option>Mobile</option>
             <option>Clothes</option>
           </select>
@@ -221,7 +223,7 @@
             type="file"
             accept="image/*"
             class="title_img"
-            id="photo"
+            id="photos"
             name="photo"
           />
           <label for="photo">Choose new photo</label>
@@ -276,7 +278,12 @@
           <button type="button" id="nextBtn" onclick="nextPrev(1)">
             Next
           </button>
-          <button type="submit" style="display: none;" id="submitBtn" onclick="nextPrev(1)">
+          <button
+            type="submit"
+            style="display: none;"
+            id="submitBtn"
+            onclick="nextPrev(1)"
+          >
             Submit
           </button>
         </div>

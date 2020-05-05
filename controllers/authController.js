@@ -21,6 +21,7 @@ exports.signUp = async (req, res) => {
       phoneNo: req.body.phoneNo,
       passwordConfirm: req.body.passwordConfirm,
     });
+    
     res.status(201).json({
       status: "success",
       data: {
@@ -111,11 +112,36 @@ exports.login = async (req, res, next) => {
     };
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
+    const resetURL = `${req.protocol}://${req.get(
+      "host"
+    )}/api/v1/users/resetPassword/${resetToken}`;
+
+    // await sendEmail({
+    //   ////// For Sending Reset Password Mail //////
+    //   email: user.email,
+    //   subject: "Password Reset Token ( Valid For 10 Minutes )",
+    //   message: message,
+    // });
+
+    // const resetURL = `${req.protocol}://${req.get(
+    //   "host"
+    // )}/api/v1/users/resetPassword/${resetToken}`;
+
+    // await new Email(user, resetURL).sendPasswordReset();
+
+    await new Email(user, resetURL).sendWelcome();
+    res.status(200).json({
+      status: "success",
+      message: "Token Sent",
+    });
+
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({
       status: "success",
       token,
     });
+
+    
   } catch (error) {
     console.log(error);
   }

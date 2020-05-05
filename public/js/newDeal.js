@@ -35,7 +35,7 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   //   document.getElementById("categorySelect").value
   // );
 
-  form.append("photos", document.getElementById("photos").files[0]);
+  form.append("titleImg", document.getElementById("photos").files[0]);
 
   // form.append("corousel", document.getElementById("corousel").files[0]);
   form.append("titleDis", document.getElementById("titleDis").value);

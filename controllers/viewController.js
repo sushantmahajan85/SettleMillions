@@ -3,7 +3,7 @@ const Subscriber = require("./../schema/models/subscriberModel");
 const LikedDeal = require("./../schema/models/likedDealModel");
 const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
-const AppError = require("./../utils/appError");
+const appError = require("./../utils/appError");
 const exec = require("child_process").exec;
 const url = require("url");
 let cookieCount = 0;
@@ -360,6 +360,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     { _id: req.params.dealId },
     { $inc: { views: 1 } }
   );
+
   // var full_url = req.url;
   // // var full_url = document.URL; // Get current url
   // var url_array = full_url.split("/"); // Split the string into an array with / as separator
@@ -406,7 +407,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   });
 
   if (!deal) {
-    return next(new AppError("No Deal With That Id", 404));
+    return next(new appError("No Deal With That Id", 404));
   }
 
   const cookieOptions = {

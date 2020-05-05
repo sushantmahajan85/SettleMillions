@@ -58,8 +58,9 @@ exports.uploadDealImages = upload.fields([
 
 exports.resizeDealImages = catchAsync(async (req, res, next) => {
   console.log(req.files);
+  console.log(req.body);
 
-    if (!req.files || !req.files.titleImg || !req.files.corouselImgs) {
+    if (!req.files || !req.files.titleImg) {
       return next();
     }
 
@@ -69,10 +70,14 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
   req.body.titleImg = `deal-${req.user.id}-${Date.now()}-title.jpeg`;
 
   await sharp(req.files.titleImg[0].buffer)
-    // .resize(2000, 1333)
     .toFormat("jpeg")
     .jpeg({ quality: 90 })
     .toFile(`public/img/deals/${req.body.titleImg}`);
+    // .resize(2000, 1333)
+
+  if(!req.files.corouselImgs){ 
+    return next();
+  }
 
   req.body.corouselImgs = [];
   req.body.user = req.user.id;

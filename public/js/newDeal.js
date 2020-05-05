@@ -41,14 +41,13 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   form.append("titleDis", document.getElementById("titleDis").value);
   form.append("biggerDis", document.getElementById("biggerDis").value);
   // form.append("tags", document.getElementById("tags").value);
-  console.log(JSON.stringify(document.getElementById("tags").value));
-  var sushant = JSON.parse(document.getElementById("tags").value);
-  console.log(sushant[1].value);
-  let t = document.getElementById("tags").value;
+  if(document.getElementById("tags").value){
+    var tags = JSON.parse(document.getElementById("tags").value);
+    for(var key in tags){
+      form.append("tags", tags[key].value);
+    }
+  }
 
-  // let a = st.split("value");
-  // console.log(a);
-  console.log(t);
   console.log(document.getElementById("photo").files[0]);
   // passvaluec(form);
 

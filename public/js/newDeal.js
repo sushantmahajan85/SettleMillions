@@ -34,8 +34,8 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   //   "categorySelect",
   //   document.getElementById("categorySelect").value
   // );
-  if (document.getElementById("photos").files[0]) {
-    form.append("photo", document.getElementById("photos").files[0].name);
+  if (document.getElementById("photo").files[0]) {
+    form.append("photo", document.getElementById("photo").files[0]);
   }
   // form.append("corousel", document.getElementById("corousel").files[0]);
   form.append("titleDis", document.getElementById("titleDis").value);
@@ -48,7 +48,7 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
     }
   }
 
-  console.log(document.getElementById("photo").files[0]);
+  // console.log(document.getElementById("photo").files[0]);
   // passvaluec(form);
 
   // const dealName = document.getElementById("dealName").value;

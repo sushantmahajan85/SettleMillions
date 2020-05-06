@@ -7,6 +7,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/vendor/tagify-master/dist/tagify.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
+    
     <title>Document</title>
 
     <style>
@@ -219,6 +222,7 @@
           </select>
         </p>
         <p>
+          <label for="photos">Choose new photo</label>
           <input
             type="file"
             accept="image/*"
@@ -226,17 +230,37 @@
             id="photos"
             name="titleImg"
           />
-          <label for="photos">Choose new photo</label>
         </p>
-        <p>
+        <p id="caru">
+          <label for="corousel">new photo</label>
           <input
             type="file"
             accept="image/*"
             class="form__upload"
-            id="corousel"
+            id="corousel1"
             name="corouselImgs"
           />
-          <label for="corousel">new photo</label>
+          <input
+            type="file"
+            accept="image/*"
+            class="form__upload"
+            id="corousel2"
+            name="corouselImgs"
+          />
+          <input
+            type="file"
+            accept="image/*"
+            class="form__upload"
+            id="corousel3"
+            name="corouselImgs"
+          />
+          <input
+            type="file"
+            accept="image/*"
+            class="form__upload"
+            id="corousel4"
+            name="corouselImgs"
+          />
         </p>
       </div>
       <div class="tab">
@@ -495,6 +519,13 @@
 
       input.focus();
     </script> -->
+
+    <!-- <script>
+      $("#caru").on("change", "input", function(event){
+        $('#caru').append('<input type="file" id="corousel" name="corouselImgs[]"/>')
+      });
+  </script> -->
+
   </body>
 </html>
 

@@ -1,27 +1,25 @@
 .popup {
-  background-color: rgba(0, 0, 0, 0.808);
+  //   background-color: rgba(0, 0, 0, 0.808);
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
+  height: 50rem;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 99999999999999999;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
-  &:target {
-    opacity: 1;
-    visibility: visible;
-  }
+
+  // &:target {
+  //   opacity: 1;
+  //   // animation: cssAnimation 5s forwards;
+  //   visibility: visible;
+  // }
   &_content {
-    opacity: 0.95;
-    width: 75%;
-    height: 50rem;
+    opacity: 1;
+
     background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     display: table;
     border-radius: 5px;
@@ -89,5 +87,16 @@
     @include respond(tab-port) {
       text-align: center;
     }
+  }
+}
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

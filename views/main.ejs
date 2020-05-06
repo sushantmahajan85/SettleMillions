@@ -1199,7 +1199,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             <div class="footer-left">
 
                 <p class="footer-links">
-                    <a href="#popup">&#8226 Home</a>
+                    <a href="" id="homie">&#8226 Home</a>
                     <a href="#">&#8226 About</a>
                     <a href="#">&#8226 FAQ</a>
                     <a href="#">&#8226 Contact</a>
@@ -1397,8 +1397,9 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     <div class="popup_content">
         
            
-     <div class="popup_left"><img src="sass/img/about2.jpeg" alt="hi" class="popup_img">
-    <img src="sass/img/about3.jpeg" alt="hi" class="popup_img"></div>
+     <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
+    <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+</div>
     <div class="popup_right">
         <a href="#" class="popup_cross">&times;</a>
     <h1 class="heading-secondary popup_heading center">about us</h1>
@@ -1407,6 +1408,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     </div>
 </div>
 </div>
+<script>
+    document.getElementById('homie').addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('popup').style.opacity = 1;
+        document.getElementById('popup').style.visibility = 'visible';
+        window.setTimeout(() => {
+          
+          document.getElementById('popup').style.opacity = 0;
+          
+        document.getElementById('popup').style.visibility = 'hidden';
+    }, 3000);
+    });
+</script>
 </body>
 
 </html>

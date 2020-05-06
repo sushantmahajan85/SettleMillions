@@ -34,8 +34,21 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   //   "categorySelect",
   //   document.getElementById("categorySelect").value
   // );
-
-  form.append("titleImg", document.getElementById("photos").files[0]);
+  if(document.getElementById("photos").files[0]){
+    form.append("titleImg", document.getElementById("photos").files[0]);
+  }
+  if(document.getElementById("corousel1").files[0]){
+    form.append("corouselImgs", document.getElementById("corousel1").files[0]);
+  }
+  if(document.getElementById("corousel2").files[0]){
+    form.append("corouselImgs", document.getElementById("corousel2").files[0]);
+  }
+  if(document.getElementById("corousel3").files[0]){
+    form.append("corouselImgs", document.getElementById("corousel3").files[0]);
+  }
+  if(document.getElementById("corousel4").files[0]){
+    form.append("corouselImgs", document.getElementById("corousel4").files[0]);
+  }
 
   // form.append("corousel", document.getElementById("corousel").files[0]);
   form.append("titleDis", document.getElementById("titleDis").value);

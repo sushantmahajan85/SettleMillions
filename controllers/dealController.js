@@ -57,8 +57,9 @@ exports.uploadDealImages = upload.fields([
 //upload.array('images', 4);
 
 exports.resizeDealImages = catchAsync(async (req, res, next) => {
-  console.log(req.files);
-  console.log(req.body);
+  // console.log(req.files);
+  //console.log(req.body.user);
+  // console.log(req.user);
 
   if (!req.files || !req.files.titleImg) {
     return next();
@@ -74,6 +75,8 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
     .jpeg({ quality: 90 })
     .toFile(`public/img/deals/${req.body.titleImg}`);
   // .resize(2000, 1333)
+
+  //console.log(req.files.corouselImgs);
 
   if (!req.files.corouselImgs) {
     return next();

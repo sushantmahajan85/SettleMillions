@@ -18,16 +18,23 @@ const viewRouter = require("./routes/viewRoutes");
 const app = express();
 app.use(express.json());
 
-let segment_one; // Get the last part of the array (-1)
-let segment_two; // Get the last part of the array (-1)
-let segment_three;
-
 const limiter = rateLimit({
   max: 130,
   windowMs: 60 * 60 * 1000,
   message: "too many request from this ip..try again in an hour",
 });
-app.use("/deal", limiter);
+app.use("/deal", (req, res, next) => {
+  var full_url = req.url;
+  // var full_url = document.URL; // Get current url
+  var url_array = full_url.split("/"); // Split the string into an array with / as separator
+  var last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
+  req.lasty = last_segment;
+  next();
+});
+app.use("/deal", (req, res, next) => {
+  console.log(req.lasty);
+  next();
+});
 app.use("/api/v1/users", limiter);
 app.use("/api/v1/deals", limiter);
 app.use(compression());

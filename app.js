@@ -17,9 +17,9 @@ const viewRouter = require("./routes/viewRoutes");
 
 const app = express();
 app.use(express.json());
-
+let testy = "";
 const limiter = rateLimit({
-  max: 130,
+  max: 3,
   windowMs: 60 * 60 * 1000,
   message: "too many request from this ip..try again in an hour",
 });
@@ -29,14 +29,13 @@ app.use("/deal", (req, res, next) => {
   var url_array = full_url.split("/"); // Split the string into an array with / as separator
   var last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
   req.lasty = last_segment;
+  testy = req.lasty;
+  // console.log(testy);
   next();
 });
-app.use("/deal", (req, res, next) => {
-  console.log(req.lasty);
-  next();
-});
-app.use("/api/v1/users", limiter);
-app.use("/api/v1/deals", limiter);
+app.use(`/deal/${testy}`, limiter);
+// app.use("/api/v1/users", limiter);
+// app.use("/api/v1/deals", limiter);
 app.use(compression());
 
 app.set("view engine", "ejs");

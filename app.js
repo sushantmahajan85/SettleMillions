@@ -21,7 +21,7 @@ let testy = "";
 const limiter = rateLimit({
   max: 3,
   windowMs: 60 * 60 * 1000,
-  message: "too many request from this ip..try again in an hour",
+  message: "<h1>too many request from this ip..try again in an hour</h1>",
 });
 app.use("/deal", (req, res, next) => {
   var full_url = req.url;
@@ -73,7 +73,7 @@ app.use("/", viewRouter);
 app.all("*", (req, res, next) => {
   return next(new appError("route not implemented", 404));
 });
-app.use(globalErrorHandler);
+// app.use(globalErrorHandler);
 const port = process.env.PORT;
 app.listen(port || 4000, () => {
   console.log("Listening bro");

@@ -143,8 +143,8 @@ exports.login = async (req, res, next) => {
     // )}/api/v1/users/resetPassword/${resetToken}`;
 
     // await new Email(user, resetURL).sendPasswordReset();
-
-    // await new Email(user, resetURL).sendWelcome();
+    const url = "amazon.in";
+    await new Email(user, url).sendWelcome();
     // res.status(200).json({
     //   status: "success",
     //   message: "Token Sent",
@@ -286,7 +286,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   try {
     const resetURL = `${req.protocol}://${req.get(
       "host"
-    )}/api/v1/users/resetPassword/${resetToken}`;
+    )}/resetPassword/${resetToken}`;
 
     // await sendEmail({
     //   ////// For Sending Reset Password Mail //////

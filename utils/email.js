@@ -113,7 +113,7 @@ module.exports = class Email {
   }
 
   async send(template, subject) {
-    const html = ejs.renderFile(
+    const html = await ejs.renderFile(
       `${__dirname}/../views/emails/${template}.ejs`,
       {
         firstName: this.firstName,

@@ -70,10 +70,10 @@ app.use("/api/v1/reviews", reviewRouter);
 app.use("/api/v1/likedDeal", likedDealRouter);
 app.use("/api/v1/subscribe", subscriberRouter);
 app.use("/", viewRouter);
-app.all("*", (req, res, next) => {
-  return next(new appError("route not implemented", 404));
-});
-// app.use(globalErrorHandler);
+// app.all("*", (req, res, next) => {
+//   return next(new appError("route not implemented", 404));
+// });
+app.use(globalErrorHandler);
 const port = process.env.PORT;
 app.listen(port || 4000, () => {
   console.log("Listening bro");

@@ -68,7 +68,7 @@ app.use(cookieParser());
 //     console.log(req.cookies);
 //     next();
 // });
-app.use("/?dealOps=report", reportRouter);
+app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/deals", dealRouter);
 app.use("/api/v1/reviews", reviewRouter);

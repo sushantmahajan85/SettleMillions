@@ -188,7 +188,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                             <form action="/" method="GET" class=reportx>
                                 <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
-                                    <option value=<%= `${deal._id}/report` %>>Report</option>
+                                    <option id="report_btn" onClick="passvalueR()" value=<%= `report/${deal._id}` %>>Report</option>
                                     <option value=<%= `${deal._id}/like` %>>Like</option>
                                 </select>
                             </form>
@@ -1248,6 +1248,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
         </footer>
     </div>
+
+    <script src="/js/report.js"></script>
 
     <script>
         $('.main-content .owl-carousel').owlCarousel({

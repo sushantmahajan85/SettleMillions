@@ -1,7 +1,31 @@
 // console.log('hey there');
 //const Deal = require('./../../schema/models/dealModel');
+const passvaluePa = async function(dealId, report) {
+    console.log("hey there");
+  
+    try {
+      const result = await axios({
+        method: "PATCH",
+        url: `/api/v1/deals/${dealId}`,
+        data: {
+          $inc: { reportCount: 1 },
+        },
+      });
+      if (result.data.status === "success") {
+        alert("inc");
+        console.log("inc");
+        // window.setTimeout(() => {
+        //     location.assign('/');
+        // }, 1000);
+        //el.form.submit();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-const passvalueR = async function (el,dealId,userId) {
+
+const passvalueR = async function (dealId,userId,count) {
     console.log('hey there');
 
     try {
@@ -15,16 +39,16 @@ const passvalueR = async function (el,dealId,userId) {
         });
         if (result.data.status === 'success') {
             alert('reported');
-            console.log('reported')
+            console.log('reported');
             // window.setTimeout(() => {
             //     location.assign('/');
             // }, 1000);
             //el.form.submit();
+            passvaluePa(dealId,count);
         }
 
     } catch (err) {
         console.log(err);
-
     }
 };
 

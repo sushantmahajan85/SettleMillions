@@ -1,4 +1,4 @@
-// import "@babel/polyfill";
+// import { showAlert } from "./alerts";
 
 const passvalue = async (email, password) => {
   const hideAlert = () => {

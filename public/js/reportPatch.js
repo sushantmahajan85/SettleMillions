@@ -1,7 +1,7 @@
 // console.log('hey there');
 //const Deal = require('./../../schema/models/dealModel');
 
-const passvalueR = async function(dealId, report) {
+const passvaluePa = async function(dealId, report) {
   console.log("hey there");
 
   try {
@@ -9,7 +9,7 @@ const passvalueR = async function(dealId, report) {
       method: "PATCH",
       url: `/api/v1/deals/${dealId}`,
       data: {
-        reportCount: { $inc: 1 },
+        $inc: { reportCount: 1 },
       },
     });
     if (result.data.status === "success") {

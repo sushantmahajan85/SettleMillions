@@ -1397,9 +1397,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         document.getElementById('popup').style.display = 'block';
 
         document.getElementById('report_btn').addEventListener('click', e => {
-            passvalueR(el,dealKiId,reporter);
-            passvaluePa(dealKiId,reportCount);
-            
+            passvalueR(dealKiId,reporter,reportCount);
+            // passvaluePa(dealKiId,reportCount);
             
             //el.form.submit();
 
@@ -1429,7 +1428,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
 </div>
     <div class="popup_right">
-        <div class="popup_cross" id="popup_cross" onclick="closePopup()">&times;</div>
+        <div class="popup_cross" id="popup_cross">&times;</div>
     <h1 class="heading-secondary popup_heading center">about us</h1>
     <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
     

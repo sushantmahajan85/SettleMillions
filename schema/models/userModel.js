@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Name is Required"],
       trim: true,
-      maxLength: [40, "Name Too Large"],
+      maxLength: [20, "Name Too Large"],
       minLength: [0, "Name Too Small"],
       //validate: [validator.isAlpha, 'Tour Name Should Not Have Numbers']
     },

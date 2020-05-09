@@ -1,5 +1,4 @@
-// export
-const hideAlert = () => {
+export const hideAlert = () => {
   const el = document.querySelector(".alert");
   if (el) {
     el.parentElement.removeChild(el);

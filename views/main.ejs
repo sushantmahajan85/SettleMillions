@@ -191,7 +191,12 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                             <form action="/" method="GET" class=reportx>
                                 <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
+<<<<<<< HEAD
+                                    <option onClick="passvalueR()"><div id="report_btn" href="#popup">Report</a></option>
+                                    <!-- <div onClick="passvalueR()" value=<%= `report/${deal._id}` %>><a id="report_btn" href="#popup">Report</a></div> -->
+=======
                                     <option id="report_btn" value=<%= `report/${deal._id}` %>>Report</option>
+>>>>>>> 9d22820857274fed37c64d16dff4517525b134b4
                                     <option value=<%= `${deal._id}/like` %>>Like</option>
                                 </select>
                             </form>
@@ -1435,12 +1440,13 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     });
 </script>
 <script>
-    function closePopup(el){ 
+    document.getElementById('popup_cross').addEventListener('click', e => {
+        e.preventDefault();
         
           document.getElementById('popup').style.opacity = 0;
           
         document.getElementById('popup').style.visibility = 'hidden';
-    }
+    });
 </script>
 </body>
 

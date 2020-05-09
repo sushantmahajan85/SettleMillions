@@ -73,24 +73,6 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-    <!-- <div class="modal fade" tabindex="-1" style="width: 50%; padding: 0; float: right; display: none;" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
     <div class="page-content">
 
         <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">TRENDING</div>
@@ -207,7 +189,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                             </div>
 
                             <form action="/" method="GET" class=reportx>
-                                <select class="three-dots" id="change" name="dealOps">
+                                <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
                                     <option id="report_btn" value=<%= `report/${deal._id}` %>>Report</option>
                                     <option value=<%= `${deal._id}/like` %>>Like</option>
@@ -1404,19 +1386,20 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 </script>
 
 <script>
-    // function dealOperations(el){
-    //     // el.form.submit();
-    //     // window.setTimeout(() => {
-    //     //         location.assign('/');
-    //     // }, 100);
-    // }
+    function dealOperations(el){
+        // el.form.submit();
+        // window.setTimeout(() => {
+        //         location.assign('/');
+        // }, 100);
+        document.getElementById('popup').style.display = 'block';
+    }
     //Use the id of the form instead of #change
-    $('#change').change(function(){
-        //this is just getting the value that is selected
-        // var title = $(this).val();
-        // $('.modal-title').html(title);
-        $('.popup').modal('show');
-    });
+    // $('#change').change(function(){
+    //     //this is just getting the value that is selected
+    //     // var title = $(this).val();
+    //     // $('.modal-title').html(title);
+    //     $('.popup').modal('show');
+    // });
 </script>
 <div class="popup" id="popup">
         <!-- <div class="bg-video">

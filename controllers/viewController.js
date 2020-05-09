@@ -131,12 +131,12 @@ exports.mainPage = catchAsync(async (req, res) => {
     let joChahiye = req.query.dealOps.split("/");
     console.log(joChahiye);
 
-    if (joChahiye[0] == "report") {
-      await Deal.findOneAndUpdate(
-        { _id: joChahiye[1] },
-        { $inc: { reportCount: 1 } }
-      );
-    }
+    // if (joChahiye[0] == "report") {
+    //   await Deal.findOneAndUpdate(
+    //     { _id: joChahiye[1] },
+    //     { $inc: { reportCount: 1 } }
+    //   );
+    // }
 
     if (joChahiye[1] == "delete") {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });

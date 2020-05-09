@@ -14,8 +14,8 @@ const passvalueR = async function () {
             method: 'POST',
             url: '/api/v1/report',
             data: {
-                whichDeal: id,
-                whoReported: id
+                whichDeal: "5e920424a48349272cb76af9",
+                whoReported: "5ea433189f42469b40c70695"
             }
         });
         if (result.data.status === 'success') {

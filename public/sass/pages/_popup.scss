@@ -7,8 +7,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999999999999999;
-  opacity: 0;
-  visibility: hidden;
+  // opacity: 0;
+  // visibility: hidden;
+  display: none;
   transition: all 0.3s;
 
   // &:target {
@@ -46,7 +47,7 @@
     &:visited {
       font-size: 4rem;
       text-decoration: none;
-      color: white;
+      color: black;
       font-weight: 800;
       position: absolute;
       top: 0.7rem;

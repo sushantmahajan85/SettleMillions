@@ -1393,10 +1393,14 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         console.log($(el).val());
         var dealKiId = $(el).val().split('/')[1];
         var reporter = $(el).val().split('/')[2];
+        var reportCount = 1;
         document.getElementById('popup').style.display = 'block';
 
         document.getElementById('report_btn').addEventListener('click', e => {
             passvalueR(el,dealKiId,reporter);
+            passvaluePa(dealKiId,reportCount);
+            
+            
             //el.form.submit();
 
             // window.setTimeout(() => {

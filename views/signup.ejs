@@ -116,13 +116,9 @@
       </script>
       
       
-      <!-- //  The JS SDK Login Button 
+      <!-- //  The JS SDK Login Button  -->
       
-      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-      </fb:login-button>
       
-      <div id="status">
-      </div> -->
 
     <!-- FB SDK -->
 
@@ -131,6 +127,11 @@
             <h2 class="wrap_title">Your Deal</h2>
             <h4 class="wrap_subtext">Sign up to see the best deals from the best platforms.</h4>
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+            
+            <div id="status">
+            </div>
             <!-- <button type="button" class="wrap_signup-via-google g-signin2" data-onsuccess="onSignIn">
                 Continue with Google 
             </button> -->
@@ -259,8 +260,8 @@
 
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
-    <!-- <script src="js/fbSignup.js"></script>
-    <script src="js/main.js"></script> -->
+    <script src="js/fbSignup.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 
 
         

@@ -14,26 +14,30 @@ const reviewRouter = require("./routes/reviewRoutes");
 const likedDealRouter = require("./routes/likedDealRoutes");
 const subscriberRouter = require("./routes/subscribeRoutes");
 const viewRouter = require("./routes/viewRoutes");
+const reportRouter = require("./routes/reportRoutes");
 
 const app = express();
 app.use(express.json());
-let testy = "";
+// let testy = "";
+
+// app.use("/deal", (req, res, next) => {
+//   var full_url = req.url;
+//   // var full_url = document.URL; // Get current url
+//   var url_array = full_url.split("/"); // Split the string into an array with / as separator
+//   var last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
+//   req.lasty = last_segment;
+//   testy = "/deal/" + req.lasty;
+//   console.log(testy);
+//   next();
+// });
+
 const limiter = rateLimit({
   max: 3,
   windowMs: 60 * 60 * 1000,
   message: "<h1>too many request from this ip..try again in an hour</h1>",
 });
-app.use("/deal", (req, res, next) => {
-  var full_url = req.url;
-  // var full_url = document.URL; // Get current url
-  var url_array = full_url.split("/"); // Split the string into an array with / as separator
-  var last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
-  req.lasty = last_segment;
-  testy = req.lasty;
-  // console.log(testy);
-  next();
-});
-app.use(`/deal/${testy}`, limiter);
+
+app.use("/deal/", limiter);
 // app.use("/api/v1/users", limiter);
 // app.use("/api/v1/deals", limiter);
 app.use(compression());
@@ -64,6 +68,7 @@ app.use(cookieParser());
 //     console.log(req.cookies);
 //     next();
 // });
+app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/deals", dealRouter);
 app.use("/api/v1/reviews", reviewRouter);

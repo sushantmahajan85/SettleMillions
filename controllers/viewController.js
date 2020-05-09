@@ -129,11 +129,11 @@ exports.autocomplete = catchAsync(async (req, res) => {
 exports.mainPage = catchAsync(async (req, res) => {
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    console.log(joChahiye[0]);
+    console.log(joChahiye);
 
-    if (joChahiye[1] == "report") {
+    if (joChahiye[0] == "report") {
       await Deal.findOneAndUpdate(
-        { _id: joChahiye[0] },
+        { _id: joChahiye[1] },
         { $inc: { reportCount: 1 } }
       );
     }

@@ -188,13 +188,15 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 </ul>
                             </div>
 
+                        <% if(user){ %>
                             <form action="/" method="GET" class=reportx>
                                 <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
-                                    <option value=<%= `report/${deal._id}` %>>Report</option>
+                                    <option value=<%= `report/${deal._id}/${user._id}` %>>Report</option>
                                     <option value=<%= `${deal._id}/like` %>>Like</option>
                                 </select>
                             </form>
+                        <% } %>
 
                             <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
                             
@@ -1388,16 +1390,18 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
 <script>
     function dealOperations(el){
-        console.log(el.val());
+        console.log($(el).val());
+        var dealKiId = $(el).val().split('/')[1];
+        var reporter = $(el).val().split('/')[2];
         document.getElementById('popup').style.display = 'block';
 
         document.getElementById('report_btn').addEventListener('click', e => {
-            passvalueR(el);
+            passvalueR(el,dealKiId,reporter);
             //el.form.submit();
 
-            window.setTimeout(() => {
-                    location.assign('/');
-            }, 100);
+            // window.setTimeout(() => {
+            //         location.assign('/');
+            // }, 100);
         });
     }
     //Use the id of the form instead of #change

@@ -2,7 +2,13 @@
 .section-contact {
   position: relative;
   padding: 35rem 0;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#6d6e6e), to(#8a8888));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#6d6e6e),
+    to(#8a8888)
+  );
   background-image: linear-gradient(to right bottom, #6d6e6e, #8a8888);
 }
 
@@ -11,21 +17,33 @@
   width: 75%;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.726);
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.705) 0%, rgba(255, 255, 255, 0.705) 50%, transparent 50%), url(../img/photo-1541592553160-82008b127ccb.jpg);
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.705) 0%,
+      rgba(255, 255, 255, 0.705) 50%,
+      transparent 50%
+    ),
+    url(../img/photo-1541592553160-82008b127ccb.jpg);
   border-radius: 1rem;
   -webkit-box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0.274);
-          box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0.274);
+  box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0.274);
   background-size: cover;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 56.25em) {
   .section-contact_area {
-    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.705) 0%, rgba(255, 255, 255, 0.705) 75%, transparent 75%), url(../img/photo-1541592553160-82008b127ccb.jpg);
+    background-image: linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.705) 0%,
+        rgba(255, 255, 255, 0.705) 75%,
+        transparent 75%
+      ),
+      url(../img/photo-1541592553160-82008b127ccb.jpg);
     height: 45rem;
   }
 }
@@ -42,7 +60,7 @@
 
 .section-contact_left {
   -webkit-transform: translateX(4rem);
-          transform: translateX(4rem);
+  transform: translateX(4rem);
 }
 
 #name {
@@ -52,7 +70,7 @@
   text-align: start;
   background: rgba(255, 255, 255, 0.397);
   margin-bottom: 1.6rem;
-  font-family: 'Signika', Verdana, sans-serif;
+  font-family: "Signika", Verdana, sans-serif;
   font-size: 1.4rem;
 }
 
@@ -79,7 +97,7 @@
   margin-bottom: 1.6rem;
   text-align: start;
   padding: 1rem 3rem;
-  font-family: 'Signika', Verdana, sans-serif;
+  font-family: "Signika", Verdana, sans-serif;
   font-size: 1.4rem;
   background: rgba(255, 255, 255, 0.397);
 }
@@ -104,7 +122,7 @@
   display: block;
   margin-bottom: 1.6rem;
   background: rgba(255, 255, 255, 0.397);
-  font-family: 'Signika', Verdana, sans-serif;
+  font-family: "Signika", Verdana, sans-serif;
   font-size: 1.4rem;
   width: 38%;
   padding: 6rem 3rem;
@@ -136,7 +154,7 @@
   padding: 1rem 3rem;
   outline: none;
   border: none;
-  font-family: 'Signika', Verdana, sans-serif;
+  font-family: "Signika", Verdana, sans-serif;
   font-size: 1.4rem;
 }
 
@@ -163,14 +181,14 @@
 .input {
   outline: none;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.082);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.082);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.082);
   outline: none;
   border: none;
 }
 
 .input:focus {
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.377);
-          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.377);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.377);
   border-bottom: 3px solid #4ce646;
   outline: none;
   border: none;
@@ -239,7 +257,7 @@ body a {
 
 body a:hover {
   -webkit-text-emphasis: none;
-          text-emphasis: none;
+  text-emphasis: none;
   text-decoration: none;
 }
 
@@ -261,7 +279,7 @@ h2 {
 
 h2:hover {
   -webkit-text-emphasis: none;
-          text-emphasis: none;
+  text-emphasis: none;
   text-decoration: none;
 }
 
@@ -270,11 +288,11 @@ h2:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-left: -1rem;
 }
 
@@ -284,7 +302,7 @@ h2:hover {
 
 .heading-normal:hover {
   -webkit-text-emphasis: none;
-          text-emphasis: none;
+  text-emphasis: none;
   text-decoration: none;
 }
 
@@ -394,7 +412,8 @@ h2:hover {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,15 +495,15 @@ a.show-hide-link {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   padding-top: 8rem;
 }
 
@@ -505,7 +524,8 @@ img {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -519,9 +539,9 @@ img {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Position the "next button" to the right */
@@ -531,7 +551,8 @@ img {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -568,7 +589,8 @@ img {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -582,7 +604,7 @@ img {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -591,7 +613,7 @@ img {
 
 @keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -600,7 +622,9 @@ img {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next, .text {
+  .prev,
+  .next,
+  .text {
     font-size: 11px;
   }
 }
@@ -646,10 +670,10 @@ img {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 a {
@@ -662,11 +686,11 @@ figure {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 24rem;
   height: 35rem;
   padding: 1.5rem 1.5rem;
@@ -675,14 +699,16 @@ figure {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 10px;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow: hidden;
 }
 
-figure:before, figure:after {
+figure:before,
+figure:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -691,22 +717,22 @@ figure:before, figure:after {
 }
 
 figure:before {
-  content: '';
+  content: "";
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 0;
 }
 
 figure:after {
-  content: '';
+  content: "";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow: hidden;
@@ -714,7 +740,7 @@ figure:after {
 
 figure:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 figure .date {
@@ -725,15 +751,15 @@ figure .date {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   background-color: rgba(241, 196, 15, 0.8);
   text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
@@ -747,7 +773,7 @@ figure .date span {
 }
 
 figure .date span:first-child {
-  font-family: 'Source Code Pro', sans-serif;
+  font-family: "Source Code Pro", sans-serif;
   font-size: 2rem;
   font-weight: 900;
 }
@@ -766,7 +792,7 @@ figure figcaption {
 
 figure figcaption h4 {
   margin: 0 0 5px;
-  font-family: 'Source Code Pro', sans-serif;
+  font-family: "Source Code Pro", sans-serif;
   font-size: 2rem;
   line-height: 1.35;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
@@ -787,8 +813,8 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .dealPageContent {
@@ -796,7 +822,7 @@ figure figcaption p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .deal-carousel {
@@ -824,7 +850,7 @@ figure figcaption p {
   border-bottom: 1px solid grey;
   padding: 2rem 2rem 1rem 1rem;
   font-size: 2.4rem !important;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .deal-deets_price {
@@ -868,7 +894,7 @@ figure figcaption p {
 
 .deal-deets_views {
   color: #7a7a7a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-right: 2rem;
   margin-left: 0.56rem;
   border-radius: 1rem;
@@ -879,7 +905,7 @@ figure figcaption p {
 .deal-deets_time {
   color: #7a7a7a;
   word-spacing: 0.3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: -0.56rem;
   border-radius: 1rem;
   font-size: 1.8rem;
@@ -909,8 +935,8 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
   line-height: 1;
@@ -929,8 +955,8 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: inherit;
 }
 
@@ -944,8 +970,8 @@ figure figcaption p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 3rem 0;
 }
 
@@ -974,8 +1000,8 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -988,7 +1014,7 @@ figure figcaption p {
   display: -ms-flexbox;
   display: flex;
   color: white;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
   width: 120rem;
   margin: 5rem 0;
 }
@@ -1078,7 +1104,7 @@ figure figcaption p {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .carousel_container {
@@ -1099,8 +1125,8 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 12%;
   height: inherit;
 }
@@ -1111,14 +1137,14 @@ figure figcaption p {
 
 .small-pic {
   -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
   height: 100%;
   width: 100%;
 }
 
 .deal-carousel-img {
   -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
   height: 100%;
   width: 100%;
 }
@@ -1152,8 +1178,8 @@ figure figcaption p {
   font-size: 20px;
   border-radius: 0 3px 3px 0;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   z-index: 20000000000000;
 }
@@ -1229,8 +1255,8 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 20%;
   float: right;
   background-color: white;
@@ -1263,7 +1289,13 @@ figure figcaption p {
   -webkit-box-flex: 32rem;
   -ms-flex: 32rem 0 0px;
   flex: 32rem 0 0;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#7dd56f), to(#28b487));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#7dd56f),
+    to(#28b487)
+  );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   padding: 4rem 0;
 }
@@ -1486,11 +1518,11 @@ figure figcaption p {
 }
 
 .containerSettings {
-  background: #FFFFFF;
+  background: #ffffff;
   height: 120rem;
   position: relative;
   -webkit-box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
-          box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
 }
 
 .CTA {
@@ -1501,25 +1533,25 @@ figure figcaption p {
   margin-bottom: 90px;
   position: absolute;
   z-index: 1;
-  background: #7ED386;
+  background: #7ed386;
   font-size: 1em;
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
 .CTA h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 10px;
   margin-left: 9px;
 }
 
 .CTA:hover {
-  background: #3FB6A8;
+  background: #3fb6a8;
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .leftbox {
@@ -1527,9 +1559,9 @@ figure figcaption p {
   position: absolute;
   width: 20%;
   height: 100%;
-  background: #7ED386;
+  background: #7ed386;
   -webkit-box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
-          box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
+  box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
 }
 
 .rightbox {
@@ -1540,7 +1572,8 @@ figure figcaption p {
 }
 
 .card {
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -1562,16 +1595,16 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .card__picture {
@@ -1581,7 +1614,7 @@ figure figcaption p {
 
 .deal-photo {
   -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
   height: 22rem;
   width: 100%;
 }
@@ -1643,16 +1676,16 @@ figure figcaption p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-size: 2rem;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 0.9rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
 }
 
@@ -1681,7 +1714,8 @@ figure figcaption p {
   text-align: start;
   font-weight: 500;
   margin-right: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .price {
@@ -1714,9 +1748,9 @@ footer {
 .footer-distributed {
   background-color: #292c2f;
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   text-align: left;
   font: bold 10px sans-serif;
@@ -1953,9 +1987,9 @@ footer {
   width: 42%;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
-          box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
   margin-bottom: 4rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid grey;
@@ -1966,7 +2000,7 @@ footer {
 
 .big-deal:hover {
   -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .big-deal_img {
@@ -1983,7 +2017,7 @@ footer {
 
 .big-deal_picture {
   -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
   height: 26rem;
   width: 100%;
 }
@@ -2026,8 +2060,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .big-deal_percent {
@@ -2049,15 +2083,15 @@ footer {
   padding: 0%;
   margin: 0%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 html {
   font-size: 62.5%;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @media (max-width: 75em) {
@@ -2143,7 +2177,7 @@ html {
 body {
   background-size: cover;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .popup_image {
@@ -2377,8 +2411,8 @@ body {
   z-index: 99999999999999999;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .popup:target {
@@ -2387,7 +2421,7 @@ body {
 }
 
 .popup_content {
-  opacity: .95;
+  opacity: 0.95;
   width: 75%;
   height: 50rem;
   background-color: white;
@@ -2395,7 +2429,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   display: table;
   border-radius: 5px;
@@ -2446,7 +2480,8 @@ body {
   }
 }
 
-.popup_cross:link, .popup_cross:visited {
+.popup_cross:link,
+.popup_cross:visited {
   font-size: 4rem;
   text-decoration: none;
   color: white;
@@ -2457,7 +2492,8 @@ body {
 }
 
 @media (max-width: 56.25em) {
-  .popup_cross:link, .popup_cross:visited {
+  .popup_cross:link,
+  .popup_cross:visited {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -2465,10 +2501,12 @@ body {
 }
 
 @media (max-width: 1380px) {
-  .popup_cross:link .p, .popup_cross:visited .p {
+  .popup_cross:link .p,
+  .popup_cross:visited .p {
     font-size: 2rem;
   }
-  .popup_cross:link .para, .popup_cross:visited .para {
+  .popup_cross:link .para,
+  .popup_cross:visited .para {
     font-size: 1.5rem;
     margin-right: 1rem;
   }
@@ -2499,26 +2537,26 @@ body {
 
 .popup_paragraph {
   -webkit-column-count: 2;
-          column-count: 2;
+  column-count: 2;
   font-size: 1.7rem;
   font-weight: 600;
   -webkit-column-rule: 0.5px solid darkgrey;
-          column-rule: 0.5px solid darkgrey;
+  column-rule: 0.5px solid darkgrey;
   -webkit-column-gap: 4rem;
-          column-gap: 4rem;
+  column-gap: 4rem;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 @media (max-width: 56.25em) {
   .popup_paragraph {
     -webkit-column-count: unset;
-            column-count: unset;
+    column-count: unset;
     -webkit-column-rule: unset;
-            column-rule: unset;
+    column-rule: unset;
     -webkit-column-gap: unset;
-            column-gap: unset;
+    column-gap: unset;
     text-align: start;
   }
 }
@@ -2578,7 +2616,8 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem;
 }
@@ -2710,7 +2749,8 @@ rgba(0, 0, 0, 0.349);
 
 .heading-normal {
   font-size: 1.76rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: #131212;
 }
 
@@ -2743,7 +2783,8 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white;
@@ -2785,8 +2826,8 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .item2:hover {
@@ -2818,8 +2859,8 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 30%;
   float: right;
   background-color: white;

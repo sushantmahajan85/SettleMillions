@@ -32,9 +32,9 @@ app.use(express.json());
 // });
 
 const limiter = rateLimit({
-    max: 150,
-    windowMs: 60 * 60 * 1000,
-    message: "too many request from this ip..try again in an hour"
+  max: 3,
+  windowMs: 60 * 60 * 1000,
+  message: "<h1>too many request from this ip..try again in an hour</h1>",
 });
 
 app.use("/deal/", limiter);
@@ -75,9 +75,9 @@ app.use("/api/v1/reviews", reviewRouter);
 app.use("/api/v1/likedDeal", likedDealRouter);
 app.use("/api/v1/subscribe", subscriberRouter);
 app.use("/", viewRouter);
-app.all("*", (req, res, next) => {
-  return next(new appError("route not implemented", 404));
-});
+// app.all("*", (req, res, next) => {
+//   return next(new appError("route not implemented", 404));
+// });
 app.use(globalErrorHandler);
 const port = process.env.PORT;
 app.listen(port || 4000, () => {

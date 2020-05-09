@@ -20,6 +20,14 @@ let rec3 = "";
 let rec4 = "";
 let rec5 = "";
 
+exports.forgot = (req, res) => {
+  res.status(200).render("forgot");
+};
+
+exports.reset = (req, res) => {
+  res.status(200).render("reset");
+};
+
 exports.getLoginForm = (req, res) => {
   res.status(200).render("login");
 };

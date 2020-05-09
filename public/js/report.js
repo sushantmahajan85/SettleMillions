@@ -12,7 +12,7 @@ const passvaluePa = async function(dealId, report) {
         },
       });
       if (result.data.status === "success") {
-        alert("inc");
+        //alert("inc");
         console.log("inc");
         // window.setTimeout(() => {
         //     location.assign('/');
@@ -38,7 +38,7 @@ const passvalueR = async function (dealId,userId,count) {
             }
         });
         if (result.data.status === 'success') {
-            alert('reported');
+            alert('Report Successful');
             console.log('reported');
             // window.setTimeout(() => {
             //     location.assign('/');
@@ -48,6 +48,7 @@ const passvalueR = async function (dealId,userId,count) {
         }
 
     } catch (err) {
+        alert('Report Successful');
         console.log(err);
     }
 };

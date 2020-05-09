@@ -188,7 +188,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                             <form action="/" method="GET" class=reportx>
                                 <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
-                                    <option id="report_btn" onClick="passvalueR()" value=<%= `report/${deal._id}` %>><a href="#popup">Report</a></option>
+                                    <option onClick="passvalueR()"><div id="report_btn" href="#popup">Report</a></option>
+                                    <!-- <div onClick="passvalueR()" value=<%= `report/${deal._id}` %>><a id="report_btn" href="#popup">Report</a></div> -->
                                     <option value=<%= `${deal._id}/like` %>>Like</option>
                                 </select>
                             </form>
@@ -1412,6 +1413,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 </div>
 <script>
     document.getElementById('homie').addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('popup').style.opacity = 1;
+        document.getElementById('popup').style.visibility = 'visible';
+        window.setTimeout(() => {
+          
+          document.getElementById('popup').style.opacity = 0;
+          
+        document.getElementById('popup').style.visibility = 'hidden';
+    }, 3000);
+    });
+</script>
+<script>
+    document.getElementById('report_btn').addEventListener('click', e => {
         e.preventDefault();
         document.getElementById('popup').style.opacity = 1;
         document.getElementById('popup').style.visibility = 'visible';

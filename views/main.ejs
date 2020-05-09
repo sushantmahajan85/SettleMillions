@@ -191,7 +191,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                             <form action="/" method="GET" class=reportx>
                                 <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
-                                    <option id="report_btn" value=<%= `report/${deal._id}` %>>Report</option>
+                                    <option value=<%= `report/${deal._id}` %>>Report</option>
                                     <option value=<%= `${deal._id}/like` %>>Like</option>
                                 </select>
                             </form>
@@ -1253,6 +1253,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     </div>
 
     <script src="/js/report.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <script>
         $('.main-content .owl-carousel').owlCarousel({
@@ -1387,11 +1388,17 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
 <script>
     function dealOperations(el){
-        // el.form.submit();
-        // window.setTimeout(() => {
-        //         location.assign('/');
-        // }, 100);
+        
         document.getElementById('popup').style.display = 'block';
+
+        document.getElementById('report_btn').addEventListener('click', e => {
+            passvalueR(el);
+            //el.form.submit();
+
+            window.setTimeout(() => {
+                    location.assign('/');
+            }, 100);
+        });
     }
     //Use the id of the form instead of #change
     // $('#change').change(function(){
@@ -1419,6 +1426,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
     
     </div>
+
+    <button id="report_btn">Report</button>
 </div>
 </div>
 <script>

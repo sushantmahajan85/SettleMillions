@@ -1,12 +1,12 @@
 // console.log('hey there');
 //const Deal = require('./../../schema/models/dealModel');
 
-const passvalueR = async function () {
+const passvalueR = async function (el) {
     console.log('hey there');
 
     var url = window.location.pathname;
     var id = "123";//url.substring(url.lastIndexOf('/') + 1);
-    console.log(url);
+    console.log(el.form);
     //const deal = await Deal.findById(id);
 
     try {
@@ -21,13 +21,15 @@ const passvalueR = async function () {
         if (result.data.status === 'success') {
             alert('reported');
             console.log('reported')
-            window.setTimeout(() => {
-                location.assign('/');
-            }, 1000);
+            // window.setTimeout(() => {
+            //     location.assign('/');
+            // }, 1000);
+            el.form.submit();
         }
 
     } catch (err) {
         console.log(err);
+
     }
 };
 

@@ -1,4 +1,19 @@
 const passvalueReset = async (password, passwordConfirm) => {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
   var full_url = window.location.pathname;
   // var full_url = document.URL; // Get current url
   var url_array = full_url.split("/"); // Split the string into an array with / as separator
@@ -23,13 +38,14 @@ const passvalueReset = async (password, passwordConfirm) => {
       },
     });
     if (result.data.status === "success") {
-      alert("sign up successful");
+      // alert("sign up successful");
+      showAlert("success", "New Password set successfully");
       window.setTimeout(() => {
         location.assign("/");
       }, 2000);
     }
   } catch (err) {
-    // console.log(err);
+    showAlert("error", err.response.data.message);
   }
 };
 

@@ -1,6 +1,21 @@
 // console.log('hey there');
 
 const passvalueo = async function() {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
   console.log("hey there");
   var full_url = window.location.pathname;
   // var full_url = document.URL; // Get current url
@@ -16,14 +31,15 @@ const passvalueo = async function() {
       },
     });
     if (result.data.status === "success") {
-      alert("liked");
+      // alert("liked");
+      showAlert("success", "Liked");
       console.log("liked");
       window.setTimeout(() => {
         location.assign("/");
       }, 1000);
     }
   } catch (err) {
-    console.log(err);
+    showAlert("error", err.response.data.message);
   }
 };
 

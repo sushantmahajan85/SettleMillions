@@ -1,4 +1,19 @@
 const passvaluey = async (current, npassword, cpassword) => {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
   try {
     const result = await axios({
       method: "PATCH",
@@ -10,14 +25,15 @@ const passvaluey = async (current, npassword, cpassword) => {
       },
     });
     if (result.data.status === "success") {
-      alert("login successful");
+      // alert("login successful");
+      showAlert("success", "New password successfully set");
       window.setTimeout(() => {
         location.assign("/subscriptions");
       }, 1000);
     }
     // console.log(result);
   } catch (err) {
-    console.log(err.response.data);
+    showAlert("error", err.response.data.message);
   }
 };
 

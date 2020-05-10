@@ -1,4 +1,19 @@
 const passvaluec = async (data) => {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
   try {
     const result = await axios({
       method: "POST",
@@ -12,13 +27,14 @@ const passvaluec = async (data) => {
       //   dealPrice,
     });
     if (result.data.status === "success") {
-      alert("deal created");
+      // alert("deal created");
+      showAlert("success", "Deal successfully Created");
       window.setTimeout(() => {
         location.assign("/");
       }, 1000);
     }
   } catch (err) {
-    // console.log(err);
+    showAlert("error", err.response.data.message);
   }
 };
 
@@ -34,19 +50,19 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   //   "categorySelect",
   //   document.getElementById("categorySelect").value
   // );
-  if(document.getElementById("photos").files[0]){
+  if (document.getElementById("photos").files[0]) {
     form.append("titleImg", document.getElementById("photos").files[0]);
   }
-  if(document.getElementById("corousel1").files[0]){
+  if (document.getElementById("corousel1").files[0]) {
     form.append("corouselImgs", document.getElementById("corousel1").files[0]);
   }
-  if(document.getElementById("corousel2").files[0]){
+  if (document.getElementById("corousel2").files[0]) {
     form.append("corouselImgs", document.getElementById("corousel2").files[0]);
   }
-  if(document.getElementById("corousel3").files[0]){
+  if (document.getElementById("corousel3").files[0]) {
     form.append("corouselImgs", document.getElementById("corousel3").files[0]);
   }
-  if(document.getElementById("corousel4").files[0]){
+  if (document.getElementById("corousel4").files[0]) {
     form.append("corouselImgs", document.getElementById("corousel4").files[0]);
   }
 

@@ -38,7 +38,7 @@ exports.getSignupForm = (req, res) => {
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
   const user = await User.findById(req.user).populate({
-    path: "likedDeals",
+    path: "likedDeals subscribers",
   });
   res.status(200).render("likedDeals", { user });
 });
@@ -326,17 +326,14 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     const tempDeals = await Deal.find();
 
-    for(var deal of tempDeals){
+    for (var deal of tempDeals) {
       var now = new Date(Date.now());
-      var tem = (now.getTime() - deal.time.getTime())/3600000;
-      tem = deal.views/tem;
+      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      tem = deal.views / tem;
 
       //console.log(deal._id);
 
-      await Deal.findByIdAndUpdate(
-        { _id: deal._id },
-        { trendRatio: tem }
-      );
+      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     }
 
     // const user = await User.findById(req.user);

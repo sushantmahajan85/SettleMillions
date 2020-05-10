@@ -261,6 +261,10 @@ exports.mainPage = catchAsync(async (req, res) => {
     { score: { $meta: "textScore" } }
   ).sort({ score: { $meta: "textScore" } });
 
+  for(var deal of recommendedDeals){
+    console.log(deal.score);
+  }
+
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;
   }

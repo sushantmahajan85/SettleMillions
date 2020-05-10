@@ -1,56 +1,70 @@
 // console.log('hey there');
 //const Deal = require('./../../schema/models/dealModel');
 const passvaluePa = async function(dealId, report) {
-    console.log("hey there");
-  
-    try {
-      const result = await axios({
-        method: "PATCH",
-        url: `/api/v1/deals/${dealId}`,
-        data: {
-          $inc: { reportCount: 1 },
-        },
-      });
-      if (result.data.status === "success") {
-        //alert("inc");
-        console.log("inc");
-        // window.setTimeout(() => {
-        //     location.assign('/');
-        // }, 1000);
-        //el.form.submit();
-      }
-    } catch (err) {
-      console.log(err);
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
     }
   };
 
+  const showAlert = (type, msg) => {
+    hideAlert();
 
-const passvalueR = async function (dealId,userId,count) {
-    console.log('hey there');
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
 
-    try {
-        const result = await axios({
-            method: 'POST',
-            url: '/api/v1/report',
-            data: {
-                whichDeal: dealId,
-                whoReported: userId
-            }
-        });
-        if (result.data.status === 'success') {
-            alert('Report Successful');
-            console.log('reported');
-            // window.setTimeout(() => {
-            //     location.assign('/');
-            // }, 1000);
-            //el.form.submit();
-            passvaluePa(dealId,count);
-        }
+    window.setTimeout(hideAlert, 5000);
+  };
+  console.log("hey there");
 
-    } catch (err) {
-        alert('Report Successful');
-        console.log(err);
+  try {
+    const result = await axios({
+      method: "PATCH",
+      url: `/api/v1/deals/${dealId}`,
+      data: {
+        $inc: { reportCount: 1 },
+      },
+    });
+    if (result.data.status === "success") {
+      //alert("inc");
+      showAlert("success", "Reported successfully");
+      console.log("inc");
+      // window.setTimeout(() => {
+      //     location.assign('/');
+      // }, 1000);
+      //el.form.submit();
     }
+  } catch (err) {
+    showAlert("error", err.response.data.message);
+  }
+};
+
+const passvalueR = async function(dealId, userId, count) {
+  console.log("hey there");
+
+  try {
+    const result = await axios({
+      method: "POST",
+      url: "/api/v1/report",
+      data: {
+        whichDeal: dealId,
+        whoReported: userId,
+      },
+    });
+    if (result.data.status === "success") {
+      alert("Report Successful");
+      console.log("reported");
+      // window.setTimeout(() => {
+      //     location.assign('/');
+      // }, 1000);
+      //el.form.submit();
+      passvaluePa(dealId, count);
+    }
+  } catch (err) {
+    alert("Report Successful");
+    console.log(err);
+  }
 };
 
 // var url = 'http://www.site.com/234234234';

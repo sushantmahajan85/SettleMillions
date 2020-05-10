@@ -32,7 +32,7 @@ app.use(express.json());
 // });
 
 const limiter = rateLimit({
-  max: 3,
+  max: 160,
   windowMs: 60 * 60 * 1000,
   message: "<h1>too many request from this ip..try again in an hour</h1>",
 });
@@ -78,7 +78,7 @@ app.use("/", viewRouter);
 // app.all("*", (req, res, next) => {
 //   return next(new appError("route not implemented", 404));
 // });
-app.use(globalErrorHandler);
+// app.use(globalErrorHandler);
 const port = process.env.PORT;
 app.listen(port || 4000, () => {
   console.log("Listening bro");

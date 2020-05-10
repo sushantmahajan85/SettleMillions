@@ -28,16 +28,13 @@ const passvaluePa = async function(dealId, report) {
     });
     if (result.data.status === "success") {
       //alert("inc");
-      showAlert("success", "Reported successfully");
       console.log("inc");
       // window.setTimeout(() => {
       //     location.assign('/');
       // }, 1000);
       //el.form.submit();
     }
-  } catch (err) {
-    showAlert("error", err.response.data.message);
-  }
+  } catch (err) {}
 };
 
 const passvalueR = async function(dealId, userId, count) {
@@ -53,8 +50,10 @@ const passvalueR = async function(dealId, userId, count) {
       },
     });
     if (result.data.status === "success") {
-      alert("Report Successful");
+      // alert("Report Successful");
       console.log("reported");
+
+      showAlert("success", "Reported successfully");
       // window.setTimeout(() => {
       //     location.assign('/');
       // }, 1000);
@@ -62,8 +61,11 @@ const passvalueR = async function(dealId, userId, count) {
       passvaluePa(dealId, count);
     }
   } catch (err) {
-    alert("Report Successful");
-    console.log(err);
+    // alert("Report Successful");
+    // console.log(err);
+
+    showAlert("success", "Reported successfully");
+    // showAlert("error", err.response.data.message);
   }
 };
 

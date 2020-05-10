@@ -312,16 +312,19 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             </a>
         </div>
 
+        <% if(recommendedDeals.length !== 0){ %>
+
         <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">RECOMMENDED</div>
         <hr>
 
         <div id="recommended" class="trending">
             
-            <%  var i = 0; %>
+            <%  var i = 0,n = 0; %>
             <% for(var deal of recommendedDeals) { %>
             <% i++; %>
 
-            <% if(i > cooCount) {%>
+            <% if(i>cooCount && deal.trendRatio > 4) {%>
+                <% n++; %>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <%  function kFormatter(num) {
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
@@ -404,7 +407,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             </a>
 
             <% } %>
-            <% if (i === (cooCount+4)){break;}%>
+            <% if (n===4){break;}%>
             <% } %>
         </div>
 
@@ -414,6 +417,9 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             <% j++; %>
 
             <% if(j > (cooCount+4)) {%>
+                
+            <% if(i>cooCount && deal.trendRatio > 4) {%>
+
             <%  function kFormatter(num) {
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
             } 
@@ -485,6 +491,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 
             <% } %>
             <% } %>
+            <% } %>
         </div>
 
         <div id="showMoreR">
@@ -499,6 +506,8 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                 <span class="heading-normal">Show Less</span>
             </a>
         </div>
+
+        <% } %>
 
         <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">LIVE</div>
         <hr>
@@ -701,12 +710,20 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             </a>
             <% } %>
         </div>
+        
+        <% if(recentlyViewed.length !== 0){ %>
 
         <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">RECENTLY VIEWED</div>
         <hr>
 
         <div class="main-content">
             <div class="owl-carousel owl-theme">
+                
+                
+                
+             <% for(var deal of recentlyViewed){ %>
+
+
                 <div class="item card">
 
                     <div class="card__face">
@@ -767,426 +784,10 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                     </div>
 
                 </div>
-                <div class="item card">
 
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="item card">
-
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="item card">
-
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="item card">
-
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="item card">
-
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="item card">
-
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="item card">
-
-                    <div class="card__face">
-                        <div class="card__picture" data-pause="true" data-interval="1000">
-
-
-                            <div class="carousel-item active" style="background-color: white !important;">
-
-                                <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
-                                    class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" style="background-color: white !important;">
-                                <img src="/images/10-11-years-kidsdnm1100-neon-9-original-imaffzhcn3qdry3k.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                        </div>
-
-                        <div class="card-text">
-
-                            <h4 class="card__head">
-                                <%= deal.dealName %> 
-                            </h4>
-                            <div class="card__details">
-                                <ul>
-                                    <li class="price"><span class="price_avail"> Rs.<%= deal.mrp %> </span> <strike
-                                            class="price_mrp"><%= deal.dealPrice %> </strike> <span class="price_dis">(70%)</span> </li>
-                                    <li style="font-weight: 400;">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
-                                        <div style="display: inline-block">
-                                            
-                                            <% if (deal.views > 999) { %>
-                                                <span><%=`${vui} views`%></span>
-                                            <% } else { %>
-                                                <span><%=`${deal.views} views`%></span>
-                                            <% } %>
-
-                                            <% if (tem > 24) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
-                                            <% } else if (tem > 1) { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
-                                            <% } else { %>
-                                                <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
-                                            <% } %>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+             <% } %>   
+                
+                
 
 
             </div>
@@ -1196,6 +797,9 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                 </div>
             </div>
         </div>
+
+        <% } %>   
+
 
         <footer class="footer-distributed">
 

@@ -56,6 +56,10 @@ const dealSchema = new mongoose.Schema(
     company: {
       type: String
     },
+    trendRatio: {
+      type: Number,
+      default: 0
+    },
     reportCount: {
       type: Number,
       default: 0

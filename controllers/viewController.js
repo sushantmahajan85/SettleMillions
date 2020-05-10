@@ -299,15 +299,30 @@ exports.mainPage = catchAsync(async (req, res) => {
     // //console.log(deals);
     res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
-    let sortBy = "views";
+    let sortBy = "trendRatio";
     let order = -1;
     if (req.query.sort === "mrp") {
       sortBy = "" + req.query.sort;
       order = 1;
     }
-    if (req.query.sort === "views") {
+    if (req.query.sort === "trendRatio") {
       sortBy = "" + req.query.sort;
       order = -1;
+    }
+
+    const tempDeals = await Deal.find();
+
+    for(var deal of tempDeals){
+      var now = new Date(Date.now());
+      var tem = (now.getTime() - deal.time.getTime())/3600000;
+      tem = deal.views/tem;
+
+      //console.log(deal._id);
+
+      await Deal.findByIdAndUpdate(
+        { _id: deal._id },
+        { trendRatio: tem }
+      );
     }
 
     // const user = await User.findById(req.user);

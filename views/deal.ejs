@@ -331,88 +331,55 @@
     </div>
 
     <div class="side_deals">
-      <div class=" side_deals_item">
-        <div class="deal_area_box" style="width: 100% !important;">
-          <div class="bigImg_container">
-            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-          </div>
-          <div class="deal_area_content">
-            <!-- <div class="picture_container">
-                      <div class="profile_pic"></div>
-                  </div> -->
-            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-              <div class="deal_box_nameTime"
-                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-                <div class="deal_box_name" style="font-size: 15px !important;">The Moaping Machine Extra text</div>
-
+      <% var i=0; %>
+      <% for(var deal of reco){ %>
+        <% i++; if(i>cooCount){ %>
+        <div class=" side_deals_item">
+          <div class="deal_area_box" style="width: 100% !important;">
+            <div class="bigImg_container">
+              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+            </div>
+            <div class="deal_area_content">
+              <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                    </div> -->
+              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                <div class="deal_box_nameTime"
+                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+  
+                  <div class="deal_box_name" style="font-size: 15px !important;">
+                    <%= deal.dealName %>
+                  </div>
+  
+                </div>
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+  
+                  <div class="deal_box_views"><%= deal.owner %></div>
+                  <!-- <div class="deal_box_time">Amazon</div> -->
+  
+                </div>
+  
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                  <div class="deal_box_views"><%= deal.mrp %></div>
+                  <div class="deal_box_time">80% OFF</div>
+                  <div class="deal_box_time"><%= deal.dealPrice %></div>
+                </div>
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                  <div class="deal_box_views"><%= deal.views %></div>
+                  <div class="deal_box_time">3 days ago</div>
+                </div>
+                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                      <div>80% Off only on HDFC Bank Credit Cards</div>
+                    </div> -->
               </div>
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                <div class="deal_box_views">Couper Deals</div>
-                <div class="deal_box_time">Amazon</div>
-
-              </div>
-
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_views">2000rs</div>
-                <div class="deal_box_time">80% OFF</div>
-                <div class="deal_box_time">200rs</div>
-              </div>
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                <div class="deal_box_views">1.4k views</div>
-                <div class="deal_box_time">3 days ago</div>
-              </div>
-              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                    <div>80% Off only on HDFC Bank Credit Cards</div>
-                  </div> -->
             </div>
           </div>
         </div>
-      </div>
-      <div class="side_deals_item">
-        <div class="deal_area_box" style="width: 100% !important;">
-          <div class="bigImg_container">
-            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-          </div>
-          <div class="deal_area_content">
-            <!-- <div class="picture_container">
-                      <div class="profile_pic"></div>
-                  </div> -->
-            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-              <div class="deal_box_nameTime"
-                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-                <div class="deal_box_name">The Moaping Machine Extra text</div>
-
-              </div>
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                <div class="deal_box_views">Couper Deals</div>
-                <div class="deal_box_time">Amazon</div>
-
-              </div>
-
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_views">2000rs</div>
-                <div class="deal_box_time">80% OFF</div>
-                <div class="deal_box_time">200rs</div>
-              </div>
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                <div class="deal_box_views">1.4k views</div>
-                <div class="deal_box_time">3 days ago</div>
-              </div>
-              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                    <div>80% Off only on HDFC Bank Credit Cards</div>
-                  </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
+          <% } %>
+        <% } %>
+      
     </div>
 
   </div>

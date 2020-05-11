@@ -179,6 +179,31 @@
         </div>
         <% } %> -->
     </section>
+
+    <div class="popup" id="popupDelete">
+      <!-- <div class="bg-video">
+          <video  class="bg-video_content" autoplay loop muted>
+              <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
+          </video>
+      </div> -->
+  <div class="popup_content">
+      
+         
+   <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
+  <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+</div>
+  <div class="popup_right">
+      <div class="popup_cross" id="popup_crossdelete">&times;</div>
+  <h1 class="heading-secondary popup_heading center">about us</h1>
+  <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
+  
+  </div>
+
+  <button id="delete_btn">Delete</button>
+</div>
+</div>
+
+
     <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -199,12 +224,41 @@
 
     <!-- <script>
       function dealOperations(el){
+        console.log($(el).val());
+        // var dealKiId = $(el).val().split('/')[1];
+        // var reporter = $(el).val().split('/')[2];
+        // var reportCount = 1;
+
+        if($(el).val().split('/')[1]=="delete"){
+            document.getElementById('popupDelete').style.display = 'block';
+        }else{
           el.form.submit();
           window.setTimeout(() => {
                   location.assign('/');
           }, 100);
+        
+        }
+
+        document.getElementById('delete_btn').addEventListener('click', e => {
+            document.getElementById('popupDelete').style.display = 'none'; 
+            el.form.submit();
+            window.setTimeout(() => {
+                  location.assign('/');
+          }, 100);
+        });
+
+          
       }
-  </script> -->
+  </script>
+  <script>
+  //   document.getElementById('popup_cross').addEventListener('click', e => {
+  //      document.getElementById('popup').style.display = 'none'; 
+  //  });
+   
+   document.getElementById('popup_crossdelete').addEventListener('click', e => {
+       document.getElementById('popupDelete').style.display = 'none'; 
+   });
+</script>
     <script src="/js/subscribe.js"></script>
     <div class="popup" id="popup">
       <!-- <div class="bg-video">

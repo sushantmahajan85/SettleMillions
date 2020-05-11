@@ -116,11 +116,11 @@
 <% } %>
         
         <div class="user-nav__user">
-          <% if (user) { %> <% if (user.photo) { %> <img
+          <% if (user) { %> <% if (user.photo) { %> <a href=<%= `/member/${user.id}` %> > <img
           src=<%=`/img/users/${user.photo}` %> alt="User photo"
-          class="user-nav__user-photo" /> <% } else { %> <img
+          class="user-nav__user-photo" /></a> <% } else { %> <a href=<%= `/member/${user.id}` %> > <img
           data-name=<%=user.name %> data-color="#85e0ce" class="profile
-          user-nav__user-photo"/> <% } %> <% } else { %>
+          user-nav__user-photo"/></a> <% } %> <% } else { %>
           
           <% } %>
         </div>

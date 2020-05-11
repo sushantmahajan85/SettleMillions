@@ -187,13 +187,13 @@
 
       <div class="reviews" id="reviews">
         <div class="review-section">
-          <span class="review-head"><img src="/images/oneplusback.jpg" alt="User photo"
+          <span class="review-head"><img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
               class="user-nav__user-photo review-photo"></span>
-          <input type="textarea" placeholder="Add A Review" class="add-review-text-area">
-
+          <input type="textarea" placeholder="Add A Review" id="review_input" class="add-review-text-area">
+<button id="review_post">Post a review</button>
           <% for( var review of deal.reviews ) { %>
           <div class="user-nav__user user-review">
-            <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+            <img src=<%=`/img/users/${review.user.photo}`%>  alt="User photo" class="user-nav__user-photo review-photo">
 
             <div class="review-text">
               <div class="user-nav__user-name"><%= review.user.name %> </div>
@@ -350,6 +350,7 @@
       <% for(var deal of reco){ %>
         <% i++; if(i>cooCount){ %>
         <div class=" side_deals_item">
+          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
           <div class="deal_area_box" style="width: 100% !important;">
             <div class="bigImg_container">
               <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
@@ -391,6 +392,7 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
           <% } %>
           <% if(i===cooCount+3){break;} %>
@@ -400,6 +402,7 @@
       <% for(var deal of trendDeals){ %>
         <% i++;%>
         <div class=" side_deals_item">
+          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
           <div class="deal_area_box" style="width: 100% !important;">
             <div class="bigImg_container">
               <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
@@ -441,6 +444,7 @@
               </div>
             </div>
           </div>
+        </a>
         </div>
         <% if(i===3){break;} %>
         <% } %>
@@ -452,6 +456,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="/js/likedDeal.js"></script>
   <script src="/js/subscribe.js"></script>
+  <script src="/js/review.js"></script>
   <!-- <script src="/js/main.js"></script> -->
 
   <script>

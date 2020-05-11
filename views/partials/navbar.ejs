@@ -76,6 +76,14 @@
             <div style="margin: 5px;">Post a Deal</div>
           </div>
         </a>
+        <% if (user) { %>
+        <a href="" id="logout">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <i class="fas fa-plus"></i>
+            <div style="margin: 5px;">Logout</div>
+          </div>
+        </a>
+        <% } else { %> <% } %>
 
         <div class="user-nav__icon-box">
           <i class="fas fa-bell"></i>
@@ -97,6 +105,7 @@
     <script>
       $(".profile").initial();
     </script>
+    <script src="/js/logout.js"></script>
     <!-- <script src="/vendor/jquery.bootcomplete.js"></script>
 
     <script>

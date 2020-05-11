@@ -166,7 +166,7 @@ exports.logout = (req, res) => {
     // secure: true,
     httpOnly: true,
   });
-  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+  // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
   res.status(200).json({ status: "success" });
 };
@@ -229,36 +229,40 @@ exports.resend = async (req, res, next) => {
   }
 };
 
-exports.isLoggedIn = catchAsync(async (req, res, next) => {
-  if (req.cookies.jwt) {
-    const decoded = await promisify(jwt.verify)(
-      req.cookies.jwt,
-      process.env.JWT_SECRET
-    );
-    // console.log(decoded);
+exports.isLoggedIn = async (req, res, next) => {
+  try {
+    if (req.cookies.jwt) {
+      const decoded = await promisify(jwt.verify)(
+        req.cookies.jwt,
+        process.env.JWT_SECRET
+      );
+      // console.log(decoded);
 
-    const freshUser = await User.findById(decoded.id).populate({
-      path: "subscribers",
-    });
+      const freshUser = await User.findById(decoded.id).populate({
+        path: "subscribers",
+      });
 
-    if (!freshUser) {
-      res.locals.user = null;
+      if (!freshUser) {
+        res.locals.user = null;
+        return next();
+      }
+
+      if (freshUser.changedPasswordAfter(decoded.iat)) {
+        res.locals.user = null;
+        return next();
+      }
+
+      res.locals.user = freshUser;
+      req.logged = freshUser;
       return next();
+    } else {
+      res.locals.user = undefined;
     }
-
-    if (freshUser.changedPasswordAfter(decoded.iat)) {
-      res.locals.user = null;
-      return next();
-    }
-
-    res.locals.user = freshUser;
-    req.logged = freshUser;
+  } catch (err) {
     return next();
-  } else {
-    res.locals.user = undefined;
   }
   next();
-});
+};
 
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {

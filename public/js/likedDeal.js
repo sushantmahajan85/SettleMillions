@@ -1,6 +1,6 @@
 // console.log('hey there');
 
-const passvalueo = async function() {
+const passvalueo = async function(dealId, whoLiked) {
   const hideAlert = () => {
     const el = document.querySelector(".alerts");
     if (el) {
@@ -27,16 +27,18 @@ const passvalueo = async function() {
       method: "POST",
       url: "/api/v1/likedDeal",
       data: {
-        deal: last_segment,
+        deal: dealId,
+        user: whoLiked
       },
     });
     if (result.data.status === "success") {
       // alert("liked");
       showAlert("success", "Liked");
+      //alert("liked");
       console.log("liked");
-      window.setTimeout(() => {
-        location.assign("/");
-      }, 1000);
+      // window.setTimeout(() => {
+      //   location.assign("/");
+      // }, 1000);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);
@@ -46,14 +48,18 @@ const passvalueo = async function() {
 // var url = 'http://www.site.com/234234234';
 // var id = url.substring(url.lastIndexOf('/') + 1);
 // alert(id);
-document.getElementById("like_deal").addEventListener("click", (e) => {
-  e.preventDefault();
 
-  // const dealName = document.getElementById('dealName').value;
-  // const affiliateLink = document.getElementById('affiliateLink').value;
-  // const category = document.getElementById('category').value;
-  // const company = document.getElementById('company').value;
-  // const mrp = document.getElementById('mrp').value;
-  // const dealPrice = document.getElementById('dealPrice').value;
-  passvalueo();
-});
+
+
+
+// document.getElementById("like_deal").addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   // const dealName = document.getElementById('dealName').value;
+//   // const affiliateLink = document.getElementById('affiliateLink').value;
+//   // const category = document.getElementById('category').value;
+//   // const company = document.getElementById('company').value;
+//   // const mrp = document.getElementById('mrp').value;
+//   // const dealPrice = document.getElementById('dealPrice').value;
+//   passvalueo();
+// });

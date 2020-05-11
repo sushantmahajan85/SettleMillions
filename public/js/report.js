@@ -39,6 +39,21 @@ const passvaluePa = async function(dealId, report) {
 
 const passvalueR = async function(dealId, userId, count) {
   console.log("hey there");
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
 
   try {
     const result = await axios({

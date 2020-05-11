@@ -152,8 +152,10 @@ exports.mainPage = catchAsync(async (req, res) => {
   }
 
   let cooCount = 0;
+  let recentlyViewed = [];
 
   if (req.cookies.one !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.one;
     cooCount++;
     rec1 =
       req.cookies.one.dealName +
@@ -175,6 +177,7 @@ exports.mainPage = catchAsync(async (req, res) => {
   }
   //console.log(Object.keys(req.cookies.one.tags).length);
   if (req.cookies.two !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.two;
     cooCount++;
     rec2 =
       req.cookies.two.dealName +
@@ -195,6 +198,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.three !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.three;
     cooCount++;
     rec3 =
       req.cookies.three.dealName +
@@ -215,6 +219,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.four !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.four;
     cooCount++;
     rec4 =
       req.cookies.four.dealName +
@@ -235,6 +240,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.five !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.five;
     cooCount++;
     rec5 =
       req.cookies.five.dealName +
@@ -258,16 +264,24 @@ exports.mainPage = catchAsync(async (req, res) => {
   rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
 
   //console.log(rec);
+  //const t = await Deal.find({ trendRatio: { $gte: 4 } });
 
   const recommendedDeals = await Deal.find(
     { $text: { $search: rec } },
-    { score: { $meta: "textScore" } }
+    { score: { $meta: "textScore" } },
+    //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
+
+  // for(var k=cooCount; k<recommendedDeals.length; k++){
+  //   if(recommendedDeals[k].trendRatio < 4){
+  //     recommendedDeals[k] = undefined;
+  //   }
+  // }
 
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;
   }
-  // console.log(recommendedDeals);
+  //console.log(recommendedDeals);
   if (req.query.search) {
     // await Deal.ensureIndexes({ dealName: 'text' });
 
@@ -329,9 +343,11 @@ exports.mainPage = catchAsync(async (req, res) => {
     const deals = await Deal.find().sort([[`${sortBy}`, order]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);
 
+    //console.log(recentlyViewed);
+
     res
       .status(200)
-      .render("main", { deals, recommendedDeals, liveDeals, cooCount });
+      .render("main", { deals, recommendedDeals, liveDeals, cooCount, recentlyViewed });
   }
 });
 

@@ -642,10 +642,36 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     reco[i] = undefined;
   }
 
-  console.log(reco);
+  //console.log(reco);
+
+  let sortBy = "trendRatio";
+    let order = -1;
+    if (req.query.sort === "mrp") {
+      sortBy = "" + req.query.sort;
+      order = 1;
+    }
+    if (req.query.sort === "trendRatio") {
+      sortBy = "" + req.query.sort;
+      order = -1;
+    }
+
+    const tempDeals = await Deal.find();
+
+    for (var dealing of tempDeals) {
+      var now = new Date(Date.now());
+      var tem = (now.getTime() - dealing.time.getTime()) / 3600000;
+      tem = dealing.views / tem;
+
+      //console.log(deal._id);
+
+      await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
+    }
+
+    // const user = await User.findById(req.user);
+    const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
 
   res.status(200).render("deal", {
-    deal, reco, cooCount
+    deal, reco, cooCount, trendDeals
   });
 });
 // function escapeRegex(text) {

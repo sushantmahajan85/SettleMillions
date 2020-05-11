@@ -25,6 +25,7 @@ router.get(
   viewController.getSubscriptions
 );
 router.get("/newDeal", viewController.createNewDeal);
+router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);
 router.get(
   "/updateUserSettings",

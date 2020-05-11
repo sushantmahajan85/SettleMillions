@@ -193,7 +193,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
                                 <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)">
                                     <option selected disabled value="empty"></option>
                                     <option value=<%= `report/${deal._id}/${user._id}` %>>Report</option>
-                                    <option value=<%= `${deal._id}/like` %>>Like</option>
+                                    <option value=<%= `like/${deal._id}/${user._id}` %>>Like</option>
                                 </select>
                             </form>
                         <% } %>
@@ -859,6 +859,7 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     </div>
 
     <script src="/js/report.js"></script>
+    <script src="/js/likedDeal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <script>
@@ -991,16 +992,22 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 }
 
 </script>
-<script src="/js/reportPatch.js"></script>
+<!-- <script src="/js/reportPatch.js"></script> -->
 <script>
     function dealOperations(el){
         console.log($(el).val());
         var dealKiId = $(el).val().split('/')[1];
         var reporter = $(el).val().split('/')[2];
         var reportCount = 1;
-        document.getElementById('popup').style.display = 'block';
+
+        if($(el).val().split('/')[0]=="report"){
+            document.getElementById('popup').style.display = 'block';
+        }else{
+            document.getElementById('popupLike').style.display = 'block';
+        }
 
         document.getElementById('report_btn').addEventListener('click', e => {
+            document.getElementById('popup').style.display = 'none'; 
             passvalueR(dealKiId,reporter,reportCount);
             // passvaluePa(dealKiId,reportCount);
             
@@ -1009,6 +1016,11 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
             // window.setTimeout(() => {
             //         location.assign('/');
             // }, 100);
+        });
+
+        document.getElementById('like_btn').addEventListener('click', e => {
+            document.getElementById('popupLike').style.display = 'none'; 
+            passvalueo(dealKiId,reporter);
         });
     }
     //Use the id of the form instead of #change
@@ -1041,6 +1053,29 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     <button id="report_btn">Report</button>
 </div>
 </div>
+
+<div class="popup" id="popupLike">
+    <!-- <div class="bg-video">
+        <video  class="bg-video_content" autoplay loop muted>
+            <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
+        </video>
+    </div> -->
+<div class="popup_content">
+    
+       
+ <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
+<!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+</div>
+<div class="popup_right">
+    <div class="popup_cross" id="popup_crosslike">&times;</div>
+<h1 class="heading-secondary popup_heading center">about us</h1>
+<p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
+
+</div>
+
+<button id="like_btn">Like</button>
+</div>
+</div>
 <script>
     document.getElementById('homie').addEventListener('click', e => {
         e.preventDefault();
@@ -1056,10 +1091,12 @@ href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
 </script>
 <script>
      document.getElementById('popup_cross').addEventListener('click', e => {
-
-    document.getElementById('popup').style.display = 'none';
-   
-}) 
+        document.getElementById('popup').style.display = 'none'; 
+    });
+    
+    document.getElementById('popup_crosslike').addEventListener('click', e => {
+        document.getElementById('popupLike').style.display = 'none'; 
+    });
 </script>
 </body>
 

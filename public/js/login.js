@@ -30,7 +30,7 @@ const passvalue = async (email, password) => {
       //   alert("successful");
       window.setTimeout(() => {
         location.assign("/");
-      }, 1000);
+      }, 800);
     }
     // console.log(request.data);
   } catch (err) {

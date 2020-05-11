@@ -33,7 +33,7 @@ const passvalueEdit = async (data) => {
       showAlert("success", "Deal successfully Edited");
       window.setTimeout(() => {
         location.assign("/");
-      }, 1000);
+      }, 800);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

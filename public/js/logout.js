@@ -22,7 +22,9 @@ const passvalueOut = async () => {
     if (res.data.status === "success") {
       showAlert("success", "Logged out");
       //   alert("successful");
-      location.reload(true);
+      window.setTimeout(() => {
+        location.assign("/");
+      }, 800);
     }
     // console.log(request.data);
   } catch (err) {

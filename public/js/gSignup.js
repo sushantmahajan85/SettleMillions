@@ -37,7 +37,7 @@ async function onSignIn(googleUser) {
       showAlert("success", "Signup successful");
       window.setTimeout(() => {
         location.assign("/");
-      }, 1000);
+      }, 800);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

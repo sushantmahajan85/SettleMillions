@@ -28,8 +28,8 @@ const passvaluey = async (current, npassword, cpassword) => {
       // alert("login successful");
       showAlert("success", "New password successfully set");
       window.setTimeout(() => {
-        location.assign("/subscriptions");
-      }, 1000);
+        location.assign("/");
+      }, 800);
     }
     // console.log(result);
   } catch (err) {

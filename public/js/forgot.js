@@ -32,10 +32,10 @@ const passvalueForgot = async (email) => {
     });
     if (result.data.status === "success") {
       // alert("sign up successful");
-      showAlert("success", "Email sent");
-      window.setTimeout(() => {
-        location.assign("/");
-      }, 2000);
+      showAlert("success", "Email sent! Please check your email");
+      // window.setTimeout(() => {
+      //   location.assign("/");
+      // }, 2000);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

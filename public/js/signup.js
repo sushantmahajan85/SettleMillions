@@ -38,7 +38,7 @@ const passvaluehaha = async (username, email, password, passwordConfirm) => {
       showAlert("success", "Signup successful");
       window.setTimeout(() => {
         location.assign("/");
-      }, 2000);
+      }, 800);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

@@ -36,9 +36,9 @@ const passvalue3 = async function() {
       //   alert("subscribed");
       showAlert("success", "Subscribed");
       console.log("subscribed");
-      window.setTimeout(() => {
-        location.assign("/");
-      }, 1000);
+      // window.setTimeout(() => {
+      //   location.assign("/");
+      // }, 1000);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

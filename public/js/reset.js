@@ -41,8 +41,8 @@ const passvalueReset = async (password, passwordConfirm) => {
       // alert("sign up successful");
       showAlert("success", "New Password set successfully");
       window.setTimeout(() => {
-        location.assign("/");
-      }, 2000);
+        location.assign("/login");
+      }, 800);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

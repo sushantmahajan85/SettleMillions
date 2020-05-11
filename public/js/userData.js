@@ -23,9 +23,7 @@ const passvaluex = async (data) => {
     if (result.data.status === "success") {
       // alert("login successful");
       showAlert("success", "Settings updated");
-      window.setTimeout(() => {
-        location.assign("/updateUserSettings");
-      }, 1000);
+      location.reload(true);
     }
     // console.log(result);
   } catch (err) {

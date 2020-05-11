@@ -20,7 +20,7 @@ const passvalue2 = async function() {
   };
   var url = window.location.pathname;
   var id = url.substring(url.lastIndexOf("/") + 1);
-  console.log(id);
+  console.log(url);
   //const deal = await Deal.findById(id);
 
   try {
@@ -35,9 +35,9 @@ const passvalue2 = async function() {
       //   alert("subscribed");
       showAlert("success", "Subscribed");
       console.log("subscribed");
-      window.setTimeout(() => {
-        location.assign("/");
-      }, 1000);
+      // window.setTimeout(() => {
+      //   location.assign(`${url}`);
+      // }, 1000);
     }
   } catch (err) {
     showAlert("error", err.response.data.message);

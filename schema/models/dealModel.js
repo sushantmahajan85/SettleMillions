@@ -4,11 +4,11 @@ const dealSchema = new mongoose.Schema(
   {
     category: {
       type: String,
-      required: true
+      required: true,
     },
     titleImg: {
       type: String,
-      default: "corona.jpg"
+      default: "corona.jpg",
     },
 
     affiliateLink: {
@@ -18,7 +18,7 @@ const dealSchema = new mongoose.Schema(
     },
     views: {
       type: Number,
-      default: 0
+      default: 0,
       // validate: {
       //   validator: function kFormatter(el) {
       //     return Math.abs(el) > 999
@@ -30,47 +30,46 @@ const dealSchema = new mongoose.Schema(
     },
     time: {
       type: Date,
-      default: Date.now()
+      default: Date.now(),
     },
     titleDis: {
       type: String,
       maxlength: [30, "exceeding the word creteria"],
-      default: "Limited offer"
+      default: "Limited offer",
     },
     biggerDis: {
       type: String,
-      maxlength: 400
+      maxlength: 400,
     },
     mrp: {
       type: Number,
-      required: true
     },
     dealPrice: {
       type: Number,
-      required: true
+      required: true,
     },
     dealName: {
       type: String,
       required: true,
     },
     company: {
-      type: String
+      type: String,
     },
     trendRatio: {
       type: Number,
-      default: 0
+      default: 0,
     },
     reportCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     saveLater: Number,
     owner: {
       type: String,
-      default: "Couper Deals"
+      default: "Couper Deals",
     },
     buyNow: {
-      type: Number
+      type: Number,
     },
     corouselImgs: [String],
     discount: Number,
@@ -78,7 +77,7 @@ const dealSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
-      required: true
+      required: true,
     },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }

@@ -42,7 +42,10 @@ exports.getLikedDeals = catchAsync(async (req, res) => {
   });
   res.status(200).render("likedDeals", { user });
 });
-
+exports.editDeal = catchAsync(async (req, res) => {
+  const deal = await Deal.findById(req.params.id);
+  res.status(200).render("dealEdit", { deal });
+});
 exports.getSubscriptions = catchAsync(async (req, res) => {
   const xyz = await User.findById(req.user).populate({
     path: "subscribers",

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/fdec90a950.js"
+      
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
@@ -30,22 +31,22 @@
     >
       <a href="/">
         <div class="title">
-          <img src="/img/users/favicon.png" alt="Logo" class="logo" />
-          <h2 class="heading-normal">Affiliate</h2>
+          <!-- <img src="/img/users/favicon.png" alt="Logo" class="logo" /> -->
+          
+          <!-- <h2 class="heading-normal">Affiliate</h2> -->
+          <img src="/img/users/down-arrow.svg" alt="Logo" class="Sidebar_logo" />
+          <h2 class="Navb_logo-text">YOUR DEAL</h2>
         </div>
       </a>
 
-      <div>
-        <i class="fas fa-th"></i>
-        <div style="margin: 5px; display: inline;">Categories</div>
-      </div>
+     
 
       <form action="/" method="GET" class="search" id="searchx">
         <input
           type="text"
           name="search"
           id="search"
-          placeholder="Search"
+          placeholder="Type to search"
           class="search__input"
         />
         <button class="search__button">
@@ -54,35 +55,67 @@
       </form>
 
       <nav class="user-nav">
-        <form action="/" method="GET" class="sortx">
+        <!-- D changes -->
+
+        <!-- <form action="/" method="GET" class="sortx">
           <select class="sort-drop" name="sort" onchange="this.form.submit()">
             <option selected disabled value="empty"
               >--Choose Parameter--</option
-            >
+           
             <option value="mrp">mrp</option>
             <option value="views">views</option>
           </select>
           <div>SortBy</div>
-        </form>
-        <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p>
+        </form>   > -->
+
+        <!-- D changes // -->
+
+
+        <!-- D changes -->
+
+        <!-- <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p> -->
+        <!-- <div> 
+          <i class="fas fa-fire"></i> 
+           <div style="margin: 5px;">Trending</div>
+        </div>  -->
+
+        <!-- D changes // -->
+
         <div>
-          <i class="fas fa-fire"></i>
-          <div style="margin: 5px;">Trending</div>
+          <!-- <i class="fas fa-th"></i> -->
+
+          <div style="margin: 5px; display: inline;">CATEGORIES</div>
+        
+          <img src="/img/users/down-arrow.svg" alt="Logo" class="Sidebar_logo" />
+          <!-- <img src="down_arrow.png"> -->
         </div>
+
+        
+           
+       
+
 
         <a href="/newDeal">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <i class="fas fa-plus"></i>
-            <div style="margin: 5px;">Post a Deal</div>
+
+            <!-- D changes -->
+
+            <!-- <i class="fas fa-plus"></i> -->
+
+
+            <!-- D changes // -->
+            <div style="margin: 5px;">POST </div>
           </div>
         </a>
+        <!-- D changes -->
 
-        <div class="user-nav__icon-box">
+        <!-- <div class="user-nav__icon-box">
           <i class="fas fa-bell"></i>
           <span class="user-nav__notification">7</span>
-        </div>
+        </div> -->
 
-        <div class="user-nav__user">
+        
+        <!-- <div class="user-nav__user">
           <% if (user) { %> <% if (user.photo) { %> <img
           src=<%=`/img/users/${user.photo}` %> alt="User photo"
           class="user-nav__user-photo" /> <% } else { %> <img
@@ -90,7 +123,17 @@
           user-nav__user-photo"/> <% } %> <% } else { %>
           <span class="user-nav__user-name">NJ</span>
           <% } %>
-        </div>
+        </div> -->
+
+        <!-- <div style="margin: 5px;">SIGNUP</div>
+        <div style="margin: 5px;">LOGIN</div> -->
+
+         <!-- D changes // -->
+
+         <div style>SIGNUP</div>
+        <div style>LOGIN</div>
+        
+
       </nav>
     </section>
     <script src="/vendor/initial.min.js"></script>

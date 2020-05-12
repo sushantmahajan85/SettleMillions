@@ -8,7 +8,7 @@ const dealRouter = require("../routes/dealRoutes");
 // const upload = multer({ dest: "/public/img/users" });
 // bring back the user router from appjs
 const router = express.Router();
-
+router.use(authController.isLoggedIn);
 router.use("/:userId/deals", dealRouter);
 router.use("/:userId/subscriber", subscribeRouter);
 
@@ -20,7 +20,7 @@ router.post("/verify", authController.verify);
 
 router.post("/login", authController.login);
 
-router.get("/logout", authController.logout);
+// router.get("/logout", authController.logout);
 router.post("/forgotPassword", authController.forgotPassword);
 router.patch("/resetPassword/:token", authController.resetPassword);
 

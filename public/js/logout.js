@@ -17,15 +17,19 @@ const passvalueOut = async () => {
   try {
     const result = await axios({
       method: "GET",
-      url: "/api/v1/users/logout",
+      url: "/logout",
     });
-    if (result.data.status === "success") {
-      showAlert("success", "Logged out");
-      //   alert("successful");
-      window.setTimeout(() => {
-        location.assign("/login");
-      }, 2000);
-    }
+
+    showAlert("success", "Logged out");
+
+    self.location.assign(location);
+    window.onload = function() {
+      alert(cooking);
+      self.location.assign(location);
+    };
+    // self.location.assign(location);
+    //   alert("successful");
+
     // console.log(request.data);
   } catch (err) {
     showAlert("error", "Error logging out! Try again");

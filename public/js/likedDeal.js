@@ -20,15 +20,16 @@ const passvalueo = async function(dealId, whoLiked) {
   var full_url = window.location.pathname;
   // var full_url = document.URL; // Get current url
   var url_array = full_url.split("/"); // Split the string into an array with / as separator
-  var last_segment = url_array[url_array.length - 3]; // Get the last part of the array (-1)
+  var last_segment = url_array[url_array.length - 3]; 
+  console.log(last_segment);// Get the last part of the array (-1)
   // alert(last_segment);
   try {
     const result = await axios({
       method: "POST",
       url: "/api/v1/likedDeal",
       data: {
-        deal: dealId,
-        user: whoLiked
+        deal: last_segment
+        //user: whoLiked
       },
     });
     if (result.data.status === "success") {
@@ -52,14 +53,14 @@ const passvalueo = async function(dealId, whoLiked) {
 
 
 
-// document.getElementById("like_deal").addEventListener("click", (e) => {
-//   e.preventDefault();
+document.getElementById("like_deal").addEventListener("click", (e) => {
+  e.preventDefault();
 
-//   // const dealName = document.getElementById('dealName').value;
-//   // const affiliateLink = document.getElementById('affiliateLink').value;
-//   // const category = document.getElementById('category').value;
-//   // const company = document.getElementById('company').value;
-//   // const mrp = document.getElementById('mrp').value;
-//   // const dealPrice = document.getElementById('dealPrice').value;
-//   passvalueo();
-// });
+  // const dealName = document.getElementById('dealName').value;
+  // const affiliateLink = document.getElementById('affiliateLink').value;
+  // const category = document.getElementById('category').value;
+  // const company = document.getElementById('company').value;
+  // const mrp = document.getElementById('mrp').value;
+  // const dealPrice = document.getElementById('dealPrice').value;
+  passvalueo();
+});

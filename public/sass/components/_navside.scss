@@ -2,6 +2,7 @@
   display: none;
 }
 
+//  text-decoration: none;
 .w3-sidebar {
   max-width: 15%;
 }
@@ -14,7 +15,7 @@
   // background-color: red;
 }
 .simplebar-scrollbar::before {
-  background-color: rgb(150, 153, 153) !important;
+  // background-color: rgb(150, 153, 153) !important;
   height: 50vh;
   width: 3.2rem;
 }
@@ -88,7 +89,7 @@ h2 {
 }
 
 .header {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   height: 60px;
   background-color: #4585f3;
   border-bottom: var(--line);
@@ -113,8 +114,8 @@ h2 {
 }
 
 .search {
-  background-color: silver;
-  border-radius: 2px;
+  // background-color: silver;
+  border-radius: .1rem;
   height: 3.5rem;
   margin-left: 1rem;
   -webkit-box-flex: 0;
@@ -142,11 +143,18 @@ h2 {
   }
 }
 .search__input {
-  background-color: var(--color-grey-light-2);
+  // * D changes
+
+  // background-color: var(--color-grey-light-2);
+  // border-radius: 100px;
+  // padding: 0.7rem 2rem;
+  // * D changes *
+  
   border: none;
-  padding: 0.7rem 2rem;
-  border-radius: 100px;
-  width: 90%;
+  padding: 0.85rem 2rem;
+  border-radius: .5rem;
+
+  width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-right: -3.25rem;
@@ -154,7 +162,9 @@ h2 {
 .search__input:focus {
   outline: none;
   width: 100%;
-  background-color: var(--color-grey-light-3);
+  // D *changes
+  // background-color: var(--color-grey-light-3);
+  // D * changes *
 }
 .search__input::-webkit-input-placeholder {
   font-weight: 100;
@@ -180,6 +190,31 @@ h2 {
   fill: var(--color-grey-dark-3);
 }
 
+// D *changes start
+.search__button{
+  color:rgba(9, 78, 158, 0.7);
+  font-size: 1.3rem;
+}
+// D *changes * end
+
+
+//  D *changes * start
+.Navb_logo-text{
+  display: flex;
+color: #FF9A41;
+font-weight: 600;
+letter-spacing: 0.3rem;
+text-shadow: .2rem .2rem .2rem #00000085;
+
+// D *changes * end
+
+.Sidebar_logo{
+  color: white;
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+
+}
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -203,6 +238,9 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  color: rgba($color: #ffffff, $alpha: 1.0);
+  margin: .5rem 1rem 0.5rem 0.5rem;
+  
 }
 .user-nav > *:hover {
   background-color: var(--color-grey-light-2);

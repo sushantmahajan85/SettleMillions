@@ -162,7 +162,7 @@ exports.login = async (req, res, next) => {
 
 exports.logout = (req, res) => {
   res.cookie("jwt", "loggedout", {
-    expires: new Date(Date.now() + 10 * 1000),
+    expires: new Date(Date.now() + 100),
     // secure: true,
     httpOnly: true,
   });
@@ -230,37 +230,42 @@ exports.resend = async (req, res, next) => {
 };
 
 exports.isLoggedIn = async (req, res, next) => {
-  try {
-    if (req.cookies.jwt) {
+  if (req.cookies.jwt) {
+    try {
       const decoded = await promisify(jwt.verify)(
         req.cookies.jwt,
         process.env.JWT_SECRET
       );
-      // console.log(decoded);
+
+      if (!decoded) {
+        res.locals.user = undefined;
+        return next();
+      }
 
       const freshUser = await User.findById(decoded.id).populate({
         path: "subscribers",
       });
 
       if (!freshUser) {
-        res.locals.user = null;
+        // res.locals.user = null;
         return next();
       }
 
       if (freshUser.changedPasswordAfter(decoded.iat)) {
-        res.locals.user = null;
+        // res.locals.user = null;
         return next();
       }
 
       res.locals.user = freshUser;
       req.logged = freshUser;
       return next();
-    } else {
-      res.locals.user = undefined;
+    } catch (err) {
+      return next();
     }
-  } catch (err) {
-    return next();
+  } else {
+    res.locals.user = undefined;
   }
+
   next();
 };
 

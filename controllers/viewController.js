@@ -268,7 +268,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
   const recommendedDeals = await Deal.find(
     { $text: { $search: rec } },
-    { score: { $meta: "textScore" } },
+    { score: { $meta: "textScore" } }
     //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
 
@@ -285,22 +285,21 @@ exports.mainPage = catchAsync(async (req, res) => {
   if (req.query.search || req.query.sort) {
     // await Deal.ensureIndexes({ dealName: 'text' });
 
-    
-
     function dynamicSort(property) {
       var sortOrder = 1;
-      if(property[0] === "-") {
-          sortOrder = -1;
-          property = property.substr(1);
+      if (property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
       }
-      return function (a,b) {
-          /* next line works with strings and numbers, 
-           * and you may want to customize it to your needs
-           */
-          var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
-          return result * sortOrder;
-      }
-  }
+      return function(a, b) {
+        /* next line works with strings and numbers,
+         * and you may want to customize it to your needs
+         */
+        var result =
+          a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+        return result * sortOrder;
+      };
+    }
 
     //const tempDeals = await Deal.find();
 
@@ -317,13 +316,18 @@ exports.mainPage = catchAsync(async (req, res) => {
     //console.log(req.query.search);
     // var regex = new RegExp(req.query["term"], "i");
     let deals;
-    
-    if(req.query.search){
-      deals = await Deal.find(
+
+    if (req.query.search) {
+      deals = Deal.find(
         { $text: { $search: req.query.search } },
         { score: { $meta: "textScore" } }
-      ).sort([[{ score: { $meta: "textScore" } }]]);//.sort({ score: { $meta: "textScore" } });
-    }else{
+      ).sort({ score: { $meta: "textScore" } }); //.sort({ score: { $meta: "textScore" } });
+      // console.log(deals);
+      const dela = await deals.find();
+      console.log(dela);
+      // const sortDeals = await deals.sort(views);
+      // console.log(sortDeals);
+    } else {
       deals = await Deal.find();
     }
     // const user = await User.findById(req.user.id);
@@ -331,7 +335,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     // let sortBy = "trendRatio";
     // let order = -1;
     if (req.query.sort === "mrp") {
-       deals.sort(dynamicSort("mrp"));
+      deals.sort(dynamicSort("mrp"));
     }
     if (req.query.sort === "trendRatio") {
       deals.sort(dynamicSort("-trendRatio"));
@@ -389,9 +393,13 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     //console.log(recentlyViewed);
 
-    res
-      .status(200)
-      .render("main", { deals, recommendedDeals, liveDeals, cooCount, recentlyViewed });
+    res.status(200).render("main", {
+      deals,
+      recommendedDeals,
+      liveDeals,
+      cooCount,
+      recentlyViewed,
+    });
   }
 });
 
@@ -672,7 +680,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   const reco = await Deal.find(
     { $text: { $search: rec } },
-    { score: { $meta: "textScore" } },
+    { score: { $meta: "textScore" } }
     //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
 
@@ -689,33 +697,36 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //console.log(reco);
 
   let sortBy = "trendRatio";
-    let order = -1;
-    if (req.query.sort === "mrp") {
-      sortBy = "" + req.query.sort;
-      order = 1;
-    }
-    if (req.query.sort === "trendRatio") {
-      sortBy = "" + req.query.sort;
-      order = -1;
-    }
+  let order = -1;
+  if (req.query.sort === "mrp") {
+    sortBy = "" + req.query.sort;
+    order = 1;
+  }
+  if (req.query.sort === "trendRatio") {
+    sortBy = "" + req.query.sort;
+    order = -1;
+  }
 
-    const tempDeals = await Deal.find();
+  const tempDeals = await Deal.find();
 
-    for (var dealing of tempDeals) {
-      var now = new Date(Date.now());
-      var tem = (now.getTime() - dealing.time.getTime()) / 3600000;
-      tem = dealing.views / tem;
+  for (var dealing of tempDeals) {
+    var now = new Date(Date.now());
+    var tem = (now.getTime() - dealing.time.getTime()) / 3600000;
+    tem = dealing.views / tem;
 
-      //console.log(deal._id);
+    //console.log(deal._id);
 
-      await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
-    }
+    await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
+  }
 
-    // const user = await User.findById(req.user);
-    const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
+  // const user = await User.findById(req.user);
+  const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
 
   res.status(200).render("deal", {
-    deal, reco, cooCount, trendDeals
+    deal,
+    reco,
+    cooCount,
+    trendDeals,
   });
 });
 // function escapeRegex(text) {

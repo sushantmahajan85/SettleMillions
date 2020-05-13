@@ -318,13 +318,13 @@ exports.mainPage = catchAsync(async (req, res) => {
     let deals;
 
     if (req.query.search) {
-      deals = Deal.find(
+      deals = await Deal.find(
         { $text: { $search: req.query.search } },
         { score: { $meta: "textScore" } }
       ).sort({ score: { $meta: "textScore" } }); //.sort({ score: { $meta: "textScore" } });
       // console.log(deals);
-      const dela = await deals.find();
-      console.log(dela);
+      // const dela = await deals.find();
+      // console.log(dela);
       // const sortDeals = await deals.sort(views);
       // console.log(sortDeals);
     } else {

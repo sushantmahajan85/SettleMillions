@@ -48,22 +48,23 @@
           placeholder="Search"
           class="search__input"
         />
+        
         <button class="search__button">
           <i class="fas fa-search search-icon"></i>
         </button>
+      
+        <select class="sort-drop" name="sort" onchange="this.form.submit()">
+          <option selected disabled value="empty"
+            >--Choose Parameter--</option
+          >
+          <option value="mrp">Price</option>
+          <option value="trendRatio">Views</option>
+        </select>
+        <div>SortBy</div>
       </form>
 
       <nav class="user-nav">
-        <form action="/" method="GET" class="sortx">
-          <select class="sort-drop" name="sort" onchange="this.form.submit()">
-            <option selected disabled value="empty"
-              >--Choose Parameter--</option
-            >
-            <option value="mrp">Price</option>
-            <option value="trendRatio">Views</option>
-          </select>
-          <div>SortBy</div>
-        </form>
+        
         <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p>
         <div>
           <i class="fas fa-fire"></i>

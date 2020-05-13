@@ -23,7 +23,7 @@ const passvalueOut = async () => {
       showAlert("success", "Logged out");
       //   alert("successful");
       window.setTimeout(() => {
-        location.assign("/");
+        location.assign("/login");
       }, 800);
     }
     // console.log(request.data);

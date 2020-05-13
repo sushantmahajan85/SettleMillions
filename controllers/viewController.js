@@ -285,16 +285,44 @@ exports.mainPage = catchAsync(async (req, res) => {
   if (req.query.search) {
     // await Deal.ensureIndexes({ dealName: 'text' });
 
+    let sortBy = "trendRatio";
+    let order = -1;
+    if (req.query.sort === "mrp") {
+      sortBy = "" + req.query.sort;
+      order = 1;
+    }
+    if (req.query.sort === "trendRatio") {
+      sortBy = "" + req.query.sort;
+      order = -1;
+    }
+
+    //const tempDeals = await Deal.find();
+
+    // for (var deal of tempideals) {
+    //   var now = new Date(Date.now());
+    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    //   tem = deal.views / tem;
+
+    //   //console.log(deal._id);
+
+    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    // }
+
     //console.log(req.query.search);
     // var regex = new RegExp(req.query["term"], "i");
 
     const deals = await Deal.find(
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
-    ).sort({ score: { $meta: "textScore" } });
+    ).sort([[{ score: { $meta: "textScore" } }],[`${sortBy}`, order]]);//.sort({ score: { $meta: "textScore" } });
 
     // const user = await User.findById(req.user.id);
     // console.log(user);
+
+    
+
+    // const deals = await Deal.find().sort([[`${sortBy}`, order]]);
+
     // const regex = new RegExp(escapeRegex(req.query.search), "gi");
     // var result = [];
     // await Deal.find({
@@ -318,14 +346,14 @@ exports.mainPage = catchAsync(async (req, res) => {
   } else {
     let sortBy = "trendRatio";
     let order = -1;
-    if (req.query.sort === "mrp") {
-      sortBy = "" + req.query.sort;
-      order = 1;
-    }
-    if (req.query.sort === "trendRatio") {
-      sortBy = "" + req.query.sort;
-      order = -1;
-    }
+    // if (req.query.sort === "mrp") {
+    //   sortBy = "" + req.query.sort;
+    //   order = 1;
+    // }
+    // if (req.query.sort === "trendRatio") {
+    //   sortBy = "" + req.query.sort;
+    //   order = -1;
+    // }
 
     const tempDeals = await Deal.find();
 

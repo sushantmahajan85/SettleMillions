@@ -118,7 +118,6 @@
   margin: 2px; }
 
 .simplebar-scrollbar::before {
-  background-color: #969999 !important;
   height: 50vh;
   width: 3.2rem; }
 
@@ -128,6 +127,10 @@
   font-size: 2.6rem; }
   .font_icon:hover {
     color: red; }
+  .font_icon .Sidebar_logo {
+    padding: 1rem;
+    height: 1rem;
+    width: 1rem; }
 
 .sidebar_link {
   font-size: 1.1rem;
@@ -179,7 +182,7 @@ h2 {
     text-decoration: none; }
 
 .header {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   height: 60px;
   background-color: #4585f3;
   border-bottom: var(--line);
@@ -202,8 +205,7 @@ h2 {
     height: 11rem; } }
 
 .search {
-  background-color: silver;
-  border-radius: 2px;
+  border-radius: .1rem;
   height: 3.5rem;
   margin-left: 1rem;
   -webkit-box-flex: 0;
@@ -230,19 +232,17 @@ h2 {
     background-color: var(--color-grey-light-2); } }
 
 .search__input {
-  background-color: var(--color-grey-light-2);
   border: none;
-  padding: 0.7rem 2rem;
-  border-radius: 100px;
-  width: 90%;
+  padding: 0.85rem 2rem;
+  border-radius: .5rem;
+  width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-right: -3.25rem; }
 
 .search__input:focus {
   outline: none;
-  width: 100%;
-  background-color: var(--color-grey-light-3); }
+  width: 100%; }
 
 .search__input::-webkit-input-placeholder {
   font-weight: 100;
@@ -267,6 +267,21 @@ h2 {
   width: 2rem;
   fill: var(--color-grey-dark-3); }
 
+.search__button {
+  color: rgba(9, 78, 158, 0.7);
+  font-size: 1.3rem; }
+
+.Navb_logo-text {
+  display: flex;
+  color: #FF9A41;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  text-shadow: .2rem .2rem .2rem #00000085; }
+  .Navb_logo-text .Sidebar_logo {
+    color: white;
+    height: 3.25rem;
+    margin-left: 2rem; }
+
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -287,7 +302,9 @@ h2 {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  color: white;
+  margin: .5rem 1rem 0.5rem 0.5rem; }
 
 .user-nav > *:hover {
   background-color: var(--color-grey-light-2); }
@@ -2020,7 +2037,7 @@ rgba(0, 0, 0, 0.349);
 a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: black; }
 
 #searchx {

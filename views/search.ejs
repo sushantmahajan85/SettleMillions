@@ -25,8 +25,32 @@
    <%- include('partials/sidebar.ejs') %>
 
    <div class="page-content">
+      
       <div id="searchpage" class="searchpage">
-         
+         <button onclick="sortPrice()">Sort by mrp</button>
+         <button onclick="sortTrend()">Sort by Trending</button>
+         <script>
+            function sortPrice(){
+         var url = window.location.href;    
+         if (url.indexOf('?') > -1){
+            url += '&sort=mrp'
+         }else{
+            url += '?param=1'
+         }
+         window.location.href = url;
+}
+</script>
+<script>
+   function sortTrend(){
+var url = window.location.href;    
+if (url.indexOf('?') > -1){
+   url += '&sort=trendRatio'
+}else{
+   url += '?param=1'
+}
+window.location.href = url;
+}
+</script>
          <%  var i = 0; %>
          <% for(var deal of deals) { %>
          <% i++; %>

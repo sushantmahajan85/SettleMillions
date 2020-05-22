@@ -1,4 +1,19 @@
 const passvaluex = async (data) => {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
   try {
     const result = await axios({
       method: "PATCH",
@@ -6,14 +21,13 @@ const passvaluex = async (data) => {
       data,
     });
     if (result.data.status === "success") {
-      alert("login successful");
-      window.setTimeout(() => {
-        location.assign("/updateUserSettings");
-      }, 1000);
+      // alert("login successful");
+      showAlert("success", "Settings updated");
+      location.reload(true);
     }
     // console.log(result);
   } catch (err) {
-    console.log(err.response.data);
+    showAlert("error", err.response.data.message);
   }
 };
 

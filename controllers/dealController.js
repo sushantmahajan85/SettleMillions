@@ -6,10 +6,10 @@ const catchAsync = require("./../utils/catchAsync");
 
 const factory = require("./handlerFactory");
 exports.setDealUserIds = async (req, res, next) => {
-  if (!req.body.user) {
-    req.body.user = req.user.id;
-    // req.file.user = req.user.id;
-  }
+  req.body.user = req.user.id;
+  // console.log(req.file);
+  // req.file.user = req.user.id;
+
   // if (!req.body.user) { req.body.user = req.user.id; }
   next();
 };
@@ -57,11 +57,13 @@ exports.uploadDealImages = upload.fields([
 //upload.array('images', 4);
 
 exports.resizeDealImages = catchAsync(async (req, res, next) => {
-  console.log(req.files);
+  // console.log(req.files);
+  //console.log(req.body.user);
+  // console.log(req.user);
 
-    if (!req.files || !req.files.titleImg || !req.files.corouselImgs) {
-      return next();
-    }
+  if (!req.files || !req.files.titleImg) {
+    return next();
+  }
 
   //   const ext = req.file.mimetype.split("/")[1];
 
@@ -69,13 +71,19 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
   req.body.titleImg = `deal-${req.user.id}-${Date.now()}-title.jpeg`;
 
   await sharp(req.files.titleImg[0].buffer)
-    // .resize(2000, 1333)
     .toFormat("jpeg")
     .jpeg({ quality: 90 })
     .toFile(`public/img/deals/${req.body.titleImg}`);
+  // .resize(2000, 1333)
+
+  //console.log(req.files.corouselImgs);
+
+  if (!req.files.corouselImgs) {
+    return next();
+  }
 
   req.body.corouselImgs = [];
-  req.body.user = req.user.id;
+  // req.body.user = req.user.id;
   await Promise.all(
     req.files.corouselImgs.map(async (file, i) => {
       const filename = `deal-${req.user.id}-${Date.now()}-${i + 1}.jpeg`;

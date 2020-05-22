@@ -142,11 +142,17 @@
           </div>
           <div class="deal-deets_buttons">
             <a href="<%= deal.affiliateLink %>" class="deal-deets_buy">Buy now</a>
-            <% if (like) { %>
-             
-            <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
-            <% } else { %>
-              <a href="" class="deal-deets_save" id="like_deal">Save for later</a>
+            <% if (user) { %>
+                <% if (like) { %>
+                
+                <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
+                <% } else { %>
+                  <a href="" class="deal-deets_save" id="like_deal">Save for later</a>
+
+                <% } %>
+            <% }else{ %>
+            
+              <button class="deal-deets_save" id="like_deal_no">Save for later</button>
 
             <% } %>
             </div>
@@ -156,11 +162,20 @@
           </div>
           <div class="deal-deets_buttons">
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
-            <% if (log) { %>
-              <a href="" class="deal-deets_subs" id="unsubscribe_btn">un</a>
-              <% } else { %>
-            <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
-            <% } %>
+            <% if (user) { %>
+
+                <% if (log) { %>
+                  <a href="" class="deal-deets_subs" id="unsubscribe_btn">un</a>
+                  <% } else { %>
+                <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
+                <% } %>
+
+            <% }else{ %>
+            
+              <button class="deal-deets_subs" id="subscribe_btn_no">Subscribe</button>
+            
+              <% } %>  
+
           </div>
           <div class="deal-deets_paragraph">
             <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3>
@@ -172,13 +187,13 @@
 
       <div class="reviews" id="reviews">
         <div class="review-section">
-          <span class="review-head"><img src="/images/oneplusback.jpg" alt="User photo"
+          <span class="review-head"><img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
               class="user-nav__user-photo review-photo"></span>
-          <input type="textarea" placeholder="Add A Review" class="add-review-text-area">
-
+          <input type="textarea" placeholder="Add A Review" id="review_input" class="add-review-text-area">
+<button id="review_post">Post a review</button>
           <% for( var review of deal.reviews ) { %>
           <div class="user-nav__user user-review">
-            <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+            <img src=<%=`/img/users/${review.user.photo}`%>  alt="User photo" class="user-nav__user-photo review-photo">
 
             <div class="review-text">
               <div class="user-nav__user-name"><%= review.user.name %> </div>
@@ -331,88 +346,109 @@
     </div>
 
     <div class="side_deals">
-      <div class=" side_deals_item">
-        <div class="deal_area_box" style="width: 100% !important;">
-          <div class="bigImg_container">
-            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-          </div>
-          <div class="deal_area_content">
-            <!-- <div class="picture_container">
-                      <div class="profile_pic"></div>
-                  </div> -->
-            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-              <div class="deal_box_nameTime"
-                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-                <div class="deal_box_name" style="font-size: 15px !important;">The Moaping Machine Extra text</div>
-
+      <% var i=0; %>
+      <% for(var deal of reco){ %>
+        <% i++; if(i>cooCount){ %>
+        <div class=" side_deals_item">
+          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
+          <div class="deal_area_box" style="width: 100% !important;">
+            <div class="bigImg_container">
+              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+            </div>
+            <div class="deal_area_content">
+              <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                    </div> -->
+              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                <div class="deal_box_nameTime"
+                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+  
+                  <div class="deal_box_name" style="font-size: 15px !important;">
+                    <%= deal.dealName %>
+                  </div>
+  
+                </div>
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+  
+                  <div class="deal_box_views"><%= deal.owner %></div>
+                  <!-- <div class="deal_box_time">Amazon</div> -->
+  
+                </div>
+  
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                  <div class="deal_box_views"><%= deal.mrp %></div>
+                  <div class="deal_box_time">80% OFF</div>
+                  <div class="deal_box_time"><%= deal.dealPrice %></div>
+                </div>
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                  <div class="deal_box_views"><%= deal.views %></div>
+                  <div class="deal_box_time">3 days ago</div>
+                </div>
+                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                      <div>80% Off only on HDFC Bank Credit Cards</div>
+                    </div> -->
               </div>
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                <div class="deal_box_views">Couper Deals</div>
-                <div class="deal_box_time">Amazon</div>
-
-              </div>
-
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_views">2000rs</div>
-                <div class="deal_box_time">80% OFF</div>
-                <div class="deal_box_time">200rs</div>
-              </div>
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                <div class="deal_box_views">1.4k views</div>
-                <div class="deal_box_time">3 days ago</div>
-              </div>
-              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                    <div>80% Off only on HDFC Bank Credit Cards</div>
-                  </div> -->
             </div>
           </div>
+          </a>
         </div>
-      </div>
-      <div class="side_deals_item">
-        <div class="deal_area_box" style="width: 100% !important;">
-          <div class="bigImg_container">
-            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-          </div>
-          <div class="deal_area_content">
-            <!-- <div class="picture_container">
-                      <div class="profile_pic"></div>
-                  </div> -->
-            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-              <div class="deal_box_nameTime"
-                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+          <% } %>
+          <% if(i===cooCount+3){break;} %>
+        <% } %>
 
-                <div class="deal_box_name">The Moaping Machine Extra text</div>
-
+        <% var i=0; %>
+      <% for(var deal of trendDeals){ %>
+        <% i++;%>
+        <div class=" side_deals_item">
+          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
+          <div class="deal_area_box" style="width: 100% !important;">
+            <div class="bigImg_container">
+              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+            </div>
+            <div class="deal_area_content">
+              <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                    </div> -->
+              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                <div class="deal_box_nameTime"
+                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+  
+                  <div class="deal_box_name" style="font-size: 15px !important;">
+                    <%= deal.dealName %>
+                  </div>
+  
+                </div>
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+  
+                  <div class="deal_box_views"><%= deal.owner %></div>
+                  <!-- <div class="deal_box_time">Amazon</div> -->
+  
+                </div>
+  
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                  <div class="deal_box_views"><%= deal.mrp %></div>
+                  <div class="deal_box_time">80% OFF</div>
+                  <div class="deal_box_time"><%= deal.dealPrice %></div>
+                </div>
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                  <div class="deal_box_views"><%= deal.views %></div>
+                  <div class="deal_box_time">3 days ago</div>
+                </div>
+                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                      <div>80% Off only on HDFC Bank Credit Cards</div>
+                    </div> -->
               </div>
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                <div class="deal_box_views">Couper Deals</div>
-                <div class="deal_box_time">Amazon</div>
-
-              </div>
-
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_views">2000rs</div>
-                <div class="deal_box_time">80% OFF</div>
-                <div class="deal_box_time">200rs</div>
-              </div>
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                <div class="deal_box_views">1.4k views</div>
-                <div class="deal_box_time">3 days ago</div>
-              </div>
-              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                    <div>80% Off only on HDFC Bank Credit Cards</div>
-                  </div> -->
             </div>
           </div>
+        </a>
         </div>
-      </div>
+        <% if(i===3){break;} %>
+        <% } %>
+      
     </div>
 
   </div>
@@ -420,6 +456,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="/js/likedDeal.js"></script>
   <script src="/js/subscribe.js"></script>
+  <script src="/js/review.js"></script>
   <!-- <script src="/js/main.js"></script> -->
 
   <script>
@@ -472,6 +509,78 @@
       }
     }
   </script>
+
+<div class="popup" id="popupLike">
+  <!-- <div class="bg-video">
+      <video  class="bg-video_content" autoplay loop muted>
+          <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
+      </video>
+  </div> -->
+<div class="popup_content">
+  
+     
+<div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
+<!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+</div>
+<div class="popup_right">
+  <div class="popup_cross" id="popup_crosslike">&times;</div>
+<h1 class="heading-secondary popup_heading center">about us</h1>
+<p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
+
+</div>
+
+<button id="like_btn_deal">Signup/Login</button>
+</div>
+</div>
+
+  <script>
+
+      document.getElementById("like_deal_no").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.getElementById('popupLike').style.display = 'block'; 
+      });
+
+  </script>
+  <script>
+
+    document.getElementById("subscribe_btn_no").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.getElementById('popupLike').style.display = 'block'; 
+    });
+
+</script>
+  <script>
+
+      // document.getElementById("like_deal").addEventListener("click", (e) => {
+      //   e.preventDefault();
+
+      //   passvalueo();
+      // });
+
+    </script>
+  <script>
+
+    document.getElementById("popup_crosslike").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.getElementById('popupLike').style.display = 'none'; 
+    });
+
+  </script>
+  <script>
+
+    document.getElementById("like_btn_deal").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.getElementById('popupLike').style.display = 'none';
+      location.assign('/signup'); 
+    });
+
+  </script>
+
+
 
 </body>
 

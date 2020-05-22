@@ -49,38 +49,24 @@
           placeholder="Type to search"
           class="search__input"
         />
+        
         <button class="search__button">
           <i class="fas fa-search search-icon"></i>
         </button>
+      
+        <select class="sort-drop" name="sort" onchange="this.form.submit()">
+          <option selected disabled value="empty"
+            >--Choose Parameter--</option
+          >
+          <option value="mrp">Price</option>
+          <option value="trendRatio">Views</option>
+        </select>
+        <div>SortBy</div>
       </form>
 
       <nav class="user-nav">
-        <!-- D changes -->
-
-        <!-- <form action="/" method="GET" class="sortx">
-          <select class="sort-drop" name="sort" onchange="this.form.submit()">
-            <option selected disabled value="empty"
-              >--Choose Parameter--</option
-           
-            <option value="mrp">mrp</option>
-            <option value="views">views</option>
-          </select>
-          <div>SortBy</div>
-        </form>   > -->
-
-        <!-- D changes // -->
-
-
-        <!-- D changes -->
-
-        <!-- <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p> -->
-        <!-- <div> 
-          <i class="fas fa-fire"></i> 
-           <div style="margin: 5px;">Trending</div>
-        </div>  -->
-
-        <!-- D changes // -->
-
+        
+        <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p>
         <div>
           <!-- <i class="fas fa-th"></i> -->
 
@@ -90,11 +76,7 @@
           <!-- <img src="down_arrow.png"> -->
         </div>
 
-        
-           
-       
-
-
+        <% if(user){ %>
         <a href="/newDeal">
           <div class="postDeal" style="display: flex; align-items: center; ">
 
@@ -107,21 +89,51 @@
             <div style="margin: 5px;">POST </div>
           </div>
         </a>
-        <!-- D changes -->
+      <% }else{ %>
+        <a href="#" id="like_deal_no">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <i class="fas fa-plus"></i>
+            <div style="margin: 5px;">Post a Deal</div>
+          </div>
+        </a>
+      <% } %>
 
-        <!-- <div class="user-nav__icon-box">
-          <i class="fas fa-bell"></i>
-          <span class="user-nav__notification">7</span>
-        </div> -->
+        <% if (user) { %>
+        <a href="" id="logout">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <i class="fas fa-plus"></i>
+            <div style="margin: 5px;">Logout</div>
+          </div>
+        </a>
+        <% } else { %>
+        <a href=<%=` /signup `%>  id="signup">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <i class="fas fa-plus"></i>
+            <div style="margin: 5px;">Signup</div>
+          </div>
+        </a>
+        <a href=<%= `/login` %>  id="login">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <i class="fas fa-plus"></i>
+            <div style="margin: 5px;">Login</div>
+          </div>
+        </a>
+        <% } %>
+<% if (user) { %>
+  <div class="user-nav__icon-box">
+    <i class="fas fa-bell"></i>
+    <span class="user-nav__notification">7</span>
+  </div>
 
+<% } %>
         
-        <!-- <div class="user-nav__user">
-          <% if (user) { %> <% if (user.photo) { %> <img
+        <div class="user-nav__user">
+          <% if (user) { %> <% if (user.photo) { %> <a href=<%= `/member/${user.id}` %> > <img
           src=<%=`/img/users/${user.photo}` %> alt="User photo"
-          class="user-nav__user-photo" /> <% } else { %> <img
+          class="user-nav__user-photo" /></a> <% } else { %> <a href=<%= `/member/${user.id}` %> > <img
           data-name=<%=user.name %> data-color="#85e0ce" class="profile
-          user-nav__user-photo"/> <% } %> <% } else { %>
-          <span class="user-nav__user-name">NJ</span>
+          user-nav__user-photo"/></a> <% } %> <% } else { %>
+          
           <% } %>
         </div> -->
 
@@ -140,6 +152,7 @@
     <script>
       $(".profile").initial();
     </script>
+    <script src="/js/logout.js"></script>
     <!-- <script src="/vendor/jquery.bootcomplete.js"></script>
 
     <script>
@@ -226,5 +239,69 @@
         });
       });
     </script>
+
+
+<div class="popup" id="popupLike">
+  <!-- <div class="bg-video">
+      <video  class="bg-video_content" autoplay loop muted>
+          <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
+      </video>
+  </div> -->
+<div class="popup_content">
+  
+     
+<div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
+<!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+</div>
+<div class="popup_right">
+  <div class="popup_cross" id="popup_crosslike">&times;</div>
+<h1 class="heading-secondary popup_heading center">about us</h1>
+<p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
+
+</div>
+
+<button id="like_btn_deal">Signup/Login</button>
+</div>
+</div>
+
+  <script>
+
+    document.getElementById("like_deal_no").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.getElementById('popupLike').style.display = 'block'; 
+    });
+
+</script>
+  <script>
+
+      // document.getElementById("like_deal").addEventListener("click", (e) => {
+      //   e.preventDefault();
+
+      //   location.assign("/newDeal");
+      // });
+
+    </script>
+  <script>
+
+    document.getElementById("popup_crosslike").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.getElementById('popupLike').style.display = 'none'; 
+    });
+
+  </script>
+  <script>
+
+    document.getElementById("like_btn_deal").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.getElementById('popupLike').style.display = 'none';
+      location.assign('/signup'); 
+    });
+
+  </script>
+
+
   </body>
 </html>

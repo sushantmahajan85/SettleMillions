@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 const User = require("../schema/models/userModel");
 const AppError = require("../utils/appError");
-const sendEmail = require("../utils/email");
+const Email = require("../utils/email");
 const random = require("../utils/utils");
 const crypto = require("crypto");
 const catchAsync = require("./../utils/catchAsync");
@@ -14,17 +14,28 @@ const signToken = (id) =>
 
 exports.signUp = async (req, res) => {
   try {
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
     const newUser = await User.create({
       name: req.body.name,
       password: req.body.password,
+      gSignin: req.body.gSignin,
       email: req.body.email,
       phoneNo: req.body.phoneNo,
       passwordConfirm: req.body.passwordConfirm,
     });
+    const token = signToken(newUser._id);
+    const cookieOptions = {
+      expires: new Date(
+        Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+      ),
+      // secure: true,
+      httpOnly: true,
+    };
+    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
+    res.cookie("jwt", token, cookieOptions);
     res.status(201).json({
       status: "success",
+      token,
       data: {
         newUser,
       },
@@ -40,6 +51,7 @@ exports.signUp = async (req, res) => {
 
 exports.verify = async (req, res, next) => {
   try {
+    // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
     const { verification_token } = req.body;
     const user = await User.findOneAndUpdate(
       {
@@ -52,7 +64,9 @@ exports.verify = async (req, res, next) => {
     if (!user) {
       return next(new AppError("Wrong OTP", 400));
     }
-
+    // aana chahiye
+    const url = "amazon.in";
+    await new Email(user, url).sendWelcome();
     const token = signToken(user._id);
     const cookieOptions = {
       expires: new Date(
@@ -92,6 +106,9 @@ exports.login = async (req, res, next) => {
       );
     }
     const user = await User.findOne({ email: email }).select("+password");
+    // const test = JSON.stringify(user);
+    // const url = "amazon";
+    // await new Email(user, url).sendWelcome();
     if (
       !user ||
       !(await user.verifyPassword(password, user.password)) ||
@@ -110,6 +127,29 @@ exports.login = async (req, res, next) => {
     };
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
+    // const resetURL = `${req.protocol}://${req.get(
+    //   "host"
+    // )}/api/v1/users/resetPassword/${resetToken}`;
+
+    // await sendEmail({
+    //   ////// For Sending Reset Password Mail //////
+    //   email: user.email,
+    //   subject: "Password Reset Token ( Valid For 10 Minutes )",
+    //   message: message,
+    // });
+
+    // const resetURL = `${req.protocol}://${req.get(
+    //   "host"
+    // )}/api/v1/users/resetPassword/${resetToken}`;
+
+    // await new Email(user, resetURL).sendPasswordReset();
+    const url = "amazon.in";
+    await new Email(user, url).sendWelcome();
+    // res.status(200).json({
+    //   status: "success",
+    //   message: "Token Sent",
+    // });
+
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({
       status: "success",
@@ -122,11 +162,11 @@ exports.login = async (req, res, next) => {
 
 exports.logout = (req, res) => {
   res.cookie("jwt", "loggedout", {
-    expires: new Date(Date.now() + 10 * 1000),
+    expires: new Date(Date.now() + 100),
     // secure: true,
     httpOnly: true,
   });
-  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+  // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
   res.status(200).json({ status: "success" });
 };
@@ -189,36 +229,45 @@ exports.resend = async (req, res, next) => {
   }
 };
 
-exports.isLoggedIn = catchAsync(async (req, res, next) => {
+exports.isLoggedIn = async (req, res, next) => {
   if (req.cookies.jwt) {
-    const decoded = await promisify(jwt.verify)(
-      req.cookies.jwt,
-      process.env.JWT_SECRET
-    );
-    // console.log(decoded);
+    try {
+      const decoded = await promisify(jwt.verify)(
+        req.cookies.jwt,
+        process.env.JWT_SECRET
+      );
 
-    const freshUser = await User.findById(decoded.id).populate({
-      path: "subscribers",
-    });
+      if (!decoded) {
+        res.locals.user = undefined;
+        return next();
+      }
 
-    if (!freshUser) {
-      res.locals.user = null;
+      const freshUser = await User.findById(decoded.id).populate({
+        path: "subscribers",
+      });
+
+      if (!freshUser) {
+        // res.locals.user = null;
+        return next();
+      }
+
+      if (freshUser.changedPasswordAfter(decoded.iat)) {
+        // res.locals.user = null;
+        return next();
+      }
+
+      res.locals.user = freshUser;
+      req.logged = freshUser;
+      return next();
+    } catch (err) {
       return next();
     }
-
-    if (freshUser.changedPasswordAfter(decoded.iat)) {
-      res.locals.user = null;
-      return next();
-    }
-
-    res.locals.user = freshUser;
-    req.logged = freshUser;
-    return next();
   } else {
     res.locals.user = undefined;
   }
+
   next();
-});
+};
 
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {
@@ -241,22 +290,29 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   await user.save({ validateBeforeSave: false });
 
-  const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
+  // const message = `Forgot Your Password. Submit Request To Change To: ${resetURL}`;
 
   try {
-    await sendEmail({
-      ////// For Sending Reset Password Mail //////
-      email: user.email,
-      subject: "Password Reset Token ( Valid For 10 Minutes )",
-      message: message,
-    });
-
     const resetURL = `${req.protocol}://${req.get(
       "host"
-    )}/api/v1/users/resetPassword/${resetToken}`;
+    )}/resetPassword/${resetToken}`;
 
-    await new Email(user, resetURL).sendPasswordReset();
+    // await sendEmail({
+    //   ////// For Sending Reset Password Mail //////
+    //   email: user.email,
+    //   subject: "Password Reset Token ( Valid For 10 Minutes )",
+    //   message: message,
+    // });
 
+    // const resetURL = `${req.protocol}://${req.get(
+    //   "host"
+    // )}/api/v1/users/resetPassword/${resetToken}`;
+
+    // await new Email(user, resetURL).sendPasswordReset();
+    // const test = JSON.stringify(user);
+    // const vi = test.split(",")[7];
+    // const gi =    vi.split(":")[1];
+    await new Email(user, resetURL).sendWelcome();
     res.status(200).json({
       status: "success",
       message: "Token Sent",
@@ -266,7 +322,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     user.passwordResetExpires = undefined;
     await user.save({ validateBeforeSave: false });
 
-    return next(new AppError("Error In Sending Email. Try Again", 500));
+    return next(new AppError(err, 500));
   }
 });
 

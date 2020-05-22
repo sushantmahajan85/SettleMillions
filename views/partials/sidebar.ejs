@@ -7,7 +7,7 @@
       data-simplebar-timeout="10000"
       data-simplebar
     >
-      <a href="#">
+      <a href=<%= `/` %> >
         <div class="item2">
           <h4 class="heading-normal">
             <i class="fas fa-fire font_icon"></i> Home
@@ -38,7 +38,7 @@
         </a>
       <% } %>
       
-      <a href="#">
+      <a href="../likedDeals">
         <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
           <h4 class="heading-normal">
             <i class="fas fa-fire font_icon"></i> Liked Deals
@@ -48,10 +48,14 @@
       <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
         Subscriptions
       </h3>
-      <% if (user) { %> <% var i = 0; %> <% for( var sub of user.subscribers) {
+      <% if (user) { %> <% var i = 0; %>
+        
+         
+        
+        <% for( var sub of user.subscribers) {
       %> <% i++; %> <% if (sub.subscribedUser) { %>
 
-      <a href="#">
+      <a href=<%=`/member/${sub.subscribedUser._id} `%> >
         <div class="item2">
           <% if (sub.subscribedUser.photo) { %> <img
           src=<%=`/img/users/${sub.subscribedUser.photo}`%> alt="hi"

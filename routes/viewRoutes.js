@@ -16,13 +16,18 @@ router.get(
 router.get("/", viewController.mainPage);
 router.get("/member/:id", viewController.getMemberData);
 router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
+router.get("/forgotPassword", viewController.forgot);
+router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get(
   "/subscriptions",
   authController.protect,
   viewController.getSubscriptions
 );
+
+router.get("/logout", authController.logout);
 router.get("/newDeal", viewController.createNewDeal);
+router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);
 router.get(
   "/updateUserSettings",

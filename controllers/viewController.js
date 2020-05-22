@@ -3,7 +3,7 @@ const Subscriber = require("./../schema/models/subscriberModel");
 const LikedDeal = require("./../schema/models/likedDealModel");
 const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
-const AppError = require("./../utils/appError");
+const appError = require("./../utils/appError");
 const exec = require("child_process").exec;
 const url = require("url");
 let cookieCount = 0;
@@ -20,6 +20,14 @@ let rec3 = "";
 let rec4 = "";
 let rec5 = "";
 
+exports.forgot = (req, res) => {
+  res.status(200).render("forgot");
+};
+
+exports.reset = (req, res) => {
+  res.status(200).render("reset");
+};
+
 exports.getLoginForm = (req, res) => {
   res.status(200).render("login");
 };
@@ -30,11 +38,14 @@ exports.getSignupForm = (req, res) => {
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
   const user = await User.findById(req.user).populate({
-    path: "likedDeals",
+    path: "likedDeals subscribers",
   });
   res.status(200).render("likedDeals", { user });
 });
-
+exports.editDeal = catchAsync(async (req, res) => {
+  const deal = await Deal.findById(req.params.id);
+  res.status(200).render("dealEdit", { deal });
+});
 exports.getSubscriptions = catchAsync(async (req, res) => {
   const xyz = await User.findById(req.user).populate({
     path: "subscribers",
@@ -121,23 +132,30 @@ exports.autocomplete = catchAsync(async (req, res) => {
 exports.mainPage = catchAsync(async (req, res) => {
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    console.log(joChahiye[1]);
+    console.log(joChahiye);
 
-    if (joChahiye[1] == "report") {
-      await Deal.findOneAndUpdate(
-        { _id: joChahiye[0] },
-        { $inc: { reportCount: 1 } }
-      );
-    }
+    // if (joChahiye[0] == "report") {
+    //   await Deal.findOneAndUpdate(
+    //     { _id: joChahiye[1] },
+    //     { $inc: { reportCount: 1 } }
+    //   );
+    // }
 
     if (joChahiye[1] == "delete") {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });
     }
+    if (req.logged) {
+      if (joChahiye[1] == "like") {
+        await LikedDeal.create({ deal: joChahiye[0], user: req.logged._id });
+      }
+    }
   }
 
   let cooCount = 0;
+  let recentlyViewed = [];
 
   if (req.cookies.one !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.one;
     cooCount++;
     rec1 =
       req.cookies.one.dealName +
@@ -159,6 +177,7 @@ exports.mainPage = catchAsync(async (req, res) => {
   }
   //console.log(Object.keys(req.cookies.one.tags).length);
   if (req.cookies.two !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.two;
     cooCount++;
     rec2 =
       req.cookies.two.dealName +
@@ -179,6 +198,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.three !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.three;
     cooCount++;
     rec3 =
       req.cookies.three.dealName +
@@ -199,6 +219,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.four !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.four;
     cooCount++;
     rec4 =
       req.cookies.four.dealName +
@@ -219,6 +240,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.five !== undefined) {
+    recentlyViewed[cooCount] = req.cookies.five;
     cooCount++;
     rec5 =
       req.cookies.five.dealName +
@@ -242,18 +264,54 @@ exports.mainPage = catchAsync(async (req, res) => {
   rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
 
   //console.log(rec);
+  //const t = await Deal.find({ trendRatio: { $gte: 4 } });
 
   const recommendedDeals = await Deal.find(
     { $text: { $search: rec } },
     { score: { $meta: "textScore" } }
+    //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
+
+  // for(var k=cooCount; k<recommendedDeals.length; k++){
+  //   if(recommendedDeals[k].trendRatio < 4){
+  //     recommendedDeals[k] = undefined;
+  //   }
+  // }
 
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;
   }
-  // console.log(recommendedDeals);
-  if (req.query.search) {
+  //console.log(recommendedDeals);
+  if (req.query.search || req.query.sort) {
     // await Deal.ensureIndexes({ dealName: 'text' });
+
+    function dynamicSort(property) {
+      var sortOrder = 1;
+      if (property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+      }
+      return function(a, b) {
+        /* next line works with strings and numbers,
+         * and you may want to customize it to your needs
+         */
+        var result =
+          a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+        return result * sortOrder;
+      };
+    }
+
+    //const tempDeals = await Deal.find();
+
+    // for (var deal of tempideals) {
+    //   var now = new Date(Date.now());
+    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    //   tem = deal.views / tem;
+
+    //   //console.log(deal._id);
+
+    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    // }
 
     //console.log(req.query.search);
     // var regex = new RegExp(req.query["term"], "i");
@@ -261,10 +319,29 @@ exports.mainPage = catchAsync(async (req, res) => {
     const deals = await Deal.find(
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
-    ).sort({ score: { $meta: "textScore" } });
+    ).sort([[{ score: { $meta: "textScore" } }]]); //.sort({ score: { $meta: "textScore" } });
+    // console.log(deals);
+    // const dela = await deals.find().sort([[req.query.sort, 1]]);
+    // console.log(dela);
+    // const sortDeals = await deals.sort(views);
+    // console.log(sortDeals);
+    //res.status(200).render("search", { deals /*recommendedDeals*/ });
 
     // const user = await User.findById(req.user.id);
     // console.log(user);
+
+    // let sortBy = "trendRatio";
+    // let order = -1;
+
+    if (req.query.sort === "mrp") {
+      deals.sort(dynamicSort("mrp"));
+    }
+    if (req.query.sort === "trendRatio") {
+      deals.sort(dynamicSort("-trendRatio"));
+    }
+
+    // const deals = await Deal.find().sort([[`${sortBy}`, order]]);
+
     // const regex = new RegExp(escapeRegex(req.query.search), "gi");
     // var result = [];
     // await Deal.find({
@@ -286,23 +363,42 @@ exports.mainPage = catchAsync(async (req, res) => {
     // //console.log(deals);
     res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
-    let sortBy = "views";
-    let order = -1;
-    if (req.query.sort === "mrp") {
-      sortBy = "" + req.query.sort;
-      order = 1;
+    // let sortBy = "trendRatio";
+    // let order = -1;
+    // if (req.query.sort === "mrp") {
+    //   sortBy = "" + req.query.sort;
+    //   order = 1;
+    // }
+    // if (req.query.sort === "trendRatio") {
+    //   sortBy = "" + req.query.sort;
+    //   order = -1;
+    // }
+
+    const tempDeals = await Deal.find();
+
+    for (var deal of tempDeals) {
+      var now = new Date(Date.now());
+      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      tem = deal.views / tem;
+
+      //console.log(deal._id);
+
+      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     }
-    if (req.query.sort === "views") {
-      sortBy = "" + req.query.sort;
-      order = -1;
-    }
+
     // const user = await User.findById(req.user);
-    const deals = await Deal.find().sort([[`${sortBy}`, order]]);
+    const deals = await Deal.find().sort([["trendRatio", -1]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);
 
-    res
-      .status(200)
-      .render("main", { deals, recommendedDeals, liveDeals, cooCount });
+    //console.log(recentlyViewed);
+
+    res.status(200).render("main", {
+      deals,
+      recommendedDeals,
+      liveDeals,
+      cooCount,
+      recentlyViewed,
+    });
   }
 });
 
@@ -354,35 +450,41 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     { _id: req.params.dealId },
     { $inc: { views: 1 } }
   );
+
   // var full_url = req.url;
   // // var full_url = document.URL; // Get current url
   // var url_array = full_url.split("/"); // Split the string into an array with / as separator
   // var last_segment = url_array[url_array.length - 1]; // Get the last part of the array (-1)
   // var last = parseInt(last_segment);
-  const xyz = await User.findById(req.logged.id);
-  // console.log(xyz);
-  if (xyz) {
-    const likeModel = await LikedDeal.findOneAndDelete({
-      deal: req.params.dealId,
-      user: xyz._id,
-    });
-    console.log(likeModel);
-    res.locals.like = likeModel;
+  if (req.logged) {
+    const xyz = await User.findById(req.logged.id);
+
+    // console.log(xyz);
+    if (xyz) {
+      const likeModel = await LikedDeal.findOneAndDelete({
+        deal: req.params.dealId,
+        user: xyz._id,
+      });
+      //console.log(likeModel);
+      res.locals.like = likeModel;
+    } else {
+      res.locals.like = null;
+    }
+
+    if (xyz) {
+      const subModel = await Subscriber.findOneAndDelete({
+        subscribedUser: req.params.sellerId,
+        user: xyz._id,
+      });
+      // console.log(subModel);
+      res.locals.log = subModel;
+    } else {
+      res.locals.log = null;
+    }
   } else {
     res.locals.like = null;
-  }
-
-  if (xyz) {
-    const subModel = await Subscriber.findOneAndDelete({
-      subscribedUser: req.params.sellerId,
-      user: xyz._id,
-    });
-    // console.log(subModel);
-    res.locals.log = subModel;
-  } else {
     res.locals.log = null;
   }
-
   // console.log(submodel);
   // if (!subModel) {
   //   return next();
@@ -395,7 +497,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   });
 
   if (!deal) {
-    return next(new AppError("No Deal With That Id", 404));
+    return next(new appError("No Deal With That Id", 404));
   }
 
   const cookieOptions = {
@@ -460,8 +562,170 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   //console.log(dealId);
 
+  let cooCount = 0;
+  //let recentlyViewed = [];
+
+  if (req.cookies.one !== undefined) {
+    //recentlyViewed[cooCount] = req.cookies.one;
+    cooCount++;
+    rec1 =
+      req.cookies.one.dealName +
+      " " +
+      req.cookies.one.titleDis +
+      " " +
+      req.cookies.one.owner +
+      " " +
+      req.cookies.one.company +
+      " " +
+      req.cookies.one.category +
+      " " +
+      req.cookies.one.user;
+    if (req.cookies.one.tags) {
+      for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+        rec1 = rec1 + " " + req.cookies.one.tags[i];
+      }
+    }
+  }
+  //console.log(Object.keys(req.cookies.one.tags).length);
+  if (req.cookies.two !== undefined) {
+    //recentlyViewed[cooCount] = req.cookies.two;
+    cooCount++;
+    rec2 =
+      req.cookies.two.dealName +
+      " " +
+      req.cookies.two.titleDis +
+      " " +
+      req.cookies.two.owner +
+      " " +
+      req.cookies.two.company +
+      " " +
+      req.cookies.two.category +
+      " " +
+      req.cookies.two.user;
+    if (req.cookies.two.tags) {
+      for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
+        rec2 = rec2 + " " + req.cookies.two.tags[i];
+      }
+    }
+  }
+  if (req.cookies.three !== undefined) {
+    //recentlyViewed[cooCount] = req.cookies.three;
+    cooCount++;
+    rec3 =
+      req.cookies.three.dealName +
+      " " +
+      req.cookies.three.titleDis +
+      " " +
+      req.cookies.three.owner +
+      " " +
+      req.cookies.three.company +
+      " " +
+      req.cookies.three.category +
+      " " +
+      req.cookies.three.user;
+    if (req.cookies.three.tags) {
+      for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
+        rec3 = rec3 + " " + req.cookies.three.tags[i];
+      }
+    }
+  }
+  if (req.cookies.four !== undefined) {
+    //recentlyViewed[cooCount] = req.cookies.four;
+    cooCount++;
+    rec4 =
+      req.cookies.four.dealName +
+      " " +
+      req.cookies.four.titleDis +
+      " " +
+      req.cookies.four.owner +
+      " " +
+      req.cookies.four.company +
+      " " +
+      req.cookies.four.category +
+      " " +
+      req.cookies.four.user;
+    if (req.cookies.four.tags) {
+      for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
+        rec4 = rec4 + " " + req.cookies.four.tags[i];
+      }
+    }
+  }
+  if (req.cookies.five !== undefined) {
+    //recentlyViewed[cooCount] = req.cookies.five;
+    cooCount++;
+    rec5 =
+      req.cookies.five.dealName +
+      " " +
+      req.cookies.five.titleDis +
+      " " +
+      req.cookies.five.owner +
+      " " +
+      req.cookies.five.company +
+      " " +
+      req.cookies.five.category +
+      " " +
+      req.cookies.five.user;
+    if (req.cookies.five.tags) {
+      for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
+        rec5 = rec5 + " " + req.cookies.five.tags[i];
+      }
+    }
+  }
+
+  rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
+
+  //console.log(rec);
+  //const t = await Deal.find({ trendRatio: { $gte: 4 } });
+
+  const reco = await Deal.find(
+    { $text: { $search: rec } },
+    { score: { $meta: "textScore" } }
+    //{ trendRatio: { $gte: 4 } }
+  ).sort({ score: { $meta: "textScore" } });
+
+  // for(var k=cooCount; k<reco.length; k++){
+  //   if(reco[k].trendRatio < 4){
+  //     reco[k] = undefined;
+  //   }
+  // }
+
+  for (var i = 0; i < cooCount; i++) {
+    reco[i] = undefined;
+  }
+
+  //console.log(reco);
+
+  let sortBy = "trendRatio";
+  let order = -1;
+  if (req.query.sort === "mrp") {
+    sortBy = "" + req.query.sort;
+    order = 1;
+  }
+  if (req.query.sort === "trendRatio") {
+    sortBy = "" + req.query.sort;
+    order = -1;
+  }
+
+  const tempDeals = await Deal.find();
+
+  for (var dealing of tempDeals) {
+    var now = new Date(Date.now());
+    var tem = (now.getTime() - dealing.time.getTime()) / 3600000;
+    tem = dealing.views / tem;
+
+    //console.log(deal._id);
+
+    await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
+  }
+
+  // const user = await User.findById(req.user);
+  const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
+
   res.status(200).render("deal", {
     deal,
+    reco,
+    cooCount,
+    trendDeals,
   });
 });
 // function escapeRegex(text) {

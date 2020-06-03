@@ -34,8 +34,8 @@
           <!-- <img src="/img/users/favicon.png" alt="Logo" class="logo" /> -->
           
           <!-- <h2 class="heading-normal">Affiliate</h2> -->
-          <img src="/img/users/sidebar.svg" alt="Logo" class="Sidebar_logo" />
-          <h2 class="Navb_logo-text">YOUR DEAL</h2>
+          <!-- <img src="/img/users/sidebar.svg" alt="Logo" class="Sidebar_logo" /> -->
+          <h2 class="Navb_logo-text">Your Deal</h2>
         </div>
       </a>
 
@@ -54,14 +54,14 @@
           <i class="fas fa-search search-icon"></i>
         </button>
       
-        <select class="sort-drop" name="sort" onchange="this.form.submit()">
+        <!-- <select class="sort-drop" name="sort" onchange="this.form.submit()">
           <option selected disabled value="empty"
             >--Choose Parameter--</option
           >
           <option value="mrp">Price</option>
           <option value="trendRatio">Views</option>
-        </select>
-        <div>SortBy</div>
+        </select> -->
+        <!-- <div>SortBy</div> -->
       </form>
 
       <nav class="user-nav">
@@ -92,12 +92,12 @@
       <% }else{ %>
         <a href="#" id="like_deal_no">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <i class="fas fa-plus"></i>
-            <div style="margin: 5px;">Post a Deal</div>
+            <!-- <i class="fas fa-plus"></i> -->
+            <div style="margin: 5px;">POST</div>
           </div>
         </a>
       <% } %>
-
+      <div style="margin: 5px;">WISHLIST</div>
         <% if (user) { %>
         <a href="" id="logout">
           <div class="postDeal" style="display: flex; align-items: center; ">
@@ -108,14 +108,14 @@
         <% } else { %>
         <a href=<%=` /signup `%>  id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <i class="fas fa-plus"></i>
-            <div style="margin: 5px;">Signup</div>
+            <!-- <i class="fas fa-plus"></i> -->
+            <div style="margin: 5px;">SIGN-UP</div>
           </div>
         </a>
         <a href=<%= `/login` %>  id="login">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <i class="fas fa-plus"></i>
-            <div style="margin: 5px;">Login</div>
+            <!-- <i class="fas fa-plus"></i> -->
+            <div style="margin: 2px;">LOGIN</div>
           </div>
         </a>
         <% } %>
@@ -126,8 +126,8 @@
   </div>
 
 <% } %>
-        
-        <div class="user-nav__user">
+         <!-- D changes // -->
+        <!-- <div class="user-nav__user">
           <% if (user) { %> <% if (user.photo) { %> <a href=<%= `/member/${user.id}` %> > <img
           src=<%=`/img/users/${user.photo}` %> alt="User photo"
           class="user-nav__user-photo" /></a> <% } else { %> <a href=<%= `/member/${user.id}` %> > <img
@@ -135,15 +135,12 @@
           user-nav__user-photo"/></a> <% } %> <% } else { %>
           
           <% } %>
-        </div> -->
+        </div> --> -->
 
         <!-- <div style="margin: 5px;">SIGNUP</div>
         <div style="margin: 5px;">LOGIN</div> -->
 
          <!-- D changes // -->
-
-         <div style>SIGNUP</div>
-        <div style>LOGIN</div>
         
 
       </nav>

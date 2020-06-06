@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 .alerts {
   position: fixed;
   top: 0;
@@ -1199,7 +1201,7 @@ figure {
   outline-offset: 3px; }
 
 .containerSettings {
-  background: #FFFFFF;
+  background: #ffffff;
   height: 120rem;
   position: relative;
   box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5); }
@@ -1212,17 +1214,17 @@ figure {
   margin-bottom: 90px;
   position: absolute;
   z-index: 1;
-  background: #7ED386;
+  background: #7ed386;
   font-size: 1em;
   transform: rotate(-90deg);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer; }
   .CTA h1 {
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 10px;
     margin-left: 9px; }
   .CTA:hover {
-    background: #3FB6A8;
+    background: #3fb6a8;
     transform: scale(1.1); }
 
 .leftbox {
@@ -1230,7 +1232,7 @@ figure {
   position: absolute;
   width: 20%;
   height: 100%;
-  background: #7ED386;
+  background: #7ed386;
   box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5); }
 
 .rightbox {

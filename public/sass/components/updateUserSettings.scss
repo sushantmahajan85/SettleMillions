@@ -235,28 +235,29 @@
   outline: 3px solid #55c57a;
   outline-offset: 3px;
 }
- 
- /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$logo: #3DBB3D;
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$logo: #3dbb3d;
 $gray: #777777;
 $black: #070707;
-$green: #7ED386;
-$aqua: #3FB6A8;
-$white: #FFFFFF;
+$green: #7ed386;
+$aqua: #3fb6a8;
+$white: #ffffff;
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
-$hulu: 'Nunito Sans', sans-serif;
-$heading: 'Montserrat', sans-serif;
-$body: 'Roboto', sans-serif;
-
+$hulu: "Nunito Sans", sans-serif;
+$heading: "Montserrat", sans-serif;
+$body: "Roboto", sans-serif;
 
 .containerSettings {
   background: $white;
   height: 120rem;
   position: relative;
-  box-shadow: 2px 5px 20px rgba($gray, .5);
+  box-shadow: 2px 5px 20px rgba($gray, 0.5);
 }
 
 // .logo {
@@ -281,7 +282,7 @@ $body: 'Roboto', sans-serif;
   background: $green;
   font-size: 1em;
   transform: rotate(-90deg);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
   h1 {
     color: $white;
@@ -300,7 +301,7 @@ $body: 'Roboto', sans-serif;
   width: 20%;
   height: 100%;
   background: $green;
-  box-shadow: 3px 3px 10px rgba($gray, .5);
+  box-shadow: 3px 3px 10px rgba($gray, 0.5);
 }
 
 // nav a {
@@ -330,5 +331,3 @@ $body: 'Roboto', sans-serif;
   width: 80%;
   height: 100%;
 }
-
-

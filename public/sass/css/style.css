@@ -2288,11 +2288,19 @@ a {
   list-style: none;
   display: inline-block; }
 
+
+  /* D changes start */
+
+
 .side_bar {
-  width: 15%;
-  background-color: #f1eeee;
-  margin-top: 6rem;
+  width: 12.5%;
+  background-color: #fff;
+  margin-top: 6.5rem;
   height: 100%; }
+
+
+  /* D changes end */
+
 
 .item2 {
   padding: 0.5rem;

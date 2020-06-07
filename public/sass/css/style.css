@@ -463,6 +463,9 @@ a.show-hide-link {
   width: 100%;
   padding: 2rem; }
 
+body {
+  background-color: white; }
+
 .page-content {
   margin-left: 15%; }
 
@@ -502,7 +505,7 @@ img {
 
 .slideshow-container img {
   width: 100%;
-  height: 36rem; }
+  height: 100%; }
 
 /* Next & previous buttons */
 .prev,
@@ -2190,9 +2193,9 @@ a {
   display: inline-block; }
 
 .side_bar {
-  width: 15%;
-  background-color: #f1eeee;
-  margin-top: 6rem;
+  width: 12.5%;
+  background-color: white;
+  margin-top: 6.6rem;
   height: 100%; }
 
 .item2 {

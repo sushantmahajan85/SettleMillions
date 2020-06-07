@@ -107,7 +107,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
   //   ).sort({ score: { $meta: "textScore" } });
 
   // Execute query in a callback and return users list
-  query.exec(function(err, users) {
+  query.exec(function (err, users) {
     if (!err) {
       // Method to construct the json result set
       res.send(
@@ -291,7 +291,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         sortOrder = -1;
         property = property.substr(1);
       }
-      return function(a, b) {
+      return function (a, b) {
         /* next line works with strings and numbers,
          * and you may want to customize it to your needs
          */
@@ -376,15 +376,15 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     const tempDeals = await Deal.find();
 
-    for (var deal of tempDeals) {
-      var now = new Date(Date.now());
-      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
-      tem = deal.views / tem;
+    // for (var deal of tempDeals) {
+    //   var now = new Date(Date.now());
+    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    //   tem = deal.views / tem;
 
-      //console.log(deal._id);
+    //   //console.log(deal._id);
 
-      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    }
+    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    // }
 
     // const user = await User.findById(req.user);
     const deals = await Deal.find().sort([["trendRatio", -1]]);

@@ -498,10 +498,15 @@ img {
   width: 100%;
   padding-top: 5rem;
   padding-left: 15%;
-  height: 33rem; }
+  height: 36rem; }
+
+.slideshow-container img {
+  width: 100%;
+  height: 36rem; }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -521,7 +526,8 @@ img {
   border-radius: 3px 0 0 3px; }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8); }
 
 /* Caption text */
@@ -553,7 +559,8 @@ img {
   display: inline-block;
   transition: background-color 0.6s ease; }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171; }
 
 /* Fading animation */
@@ -565,19 +572,21 @@ img {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4; }
+    opacity: 0.4; }
   to {
     opacity: 1; } }
 
 @keyframes fade {
   from {
-    opacity: .4; }
+    opacity: 0.4; }
   to {
     opacity: 1; } }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next, .text {
+  .prev,
+  .next,
+  .text {
     font-size: 11px; } }
 
 #hideTrending {
@@ -687,11 +696,11 @@ figure {
     width: 100%;
     height: 100%; }
   figure:before {
-    content: '';
+    content: "";
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 0; }
   figure:after {
-    content: '';
+    content: "";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -715,7 +724,7 @@ figure {
       color: white;
       line-height: 1; }
       figure .date span:first-child {
-        font-family: 'Source Code Pro', sans-serif;
+        font-family: "Source Code Pro", sans-serif;
         font-size: 2rem;
         font-weight: 900; }
       figure .date span:last-child {
@@ -727,7 +736,7 @@ figure {
     z-index: 1; }
     figure figcaption h4 {
       margin: 0 0 5px;
-      font-family: 'Source Code Pro', sans-serif;
+      font-family: "Source Code Pro", sans-serif;
       font-size: 2rem;
       line-height: 1.35;
       text-shadow: 1px 1px rgba(0, 0, 0, 0.7); }
@@ -761,7 +770,7 @@ figure {
     border-bottom: 1px solid grey;
     padding: 2rem 2rem 1rem 1rem;
     font-size: 2.4rem !important;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
   .deal-deets_price {
     padding: 1.5rem 1rem 1rem 1rem;
     list-style: none;
@@ -791,7 +800,7 @@ figure {
     background-color: red; }
   .deal-deets_views {
     color: #7a7a7a;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin-right: 2rem;
     margin-left: 0.56rem;
     border-radius: 1rem;
@@ -800,7 +809,7 @@ figure {
   .deal-deets_time {
     color: #7a7a7a;
     word-spacing: 0.3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin-left: -0.56rem;
     border-radius: 1rem;
     font-size: 1.8rem; }
@@ -872,7 +881,7 @@ figure {
 .reviews {
   display: flex;
   color: white;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
   width: 120rem;
   margin: 5rem 0; }
 
@@ -994,7 +1003,7 @@ figure {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 30%;
+  top: 28%;
   width: auto;
   padding: 16px;
   margin-top: 0px;

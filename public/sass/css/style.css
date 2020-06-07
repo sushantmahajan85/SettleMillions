@@ -27,6 +27,12 @@
 #showLess {
   display: none; }
 
+.side_bar {
+  width: 12.5%;
+  background-color: white;
+  margin-top: 6.6rem;
+  height: 100%; }
+
 .w3-sidebar {
   max-width: 15%; }
 
@@ -2201,12 +2207,6 @@ a {
 .nav-links li {
   list-style: none;
   display: inline-block; }
-
-.side_bar {
-  width: 12.5%;
-  background-color: whitesmoke;
-  margin-top: 6.6rem;
-  height: 100%; }
 
 .item2 {
   padding: 0.5rem;

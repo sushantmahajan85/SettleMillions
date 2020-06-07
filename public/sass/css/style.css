@@ -464,10 +464,20 @@ a.show-hide-link {
   padding: 2rem; }
 
 body {
-  background-color: white; }
+  height: 100%;
+  background: #fff;
+  /* color: #333; */
+  /* background-image: url("../img/backg.jpg"); */
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+  /* color: #777777; */
+  /* padding: 3rem; */
+  box-sizing: border-box; }
 
 .page-content {
-  margin-left: 15%; }
+  margin-left: 15%;
+  background-color: white; }
 
 .trending {
   display: flex;
@@ -2194,7 +2204,7 @@ a {
 
 .side_bar {
   width: 12.5%;
-  background-color: white;
+  background-color: whitesmoke;
   margin-top: 6.6rem;
   height: 100%; }
 
@@ -2237,18 +2247,6 @@ html {
   margin: 0;
   padding: 0;
   /* box-sizing: inherit;  */ }
-
-body {
-  height: 100%;
-  background: #eee;
-  /* color: #333; */
-  /* background-image: url("../img/backg.jpg"); */
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  line-height: 1.7;
-  /* color: #777777; */
-  /* padding: 3rem; */
-  box-sizing: border-box; }
 
 .form_section {
   background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58)), url("/img/backg.jpg");

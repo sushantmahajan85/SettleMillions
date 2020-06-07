@@ -4,12 +4,25 @@ a.show-hide-link {
   padding: 2rem;
 }
 
-body{
-   background-color: white;
+body {
+  height: 100%;
+  background: #fff;
+  /* color: #333; */
+  /* background-image: url("../img/backg.jpg"); */
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+  /* color: #777777; */
+  /* padding: 3rem; */
+  // box-sizing: border-box;
+
+  box-sizing: border-box;
+  // background-position-y: 5rem;
 }
 .page-content {
   margin-left: 15%;
   // padding-top: 8rem;
+  background-color: rgb(255,255,255);
 }
 
 .trending {

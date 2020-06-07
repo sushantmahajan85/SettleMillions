@@ -997,14 +997,15 @@ figure {
   top: 30%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
-  color: white;
+  margin-top: 0px;
+  color: black;
   font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
+  font-size: 18px;
+  border-radius: 60px 60px 60px 60px;
   user-select: none;
   -webkit-user-select: none;
-  z-index: 20000000000000; }
+  z-index: 20000000000000;
+  visibility: initial; }
 
 .next {
   right: 0;
@@ -1012,7 +1013,7 @@ figure {
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(255, 255, 255, 0.8); }
 
 .numbertext {
   color: #f2f2f2;

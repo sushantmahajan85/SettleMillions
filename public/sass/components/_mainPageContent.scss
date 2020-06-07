@@ -33,7 +33,13 @@ a.show-hide-link{
 }
 
 .mySlides {display: none}
-img {vertical-align: middle;}
+img {
+   padding: 0.65rem;
+   vertical-align: middle;
+   // box-shadow:2px 2px 2px #000;
+   filter:drop-shadow(2px 2px 2px rgb(87, 86, 86));
+
+}
 
 /* Slideshow container */
 .slideshow-container {

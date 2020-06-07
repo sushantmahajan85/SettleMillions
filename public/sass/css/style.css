@@ -407,7 +407,9 @@ a.show-hide-link {
   display: none; }
 
 img {
-  vertical-align: middle; }
+  padding: 0.65rem;
+  vertical-align: middle;
+  filter: drop-shadow(2px 2px 2px #575656); }
 
 /* Slideshow container */
 .slideshow-container {

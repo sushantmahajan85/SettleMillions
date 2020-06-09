@@ -28,7 +28,7 @@
   display: none; }
 
 .side_bar {
-  width: 12.5%;
+  width: 12%;
   background-color: white;
   margin-top: 6.6rem;
   height: 100%;
@@ -1393,7 +1393,6 @@ figure {
   height: inherit;
   width: 26rem;
   padding-left: 1.9rem;
-  background-color: #f8f5f5;
   margin-left: -0.5rem;
   position: relative; }
 

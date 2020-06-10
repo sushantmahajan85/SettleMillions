@@ -2397,8 +2397,9 @@ input[type="password"] {
 
 .footer-content h2 {
   color: #fff;
-  text-align: center;
-  font-size: 2rem; }
+  text-align: left;
+  font-size: 2.5rem;
+  margin-left: 10px; }
 
 .footer-section {
   flex: 1;
@@ -2411,7 +2412,15 @@ input[type="password"] {
 
 .footer-section li {
   /* justify-content: start; */
-  text-align: inherit; }
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.5rem; }
+
+.footer-section i {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  margin-right: 10px; }
 
 .footer-section a {
   cursor: pointer;
@@ -2468,7 +2477,7 @@ hr {
     justify-content: flex-end; } }
 
 .newsletter {
-  margin: 50px 0px 50px 0px; }
+  margin: 50px 0px 60px 0px; }
 
 #newsletter_heading {
   text-align: center;

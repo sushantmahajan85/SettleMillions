@@ -622,15 +622,6 @@ img {
   font-size: 1.1rem;
   text-decoration: none !important; }
 
-#showMoreT {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 1.6rem; }
-  #showMoreT:hover {
-    background-color: #d4d3d3; }
-
 #showLessT {
   margin: 0;
   width: 100%;
@@ -642,14 +633,17 @@ img {
   #showLessT:hover {
     background-color: #d4d3d3; }
 
-#showMoreR {
+#showMoreR, #showMoreT, #showMoreL {
   margin: 0;
-  width: 100%;
+  width: 15%;
+  margin-left: 40%;
   text-align: center;
   cursor: pointer;
-  margin-bottom: 1.6rem; }
-  #showMoreR:hover {
-    background-color: #d4d3d3; }
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  border-radius: 4rem; }
+  #showMoreR:hover, #showMoreT:hover, #showMoreL:hover {
+    border: 1.6px double #A42A30; }
 
 #showLessR {
   margin: 0;
@@ -660,15 +654,6 @@ img {
   display: none;
   margin-bottom: 1.6rem; }
   #showLessR:hover {
-    background-color: #d4d3d3; }
-
-#showMoreL {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 1.6rem; }
-  #showMoreL:hover {
     background-color: #d4d3d3; }
 
 #showLessL {
@@ -776,14 +761,17 @@ figure {
 .mainpage_titles {
   text-align: left;
   display: block;
-  width: 86%;
+  width: 95%;
   font-size: 3.5rem;
   margin: 4rem 0 2rem 1rem;
   color: #2E3043;
   font-weight: 700;
   font-family: "Market Sans", Arial, sans-serif;
   border-bottom: 2px solid #e8e8e8;
-  letter-spacing: 0.25rem; }
+  letter-spacing: 0.21rem; }
+  .mainpage_titles:hover {
+    color: #A42A30;
+    border-bottom: 2px solid #A42A30; }
 
 .dealPageContent {
   display: flex;

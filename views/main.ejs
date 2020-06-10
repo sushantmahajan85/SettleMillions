@@ -66,8 +66,9 @@
     </div>
 
     <div class="page-content">
-
+        <a href=" ">
         <div class= "mainpage_titles">TRENDING</div>
+    </a>
         <!-- <hr> -->
 
         <div id="trending" class="trending">
@@ -294,7 +295,7 @@
         <div id="showMoreT">
             <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
                 <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                <span class="heading-normal">Show More</span>
+                <span class="heading-normal">See More</span>
             </a>
         </div>
         <div id="showLessT">
@@ -489,7 +490,7 @@
         <div id="showMoreR">
             <a href="#recommended" class="show-hide-link" id="more" onclick="recMoreLess()">
                 <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                <span class="heading-normal">Show More</span>
+                <span class="heading-normal">See More</span>
             </a>
         </div>
         <div id="showLessR">
@@ -501,8 +502,8 @@
 
         <% } %>
 
-        <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">LIVE</div>
-        <hr>
+        <div class= "mainpage_titles">LIVE</div>
+        <!-- <hr> -->
 
         <div id="live" class="trending">
             
@@ -676,7 +677,7 @@
         <div id="showMoreL">
             <a href="#live" class="show-hide-link" id="more" onclick="liveMoreLess()">
                 <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-                <span class="heading-normal">Show More</span>
+                <span class="heading-normal">See More</span>
             </a>
         </div>
         <div id="showLessL">
@@ -707,8 +708,8 @@
         
         <% if(recentlyViewed.length !== 0){ %>
 
-        <div style="text-align: center; display: block; width: 100%; font-size: 2rem; margin: 4rem 0 2rem 0;">RECENTLY VIEWED</div>
-        <hr>
+        <div class= "mainpage_titles" >RECENTLY VIEWED</div>
+        <!-- <hr> -->
 
         <div class="main-content">
             <div class="owl-carousel owl-theme">

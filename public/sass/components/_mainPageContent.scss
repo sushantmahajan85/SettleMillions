@@ -194,18 +194,18 @@ img {
   text-decoration: none !important;
 }
 
-#showMoreT {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-//   border-bottom: 1px solid rgb(212, 211, 211);
-  cursor: pointer;
-  margin-bottom: 1.6rem;
+// #showMoreT {
+//   margin: 0;
+//   width: 100%;
+//   text-align: center;
+// //   border-bottom: 1px solid rgb(212, 211, 211);
+//   cursor: pointer;
+//   margin-bottom: 1.6rem;
 
-  &:hover {
-    background-color: rgb(212, 211, 211);
-  }
-}
+//   &:hover {
+//     background-color: rgb(212, 211, 211);
+//   }
+// }
 
 #showLessT {
   margin: 0;
@@ -221,16 +221,23 @@ img {
   }
 }
 
-#showMoreR {
+#showMoreR,#showMoreT,#showMoreL {
   margin: 0;
-  width: 100%;
+  width: 15%;
+//   max-height: 5rem;
+  margin-left: 40%;
   text-align: center;
 //   border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  border-radius: 4rem;
 
   &:hover {
-    background-color: rgb(212, 211, 211);
+   //  background-color: #F8F9F9;
+   // background-color:  #A42A30;
+   // text-decoration: underline;
+   border: 1.6px double #A42A30;
   }
 }
 
@@ -248,18 +255,18 @@ img {
   }
 }
 
-#showMoreL {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-//   border-bottom: 1px solid rgb(212, 211, 211);
-  cursor: pointer;
-  margin-bottom: 1.6rem;
+// #showMoreL {
+//   margin: 0;
+//   width: 100%;
+//   text-align: center;
+// //   border-bottom: 1px solid rgb(212, 211, 211);
+//   cursor: pointer;
+//   margin-bottom: 1.6rem;
 
-  &:hover {
-    background-color: rgb(212, 211, 211);
-  }
-}
+//   &:hover {
+//     background-color: rgb(212, 211, 211);
+//   }
+// }
 
 #showLessL {
   margin: 0;
@@ -407,12 +414,18 @@ figure {
  .mainpage_titles{
  text-align: left;; 
  display: block;
-  width: 86%; 
+  width: 95%; 
   font-size: 3.5rem;
    margin: 4rem 0 2rem 1rem;
    color: #2E3043;
    font-weight: 700;
    font-family: "Market Sans", Arial, sans-serif;
    border-bottom: 2px solid #e8e8e8;
-   letter-spacing: 0.25rem;
+   letter-spacing: 0.21rem;
+
+
+  &:hover{
+    color: #A42A30;
+    border-bottom: 2px solid #A42A30;
  }
+}

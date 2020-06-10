@@ -31,7 +31,7 @@ body {
   flex: 0 0 25%;
   flex-wrap: wrap;
   align-content: center;
-  padding-top: 8rem;
+  padding-top: 3.5rem;
 }
 
 .searchpage {
@@ -60,9 +60,10 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
+  width: 99.2%;
   padding-top: 5rem;
   padding-left: 13%;
+  
 
   //   position: absolute;
   height: 45rem;
@@ -197,7 +198,7 @@ img {
   margin: 0;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgb(212, 211, 211);
+//   border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   margin-bottom: 1.6rem;
 
@@ -224,7 +225,7 @@ img {
   margin: 0;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgb(212, 211, 211);
+//   border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   margin-bottom: 1.6rem;
 
@@ -251,7 +252,7 @@ img {
   margin: 0;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid rgb(212, 211, 211);
+//   border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   margin-bottom: 1.6rem;
 
@@ -394,3 +395,24 @@ figure {
   display: flex;
   flex-direction: column;
 }
+
+.item{
+   margin-left: 2.2rem;
+ }
+ 
+ #showMore {
+ margin-top: 1rem;
+ }
+ 
+ .mainpage_titles{
+ text-align: left;; 
+ display: block;
+  width: 86%; 
+  font-size: 3.5rem;
+   margin: 4rem 0 2rem 1rem;
+   color: #2E3043;
+   font-weight: 700;
+   font-family: "Market Sans", Arial, sans-serif;
+   border-bottom: 2px solid #e8e8e8;
+   letter-spacing: 0.25rem;
+ }

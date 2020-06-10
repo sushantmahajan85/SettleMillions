@@ -644,7 +644,7 @@ img {
   margin-top: 2rem;
   border-radius: 4rem; }
   #showMoreR:hover, #showMoreT:hover, #showMoreL:hover {
-    border: 1.6px double #A42A30; }
+    border: 0.3px solid #A42A30; }
 
 #showLessR {
   margin: 0;

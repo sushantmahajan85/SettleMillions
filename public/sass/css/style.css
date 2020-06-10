@@ -2468,7 +2468,7 @@ hr {
     justify-content: flex-end; } }
 
 .newsletter {
-  margin-top: 50px; }
+  margin: 50px 0px 50px 0px; }
 
 #newsletter_heading {
   text-align: center;
@@ -2502,7 +2502,8 @@ hr {
   color: white;
   font-size: 15px;
   font-weight: 600;
-  border: thin solid white; }
+  border: thin solid white;
+  display: inline-block; }
 
 .newsletter input::placeholder {
   font-size: 15px;

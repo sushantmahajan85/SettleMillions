@@ -20,7 +20,7 @@ body {
   // background-position-y: 5rem;
 }
 .page-content {
-  margin-left: 13.5%;
+  margin-left: 12%;
   // padding-top: 8rem;
   background-color: rgb(255,255,255);
   
@@ -32,6 +32,7 @@ body {
   flex-wrap: wrap;
   align-content: center;
   padding-top: 3.5rem;
+  margin-left: 2%;
 }
 
 .searchpage {
@@ -416,12 +417,13 @@ figure {
  display: block;
   width: 95%; 
   font-size: 3.5rem;
-   margin: 4rem 0 2rem 1rem;
+   margin: 4rem 0 2rem 2.8rem;
    color: #2E3043;
    font-weight: 700;
    font-family: "Market Sans", Arial, sans-serif;
    border-bottom: 2px solid #e8e8e8;
    letter-spacing: 0.21rem;
+   
 
 
   &:hover{

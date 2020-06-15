@@ -1,6 +1,6 @@
 .card {
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  // font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  //   "Lucida Sans", Arial, sans-serif;
 
   -webkit-perspective: 150rem;
   perspective: 150rem;
@@ -103,7 +103,7 @@
     font-weight: 600;
   }
   &_dis {
-    color: red;
+    color: #D10024;
     font-weight: 600;
   }
   // &_mrp{

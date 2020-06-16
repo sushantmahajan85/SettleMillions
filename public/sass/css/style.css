@@ -1078,7 +1078,7 @@ figure {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 28%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: 0px;

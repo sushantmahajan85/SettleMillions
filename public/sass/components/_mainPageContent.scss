@@ -298,14 +298,25 @@ a.show-hide-link {
   align-items: center;
 }
 
-.news-item {
+.news_item {
   display: inline-block;
-  padding: 10rem 17rem 10rem 17rem;
+  padding: 3rem 3rem 3rem 3rem;
+  width: 28.5%;
   border: solid thin #afafaf;
   border-radius: 10px;
+  box-sizing: border-box;
   margin-left: 40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
+}
+
+#news_headline {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#news_content {
+  font-size: 15px;
 }
 
 #news_heading {

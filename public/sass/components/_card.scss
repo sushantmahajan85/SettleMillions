@@ -10,9 +10,9 @@
   width: 26rem;
   z-index: 1;
   margin: 0 0 4rem 0rem;
-     
+
   &:not(:nth-child(8n)) {
-        margin-right: 5rem;
+    margin-right: 5rem;
   }
 }
 
@@ -25,7 +25,7 @@
   // backface-visibility: hidden;
   border-radius: 0.5rem;
   // overflow: hidden;
-  border: 1px solid #E5E7E9;
+  border: 1px solid #e5e7e9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,8 +39,6 @@
   //    }
 }
 
-
-
 .three-dots {
   float: right;
   position: absolute;
@@ -52,7 +50,6 @@
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
-
   &:hover {
     background-color: #c0c0c0;
   }
@@ -103,7 +100,7 @@
     font-weight: 600;
   }
   &_dis {
-    color: #D10024;
+    color: #d10024;
     font-weight: 600;
   }
   // &_mrp{

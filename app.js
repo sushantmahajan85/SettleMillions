@@ -16,6 +16,8 @@ const subscriberRouter = require("./routes/subscribeRoutes");
 const viewRouter = require("./routes/viewRoutes");
 const reportRouter = require("./routes/reportRoutes");
 
+const testingRouter = require("./routes/testRoutes");
+
 const app = express();
 app.use(express.json());
 // let testy = "";
@@ -74,6 +76,7 @@ app.use("/api/v1/deals", dealRouter);
 app.use("/api/v1/reviews", reviewRouter);
 app.use("/api/v1/likedDeal", likedDealRouter);
 app.use("/api/v1/subscribe", subscriberRouter);
+app.use("/api/v1/testing", testingRouter);
 app.use("/", viewRouter);
 // app.all("*", (req, res, next) => {
 //   return next(new appError("route not implemented", 404));

@@ -465,11 +465,6 @@ h2 {
   height: 3.25rem;
   margin-left: 2rem; }
 
-a.show-hide-link {
-  display: block;
-  width: 100%;
-  padding: 2rem; }
-
 body {
   height: 100%;
   background: #fff;
@@ -623,9 +618,15 @@ img {
   font-size: 1.1rem;
   text-decoration: none !important; }
 
+a.show-hide-link {
+  display: block;
+  width: 100%;
+  padding: 1.2rem; }
+
 #showMoreR, #showMoreT, #showMoreL {
   margin: 0;
-  width: 15%;
+  width: 14%;
+  height: 60px;
   margin-left: 40%;
   text-align: center;
   cursor: pointer;
@@ -637,7 +638,8 @@ img {
 
 #showLessT, #showLessR, #showLessL {
   margin: 0;
-  width: 15%;
+  width: 14%;
+  height: 60px;
   text-align: center;
   margin-left: 40%;
   cursor: pointer;

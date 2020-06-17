@@ -211,19 +211,7 @@ img {
 //   }
 // }
 
-#showLessT {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid rgb(212, 211, 211);
-  cursor: pointer;
-  display: none;
-  margin-bottom: 1.6rem;
 
-  &:hover {
-    background-color: rgb(212, 211, 211);
-  }
-}
 
 #showMoreR,#showMoreT,#showMoreL {
   margin: 0;
@@ -237,6 +225,7 @@ img {
   margin-top: 2rem;
   border-radius: 4rem;
 
+ 
   &:hover {
    //  background-color: #F8F9F9;
    // background-color:  #A42A30;
@@ -245,19 +234,36 @@ img {
   }
 }
 
-#showLessR {
+#showLessT, #showLessR, #showLessL {
   margin: 0;
-  width: 100%;
+  width: 15%;
   text-align: center;
-  border-bottom: 1px solid rgb(212, 211, 211);
+  margin-left: 40%;
+//   border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   display: none;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+   border-radius: 4rem;
 
   &:hover {
-    background-color: rgb(212, 211, 211);
+   border: 0.3px solid #A42A30;
   }
 }
+
+// #showLessR {
+//   margin: 0;
+//   width: 100%;
+//   text-align: center;
+//   border-bottom: 1px solid rgb(212, 211, 211);
+//   cursor: pointer;
+//   display: none;
+//   margin-bottom: 1.6rem;
+
+//   &:hover {
+//     background-color: rgb(212, 211, 211);
+//   }
+// }
 
 // #showMoreL {
 //   margin: 0;
@@ -272,19 +278,19 @@ img {
 //   }
 // }
 
-#showLessL {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid rgb(212, 211, 211);
-  cursor: pointer;
-  display: none;
-  margin-bottom: 1.6rem;
+// #showLessL {
+//   margin: 0;
+//   width: 100%;
+//   text-align: center;
+//   border-bottom: 1px solid rgb(212, 211, 211);
+//   cursor: pointer;
+//   display: none;
+//   margin-bottom: 1.6rem;
 
-  &:hover {
-    background-color: rgb(212, 211, 211);
-  }
-}
+//   &:hover {
+//     background-color: rgb(212, 211, 211);
+//   }
+// }
 
 .news {
   display: flex;

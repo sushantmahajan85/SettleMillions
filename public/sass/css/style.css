@@ -350,11 +350,12 @@ h2 {
 .search__input {
   border: none;
   padding: 0.85rem 2rem;
-  border-radius: 0.5rem;
+  border-radius: 0 2rem 2rem 0;
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  margin-right: -3.25rem; }
+  margin-right: -3.25rem;
+  height: 3.5rem; }
 
 .search__input:focus {
   outline: none;
@@ -466,6 +467,13 @@ h2 {
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
+
+.categories_dropdown_nv {
+  padding: 0px 15px;
+  background: #FFF;
+  border: 1px solid #E4E7ED;
+  height: 3.5rem;
+  border-radius: 40px 0px 0px 40px; }
 
 body {
   height: 100%;

@@ -24,7 +24,7 @@
 
 .newsletter input {
   padding: 11px 0px 11px 10px;
-  border-radius: 40px 0px 0px 40px;
+  border-radius: 8px 0px 0px 8px;
   box-sizing: border-box;
   font-weight: 600;
   width: 300px;
@@ -34,13 +34,16 @@
 .newsletter button {
   background-color: #d13030;
   padding: 11px 30px 11px 30px;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 0px 8px 8px 0px;
   box-sizing: border-box;
   color: white;
   font-size: 15px;
   font-weight: 600;
   border: thin solid white;
   display: inline-block;
+  margin-left: -2.93px;
+  margin-top: -1px;
+
   // cursor: pointer;
 }
 

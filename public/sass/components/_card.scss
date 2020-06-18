@@ -39,7 +39,10 @@
   //    }
 }
 
-
+.reportx {
+  width: 15px;
+  height: 15px;
+}
 
 .three-dots {
   float: right;
@@ -54,12 +57,13 @@
   width: 2rem;
 
   &:hover {
-    background-color: #c0c0c0;
+    background-color: #fff;
   }
 }
 
 .three-dots option {
   padding: 10rem;
+  background-color: #eee;
 }
 
 .three-dots-menu {

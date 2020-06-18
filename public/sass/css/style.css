@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,900");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
@@ -392,9 +393,10 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.3rem;
   text-shadow: 0.15rem 0.15rem 0.15rem #00000085;
-  font-size: 2.2rem;
+  font-size: 2.7rem;
   max-width: 170px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  font-family: 'Metal Mania', cursive; }
   .Navb_logo-text .Sidebar_logo {
     color: white;
     height: 3.25rem;
@@ -1418,6 +1420,10 @@ figure {
   align-items: center;
   box-shadow: 0 0.1rem 1rem rgba(52, 73, 94, 0.1); }
 
+.reportx {
+  width: 15px;
+  height: 15px; }
+
 .three-dots {
   float: right;
   position: absolute;
@@ -1430,10 +1436,11 @@ figure {
   height: 2rem;
   width: 2rem; }
   .three-dots:hover {
-    background-color: #c0c0c0; }
+    background-color: #fff; }
 
 .three-dots option {
-  padding: 10rem; }
+  padding: 10rem;
+  background-color: #eee; }
 
 .three-dots-menu {
   position: relative !important;

@@ -661,7 +661,7 @@ a.show-hide-link {
 .news {
   align-items: center; }
 
-.news_item {
+.news_box {
   display: inline-block;
   padding: 3rem 3rem 3rem 3rem;
   width: 28.5%;
@@ -670,7 +670,11 @@ a.show-hide-link {
   box-sizing: border-box;
   margin-left: 4.2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  cursor: pointer; }
+  .news_box:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s; }
 
 #news_headline {
   font-size: 17px;

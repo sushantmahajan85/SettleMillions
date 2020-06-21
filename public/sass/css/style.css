@@ -2051,8 +2051,8 @@ body {
 .popup {
   position: fixed;
   height: 50rem;
-  width: 75%;
-  top: 50%;
+  width: 65%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999999999999999;
@@ -2082,7 +2082,7 @@ body {
     width: 66.66666667;
     display: table-cell;
     vertical-align: middle;
-    padding: 2rem 5rem; }
+    padding: 1rem 3rem 2rem 3rem; }
     @media (max-width: 56.25em) {
       .popup_right {
         width: 100%; } }
@@ -2222,9 +2222,8 @@ body {
   display: inline-block;
   font-weight: 400;
   font-size: 3.8rem;
-  margin-top: 3rem;
   font-family: "Signika", sans-serif;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   transition: all 0.3s;
   /* &:hover{
 transform:  scale(1.3);

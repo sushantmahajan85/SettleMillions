@@ -42,13 +42,13 @@
   display: inline-block;
   font-weight: 400;
   font-size: 3.8rem;
-  margin-top: 3rem;
+  // margin-top: 3rem;
   font-family: "Signika", sans-serif;
   // -webkit-background-clip: text;
   // color: transparent;
   //   background-image: linear-gradient(to right ,rgb(148, 148, 147), rgb(73, 73, 72));
 
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   transition: all 0.3s;
   @include respond(tab-port) {
     font-weight: 400;

@@ -72,14 +72,14 @@
       <nav class="user-nav">
         
         <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p>
-        <div>
+        <!-- <div> -->
           <!-- <i class="fas fa-th"></i> -->
 
           <!-- <div style="margin: 5px; display: inline;">CATEGORIES</div> -->
         
           <!-- <img src="/img/users/da.svg" alt="Logo" class="catgories_logo" /> -->
           <!-- <img src="down_arrow.png"> -->
-        </div>
+        <!-- </div> -->
 
         <% if(user){ %>
         <a href="/newDeal">
@@ -87,22 +87,26 @@
 
             <!-- D changes -->
 
-            <!-- <i class="fas fa-plus"></i> -->
-
+            <i class="fas fa-plus"></i>
+           
 
             <!-- D changes // -->
+           
             <div style="margin: 5px;">POST </div>
           </div>
         </a>
       <% }else{ %>
         <a href="#" id="like_deal_no">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <!-- <i class="fas fa-plus"></i> -->
+          
+            <i class="far fa-plus-square"></i>
+            <!-- <i class="fas fa-plus-square"></i> -->
             <div style="margin: 5px;">POST</div>
           </div>
         </a>
       <% } %>
-      <div style="margin: 5px;">WISHLIST</div>
+      
+      <div style="margin: 5px;"><i class="fas fa-heart"></i>WISHLIST</div>
         <% if (user) { %>
         <a href="" id="logout">
           <div class="postDeal" style="display: flex; align-items: center; ">
@@ -114,13 +118,13 @@
         <a href=<%=` /signup `%>  id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
             <!-- <i class="fas fa-plus"></i> -->
-            <div style="margin: 5px;">Sign-up</div>
+            <div class="titles_nv"> <i class="fas fa-user-plus"></i>Sign-up</div>
           </div>
         </a>
         <a href=<%= `/login` %>  id="login">
           <div class="postDeal" style="display: flex; align-items: center; ">
             <!-- <i class="fas fa-plus"></i> -->
-            <div style="margin: 2px;">Login</div>
+            <div class="titles_nv" ><i class="fas fa-user-shield"></i>Login</div>
           </div>
         </a>
         <% } %>

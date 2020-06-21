@@ -266,10 +266,22 @@ body a {
     text-emphasis: none;
     text-decoration: none; }
 
+.titles_nv {
+  display: block;
+  margin: 0.5rem; }
+
+.fa-heart, .fa-user-plus, .fa-user-shield {
+  display: block;
+  margin-right: 1rem;
+  color: #df4444; }
+
+.fa-plus-square {
+  color: #df4444; }
+
 .fa-h-square {
   color: #df4444; }
 
-.fa-fire, .fa-user, .fa-heart {
+.fa-fire, .fa-user {
   color: #494343; }
 
 .fa-plus {

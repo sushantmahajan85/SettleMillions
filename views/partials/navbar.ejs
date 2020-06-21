@@ -153,8 +153,9 @@
             </nav>
                <% } else { %><nav role="navigation">
                 <ul>
-                  <li><a href=<%= `/member/${user.id}` %> ><img src=<%=`/img/users/${user.photo}` %> alt="User photo"
-                    class="user-nav__user-photo" /></a>
+                  <li><a href=<%= `/member/${user.id}` %> ><img
+                    data-name=<%=user.name %> data-color="#85e0ce" class="profile
+                    user-nav__user-photo"/></a>
                     <ul class="dropdown" style="background-color: black;">
                       <li><a href="#">Sub-1</a></li>
                       <li><a href="#">Sub-2</a></li>

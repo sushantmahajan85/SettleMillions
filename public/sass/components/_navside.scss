@@ -297,26 +297,27 @@ body a {
 // }
 .titles_nv {
   display: block;
-  margin:0.5rem;
-
+  margin: 0.5rem;
 }
 
-.fa-heart, .fa-user-plus, .fa-user-shield{
+.fa-heart,
+.fa-user-plus,
+.fa-user-shield {
   display: block;
   margin-right: 1rem;
-  color: rgb(223,68,68);
+  color: rgb(223, 68, 68);
 }
 
-.fa-plus-square{
-
-  color: rgb(223,68,68);
+.fa-plus-square {
+  color: rgb(223, 68, 68);
 }
 .fa-h-square {
-  color: rgb(223,68,68);
+  color: rgb(223, 68, 68);
 }
 
-.fa-fire , .fa-user {
-  color: #494343 ;
+.fa-fire,
+.fa-user {
+  color: #494343;
 }
 
 .fa-plus {
@@ -485,9 +486,7 @@ h2 {
   // height:1.8rem;
   vertical-align: middle;
   // font-family: 'Alegreya SC', serif;
-  font-family: 'Metal Mania', cursive;
-  
-
+  font-family: "Metal Mania", cursive;
 
   // D *changes * end
 
@@ -562,19 +561,17 @@ h2 {
   align-items: center;
 }
 
-.user-nav__user{
+.user-nav__user {
   display: flex;
   width: 6.5rem;
   padding: 0 0.2rem;
   align-items: center;
-
 }
 .user-nav__user-photo {
-  width: 100%;
+  width: 6.5rem;
   // height: 4rem;
   border-radius: 50%;
   // margin-right: 1rem;
-
 }
 
 .logo {
@@ -584,10 +581,68 @@ h2 {
 
 .categories_dropdown_nv {
   padding: 0px 15px;
-  background: #FFF;
-  border: 1px solid #E4E7ED;
+  background: #fff;
+  border: 1px solid #e4e7ed;
   height: 3.5rem;
   border-radius: 8px 0px 0px 8px;
-
 }
 
+/////////////////////////////
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  font-family: monospace;
+}
+
+ul {
+  // background: darkorange;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  color: #fff;
+  // background: darkorange;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li a {
+  color: #fff;
+}
+
+li:hover {
+  // background: red;
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}

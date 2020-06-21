@@ -270,7 +270,9 @@ body a {
   display: block;
   margin: 0.5rem; }
 
-.fa-heart, .fa-user-plus, .fa-user-shield {
+.fa-heart,
+.fa-user-plus,
+.fa-user-shield {
   display: block;
   margin-right: 1rem;
   color: #df4444; }
@@ -281,7 +283,8 @@ body a {
 .fa-h-square {
   color: #df4444; }
 
-.fa-fire, .fa-user {
+.fa-fire,
+.fa-user {
   color: #494343; }
 
 .fa-plus {
@@ -409,7 +412,7 @@ h2 {
   font-size: 2.7rem;
   max-width: 170px;
   vertical-align: middle;
-  font-family: 'Metal Mania', cursive; }
+  font-family: "Metal Mania", cursive; }
   .Navb_logo-text .Sidebar_logo {
     color: white;
     height: 3.25rem;
@@ -418,7 +421,7 @@ h2 {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,7 +481,7 @@ h2 {
   align-items: center; }
 
 .user-nav__user-photo {
-  width: 100%;
+  width: 6.5rem;
   border-radius: 50%; }
 
 .logo {
@@ -487,17 +490,63 @@ h2 {
 
 .categories_dropdown_nv {
   padding: 0px 15px;
-  background: #FFF;
-  border: 1px solid #E4E7ED;
+  background: #fff;
+  border: 1px solid #e4e7ed;
   height: 3.5rem;
   border-radius: 8px 0px 0px 8px; }
+
+a {
+  text-decoration: none; }
+
+nav {
+  font-family: monospace; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+
+li {
+  color: #fff;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s; }
+
+li a {
+  color: #fff; }
+
+li:hover {
+  cursor: pointer; }
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none; }
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block; }
+
+ul li ul li {
+  clear: both;
+  width: 100%; }
 
 body {
   height: 100%;
   background: #fff;
   /* color: #333; */
   /* background-image: url("../img/backg.jpg"); */
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-weight: 500;
   line-height: 1.9;
   /* color: #777777; */
@@ -902,7 +951,7 @@ figure {
     border-bottom: 1px solid grey;
     padding: 2rem 2rem 1rem 1rem;
     font-size: 2.4rem !important;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
   .deal-deets_price {
     padding: 1.5rem 1rem 1rem 1rem;
     list-style: none;
@@ -2133,7 +2182,7 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -2218,7 +2267,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .content_box {
@@ -2246,7 +2295,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

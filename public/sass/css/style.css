@@ -2574,7 +2574,8 @@ input[type="password"] {
   color: #fff;
   display: block;
   padding: 4px;
-  font-weight: bold; }
+  font-weight: bold;
+  height: 3rem; }
 
 [class^="icon"] {
   /* float:left; */

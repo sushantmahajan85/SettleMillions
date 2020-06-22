@@ -217,8 +217,6 @@ input[type="password"] {
   font-weight: 450;
 }
 
-
-
 .wrap_signin a {
   text-decoration: none;
   color: #3e7ca9;
@@ -288,7 +286,6 @@ input[type="password"] {
   height: 30rem;
   position: relative;
   font-size: 1.2rem;
-  
 }
 .footer-content {
   height: 22rem;
@@ -338,6 +335,7 @@ input[type="password"] {
   display: block;
   padding: 4px;
   font-weight: bold;
+  height: 3rem;
 }
 
 [class^="icon"] {
@@ -393,6 +391,6 @@ hr {
   nav a {
     // display: flex;
     justify-content: flex-end;
-  // }
-}
+    // }
+  }
 }

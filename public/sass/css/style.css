@@ -269,19 +269,36 @@ body a {
 .titles_nv {
   display: block;
   margin: 0.5rem; }
+  .titles_nv:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+    text-decoration-color: #e74c3c; }
+  .titles_nv:focus {
+    color: #e74c3c;
+    background-color: transparent; }
+
+.fa-sign-out-alt {
+  display: block;
+  margin-right: 0.5rem;
+  color: #df4444; }
 
 .fa-heart,
 .fa-user-plus,
 .fa-user-shield {
   display: block;
-  margin-right: 1rem;
-  color: #df4444; }
+  margin-right: 0.5rem;
+  color: #df4444;
+  text-decoration: none; }
 
 .fa-plus-square {
-  color: #df4444; }
+  color: #df4444;
+  display: block;
+  margin-right: 0.5rem; }
 
 .fa-h-square {
-  color: #df4444; }
+  color: #df4444;
+  display: block;
+  margin-right: 0.5rem; }
 
 .fa-fire,
 .fa-user {
@@ -510,7 +527,6 @@ li {
   color: #fff;
   display: block;
   float: left;
-  padding: 1rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s; }
@@ -2596,8 +2612,7 @@ hr {
   nav li {
     flex: 1 1 0;
     /* justify-content: flex-end; */
-    margin-right: 2rem;
-    margin-left: 1rem; }
+    margin-right: 2rem; }
   nav {
     display: flex;
     /* justify-content: flex-end; */ }

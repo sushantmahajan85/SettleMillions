@@ -75,12 +75,12 @@
 
           <!-- D changes -->
 
-          <i class="fas fa-plus"></i>
-
+          <!-- <i class="fas fa-plus"></i> -->
+          <i class="far fa-plus-square"></i>
 
           <!-- D changes // -->
 
-          <div style="margin: 5px;">POST </div>
+          <div class="titles_nv">Post</div>
         </div>
       </a>
       <% }else{ %>
@@ -89,17 +89,18 @@
 
           <i class="far fa-plus-square"></i>
           <!-- <i class="fas fa-plus-square"></i> -->
-          <div style="margin: 5px;">POST</div>
+          <div class="titles_nv">Post</div>
         </div>
       </a>
       <% } %>
 
-      <div style="margin: 5px;"><i class="fas fa-heart"></i>WISHLIST</div>
+      <div class="titles_nv"><i class="fas fa-heart"></i>Wishlist</div>
       <% if (user) { %>
       <a href="" id="logout">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <i class="fas fa-plus"></i>
-          <div style="margin: 5px;">Logout</div>
+          <!-- <i class="fas fa-plus"></i> -->
+          <i class="fas fa-sign-out-alt"></i>
+          <div class="titles_nv">Logout</div>
         </div>
       </a>
       <% } else { %>
@@ -117,10 +118,10 @@
       </a>
       <% } %>
       <% if (user) { %>
-      <div class="user-nav__icon-box">
+      <!-- <div class="user-nav__icon-box">
         <i class="fas fa-bell"></i>
         <span class="user-nav__notification">7</span>
-      </div>
+      </div> -->
 
       <% } %>
       <!-- D changes // -->

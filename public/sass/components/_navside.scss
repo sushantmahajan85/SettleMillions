@@ -298,21 +298,43 @@ body a {
 .titles_nv {
   display: block;
   margin: 0.5rem;
+
+    &:hover{
+    color:rgb(231, 76, 60); 
+    text-decoration: underline;
+    text-decoration-color: rgb(231, 76, 60);
+  }
+
+    &:focus{
+      color: rgb(231, 76, 60);
+      background-color: transparent;
+      
+    }
 }
 
+.fa-sign-out-alt{
+  display: block;
+  margin-right: 0.5rem;
+  color: rgb(223, 68, 68);
+}
 .fa-heart,
 .fa-user-plus,
-.fa-user-shield {
+.fa-user-shield{
   display: block;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   color: rgb(223, 68, 68);
+  text-decoration: none;
 }
 
 .fa-plus-square {
   color: rgb(223, 68, 68);
+  display: block;
+  margin-right: 0.5rem;
 }
 .fa-h-square {
   color: rgb(223, 68, 68);
+  display: block;
+  margin-right: 0.5rem;
 }
 
 .fa-fire,
@@ -609,7 +631,7 @@ li {
   // background: darkorange;
   display: block;
   float: left;
-  padding: 1rem;
+  // padding: 1rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;

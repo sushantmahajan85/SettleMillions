@@ -421,7 +421,7 @@ h2 {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,7 +546,7 @@ body {
   background: #fff;
   /* color: #333; */
   /* background-image: url("../img/backg.jpg"); */
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-weight: 500;
   line-height: 1.9;
   /* color: #777777; */
@@ -951,7 +951,7 @@ figure {
     border-bottom: 1px solid grey;
     padding: 2rem 2rem 1rem 1rem;
     font-size: 2.4rem !important;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
   .deal-deets_price {
     padding: 1.5rem 1rem 1rem 1rem;
     list-style: none;
@@ -2055,7 +2055,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999999999999999;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
   display: none;
   transition: all 0.3s; }
   .popup_content {
@@ -2063,7 +2064,7 @@ body {
     background-color: white;
     overflow: hidden;
     display: table;
-    border-radius: 5px; }
+    border-radius: inherit; }
   .popup_left {
     width: 33.33333333334%;
     vertical-align: top;
@@ -2080,8 +2081,7 @@ body {
   .popup_right {
     width: 66.66666667;
     display: table-cell;
-    vertical-align: middle;
-    padding: 1rem 3rem 2rem 3rem; }
+    padding: 2rem 3rem 0rem 3rem; }
     @media (max-width: 56.25em) {
       .popup_right {
         width: 100%; } }
@@ -2182,7 +2182,7 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -2266,7 +2266,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .content_box {
@@ -2294,7 +2294,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

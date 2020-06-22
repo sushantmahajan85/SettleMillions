@@ -2091,25 +2091,27 @@ body {
       .popup_right .para {
         font-size: 1.5rem;
         margin-right: 1rem; } }
-  .popup_cross:link, .popup_cross:visited {
-    font-size: 4rem;
-    text-decoration: none;
-    color: black;
-    font-weight: 800;
-    position: absolute;
-    top: 0.7rem;
-    right: 5rem; }
-    @media (max-width: 56.25em) {
-      .popup_cross:link, .popup_cross:visited {
-        position: absolute;
-        top: 1rem;
-        right: 1rem; } }
-    @media (max-width: 1380px) {
-      .popup_cross:link .p, .popup_cross:visited .p {
-        font-size: 2rem; }
-      .popup_cross:link .para, .popup_cross:visited .para {
-        font-size: 1.5rem;
-        margin-right: 1rem; } }
+  .popup_cross {
+    cursor: pointer; }
+    .popup_cross:link, .popup_cross:visited {
+      font-size: 4rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 800;
+      position: absolute;
+      top: 0.7rem;
+      right: 5rem; }
+      @media (max-width: 56.25em) {
+        .popup_cross:link, .popup_cross:visited {
+          position: absolute;
+          top: 1rem;
+          right: 1rem; } }
+      @media (max-width: 1380px) {
+        .popup_cross:link .p, .popup_cross:visited .p {
+          font-size: 2rem; }
+        .popup_cross:link .para, .popup_cross:visited .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
   .popup_img {
     background-position: center;
     background-size: 100% 100%;

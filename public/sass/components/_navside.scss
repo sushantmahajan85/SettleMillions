@@ -299,27 +299,26 @@ body a {
   display: block;
   margin: 0.5rem;
 
-    &:hover{
-    color:rgb(231, 76, 60); 
+  &:hover {
+    color: rgb(231, 76, 60);
     text-decoration: underline;
     text-decoration-color: rgb(231, 76, 60);
   }
 
-    &:focus{
-      color: rgb(231, 76, 60);
-      background-color: transparent;
-      
-    }
+  &:focus {
+    color: rgb(231, 76, 60);
+    background-color: transparent;
+  }
 }
 
-.fa-sign-out-alt{
+.fa-sign-out-alt {
   display: block;
   margin-right: 0.5rem;
   color: rgb(223, 68, 68);
 }
 .fa-heart,
 .fa-user-plus,
-.fa-user-shield{
+.fa-user-shield {
   display: block;
   margin-right: 0.5rem;
   color: rgb(223, 68, 68);
@@ -444,7 +443,7 @@ h2 {
   border: none;
   padding: 0.85rem 2rem;
   // border-radius: 0.5rem;
-  border-radius: 0 8px 8px 0;
+  // border-radius: 0 8px 8px 0;
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -606,7 +605,10 @@ h2 {
   background: #fff;
   border: 1px solid #e4e7ed;
   height: 3.5rem;
-  border-radius: 8px 0px 0px 8px;
+  margin-left: 1.3rem;
+ 
+  border: solid 2px rgb(231, 76, 60);
+  // border-radius: 8px 0px 0px 8px;
 }
 
 /////////////////////////////
@@ -627,7 +629,7 @@ ul {
 }
 
 li {
-  color: #fff;
+  // color: #fff;
   // background: darkorange;
   display: block;
   float: left;

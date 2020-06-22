@@ -382,7 +382,6 @@ h2 {
 .search__input {
   border: none;
   padding: 0.85rem 2rem;
-  border-radius: 0 8px 8px 0;
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -510,7 +509,8 @@ h2 {
   background: #fff;
   border: 1px solid #e4e7ed;
   height: 3.5rem;
-  border-radius: 8px 0px 0px 8px; }
+  margin-left: 1.3rem;
+  border: solid 2px #e74c3c; }
 
 a {
   text-decoration: none; }
@@ -524,7 +524,6 @@ ul {
   padding-left: 0; }
 
 li {
-  color: #fff;
   display: block;
   float: left;
   position: relative;
@@ -2327,7 +2326,7 @@ a {
   color: black; }
 
 #searchx {
-  max-width: 400px; }
+  max-width: 600px; }
 
 .sortx {
   width: 10rem;

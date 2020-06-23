@@ -2753,7 +2753,7 @@ hr {
   box-sizing: border-box;
   font-weight: 600;
   width: 300px;
-  border: thin solid gray; }
+  border: thin solid #dddddd; }
 
 .newsletter button {
   background-color: #d13030;

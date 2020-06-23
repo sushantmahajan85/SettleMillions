@@ -2728,7 +2728,8 @@ hr {
     justify-content: flex-end; } }
 
 .newsletter {
-  margin: 50px 0px 60px 0px; }
+  margin: 50px 0px 60px 0px;
+  background-image: url(/images/mail.png); }
 
 #newsletter_heading {
   text-align: center;

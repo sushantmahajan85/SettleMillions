@@ -26,16 +26,16 @@ router
   .route("/:id")
   .get(dealController.getDeal)
   .patch(
-    authController.protect,
-    dealController.setDealUserIds,
-    //  authController.restrictTo("admin"),
-    dealController.uploadDealImages,
-    dealController.resizeDealImages,
+    // authController.protect,
+    // dealController.setDealUserIds,
+    // //  authController.restrictTo("admin"),
+    // dealController.uploadDealImages,
+    // dealController.resizeDealImages,
     dealController.updateDeal
   )
   .delete(
-    authController.protect,
-    authController.restrictTo("user"),
+    // authController.protect,
+    // authController.restrictTo("user"),
     dealController.deleteDeal
   );
 

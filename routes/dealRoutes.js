@@ -15,10 +15,10 @@ router
   .route("/")
   .get(dealController.getAllDeals)
   .post(
-    authController.protect,
-    dealController.uploadDealImages,
-    dealController.resizeDealImages,
-    dealController.setDealUserIds,
+    //authController.protect,
+    //dealController.uploadDealImages,
+    //dealController.resizeDealImages,
+    //dealController.setDealUserIds,
     dealController.createDeal
   );
 

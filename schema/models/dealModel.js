@@ -13,7 +13,7 @@ const dealSchema = new mongoose.Schema(
 
     affiliateLink: {
       type: String,
-      required: true,
+      //required: true,
       //unique: true
     },
     views: {
@@ -77,7 +77,7 @@ const dealSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
-      required: true,
+      //required: true,
     },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }

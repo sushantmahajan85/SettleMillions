@@ -382,12 +382,12 @@ h2 {
 .search__input {
   border: none;
   padding: 0.85rem 2rem;
+  border-radius: 0 8px 8px 0;
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-right: -3.25rem;
-  height: 3.5rem;
-  border: 2px solid #e74c3c; }
+  height: 3.5rem; }
 
 .search__input:focus {
   outline: none;
@@ -417,7 +417,7 @@ h2 {
   fill: var(--color-grey-dark-3); }
 
 .search__button {
-  color: #e74c3c;
+  color: rgba(6, 16, 99, 0.7);
   font-size: 1.3rem; }
 
 .Navb_logo-text {
@@ -510,8 +510,7 @@ h2 {
   background: #fff;
   border: 1px solid #e4e7ed;
   height: 3.5rem;
-  margin-left: 1.3rem;
-  border: solid 2px #e74c3c; }
+  border-radius: 8px 0px 0px 8px; }
 
 a {
   text-decoration: none; }
@@ -525,6 +524,7 @@ ul {
   padding-left: 0; }
 
 li {
+  color: #fff;
   display: block;
   float: left;
   position: relative;
@@ -2178,6 +2178,113 @@ body {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
+.popup_news {
+  position: fixed;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999999999999;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: all 0.3s; }
+  .popup_news_content {
+    opacity: 1;
+    background-color: white;
+    overflow: hidden;
+    display: table;
+    border-radius: inherit; }
+  .popup_news_left {
+    width: 33.33333333334%;
+    vertical-align: top;
+    display: table-cell; }
+    @media (max-width: 56.25em) {
+      .popup_news_left {
+        width: 0%; } }
+    @media (max-width: 1380px) {
+      .popup_news_left .p {
+        font-size: 2rem; }
+      .popup_news_left .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+  .popup_news_right {
+    width: 66.66666667;
+    display: table-cell;
+    padding: 2rem 3rem 0rem 3rem; }
+    @media (max-width: 56.25em) {
+      .popup_news_right {
+        width: 100%; } }
+    @media (max-width: 1380px) {
+      .popup_news_right .p {
+        font-size: 2rem; }
+      .popup_news_right .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+  .popup_news_cross {
+    cursor: pointer; }
+    .popup_news_cross:link, .popup_news_cross:visited {
+      font-size: 4rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 800;
+      position: absolute;
+      top: 0.7rem;
+      right: 5rem; }
+      @media (max-width: 56.25em) {
+        .popup_news_cross:link, .popup_news_cross:visited {
+          position: absolute;
+          top: 1rem;
+          right: 1rem; } }
+      @media (max-width: 1380px) {
+        .popup_news_cross:link .p, .popup_news_cross:visited .p {
+          font-size: 2rem; }
+        .popup_news_cross:link .para, .popup_news_cross:visited .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
+  .popup_news_img {
+    background-position: center;
+    background-size: 100% 100%;
+    display: block;
+    width: 100%; }
+    @media (max-width: 56.25em) {
+      .popup_news_img {
+        display: none; } }
+    @media (max-width: 1380px) {
+      .popup_news_img .p {
+        font-size: 2rem; }
+      .popup_news_img .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+  .popup_news_paragraph {
+    column-count: 2;
+    font-size: 1.7rem;
+    font-weight: 600;
+    column-rule: 0.5px solid darkgrey;
+    column-gap: 4rem;
+    hyphens: auto; }
+    @media (max-width: 56.25em) {
+      .popup_news_paragraph {
+        column-count: unset;
+        column-rule: unset;
+        column-gap: unset;
+        text-align: start; } }
+    @media (max-width: 1380px) {
+      .popup_news_paragraph .p {
+        font-size: 2rem; }
+      .popup_news_paragraph .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .popup_news_heading {
+      text-align: center; } }
+  @media (max-width: 1380px) {
+    .popup_news_heading .p {
+      font-size: 2rem; }
+    .popup_news_heading .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .heading-main {
   font-weight: 400;

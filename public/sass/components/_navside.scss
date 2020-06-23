@@ -301,8 +301,8 @@ body a {
 
   &:hover {
     color: rgb(231, 76, 60);
-    text-decoration: underline;
-    text-decoration-color: rgb(231, 76, 60);
+    border-bottom: 2px solid  rgb(231, 76, 60);
+  
   }
 
   &:focus {
@@ -450,6 +450,7 @@ h2 {
   margin-right: -3.25rem;
   height: 3.5rem;
 }
+
 
 .search__input:focus {
   outline: none;

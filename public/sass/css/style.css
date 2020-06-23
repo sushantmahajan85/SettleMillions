@@ -386,7 +386,8 @@ h2 {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-right: -3.25rem;
-  height: 3.5rem; }
+  height: 3.5rem;
+  border: 2px solid #e74c3c; }
 
 .search__input:focus {
   outline: none;
@@ -416,7 +417,7 @@ h2 {
   fill: var(--color-grey-dark-3); }
 
 .search__button {
-  color: rgba(6, 16, 99, 0.7);
+  color: #e74c3c;
   font-size: 1.3rem; }
 
 .Navb_logo-text {

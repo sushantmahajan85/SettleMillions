@@ -266,10 +266,8 @@ body a {
     text-emphasis: none;
     text-decoration: none; }
 
-.title_basic_nv {
-  display: block;
-  margin: 0.5rem;
-  color: #fff; }
+.search_nv {
+  margin-left: 3rem; }
 
 .titles_nv {
   display: block;
@@ -449,7 +447,8 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0rem; }
+  margin-right: 0rem;
+  justify-content: flex-end; }
 
 .user-nav > * {
   padding: 0 1rem;
@@ -503,7 +502,9 @@ h2 {
 
 .user-nav__user-photo {
   width: 6.5rem;
-  border-radius: 50%; }
+  height: 4rem;
+  border-radius: 50%;
+  margin-top: 6rem; }
 
 .logo {
   height: 3.25rem;
@@ -514,52 +515,44 @@ h2 {
   background: #fff;
   border: 1px solid #e4e7ed;
   height: 3.5rem;
-  border-radius: 8px 0px 0px 8px; }
-
-a {
-  text-decoration: none; }
-
-nav {
-  font-family: monospace; }
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-
-li {
-  color: #fff;
-  display: block;
-  float: left;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s; }
-
-li a {
-  color: #fff; }
-
-li:hover {
-  cursor: pointer; }
-
-ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none; }
-
-ul li:hover > ul,
-ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block; }
-
-ul li ul li {
-  clear: both;
-  width: 100%; }
+  border-radius: 8px 0px 0px 8px;
+  align-self: center; }
+  .categories_dropdown_nv a {
+    text-decoration: none; }
+  .categories_dropdown_nv nav {
+    font-family: monospace; }
+  .categories_dropdown_nv ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+  .categories_dropdown_nv li {
+    color: #fff;
+    display: block;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s; }
+  .categories_dropdown_nv li a {
+    color: #fff; }
+  .categories_dropdown_nv li:hover {
+    cursor: pointer; }
+  .categories_dropdown_nv ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none; }
+  .categories_dropdown_nv ul li:hover > ul,
+  .categories_dropdown_nv ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block; }
+  .categories_dropdown_nv ul li ul li {
+    clear: both;
+    width: 100%; }
 
 body {
   height: 100%;
@@ -2440,7 +2433,7 @@ a {
   color: black; }
 
 #searchx {
-  max-width: 600px; }
+  width: 600px; }
 
 .sortx {
   width: 10rem;

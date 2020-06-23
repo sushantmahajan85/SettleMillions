@@ -34,7 +34,7 @@
     </a>
 
 
-
+    <div class="search_nv">
     <form action="/" method="GET" class="search" id="searchx">
       
       <input type="text" name="search" id="search" placeholder="Type to search" class="search__input" />
@@ -56,7 +56,7 @@
         </select> -->
       <!-- <div>SortBy</div> -->
     </form>
-
+  </div>
     <nav class="user-nav">
 
       <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p>
@@ -70,7 +70,7 @@
       <!-- </div> -->
 
       <% if(user){ %>
-      <a href="/newDeal">
+      <a  class="titles_nv" href="/newDeal">
         <div class="postDeal" style="display: flex; align-items: center; ">
 
           <!-- D changes -->
@@ -80,7 +80,7 @@
 
           <!-- D changes // -->
 
-          <div class="titles_nv"> <i class="far fa-plus-square"></i>Post</div>
+          <div > <i class="far fa-plus-square"></i>Post</div>
         </div>
       </a>
       <% }else{ %>
@@ -98,11 +98,11 @@
       </div>
       
       <% if (user) { %>
-      <a href="" id="logout">
+      <a  class="titles_nv" href="" id="logout">
         <div class="postDeal" style="display: flex; align-items: center; ">
           <!-- <i class="fas fa-plus"></i> -->
           <i class="fas fa-sign-out-alt"></i>
-          <div class="titles_nv">Logout</div>
+          <div >Logout</div>
         </div>
       </a>
       <% } else { %>

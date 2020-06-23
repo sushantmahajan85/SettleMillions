@@ -76,25 +76,27 @@
           <!-- D changes -->
 
           <!-- <i class="fas fa-plus"></i> -->
-          <i class="far fa-plus-square"></i>
+         
 
           <!-- D changes // -->
 
-          <div class="titles_nv">Post</div>
+          <div class="titles_nv"> <i class="far fa-plus-square"></i>Post</div>
         </div>
       </a>
       <% }else{ %>
-      <a href="#" id="like_deal_no">
+      <a  class="titles_nv" href="#" id="like_deal_no">
         <div class="postDeal" style="display: flex; align-items: center; ">
 
-          <i class="far fa-plus-square"></i>
+         
           <!-- <i class="fas fa-plus-square"></i> -->
-          <div class="titles_nv">Post</div>
+          <div> <i class="far fa-plus-square"></i>Post</div>
         </div>
       </a>
       <% } %>
-
-      <div class="titles_nv"><i class="fas fa-heart"></i>Wishlist</div>
+      <div class="titles_nv">
+        <div ><i class="fas fa-heart"></i>Wishlist</div>
+      </div>
+      
       <% if (user) { %>
       <a href="" id="logout">
         <div class="postDeal" style="display: flex; align-items: center; ">
@@ -104,18 +106,22 @@
         </div>
       </a>
       <% } else { %>
-      <a href=<%=` /signup `%> id="signup">
+       
+      <a class="titles_nv" href=<%=` /signup `%> id="signup">
         <div class="postDeal" style="display: flex; align-items: center; ">
           <!-- <i class="fas fa-plus"></i> -->
-          <div class="titles_nv"> <i class="fas fa-user-plus"></i>Sign-up</div>
+          <div ><i class="fas fa-user-plus"></i>Sign-up</div>
         </div>
       </a>
-      <a href=<%= `/login` %> id="login">
+   
+
+      <a class="titles_nv" href=<%= `/login` %> id="login">
         <div class="postDeal" style="display: flex; align-items: center; ">
           <!-- <i class="fas fa-plus"></i> -->
-          <div class="titles_nv"><i class="fas fa-user-shield"></i>Login</div>
+          <div><i class="fas fa-user-shield"></i>Login</div>
         </div>
       </a>
+    
       <% } %>
       <% if (user) { %>
       <!-- <div class="user-nav__icon-box">

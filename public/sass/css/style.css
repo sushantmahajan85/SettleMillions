@@ -266,13 +266,17 @@ body a {
     text-emphasis: none;
     text-decoration: none; }
 
+.title_basic_nv {
+  display: block;
+  margin: 0.5rem;
+  color: #fff; }
+
 .titles_nv {
   display: block;
   margin: 0.5rem; }
   .titles_nv:hover {
     color: #e74c3c;
-    text-decoration: underline;
-    text-decoration-color: #e74c3c; }
+    border-bottom: 2px solid #e74c3c; }
   .titles_nv:focus {
     color: #e74c3c;
     background-color: transparent; }

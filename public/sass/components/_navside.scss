@@ -295,14 +295,29 @@ body a {
 // .user-nav a{
 //   display: block;
 // }
+
+.title_basic_nv{
+  display: block;
+  margin: 0.5rem;
+  color: #fff;
+
+  // &:hover {
+  //   color: rgb(231, 76, 60);
+  // }
+  // &:focus {
+  //   color: rgb(231, 76, 60);
+  //   background-color: transparent;
+  // }
+
+}
 .titles_nv {
   display: block;
   margin: 0.5rem;
 
+
   &:hover {
     color: rgb(231, 76, 60);
-    border-bottom: 2px solid  rgb(231, 76, 60);
-  
+    border-bottom: 2px solid rgb(231, 76, 60);
   }
 
   &:focus {
@@ -450,7 +465,6 @@ h2 {
   margin-right: -3.25rem;
   height: 3.5rem;
 }
-
 
 .search__input:focus {
   outline: none;

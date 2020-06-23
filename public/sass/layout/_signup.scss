@@ -286,7 +286,6 @@ input[type="password"] {
   height: 30rem;
   position: relative;
   font-size: 1.2rem;
-  
 }
 .footer-content {
   height: 22rem;
@@ -336,6 +335,7 @@ input[type="password"] {
   display: block;
   padding: 4px;
   font-weight: bold;
+  height: 3rem;
 }
 
 [class^="icon"] {
@@ -380,7 +380,7 @@ hr {
     flex: 1 1 0;
     /* justify-content: flex-end; */
     margin-right: 2rem;
-    margin-left: 1rem;
+    // margin-left: 1rem;
   }
 
   nav {
@@ -389,7 +389,8 @@ hr {
   }
 
   nav a {
-    display: flex;
+    // display: flex;
     justify-content: flex-end;
+    // }
   }
 }

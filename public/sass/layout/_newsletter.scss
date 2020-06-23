@@ -1,10 +1,13 @@
 .newsletter {
-  margin: 50px 0px 60px 0px;
+  // margin: 50px 0px 60px 0px;
+  height: 300px;
+  background-image: url(/images/mail.png);
 }
 
 #newsletter_heading {
   text-align: center;
   font-size: 38px;
+  margin-top: 25px;
 }
 
 #newsletter_subtitle {
@@ -14,7 +17,7 @@
 }
 
 .newsletter form {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -24,23 +27,26 @@
 
 .newsletter input {
   padding: 11px 0px 11px 10px;
-  border-radius: 40px 0px 0px 40px;
+  border-radius: 8px 0px 0px 8px;
   box-sizing: border-box;
   font-weight: 600;
   width: 300px;
-  border: thin solid gray;
+  border: thin solid rgb(221, 221, 221);
 }
 
 .newsletter button {
   background-color: #d13030;
   padding: 11px 30px 11px 30px;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 0px 8px 8px 0px;
   box-sizing: border-box;
   color: white;
   font-size: 15px;
   font-weight: 600;
   border: thin solid white;
   display: inline-block;
+  margin-left: -2.93px;
+  margin-top: -1px;
+
   // cursor: pointer;
 }
 

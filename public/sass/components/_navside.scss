@@ -460,6 +460,7 @@ h2 {
   // * D changes *
   // border: 2px solid rgb(146, 43, 33);
   // border: 2px solid rgb(231, 76, 60);
+  border: 0.1px solid rgba(209, 0, 36, 1);
   padding: 0rem 1rem;
   // border-radius: 0.5rem;
   // border-radius: 0 8px 8px 0;
@@ -644,8 +645,15 @@ h2 {
   color: rgb(23, 32, 42);
   font-family: "Bitter", serif;
   font-size: 1.5rem;
-  background-color: rgba(209, 0, 36, 0.9);
+  // background-color: rgba(209, 0, 36, 0.9);
+  // color: #fff;
+  // color: rgb(231, 76, 60);
+
+
+  &:hover{
+    background-color: rgba(209, 0, 36, 0.9);
   color: #fff;
+  }
   width: 15rem;
   /////////////////////////////
 

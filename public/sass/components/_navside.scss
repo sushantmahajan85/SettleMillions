@@ -316,6 +316,8 @@ body a {
 .titles_nv {
   display: block;
   margin: 0.5rem;
+  font-family: "Bitter", serif;
+  font-size: 1.9rem;
 
   &:hover {
     color: rgb(231, 76, 60);
@@ -456,17 +458,20 @@ h2 {
   // border-radius: 100px;
   // padding: 0.7rem 2rem;
   // * D changes *
-
-  border: none;
-  padding: 0.85rem 2rem;
+  // border: 2px solid rgb(146, 43, 33);
+  // border: 2px solid rgb(231, 76, 60);
+  padding: 0rem 1rem;
   // border-radius: 0.5rem;
-  border-radius: 0 8px 8px 0;
+  // border-radius: 0 8px 8px 0;
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-right: -3.25rem;
   height: 3.5rem;
   // margin-left: 3rem;
+  color: rgb(23, 32, 42);
+  // font-family: "Bitter", serif;
+  font-size: 1.5rem;
 }
 
 .search__input:focus {
@@ -508,13 +513,15 @@ h2 {
 
 // D *changes start
 .search__button {
-  color: rgba(6, 16, 99, 0.7);
-  font-size: 1.3rem;
+  // color: rgba(6, 16, 99, 0.7);
+  color: #cb4335;
+  font-size: 1.6rem;
 }
 // D *changes * end
 
 //  D *changes * start
 .Navb_logo-text {
+  margin-left: 2rem;
   display: flex;
   color: #fff;
   font-weight: 600;
@@ -528,6 +535,10 @@ h2 {
   font-family: "Metal Mania", cursive;
 
   // D *changes * end
+
+  &:hover {
+    color: rgb(231, 76, 60);
+  }
 
   .Sidebar_logo {
     color: white;
@@ -620,13 +631,22 @@ h2 {
 }
 
 .categories_dropdown_nv {
+  margin-left: 1.68rem;
   padding: 0px 15px;
-  background: #fff;
+  // background: #fff;
   border: 1px solid #e4e7ed;
   height: 3.5rem;
-  border-radius: 8px 0px 0px 8px;
+  // border-radius: 8px 0px 0px 8px;
   align-self: center;
-
+  // border: 2px solid rgb(231, 76, 60);
+  border-left: none;
+  border: 0.1px solid rgba(209, 0, 36, 1);
+  color: rgb(23, 32, 42);
+  font-family: "Bitter", serif;
+  font-size: 1.5rem;
+  background-color: rgba(209, 0, 36, 0.9);
+  color: #fff;
+  width: 15rem;
   /////////////////////////////
 
   a {

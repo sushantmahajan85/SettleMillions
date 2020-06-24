@@ -385,6 +385,7 @@ h2 {
 
 .search__input {
   border: 0.1px solid #d10024;
+  border-right: 0px;
   padding: 0rem 1rem;
   width: 100%;
   -webkit-transition: all 0.2s;
@@ -393,6 +394,8 @@ h2 {
   height: 3.5rem;
   color: #17202a;
   font-size: 1.5rem; }
+  .search__input:hover {
+    color: #C60022; }
 
 .search__input:focus {
   outline: none;

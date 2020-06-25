@@ -604,9 +604,6 @@ body {
   width: 43rem;
   height: 26rem; }
 
-.mySlides {
-  display: none; }
-
 img {
   width: 100%;
   padding: 0.9rem;
@@ -1181,7 +1178,7 @@ figure {
   height: 75%; }
 
 .mySlides {
-  display: none;
+  display: block;
   position: relative;
   height: inherit; }
 
@@ -1225,14 +1222,12 @@ figure {
   top: 40%;
   padding: 0.5rem;
   margin-top: 0rem;
-  color: #212F3D;
   font-weight: bold;
   font-size: 18px;
   border-radius: 0rem 0rem 0rem 0rem;
   user-select: none;
   -webkit-user-select: none;
   z-index: 20000000000000;
-  background-color: #cacfd2;
   visibility: initial; }
 
 .prev {
@@ -1818,13 +1813,13 @@ footer {
   margin-left: 4rem; }
   .main-content .owl-theme .custom-nav {
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 0;
     right: 0; }
     .main-content .owl-theme .custom-nav .owl-prev,
     .main-content .owl-theme .custom-nav .owl-next {
       position: absolute;
-      height: 100px;
+      height: 6.5rem;
       color: inherit;
       background: none;
       border: none;
@@ -1832,11 +1827,11 @@ footer {
       .main-content .owl-theme .custom-nav .owl-prev i,
       .main-content .owl-theme .custom-nav .owl-next i {
         font-size: 2.5rem;
-        color: #cecece; }
+        color: #365575; }
     .main-content .owl-theme .custom-nav .owl-prev {
-      left: 0; }
+      left: -4rem; }
     .main-content .owl-theme .custom-nav .owl-next {
-      right: 0; }
+      right: 1rem; }
 
 .big-deal {
   display: flex;

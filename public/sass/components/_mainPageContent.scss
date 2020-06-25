@@ -44,9 +44,9 @@ body {
   height: 26rem;
 }
 
-.mySlides {
-  display: none;
-}
+// .mySlides {
+//   display: none;
+// }
 img {
   width: 100%;
   padding: 0.9rem;
@@ -55,6 +55,14 @@ img {
   //   filter: drop-shadow(2px 2px 2px rgb(87, 86, 86));
   // border-bottom: 1px solid rgb(87, 86, 86);
 }
+
+
+
+// .slideshow-container:hover + .prev {
+//   display: block !important;
+// }
+
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -67,6 +75,10 @@ img {
   //   margin: auto;
   //   float: right;
 }
+
+// .butons_mp {
+//   display: none;
+// }
 
 .slideshow-container img {
   width: 100%;

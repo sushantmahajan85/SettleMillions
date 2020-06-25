@@ -259,7 +259,7 @@
 }
 
 .mySlides {
-  display: none;
+  display: block;
   position: relative;
   height: inherit;
 }
@@ -312,17 +312,22 @@
   // width: auto;
   padding: 0.5rem;
   margin-top: 0rem;
-  color: #212F3D;
+  // color: #E5E7E9;
   font-weight: bold;
   font-size: 18px;
   border-radius: 0rem 0rem 0rem 0rem;
   user-select: none;
   -webkit-user-select: none;
   z-index: 20000000000000;
-  background-color: rgb(202,207,210);
+  // background-color: rgb(202,207,210);
   visibility: initial;
   // height: 10px;
   // width: 1.5rem;
+
+  // &:hover {
+  //   color: #212F3D;
+  //   background-color: rgb(202,207,210);
+  // }
   
 }
 

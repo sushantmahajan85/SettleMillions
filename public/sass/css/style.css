@@ -1561,7 +1561,7 @@ figure {
   perspective: 150rem;
   -moz-perspective: 150rem;
   height: 34rem;
-  width: 26rem;
+  width: 24.75rem;
   z-index: 1;
   margin: 0 0 4rem 0rem; }
   .card:not(:nth-child(8n)) {

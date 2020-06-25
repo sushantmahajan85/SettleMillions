@@ -619,6 +619,13 @@ h2 {
   align-items: center;
 }
 
+.subscriptions_mp{
+  
+  font-family: Arial, Helvetica, sans-serif;
+  &:hover{
+    background:#F2F3F4;
+  }
+}
 .user-nav__user {
   display: flex;
   width: 6.5rem;

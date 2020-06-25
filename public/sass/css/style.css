@@ -503,6 +503,11 @@ h2 {
   -ms-flex-align: center;
   align-items: center; }
 
+.subscriptions_mp {
+  font-family: Arial, Helvetica, sans-serif; }
+  .subscriptions_mp:hover {
+    background: #F2F3F4; }
+
 .user-nav__user {
   display: flex;
   width: 6.5rem;
@@ -2488,8 +2493,6 @@ a {
   padding-left: 1.15rem;
   display: flex;
   flex-direction: row; }
-  .item2:hover {
-    background-color: lightblue; }
 
 .deal_area {
   padding-top: 6rem; }

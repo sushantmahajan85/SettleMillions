@@ -131,9 +131,9 @@
 
       <% } %>
       <!-- D changes // -->
-
+      
+      <% if (user) { %> <% if (user.photo) { %>
       <div class="user-nav__user">
-        <% if (user) { %> <% if (user.photo) { %>
         <nav role="navigation">
           <ul>
             <li><a href=<%= `/member/${user.id}` %>><img src=<%=`/img/users/${user.photo}` %> alt="User photo"
@@ -156,9 +156,7 @@
                     </ul>
                   </li>
                 </ul>
-              </nav> <% } %> <% } else { %>
-          
-          <% } %>
+              </nav> <% } %> <% } %> 
         </div>
 
       <!-- <div style="margin: 5px;">SIGNUP</div>

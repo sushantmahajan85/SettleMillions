@@ -56,13 +56,9 @@ img {
   // border-bottom: 1px solid rgb(87, 86, 86);
 }
 
-
-
 // .slideshow-container:hover + .prev {
 //   display: block !important;
 // }
-
-
 
 /* Slideshow container */
 .slideshow-container {
@@ -335,6 +331,10 @@ a.show-hide-link {
   }
 }
 
+.news_tag_container:first-child {
+  margin-left: -4px;
+}
+
 .news_tag {
   margin-top: 8px;
   font-size: 12px;
@@ -343,7 +343,7 @@ a.show-hide-link {
   background-color: rgb(228, 228, 228);
   display: inline-block;
   border-radius: 8px;
-  // margin-left: 4px;
+  margin-left: 4px;
   letter-spacing: 0.5px;
 }
 

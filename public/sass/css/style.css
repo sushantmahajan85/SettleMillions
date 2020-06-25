@@ -784,6 +784,9 @@ a.show-hide-link {
     margin-left: -1rem;
     margin-bottom: 10px; }
 
+.news_tag_container:first-child {
+  margin-left: -4px; }
+
 .news_tag {
   margin-top: 8px;
   font-size: 12px;
@@ -792,6 +795,7 @@ a.show-hide-link {
   background-color: #e4e4e4;
   display: inline-block;
   border-radius: 8px;
+  margin-left: 4px;
   letter-spacing: 0.5px; }
 
 #profile_name {
@@ -1558,7 +1562,7 @@ figure {
   perspective: 150rem;
   -moz-perspective: 150rem;
   height: 34rem;
-  width: 26rem;
+  width: 24.75rem;
   z-index: 1;
   margin: 0 0 4rem 0rem; }
   .card:not(:nth-child(8n)) {

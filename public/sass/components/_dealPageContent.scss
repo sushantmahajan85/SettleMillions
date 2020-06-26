@@ -13,6 +13,9 @@
   background-color: rgb(248, 242, 242);
   height: inherit;
   width: 44%;
+
+  // position: absolute;
+
   &_buttons {
     display: flex;
     padding: 1rem 1rem 1rem 1rem;
@@ -265,15 +268,16 @@
 }
 
 .slideshow-dealpage {
-  width: 44%;
+  width: 40%;
   height: 100%;
   border: 0.1rem solid #cacfd2;
+  filter: drop-shadow(2px 2px 2px rgb(87, 86, 86));
   margin-top: 2rem;
 }
 .small-slides {
   display: flex;
   flex-direction: column;
-  width: 12%;
+  width: 10%;
   height: inherit;
   margin-top: 2rem;
   margin-left: 2rem;
@@ -295,6 +299,13 @@
   object-fit: scale-down;
   height: 35%;
   width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(none);
 }
 
 .cursor {

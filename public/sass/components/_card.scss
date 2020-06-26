@@ -7,7 +7,7 @@
   -moz-perspective: 150rem;
   // position: relative;
   height: 34rem;
-  width: 26rem;
+  width: 24.75rem;
   z-index: 1;
   margin: 0 0 4rem 0rem;
 
@@ -342,31 +342,32 @@ footer {
   .owl-theme {
     .custom-nav {
       position: absolute;
-      top: 20%;
+      top: 40%;
       left: 0;
       right: 0;
 
       .owl-prev,
       .owl-next {
         position: absolute;
-        height: 100px;
+        height: 6.5rem;
         color: inherit;
         background: none;
         border: none;
         z-index: 100;
+        // background: #E5E7E9;
 
         i {
           font-size: 2.5rem;
-          color: #cecece;
+          color: #365575;
         }
       }
 
       .owl-prev {
-        left: 0;
+        left: -4rem;
       }
 
       .owl-next {
-        right: 0;
+        right: 1rem;
       }
     }
   }

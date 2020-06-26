@@ -54,14 +54,14 @@
         <% for( var sub of user.subscribers) {
       %> <% i++; %> <% if (sub.subscribedUser) { %>
 
-      <a href=<%=`/member/${sub.subscribedUser._id} `%> >
-        <div class="item2">
+      <a  href=<%=`/member/${sub.subscribedUser._id} `%> >
+        <div class="subscriptions_mp item2">
           <% if (sub.subscribedUser.photo) { %> <img
           src=<%=`/img/users/${sub.subscribedUser.photo}`%> alt="hi"
           class="social_icons" /> <% } else { %> <img
           data-name=<%=sub.subscribedUser.name %> data-color="#85e0ce"
           class="profile social_icons"/> <% } %>
-          <h4 class="heading-normal" style="margin-top:0.5rem">
+          <h4 class="heading-normal" style="margin-top:0.2rem">
             <%= sub.subscribedUser.name %>
           </h4>
         </div>

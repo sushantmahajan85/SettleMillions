@@ -48,7 +48,7 @@ a {
 // }
 
 #searchx {
-  max-width: 600px;
+  width: 600px;
 }
 
 .sortx {
@@ -100,10 +100,10 @@ a {
   padding-left: 1.15rem;
   display: flex;
   flex-direction: row;
-  &:hover {
-    background-color: lightblue;
-    // color: white;
-  }
+  // &:hover {
+  //   // background-color: lightblue;
+  //   // color: white;
+  // }
 }
 .deal_area {
   padding-top: 6rem;

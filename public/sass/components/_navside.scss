@@ -270,12 +270,13 @@
 }
 
 .social_icons {
-  height: 32px;
-  width: 35px;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
-  margin-left: -0.5rem;
-  margin-right: 0.6rem;
+  margin-left: 0.5rem;
+  margin-right: 1.6rem;
   background-size: 100% 100%;
+  padding: 0.1rem;
 }
 
 #hide {
@@ -292,17 +293,36 @@ body a {
   }
 }
 
+.search_nv {
+  margin-left: 3rem;
+}
+
 // .user-nav a{
 //   display: block;
+// }
+
+// .title_basic_nv {
+//   display: block;
+//   margin: 0.5rem;
+//   color: #fff;
+
+// &:hover {
+//   color: rgb(231, 76, 60);
+// }
+// &:focus {
+//   color: rgb(231, 76, 60);
+//   background-color: transparent;
+// }
 // }
 .titles_nv {
   display: block;
   margin: 0.5rem;
+  // font-family: "Bitter", serif;
+  font-size: 1.9rem;
 
   &:hover {
     color: rgb(231, 76, 60);
-    border-bottom: 2px solid  rgb(231, 76, 60);
-  
+    border-bottom: 2px solid rgb(231, 76, 60);
   }
 
   &:focus {
@@ -439,18 +459,27 @@ h2 {
   // border-radius: 100px;
   // padding: 0.7rem 2rem;
   // * D changes *
-
-  border: none;
-  padding: 0.85rem 2rem;
+  // border: 2px solid rgb(146, 43, 33);
+  // border: 2px solid rgb(231, 76, 60);
+  border: 0.1px solid rgba(209, 0, 36, 1);
+  border-right: 0px;
+  padding: 0rem 1rem;
   // border-radius: 0.5rem;
-  border-radius: 0 8px 8px 0;
+  // border-radius: 0 8px 8px 0;
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-right: -3.25rem;
   height: 3.5rem;
-}
+  // margin-left: 3rem;
+  color: rgb(23, 32, 42);
+  // font-family: "Bitter", serif;
+  font-size: 1.5rem;
 
+  &:hover {
+    color: #c60022;
+  }
+}
 
 .search__input:focus {
   outline: none;
@@ -491,13 +520,15 @@ h2 {
 
 // D *changes start
 .search__button {
-  color: rgba(6, 16, 99, 0.7);
-  font-size: 1.3rem;
+  // color: rgba(6, 16, 99, 0.7);
+  color: #cb4335;
+  font-size: 1.6rem;
 }
 // D *changes * end
 
 //  D *changes * start
 .Navb_logo-text {
+  margin-left: 2rem;
   display: flex;
   color: #fff;
   font-weight: 600;
@@ -511,6 +542,10 @@ h2 {
   font-family: "Metal Mania", cursive;
 
   // D *changes * end
+
+  &:hover {
+    color: rgb(231, 76, 60);
+  }
 
   .Sidebar_logo {
     color: white;
@@ -532,6 +567,7 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 0rem;
+  justify-content: flex-end;
 }
 
 .user-nav > * {
@@ -583,6 +619,13 @@ h2 {
   align-items: center;
 }
 
+.subscriptions_mp{
+  
+  font-family: Arial, Helvetica, sans-serif;
+  &:hover{
+    background:#F2F3F4;
+  }
+}
 .user-nav__user {
   display: flex;
   width: 6.5rem;
@@ -591,9 +634,9 @@ h2 {
 }
 .user-nav__user-photo {
   width: 6.5rem;
-  // height: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  // margin-right: 1rem;
+  margin-top: 6rem;
 }
 
 .logo {
@@ -602,69 +645,85 @@ h2 {
 }
 
 .categories_dropdown_nv {
+  margin-left: 1.68rem;
   padding: 0px 15px;
-  background: #fff;
+  // background: #fff;
   border: 1px solid #e4e7ed;
   height: 3.5rem;
-  border-radius: 8px 0px 0px 8px;
-}
+  // border-radius: 8px 0px 0px 8px;
+  align-self: center;
+  // border: 2px solid rgb(231, 76, 60);
+  border-left: none;
+  border: 0.1px solid rgba(209, 0, 36, 1);
+  color: rgb(23, 32, 42);
+  // font-family: "Bitter", serif;
+  font-size: 1.5rem;
+  // background-color: rgba(209, 0, 36, 0.9);
+  // color: #fff;
+  // color: rgb(231, 76, 60);
 
-/////////////////////////////
+  &:hover {
+    background-color: rgba(209, 0, 36, 0.9);
+    color: #fff;
+  }
+  width: 15rem;
+  /////////////////////////////
 
-a {
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+  }
 
-nav {
-  font-family: monospace;
-}
+  nav {
+    font-family: monospace;
+  }
 
-ul {
-  // background: darkorange;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
+  ul {
+    // background: darkorange;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
 
-li {
-  color: #fff;
-  // background: darkorange;
-  display: block;
-  float: left;
-  // padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s;
-}
+  li {
+    // color: #fff;
+    // background: darkorange;
+    display: block;
+    float: left;
+    // padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
 
-li a {
-  color: #fff;
-}
+  li a {
+    color: #fff;
+  }
 
-li:hover {
-  // background: red;
-  cursor: pointer;
-}
+  li:hover {
+    // background: red;
+    cursor: pointer;
+  }
 
-ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none;
-}
+  ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+  }
 
-ul li:hover > ul,
-ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
 
-ul li ul li {
-  clear: both;
-  width: 100%;
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
 }

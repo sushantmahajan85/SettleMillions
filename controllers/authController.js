@@ -49,6 +49,33 @@ exports.signUp = async (req, res) => {
   }
 };
 
+exports.signUpApp = async (req, res) => {
+  try {
+    const newUser = await User.create({
+      name: req.body.name,
+      password: req.body.password,
+      //gSignin: req.body.gSignin,
+      email: req.body.email,
+      //phoneNo: req.body.phoneNo,
+      passwordConfirm: req.body.passwordConfirm,
+    });
+    
+    res.status(201).json({
+      status: "success",
+      //token,
+      data: {
+        newUser,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({
+      status: "fail",
+      message: error,
+    });
+  }
+};
+
 exports.verify = async (req, res, next) => {
   try {
     // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";

@@ -16,7 +16,7 @@ router
     testController.createTest
   );
 
-router.route("/signupApp").get(testController.getSignUp).post(authController.signUpApp);
+router.route("/signupApp").get(testController.getSignUp).post(testController.signUpApp);
 
 router
   .route("/:id")

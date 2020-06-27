@@ -14,6 +14,8 @@ exports.getAllTests = factory.getAll(Test);
 //    next();
 // };
 
+exports.signUpApp = factory.createOne(User);
+
 exports.getSignUp = factory.getAll(User);
 
 exports.getTest = factory.getOne(Test);

@@ -3,7 +3,7 @@ const viewController = require("../controllers/viewController");
 const authController = require("../controllers/authController");
 const router = express.Router();
 
-router.get(viewController.getSignupApp);
+//router.get(viewController.getSignupApp);
 
 router.use(authController.isLoggedIn);
 

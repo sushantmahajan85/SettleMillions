@@ -20,6 +20,10 @@ let rec3 = "";
 let rec4 = "";
 let rec5 = "";
 
+exports.getSignupApp = (req, res) => {
+  res.status(200).render("signup");
+};
+
 exports.forgot = (req, res) => {
   res.status(200).render("forgot");
 };

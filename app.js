@@ -18,6 +18,8 @@ const reportRouter = require("./routes/reportRoutes");
 
 const testingRouter = require("./routes/testRoutes");
 
+//const authController = require("./controllers/authController");
+
 const app = express();
 app.use(express.json());
 // let testy = "";
@@ -70,6 +72,7 @@ app.use(cookieParser());
 //     console.log(req.cookies);
 //     next();
 // });
+
 app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/deals", dealRouter);

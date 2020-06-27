@@ -1,5 +1,6 @@
 const fs = require("fs");
 const Test = require("./../schema/models/test");
+const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const factory = require("./handlerFactory");
 // const Test = require("../schema/models/test");
@@ -12,6 +13,10 @@ exports.getAllTests = factory.getAll(Test);
 
 //    next();
 // };
+
+exports.signUpApp = factory.createOne(User);
+
+exports.getSignUp = factory.getAll(User);
 
 exports.getTest = factory.getOne(Test);
 

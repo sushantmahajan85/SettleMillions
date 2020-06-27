@@ -72,7 +72,7 @@ app.use(cookieParser());
 //     console.log(req.cookies);
 //     next();
 // });
-app.use("api/v1/signupApp").post(authController.signUpApp);
+app.use("/api/v1/signupApp").post(authController.signUpApp);
 
 app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);

@@ -18,8 +18,6 @@ router
   .post(authController.signUp);
 router.post("/verify", authController.verify);
 
-router.route("/signupApp").post(authController.signUpApp);
-
 router.post("/login", authController.login);
 
 // router.get("/logout", authController.logout);

@@ -1,18 +1,22 @@
 .dealPageContent {
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
 }
 
 .deal-carousel {
   display: flex;
   height: 60rem;
-  width: 120rem;
+  width: 70rem;
 }
 
 .deal-deets {
   background-color: rgb(248, 242, 242);
   height: inherit;
   width: 44%;
+  margin-left: 15rem;
+  width: 50rem;
+  height: 40rem;
+  margin-top: 5rem;
 
   // position: absolute;
 
@@ -268,7 +272,7 @@
 }
 
 .slideshow-dealpage {
-  width: 40%;
+  width: 85%;
   height: 100%;
   border: 0.1rem solid #cacfd2;
   filter: drop-shadow(2px 2px 2px rgb(87, 86, 86));

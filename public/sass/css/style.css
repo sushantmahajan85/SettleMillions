@@ -976,18 +976,21 @@ figure {
   list-style: none; }
 
 .dealPageContent {
-  display: flex;
-  justify-content: space-around; }
+  display: flex; }
 
 .deal-carousel {
   display: flex;
   height: 60rem;
-  width: 120rem; }
+  width: 70rem; }
 
 .deal-deets {
   background-color: #f8f2f2;
   height: inherit;
-  width: 44%; }
+  width: 44%;
+  margin-left: 15rem;
+  width: 50rem;
+  height: 40rem;
+  margin-top: 5rem; }
   .deal-deets_buttons {
     display: flex;
     padding: 1rem 1rem 1rem 1rem; }
@@ -1193,7 +1196,7 @@ figure {
   height: inherit; }
 
 .slideshow-dealpage {
-  width: 40%;
+  width: 85%;
   height: 100%;
   border: 0.1rem solid #cacfd2;
   filter: drop-shadow(2px 2px 2px #575656);

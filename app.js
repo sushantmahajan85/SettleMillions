@@ -18,7 +18,7 @@ const reportRouter = require("./routes/reportRoutes");
 
 const testingRouter = require("./routes/testRoutes");
 
-const authController = require("./controllers/authController");
+//const authController = require("./controllers/authController");
 
 const app = express();
 app.use(express.json());

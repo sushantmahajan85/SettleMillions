@@ -976,8 +976,7 @@ figure {
   list-style: none; }
 
 .dealPageContent {
-  display: flex;
-  justify-content: space-around; }
+  display: flex; }
 
 .deal-carousel {
   display: flex;
@@ -987,7 +986,11 @@ figure {
 .deal-deets {
   background-color: #f8f2f2;
   height: inherit;
-  width: 44%; }
+  width: 44%;
+  margin-left: -40rem;
+  width: 50rem;
+  height: 40rem;
+  margin-top: 5rem; }
   .deal-deets_buttons {
     display: flex;
     padding: 1rem 1rem 1rem 1rem; }

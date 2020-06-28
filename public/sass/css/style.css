@@ -998,7 +998,7 @@ figure {
     padding: 1rem 1rem 1rem 1rem;
     font-size: 2.4rem !important;
     line-height: 1.6;
-    color: #1E2021; }
+    color: #1e2021; }
   .deal-deets_price {
     padding: 1.5rem 1rem 1rem 1rem;
     list-style: none;
@@ -1080,7 +1080,8 @@ figure {
 .user-review {
   display: flex;
   justify-content: center;
-  margin: 3rem 0; }
+  margin: 3rem 0;
+  width: 100%; }
 
 .review-photo {
   height: 8rem; }

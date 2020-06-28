@@ -989,7 +989,7 @@ figure {
   width: 44%;
   margin-left: 5rem;
   width: 55rem;
-  height: 55rem;
+  height: 60rem;
   margin-top: 2rem; }
   .deal-deets_buttons {
     display: flex;
@@ -998,7 +998,7 @@ figure {
     padding: 1rem 1rem 1rem 1rem;
     font-size: 2.4rem !important;
     line-height: 1.6;
-    color: #1E2021; }
+    color: #1e2021; }
   .deal-deets_price {
     padding: 1.5rem 1rem 1rem 1rem;
     list-style: none;
@@ -1205,7 +1205,7 @@ figure {
 .small-slides {
   display: flex;
   flex-direction: column;
-  width: 16.5%;
+  width: 12.5%;
   height: inherit;
   margin-top: 2rem;
   margin-left: 2rem;
@@ -1338,6 +1338,36 @@ figure {
 
 .d_prev {
   margin-left: 1.4rem; }
+
+.deal-highlights-dp {
+  padding: 1rem;
+  border-bottom: 0.2rem solid #D7DBDD; }
+
+.deal-views-dp {
+  display: inline;
+  font-size: 2rem; }
+
+.views-icon-dp {
+  display: inline; }
+
+.views-text-dp {
+  display: inline;
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 1rem; }
+
+.deal-ratings-dp {
+  display: inline;
+  margin-left: 5rem;
+  font-size: 2rem; }
+
+.ratings-icon-dp {
+  display: inline;
+  color: #f4d03f; }
+
+.ratings-text-dp {
+  display: inline;
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 1rem; }
 
 .user-view {
   background-color: #fff;

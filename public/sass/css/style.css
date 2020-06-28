@@ -2766,7 +2766,6 @@ hr {
 
 @media screen and (min-width: 768px) {
   nav ul {
-    display: flex;
     align-items: center;
     margin-right: 2%;
     justify-content: end;

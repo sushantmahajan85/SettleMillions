@@ -956,7 +956,7 @@ figure {
 
 .deal-photo {
   object-fit: scale-down;
-  height: 14rem;
+  height: 18rem;
   width: 95%; }
 
 .card-text {
@@ -1626,7 +1626,7 @@ figure {
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 34rem;
+  height: 37rem;
   width: 24.75rem;
   z-index: 1;
   margin: 0 0 4rem 0rem; }

@@ -145,14 +145,14 @@ exports.login = async (req, res, next) => {
     }
 
     const token = signToken(user._id);
-    // const cookieOptions = {
-    //   expires: new Date(
-    //     Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
-    //   ),
-    //   // secure: true,
-    //   httpOnly: true,
-    // };
-    // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+    const cookieOptions = {
+      expires: new Date(
+        Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+      ),
+      // secure: true,
+      httpOnly: true,
+    };
+    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
 
 
@@ -175,7 +175,7 @@ exports.login = async (req, res, next) => {
     // const url = "amazon.in";
     // await new Email(user, url).sendWelcome();
 
-    // res.cookie("jwt", token, cookieOptions);
+    res.cookie("jwt", token, cookieOptions);
     res.status(200).json({
       status: "success",
       token,

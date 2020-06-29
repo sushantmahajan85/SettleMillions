@@ -172,8 +172,13 @@ exports.login = async (req, res, next) => {
     // )}/api/v1/users/resetPassword/${resetToken}`;
 
     // await new Email(user, resetURL).sendPasswordReset();
+
+
+    /////////////////////////////////Error in Production/////////////////////////////////////////////
     // const url = "amazon.in";
     // await new Email(user, url).sendWelcome();
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({

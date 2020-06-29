@@ -129,6 +129,9 @@
       </div>
 
         <div class="deal-deets">
+          <div class="deal-deets_name">
+            <h4><%= deal.dealName %> 
+          </div>
           <div class="deal-highlights-dp">
             <div class="deal-views-dp">
               <div class="views-icon-dp">
@@ -153,14 +156,11 @@
             </div>
            
           </div>
-          <div class="deal-deets_name">
-            <h4><%= deal.dealName %> 
-          </div>
+          
           <div class="deal-deets_price">
-            <li class="price" ><span class="price_avail"
-                style="font-size: 2.5rem !important;margin-left:0.5rem">
-                Rs.<%= deal.mrp %> </span> <strike class="price_mrp" style="color: rgb(122, 122, 122);">Rs.<%= deal.dealPrice %> </strike> <span
-                class="price_dis" style="font-size: 2.5rem;">(70%)</span>
+            <li class="price" ><span class="price_avail">
+              ₹<%= deal.mrp %> </span> <span class="price_mrp">₹<%= deal.dealPrice %> </span> <span
+                class="price_dis" >70% off</span>
             </li>
           </div>
          

@@ -6,48 +6,55 @@
 .deal-carousel {
   display: flex;
   height: 60rem;
-  width: 60rem;
+  width: 50rem;
 }
 
 .deal-deets {
   // background-color: rgb(242, 243, 244);
   border: 2px solid rgb(242, 243, 244);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: inherit;
   width: 44%;
   margin-left: 5rem;
-  width: 55rem;
+  width: 42rem;
   height: 60rem;
-  margin-top: 2rem;
+  margin-top: 0.1rem;
 
   // position: absolute;
 
   &_buttons {
-    display: flex;
+    display: block;
     padding: 1rem 1rem 1rem 1rem;
   }
   &_name {
     // border-bottom: 1px solid grey;
     padding: 1rem 1rem 1rem 1rem;
-    font-size: 2.4rem !important;
+    font-size: 2rem !important;
+    text-transform: uppercase;
+
     // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     //   sans-serif;
     line-height: 1.6;
     color: #1e2021;
   }
   &_price {
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
     list-style: none;
     font-size: 2rem;
   }
   &_buy {
+    display: block;
     background-color: orange;
     color: white;
     padding: 0.67rem 1.6rem;
-    margin-right: 6rem;
     border-radius: 1rem;
     font-size: 1.8rem;
+    margin: 0rem 2rem 0rem 0rem;
   }
   &_save {
+    display: block;
+    margin-top: 1rem;
+    margin: 1rem 2rem 0rem 0rem;
     background-color: rgb(0, 132, 255);
     color: white;
     padding: 0.67rem 1.6rem;
@@ -115,12 +122,18 @@
   border-radius: 1rem;
   overflow: hidden;
   line-height: 1;
+  box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9;
   &_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
     padding: 10rem;
     // border-radius: 1rem;
     background-size: 100% 100%;
     overflow: hidden;
+    // border: 0.5px solid #f4f6f7;
+  }
+  &:hover {
+    box-shadow: none;
+    border: 1.5px solid  #f2f3f4 ;
   }
 }
 
@@ -281,14 +294,14 @@
   border: 0.1rem solid #ecf0f1;
 
   box-shadow: 1px 1px 1px 1px #f2f3f4;
-  margin-top: 2rem;
+  margin-top: 0.1rem;
 }
 .small-slides {
   display: flex;
   flex-direction: column;
   width: 12.5%;
   height: inherit;
-  margin-top: 2rem;
+  margin-top: 0.1rem;
   margin-left: 2rem;
 
   border-top: 0.1rem solid #cacfd2;
@@ -431,6 +444,17 @@
   float: right;
   background-color: white;
   padding-bottom: 5rem;
+  margin-top: -128rem;
+  margin-right: 2rem;
+}
+//  copied from header.scss
+.side_deals {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  float: right;
+  background-color: white;
+  padding-bottom: 5rem;
 }
 
 .comment_section {
@@ -458,21 +482,18 @@
   margin-left: 1.4rem;
 }
 
-
-
-.deal-highlights-dp{
-  padding: 1rem;
-  border-bottom: 0.2rem solid #D7DBDD;
+.deal-highlights-dp {
+  padding: 0rem 1rem 1rem 1rem;
+  // border-bottom: 0.2rem solid #D7DBDD;
 }
 
-.deal-views-dp{
+.deal-views-dp {
   display: inline;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .views-icon-dp {
   display: inline;
   // font-size: 2.5rem;
-
 }
 
 .views-text-dp {
@@ -481,16 +502,15 @@
   margin-left: 1rem;
 }
 
-
 .deal-ratings-dp {
   display: inline;
   margin-left: 5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .ratings-icon-dp {
   display: inline;
-  color: rgb(244, 208, 63);
+  color: rgb(209, 0, 36);
   // font-size: 2.5rem;
 }
 
@@ -498,4 +518,29 @@
   display: inline;
   color: rgba($color: #000000, $alpha: 0.8);
   margin-left: 1rem;
+}
+
+.price {
+  // margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // word-spacing: 0.7rem;
+  &_avail {
+    font-weight: 600;
+    color: #000;
+    font-size: 3.1rem;
+  }
+  &_dis {
+    margin-left: 1.2rem;
+    color: #d10024;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  &_mrp {
+    margin-left: 1.2rem;
+    text-decoration: line-through;
+    color: #8d99ae;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
 }

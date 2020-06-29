@@ -994,7 +994,7 @@ figure {
   margin-top: 0.1rem; }
   .deal-deets_buttons {
     display: block;
-    padding: 1rem 1rem 1rem 1rem; }
+    padding: 1rem 5rem 1rem 5rem; }
   .deal-deets_name {
     padding: 1rem 1rem 1rem 1rem;
     font-size: 2rem !important;
@@ -1002,18 +1002,48 @@ figure {
     line-height: 1.6;
     color: #1e2021; }
   .deal-deets_price {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem 5rem;
     list-style: none;
     font-size: 2rem; }
   .deal-deets_buy {
+    position: relative;
     display: block;
-    background-color: orange;
+    background-color: #ef233c;
+    border: 2px solid transparent;
+    text-align: center;
+    height: 5rem;
     color: white;
-    padding: 0.67rem 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
     border-radius: 1rem;
+    padding: 0.67rem 1.6rem;
     font-size: 1.8rem;
-    margin: 0rem 2rem 0rem 0rem; }
+    margin: 0rem 2rem 0rem 0rem;
+    transition: 0.2s all; }
+  .deal-deets_buy > i {
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    color: #D10024;
+    opacity: 0;
+    visibility: hidden; }
+  .deal-deets_buy:hover {
+    background-color: #FFF;
+    color: #D10024;
+    border-color: #D10024; }
+  .deal-deets_buy:hover > i {
+    opacity: 1;
+    visibility: visible; }
   .deal-deets_save {
+    border: 2px solid transparent;
+    text-align: center;
+    height: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
     display: block;
     margin-top: 1rem;
     margin: 1rem 2rem 0rem 0rem;

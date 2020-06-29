@@ -3,6 +3,7 @@ const Test = require("./../schema/models/test");
 const User = require("./../schema/models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const factory = require("./handlerFactory");
+const AppError = require("./../utils/appError");
 // const Test = require("../schema/models/test");
 
 exports.getAllTests = factory.getAll(Test);

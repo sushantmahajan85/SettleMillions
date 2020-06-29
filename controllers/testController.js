@@ -25,3 +25,31 @@ exports.createTest = factory.createOne(Test);
 exports.updateTest = factory.updateOne(Test);
 
 exports.deleteTest = factory.deleteOne(Test);
+
+exports.loginApp = async (req, res, next) => {
+   try {
+     const { email, password } = req.body;
+ 
+     if (!email || !password) {
+       return next(
+         new AppError("Please provide correct email and password", 400)
+       );
+     }
+     const user = await User.findOne({ email: email }).select("+password");
+
+     if (
+       !user ||
+       !(await user.verifyPassword(password, user.password)) ||
+       !user.verified
+     ) {
+       return next(new AppError("No user found", 400));
+     }
+
+     res.status(200).json({
+       status: "success",
+       //token,
+     });
+   } catch (error) {
+     console.log(error);
+   }
+ };

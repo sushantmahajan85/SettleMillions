@@ -67,8 +67,8 @@
           <!-- Slideshow container -->
           <div class="slideshow-container-deal">
 
-            <a class="slider_b_deals prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="slider_b_deals next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="slider_b_deals d_prev prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slider_b_deals d_next next" onclick="plusSlides(1)">&#10095;</a>
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
@@ -129,16 +129,41 @@
       </div>
 
         <div class="deal-deets">
+          <div class="deal-highlights-dp">
+            <div class="deal-views-dp">
+              <div class="views-icon-dp">
+                <i class="far fa-eye"></i>
+              </div>
+              <div class="views-text-dp">
+                <span>100+ viewed today</span>
+              </div>
+            </div>
+            <div class="deal-ratings-dp">
+              <div class="ratings-icon-dp">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+              </div>
+              <div class="ratings-text-dp">
+                <span>Perfect</span>
+              </div>
+            </div>
+           
+          </div>
           <div class="deal-deets_name">
             <h4><%= deal.dealName %> 
           </div>
           <div class="deal-deets_price">
-            <li class="price" style="word-spacing: 3rem;"><span class="price_avail"
+            <li class="price" ><span class="price_avail"
                 style="font-size: 2.5rem !important;margin-left:0.5rem">
                 Rs.<%= deal.mrp %> </span> <strike class="price_mrp" style="color: rgb(122, 122, 122);">Rs.<%= deal.dealPrice %> </strike> <span
                 class="price_dis" style="font-size: 2.5rem;">(70%)</span>
             </li>
           </div>
+         
           <div class="deal-deets_buttons">
             <a href="<%= deal.affiliateLink %>" class="deal-deets_buy">Buy now</a>
             <% if (user) { %>

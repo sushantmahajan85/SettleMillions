@@ -152,7 +152,7 @@ exports.login = async (req, res, next) => {
       // secure: true,
       httpOnly: true,
     };
-    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+    //if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
     // const resetURL = `${req.protocol}://${req.get(
     //   "host"
@@ -172,10 +172,6 @@ exports.login = async (req, res, next) => {
     // await new Email(user, resetURL).sendPasswordReset();
     const url = "amazon.in";
     await new Email(user, url).sendWelcome();
-    // res.status(200).json({
-    //   status: "success",
-    //   message: "Token Sent",
-    // });
 
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({

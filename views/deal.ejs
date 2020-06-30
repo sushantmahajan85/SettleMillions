@@ -148,7 +148,6 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-
               </div>
               <div class="ratings-text-dp">
                 <span>Perfect</span>
@@ -210,14 +209,15 @@
 
       <div class="reviews" id="reviews">
         <div class="review-section">
-          <span class="review-head"><img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
-              class="user-nav__user-photo review-photo"></span>
+          <span class="review-head">
+            <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
+              class="user-nav__user-photo review-photo">
+            </span>
           <input type="textarea" placeholder="Add A Review" id="review_input" class="add-review-text-area">
-<button id="review_post">Post a review</button>
+            <button id="review_post">Post a review</button>
           <% for( var review of deal.reviews ) { %>
           <div class="user-nav__user user-review">
             <img src=<%=`/img/users/${review.user.photo}`%>  alt="User photo" class="user-nav__user-photo review-photo">
-
             <div class="review-text">
               <div class="user-nav__user-name"><%= review.user.name %> </div>
               <div class="rev">

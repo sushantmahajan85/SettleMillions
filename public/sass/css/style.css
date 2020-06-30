@@ -1027,16 +1027,15 @@ figure {
     width: 40px;
     height: 40px;
     line-height: 38px;
-    color: #D10024;
-    opacity: 0;
-    visibility: hidden; }
+    color: white; }
   .deal-deets_buy:hover {
-    background-color: #FFF;
-    color: #D10024;
-    border-color: #D10024; }
+    background-color: #fff;
+    color: #d10024;
+    border-color: #d10024; }
   .deal-deets_buy:hover > i {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    color: #d10024; }
   .deal-deets_save {
     border: 2px solid transparent;
     text-align: center;
@@ -1106,7 +1105,7 @@ figure {
     overflow: hidden; }
   .deal_area_box:hover {
     box-shadow: none;
-    border: 1.5px solid  #f2f3f4; }
+    border: 1.5px solid #f2f3f4; }
 
 .deal-with-review {
   display: flex;
@@ -1124,7 +1123,10 @@ figure {
   width: 100%; }
 
 .review-photo {
-  height: 8rem; }
+  height: 7.5rem;
+  width: 8rem;
+  margin-top: -0.8rem;
+  margin-right: 2rem; }
 
 .review-head {
   font-size: 3rem; }
@@ -1132,12 +1134,32 @@ figure {
 .add-review-text-area {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
-  width: 80%;
+  border-bottom: 1px solid gray;
+  width: 70%;
   height: 5rem;
   margin-bottom: 5rem;
-  color: white;
+  margin-right: 2rem;
+  color: black;
   font-size: 2rem; }
+
+#review_post {
+  background-color: #ef233c;
+  border: 2px solid transparent;
+  text-align: center;
+  height: 4rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 1rem;
+  padding: 0.67rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.05s all; }
+
+#review_post:hover {
+  background-color: white;
+  color: #ef233c;
+  border: 2px solid #ef233c; }
 
 .review-text {
   display: flex;
@@ -1149,13 +1171,13 @@ figure {
 
 .reviews {
   display: flex;
-  color: white;
-  background-color: #c0c0c0;
-  width: 120rem;
-  margin: 5rem 0; }
+  color: black;
+  background-color: white;
+  width: 95rem;
+  margin: 5rem 0rem 5rem 2rem; }
 
 .review-section {
-  font-size: 2rem; }
+  font-size: 1.6rem; }
 
 #hidden-review {
   display: none; }

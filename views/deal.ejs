@@ -165,26 +165,34 @@
          
           <div class="deal-deets_paragraph">
             <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
-            <p class="para"><%= deal.biggerDis %></p>
+            <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
           </div>
           <div class="deal-deets_buttons">
             <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
             <% if (user) { %>
-                <% if (like) { %>
+                <% if (like) { %> 
                 
                 <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
                 <% } else { %>
-                  <a href="" class="deal-deets_save" id="like_deal">Save for later</a>
+                  <a href="" class="deal-deets_save" id="like_deal">Add to Wishlist</a>
 
                 <% } %>
             <% }else{ %>
             
-              <a  href="#" class="deal-deets_save" id="like_deal_no">Save for later</a>
+              <a  href="#" class="deal-deets_save" id="like_deal_no">Add to wishlist</a>
 
             <% } %>
             </div>
+            <div class="deal-deets_vt">
+              <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
+              <span class="deal-deets_categ">Category: Mobiles</span>
+              <p class="deal-deets_time">Posted: <%= deal.mrp %> days ago</p>
+            </div>
           
-          <div class="deal-deets_buttons">
+          <div class="deal-deets_affiliate">
+            
+              <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c">
+       
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
             <% if (user) { %>
 
@@ -201,10 +209,7 @@
               <% } %>  
 
           </div>
-          <div class="deal-deets_vt">
-            <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
-            <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
-          </div>
+         
         </div>
       </div>
 

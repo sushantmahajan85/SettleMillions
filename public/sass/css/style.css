@@ -993,7 +993,8 @@ figure {
   margin-top: 0.1rem; }
   .deal-deets_buttons {
     display: block;
-    padding: 1rem 5rem 1rem 5rem; }
+    padding: 1rem 5rem 1rem 1rem;
+    margin-right: 4rem; }
   .deal-deets_name {
     padding: 0rem 1rem 1rem 1rem;
     font-size: 2rem !important;
@@ -1056,10 +1057,13 @@ figure {
     padding: 1rem; }
   .deal-deets_subs {
     padding: 0.67rem 1.6rem;
+    border: 2px solid transparent;
+    font-weight: 500;
     border-radius: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: white;
-    background-color: red; }
+    background-color: #ef233c;
+    text-transform: uppercase; }
   .deal-deets_views {
     color: #7a7a7a;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -1070,23 +1074,41 @@ figure {
     word-spacing: 0.3rem; }
   .deal-deets_time {
     color: #7a7a7a;
+    text-align: right;
     word-spacing: 0.2rem;
     border-radius: 1rem;
-    font-size: 1.8rem; }
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    display: inline;
+    margin-left: 4.5rem; }
+  .deal-deets_categ {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    display: inline; }
   .deal-deets_user {
-    font-weight: 600;
-    color: black;
-    margin-right: 6rem;
-    margin-top: 0.7rem;
-    margin-left: -0.56rem;
+    font-weight: 700;
+    color: #15161d;
+    margin-right: 2rem;
     border-radius: 1rem;
-    font-size: 1.8rem; }
+    font-size: 2rem; }
   .deal-deets_paragraph {
-    padding: 0.5rem 4.5rem 0rem 1rem;
+    padding: 0.5rem 4rem 0rem 0.5rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     color: #333;
     margin-bottom: 1rem; }
+  .deal-deets_affiliate {
+    margin-right: 5.1rem;
+    padding: 2rem 0rem 2rem 1rem;
+    border: 1px solid #F2F3F4; }
+    .deal-deets_affiliate_pic {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0rem;
+      border-radius: 50%;
+      margin-bottom: 1rem; }
 
 .deal_area_box {
   background-color: white;

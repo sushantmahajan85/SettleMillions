@@ -129,6 +129,9 @@
       </div>
 
         <div class="deal-deets">
+          <div class="deal-deets_name">
+            <h4><%= deal.dealName %> 
+          </div>
           <div class="deal-highlights-dp">
             <div class="deal-views-dp">
               <div class="views-icon-dp">
@@ -145,7 +148,6 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-
               </div>
               <div class="ratings-text-dp">
                 <span>Perfect</span>
@@ -153,19 +155,20 @@
             </div>
            
           </div>
-          <div class="deal-deets_name">
-            <h4><%= deal.dealName %> 
-          </div>
+          
           <div class="deal-deets_price">
-            <li class="price" ><span class="price_avail"
-                style="font-size: 2.5rem !important;margin-left:0.5rem">
-                Rs.<%= deal.mrp %> </span> <strike class="price_mrp" style="color: rgb(122, 122, 122);">Rs.<%= deal.dealPrice %> </strike> <span
-                class="price_dis" style="font-size: 2.5rem;">(70%)</span>
+            <li class="price" ><span class="price_avail">
+              ₹<%= deal.mrp %> </span> <span class="price_mrp">₹<%= deal.dealPrice %> </span> <span
+                class="price_dis" >70% off</span>
             </li>
           </div>
          
+          <div class="deal-deets_paragraph">
+            <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
+            <p class="para"><%= deal.biggerDis %></p>
+          </div>
           <div class="deal-deets_buttons">
-            <a href="<%= deal.affiliateLink %>" class="deal-deets_buy">Buy now</a>
+            <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
             <% if (user) { %>
                 <% if (like) { %>
                 
@@ -176,14 +179,11 @@
                 <% } %>
             <% }else{ %>
             
-              <button class="deal-deets_save" id="like_deal_no">Save for later</button>
+              <a  href="#" class="deal-deets_save" id="like_deal_no">Save for later</a>
 
             <% } %>
             </div>
-          <div class="deal-deets_vt">
-            <p class="deal-deets_views"><%= deal.views %> k views</p>
-            <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
-          </div>
+          
           <div class="deal-deets_buttons">
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
             <% if (user) { %>
@@ -201,23 +201,24 @@
               <% } %>  
 
           </div>
-          <div class="deal-deets_paragraph">
-            <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3>
-            <p class="paragraph" style="margin-left: 0.5rem;"><%= deal.biggerDis %></p>
+          <div class="deal-deets_vt">
+            <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
+            <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
           </div>
         </div>
       </div>
 
       <div class="reviews" id="reviews">
         <div class="review-section">
-          <span class="review-head"><img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
-              class="user-nav__user-photo review-photo"></span>
+          <span class="review-head">
+            <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
+              class="user-nav__user-photo review-photo">
+            </span>
           <input type="textarea" placeholder="Add A Review" id="review_input" class="add-review-text-area">
-<button id="review_post">Post a review</button>
+            <button id="review_post">Post a review</button>
           <% for( var review of deal.reviews ) { %>
           <div class="user-nav__user user-review">
             <img src=<%=`/img/users/${review.user.photo}`%>  alt="User photo" class="user-nav__user-photo review-photo">
-
             <div class="review-text">
               <div class="user-nav__user-name"><%= review.user.name %> </div>
               <div class="rev">

@@ -1125,7 +1125,7 @@ figure {
 .review-photo {
   height: 7.5rem;
   width: 8rem;
-  margin-top: -0.8rem;
+  margin-top: -1px;
   margin-right: 2rem; }
 
 .review-head {
@@ -1134,13 +1134,16 @@ figure {
 .add-review-text-area {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid gray;
-  width: 70%;
-  height: 5rem;
+  border: 1px solid #e6e6e6;
+  width: 65%;
+  height: 6rem;
   margin-bottom: 5rem;
   margin-right: 2rem;
   color: black;
   font-size: 2rem; }
+
+.review-section input::placeholder {
+  padding-left: 10px; }
 
 #review_post {
   background-color: #ef233c;
@@ -1154,7 +1157,7 @@ figure {
   padding: 0.67rem 1rem;
   font-size: 1.6rem;
   cursor: pointer;
-  transition: 0.05s all; }
+  transition: 0.2s all; }
 
 #review_post:hover {
   background-color: white;

@@ -1411,6 +1411,7 @@ figure {
   float: right;
   background-color: white;
   padding-bottom: 5rem;
+  margin-top: -107rem;
   margin-right: 2rem; }
 
 .side_deals {
@@ -2276,7 +2277,6 @@ body {
     opacity: 1;
     background-color: white;
     overflow: hidden;
-    display: table;
     border-radius: inherit; }
   .popup_left {
     width: 33.33333333334%;

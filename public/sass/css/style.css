@@ -984,7 +984,6 @@ figure {
   width: 50rem; }
 
 .deal-deets {
-  border: 2px solid #f2f3f4;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: inherit;
   width: 44%;
@@ -996,13 +995,13 @@ figure {
     display: block;
     padding: 1rem 5rem 1rem 5rem; }
   .deal-deets_name {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     font-size: 2rem !important;
     text-transform: uppercase;
     line-height: 1.6;
     color: #1e2021; }
   .deal-deets_price {
-    padding: 0.5rem 1rem 1rem 5rem;
+    padding: 0.5rem 1rem 0rem 1rem;
     list-style: none;
     font-size: 2rem; }
   .deal-deets_buy {
@@ -1071,9 +1070,7 @@ figure {
     word-spacing: 0.3rem; }
   .deal-deets_time {
     color: #7a7a7a;
-    word-spacing: 0.3rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: -0.56rem;
+    word-spacing: 0.2rem;
     border-radius: 1rem;
     font-size: 1.8rem; }
   .deal-deets_user {
@@ -1085,7 +1082,11 @@ figure {
     border-radius: 1rem;
     font-size: 1.8rem; }
   .deal-deets_paragraph {
-    padding: 0.5rem 2.5rem 1rem 1rem; }
+    padding: 0.5rem 4.5rem 0rem 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem; }
 
 .deal_area_box {
   background-color: white;
@@ -1431,7 +1432,7 @@ figure {
 
 .deal-ratings-dp {
   display: inline;
-  margin-left: 5rem;
+  margin-left: 2.2rem;
   font-size: 1.5rem; }
 
 .ratings-icon-dp {

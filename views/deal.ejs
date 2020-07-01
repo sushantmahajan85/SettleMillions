@@ -163,6 +163,10 @@
             </li>
           </div>
          
+          <div class="deal-deets_paragraph">
+            <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
+            <p class="para"><%= deal.biggerDis %></p>
+          </div>
           <div class="deal-deets_buttons">
             <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
             <% if (user) { %>
@@ -179,10 +183,7 @@
 
             <% } %>
             </div>
-          <div class="deal-deets_vt">
-            <p class="deal-deets_views"><%= deal.views %> k views</p>
-            <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
-          </div>
+          
           <div class="deal-deets_buttons">
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
             <% if (user) { %>
@@ -200,9 +201,9 @@
               <% } %>  
 
           </div>
-          <div class="deal-deets_paragraph">
-            <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3>
-            <p class="paragraph" style="margin-left: 0.5rem;"><%= deal.biggerDis %></p>
+          <div class="deal-deets_vt">
+            <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
+            <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
           </div>
         </div>
       </div>

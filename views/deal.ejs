@@ -165,26 +165,34 @@
          
           <div class="deal-deets_paragraph">
             <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
-            <p class="para"><%= deal.biggerDis %></p>
+            <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
           </div>
           <div class="deal-deets_buttons">
             <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
             <% if (user) { %>
-                <% if (like) { %>
+                <% if (like) { %> 
                 
                 <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
                 <% } else { %>
-                  <a href="" class="deal-deets_save" id="like_deal">Save for later</a>
+                  <a href="" class="deal-deets_save" id="like_deal">Add to Wishlist</a>
 
                 <% } %>
             <% }else{ %>
             
-              <a  href="#" class="deal-deets_save" id="like_deal_no">Save for later</a>
+              <a  href="#" class="deal-deets_save" id="like_deal_no">Add to wishlist</a>
 
             <% } %>
             </div>
+            <div class="deal-deets_vt">
+              <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
+              <span class="deal-deets_categ">Category: Mobiles</span>
+              <p class="deal-deets_time">Posted: <%= deal.mrp %> days ago</p>
+            </div>
           
-          <div class="deal-deets_buttons">
+          <div class="deal-deets_affiliate">
+            
+              <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c">
+       
             <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
             <% if (user) { %>
 
@@ -201,10 +209,7 @@
               <% } %>  
 
           </div>
-          <div class="deal-deets_vt">
-            <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
-            <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
-          </div>
+         
         </div>
       </div>
 
@@ -214,7 +219,7 @@
             <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
               class="user-nav__user-photo review-photo">
             </span>
-          <input type="textarea" placeholder="Add A Review" id="review_input" class="add-review-text-area">
+          <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
             <button id="review_post">Post a review</button>
           <% for( var review of deal.reviews ) { %>
           <div class="user-nav__user user-review">
@@ -475,6 +480,77 @@
         <% } %>
       
     </div>
+    <div class="footer">
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h2>About</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>About Us</li>
+                  </a>
+                  <a href="#">
+                      <li>Contact Us</li>
+                  </a>
+                  <a href="#">
+                      <li>Careers</li>
+                  </a>
+                  <a href="#">
+                      <li>Our Team</li>
+                  </a>
+
+              </ul>
+          </div>
+          <div class="footer-section social">
+              <h2>Social</h2>
+              <br>
+              <ul>
+                  <a href="https://twitter.com/">
+                      <li><i class="fab fa-twitter"></i>Twitter</li>
+                  </a>
+                  <a href="https://www.facebook.com/">
+                      <li><i class="fab fa-facebook-f"></i>Facebook</li>
+                  </a>
+                  <a href="https://twitter.com/">
+                      <li><i class="fab fa-instagram"></i>Instagram</li>
+                  </a>
+              </ul>
+          </div>
+          <div class="footer-section policy">
+              <h2>Policy</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>Terms and Conditions</li>
+                  </a>
+                  <a href="#">
+                      <li>Privacy Policy</li>
+                  </a>
+              </ul>
+          </div>
+          <div class="footer-section help">
+              <h2>Help</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>How to Post a Deal</li>
+                  </a>
+                  <a href="#">
+                      <li>FAQ</li>
+                  </a>
+                  <a href="#">
+                      <li>Report</li>
+                  </a>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <hr>
+          </hr>
+          &copy; 2020, Your Deal Inc.
+
+      </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="/js/likedDeal.js"></script>

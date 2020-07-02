@@ -24,7 +24,8 @@
 
   &_buttons {
     display: block;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: 1rem 5rem 1rem 1rem;
+    margin-right: 4rem;
   }
   &_name {
     // border-bottom: 1px solid grey;
@@ -107,11 +108,13 @@
   }
   &_subs {
     padding: 0.67rem 1.6rem;
-
+    border: 2px solid transparent;
+    font-weight: 500;
     border-radius: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: white;
-    background-color: red;
+    background-color: #ef233c;
+    text-transform: uppercase;
   }
   &_views {
     color: rgb(122, 122, 122);
@@ -126,30 +129,62 @@
   }
   &_time {
     color: rgb(122, 122, 122);
-
+    text-align: right;
     word-spacing: 0.2rem;
     // margin-right: 6rem;
     // margin-top: 0.7rem;
     border-radius: 1rem;
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    // margin-right: 8rem;
+    display: inline;
+    margin-left: 4.5rem;
+  }
+  &_categ {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    display: inline;
   }
   &_user {
-    font-weight: 600;
-    color: black;
+    font-weight: 700;
+    color: #15161d;
     // padding: 0.67rem 1.6rem;
-    margin-right: 6rem;
-    margin-top: 0.7rem;
-    margin-left: -0.56rem;
+    margin-right: 2rem;
+    // margin-top: 0.7rem;
+
     border-radius: 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   &_paragraph {
-    padding: 0.5rem 4.5rem 0rem 1rem;
+    padding: 0.5rem 4rem 0rem 0.5rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     color: #333;
     margin-bottom: 1rem;
   }
+  &_affiliate {
+    margin-right: 5.1rem;
+    // display: block;
+    padding: 2rem 0rem 2rem 1rem;
+    border: 1px solid #f2f3f4;
+
+    &_pic {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      // display: inline;
+    }
+  }
+  // &_affiliate::before{
+  //   content: url(/images/aff_pic.png);
+  //   width: 3rem;
+  //   height: 3rem;
+  // }
 }
 
 .deal_area_box {
@@ -196,8 +231,8 @@
 }
 
 .review-photo {
-  height: 7.5rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   margin-top: -1px;
   margin-right: 2rem;
 }
@@ -211,15 +246,14 @@
   border: none;
   border: 1px solid rgb(230, 230, 230);
   width: 65%;
-  height: 6rem;
-  margin-bottom: 5rem;
+  margin-bottom: -2rem;
   margin-right: 2rem;
   color: black;
   font-size: 2rem;
 }
 
-.review-section input::placeholder {
-  padding-left: 10px;
+.review-section textarea::placeholder {
+  font-family: Bitter;
 }
 
 #review_post {
@@ -251,6 +285,8 @@
 
 .rev {
   margin-top: 1rem;
+  line-height: 2.2rem;
+  font-size: 16px;
 }
 
 .reviews {
@@ -519,7 +555,8 @@
   float: right;
   background-color: white;
   padding-bottom: 5rem;
-  // 
+  margin-top: -107rem;
+  //
   margin-right: 2rem;
 }
 
@@ -620,3 +657,109 @@
     font-weight: 400;
   }
 }
+
+// .popup {
+//   //   background-color: rgba(0, 0, 0, 0.808);
+//   position: fixed;
+//   // height: 50rem;
+//   width: 65%;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 99999999999999999;
+//   border-radius: 10px;
+//   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
+//   // opacity: 0;
+//   // visibility: hidden;
+//   display: none;
+//   transition: all 0.3s;
+
+//   // &:target {
+//   //   opacity: 1;
+//   //   // animation: cssAnimation 5s forwards;
+//   //   visibility: visible;
+//   // }
+//   &_content {
+//     opacity: 1;
+//     background-color: white;
+//     overflow: hidden;
+//     // display: table;
+//     border-radius: inherit;
+//   }
+//   &_left {
+//     width: 33.33333333334%;
+//     vertical-align: top;
+//     display: table-cell;
+//     @include respond(tab-port) {
+//       width: 0%;
+//     }
+//   }
+//   &_right {
+//     width: 66.66666667;
+//     @include respond(tab-port) {
+//       width: 100%;
+//     }
+//     display: table-cell;
+//     // vertical-align: middle;
+//     padding: 2rem 3rem 0rem 3rem;
+//   }
+//   &_cross {
+//     cursor: pointer;
+//     &:link,
+//     &:visited {
+//       font-size: 4rem;
+//       text-decoration: none;
+//       color: black;
+//       font-weight: 800;
+//       position: absolute;
+//       top: 0.7rem;
+//       right: 5rem;
+//       @include respond(tab-port) {
+//         position: absolute;
+//         top: 1rem;
+//         right: 1rem;
+//       }
+//     }
+//   }
+//   &_img {
+//     background-position: center;
+//     background-size: 100% 100%;
+//     display: block;
+//     width: 100%;
+//     @include respond(tab-port) {
+//       display: none;
+//     }
+//   }
+//   &_paragraph {
+//     column-count: 2;
+
+//     font-size: 1.7rem;
+//     font-weight: 600;
+//     @include respond(tab-port) {
+//       column-count: unset;
+//       column-rule: unset;
+//       column-gap: unset;
+//       text-align: start;
+//     }
+
+//     column-rule: 0.5px solid darkgrey;
+//     column-gap: 4rem;
+//     hyphens: auto;
+//   }
+//   &_heading {
+//     @include respond(tab-port) {
+//       text-align: center;
+//     }
+//   }
+// }
+// @keyframes cssAnimation {
+//   0% {
+//     opacity: 1;
+//   }
+//   90% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }

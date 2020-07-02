@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,900");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Bitter");
 .alerts {
   position: fixed;
   top: 0;
@@ -579,7 +580,7 @@ body {
   background: #fff;
   /* color: #333; */
   /* background-image: url("../img/backg.jpg"); */
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Bitter, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-weight: 500;
   line-height: 1.9;
   /* color: #777777; */
@@ -993,7 +994,8 @@ figure {
   margin-top: 0.1rem; }
   .deal-deets_buttons {
     display: block;
-    padding: 1rem 5rem 1rem 5rem; }
+    padding: 1rem 5rem 1rem 1rem;
+    margin-right: 4rem; }
   .deal-deets_name {
     padding: 0rem 1rem 1rem 1rem;
     font-size: 2rem !important;
@@ -1056,10 +1058,13 @@ figure {
     padding: 1rem; }
   .deal-deets_subs {
     padding: 0.67rem 1.6rem;
+    border: 2px solid transparent;
+    font-weight: 500;
     border-radius: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: white;
-    background-color: red; }
+    background-color: #ef233c;
+    text-transform: uppercase; }
   .deal-deets_views {
     color: #7a7a7a;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -1070,23 +1075,41 @@ figure {
     word-spacing: 0.3rem; }
   .deal-deets_time {
     color: #7a7a7a;
+    text-align: right;
     word-spacing: 0.2rem;
     border-radius: 1rem;
-    font-size: 1.8rem; }
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    display: inline;
+    margin-left: 4.5rem; }
+  .deal-deets_categ {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    display: inline; }
   .deal-deets_user {
-    font-weight: 600;
-    color: black;
-    margin-right: 6rem;
-    margin-top: 0.7rem;
-    margin-left: -0.56rem;
+    font-weight: 700;
+    color: #15161d;
+    margin-right: 2rem;
     border-radius: 1rem;
-    font-size: 1.8rem; }
+    font-size: 2rem; }
   .deal-deets_paragraph {
-    padding: 0.5rem 4.5rem 0rem 1rem;
+    padding: 0.5rem 4rem 0rem 0.5rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     color: #333;
     margin-bottom: 1rem; }
+  .deal-deets_affiliate {
+    margin-right: 5.1rem;
+    padding: 2rem 0rem 2rem 1rem;
+    border: 1px solid #f2f3f4; }
+    .deal-deets_affiliate_pic {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0rem;
+      border-radius: 50%;
+      margin-bottom: 1rem; }
 
 .deal_area_box {
   background-color: white;
@@ -1124,8 +1147,8 @@ figure {
   width: 100%; }
 
 .review-photo {
-  height: 7.5rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   margin-top: -1px;
   margin-right: 2rem; }
 
@@ -1137,14 +1160,13 @@ figure {
   border: none;
   border: 1px solid #e6e6e6;
   width: 65%;
-  height: 6rem;
-  margin-bottom: 5rem;
+  margin-bottom: -2rem;
   margin-right: 2rem;
   color: black;
   font-size: 2rem; }
 
-.review-section input::placeholder {
-  padding-left: 10px; }
+.review-section textarea::placeholder {
+  font-family: Bitter; }
 
 #review_post {
   background-color: #ef233c;
@@ -1171,7 +1193,9 @@ figure {
   width: 100%; }
 
 .rev {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  line-height: 2.2rem;
+  font-size: 16px; }
 
 .reviews {
   display: flex;
@@ -1386,6 +1410,7 @@ figure {
   float: right;
   background-color: white;
   padding-bottom: 5rem;
+  margin-top: -107rem;
   margin-right: 2rem; }
 
 .side_deals {
@@ -2251,7 +2276,6 @@ body {
     opacity: 1;
     background-color: white;
     overflow: hidden;
-    display: table;
     border-radius: inherit; }
   .popup_left {
     width: 33.33333333334%;

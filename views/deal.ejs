@@ -219,7 +219,7 @@
             <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
               class="user-nav__user-photo review-photo">
             </span>
-          <input type="textarea" placeholder="Add A Review" id="review_input" class="add-review-text-area">
+          <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
             <button id="review_post">Post a review</button>
           <% for( var review of deal.reviews ) { %>
           <div class="user-nav__user user-review">

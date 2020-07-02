@@ -1103,7 +1103,7 @@ figure {
   .deal-deets_affiliate {
     margin-right: 5.1rem;
     padding: 2rem 0rem 2rem 1rem;
-    border: 1px solid #F2F3F4; }
+    border: 1px solid #f2f3f4; }
     .deal-deets_affiliate_pic {
       width: 3.5rem;
       height: 3.5rem;
@@ -1160,14 +1160,13 @@ figure {
   border: none;
   border: 1px solid #e6e6e6;
   width: 65%;
-  height: 6rem;
-  margin-bottom: 2rem;
+  margin-bottom: -2rem;
   margin-right: 2rem;
   color: black;
   font-size: 2rem; }
 
-.review-section input::placeholder {
-  padding-left: 10px; }
+.review-section textarea::placeholder {
+  font-family: Bitter; }
 
 #review_post {
   background-color: #ef233c;

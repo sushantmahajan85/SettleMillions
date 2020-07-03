@@ -13,7 +13,7 @@ const dealSchema = new mongoose.Schema(
 
     affiliateLink: {
       type: String,
-      required: true,
+      //required: true,
       //unique: true
     },
     views: {

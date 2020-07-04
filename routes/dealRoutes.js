@@ -21,7 +21,7 @@ router
     // dealController.setDealUserIds,
     dealController.createDeal
   );
-
+//
 router
   .route("/:id")
   .get(dealController.getDeal)

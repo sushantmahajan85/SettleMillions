@@ -18,7 +18,7 @@ router
     // authController.protect,
     // dealController.uploadDealImages,
     // dealController.resizeDealImages,
-    dealController.setDealUserIds,
+    // dealController.setDealUserIds,
     dealController.createDeal
   );
 

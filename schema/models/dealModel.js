@@ -4,7 +4,7 @@ const dealSchema = new mongoose.Schema(
   {
     category: {
       type: String,
-      //required: true,
+      required: true,
     },
     titleImg: {
       type: String,
@@ -46,11 +46,11 @@ const dealSchema = new mongoose.Schema(
     },
     dealPrice: {
       type: Number,
-      //required: true,
+      required: true,
     },
     dealName: {
       type: String,
-      //required: true,
+      required: true,
     },
     company: {
       type: String,

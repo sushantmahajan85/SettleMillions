@@ -16,8 +16,8 @@ router
   .get(dealController.getAllDeals)
   .post(
     // authController.protect,
-    dealController.uploadDealImages,
-    dealController.resizeDealImages,
+    // dealController.uploadDealImages,
+    // dealController.resizeDealImages,
     dealController.setDealUserIds,
     dealController.createDeal
   );

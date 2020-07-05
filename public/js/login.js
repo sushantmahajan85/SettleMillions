@@ -38,7 +38,7 @@ const passvalue = async (email, password) => {
   }
 };
 
-document.getElementById("login100-form").addEventListener("submit", (e) => {
+document.getElementById("signin_form").addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;

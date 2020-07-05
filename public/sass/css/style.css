@@ -2767,6 +2767,17 @@ input[type="password"] {
   text-decoration: none;
   color: #3e7ca9; }
 
+.wrap_signup {
+  text-align: center;
+  margin: 3rem;
+  margin-bottom: 0rem;
+  font-size: 1.4rem;
+  font-weight: 450; }
+
+.wrap_signup a {
+  text-decoration: none;
+  color: #3e7ca9; }
+
 .hr-text {
   line-height: 1em;
   position: relative;

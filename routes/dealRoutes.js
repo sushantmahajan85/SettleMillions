@@ -15,7 +15,7 @@ router
   .route("/")
   .get(dealController.getAllDeals)
   .post(
-    // authController.protect,
+    authController.protect,
     dealController.uploadDealImages,
     dealController.resizeDealImages,
     // dealController.setDealUserIds,

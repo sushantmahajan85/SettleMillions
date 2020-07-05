@@ -68,8 +68,8 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
   //   const ext = req.file.mimetype.split("/")[1];
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////
-  // req.body.titleImg = `deal-${req.user.id}-${Date.now()}-title.jpeg`;
-  req.body.titleImg = `deal-${Date.now()}-title.jpeg`;
+  req.body.titleImg = `deal-${req.user.id}-${Date.now()}-title.jpeg`;
+  // req.body.titleImg = `deal-${Date.now()}-title.jpeg`;
 
   await sharp(req.files.titleImg[0].buffer)
     .toFormat("jpeg")

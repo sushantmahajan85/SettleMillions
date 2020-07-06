@@ -34,7 +34,7 @@ exports.getTrending = catchAsync(async (req, res) => {
 
 exports.getDeal = catchAsync(async (req, res) => {
   const deals = await Deal.findOneAndUpdate(
-    { _id: req.params.dealId },
+    { _id: req.params.id },
     { $inc: { views: 1 } }
   ).populate({path: "reviews"});
   res.status(200).json({

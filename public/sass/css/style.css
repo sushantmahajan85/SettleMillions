@@ -2528,7 +2528,8 @@ body {
   font-family: Raleway;
   padding: 40px;
   width: 70%;
-  min-width: 300px; }
+  min-width: 300px;
+  height: 100%; }
 
 .form_container h1 {
   text-align: center; }

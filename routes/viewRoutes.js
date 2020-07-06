@@ -1,5 +1,6 @@
 const express = require("express");
 const viewController = require("../controllers/viewController");
+const dealController = require("../controllers/dealController");
 const authController = require("../controllers/authController");
 const router = express.Router();
 
@@ -17,7 +18,7 @@ router.get(
 );
 router.get("/", viewController.mainPage);
 router.get("/member/:id", viewController.getMemberData);
-router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
+router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage, dealController.getDeal);
 router.get("/forgotPassword", viewController.forgot);
 router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);

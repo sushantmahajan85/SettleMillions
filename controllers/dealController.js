@@ -33,10 +33,11 @@ exports.getTrending = catchAsync(async (req, res) => {
 });
 
 exports.getDeal = catchAsync(async (req, res) => {
-  const deals = await Deal.findOneAndUpdate(
-    { _id: req.params.id },
+  const deal = await Deal.findOneAndUpdate(
+    { _id: req.params.dealId },
     { $inc: { views: 1 } }
   ).populate({path: "reviews"});
+  console.log(deal);
   res.status(200).json({
     status: "success",
     length: deals.length,

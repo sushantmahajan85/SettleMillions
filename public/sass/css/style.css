@@ -2482,6 +2482,120 @@ body {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+.tag-container {
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 6px;
+  overflow-x: scroll; }
+
+.deleteTag {
+  margin-left: 1rem; }
+
+.tag-container .tag {
+  height: 30px;
+  margin: 5px;
+  padding: 5px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  color: #333;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+  cursor: default; }
+
+.tag i {
+  font-size: 16px;
+  color: #666;
+  margin-left: 0.8rem; }
+
+.tag-container input {
+  padding: 5px;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  font-family: "Rubik";
+  color: #333;
+  flex: 1; }
+
+.form_container {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px; }
+
+.form_container h1 {
+  text-align: center; }
+
+.form_container textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa; }
+
+.form_container select {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa; }
+
+.form_container input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa; }
+
+.tab_headings {
+  font-size: 15px; }
+
+.tab {
+  display: none;
+  margin-bottom: 2rem; }
+
+#prevBtnNewDeal {
+  background-color: #bbbbbb; }
+
+.new_deal_button {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer; }
+
+.new_deal_button:hover {
+  opacity: 0.8; }
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5; }
+
+.step.active {
+  opacity: 1; }
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50; }
+
+.form_box {
+  background-color: #f1f1f1; }
+
 .heading-main {
   font-weight: 400;
   font-size: 5rem;

@@ -450,10 +450,10 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
 
-  await Deal.findOneAndUpdate(
-    { _id: req.params.dealId },
-    { $inc: { views: 1 } }
-  );
+  // await Deal.findOneAndUpdate(
+  //   { _id: req.params.dealId },
+  //   { $inc: { views: 1 } }
+  // );
 
   // var full_url = req.url;
   // // var full_url = document.URL; // Get current url

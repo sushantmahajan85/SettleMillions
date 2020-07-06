@@ -15,7 +15,7 @@ exports.setDealUserIds = async (req, res, next) => {
 };
 
 exports.getAllDeals = factory.getAll(Deal);
-exports.getDeal = factory.getOne(Deal, { path: "reviews" });
+// exports.getDeal = factory.getOne(Deal, { path: "reviews" });
 exports.createDeal = factory.createOne(Deal);
 exports.updateDeal = factory.updateOne(Deal);
 exports.deleteDeal = factory.deleteOne(Deal);
@@ -28,6 +28,20 @@ exports.getTrending = catchAsync(async (req, res) => {
     length: trending.length,
     data: {
       trending,
+    },
+  });
+});
+
+exports.getDeal = catchAsync(async (req, res) => {
+  const deals = await Deal.findOneAndUpdate(
+    { _id: req.params.dealId },
+    { $inc: { views: 1 } }
+  ).populate({path: "reviews"});
+  res.status(200).json({
+    status: "success",
+    length: deals.length,
+    data: {
+      deals,
     },
   });
 });

@@ -2,6 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
@@ -13,7 +14,7 @@
     <title>Document</title>
 
     <style>
-      .tag-container {
+      /* .tag-container {
         border: 2px solid #ccc;
         border-radius: 3px;
         background: #fff;
@@ -54,19 +55,19 @@
         font-family: "Rubik";
         color: #333;
         flex: 1;
-      }
+      } */
 
       /* /////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-      * {
+      /* * {
         box-sizing: border-box;
-      }
+      } */
 
-      body {
+      /* body {
         background-color: #f1f1f1;
-      }
+      } */
 
-      #regForm {
+      /* .form_container {
         background-color: #ffffff;
         margin: 100px auto;
         font-family: Raleway;
@@ -74,31 +75,30 @@
         width: 70%;
         min-width: 300px;
       }
-
-      h1 {
+      .form_container h1 {
         text-align: center;
       }
-      textarea {
+      .form_container textarea {
         padding: 10px;
         width: 100%;
         font-size: 17px;
         font-family: Raleway;
         border: 1px solid #aaaaaa;
       }
-      select {
+      .form_container select {
         padding: 10px;
         width: 100%;
         font-size: 17px;
         font-family: Raleway;
         border: 1px solid #aaaaaa;
       }
-      input {
+      .form_container input {
         padding: 10px;
         width: 100%;
         font-size: 17px;
         font-family: Raleway;
         border: 1px solid #aaaaaa;
-      }
+      } */
 
       /* Mark input boxes that gets an error on validation: */
       input.invalid {
@@ -106,11 +106,11 @@
       }
 
       /* Hide all steps by default: */
-      .tab {
+      /* .tab {
         display: none;
-      }
+      } */
 
-      button {
+      /* .new_deal_button {
         background-color: #4caf50;
         color: #ffffff;
         border: none;
@@ -120,16 +120,16 @@
         cursor: pointer;
       }
 
-      button:hover {
+      .new_deal_button:hover {
         opacity: 0.8;
-      }
+      } */
 
-      #prevBtn {
+      /* #prevBtnNewDeal {
         background-color: #bbbbbb;
-      }
+      } */
 
       /* Make circles that indicate the steps of the form: */
-      .step {
+      /* .step {
         height: 15px;
         width: 15px;
         margin: 0 2px;
@@ -138,187 +138,280 @@
         border-radius: 50%;
         display: inline-block;
         opacity: 0.5;
-      }
+      } */
 
-      .step.active {
+      /* .step.active {
         opacity: 1;
-      }
+      } */
 
       /* Mark the steps that are finished and valid: */
-      .step.finish {
+      /* .step.finish {
         background-color: #4caf50;
-      }
+      } */
     </style>
   </head>
   <body>
-    <form id="regForm">
-      <h1>Post a Deal:</h1>
+    <%- include('partials/navbar.ejs') %>
 
-      <div class="tab">
-        Essentials:
-        <p>
-          <input
-            placeholder="Deal Name...(Required)"
-            oninput="this.className = ''"
-            id="dealName"
-            name="dealName"
-            class="needed"
-          />
-        </p>
-        <p>
-          <input
-            placeholder="Link...(Required)"
-            oninput="this.className = ''"
-            id="link"
-            name="link"
-            class="needed"
-          />
-        </p>
-        <p>
-          <input
-            placeholder="Final Price...(Required)"
-            oninput="this.className = ''"
-            id="fprice"
-            name="finalPrice"
-            class="needed"
-          />
-        </p>
-        <p>
-          <input
-            placeholder="Discount in percentage...(Required)"
-            oninput="this.className = ''"
-            id="percent"
-            name="discount"
-            class="needed"
-          />
-        </p>
-        <p>
-          <select name="hhhh" id="company" oninput="this.className = ''">
-            <option value="">Amazon</option>
-          </select>
-        </p>
+    <div class="form_box">
+      <div class="form_container">
+        <form id="regForm">
+          <h1>Post a Deal:</h1>
+
+          <div class="tab">
+            <p class="tab_headings">Essentials:</p>
+            <p>
+              <input
+                placeholder="Deal Name...(Required)"
+                oninput="this.className = ''"
+                id="dealName"
+                name="dealName"
+                class="needed"
+              />
+            </p>
+            <p>
+              <input
+                placeholder="Link...(Required)"
+                oninput="this.className = ''"
+                id="link"
+                name="link"
+                class="needed"
+              />
+            </p>
+            <p>
+              <input
+                placeholder="Final Price...(Required)"
+                oninput="this.className = ''"
+                id="fprice"
+                name="finalPrice"
+                class="needed"
+              />
+            </p>
+            <p>
+              <input
+                placeholder="Discount in percentage...(Required)"
+                oninput="this.className = ''"
+                id="percent"
+                name="discount"
+                class="needed"
+              />
+            </p>
+            <p>
+              <select name="hhhh" id="company" oninput="this.className = ''">
+                <option value="">Amazon</option>
+              </select>
+            </p>
+          </div>
+          <div class="tab">
+            <p class="tab_headings">Category:</p>
+            <p>
+              <select
+                id="category"
+                size="1"
+                oninput="this.className = ''"
+                class="needed"
+                onchange="makeSubmenu(this.value)"
+              >
+                <option value="" disabled selected
+                  >Choose Category (Required)</option
+                >
+                <option>Mobile</option>
+                <option>Clothes</option>
+              </select>
+            </p>
+            <p>
+              <select
+                id="categorySelect"
+                size="1"
+                oninput="this.className = ''"
+              >
+                <option value="" disabled selected>Choose Subcategory</option>
+                <option></option>
+              </select>
+            </p>
+            <p>
+              <label for="photos">
+                <p class="tab_headings">Choose new photo</p>
+              </label>
+              <input
+                type="file"
+                accept="image/*"
+                class="title_img"
+                id="photos"
+                name="titleImg"
+              />
+            </p>
+            <p id="caru">
+              <label for="corousel">
+                <p class="tab_headings">new photo</p>
+              </label>
+              <input
+                type="file"
+                accept="image/*"
+                id="corousel1"
+                name="corouselImgs"
+              />
+              <input
+                type="file"
+                accept="image/*"
+                id="corousel2"
+                name="corouselImgs"
+              />
+              <input
+                type="file"
+                accept="image/*"
+                id="corousel3"
+                name="corouselImgs"
+              />
+              <input
+                type="file"
+                accept="image/*"
+                id="corousel4"
+                name="corouselImgs"
+              />
+            </p>
+          </div>
+          <div class="tab">
+            Description:
+            <p>
+              <input
+                placeholder="Title Description..."
+                oninput="this.className = ''"
+                id="titleDis"
+                name="uname"
+              />
+            </p>
+            <p>
+              <textarea
+                cols="30"
+                rows="10"
+                id="biggerDis"
+                placeholder="Product Details..."
+                oninput="this.className = ''"
+                name="pword"
+              ></textarea>
+            </p>
+            <p>
+              <input
+                placeholder="Tags..."
+                type="text"
+                class="tagi"
+                oninput="this.className = ''"
+                name="tagtagtag"
+                id="tags"
+              />
+            </p>
+          </div>
+          <div style="overflow: auto;">
+            <div style="float: right;">
+              <button
+                type="button"
+                id="prevBtnNewDeal"
+                class="new_deal_button"
+                onclick="nextPrev(-1)"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                id="nextBtnNewDeal"
+                class="new_deal_button"
+                onclick="nextPrev(1)"
+              >
+                Next
+              </button>
+              <button
+                type="submit"
+                style="display: none;"
+                id="submitBtn"
+                class="new_deal_button"
+                onclick="nextPrev(1)"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align: center; margin-top: 40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
       </div>
-      <div class="tab">
-        Category:
-        <p>
-          <select
-            id="category"
-            size="1"
-            oninput="this.className = ''"
-            class="needed"
-            onchange="makeSubmenu(this.value)"
-          >
-            <option value="" disabled selected
-              >Choose Category (Required)</option
-            >
-            <option>Mobile</option>
-            <option>Clothes</option>
-          </select>
-        </p>
-        <p>
-          <select id="categorySelect" size="1" oninput="this.className = ''">
-            <option value="" disabled selected>Choose Subcategory</option>
-            <option></option>
-          </select>
-        </p>
-        <p>
-          <label for="photos">Choose new photo</label>
-          <input
-            type="file"
-            accept="image/*"
-            class="title_img"
-            id="photos"
-            name="titleImg"
-          />
-        </p>
-        <p id="caru">
-          <label for="corousel">new photo</label>
-          <input
-            type="file"
-            accept="image/*"
-            class="form__upload"
-            id="corousel1"
-            name="corouselImgs"
-          />
-          <input
-            type="file"
-            accept="image/*"
-            class="form__upload"
-            id="corousel2"
-            name="corouselImgs"
-          />
-          <input
-            type="file"
-            accept="image/*"
-            class="form__upload"
-            id="corousel3"
-            name="corouselImgs"
-          />
-          <input
-            type="file"
-            accept="image/*"
-            class="form__upload"
-            id="corousel4"
-            name="corouselImgs"
-          />
-        </p>
+    </div>
+
+    <div class="footer">
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h2>About</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>About Us</li>
+                  </a>
+                  <a href="#">
+                      <li>Contact Us</li>
+                  </a>
+                  <a href="#">
+                      <li>Careers</li>
+                  </a>
+                  <a href="#">
+                      <li>Our Team</li>
+                  </a>
+
+              </ul>
+          </div>
+          <div class="footer-section social">
+              <h2>Social</h2>
+              <br>
+              <ul>
+                  <a href="https://twitter.com/">
+                      <li><i class="fab fa-twitter"></i>Twitter</li>
+                  </a>
+                  <a href="https://www.facebook.com/">
+                      <li><i class="fab fa-facebook-f"></i>Facebook</li>
+                  </a>
+                  <a href="https://twitter.com/">
+                      <li><i class="fab fa-instagram"></i>Instagram</li>
+                  </a>
+              </ul>
+          </div>
+          <div class="footer-section policy">
+              <h2>Policy</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>Terms and Conditions</li>
+                  </a>
+                  <a href="#">
+                      <li>Privacy Policy</li>
+                  </a>
+              </ul>
+          </div>
+          <div class="footer-section help">
+              <h2>Help</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>How to Post a Deal</li>
+                  </a>
+                  <a href="#">
+                      <li>FAQ</li>
+                  </a>
+                  <a href="#">
+                      <li>Report</li>
+                  </a>
+              </ul>
+          </div>
       </div>
-      <div class="tab">
-        Description:
-        <p>
-          <input
-            placeholder="Title Description..."
-            oninput="this.className = ''"
-            id="titleDis"
-            name="uname"
-          />
-        </p>
-        <p>
-          <textarea
-            cols="30"
-            rows="10"
-            id="biggerDis"
-            placeholder="Product Details..."
-            oninput="this.className = ''"
-            name="pword"
-          ></textarea>
-        </p>
-        <p>
-          <input
-            placeholder="Tags..."
-            type="text"
-            class="tagi"
-            oninput="this.className = ''"
-            name="tagtagtag"
-            id="tags"
-          />
-        </p>
+      <div class="footer-bottom">
+          <hr>
+          </hr>
+          &copy; 2020, Your Deal Inc.
+
       </div>
-      <div style="overflow:auto;">
-        <div style="float:right;">
-          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
-            Previous
-          </button>
-          <button type="button" id="nextBtn" onclick="nextPrev(1)">
-            Next
-          </button>
-          <button
-            type="submit"
-            style="display: none;"
-            id="submitBtn"
-            onclick="nextPrev(1)"
-          >
-            Submit
-          </button>
-        </div>
-      </div>
-      <!-- Circles which indicates the steps of the form: -->
-      <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-      </div>
-    </form>
+  </div>
 
     <script src="/vendor/tagify-master/dist/tagify.min.js"></script>
     <script>
@@ -370,16 +463,16 @@
         x[n].style.display = "block";
         //... and fix the Previous/Next buttons:
         if (n == 0) {
-          document.getElementById("prevBtn").style.display = "none";
+          document.getElementById("prevBtnNewDeal").style.display = "none";
         } else {
-          document.getElementById("prevBtn").style.display = "inline";
+          document.getElementById("prevBtnNewDeal").style.display = "inline";
         }
         if (n == x.length - 1) {
           document.getElementById("submitBtn").style.display = "inline";
-          document.getElementById("nextBtn").style.display = "none";
+          document.getElementById("nextBtnNewDeal").style.display = "none";
         } else {
           document.getElementById("submitBtn").style.display = "none";
-          document.getElementById("nextBtn").style.display = "inline";
+          document.getElementById("nextBtnNewDeal").style.display = "inline";
         }
         //... and run a function that will display the correct step indicator:
         fixStepIndicator(n);

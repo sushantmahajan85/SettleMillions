@@ -2669,6 +2669,9 @@ body {
   text-transform: uppercase;
   font-weight: 600; }
 
+.tab ::placeholder {
+  color: rgba(0, 0, 0, 0.9); }
+
 .heading-main {
   font-weight: 400;
   font-size: 5rem;

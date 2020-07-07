@@ -142,7 +142,7 @@
     display: inline;
     margin-left: 4.5rem;
   }
-  &_categ{
+  &_categ {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     color: #333;
@@ -165,13 +165,13 @@
     color: #333;
     margin-bottom: 1rem;
   }
-  &_affiliate{
+  &_affiliate {
     margin-right: 5.1rem;
     // display: block;
     padding: 2rem 0rem 2rem 1rem;
-    border:1px solid #F2F3F4;
+    border: 1px solid #f2f3f4;
 
-    &_pic{
+    &_pic {
       width: 3.5rem;
       height: 3.5rem;
       padding: 0rem;
@@ -220,7 +220,61 @@
 
 .review-section {
   padding: 2rem;
-  width: 100%;
+  width: 60%;
+}
+
+.review-rating {
+  padding: 2rem 5rem;
+}
+
+.rating-avg {
+  font-size: 24px;
+}
+
+.rating-stars {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.rating-stars > i.fa-star {
+  color: #ef233c;
+}
+
+.rating-stars > i.fa-star-o {
+  color: #d3d3d3;
+}
+
+.rating {
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-left: -1rem;
+}
+
+.rating li {
+  margin: -1.5rem 0rem;
+}
+
+.sum {
+  display: inline-block;
+}
+
+.rating-progress {
+  position: relative;
+  display: inline-block;
+  height: 9px;
+  background-color: rgb(224, 224, 224);
+  width: 120px;
+  margin: 0px 10px;
+  border-radius: 10px;
+}
+
+.rating-progress > div {
+  background-color: #ef233c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
 }
 
 .user-review {
@@ -231,8 +285,8 @@
 }
 
 .review-photo {
-  height: 7.5rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   margin-top: -1px;
   margin-right: 2rem;
 }
@@ -245,16 +299,15 @@
   background-color: transparent;
   border: none;
   border: 1px solid rgb(230, 230, 230);
-  width: 65%;
-  height: 6rem;
-  margin-bottom: 2rem;
+  width: 45%;
+  margin-bottom: -2rem;
   margin-right: 2rem;
   color: black;
   font-size: 2rem;
 }
 
-.review-section input::placeholder {
-  padding-left: 10px;
+.review-section textarea::placeholder {
+  font-family: Bitter;
 }
 
 #review_post {
@@ -265,7 +318,7 @@
   color: white;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 0.67rem 1rem;
   font-size: 1.6rem;
   cursor: pointer;
@@ -658,7 +711,6 @@
     font-weight: 400;
   }
 }
-
 
 // .popup {
 //   //   background-color: rgba(0, 0, 0, 0.808);

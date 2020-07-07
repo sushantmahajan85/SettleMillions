@@ -12,11 +12,11 @@
     <!--===============================================================================================-->
     <!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
     <!--===============================================================================================-->
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="vendor/bootstrap/css/bootstrap.min.css"
-    />
+    /> -->
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
@@ -24,28 +24,32 @@
       href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
     />
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" /> -->
     <!--===============================================================================================-->
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="vendor/css-hamburgers/hamburgers.min.css"
-    />
+    /> -->
     <!--===============================================================================================-->
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="vendor/select2/select2.min.css"
-    />
+    /> -->
     <!--===============================================================================================-->
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/style2.css" />
     <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
-    <link rel="stylesheet" type="text/css" href="sass/css/main.css" />
-    <link rel="stylesheet" href="/sass/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="sass/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/logo1.png" />
     <!--===============================================================================================-->
   </head>
 
   <body>
-    <div class="limiter">
+    <%- include('partials/navbar.ejs') %>
+
+    <!-- <div class="limiter">
       <div class="container-login100">
         <div class="wrap-login100">
           <div class="login100-pic js-tilt" data-tilt>
@@ -103,7 +107,7 @@
               </button>
             </div>
 
-            <!-- <div class="text-center p-t-12">
+                    <div class="text-center p-t-12">
                         <span class="txt1">
                             Forgot
                         </span>
@@ -115,11 +119,103 @@
                     <div class="text-center p-t-136">
                         <a class="txt2" href="#">
                             Create your Account
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i> -->
-            <!-- </a> -->
-            <!-- </div> -->
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                       </a>
+                    </div>
           </form>
         </div>
+      </div>
+    </div> -->
+
+    <section class="form_section">
+      <div class="wrap">
+        <h2 class="wrap_title">Your Deal</h2>
+        <h4 class="wrap_subtext">
+          Sign in to see the best deals from the best platforms.
+        </h4>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <fb:login-button
+          scope="public_profile,email"
+          onlogin="checkLoginState();"
+        >
+        </fb:login-button>
+
+        <div id="status"></div>
+        <!-- <button type="button" class="wrap_signup-via-google g-signin2" data-onsuccess="onSignIn">
+            Continue with Google 
+        </button> -->
+        <hr class="hr-text" data-content="OR" />
+        <form class="wrap_opt" id="signin_form">
+          <!-- <input type="text" placeholder="Username" id="username" required /> -->
+          <input type="text" placeholder="Email Address" id="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <!-- <input
+            type="password"
+            placeholder="Password Confirm"
+            id="cpassword"
+            required
+          /> -->
+          <input type="submit" value="Sign In" id="submit" />
+          <p class="wrap_signup">
+            Don't have an account? <span> <a href="#">Sign up</a></span>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>About</h2>
+          <br />
+          <ul>
+            <a href="#"><li>About Us</li></a>
+            <a href="#"><li>Contact Us</li></a>
+            <a href="#"><li>Careers</li></a>
+            <a href="#"><li>Our Team</li></a>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h2>Social</h2>
+          <br />
+          <ul>
+            <a href="https://twitter.com/"
+              ><li><i class="fab fa-twitter"></i>Twitter</li></a
+            >
+            <a href="https://www.facebook.com/"
+              ><li><i class="fab fa-facebook-f"></i>Facebook</li></a
+            >
+            <a href="https://twitter.com/"
+              ><li><i class="fab fa-instagram"></i>Instagram</li></a
+            >
+          </ul>
+        </div>
+        <div class="footer-section policy">
+          <h2>Policy</h2>
+          <br />
+          <ul>
+            <a href="#"><li>Terms and Conditions</li></a>
+            <a href="#"><li>Privacy Policy</li></a>
+          </ul>
+        </div>
+        <div class="footer-section help">
+          <h2>Help</h2>
+          <br />
+          <ul>
+            <a href="#"><li>How to Post a Deal</li></a>
+            <a href="#"><li>FAQ</li></a>
+            <a href="#"><li>Report</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <hr />
+        &copy; 2020, Your Deal Inc.
       </div>
     </div>
 

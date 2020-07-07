@@ -15,7 +15,7 @@ exports.setDealUserIds = async (req, res, next) => {
 };
 
 exports.getAllDeals = factory.getAll(Deal);
-exports.getDeal = factory.getOne(Deal, { path: "reviews" });
+// exports.getDeal = factory.getOne(Deal, { path: "reviews" });
 exports.createDeal = factory.createOne(Deal);
 exports.updateDeal = factory.updateOne(Deal);
 exports.deleteDeal = factory.deleteOne(Deal);
@@ -28,6 +28,21 @@ exports.getTrending = catchAsync(async (req, res) => {
     length: trending.length,
     data: {
       trending,
+    },
+  });
+});
+
+exports.getDeal = catchAsync(async (req, res) => {
+  const deal = await Deal.findOneAndUpdate(
+    { _id: req.params.id },
+    { $inc: { views: 1 } }
+  ).populate({path: "reviews"});
+  console.log(deal);
+  console.log(req.params.id);
+  res.status(200).json({
+    status: "success",
+    data: {
+      deal,
     },
   });
 });
@@ -69,6 +84,7 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////
   req.body.titleImg = `deal-${req.user.id}-${Date.now()}-title.jpeg`;
+  // req.body.titleImg = `deal-${Date.now()}-title.jpeg`;
 
   await sharp(req.files.titleImg[0].buffer)
     .toFormat("jpeg")

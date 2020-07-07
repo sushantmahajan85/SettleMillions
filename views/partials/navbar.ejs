@@ -131,22 +131,61 @@
 
       <% } %>
       <!-- D changes // -->
-      
-      <% if (user) { %> <% if (user.photo) { %>
-      <div class="user-nav__user">
-        <nav role="navigation">
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+<div class="user-nav__user">
+  <% if (user) { %> <% if (user.photo) { %>
+  <nav role="navigation">
+    <ul>
+      <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: unset;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
+            class="user-nav__user-photo" /></a>
+        <ul class="dropdown" style="background-color: black;">
+          <li><a href="#">Sub-1</a></li>
+          <li><a href="#">Sub-2</a></li>
+          <li><a href="#">Sub-3</a></li>
+        </ul>
+      </nav>
+         <% } else { %><nav role="navigation">
           <ul>
-            <li><a href=<%= `/member/${user.id}` %>><img src=<%=`/img/users/${user.photo}` %> alt="User photo"
+            <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: unset;"
+              data-name=<%=user.name %> data-color="#85e0ce" class="profile
+              user-nav__user-photo"/></a>
+              <ul class="dropdown" style="background-color: black;">
+                <li><a href="#">Sub-1</a></li>
+                <li><a href="#">Sub-2</a></li>
+                <li><a href="#">Sub-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav> <% } %> <% } else { %>
+    
+    <% } %>
+  </div>
+
+
+
+
+      <!-- <div class="user-nav__user">
+       
+      <% if (user) { %> <% if (user.photo) { %>
+    
+         <nav role="navigation">
+          <ul>
+            <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: unset;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
                   class="user-nav__user-photo" /></a>
               <ul class="dropdown" style="background-color: black;">
                 <li><a href="#">Sub-1</a></li>
                 <li><a href="#">Sub-2</a></li>
                 <li><a href="#">Sub-3</a></li>
               </ul>
+            </li>
+          </ul>
             </nav>
-               <% } else { %><nav role="navigation">
-                <ul>
-                  <li><a href=<%= `/member/${user.id}` %> ><img
+        </div>
+               <% } else { %>
+                <div class="user-nav__user">
+                <nav role="navigation">
+                <ul style="list-style: none !important;">
+                  <li style="list-style: none !important;"><a href=<%= `/member/${user.id}` %> ><img style="margin-top: unset;"
                     data-name=<%=user.name %> data-color="#85e0ce" class="profile
                     user-nav__user-photo"/></a>
                     <ul class="dropdown" style="background-color: black;">
@@ -156,8 +195,10 @@
                     </ul>
                   </li>
                 </ul>
-              </nav> <% } %> <% } %> 
-        </div>
+              </nav> 
+            </div>
+              <% } %> <% } %> 
+         -->
 
       <!-- <div style="margin: 5px;">SIGNUP</div>
         <div style="margin: 5px;">LOGIN</div> -->
@@ -276,7 +317,7 @@
       <div class="popup_right">
         <div class="popup_cross" id="popup_crosslike">&times;</div>
         <h1 class="heading-secondary popup_heading center">about us</h1>
-        <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity
+        <p class="paragraph popup_paragraph">Thapar Fd Festival is the most magnificent and awe-inspiring festivity
           ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing
           foodie in you. TFF is not just a festival, but also a mission to let food break barriers and make everyone
           happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience

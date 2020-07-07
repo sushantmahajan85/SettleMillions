@@ -1138,7 +1138,51 @@ figure {
 
 .review-section {
   padding: 2rem;
-  width: 100%; }
+  width: 60%; }
+
+.review-rating {
+  padding: 2rem 5rem; }
+
+.rating-avg {
+  font-size: 24px; }
+
+.rating-stars {
+  display: inline-block;
+  margin: 1rem; }
+
+.rating-stars > i.fa-star {
+  color: #ef233c; }
+
+.rating-stars > i.fa-star-o {
+  color: #d3d3d3; }
+
+.rating {
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-left: -1rem; }
+
+.rating li {
+  margin: -1.5rem 0rem; }
+
+.sum {
+  display: inline-block; }
+
+.rating-progress {
+  position: relative;
+  display: inline-block;
+  height: 9px;
+  background-color: #e0e0e0;
+  width: 120px;
+  margin: 0px 10px;
+  border-radius: 10px; }
+
+.rating-progress > div {
+  background-color: #ef233c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px; }
 
 .user-review {
   display: flex;
@@ -1159,7 +1203,7 @@ figure {
   background-color: transparent;
   border: none;
   border: 1px solid #e6e6e6;
-  width: 65%;
+  width: 45%;
   margin-bottom: -2rem;
   margin-right: 2rem;
   color: black;
@@ -2522,60 +2566,36 @@ body {
   color: #333;
   flex: 1; }
 
-.form_container {
-  background-color: #ffffff;
-  margin: 0px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
-  height: 100%; }
-
-.form_container h1 {
-  text-align: center; }
-
-.form_container textarea {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa; }
-
-.form_container select {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa; }
-
-.form_container input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa; }
-
-.tab_headings {
-  font-size: 15px; }
-
 .tab {
   display: none;
   margin-bottom: 2rem; }
 
 #prevBtnNewDeal {
-  background-color: #bbbbbb; }
+  background-color: #1b2631;
+  margin-right: 0.5rem; }
+
+#prevBtnNewDeal:hover {
+  border: 2px solid #1b2631;
+  background-color: white;
+  color: #1b2631;
+  padding: 8px 18px; }
+
+#nextBtnNewDeal:hover {
+  border: 2px solid #d10024;
+  background-color: white;
+  color: #d10024;
+  padding: 8px 18px; }
 
 .new_deal_button {
-  background-color: #4caf50;
+  background-color: #d10024;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer; }
-
-.new_deal_button:hover {
-  opacity: 0.8; }
+  font-family: Bitter;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 550; }
 
 .step {
   height: 15px;
@@ -2595,7 +2615,79 @@ body {
   background-color: #4caf50; }
 
 .form_box {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.3), rgba(238, 247, 255, 0.3)), url("/images/post_page5.jpg");
+  background-size: cover;
+  background-size: cover;
+  padding: 6rem 0; }
+
+.form_container {
+  background-color: #F2F3F4;
+  box-shadow: 10px 10px 7px 8px #444040;
+  margin: 0px auto;
+  font-family: Bitter;
+  padding: 40px;
+  width: 35%;
+  min-width: 300px;
+  height: 80%;
+  opacity: 0.8; }
+  .form_container select {
+    padding: 9px;
+    width: 100%;
+    font-size: 15px;
+    font-family: Bitter;
+    border: 1px solid #BDC3C7;
+    margin-bottom: 0.8rem;
+    border-radius: 0.6rem;
+    background-color: #F8F9F9; }
+  .form_container input {
+    padding: 9px;
+    width: 100%;
+    font-size: 15px;
+    font-family: Bitter;
+    border: 1px solid #BDC3C7;
+    margin-bottom: 0.8rem;
+    border-radius: 0.6rem;
+    background-color: #F8F9F9; }
+  .form_container textarea {
+    padding: 9px;
+    width: 100%;
+    font-size: 15px;
+    font-family: Bitter;
+    border: 1px solid #BDC3C7;
+    border-radius: 0.6rem;
+    background-color: #F8F9F9; }
+
+.form_container h1 {
+  text-align: center; }
+
+.Post-box-title {
+  text-transform: uppercase;
+  font-size: 2.5rem; }
+
+.tab_headings {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.tab ::placeholder {
+  color: rgba(0, 0, 0, 0.9); }
+
+.post-page3-element1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.tagify {
+  height: 4rem;
+  margin-top: 1rem;
+  padding: 9px 7px 7px 0px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: Bitter;
+  border: 1px solid #BDC3C7;
+  border-radius: 0.6rem;
+  background-color: #F8F9F9; }
 
 .heading-main {
   font-weight: 400;

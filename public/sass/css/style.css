@@ -2525,7 +2525,7 @@ body {
 .form_container {
   background-color: #ffffff;
   margin: 0px auto;
-  font-family: Raleway;
+  font-family: Bitter;
   padding: 40px;
   width: 70%;
   min-width: 300px;
@@ -2538,21 +2538,21 @@ body {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   border: 1px solid #aaaaaa; }
 
 .form_container select {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   border: 1px solid #aaaaaa; }
 
 .form_container input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   border: 1px solid #aaaaaa; }
 
 .tab_headings {
@@ -2563,19 +2563,31 @@ body {
   margin-bottom: 2rem; }
 
 #prevBtnNewDeal {
-  background-color: #bbbbbb; }
+  background-color: #949393;
+  margin-right: 0.5rem; }
+
+#prevBtnNewDeal:hover {
+  border: 2px solid #949393;
+  background-color: white;
+  color: #949393;
+  padding: 8px 18px; }
+
+#nextBtnNewDeal:hover {
+  border: 2px solid #df4444;
+  background-color: white;
+  color: #df4444;
+  padding: 8px 18px; }
 
 .new_deal_button {
-  background-color: #4caf50;
+  background-color: #df4444;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer; }
-
-.new_deal_button:hover {
-  opacity: 0.8; }
+  font-family: Bitter;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 550; }
 
 .step {
   height: 15px;

@@ -44,7 +44,7 @@
 .form_container {
   background-color: #ffffff;
   margin: 0px auto;
-  font-family: Raleway;
+  font-family: Bitter;
   padding: 40px;
   width: 70%;
   min-width: 300px;
@@ -59,7 +59,7 @@
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   border: 1px solid #aaaaaa;
 }
 
@@ -67,7 +67,7 @@
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   border: 1px solid #aaaaaa;
 }
 
@@ -75,7 +75,7 @@
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   border: 1px solid #aaaaaa;
 }
 
@@ -89,22 +89,39 @@
 }
 
 #prevBtnNewDeal {
-  background-color: #bbbbbb;
+  background-color: #949393;
+  margin-right: 0.5rem;
+}
+
+#prevBtnNewDeal:hover {
+  border: 2px solid #949393;
+  background-color: white;
+  color: #949393;
+  padding: 8px 18px;
+}
+
+#nextBtnNewDeal:hover {
+  border: 2px solid #df4444;
+  background-color: white;
+  color: #df4444;
+  padding: 8px 18px;
 }
 
 .new_deal_button {
-  background-color: #4caf50;
+  background-color: #df4444;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Bitter;
   cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 550;
 }
 
-.new_deal_button:hover {
-  opacity: 0.8;
-}
+// .new_deal_button:hover {
+//   opacity: 0.8;
+// }
 
 .step {
   height: 15px;

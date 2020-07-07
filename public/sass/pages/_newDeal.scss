@@ -41,23 +41,6 @@
   flex: 1;
 }
 
-
-
-
-
-.form_container textarea {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Bitter;
-  border: 1px solid #aaaaaa;
-}
-
-
-
-
-
-
 .tab {
   display: none;
   margin-bottom: 2rem;
@@ -142,7 +125,7 @@
   & select {
     padding: 9px;
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-family: Bitter;
     border: 1px solid #BDC3C7;
     margin-bottom: 0.8rem;
@@ -153,13 +136,25 @@
   & input {
     padding: 9px;
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-family: Bitter;
     border: 1px solid #BDC3C7;
     margin-bottom: 0.8rem;
     border-radius: 0.6rem;
     background-color: #F8F9F9;
   }
+
+  & textarea {
+    padding: 9px;
+    width: 100%;
+    font-size: 15px;
+    font-family: Bitter;
+    border: 1px solid #BDC3C7;
+    border-radius: 0.6rem;
+    background-color: #F8F9F9;
+  }
+  
+  
 
 }
 
@@ -181,3 +176,23 @@
 color:rgba(0, 0, 0, 0.9);
 
 }
+
+.post-page3-element1{
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tagify{
+  height: 4rem;
+  margin-top: 1rem;
+  padding: 9px 7px 7px 0px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: Bitter;
+  border: 1px solid #BDC3C7;
+  border-radius: 0.6rem;
+  background-color: #F8F9F9;
+
+}
+

@@ -1168,11 +1168,20 @@ figure {
   display: inline-block; }
 
 .rating-progress {
+  position: relative;
   display: inline-block;
   height: 9px;
-  background-color: #bbbbbb;
+  background-color: #e0e0e0;
   width: 120px;
   margin: 0px 10px;
+  border-radius: 10px; }
+
+.rating-progress > div {
+  background-color: #ef233c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
   border-radius: 10px; }
 
 .user-review {

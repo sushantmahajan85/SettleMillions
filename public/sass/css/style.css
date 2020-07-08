@@ -1753,12 +1753,6 @@ figure {
   outline: 3px solid #55c57a;
   outline-offset: 3px; }
 
-.containerSettings {
-  background: #ffffff;
-  height: 120rem;
-  position: relative;
-  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5); }
-
 .CTA {
   width: 80px;
   height: 40px;
@@ -1780,19 +1774,36 @@ figure {
     background: #3fb6a8;
     transform: scale(1.1); }
 
+.containerSettings {
+  background-color: #ECF0F1;
+  height: 120rem;
+  position: relative;
+  margin: 0 auto;
+  max-width: 136.5rem;
+  min-width: 112.5rem; }
+
 .leftbox {
   float: left;
   position: absolute;
-  width: 20%;
+  width: 19%;
   height: 100%;
-  background: #7ed386;
-  box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5); }
+  background-color: #FBFCFC;
+  box-shadow: 1px 9px 5px 4px rgba(0, 0, 0, 0.08);
+  margin-left: 1rem;
+  margin-top: 8rem; }
 
 .rightbox {
   padding-left: 5rem;
   float: right;
-  width: 80%;
-  height: 100%; }
+  width: 77%;
+  height: 100%;
+  background-color: #FBFCFC;
+  box-shadow: 0px 9px 5px 4px rgba(0, 0, 0, 0.08);
+  margin-right: 2rem;
+  margin-top: 8rem; }
+
+body {
+  background-color: #f2f3f6; }
 
 .card {
   -webkit-perspective: 150rem;

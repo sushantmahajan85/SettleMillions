@@ -551,15 +551,6 @@ ul {
   margin: 0;
   padding-left: 0; }
 
-li {
-  color: #fff;
-  display: block;
-  float: left;
-  padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s; }
-
 li a {
   color: #fff; }
 
@@ -585,6 +576,14 @@ ul li ul:hover {
 ul li ul li {
   clear: both;
   width: 100%; }
+
+nav li {
+  color: white;
+  display: block;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s; }
 
 body {
   height: 100%;
@@ -3069,7 +3068,7 @@ input[type="password"] {
 
 .footer-section {
   flex: 1;
-  padding: 2.5rem;
+  padding: 2.4rem;
   /* border: 1px solid white; */ }
 
 .footer-section ul {

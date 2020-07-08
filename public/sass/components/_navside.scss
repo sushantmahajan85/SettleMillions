@@ -757,16 +757,16 @@ ul {
   padding-left: 0;
 }
 
-li {
-  color: #fff;
-  // background: darkorange;
-  display: block;
-  float: left;
-  padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s;
-}
+// li {
+//   color: #fff;
+//   // background: darkorange;
+//   display: block;
+//   float: left;
+//   padding: 1rem;
+//   position: relative;
+//   text-decoration: none;
+//   transition-duration: 0.5s;
+// }
 
 li a {
   color: #fff;
@@ -798,4 +798,14 @@ ul li ul:hover {
 ul li ul li {
   clear: both;
   width: 100%;
+}
+
+nav li{
+  color: white;
+  display: block;
+  // float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
 }

@@ -215,26 +215,26 @@ img {
 a.show-hide-link {
   display: block;
   width: 100%;
-  padding: 1.2rem;
+  padding: 0.5rem;
 }
 
 #showMoreR,
 #showMoreT,
 #showMoreL {
-  margin: 0;
-  width: 14%;
-  height: 60px;
-  //   max-height: 5rem;
-  margin-left: 40%;
-  text-align: center;
-  //   border-bottom: 1px solid rgb(212, 211, 211);
+  margin: 0px auto;
+  width: 10%;
+  // height: 60px;
+  // max-height: 5rem;
+  // margin-left: 40%;
+  // text-align: center;
+  // border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   margin-bottom: 2.5rem;
   margin-top: 2rem;
   border-radius: 4rem;
 
   &:hover {
-    //  background-color: #F8F9F9;
+    // background-color: #F8F9F9;
     // background-color:  #A42A30;
     // text-decoration: underline;
     border: 0.3px solid #a42a30;
@@ -244,11 +244,11 @@ a.show-hide-link {
 #showLessT,
 #showLessR,
 #showLessL {
-  margin: 0;
-  width: 14%;
-  height: 60px;
-  text-align: center;
-  margin-left: 40%;
+  margin: 0px auto;
+  width: 10%;
+  // height: 60px;
+  // text-align: center;
+  // margin-left: 40%;
   //   border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   display: none;

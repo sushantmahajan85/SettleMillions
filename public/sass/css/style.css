@@ -738,16 +738,13 @@ img {
 a.show-hide-link {
   display: block;
   width: 100%;
-  padding: 1.2rem; }
+  padding: 0.5rem; }
 
 #showMoreR,
 #showMoreT,
 #showMoreL {
-  margin: 0;
-  width: 14%;
-  height: 60px;
-  margin-left: 40%;
-  text-align: center;
+  margin: 0px auto;
+  width: 10%;
   cursor: pointer;
   margin-bottom: 2.5rem;
   margin-top: 2rem;
@@ -760,11 +757,8 @@ a.show-hide-link {
 #showLessT,
 #showLessR,
 #showLessL {
-  margin: 0;
-  width: 14%;
-  height: 60px;
-  text-align: center;
-  margin-left: 40%;
+  margin: 0px auto;
+  width: 10%;
   cursor: pointer;
   display: none;
   margin-bottom: 2.5rem;
@@ -1266,6 +1260,14 @@ figure {
 
 #hidden-review {
   display: none; }
+
+#showMoreBtn {
+  width: 25%;
+  margin: 0px auto; }
+
+#showLessBtn {
+  width: 25%;
+  margin: 0px auto; }
 
 .deal_box_name {
   font-family: Arial, Helvetica, sans-serif;

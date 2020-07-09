@@ -23,9 +23,11 @@
 
 <body>
     <%- include('partials/navbar.ejs') %>
-    <%- include('partials/sidebar.ejs') %>
+   
 
-    <section class="deal_area">
+    <div class="deal_area">
+
+        <div class="liked_D_container">
         <% if (user.likedDeals.length === 0) { %>
  <h1>Empty bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1>
  <% } else { %>
@@ -77,7 +79,259 @@
         <% } %>
   
             <% } %>
-    </section>
+            <div id="ld_filters" class="like_d_column">
+                <!-- Categories Widget -->
+                <div class="ld_filters">
+                    <h3 class="ld_filters-title">Categories</h3>
+                    <div class="checkbox-filter">
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="category-1">
+                            <label for="category-1">
+                                <span></span>
+                                Laptops
+                                <small>(120)</small>
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="category-2">
+                            <label for="category-2">
+                                <span></span>
+                                Smartphones
+                                <small>(740)</small>
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="category-3">
+                            <label for="category-3">
+                                <span></span>
+                                Cameras
+                                <small>(1450)</small>
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="category-4">
+                            <label for="category-4">
+                                <span></span>
+                                Accessories
+                                <small>(578)</small>
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="category-5">
+                            <label for="category-5">
+                                <span></span>
+                                Laptops
+                                <small>(120)</small>
+                            </label>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="category-6">
+                            <label for="category-6">
+                                <span></span>
+                                Smartphones
+                                <small>(740)</small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Categories Widget -->
+
+                <!-- Price Widget -->
+                <div class="ld_filters">
+                    <h3 class="ld_filters-title">Price</h3>
+                    <div class="price-filter">
+                        <div id="price-slider"></div>
+                        <div class="input-number price-min">
+                            <input id="price-min" type="number">
+                            <span class="qty-up">+</span>
+                            <span class="qty-down">-</span>
+                        </div>
+                        <span>-</span>
+                        <div class="input-number price-max">
+                            <input id="price-max" type="number">
+                            <span class="qty-up">+</span>
+                            <span class="qty-down">-</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Price Widget -->
+
+                <!-- Brand Widget -->
+                <div class="ld_filters">
+                    <h3 class="ld_filters-title">Brand</h3>
+                    <div class="checkbox-filter">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-1">
+                            <label for="brand-1">
+                                <span></span>
+                                SAMSUNG
+                                <small>(578)</small>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-2">
+                            <label for="brand-2">
+                                <span></span>
+                                LG
+                                <small>(125)</small>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-3">
+                            <label for="brand-3">
+                                <span></span>
+                                SONY
+                                <small>(755)</small>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-4">
+                            <label for="brand-4">
+                                <span></span>
+                                SAMSUNG
+                                <small>(578)</small>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-5">
+                            <label for="brand-5">
+                                <span></span>
+                                LG
+                                <small>(125)</small>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="brand-6">
+                            <label for="brand-6">
+                                <span></span>
+                                SONY
+                                <small>(755)</small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Brand Widget -->
+
+                <!-- Top selling Widget -->
+                <div class="ld_filters">
+                    <h3 class="ld_filters-title">Top selling</h3>
+                    <div class="product-widget">
+                        <div class="product-img">
+                            <!-- <img src="./img/product01.png" alt=""> -->
+                        </div>
+                        <div class="product-body">
+                            <p class="product-category">Category</p>
+                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                            <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                        </div>
+                    </div>
+
+                    <div class="product-widget">
+                        <div class="product-img">
+                            <!-- <img src="./img/product02.png" alt=""> -->
+                        </div>
+                        <div class="product-body">
+                            <p class="product-category">Category</p>
+                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                            <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                        </div>
+                    </div>
+
+                    <div class="product-widget">
+                        <div class="product-img">
+                            <!-- <img src="./img/product03.png" alt=""> -->
+                        </div>
+                        <div class="product-body">
+                            <p class="product-category">Category</p>
+                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                            <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Top Selling Widget -->
+            </div>
+            <!-- /SIDE -->
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About</h2>
+                <br>
+                <ul>
+                    <a href="#">
+                        <li>About Us</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact Us</li>
+                    </a>
+                    <a href="#">
+                        <li>Careers</li>
+                    </a>
+                    <a href="#">
+                        <li>Our Team</li>
+                    </a>
+  
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Social</h2>
+                <br>
+                <ul>
+                    <a href="https://twitter.com/">
+                        <li><i class="fab fa-twitter"></i>Twitter</li>
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <li><i class="fab fa-facebook-f"></i>Facebook</li>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <li><i class="fab fa-instagram"></i>Instagram</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-section policy">
+                <h2>Policy</h2>
+                <br>
+                <ul>
+                    <a href="#">
+                        <li>Terms and Conditions</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-section help">
+                <h2>Help</h2>
+                <br>
+                <ul>
+                    <a href="#">
+                        <li>How to Post a Deal</li>
+                    </a>
+                    <a href="#">
+                        <li>FAQ</li>
+                    </a>
+                    <a href="#">
+                        <li>Report</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            </hr>
+            &copy; 2020, Your Deal Inc.
+  
+        </div>
+    </div>
+  
 
 </body>
 

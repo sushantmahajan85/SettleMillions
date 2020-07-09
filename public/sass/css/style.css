@@ -2716,6 +2716,46 @@ body {
   border-radius: 0.6rem;
   background-color: #F8F9F9; }
 
+.deal_area {
+  height: 200rem;
+  padding-top: 9rem; }
+
+.like_d_column {
+  width: 25%;
+  float: left;
+  position: relative;
+  min-height: 0.1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+
+.ld_filters + .ld_filters {
+  margin-top: 30px; }
+
+.ld_filters > .ld_filters-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 15px 0px 30px; }
+
+.ld_filters {
+  font-size: 1.4rem;
+  line-height: 1.43;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.ld_filters-title {
+  font-weight: 700;
+  color: #2B2D42; }
+
+.liked_D_container {
+  height: 200rem; }
+
+@media only screen and (min-width: 1200px) {
+  .liked_D_container {
+    width: 1166px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto; } }
+
 .heading-main {
   font-weight: 400;
   font-size: 5rem;

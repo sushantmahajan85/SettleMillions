@@ -967,6 +967,9 @@ figure {
   justify-content: center;
   font-family: "Bitter", serif; }
 
+.mp_price {
+  font-size: 2.5rem !important; }
+
 .card__picture {
   width: inherit;
   height: 14rem; }

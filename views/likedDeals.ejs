@@ -23,13 +23,13 @@
 
 <body>
     <%- include('partials/navbar.ejs') %>
-   
+    <%- include('partials/sidebar.ejs') %>
 
     <div class="deal_area">
 
         <div class="liked_D_container">
         <% if (user.likedDeals.length === 0) { %>
- <h1>Empty bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1>
+ <!-- <h1>Empty bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1> -->
  <% } else { %>
     <% for(var likedDeal of user.likedDeals) { %>
         <a href=<%= `/deal/${likedDeal.deal._id}/postedBy/${likedDeal.deal.user}` %>>
@@ -79,9 +79,12 @@
         <% } %>
   
             <% } %>
-            <div id="ld_filters" class="like_d_column">
+
+
+
+            <!-- <div id="ld_filters" class="like_d_column"> -->
                 <!-- Categories Widget -->
-                <div class="ld_filters">
+                <!-- <div class="ld_filters">
                     <h3 class="ld_filters-title">Categories</h3>
                     <div class="checkbox-filter">
 
@@ -139,11 +142,11 @@
                             </label>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Categories Widget -->
 
                 <!-- Price Widget -->
-                <div class="ld_filters">
+                <!-- <div class="ld_filters">
                     <h3 class="ld_filters-title">Price</h3>
                     <div class="price-filter">
                         <div id="price-slider"></div>
@@ -159,11 +162,11 @@
                             <span class="qty-down">-</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Price Widget -->
 
                 <!-- Brand Widget -->
-                <div class="ld_filters">
+                <!-- <div class="ld_filters">
                     <h3 class="ld_filters-title">Brand</h3>
                     <div class="checkbox-filter">
                         <div class="input-checkbox">
@@ -215,16 +218,16 @@
                             </label>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Brand Widget -->
 
                 <!-- Top selling Widget -->
-                <div class="ld_filters">
+                <!-- <div class="ld_filters">
                     <h3 class="ld_filters-title">Top selling</h3>
                     <div class="product-widget">
-                        <div class="product-img">
+                        <div class="product-img"> -->
                             <!-- <img src="./img/product01.png" alt=""> -->
-                        </div>
+                        <!-- </div>
                         <div class="product-body">
                             <p class="product-category">Category</p>
                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -233,9 +236,9 @@
                     </div>
 
                     <div class="product-widget">
-                        <div class="product-img">
+                        <div class="product-img"> -->
                             <!-- <img src="./img/product02.png" alt=""> -->
-                        </div>
+                        <!-- </div>
                         <div class="product-body">
                             <p class="product-category">Category</p>
                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -244,21 +247,21 @@
                     </div>
 
                     <div class="product-widget">
-                        <div class="product-img">
+                        <div class="product-img"> -->
                             <!-- <img src="./img/product03.png" alt=""> -->
-                        </div>
+                        <!-- </div>
                         <div class="product-body">
                             <p class="product-category">Category</p>
                             <h3 class="product-name"><a href="#">product name goes here</a></h3>
                             <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Top Selling Widget -->
-            </div>
+            <!-- </div> -->
             <!-- /SIDE -->
 
-        </div>
+        <!-- </div> -->
     </div>
     <div class="footer">
         <div class="footer-content">

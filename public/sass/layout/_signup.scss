@@ -303,7 +303,7 @@ input[type="password"] {
 .footer-content {
   height: 22rem;
   display: flex;
-  margin: 0% 15.9%;
+  margin: 0% 20%;
 }
 
 .footer-content h2 {
@@ -314,10 +314,19 @@ input[type="password"] {
 }
 
 .footer-section {
-  flex: 1;
+  // flex: 1;
   padding: 1.8rem;
   margin-top: 1rem;
   /* border: 1px solid white; */
+  margin-right: 3rem;
+}
+
+.footer-section.help{
+  margin-right: 0rem;
+}
+
+.footer-section.about{
+  margin-left: 2rem;
 }
 
 .footer-section ul {

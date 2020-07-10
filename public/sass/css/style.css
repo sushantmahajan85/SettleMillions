@@ -3162,7 +3162,7 @@ input[type="password"] {
 .footer-content {
   height: 22rem;
   display: flex;
-  margin: 0% 20%; }
+  margin: 0% 19%; }
 
 .footer-content h2 {
   color: #fff;
@@ -3174,13 +3174,14 @@ input[type="password"] {
   padding: 1.8rem;
   margin-top: 1rem;
   /* border: 1px solid white; */
-  margin-right: 3rem; }
+  margin-right: 2.4rem; }
 
 .footer-section.help {
-  margin-right: 0rem; }
+  margin-right: 0rem;
+  padding-right: 0rem; }
 
 .footer-section.about {
-  margin-left: 2rem; }
+  margin-left: 3.5rem; }
 
 .footer-section ul {
   list-style-type: none;

@@ -2740,11 +2740,11 @@ body {
 .ld_filters {
   font-size: 1.4rem;
   line-height: 1.43;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .ld_filters-title {
   font-weight: 700;
-  color: #2B2D42; }
+  color: #2b2d42; }
 
 .liked_D_container {
   height: 200rem; }
@@ -2756,6 +2756,40 @@ body {
     padding-left: 1.5rem;
     margin-right: auto;
     margin-left: auto; } }
+
+.filter_container {
+  margin-top: 2rem;
+  margin-left: 2rem; }
+
+.filter_head {
+  cursor: pointer; }
+
+.fa-filter {
+  font-size: 16px; }
+
+#filter_heading {
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 1rem; }
+
+#filter_dropdown_section {
+  display: none; }
+
+.filter_dropdown {
+  display: flex; }
+
+.filter_section {
+  margin: 0px auto; }
+
+.filter_section ul {
+  list-style-type: none;
+  text-align: center; }
+
+.filter_section a {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: block; }
 
 .heading-main {
   font-weight: 400;

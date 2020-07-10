@@ -30,8 +30,8 @@
 
         <div class="filter_container">
             <div class="filter_head">
-                <i class="fas fa-filter"></i>
-                <p id="filter_heading">Filter</p>
+                <i class="fas fa-filter" onclick="filterList()"></i>
+                <p id="filter_heading" onclick="filterList()">Filter</p>
             </div>
             <div id="filter_dropdown_section">
             <div class="filter_dropdown">
@@ -452,6 +452,21 @@
         </div>
     </div>
   
+    <script type="text/javascript">
+        var i = 0;
+        function filterList() {
+            if (!i) {
+                document.getElementById("filter_dropdown_section").style.display = "block";
+
+                i=1;
+            }
+            else {
+                document.getElementById("filter_dropdown_section").style.display = "none";
+
+                i=0;
+            }
+        }
+    </script>
 
 </body>
 

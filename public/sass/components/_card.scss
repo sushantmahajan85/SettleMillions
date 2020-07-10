@@ -94,7 +94,6 @@
   }
 }
 
-
 /////////////////////////////////////////////////////
 
 .main {
@@ -307,14 +306,21 @@ footer {
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: block;
 }
+
+.carousel-item.active {
+  height: inherit;
+}
+
 .active {
   opacity: 1;
 }
+
 .active,
 .dot:hover {
   background-color: unset !important;

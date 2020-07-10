@@ -972,11 +972,11 @@ figure {
 
 .card__picture {
   width: inherit;
-  height: 14rem; }
+  height: 17rem; }
 
 .deal-photo {
   object-fit: scale-down;
-  height: 18rem;
+  height: inherit;
   width: 95%; }
 
 .card-text {
@@ -2064,6 +2064,9 @@ footer {
 .carousel-item-prev,
 .carousel-item.active {
   display: block; }
+
+.carousel-item.active {
+  height: inherit; }
 
 .active {
   opacity: 1; }

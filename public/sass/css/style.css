@@ -2775,20 +2775,26 @@ body {
     margin-right: auto;
     margin-left: auto; } }
 
-.filter_container {
-  margin-top: 2rem;
-  margin-left: 2rem; }
-
 .filter_head {
   cursor: pointer; }
 
 .fa-filter {
   font-size: 16px; }
 
+.filter_container {
+  border: 1px solid #35393a;
+  margin-top: 2rem;
+  margin-left: 2rem; }
+
 #filter_heading {
+  text-transform: uppercase;
   font-size: 16px;
   display: inline-block;
   margin-left: 1rem; }
+
+.ld_rating-text {
+  font-size: 1.4rem;
+  color: #1B2631; }
 
 #filter_dropdown_section {
   display: none; }

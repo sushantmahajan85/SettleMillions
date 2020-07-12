@@ -40,6 +40,10 @@ exports.getSignupForm = (req, res) => {
   res.status(200).render("signup");
 };
 
+exports.getTrendingDeals = (req, res) => {
+  res.status(200).render("trending");
+};
+
 exports.getLikedDeals = catchAsync(async (req, res) => {
   const user = await User.findById(req.user).populate({
     path: "likedDeals subscribers",

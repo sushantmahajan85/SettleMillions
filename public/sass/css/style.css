@@ -1132,11 +1132,11 @@ figure {
       margin-bottom: 1rem; }
 
 .deal_area_box {
+  display: flex;
   background-color: white;
   margin: 0.5rem;
-  width: 33%;
-  height: 33%;
-  display: flex;
+  width: 40rem;
+  height: 15%;
   flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
@@ -2765,15 +2765,17 @@ body {
   color: #2b2d42; }
 
 .liked_D_container {
-  height: 200rem; }
+  height: 200rem;
+  display: flex; }
 
 @media only screen and (min-width: 1200px) {
   .liked_D_container {
     width: 1166px;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    margin-right: auto;
-    margin-left: auto; } }
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 3rem; } }
 
 .filter_head {
   cursor: pointer; }
@@ -2782,9 +2784,12 @@ body {
   font-size: 16px; }
 
 .filter_container {
-  border: 1px solid #35393a;
+  box-shadow: 0px 0px 2px 2px #d0d3d4;
+  border-bottom: 1px solid #A6ACAF;
   margin-top: 2rem;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  width: 90%;
+  padding: 1rem; }
 
 #filter_heading {
   text-transform: uppercase;
@@ -2877,8 +2882,7 @@ body {
   position: relative; }
 
 .price-filter .input-number {
-  display: inline-block;
-  width: 5rem; }
+  display: inline-block; }
 
 .input-number {
   position: relative; }
@@ -2910,13 +2914,20 @@ body {
   right: 0;
   top: 0; }
 
-.price_input-boxes {
-  width: 15rem; }
-
 .price-min {
   margin-right: 0.5rem; }
 
 .price-min {
+  margin-left: 0.5rem; }
+
+input#price-min {
+  width: 6rem;
+  height: 2.4rem;
+  margin-right: 0.5rem; }
+
+input#price-max {
+  width: 6rem;
+  height: 2.4rem;
   margin-left: 0.5rem; }
 
 .heading-main {

@@ -1131,26 +1131,6 @@ figure {
       border-radius: 50%;
       margin-bottom: 1rem; }
 
-.deal_area_box {
-  display: flex;
-  background-color: white;
-  margin: 0.5rem;
-  width: 40rem;
-  height: 15%;
-  flex-direction: row;
-  border-radius: 1rem;
-  overflow: hidden;
-  line-height: 1;
-  box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9; }
-  .deal_area_box_img {
-    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 10rem;
-    background-size: 100% 100%;
-    overflow: hidden; }
-  .deal_area_box:hover {
-    box-shadow: none;
-    border: 1.5px solid #f2f3f4; }
-
 .deal-with-review {
   display: flex;
   flex-direction: column;
@@ -1284,6 +1264,9 @@ figure {
   width: 25%;
   margin: 0px auto;
   display: none; }
+
+.deal_box_nameTime {
+  margin-bottom: 2rem; }
 
 .deal_box_name {
   font-family: Arial, Helvetica, sans-serif;
@@ -1822,9 +1805,6 @@ figure {
   box-shadow: 0px 9px 5px 4px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;
   margin-top: 8rem; }
-
-body {
-  background-color: #f2f3f6; }
 
 .card {
   -webkit-perspective: 150rem;
@@ -2930,6 +2910,39 @@ input#price-max {
   height: 2.4rem;
   margin-left: 0.5rem; }
 
+.deal_area_box {
+  display: flex;
+  margin: 0.5rem;
+  width: 110rem;
+  height: 25rem;
+  flex-direction: row;
+  border-radius: 1rem;
+  overflow: hidden;
+  line-height: 1;
+  border: 0.5px solid #f2f2f2; }
+  .deal_area_box_img {
+    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+    padding: 12rem;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border-right: 1px solid #f2f3f4; }
+  .deal_area_box:hover {
+    box-shadow: none; }
+
+.deal_area_content {
+  margin-left: 3.5rem; }
+
+.content_box {
+  margin-left: 1rem; }
+
+.ld_deal-title {
+  font-size: 2.5rem;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-family: "Bitter", serif;
+  text-transform: capitalize; }
+
 .heading-main {
   font-weight: 400;
   font-size: 5rem;
@@ -3037,13 +3050,6 @@ rgba(0, 0, 0, 0.349);
   font-weight: 400;
   font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
-
-.content_box {
-  margin-left: 1rem;
-  margin-top: 1.5rem; }
-
-.deal_box_nameTime {
-  margin-bottom: 2rem; }
 
 .header_logo-box {
   padding: 3rem;

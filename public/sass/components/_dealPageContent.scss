@@ -188,32 +188,6 @@
   // }
 }
 
-.deal_area_box {
-  display: flex;
-  background-color: white;
-  margin: 0.5rem;
-  width: 40rem;
-  height: 15%;
-  // display: flex;
-  flex-direction: row;
-  border-radius: 1rem;
-  overflow: hidden;
-  line-height: 1;
-  box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9;
-  &_img {
-    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 10rem;
-    // border-radius: 1rem;
-    background-size: 100% 100%;
-    overflow: hidden;
-    // border: 0.5px solid #f4f6f7;
-  }
-  &:hover {
-    box-shadow: none;
-    border: 1.5px solid #f2f3f4;
-  }
-}
-
 .deal-with-review {
   display: flex;
   flex-direction: column;
@@ -373,6 +347,20 @@
   margin: 0px auto;
   display: none;
 }
+
+.deal_box_nameTime {
+  margin-bottom: 2rem;
+}
+
+// .deal_box_name {
+//   // font-family: Arial, Helvetica, sans-serif;
+//   // font-size: 17px;
+//   // font-weight: 600;
+//   // padding: 10px;
+//   // text-align: center;
+//   margin-right: 1rem;
+//   // margin-bottom: -0.5rem;
+// }
 
 .deal_box_name {
   font-family: Arial, Helvetica, sans-serif;

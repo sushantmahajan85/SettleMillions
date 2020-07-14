@@ -1317,15 +1317,16 @@ figure {
 
 .cover {
   padding-top: 9rem !important;
-  margin-left: 15%;
-  width: 85%;
+  width: 100%;
   height: 20vh;
   background-color: orangered; }
 
+.member-page-content {
+  background-color: white; }
+
 .profile_area {
-  margin-left: 15%;
-  width: 85%;
-  height: 10vh;
+  width: 100%;
+  height: 10.5vh;
   background-color: yellowgreen;
   display: block; }
   .profile_area_pic {

@@ -2346,7 +2346,8 @@ body {
     opacity: 1;
     background-color: white;
     overflow: hidden;
-    border-radius: inherit; }
+    border-radius: inherit;
+    display: none; }
   .popup_left {
     width: 33.33333333334%;
     vertical-align: top;

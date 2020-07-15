@@ -32,7 +32,7 @@
 .side_bar {
   width: 12%;
   background-color: white;
-  margin-top: 6.6rem;
+  margin-top: 6.5rem;
   height: 100%;
   border: solid 1px lightgrey; }
 
@@ -2741,6 +2741,9 @@ body {
   border-radius: 0.6rem;
   background-color: #F8F9F9; }
 
+.body {
+  background-color: #FBFCFC; }
+
 .deal_area {
   height: 200rem;
   padding-top: 9rem;
@@ -2940,27 +2943,29 @@ input#price-max {
   margin-left: 3.5rem;
   width: 75rem; }
 
+.content_box {
+  margin-top: 0.6rem; }
+
 .ld_deal_box {
   display: flex;
   margin: 0.5rem;
   width: 100rem;
-  height: 20.2rem;
-  margin-bottom: 3rem;
+  height: 22rem;
+  margin-bottom: 2rem;
   flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
-  line-height: 1;
-  border: 0.5px solid #F0F3F4; }
+  line-height: 1; }
   .ld_deal_box_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 10rem;
+    padding: 10.5rem;
     background-size: 100% 100%;
     overflow: hidden; }
   .ld_deal_box:hover {
     box-shadow: 1px 0px 3px 4px #F0F3F4; }
 
 .ld_deal-title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color: #000000;
   font-weight: 500;
   letter-spacing: 0.1rem;
@@ -2975,7 +2980,7 @@ input#price-max {
   margin-left: 0.3rem; }
   .ld_deal-r1-det {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     margin-right: 1rem; }
     .ld_deal-r1-det:hover {
@@ -2984,7 +2989,8 @@ input#price-max {
 .ld_deal-r2 {
   margin-bottom: 2rem;
   color: #626567;
-  margin-left: 0.3rem; }
+  margin-left: 0.3rem;
+  line-height: 2rem; }
   .ld_deal-r2-det {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -3026,7 +3032,7 @@ input#price-max {
   margin-left: 0.3rem; }
   .ld_deal-r4-det {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     margin-right: 1rem; }
     .ld_deal-r4-det:hover {
       color: black; }

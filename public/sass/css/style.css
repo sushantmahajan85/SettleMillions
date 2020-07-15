@@ -2773,7 +2773,7 @@ body {
 
 .liked_D_container {
   height: 200rem;
-  display: flex; }
+  display: block; }
 
 @media only screen and (min-width: 1200px) {
   .liked_D_container {
@@ -2791,11 +2791,10 @@ body {
   font-size: 16px; }
 
 .filter_container {
-  box-shadow: 0px 0px 2px 2px #d0d3d4;
   border-bottom: 1px solid #A6ACAF;
   margin-top: 2rem;
-  margin-left: 2rem;
-  width: 90%;
+  margin-left: 3.8rem;
+  width: 100rem;
   padding: 1rem; }
 
 #filter_heading {
@@ -2941,27 +2940,24 @@ input#price-max {
   margin-left: 3.5rem;
   width: 75rem; }
 
-.content_box {
-  margin-left: 1rem; }
-
 .ld_deal_box {
   display: flex;
   margin: 0.5rem;
-  width: 110rem;
-  height: 21rem;
+  width: 100rem;
+  height: 20.2rem;
+  margin-bottom: 3rem;
   flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
   line-height: 1;
-  border: 0.5px solid #f2f2f2; }
+  border: 0.5px solid #F0F3F4; }
   .ld_deal_box_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
     padding: 10rem;
     background-size: 100% 100%;
-    overflow: hidden;
-    border-right: 1px solid #f2f3f4; }
+    overflow: hidden; }
   .ld_deal_box:hover {
-    box-shadow: none; }
+    box-shadow: 1px 0px 3px 4px #F0F3F4; }
 
 .ld_deal-title {
   font-size: 2.5rem;
@@ -2981,6 +2977,8 @@ input#price-max {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     margin-right: 1rem; }
+    .ld_deal-r1-det:hover {
+      color: black; }
 
 .ld_deal-r2 {
   margin-bottom: 2rem;
@@ -2990,6 +2988,8 @@ input#price-max {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-right: 1rem; }
+    .ld_deal-r2-det:hover {
+      color: black; }
 
 .ld_deal-r3 {
   margin-bottom: 2rem;
@@ -3009,7 +3009,7 @@ input#price-max {
     text-decoration: line-through;
     margin-right: 1rem;
     margin-bottom: -0.5rem;
-    padding: 4px 0; }
+    padding: 5px 0; }
   .ld_deal-r3-dis {
     color: #d10024;
     font-size: 1.7rem;
@@ -3017,7 +3017,7 @@ input#price-max {
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 1rem;
     margin-bottom: -0.5rem;
-    padding: 4px 0; }
+    padding: 5px 0; }
 
 .ld_deal-r4 {
   margin-bottom: 2rem;
@@ -3025,8 +3025,14 @@ input#price-max {
   margin-left: 0.3rem; }
   .ld_deal-r4-det {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     margin-right: 1rem; }
+    .ld_deal-r4-det:hover {
+      color: black; }
+
+#img_ld_deal_views {
+  color: black;
+  margin-right: 0.5rem; }
 
 .heading-main {
   font-weight: 400;

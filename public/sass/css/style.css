@@ -32,7 +32,7 @@
 .side_bar {
   width: 12%;
   background-color: white;
-  margin-top: 6.6rem;
+  margin-top: 6.5rem;
   height: 100%;
   border: solid 1px lightgrey; }
 
@@ -450,7 +450,7 @@ h2 {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,15 +551,6 @@ ul {
   margin: 0;
   padding-left: 0; }
 
-li {
-  color: #fff;
-  display: block;
-  float: left;
-  padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s; }
-
 li a {
   color: #fff; }
 
@@ -586,12 +577,35 @@ ul li ul li {
   clear: both;
   width: 100%; }
 
+nav li {
+  color: white;
+  display: block;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s; }
+
+.item2 {
+  padding: 0.5rem;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: row; }
+  .item2:hover {
+    background-color: #F0F3F4;
+    box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4); }
+
+.item {
+  padding-left: 1.15rem; }
+  .item:hover {
+    background-color: #F0F3F4;
+    box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4); }
+
 body {
   height: 100%;
   background: #fff;
   /* color: #333; */
   /* background-image: url("../img/backg.jpg"); */
-  font-family: Bitter, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Bitter, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-weight: 500;
   line-height: 1.9;
   /* color: #777777; */
@@ -739,16 +753,13 @@ img {
 a.show-hide-link {
   display: block;
   width: 100%;
-  padding: 1.2rem; }
+  padding: 0.5rem; }
 
 #showMoreR,
 #showMoreT,
 #showMoreL {
-  margin: 0;
-  width: 14%;
-  height: 60px;
-  margin-left: 40%;
-  text-align: center;
+  margin: 0px auto;
+  width: 10%;
   cursor: pointer;
   margin-bottom: 2.5rem;
   margin-top: 2rem;
@@ -761,11 +772,8 @@ a.show-hide-link {
 #showLessT,
 #showLessR,
 #showLessL {
-  margin: 0;
-  width: 14%;
-  height: 60px;
-  text-align: center;
-  margin-left: 40%;
+  margin: 0px auto;
+  width: 10%;
   cursor: pointer;
   display: none;
   margin-bottom: 2.5rem;
@@ -915,9 +923,6 @@ figure {
   display: flex;
   flex-direction: column; }
 
-.item {
-  margin-left: 2.2rem; }
-
 #showMore {
   margin-top: 1rem; }
 
@@ -962,13 +967,16 @@ figure {
   justify-content: center;
   font-family: "Bitter", serif; }
 
+.mp_price {
+  font-size: 2.2rem !important; }
+
 .card__picture {
   width: inherit;
-  height: 14rem; }
+  height: 17rem; }
 
 .deal-photo {
   object-fit: scale-down;
-  height: 18rem;
+  height: inherit;
   width: 95%; }
 
 .card-text {
@@ -1075,7 +1083,8 @@ figure {
     font-size: 1.7rem;
     color: white;
     background-color: #ef233c;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer; }
   .deal-deets_views {
     color: #7a7a7a;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -1122,34 +1131,14 @@ figure {
       border-radius: 50%;
       margin-bottom: 1rem; }
 
-.deal_area_box {
-  background-color: white;
-  margin: 0.5rem;
-  width: 33%;
-  height: 33%;
-  display: flex;
-  flex-direction: row;
-  border-radius: 1rem;
-  overflow: hidden;
-  line-height: 1;
-  box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9; }
-  .deal_area_box_img {
-    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 10rem;
-    background-size: 100% 100%;
-    overflow: hidden; }
-  .deal_area_box:hover {
-    box-shadow: none;
-    border: 1.5px solid #f2f3f4; }
-
 .deal-with-review {
   display: flex;
   flex-direction: column;
   width: inherit; }
 
 .review-section {
-  padding: 2rem;
-  width: 60%; }
+  padding: 3.5rem 3.5rem 2rem 2rem;
+  width: 65%; }
 
 .review-rating {
   padding: 2rem 5rem; }
@@ -1202,10 +1191,11 @@ figure {
   width: 100%; }
 
 .review-photo {
-  height: 7rem;
-  width: 7rem;
+  height: 5rem;
+  width: 5rem;
   margin-top: -1px;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  padding: 0rem; }
 
 .review-head {
   font-size: 3rem; }
@@ -1214,7 +1204,8 @@ figure {
   background-color: transparent;
   border: none;
   border: 1px solid #e6e6e6;
-  width: 45%;
+  width: 55%;
+  height: 5rem;
   margin-bottom: -2rem;
   margin-right: 2rem;
   color: black;
@@ -1265,6 +1256,37 @@ figure {
 #hidden-review {
   display: none; }
 
+#showMoreBtn {
+  width: 25%;
+  margin: 0px auto; }
+
+#showLessBtn {
+  width: 25%;
+  margin: 0px auto;
+  display: none; }
+
+.deal_area_box {
+  display: flex;
+  margin: 0.5rem;
+  width: 110rem;
+  height: 21rem;
+  flex-direction: row;
+  border-radius: 1rem;
+  overflow: hidden;
+  line-height: 1;
+  border: 0.5px solid #f2f2f2; }
+  .deal_area_box_img {
+    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+    padding: 10rem;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border-right: 1px solid #f2f3f4; }
+  .deal_area_box:hover {
+    box-shadow: none; }
+
+.deal_box_nameTime {
+  margin-bottom: 2rem; }
+
 .deal_box_name {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
@@ -1297,15 +1319,16 @@ figure {
 
 .cover {
   padding-top: 9rem !important;
-  margin-left: 15%;
-  width: 85%;
+  width: 100%;
   height: 20vh;
   background-color: orangered; }
 
+.member-page-content {
+  background-color: white; }
+
 .profile_area {
-  margin-left: 15%;
-  width: 85%;
-  height: 10vh;
+  width: 100%;
+  height: 10.5vh;
   background-color: yellowgreen;
   display: block; }
   .profile_area_pic {
@@ -1543,6 +1566,13 @@ figure {
     font-size: 1.7rem;
     font-weight: 400; }
 
+.big-deal_dis strike {
+  font-size: 1.8rem;
+  margin-right: 2rem; }
+
+#big-three-dots {
+  position: relative; }
+
 .user-view {
   background-color: #fff;
   max-width: 120rem;
@@ -1754,12 +1784,6 @@ figure {
   outline: 3px solid #55c57a;
   outline-offset: 3px; }
 
-.containerSettings {
-  background: #ffffff;
-  height: 120rem;
-  position: relative;
-  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5); }
-
 .CTA {
   width: 80px;
   height: 40px;
@@ -1781,19 +1805,48 @@ figure {
     background: #3fb6a8;
     transform: scale(1.1); }
 
+.containerSettings {
+  background-color: #ECF0F1;
+  height: 120rem;
+  position: relative;
+  margin: 0 auto;
+  max-width: 136.5rem;
+  min-width: 112.5rem; }
+
 .leftbox {
   float: left;
   position: absolute;
-  width: 20%;
+  width: 19%;
   height: 100%;
-  background: #7ed386;
-  box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5); }
+  background-color: #FBFCFC;
+  box-shadow: 1px 9px 5px 4px rgba(0, 0, 0, 0.08);
+  margin-left: 1rem;
+  margin-top: 8rem; }
+
+.leftbox_element {
+  padding: 1.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: #272727;
+  transition: 0.25s all; }
+
+.leftbox_element:hover {
+  background-color: #f2f2f2; }
+
+.fa-cog, .fa-lock, .fa-star, .fa-heart, .fa-sign-out-alt {
+  margin-right: 10px;
+  margin-left: 5px;
+  color: #272727; }
 
 .rightbox {
   padding-left: 5rem;
   float: right;
-  width: 80%;
-  height: 100%; }
+  width: 77%;
+  height: 100%;
+  background-color: #FBFCFC;
+  box-shadow: 0px 9px 5px 4px rgba(0, 0, 0, 0.08);
+  margin-right: 2rem;
+  margin-top: 8rem; }
 
 .card {
   -webkit-perspective: 150rem;
@@ -1829,7 +1882,8 @@ figure {
   cursor: pointer;
   border-radius: 50%;
   height: 2rem;
-  width: 2rem; }
+  width: 2rem;
+  display: block; }
   .three-dots:hover {
     background-color: #fff; }
 
@@ -2034,6 +2088,9 @@ footer {
 .carousel-item.active {
   display: block; }
 
+.carousel-item.active {
+  height: inherit; }
+
 .active {
   opacity: 1; }
 
@@ -2070,31 +2127,29 @@ footer {
 .big-deal {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 98%;
   overflow: hidden;
   backface-visibility: hidden;
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
   margin-bottom: 4rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid grey;
   border-radius: 0.6rem;
   transition: all 0.3s; }
-  .big-deal:hover {
-    transform: scale(1.02); }
   .big-deal_img {
     height: inherit;
-    width: 35%; }
+    width: 30%; }
   .big-deal_content {
     height: inherit;
     background-color: #f1faf1;
-    width: 65%;
+    width: 70%;
     padding: 2rem; }
   .big-deal_picture {
     object-fit: scale-down;
     height: 26rem;
     width: 100%; }
   .big-deal_name {
-    font-size: 1.86rem; }
+    font-size: 1.9rem; }
   .big-deal_price {
     margin-top: 1.2rem; }
   .big-deal_des {
@@ -2331,7 +2386,8 @@ body {
     opacity: 1;
     background-color: white;
     overflow: hidden;
-    border-radius: inherit; }
+    border-radius: inherit;
+    display: none; }
   .popup_left {
     width: 33.33333333334%;
     vertical-align: top;
@@ -2700,6 +2756,306 @@ body {
   border-radius: 0.6rem;
   background-color: #F8F9F9; }
 
+.body {
+  background-color: #FBFCFC; }
+
+.deal_area {
+  height: 200rem;
+  padding-top: 9rem;
+  margin-left: 12%; }
+
+.like_d_column {
+  width: 25%;
+  float: left;
+  position: relative;
+  min-height: 0.1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+
+.ld_filters + .ld_filters {
+  margin-top: 30px; }
+
+.ld_filters > .ld_filters-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 15px 0px 30px; }
+
+.ld_filters {
+  font-size: 1.4rem;
+  line-height: 1.43;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.ld_filters-title {
+  font-weight: 700;
+  color: #2b2d42; }
+
+.liked_D_container {
+  height: 200rem;
+  display: block; }
+
+@media only screen and (min-width: 1200px) {
+  .liked_D_container {
+    width: 1166px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 3rem; } }
+
+.filter_head {
+  cursor: pointer; }
+
+.fa-filter {
+  font-size: 16px; }
+
+.filter_container {
+  border-bottom: 1px solid #A6ACAF;
+  margin-top: 2rem;
+  margin-left: 3.8rem;
+  width: 100rem;
+  padding: 1rem; }
+
+#filter_heading {
+  text-transform: uppercase;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 1rem; }
+
+.ld_rating-text {
+  font-size: 1.4rem;
+  color: #1B2631; }
+
+#filter_dropdown_section {
+  display: none; }
+
+.filter_dropdown {
+  display: flex; }
+
+.filter_section {
+  margin: 0px auto; }
+
+.filter_section ul {
+  list-style-type: none;
+  text-align: center; }
+
+.filter_section a {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: block; }
+
+#price-slider {
+  margin-bottom: 1.5rem; }
+
+.noUi-horizontal {
+  height: 6px; }
+
+.noUi-target {
+  background-color: #fff;
+  box-shadow: none;
+  border: 1px solid #E4E7ED;
+  border-radius: 0rem; }
+
+.noUi-target {
+  background: #FAFAFA;
+  direction: ltr; }
+
+.noUi-target, .noUi-target * {
+  position: relative;
+  direction: ltr;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+  user-select: none;
+  box-sizing: border-box; }
+
+.noUi-base {
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1; }
+
+.noUi-origin {
+  position: absolute;
+  height: 0;
+  width: 0; }
+
+.noUi-connect {
+  background-color: #D10024;
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+
+.noUi-connect {
+  border-radius: 0.4rem;
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  transform: background 450ms; }
+
+.noUi-horizontal .noUi-handle {
+  width: 1.2rem;
+  height: 1.2rem;
+  left: -6px;
+  top: -4px;
+  border: none;
+  background: #D10024;
+  box-shadow: none;
+  border-radius: 50%; }
+
+.noUi-handle {
+  cursor: default;
+  position: relative; }
+
+.price-filter .input-number {
+  display: inline-block; }
+
+.input-number {
+  position: relative; }
+
+.input-number input[type="number"] {
+  height: 3rem;
+  width: 40%;
+  border: 1px solid #E4E7ED;
+  background-color: #fff;
+  padding: 0px 35px 0px 15px; }
+
+.input-number .qty-up {
+  right: 0;
+  top: 0;
+  border-bottom: 0rem; }
+
+.input-number .qty-up, .input-number .qty-down {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #E4E7ED;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none; }
+
+.input-number .qty-up {
+  right: 0;
+  top: 0; }
+
+.price-min {
+  margin-right: 0.5rem; }
+
+.price-min {
+  margin-left: 0.5rem; }
+
+input#price-min {
+  width: 6rem;
+  height: 2.4rem;
+  margin-right: 0.5rem; }
+
+input#price-max {
+  width: 6rem;
+  height: 2.4rem;
+  margin-left: 0.5rem; }
+
+.deal_area_content {
+  margin-left: 3.5rem;
+  width: 75rem; }
+
+.content_box {
+  margin-top: 0.6rem; }
+
+.ld_deal_box {
+  display: flex;
+  margin: 0.5rem;
+  width: 100rem;
+  height: 22rem;
+  margin-bottom: 2rem;
+  flex-direction: row;
+  border-radius: 1rem;
+  overflow: hidden;
+  line-height: 1; }
+  .ld_deal_box_img {
+    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+    padding: 10.5rem;
+    background-size: 100% 100%;
+    overflow: hidden; }
+  .ld_deal_box:hover {
+    box-shadow: 1px 0px 3px 4px #F0F3F4; }
+
+.ld_deal-title {
+  font-size: 2.6rem;
+  color: #000000;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1.5rem; }
+
+.ld_deal-r1 {
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem; }
+  .ld_deal-r1-det {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 1rem; }
+    .ld_deal-r1-det:hover {
+      color: black; }
+
+.ld_deal-r2 {
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem;
+  line-height: 2rem; }
+  .ld_deal-r2-det {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-right: 1rem; }
+    .ld_deal-r2-det:hover {
+      color: black; }
+
+.ld_deal-r3 {
+  margin-bottom: 2rem;
+  margin-left: 0.3rem; }
+  .ld_deal-r3-dp {
+    font-weight: 500;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem; }
+  .ld_deal-r3-mrp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #8d99ae;
+    text-decoration: line-through;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 5px 0; }
+  .ld_deal-r3-dis {
+    color: #d10024;
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 5px 0; }
+
+.ld_deal-r4 {
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem; }
+  .ld_deal-r4-det {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-right: 1rem; }
+    .ld_deal-r4-det:hover {
+      color: black; }
+
+#img_ld_deal_views {
+  color: black;
+  margin-right: 0.5rem; }
+
 .heading-main {
   font-weight: 400;
   font-size: 5rem;
@@ -2721,7 +3077,7 @@ body {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -2805,15 +3161,8 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
-
-.content_box {
-  margin-left: 1rem;
-  margin-top: 1.5rem; }
-
-.deal_box_nameTime {
-  margin-bottom: 2rem; }
 
 .header_logo-box {
   padding: 3rem;
@@ -2833,7 +3182,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }
@@ -2872,12 +3221,6 @@ a {
 .nav-links li {
   list-style: none;
   display: inline-block; }
-
-.item2 {
-  padding: 0.5rem;
-  padding-left: 1.15rem;
-  display: flex;
-  flex-direction: row; }
 
 .deal_area {
   padding-top: 6rem; }
@@ -3059,7 +3402,7 @@ input[type="password"] {
 .footer-content {
   height: 22rem;
   display: flex;
-  margin: 0% 15.9%; }
+  margin: 0% 19%; }
 
 .footer-content h2 {
   color: #fff;
@@ -3068,9 +3411,17 @@ input[type="password"] {
   margin-left: 10px; }
 
 .footer-section {
-  flex: 1;
-  padding: 2.5rem;
-  /* border: 1px solid white; */ }
+  padding: 1.8rem;
+  margin-top: 1rem;
+  /* border: 1px solid white; */
+  margin-right: 2.4rem; }
+
+.footer-section.help {
+  margin-right: 0rem;
+  padding-right: 0rem; }
+
+.footer-section.about {
+  margin-left: 3.5rem; }
 
 .footer-section ul {
   list-style-type: none;
@@ -3167,20 +3518,22 @@ hr {
   box-sizing: border-box;
   font-weight: 600;
   width: 300px;
-  border: thin solid #dddddd; }
+  border: thin solid #dddddd;
+  box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4); }
 
 .newsletter button {
   background-color: #d13030;
-  padding: 11px 30px 11px 30px;
+  padding: 9.5px 30px 10.5px 30px;
   border-radius: 0px 8px 8px 0px;
   box-sizing: border-box;
   color: white;
   font-size: 15px;
   font-weight: 600;
-  border: thin solid white;
+  border: thin solid #D13026;
   display: inline-block;
   margin-left: -2.93px;
-  margin-top: -1px; }
+  margin-top: -1px;
+  box-shadow: 2px 2px 4px 3px rgba(208, 211, 212, 0.6); }
 
 .newsletter input::placeholder {
   font-size: 15px;

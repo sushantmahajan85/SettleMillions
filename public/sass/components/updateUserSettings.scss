@@ -255,12 +255,6 @@ $hulu: "Nunito Sans", sans-serif;
 $heading: "Montserrat", sans-serif;
 $body: "Roboto", sans-serif;
 
-.containerSettings {
-  background: $white;
-  height: 120rem;
-  position: relative;
-  box-shadow: 2px 5px 20px rgba($gray, 0.5);
-}
 
 // .logo {
 //   float: right;
@@ -297,14 +291,8 @@ $body: "Roboto", sans-serif;
   }
 }
 
-.leftbox {
-  float: left;
-  position: absolute;
-  width: 20%;
-  height: 100%;
-  background: $green;
-  box-shadow: 3px 3px 10px rgba($gray, 0.5);
-}
+
+
 
 // nav a {
 //   list-style: none;
@@ -327,9 +315,60 @@ $body: "Roboto", sans-serif;
 //   color: $aqua;
 // }
 
+
+.containerSettings {
+  background-color: #ECF0F1;
+  height: 120rem;
+  position: relative;
+  // box-shadow: 2px 5px 20px rgba($gray, 0.5);
+  margin: 0 auto;
+  max-width: 136.5rem;
+  min-width: 112.5rem;
+}
+
+
+.leftbox {
+  float: left;
+  position: absolute;
+  width: 19%;
+  height: 100%;
+  background-color: #FBFCFC;
+  box-shadow: 1px 9px 5px 4px rgba(0,0,0,.08);
+  margin-left: 1rem;
+  margin-top: 8rem;
+}
+
+.leftbox_element {
+  // text-align: center;
+  padding: 1.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgb(39, 39, 39);
+  transition: 0.25s all;
+}
+
+.leftbox_element:hover {
+  background-color: #f2f2f2;
+}
+
+.fa-cog, .fa-lock, .fa-star, .fa-heart, .fa-sign-out-alt {
+  margin-right: 10px;
+  margin-left: 5px;
+  color: rgb(39, 39, 39);
+}
+
 .rightbox {
   padding-left: 5rem;
   float: right;
-  width: 80%;
+  width: 77%;
   height: 100%;
+  background-color: #FBFCFC;
+  box-shadow: 0px 9px 5px 4px rgba(0,0,0,.08);
+  margin-right: 2rem;
+  margin-top: 8rem;
 }
+
+
+// body{
+//   background-color: rgb(242, 243, 246 );
+// }

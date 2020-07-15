@@ -47,7 +47,7 @@
           <h6 class="heading-normal">Subscribe</h6>
         </a>
       </div>
-      <div class="page-content">
+      <div class="member-page-content">
         <div id="trending" class="trending">
           <% for(var deal of deals) { %>
 
@@ -112,15 +112,11 @@
                 </h4>
               </div>
               <div class="big-deal_dis">
-                <strike
-                  style="font-size: 1.8rem; color:rgb(82, 80, 80);margin-right: 2rem"
-                  >Rs.7854</strike
-                >
-
+                <strike>Rs.7854</strike>
                 <h3 class="big-deal_percent">70% OFF</h3>
               </div>
               <form action="/" method="GET" class=reportx>
-                <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
+                <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
                     <option selected disabled value="empty"></option>
                     <option value=<%= `${deal._id}/report` %>>Report</option>
                     <option value=<%= `${deal._id}/like` %>>Like</option>
@@ -132,8 +128,6 @@
                     <% } %>
                    
                 </select>
-                <a href=<%=`/edit/${deal._id}`%> >Edit</a>
-  <button id="delete_btn">Delete</button> 
             </form>
 
             </div>

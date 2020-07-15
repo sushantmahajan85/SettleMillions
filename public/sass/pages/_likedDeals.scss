@@ -241,12 +241,25 @@ margin-right: 0.5rem;
   height: 2.4rem;
   margin-left: 0.5rem;
  }
- .deal_area_box {
+ 
+ .deal_area_content{
+   margin-left: 3.5rem;
+   width: 75rem;
+ }
+
+ .content_box{
+  // float: left;
+  margin-left: 1rem;
+  // margin-top: 1.5rem;
+  
+}
+
+.ld_deal_box{
   display: flex;
   // background-color: white;
   margin: 0.5rem;
   width: 110rem;
-  height: 25rem;
+  height: 21rem;
   // display: flex;
   flex-direction: row;
   border-radius: 1rem;
@@ -256,7 +269,7 @@ margin-right: 0.5rem;
   border: 0.5px solid #f2f2f2;
   &_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 12rem;
+    padding: 10rem;
     // border-radius: 1rem;
     background-size: 100% 100%;
     overflow: hidden;
@@ -268,23 +281,93 @@ margin-right: 0.5rem;
     // border: 1.5px solid #f2f3f4;
   }
 }
- .deal_area_content{
-   margin-left: 3.5rem;
- }
 
- .content_box{
-  // float: left;
-  margin-left: 1rem;
-  // margin-top: 1.5rem;
-  
-}
 
 .ld_deal-title{
   font-size: 2.5rem;
   color: #000000;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.1rem;
-  font-family: "Bitter", serif;
+  // font-family: "Bitter", serif;
   text-transform: capitalize;
+  margin-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.ld_deal-r1{
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem;
+
+  &-det{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-right: 1rem;
+  }
+}
+
+
+.ld_deal-r2{
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem;
+
+  &-det{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-right: 1rem;
+
+  }
+}
+
+
+.ld_deal-r3{
+  margin-bottom: 2rem;
+  margin-left: 0.3rem;
+
+  &-dp{
+    font-weight: 500;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+
+  }
+  &-mrp{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #8d99ae;
+    text-decoration: line-through;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 4px 0;
+  }
+  &-dis{
+    color: #d10024;
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 4px 0;
+    
+  }
+}
+
+
+.ld_deal-r4{
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem;
+
+  &-det{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-right: 1rem;
+
+  }
 }
 

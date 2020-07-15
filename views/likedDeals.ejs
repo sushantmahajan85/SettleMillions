@@ -203,43 +203,49 @@
  <% } else { %>
     <% for(var likedDeal of user.likedDeals) { %>
         <a href=<%= `/deal/${likedDeal.deal._id}/postedBy/${likedDeal.deal.user}` %>>
-            <div class="deal_area_box">
+            <div class="ld_deal_box">
                 <div class="bigImg_container">
-                    <div class="deal_area_box_img"></div>
+                    <div class="ld_deal_box_img"></div>
                 </div>
                 <div class="deal_area_content">
                     <!-- <div class="picture_container">
                         <div class="profile_pic"></div>
                          </div> -->
-                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                    <div class="content_box" style="display: flex;flex-direction: column;">
                         <div class="ld_deal_content-box"
-                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+                            style="display: flex;flex-direction: row;align-items: center; ">
 
-                            <div class="deal_box_name ld_deal-title"><%= likedDeal.deal.dealName %> </div>
-
-                        </div>
-                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                            <div class="deal_box_views"><%= likedDeal.deal.owner %> </div>
-                            <div class="deal_box_time"><%= likedDeal.deal.company %> </div>
+                            <div class=" ld_deal-title"><%= likedDeal.deal.dealName %> </div>
 
                         </div>
+                        <div class="ld_deal-r1" style="display: flex;flex-direction: row;align-items: center; ">
 
-
-                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                            <div class="deal_box_views"><%=`${likedDeal.deal.dealPrice}rs`%></div>
-                            <div class="deal_box_time">80% OFF</div>
-                            <div class="deal_box_time"><%=`${likedDeal.deal.mrp}rs`%></div>
-                        </div>
-
-                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                            <div class="deal_box_views"><%=`${likedDeal.deal.views} views`%></div>
-                            <div class="deal_box_time">
+                            <div class="ld_deal-r1-det"><%= likedDeal.deal.owner %> </div>
+                            <div class="ld_deal-r1-det"><%= likedDeal.deal.company %> </div>
+                            <div class="ld_deal-r1-det">
                                 <%= likedDeal.deal.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %>
                             </div>
+
                         </div>
-                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                            <div><%= likedDeal.deal.titleDis %></div>
+
+                        <div class="ld_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
+                            <div class="ld_deal-r2-det">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                        </div>
+
+                        <div class="ld_deal-r3" style="display: flex;flex-direction: row ">
+                            <div class="ld_deal-r3-dp"><%=`₹${likedDeal.deal.dealPrice}`%></div>
+                            <div class="ld_deal-r3-mrp"><%=`₹${likedDeal.deal.mrp}`%></div>
+                            <div class="ld_deal-r3-dis">80% OFF</div>
+                        </div>
+                        
+
+                        <div class="ld_deal-r4" style="display: flex;flex-direction: row">
+                            <div class="ld_deal-r4-det">Mobiles</div>
+                            <div class="ld_deal-r4-det"><%=`${likedDeal.deal.views} views`%></div>
+                            <!-- <div class="ld_deal-r4-det"><%= likedDeal.deal.titleDis %></div> -->
+                            
                         </div>
                     </div>
                 </div>

@@ -348,6 +348,34 @@
   display: none;
 }
 
+.deal_area_box {
+  display: flex;
+  // background-color: white;
+  margin: 0.5rem;
+  width: 110rem;
+  height: 21rem;
+  // display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  overflow: hidden;
+  line-height: 1;
+  // box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9;
+  border: 0.5px solid #f2f2f2;
+  &_img {
+    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+    padding: 10rem;
+    // border-radius: 1rem;
+    background-size: 100% 100%;
+    overflow: hidden;
+    // border: 0.5px solid #f4f6f7;
+    border-right: 1px solid #f2f3f4;
+  }
+  &:hover {
+    box-shadow: none;
+    // border: 1.5px solid #f2f3f4;
+  }
+}
+
 .deal_box_nameTime {
   margin-bottom: 2rem;
 }

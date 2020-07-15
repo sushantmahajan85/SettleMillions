@@ -338,6 +338,25 @@ $body: "Roboto", sans-serif;
   margin-top: 8rem;
 }
 
+.leftbox_element {
+  // text-align: center;
+  padding: 1.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgb(39, 39, 39);
+  transition: 0.25s all;
+}
+
+.leftbox_element:hover {
+  background-color: #f2f2f2;
+}
+
+.fa-cog, .fa-lock, .fa-star, .fa-heart, .fa-sign-out-alt {
+  margin-right: 10px;
+  margin-left: 5px;
+  color: rgb(39, 39, 39);
+}
+
 .rightbox {
   padding-left: 5rem;
   float: right;

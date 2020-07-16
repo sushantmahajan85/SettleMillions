@@ -172,12 +172,12 @@ exports.login = async (req, res, next) => {
     // await new Email(user, resetURL).sendPasswordReset();
 
     /////////////////////////////////Error in Production/////////////////////////////////////////////
-    try{
+    // try{
     const url = "amazon.in";
     await new Email(user, url).sendWelcome();
-    }catch (err) {
-      console.log(err);
-    }
+    // }catch (err) {
+    //   console.log(err);
+    // }
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
     res.cookie("jwt", token, cookieOptions);

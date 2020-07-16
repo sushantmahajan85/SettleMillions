@@ -11,6 +11,7 @@
   display: -ms-flexbox;
   display: flex;
 }
+
 .user-view__menu {
   -webkit-box-flex: 32rem;
   -ms-flex: 32rem 0 0px;
@@ -25,16 +26,16 @@
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   padding: 4rem 0;
 }
+
 .user-view__content {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 7rem 0;
+  padding: 2rem 0;
 }
+
 .user-view__form-container {
   max-width: 68rem;
-  margin: 0 auto;
-  padding: 0 8rem;
 }
 
 .form__input {
@@ -352,6 +353,8 @@ $body: "Roboto", sans-serif;
   margin-right: 10px;
   margin-left: 5px;
   color: rgb(39, 39, 39);
+  height: 16px;
+  width: 16px;
 }
 
 .rightbox {
@@ -369,3 +372,12 @@ $body: "Roboto", sans-serif;
 // body{
 //   background-color: rgb(242, 243, 246 );
 // }
+
+#twofactorauth {
+  margin-top: 2rem;
+}
+
+#deleteAccount {
+  display: block;
+  margin-top: 2rem;
+}

@@ -1892,12 +1892,10 @@ figure {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 7rem 0; }
+  padding: 2rem 0; }
 
 .user-view__form-container {
-  max-width: 68rem;
-  margin: 0 auto;
-  padding: 0 8rem; }
+  max-width: 68rem; }
 
 .form__input {
   display: block;
@@ -2130,7 +2128,9 @@ figure {
 .leftbox_icon {
   margin-right: 10px;
   margin-left: 5px;
-  color: #272727; }
+  color: #272727;
+  height: 16px;
+  width: 16px; }
 
 .rightbox {
   padding-left: 5rem;
@@ -2141,6 +2141,13 @@ figure {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;
   margin-top: 8rem; }
+
+#twofactorauth {
+  margin-top: 2rem; }
+
+#deleteAccount {
+  display: block;
+  margin-top: 2rem; }
 
 .card {
   -webkit-perspective: 150rem;

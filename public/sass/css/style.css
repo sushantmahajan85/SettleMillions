@@ -1765,12 +1765,10 @@ figure {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 7rem 0; }
+  padding: 2rem 0; }
 
 .user-view__form-container {
-  max-width: 68rem;
-  margin: 0 auto;
-  padding: 0 8rem; }
+  max-width: 68rem; }
 
 .form__input {
   display: block;

@@ -1310,41 +1310,19 @@ figure {
   border-radius: 50%;
   height: 3.7rem;
   width: 3.7rem;
-  background-color: black; }
+  background-color: black;
+  margin-top: 1rem; }
 
 .picture_container {
   height: 3.8rem;
   width: 3.8rem;
   float: left; }
 
-.cover {
-  padding-top: 9rem !important;
-  width: 100%;
-  height: 20vh;
-  background-color: orangered; }
+.deal_area {
+  padding-top: 6.5rem; }
 
 .member-page-content {
   background-color: white; }
-
-.profile_area {
-  width: 100%;
-  height: 10.5vh;
-  background-color: yellowgreen;
-  display: block; }
-  .profile_area_pic {
-    border-radius: 50%;
-    height: 6rem;
-    width: 6rem;
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-left: 5rem;
-    background-color: black; }
-  .profile_area_subs {
-    float: right;
-    margin-top: 1rem;
-    margin-right: 5rem;
-    padding: 1rem 2rem;
-    background-color: red; }
 
 .deal_box_description {
   font-family: Arial, Helvetica, sans-serif;
@@ -1572,6 +1550,195 @@ figure {
 
 #big-three-dots {
   position: relative; }
+
+.cover {
+  width: 100%;
+  height: 30rem; }
+
+.cover_pic {
+  height: 30rem;
+  background: linear-gradient(260deg, #01d3f6, #01affe);
+  background-blend-mode: initial;
+  top: 0px;
+  position: relative;
+  box-shadow: 4px 0px 9px 3px #232627; }
+
+.cover_pic::before {
+  content: "";
+  background: #000000;
+  opacity: 0.5;
+  width: 100%;
+  height: 30rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.cover_aff-pic {
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  display: inline-block;
+  background-color: black;
+  position: absolute;
+  top: 15%;
+  left: 5%; }
+
+.cover_aff {
+  margin: 0; }
+  .cover_aff-name {
+    font-size: 3rem;
+    color: #F4F6F7;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3;
+    position: absolute;
+    top: 15%;
+    left: 14%; }
+    .cover_aff-name-tag {
+      font-size: 1.5rem;
+      position: relative;
+      bottom: 0.5rem;
+      left: 0.5rem; }
+  .cover_aff-subs {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 30%;
+    left: 14.5%; }
+  .cover_aff-deals {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 14.5%; }
+  .cover_aff-likes {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 24.5%; }
+  .cover_aff-views {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 34.5%; }
+  .cover_aff-space1 {
+    font-size: 3rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 22.5%; }
+  .cover_aff-space2 {
+    font-size: 3rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 32%; }
+  .cover_aff-subs-button {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 21%;
+    left: 36%; }
+    .cover_aff-subs-button-txt {
+      font-size: 1.6rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0C8BCF; }
+
+.latest-deals {
+  position: relative;
+  top: 0.3rem;
+  display: block;
+  background-color: #ECF0F1;
+  height: 32rem;
+  box-shadow: 4px 0px 6px 0.1px #909497; }
+  .latest-deals-title {
+    font-size: 3rem;
+    color: #A6ACAF;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3;
+    position: absolute;
+    top: 5%;
+    left: 5%; }
+  .latest-deals-deal1 {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 32rem; }
+    .latest-deals-deal1 img {
+      object-fit: scale-down;
+      height: 20rem;
+      width: 20rem;
+      mix-blend-mode: multiply;
+      border: 2px solid #ECF0F1; }
+  .latest-deals-deal2 {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 32rem; }
+    .latest-deals-deal2 img {
+      object-fit: scale-down;
+      height: 20rem;
+      width: 20rem;
+      mix-blend-mode: multiply; }
+  .latest-deals-deal3 {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    width: 32rem; }
+    .latest-deals-deal3 img {
+      object-fit: scale-down;
+      height: 20rem;
+      width: 20rem;
+      mix-blend-mode: multiply; }
+
+.deal1-det, .deal2-det, .deal3-det {
+  display: inline-block;
+  position: absolute;
+  top: 2.3rem;
+  font-size: 1.3rem;
+  color: #626567;
+  margin-left: 1rem; }
+  .deal1-det-name, .deal2-det-name, .deal3-det-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 3.5rem;
+    color: black; }
+  .deal1-det-dp, .deal2-det-dp, .deal3-det-dp {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: black; }
+  .deal1-det-mrp, .deal2-det-mrp, .deal3-det-mrp {
+    display: inline-block;
+    text-decoration: line-through;
+    margin-left: 0.5rem; }
+  .deal1-det-dis, .deal2-det-dis, .deal3-det-dis {
+    color: #d10024;
+    font-size: 1.8rem; }
 
 .user-view {
   background-color: #fff;
@@ -2763,7 +2930,7 @@ body {
 
 .deal_area {
   height: 200rem;
-  padding-top: 9rem;
+  padding-top: 6.5rem;
   margin-left: 12%; }
 
 .like_d_column {
@@ -2968,18 +3135,19 @@ input#price-max {
   margin: 0.5rem;
   width: 100rem;
   height: 22rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
-  line-height: 1; }
+  line-height: 1;
+  box-shadow: 1px 0px 3px 1.5px #F0F3F4; }
   .ld_deal_box_img {
     background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
     padding: 10.5rem;
     background-size: 100% 100%;
     overflow: hidden; }
   .ld_deal_box:hover {
-    box-shadow: 1px 0px 3px 4px #F0F3F4; }
+    box-shadow: 1px 0px 3px 5px #F0F3F4; }
 
 .ld_deal-title {
   font-size: 2.6rem;
@@ -3223,9 +3391,6 @@ a {
 .nav-links li {
   list-style: none;
   display: inline-block; }
-
-.deal_area {
-  padding-top: 6rem; }
 
 .deal_info {
   width: 35%;

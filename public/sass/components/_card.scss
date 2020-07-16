@@ -42,7 +42,7 @@
 .three-dots {
   float: right;
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 3rem;
   right: 0;
   font-size: 2rem;
   text-align: center;
@@ -381,9 +381,10 @@ footer {
   border: 1px solid grey;
   border-radius: 0.6rem;
   transition: all 0.3s;
-  &:hover {
-    // transform: scale(1.02);
-  }
+  // &:hover {
+  //   // transform: scale(1.02);
+
+  // }
   &_img {
     height: inherit;
     width: 30%;

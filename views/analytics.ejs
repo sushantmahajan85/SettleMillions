@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Analytics</title>
+   <link rel="stylesheet" href="/sass/css/style.css">
+
+</head>
+<body>
+
+   <div style="height: 12vh;">
+      <%- include('partials/navbar.ejs') %>
+    </div>
+
+    <form id="analyticsForm">
+      <h1 class="Post-box-title">Analytics</h1>
+
+          <input placeholder="Link...(Required)" id="analyticsInput" />
+          <!-- <input placeholder="Campaign Source...(Required)" />
+          <input placeholder="Campaign ------...(Required)" /> -->
+          <button type="submit" id="analytics">Do Analytics</button>
+   </form>
+
+   <div>
+    <% for(var campaign of dataAnalytics){ %>
+       <div><%= campaign.Campaign %></div>
+       <div><%= campaign["New users"] %></div>
+    <% } %>
+   </div>
+
+   <!-- <div class="footer">
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h2>About</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>About Us</li>
+                  </a>
+                  <a href="#">
+                      <li>Contact Us</li>
+                  </a>
+                  <a href="#">
+                      <li>Careers</li>
+                  </a>
+                  <a href="#">
+                      <li>Our Team</li>
+                  </a>
+
+              </ul>
+          </div>
+          <div class="footer-section social">
+              <h2>Social</h2>
+              <br>
+              <ul>
+                  <a href="https://twitter.com/">
+                      <li><i class="fab fa-twitter"></i>Twitter</li>
+                  </a>
+                  <a href="https://www.facebook.com/">
+                      <li><i class="fab fa-facebook-f"></i>Facebook</li>
+                  </a>
+                  <a href="https://twitter.com/">
+                      <li><i class="fab fa-instagram"></i>Instagram</li>
+                  </a>
+              </ul>
+          </div>
+          <div class="footer-section policy">
+              <h2>Policy</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>Terms and Conditions</li>
+                  </a>
+                  <a href="#">
+                      <li>Privacy Policy</li>
+                  </a>
+              </ul>
+          </div>
+          <div class="footer-section help">
+              <h2>Help</h2>
+              <br>
+              <ul>
+                  <a href="#">
+                      <li>How to Post a Deal</li>
+                  </a>
+                  <a href="#">
+                      <li>FAQ</li>
+                  </a>
+                  <a href="#">
+                      <li>Report</li>
+                  </a>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <hr>
+          </hr>
+          &copy; 2020, Your Deal Inc.
+
+      </div>
+   </div> -->
+
+   <script>
+      console.log('chal');
+
+      document.getElementById("analyticsForm").addEventListener("submit", (e) => {
+         e.preventDefault();
+         var url = document.getElementById("analyticsInput").value;
+         console.log(url);
+
+         var affURL = `${url}?utm_source=userId&utm_medium=userId&utm_campaign=userId`;
+         var newDiv = document.createElement("div"); 
+         var newContent = document.createTextNode(affURL); 
+         newDiv.appendChild(newContent); 
+
+         document.body.insertBefore(newDiv, analyticsForm); 
+      });
+   </script>
+
+</body>
+</html>

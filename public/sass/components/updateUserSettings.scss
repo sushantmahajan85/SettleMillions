@@ -291,9 +291,6 @@ $body: "Roboto", sans-serif;
   }
 }
 
-
-
-
 // nav a {
 //   list-style: none;
 //   padding: 35px;
@@ -333,9 +330,28 @@ $body: "Roboto", sans-serif;
   width: 19%;
   height: 100%;
   background-color: #FBFCFC;
-  box-shadow: 1px 9px 5px 4px rgba(0,0,0,.08);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-left: 1rem;
   margin-top: 8rem;
+}
+
+.leftbox_element {
+  // text-align: center;
+  padding: 1.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgb(39, 39, 39);
+  transition: 0.25s all;
+}
+
+.leftbox_element:hover {
+  background-color: #f2f2f2;
+}
+
+ .leftbox_icon {
+  margin-right: 10px;
+  margin-left: 5px;
+  color: rgb(39, 39, 39);
 }
 
 .rightbox {
@@ -344,7 +360,7 @@ $body: "Roboto", sans-serif;
   width: 77%;
   height: 100%;
   background-color: #FBFCFC;
-  box-shadow: 0px 9px 5px 4px rgba(0,0,0,.08);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;
   margin-top: 8rem;
 }

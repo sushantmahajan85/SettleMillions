@@ -1318,10 +1318,6 @@ figure {
   width: 3.8rem;
   float: left; }
 
-.cover {
-  width: 100%;
-  height: 32rem; }
-
 .deal_area {
   padding-top: 6.5rem; }
 
@@ -1333,12 +1329,6 @@ figure {
   height: 10.5vh;
   background-color: yellowgreen;
   display: block; }
-  .profile_area_subs {
-    float: right;
-    margin-top: 1rem;
-    margin-right: 5rem;
-    padding: 1rem 2rem;
-    background-color: red; }
 
 .deal_box_description {
   font-family: Arial, Helvetica, sans-serif;
@@ -1567,8 +1557,12 @@ figure {
 #big-three-dots {
   position: relative; }
 
+.cover {
+  width: 100%;
+  height: 30rem; }
+
 .cover_pic {
-  height: 32rem;
+  height: 30rem;
   background: linear-gradient(260deg, #01d3f6, #01affe);
   background-blend-mode: initial;
   top: 0px;
@@ -1577,22 +1571,106 @@ figure {
 .cover_pic::before {
   content: "";
   background: #000000;
-  opacity: 0.3;
-  width: 88%;
-  height: 32rem;
+  opacity: 0.5;
+  width: 100%;
+  height: 30rem;
   position: absolute;
-  top: 6.5rem;
+  top: 0;
   bottom: 0;
-  left: 12%;
+  left: 0;
   right: 0; }
 
-.cover_profile-pic {
+.cover_aff-pic {
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
+  height: 9rem;
+  width: 9rem;
   display: inline-block;
   background-color: black;
-  position: absolute; }
+  position: absolute;
+  top: 15%;
+  left: 5%; }
+
+.cover_aff {
+  margin: 0; }
+  .cover_aff-name {
+    font-size: 3rem;
+    color: #F4F6F7;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3;
+    position: absolute;
+    top: 15%;
+    left: 14%; }
+    .cover_aff-name-tag {
+      font-size: 1.5rem;
+      position: relative;
+      bottom: 0.5rem;
+      left: 0.5rem; }
+  .cover_aff-subs {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 30%;
+    left: 14.5%; }
+  .cover_aff-deals {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 14.5%; }
+  .cover_aff-likes {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 24.5%; }
+  .cover_aff-views {
+    font-size: 1.8rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 34.5%; }
+  .cover_aff-space1 {
+    font-size: 3rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 22.5%; }
+  .cover_aff-space2 {
+    font-size: 3rem;
+    color: #F4F6F7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 32%; }
+  .cover_aff-subs-button {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 21%;
+    left: 36%; }
+    .cover_aff-subs-button-txt {
+      font-size: 1.6rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0C8BCF; }
 
 .user-view {
   background-color: #fff;

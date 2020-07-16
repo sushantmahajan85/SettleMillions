@@ -1836,7 +1836,9 @@ figure {
 .leftbox_icon {
   margin-right: 10px;
   margin-left: 5px;
-  color: #272727; }
+  color: #272727;
+  height: 16px;
+  width: 16px; }
 
 .rightbox {
   padding-left: 5rem;

@@ -124,7 +124,7 @@ exports.verify = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-  try {
+  
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -172,7 +172,7 @@ exports.login = async (req, res, next) => {
     // await new Email(user, resetURL).sendPasswordReset();
 
     /////////////////////////////////Error in Production/////////////////////////////////////////////
-    // try{
+  try{
     const url = "amazon.in";
     await new Email(user, url).sendWelcome();
     // }catch (err) {
@@ -190,6 +190,9 @@ exports.login = async (req, res, next) => {
     });
   } catch (error) {
     console.log(error);
+    return next(
+      new AppError("Email Not Sent", 500)
+    );
   }
 };
 

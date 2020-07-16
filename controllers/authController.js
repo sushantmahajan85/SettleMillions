@@ -59,7 +59,7 @@ exports.signUp = async (req, res) => {
 //       //phoneNo: req.body.phoneNo,
 //       passwordConfirm: req.body.passwordConfirm,
 //     });
-    
+
 //     res.status(201).json({
 //       status: "success",
 //       //token,
@@ -154,8 +154,6 @@ exports.login = async (req, res, next) => {
     };
     if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-
-
     // const resetURL = `${req.protocol}://${req.get(
     //   "host"
     // )}/api/v1/users/resetPassword/${resetToken}`;
@@ -173,19 +171,17 @@ exports.login = async (req, res, next) => {
 
     // await new Email(user, resetURL).sendPasswordReset();
 
-
     /////////////////////////////////Error in Production/////////////////////////////////////////////
-    // const url = "amazon.in";
-    // await new Email(user, url).sendWelcome();
+    const url = "amazon.in";
+    await new Email(user, url).sendWelcome();
     /////////////////////////////////////////////////////////////////////////////////////////////////
-
 
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({
       status: "success",
       token,
       data: {
-        user
+        user,
       },
     });
   } catch (error) {

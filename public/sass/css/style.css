@@ -1325,24 +1325,6 @@ figure {
 .deal_area {
   padding-top: 6.5rem; }
 
-.cover_pic::before {
-  content: "";
-  background: #000000;
-  opacity: 0.5;
-  width: 88%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 12%;
-  right: 0; }
-
-.cover_pic {
-  height: 32rem;
-  background: linear-gradient(262deg, #00d2f3, #00aaff);
-  background-blend-mode: initial;
-  top: 0px; }
-
 .member-page-content {
   background-color: white; }
 
@@ -1351,14 +1333,6 @@ figure {
   height: 10.5vh;
   background-color: yellowgreen;
   display: block; }
-  .profile_area_pic {
-    border-radius: 50%;
-    height: 6rem;
-    width: 6rem;
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-left: 5rem;
-    background-color: black; }
   .profile_area_subs {
     float: right;
     margin-top: 1rem;
@@ -1592,6 +1566,33 @@ figure {
 
 #big-three-dots {
   position: relative; }
+
+.cover_pic {
+  height: 32rem;
+  background: linear-gradient(260deg, #01d3f6, #01affe);
+  background-blend-mode: initial;
+  top: 0px;
+  position: relative; }
+
+.cover_pic::before {
+  content: "";
+  background: #000000;
+  opacity: 0.3;
+  width: 88%;
+  height: 32rem;
+  position: absolute;
+  top: 6.5rem;
+  bottom: 0;
+  left: 12%;
+  right: 0; }
+
+.cover_profile-pic {
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  display: inline-block;
+  background-color: black;
+  position: absolute; }
 
 .user-view {
   background-color: #fff;
@@ -2781,7 +2782,7 @@ body {
 
 .deal_area {
   height: 200rem;
-  padding-top: 9rem;
+  padding-top: 6.5rem;
   margin-left: 12%; }
 
 .like_d_column {

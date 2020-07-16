@@ -1,0 +1,29 @@
+.cover_pic {
+  height: 32rem;
+  background: linear-gradient(260deg, rgb(1, 211, 246), rgb(1, 175, 254));
+  background-blend-mode: initial;
+  top: 0px;
+  position: relative;
+}
+
+.cover_pic::before {
+  content: "";
+  background: #000000;
+  opacity: 0.3;
+  width: 88%;
+  height: 32rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+}
+
+.cover_profile-pic {
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  display: inline-block;
+  background-color: black;
+  position: absolute;
+}

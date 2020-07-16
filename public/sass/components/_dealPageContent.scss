@@ -441,25 +441,8 @@
 }
 
 
-.cover_pic::before {
-  content: "";
-  background: #000000;
-  opacity: 0.5;
-  width: 88%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 12%;
-  right: 0;
-}
 
-.cover_pic {
-  height: 32rem;
-  background: linear-gradient(262deg, rgb(0, 210, 243), rgb(0, 170, 255));
-  background-blend-mode: initial;
-  top: 0px;
-}
+
 
 .member-page-content {
   background-color: white;
@@ -471,15 +454,15 @@
   height: 10.5vh;
   background-color: yellowgreen;
   display: block;
-  &_pic {
-    border-radius: 50%;
-    height: 6rem;
-    width: 6rem;
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-left: 5rem;
-    background-color: black;
-  }
+  // &_pic {
+  //   border-radius: 50%;
+  //   height: 6rem;
+  //   width: 6rem;
+  //   display: inline-block;
+  //   margin-top: 0.5rem;
+  //   margin-left: 5rem;
+  //   background-color: black;
+  // }
   &_subs {
     float: right;
     margin-top: 1rem;
@@ -488,6 +471,8 @@
     background-color: red;
   }
 }
+
+
 
 .deal_box_description {
   font-family: Arial, Helvetica, sans-serif;

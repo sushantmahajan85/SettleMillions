@@ -138,8 +138,8 @@ exports.login = async (req, res, next) => {
     // await new Email(user, url).sendWelcome();
     if (
       !user ||
-      !(await user.verifyPassword(password, user.password)) ||
-      !user.verified
+      !(await user.verifyPassword(password, user.password)) /*||
+      !user.verified*/
     ) {
       return next(new AppError("No user found", 400));
     }

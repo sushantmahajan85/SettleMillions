@@ -1833,7 +1833,7 @@ figure {
 .leftbox_element:hover {
   background-color: #f2f2f2; }
 
-.fa-cog, .fa-lock, .fa-star, .fa-heart, .fa-sign-out-alt {
+.leftbox_icon {
   margin-right: 10px;
   margin-left: 5px;
   color: #272727; }

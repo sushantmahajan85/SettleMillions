@@ -17,10 +17,12 @@ router.get(
   viewController.getRecruitmentsData
 );
 router.get("/", viewController.mainPage);
+router.get("/analytics", viewController.analytics);
 router.get("/member/:id", viewController.getMemberData);
 router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
 router.get("/forgotPassword", viewController.forgot);
 router.get("/resetPassword/:bytes", viewController.reset);
+router.get("/trending", viewController.getTrendingDeals);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get(
   "/subscriptions",

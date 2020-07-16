@@ -50,6 +50,7 @@
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
+  display: block;
   &:hover {
     background-color: #fff;
   }
@@ -93,7 +94,6 @@
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   }
 }
-
 
 /////////////////////////////////////////////////////
 
@@ -307,14 +307,21 @@ footer {
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: block;
 }
+
+.carousel-item.active {
+  height: inherit;
+}
+
 .active {
   opacity: 1;
 }
+
 .active,
 .dot:hover {
   background-color: unset !important;
@@ -364,10 +371,10 @@ footer {
 .big-deal {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 98%;
   overflow: hidden;
   backface-visibility: hidden;
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.288);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
   // margin-left: 6rem;
   margin-bottom: 4rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -375,17 +382,17 @@ footer {
   border-radius: 0.6rem;
   transition: all 0.3s;
   &:hover {
-    transform: scale(1.02);
+    // transform: scale(1.02);
   }
   &_img {
     height: inherit;
-    width: 35%;
+    width: 30%;
     // background-color: red;
   }
   &_content {
     height: inherit;
     background-color: rgb(241, 250, 241);
-    width: 65%;
+    width: 70%;
     padding: 2rem;
   }
   &_picture {
@@ -394,7 +401,7 @@ footer {
     width: 100%;
   }
   &_name {
-    font-size: 1.86rem;
+    font-size: 1.9rem;
   }
   &_price {
     margin-top: 1.2rem;

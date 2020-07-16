@@ -303,7 +303,7 @@ input[type="password"] {
 .footer-content {
   height: 22rem;
   display: flex;
-  margin: 0% 15.9%;
+  margin: 0% 19%;
 }
 
 .footer-content h2 {
@@ -314,9 +314,20 @@ input[type="password"] {
 }
 
 .footer-section {
-  flex: 1;
-  padding: 2.5rem;
+  // flex: 1;
+  padding: 1.8rem;
+  margin-top: 1rem;
   /* border: 1px solid white; */
+  margin-right: 2.4rem;
+}
+
+.footer-section.help {
+  margin-right: 0rem;
+  padding-right: 0rem;
+}
+
+.footer-section.about {
+  margin-left: 3.5rem;
 }
 
 .footer-section ul {
@@ -392,6 +403,7 @@ hr {
     flex: 1 1 0;
     /* justify-content: flex-end; */
     margin-right: 2rem;
+
     // margin-left: 1rem;
   }
 

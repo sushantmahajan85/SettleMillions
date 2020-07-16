@@ -39,15 +39,27 @@
 
     <section class="deal_area">
       <div class="cover">
-        <div class="cover_pic"></div>
+        <div class="cover_pic">
+          <div class="cover_aff-pic"></div>
+          <div class="cover_aff-name">Cooper Deals <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
+          <div class="cover_aff-subs">5k subscribers</div>
+
+          <div class="cover_aff-deals">335 deals</div>
+          <div class="cover_aff-space1">|</div>
+          <div class="cover_aff-likes">720 likes</div>
+          <div class="cover_aff-space2">|</div>
+          <div class="cover_aff-views">2M views</div>
+          <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
+            <h6 class="cover_aff-subs-button-txt">Subscribe</h6>
+          </a>
+        </div>
+        
       </div>
       <div class="profile_area">
-        <div class="profile_area_pic"></div>
-        <a href="#" id="subscribe_btn" class="profile_area_subs">
-          <h6 class="heading-normal">Subscribe</h6>
-        </a>
+        <!-- <div class="profile_area_pic"></div> -->
+        
       </div>
-      <div class="page-content">
+      <div class="member-page-content">
         <div id="trending" class="trending">
           <% for(var deal of deals) { %>
 
@@ -112,15 +124,11 @@
                 </h4>
               </div>
               <div class="big-deal_dis">
-                <strike
-                  style="font-size: 1.8rem; color:rgb(82, 80, 80);margin-right: 2rem"
-                  >Rs.7854</strike
-                >
-
+                <strike>Rs.7854</strike>
                 <h3 class="big-deal_percent">70% OFF</h3>
               </div>
               <form action="/" method="GET" class=reportx>
-                <select class="three-dots" name="dealOps" onchange="dealOperations(this)">
+                <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
                     <option selected disabled value="empty"></option>
                     <option value=<%= `${deal._id}/report` %>>Report</option>
                     <option value=<%= `${deal._id}/like` %>>Like</option>
@@ -132,8 +140,6 @@
                     <% } %>
                    
                 </select>
-                <a href=<%=`/edit/${deal._id}`%> >Edit</a>
-  <button id="delete_btn">Delete</button> 
             </form>
 
             </div>

@@ -45,7 +45,7 @@
     <div class="rightbox">
       <div class="user-view__content">
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
+          <h2 class="heading-secondary ma-bt-md">General Settings</h2>
           <form class="form form-user-data" id="form-user-data">
             <div class="form__group">
               <label class="form__label" for="name">Name</label><input class="form__input" id="name" type="text"
@@ -75,7 +75,7 @@
         </div>
         <div class="line">&nbsp;</div>
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md">Password change</h2>
+          <h2 class="heading-secondary ma-bt-md">Security & Login</h2>
           <form class="form form-user-settings " id="pass">
             <div class="form__group">
               <label class="form__label" for="password-current">Current password</label><input class="form__input"
@@ -95,6 +95,12 @@
               </button>
             </div>
           </form>
+          <button class="btn-update-settings btn--small btn--green" id="twofactorauth">
+            Enable two-factor authentication
+          </button>
+          <button class="btn-update-settings btn--small btn--green" id="deleteAccount">
+            Delete Account
+          </button>
         </div>
       </div>
     </div>

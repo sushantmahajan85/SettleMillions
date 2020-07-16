@@ -2015,6 +2015,13 @@ figure {
   margin-right: 2rem;
   margin-top: 8rem; }
 
+#twofactorauth {
+  margin-top: 2rem; }
+
+#deleteAccount {
+  display: block;
+  margin-top: 2rem; }
+
 .card {
   -webkit-perspective: 150rem;
   perspective: 150rem;

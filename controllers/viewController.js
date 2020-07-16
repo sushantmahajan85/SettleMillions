@@ -6,6 +6,7 @@ const catchAsync = require("./../utils/catchAsync");
 const appError = require("./../utils/appError");
 const exec = require("child_process").exec;
 const url = require("url");
+const { del } = require("request");
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -23,6 +24,21 @@ let rec5 = "";
 // exports.getSignupApp = (req, res) => {
 //   res.status(200).render("signup");
 // };
+
+exports.calcul = catchAsync(async (req, res) => {
+  const tempideals = await Deal.find();
+  console.log('AAO');
+
+  for (var deal of tempideals) {
+      var now = new Date(Date.now());
+      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      tem = deal.views / tem;
+
+      console.log(deal._id);
+
+      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    }
+});
 
 exports.analytics = catchAsync(async (req, res) => {
   const request = require('request');
@@ -331,14 +347,14 @@ exports.mainPage = catchAsync(async (req, res) => {
       };
     }
 
-    //const tempDeals = await Deal.find();
+    // const tempideals = await Deal.find();
 
     // for (var deal of tempideals) {
     //   var now = new Date(Date.now());
     //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
     //   tem = deal.views / tem;
 
-    //   //console.log(deal._id);
+    //   console.log(deal._id);
 
     //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     // }
@@ -404,16 +420,19 @@ exports.mainPage = catchAsync(async (req, res) => {
     //   order = -1;
     // }
 
-    const tempDeals = await Deal.find();
+    // const tempDeals = await Deal.find();
 
     // for (var deal of tempDeals) {
     //   var now = new Date(Date.now());
     //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
     //   tem = deal.views / tem;
 
-    //   //console.log(deal._id);
+    //   console.log(deal._id);
 
-    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    //   deal.trendRatio = tem;
+    //   await deal.save();
+
+    //   // await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     // }
 
     // const user = await User.findById(req.user);
@@ -429,6 +448,19 @@ exports.mainPage = catchAsync(async (req, res) => {
       cooCount,
       recentlyViewed,
     });
+
+    const tempideals = await Deal.find();
+
+    for (var deal of tempideals) {
+      var now = new Date(Date.now());
+      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      tem = deal.views / tem;
+
+      console.log(deal._id);
+
+      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    }
+
   }
 });
 
@@ -736,7 +768,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     order = -1;
   }
 
-  const tempDeals = await Deal.find();
+  // const tempDeals = await Deal.find();
 
   // for (var dealing of tempDeals) {
   //   var now = new Date(Date.now());
@@ -757,6 +789,19 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     cooCount,
     trendDeals,
   });
+
+  const tempDeals = await Deal.find();
+
+  for (var dealing of tempDeals) {
+    var now = new Date(Date.now());
+    var tem = (now.getTime() - dealing.time.getTime()) / 3600000;
+    tem = dealing.views / tem;
+
+    //console.log(deal._id);
+
+    await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
+  }
+
 });
 // function escapeRegex(text) {
 //   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");

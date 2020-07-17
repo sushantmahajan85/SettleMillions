@@ -1585,11 +1585,57 @@ figure {
   top: 15%;
   left: 5%; }
 
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; }
+
+.mep_pic-user {
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  display: inline-block;
+  top: 15%;
+  left: 5%;
+  padding: 0rem; }
+
+.mep_pic-user-overlay {
+  position: absolute;
+  top: 2.4rem;
+  bottom: 0;
+  left: 2.3rem;
+  right: 0;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #2d3537; }
+
+.cover_aff-pic:hover .mep_pic-user-overlay {
+  opacity: 1; }
+
+.mep_add-icon {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f2f2f2; }
+
+.add-icon {
+  color: white; }
+
+.add-icon:hover {
+  color: #f2f2f2; }
+
 .cover_aff {
   margin: 0; }
   .cover_aff-name {
     font-size: 3rem;
-    color: #F4F6F7;
+    color: #f4f6f7;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.3;
@@ -1603,16 +1649,25 @@ figure {
       left: 0.5rem; }
   .cover_aff-subs {
     font-size: 1.8rem;
-    color: #F4F6F7;
+    color: #f4f6f7;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 30%;
     left: 14.5%; }
+  .cover_aff-bio {
+    font-size: 1.3rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 45%;
+    left: 14.5%; }
   .cover_aff-deals {
     font-size: 1.8rem;
-    color: #F4F6F7;
+    color: #f4f6f7;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
@@ -1621,25 +1676,38 @@ figure {
     left: 14.5%; }
   .cover_aff-likes {
     font-size: 1.8rem;
-    color: #F4F6F7;
+    color: #f4f6f7;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 80%;
     left: 24.5%; }
-  .cover_aff-views {
-    font-size: 1.8rem;
-    color: #F4F6F7;
+  .cover_aff-views, .cover_aff-youtube, .cover_aff-fb, .cover_aff-blog {
+    color: #f4f6f7;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
-    position: absolute;
+    position: absolute; }
+  .cover_aff-views {
     top: 80%;
-    left: 34.5%; }
+    left: 34.5%;
+    font-size: 1.8rem; }
+  .cover_aff-youtube {
+    top: 81%;
+    left: 44.5%;
+    font-size: 3rem; }
+  .cover_aff-fb {
+    top: 81.3%;
+    left: 49%;
+    font-size: 2.7rem; }
+  .cover_aff-blog {
+    top: 78.5%;
+    left: 53%;
+    font-size: 2.3rem; }
   .cover_aff-space1 {
     font-size: 3rem;
-    color: #F4F6F7;
+    color: #f4f6f7;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
@@ -1648,13 +1716,22 @@ figure {
     left: 22.5%; }
   .cover_aff-space2 {
     font-size: 3rem;
-    color: #F4F6F7;
+    color: #f4f6f7;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
     left: 32%; }
+  .cover_aff-space3 {
+    font-size: 3rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 42%; }
   .cover_aff-subs-button {
     padding: 0.5rem 1.5rem;
     background-color: white;
@@ -1665,7 +1742,7 @@ figure {
     .cover_aff-subs-button-txt {
       font-size: 1.6rem;
       font-family: Arial, Helvetica, sans-serif;
-      color: #0C8BCF; }
+      color: #0c8bcf; }
   .cover_aff-cust-button {
     padding: 0.5rem 1.5rem;
     background-color: white;
@@ -1676,18 +1753,18 @@ figure {
     .cover_aff-cust-button-txt {
       font-size: 1.6rem;
       font-family: Arial, Helvetica, sans-serif;
-      color: #0C8BCF; }
+      color: #0c8bcf; }
 
 .latest-deals {
   position: relative;
   top: 0.3rem;
   display: block;
-  background-color: #ECF0F1;
+  background-color: #ecf0f1;
   height: 32rem;
   box-shadow: 4px 0px 6px 0.1px #909497; }
   .latest-deals-title {
     font-size: 3rem;
-    color: #A6ACAF;
+    color: #a6acaf;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.3;
@@ -1704,7 +1781,7 @@ figure {
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply;
-      border: 2px solid #ECF0F1; }
+      border: 2px solid #ecf0f1; }
   .latest-deals-deal2 {
     position: absolute;
     top: 25%;
@@ -1726,32 +1803,44 @@ figure {
       width: 20rem;
       mix-blend-mode: multiply; }
 
-.deal1-det, .deal2-det, .deal3-det {
+.deal1-det,
+.deal2-det,
+.deal3-det {
   display: inline-block;
   position: absolute;
   top: 2.3rem;
   font-size: 1.3rem;
   color: #626567;
   margin-left: 1rem; }
-  .deal1-det-name, .deal2-det-name, .deal3-det-name {
+  .deal1-det-name,
+  .deal2-det-name,
+  .deal3-det-name {
     font-size: 1.4rem;
     font-weight: 600;
     height: 3.5rem;
     color: black; }
-  .deal1-det-dp, .deal2-det-dp, .deal3-det-dp {
+  .deal1-det-dp,
+  .deal2-det-dp,
+  .deal3-det-dp {
     display: inline-block;
     font-weight: 600;
     font-size: 1.7rem;
     color: black; }
-  .deal1-det-mrp, .deal2-det-mrp, .deal3-det-mrp {
+  .deal1-det-mrp,
+  .deal2-det-mrp,
+  .deal3-det-mrp {
     display: inline-block;
     text-decoration: line-through;
     margin-left: 0.5rem; }
-  .deal1-det-dis, .deal2-det-dis, .deal3-det-dis {
+  .deal1-det-dis,
+  .deal2-det-dis,
+  .deal3-det-dis {
     color: #d10024;
     font-size: 1.8rem; }
 
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
   display: block; }
 
 .carousel-item.active {
@@ -1781,12 +1870,12 @@ figure {
   border-radius: 1rem;
   overflow: hidden;
   line-height: 1;
-  box-shadow: 0px 0px 4px #B3B6B7;
+  box-shadow: 0px 0px 4px #b3b6b7;
   transition: all 0.3s;
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2; }
   .mep_deal-box:hover {
-    box-shadow: 1px 0px 3px 2px #B3B6B7; }
+    box-shadow: 1px 0px 3px 2px #b3b6b7; }
 
 .mep_deal_box_img {
   width: 23%;

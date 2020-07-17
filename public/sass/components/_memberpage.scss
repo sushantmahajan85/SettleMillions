@@ -5,7 +5,6 @@
   height: 30rem;
 }
 
-
 .cover_pic {
   height: 30rem;
   background: linear-gradient(260deg, rgb(1, 211, 246), rgb(1, 175, 254));
@@ -35,487 +34,567 @@
   display: inline-block;
   background-color: black;
   position: absolute;
-  top:15%;
+  top: 15%;
   left: 5%;
 }
 
-.cover_aff{
-  margin: 0;
-
-
-      &-name{
-        font-size: 3rem;
-        color: #F4F6F7;
-        font-weight: 600;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.3;
-        position: absolute;
-        top:15%;
-        left: 14%;
-        // background: linear-gradient(to right, #EA089B 0%, #330867 100%);
-        // background-clip: border-box;
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
-
-        &-tag{
-          font-size: 1.5rem;
-          position: relative;
-          bottom: 0.5rem;
-          left: 0.5rem;
-        }
-      }
-
-      &-subs{
-        font-size: 1.8rem;
-        color: #F4F6F7;
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.1;
-        position: absolute;
-        top:30%;
-        left: 14.5%;
-      }
-
-      &-deals{
-        font-size: 1.8rem;
-        color: #F4F6F7;
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.1;
-        position: absolute;
-        top:80%;
-        left: 14.5%;
-        
-      }
-
-      &-likes{
-        font-size: 1.8rem;
-        color: #F4F6F7;
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.1;
-        position: absolute;
-        top:80%;
-        left: 24.5%;
-        
-      }
-
-      &-views{
-        font-size: 1.8rem;
-        color: #F4F6F7;
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.1;
-        position: absolute;
-        top:80%;
-        left: 34.5%;
-        
-      }
-
-      &-space1{
-        font-size: 3rem;
-        color: #F4F6F7;
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.1;
-        position: absolute;
-        top:75.5%;
-        left: 22.5%;
-      }
-      &-space2{
-        font-size: 3rem;
-        color: #F4F6F7;
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 0.1;
-        position: absolute;
-        top:75.5%;
-        left: 32%;
-      }
-
-
-      &-subs-button {
-        padding: 0.5rem 1.5rem;
-        background-color: white;
-        position: absolute;
-        border-radius: 0.5rem;
-        top:21%;
-        left: 36%;
-
-        
-
-        &-txt{
-          font-size: 1.6rem;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #0C8BCF;
-        }
-      }
-
-      &-cust-button {
-        padding: 0.5rem 1.5rem;
-        background-color: white;
-        position: absolute;
-        border-radius: 0.5rem;
-        top:21%;
-        left: 46%;
-
-        
-
-        &-txt{
-          font-size: 1.6rem;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #0C8BCF;
-        }
-      }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 }
 
-          .latest-deals{
+.mep_pic-user {
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  // display: block;
+  display: inline-block;
+  top: 15%;
+  left: 5%;
+  padding: 0rem;
+}
 
-            position: relative;
-            top: 0.3rem;
-            display: block;
-            // background-color: #C7C9C7;
-            background-color: #ECF0F1;
-            height: 32rem;
-            box-shadow: 4px 0px 6px 0.1px #909497;
+.mep_pic-user-overlay {
+  position: absolute;
+  top: 2.4rem;
+  bottom: 0;
+  left: 2.3rem;
+  right: 0;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #2d3537;
+}
 
-            &-title{
-            font-size: 3rem;
-            // color: #F4F6F7;
-            color: #A6ACAF;
-            font-weight: 600;
-            font-family: Arial, Helvetica, sans-serif;
-            letter-spacing: 0.3;
-            position: absolute;
-            top:5%;
-            left: 5%;
-            }
+.cover_aff-pic:hover .mep_pic-user-overlay {
+  opacity: 1;
+}
 
-            &-deal1{
-              position: absolute;
-              top: 25%;
-              left: 5%;
-              width: 32rem;
-             
-              
-              & img{
-                object-fit: scale-down;
-                height: 20rem;
-                width: 20rem;
-                mix-blend-mode: multiply;
-                border: 2px solid #ECF0F1;
-              }
-            }
-            &-deal2{
-              position: absolute;
-              top: 25%;
-              left: 35%;
-              width: 32rem;
-              
-              & img{
-                object-fit: scale-down;
-                height: 20rem;
-                width: 20rem;
-                mix-blend-mode: multiply;
-              }
-            }
-            &-deal3{
-              position: absolute;
-              top: 25%;
-              left: 65%;
-              width: 32rem;
-              
-              & img{
-                object-fit: scale-down;
-                height: 20rem;
-                width: 20rem;
-                mix-blend-mode: multiply;
-              }
-            }
-          }
+.mep_add-icon {
+  // color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f2f2f2;
+}
 
-          .deal1-det, .deal2-det, .deal3-det {
-            display: inline-block;
-            position: absolute;
-            top: 2.3rem;
-            font-size: 1.3rem;
-            color: #626567;
-            margin-left: 1rem;
+.add-icon {
+  color: white;
+}
 
-            &-name{
-              font-size: 1.4rem;
-              font-weight: 600;
-              height: 3.5rem;
-              color: black;
-            }
+.add-icon:hover {
+  color: #f2f2f2;
+}
 
-            &-dp{
-              display: inline-block;
-              font-weight: 600;
-              font-size: 1.7rem;
-              color: black;
-            }
+.cover_aff {
+  margin: 0;
 
-            &-mrp{
-              display: inline-block;
-              text-decoration: line-through;
-              margin-left: 0.5rem;
-            }
+  &-name {
+    font-size: 3rem;
+    color: #f4f6f7;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3;
+    position: absolute;
+    top: 15%;
+    left: 14%;
+    // background: linear-gradient(to right, #EA089B 0%, #330867 100%);
+    // background-clip: border-box;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
 
-            &-dis{
-              color: #d10024;
-              font-size: 1.8rem;
+    &-tag {
+      font-size: 1.5rem;
+      position: relative;
+      bottom: 0.5rem;
+      left: 0.5rem;
+    }
+  }
 
-            }
-          }
+  &-subs {
+    font-size: 1.8rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 30%;
+    left: 14.5%;
+  }
 
+  &-bio {
+    font-size: 1.3rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 45%;
+    left: 14.5%;
+  }
 
-          // .mp_deal-box {
-          //   display: flex;
-          //   height: 100%;
-          //   width: 98%;
-          //   overflow: hidden;
-          //   backface-visibility: hidden;
-          //   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-          //   // margin-left: 6rem;
-          //   margin-bottom: 4rem;
-          //   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-          //   border: 1px solid grey;
-          //   border-radius: 0.6rem;
-          //   transition: all 0.3s;
-          //   // &:hover {
-          //   //   // transform: scale(1.02);
-          //   // }
-          //   &_img {
-          //     height: inherit;
-          //     width: 30%;
-          //     // background-color: red;
-          //   }
-          //   &_content {
-          //     height: inherit;
-          //     background-color: rgb(241, 250, 241);
-          //     width: 70%;
-          //     padding: 2rem;
-          //   }
-          //   &_picture {
-          //     object-fit: scale-down;
-          //     height: 26rem;
-          //     width: 100%;
-          //   }
-          //   &_name {
-          //     font-size: 1.9rem;
-          //   }
-          //   &_price {
-          //     margin-top: 1.2rem;
-          //   }
-          //   &_des {
-          //     margin-top: 1.2rem;
-          //   }
-          //   &_vt {
-          //     display: flex;
-          //     margin-top: 1.2rem;
-          //     font-size: 1.4rem;
-          //   }
-          //   &_views {
-          //     margin-right: 2.8rem;
-          //   }
-          //   &_user {
-          //     font-size: 1.7rem;
-          //     word-spacing: 0.3rem;
-          //   }
-          //   &_buttons {
-          //     margin-top: 1.2rem;
-          //   }
-          //   &_dis {
-          //     display: flex;
-          
-          //     align-items: baseline;
-          //   }
-          //   &_percent {
-          //     color: red;
-          //     font-size: 2.3rem;
-          //   }
-          // }
+  &-deals {
+    font-size: 1.8rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 14.5%;
+  }
 
-          .carousel-item-next,.carousel-item-prev, .carousel-item.active {
-              display: block;
-            }
+  &-likes {
+    font-size: 1.8rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 80%;
+    left: 24.5%;
+  }
 
-            .carousel-item.active {
-              height: inherit;
-            }
+  &-views,
+  &-youtube,
+  &-fb,
+  &-blog {
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+  }
+  &-views {
+    top: 80%;
+    left: 34.5%;
+    font-size: 1.8rem;
+  }
 
-            .carousel-item {
-              display: block;
-              position: relative;
-              display: none;
-              float: left;
-              width: 100%;
-              margin-right: -100%;
-              -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-              transition: -webkit-transform 0.6s ease-in-out;
-              transition: transform 0.6s ease-in-out;
-              transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
-            }
+  &-youtube {
+    top: 81%;
+    left: 44.5%;
+    font-size: 3rem;
+  }
 
-            .mep_deal-box{
-              display: flex;
-              // background-color: white;
-              margin: 0.5rem;
-              margin-left: 10rem;
-              width: 100rem;
-              height: 25rem;
-              margin-bottom: 3.5rem;
-              // display: flex;
-              flex-direction: row;
-              border-radius: 1rem;
-              overflow: hidden;
-              line-height: 1;
-              box-shadow: 0px 0px 4px #B3B6B7;
-              transition: all 0.3s;
-              border: 1px solid #f2f2f2;
-              background-color: #f2f2f2;
-              // box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9;
-              // border: 0.5px solid #F0F3F4;
-              // &_img {
-              //   background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-              //   padding: 10.5rem;
-              //   // border-radius: 1rem;
-              //   background-size: 100% 100%;
-              //   overflow: hidden;
-              //   // border: 0.5px solid #f4f6f7;
-              //   // border-right: 1px solid #f2f3f4;
-                
-                
-              // }
-              &:hover {
-                box-shadow: 1px 0px 3px 2px #B3B6B7;
-                // border: 1.5px solid #f2f3f4;
-              }
-            }
+  &-fb {
+    top: 81.3%;
+    left: 49%;
+    font-size: 2.7rem;
+  }
 
-            .mep_deal_box_img{
-              width: 23%;
-              margin-left: 0.1rem;
-            }
+  &-blog {
+    top: 78.5%;
+    left: 53%;
+    font-size: 2.3rem;
+  }
 
-            .mep_deal_area-content{
-              margin-left: 3.5rem;
-              width: 75rem;
-              padding-top: 1.5rem;
-            }
+  &-space1 {
+    font-size: 3rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 22.5%;
+  }
+  &-space2 {
+    font-size: 3rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 32%;
+  }
+  &-space3 {
+    font-size: 3rem;
+    color: #f4f6f7;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1;
+    position: absolute;
+    top: 75.5%;
+    left: 42%;
+  }
 
+  &-subs-button {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 21%;
+    left: 36%;
 
-            .mep_deal-title{
-              font-size: 2.6rem;
-              color: #000000;
-              font-weight: 500;
-              letter-spacing: 0.1rem;
-              // font-family: "Bitter", serif;
-              text-transform: capitalize;
-              margin-top: 1rem;
-              font-family: Arial, Helvetica, sans-serif;
-              margin-bottom: 1.5rem;
-            }
+    &-txt {
+      font-size: 1.6rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0c8bcf;
+    }
+  }
 
+  &-cust-button {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 21%;
+    left: 46%;
 
-            .mep_deal-r1{
-              margin-bottom: 2rem;
-              color: #626567;
-              margin-left: 0.3rem;
+    &-txt {
+      font-size: 1.6rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0c8bcf;
+    }
+  }
+}
 
-              &-det{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 14px;
-                font-weight: 700;
-                margin-right: 1rem;
+.latest-deals {
+  position: relative;
+  top: 0.3rem;
+  display: block;
+  // background-color: #C7C9C7;
+  background-color: #ecf0f1;
+  height: 32rem;
+  box-shadow: 4px 0px 6px 0.1px #909497;
 
-                &:hover{
-                  color: black;
-                }
-              }
-            }
+  &-title {
+    font-size: 3rem;
+    // color: #F4F6F7;
+    color: #a6acaf;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
 
+  &-deal1 {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 32rem;
 
-            .mep_deal-r2{
-              margin-bottom: 2rem;
-              color: #000;
-              margin-left: 0.3rem;
-              line-height: 2rem;
+    & img {
+      object-fit: scale-down;
+      height: 20rem;
+      width: 20rem;
+      mix-blend-mode: multiply;
+      border: 2px solid #ecf0f1;
+    }
+  }
+  &-deal2 {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 32rem;
 
-              &-det{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 14px;
-                margin-right: 1rem;
-                &:hover{
-                  color: black;
-                }
-              }
-            }
+    & img {
+      object-fit: scale-down;
+      height: 20rem;
+      width: 20rem;
+      mix-blend-mode: multiply;
+    }
+  }
+  &-deal3 {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    width: 32rem;
 
+    & img {
+      object-fit: scale-down;
+      height: 20rem;
+      width: 20rem;
+      mix-blend-mode: multiply;
+    }
+  }
+}
 
-            .mep_deal-r3{
-              margin-bottom: 2rem;
-              margin-left: 0.3rem;
+.deal1-det,
+.deal2-det,
+.deal3-det {
+  display: inline-block;
+  position: absolute;
+  top: 2.3rem;
+  font-size: 1.3rem;
+  color: #626567;
+  margin-left: 1rem;
 
-              &-dp{
-                font-weight: 500;
-                color: #000000;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 2.5rem;
-                margin-right: 1rem;
-                margin-bottom: -0.5rem;
+  &-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 3.5rem;
+    color: black;
+  }
 
-              }
-              &-mrp{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 1.7rem;
-                font-weight: 400;
-                color: #8d99ae;
-                text-decoration: line-through;
-                margin-right: 1rem;
-                margin-bottom: -0.5rem;
-                padding: 5px 0;
-              }
-              &-dis{
-                color: #d10024;
-                font-size: 1.7rem;
-                font-weight: 600;
-                font-family: Arial, Helvetica, sans-serif;
-                margin-right: 1rem;
-                margin-bottom: -0.5rem;
-                padding: 5px 0;
-                
-              }
-            }
+  &-dp {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: black;
+  }
 
+  &-mrp {
+    display: inline-block;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+  }
 
-            .mep_deal-r4{
-              margin-bottom: 2rem;
-              color: #626567;
-              margin-left: 0.3rem;
+  &-dis {
+    color: #d10024;
+    font-size: 1.8rem;
+  }
+}
 
-              &-det{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 14px;
-                margin-right: 1rem;
-                &:hover{
-                  color: black;
-                }
+// .mp_deal-box {
+//   display: flex;
+//   height: 100%;
+//   width: 98%;
+//   overflow: hidden;
+//   backface-visibility: hidden;
+//   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+//   // margin-left: 6rem;
+//   margin-bottom: 4rem;
+//   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//   border: 1px solid grey;
+//   border-radius: 0.6rem;
+//   transition: all 0.3s;
+//   // &:hover {
+//   //   // transform: scale(1.02);
+//   // }
+//   &_img {
+//     height: inherit;
+//     width: 30%;
+//     // background-color: red;
+//   }
+//   &_content {
+//     height: inherit;
+//     background-color: rgb(241, 250, 241);
+//     width: 70%;
+//     padding: 2rem;
+//   }
+//   &_picture {
+//     object-fit: scale-down;
+//     height: 26rem;
+//     width: 100%;
+//   }
+//   &_name {
+//     font-size: 1.9rem;
+//   }
+//   &_price {
+//     margin-top: 1.2rem;
+//   }
+//   &_des {
+//     margin-top: 1.2rem;
+//   }
+//   &_vt {
+//     display: flex;
+//     margin-top: 1.2rem;
+//     font-size: 1.4rem;
+//   }
+//   &_views {
+//     margin-right: 2.8rem;
+//   }
+//   &_user {
+//     font-size: 1.7rem;
+//     word-spacing: 0.3rem;
+//   }
+//   &_buttons {
+//     margin-top: 1.2rem;
+//   }
+//   &_dis {
+//     display: flex;
 
-              }
-            }
+//     align-items: baseline;
+//   }
+//   &_percent {
+//     color: red;
+//     font-size: 2.3rem;
+//   }
+// }
 
-            #img_mep_deal_views{
-              color: black;
-              margin-right: 0.5rem;
-            }
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: block;
+}
 
-            .big-deal_pic {
-              object-fit: scale-down;
-              height: 26rem;
-              width: 100%;
-              padding: 0rem;
-            }
+.carousel-item.active {
+  height: inherit;
+}
 
+.carousel-item {
+  display: block;
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+
+.mep_deal-box {
+  display: flex;
+  // background-color: white;
+  margin: 0.5rem;
+  margin-left: 10rem;
+  width: 100rem;
+  height: 25rem;
+  margin-bottom: 3.5rem;
+  // display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  overflow: hidden;
+  line-height: 1;
+  box-shadow: 0px 0px 4px #b3b6b7;
+  transition: all 0.3s;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  // box-shadow: 1.3px 1.3px 1.3px 1.3px #e5e7e9;
+  // border: 0.5px solid #F0F3F4;
+  // &_img {
+  //   background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
+  //   padding: 10.5rem;
+  //   // border-radius: 1rem;
+  //   background-size: 100% 100%;
+  //   overflow: hidden;
+  //   // border: 0.5px solid #f4f6f7;
+  //   // border-right: 1px solid #f2f3f4;
+
+  // }
+  &:hover {
+    box-shadow: 1px 0px 3px 2px #b3b6b7;
+    // border: 1.5px solid #f2f3f4;
+  }
+}
+
+.mep_deal_box_img {
+  width: 23%;
+  margin-left: 0.1rem;
+}
+
+.mep_deal_area-content {
+  margin-left: 3.5rem;
+  width: 75rem;
+  padding-top: 1.5rem;
+}
+
+.mep_deal-title {
+  font-size: 2.6rem;
+  color: #000000;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  // font-family: "Bitter", serif;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.mep_deal-r1 {
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem;
+
+  &-det {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 1rem;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.mep_deal-r2 {
+  margin-bottom: 2rem;
+  color: #000;
+  margin-left: 0.3rem;
+  line-height: 2rem;
+
+  &-det {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-right: 1rem;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.mep_deal-r3 {
+  margin-bottom: 2rem;
+  margin-left: 0.3rem;
+
+  &-dp {
+    font-weight: 500;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+  }
+  &-mrp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #8d99ae;
+    text-decoration: line-through;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 5px 0;
+  }
+  &-dis {
+    color: #d10024;
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 5px 0;
+  }
+}
+
+.mep_deal-r4 {
+  margin-bottom: 2rem;
+  color: #626567;
+  margin-left: 0.3rem;
+
+  &-det {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-right: 1rem;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+#img_mep_deal_views {
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.big-deal_pic {
+  object-fit: scale-down;
+  height: 26rem;
+  width: 100%;
+  padding: 0rem;
+}

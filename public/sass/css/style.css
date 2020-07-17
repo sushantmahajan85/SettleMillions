@@ -2107,7 +2107,7 @@ figure {
 
 .leftbox {
   float: left;
-  position: absolute;
+  position: fixed;
   width: 19%;
   height: 100%;
   background-color: #FBFCFC;

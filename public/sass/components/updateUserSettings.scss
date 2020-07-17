@@ -316,7 +316,7 @@ $body: "Roboto", sans-serif;
 
 .containerSettings {
   background-color: #ECF0F1;
-  height: 120rem;
+  height: 150rem;
   position: relative;
   // box-shadow: 2px 5px 20px rgba($gray, 0.5);
   margin: 0 auto;
@@ -380,4 +380,12 @@ $body: "Roboto", sans-serif;
 #deleteAccount {
   display: block;
   margin-top: 2rem;
+}
+
+.settings_user_review {
+  margin: 0rem;
+}
+
+.settings_review_username {
+  font-size: 1.6rem;
 }

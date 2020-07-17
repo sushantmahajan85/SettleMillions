@@ -1764,20 +1764,22 @@ figure {
   margin: 0.5rem;
   margin-left: 10rem;
   width: 100rem;
-  height: 23rem;
+  height: 25rem;
   margin-bottom: 3.5rem;
   flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
   line-height: 1;
-  box-shadow: 1px 0px 3px 1.5px #F0F3F4;
-  transition: all 0.3s; }
+  box-shadow: 0px 0px 4px #B3B6B7;
+  transition: all 0.3s;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2; }
   .mep_deal-box:hover {
-    box-shadow: 1px 0px 3px 5px #F0F3F4; }
+    box-shadow: 1px 0px 3px 2px #B3B6B7; }
 
 .mep_deal_box_img {
-  width: 20%;
-  margin-left: 1rem; }
+  width: 23%;
+  margin-left: 0.1rem; }
 
 .mep_deal_area-content {
   margin-left: 3.5rem;
@@ -1808,7 +1810,7 @@ figure {
 
 .mep_deal-r2 {
   margin-bottom: 2rem;
-  color: #626567;
+  color: #000;
   margin-left: 0.3rem;
   line-height: 2rem; }
   .mep_deal-r2-det {
@@ -1863,7 +1865,7 @@ figure {
 
 .big-deal_pic {
   object-fit: scale-down;
-  height: 23rem;
+  height: 26rem;
   width: 100%;
   padding: 0rem; }
 
@@ -2176,8 +2178,8 @@ figure {
 .three-dots {
   float: right;
   position: absolute;
-  bottom: 3rem;
-  right: 0;
+  bottom: 1rem;
+  right: 0.5rem;
   font-size: 2rem;
   text-align: center;
   cursor: pointer;

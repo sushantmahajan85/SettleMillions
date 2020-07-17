@@ -142,6 +142,25 @@
         top:21%;
         left: 36%;
 
+        
+
+        &-txt{
+          font-size: 1.6rem;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #0C8BCF;
+        }
+      }
+
+      &-cust-button {
+        padding: 0.5rem 1.5rem;
+        background-color: white;
+        position: absolute;
+        border-radius: 0.5rem;
+        top:21%;
+        left: 46%;
+
+        
+
         &-txt{
           font-size: 1.6rem;
           font-family: Arial, Helvetica, sans-serif;

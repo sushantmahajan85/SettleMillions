@@ -2112,7 +2112,7 @@ figure {
 
 .containerSettings {
   background-color: #ECF0F1;
-  height: 120rem;
+  height: 150rem;
   position: relative;
   margin: 0 auto;
   max-width: 136.5rem;
@@ -2120,7 +2120,7 @@ figure {
 
 .leftbox {
   float: left;
-  position: absolute;
+  position: fixed;
   width: 19%;
   height: 100%;
   background-color: #FBFCFC;
@@ -2161,6 +2161,12 @@ figure {
 #deleteAccount {
   display: block;
   margin-top: 2rem; }
+
+.settings_user_review {
+  margin: 0rem; }
+
+.settings_review_username {
+  font-size: 1.6rem; }
 
 .card {
   -webkit-perspective: 150rem;

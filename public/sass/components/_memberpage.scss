@@ -235,6 +235,11 @@
     top: 21%;
     left: 36%;
 
+    &:hover{
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px);
+    }
+
     &-txt {
       font-size: 1.6rem;
       font-family: Arial, Helvetica, sans-serif;
@@ -249,6 +254,11 @@
     border-radius: 0.5rem;
     top: 21%;
     left: 46%;
+
+    &:hover{
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px);
+    }
 
     &-txt {
       font-size: 1.6rem;

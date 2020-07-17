@@ -1739,6 +1739,9 @@ figure {
     border-radius: 0.5rem;
     top: 21%;
     left: 36%; }
+    .cover_aff-subs-button:hover {
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px); }
     .cover_aff-subs-button-txt {
       font-size: 1.6rem;
       font-family: Arial, Helvetica, sans-serif;
@@ -1750,6 +1753,9 @@ figure {
     border-radius: 0.5rem;
     top: 21%;
     left: 46%; }
+    .cover_aff-cust-button:hover {
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px); }
     .cover_aff-cust-button-txt {
       font-size: 1.6rem;
       font-family: Arial, Helvetica, sans-serif;

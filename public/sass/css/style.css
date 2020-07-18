@@ -945,11 +945,12 @@ figure {
   text-align: center;
   text-justify: center;
   display: block;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-top: 1rem;
   color: #000000;
   font-weight: 600;
-  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  letter-spacing: 0.05rem;
   font-family: "Bitter", serif; }
 
 .views_time_mp {
@@ -970,6 +971,30 @@ figure {
 .mp_price {
   font-size: 2.2rem !important; }
 
+.card {
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 44rem;
+  width: 25.75rem;
+  z-index: 1;
+  margin: 0 0 4rem 0rem; }
+  .card:not(:nth-child(8n)) {
+    margin-right: 5rem; }
+
+.card__face {
+  height: inherit;
+  background-color: #fff;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.1rem 0.5rem rgba(52, 73, 94, 0.1); }
+
 .card__picture {
   width: inherit;
   height: 17rem; }
@@ -977,7 +1002,8 @@ figure {
 .deal-photo {
   object-fit: scale-down;
   height: inherit;
-  width: 95%; }
+  width: 100%;
+  padding: 5%; }
 
 .card-text {
   max-height: 20rem;
@@ -1664,7 +1690,9 @@ figure {
     letter-spacing: 0.1;
     position: absolute;
     top: 45%;
-    left: 14.5%; }
+    left: 14.5%;
+    height: 9rem;
+    width: 35rem; }
   .cover_aff-deals {
     font-size: 1.8rem;
     color: #f4f6f7;
@@ -2187,30 +2215,6 @@ figure {
 
 .settings_review_username {
   font-size: 1.6rem; }
-
-.card {
-  -webkit-perspective: 150rem;
-  perspective: 150rem;
-  -moz-perspective: 150rem;
-  height: 37rem;
-  width: 24.75rem;
-  z-index: 1;
-  margin: 0 0 4rem 0rem; }
-  .card:not(:nth-child(8n)) {
-    margin-right: 5rem; }
-
-.card__face {
-  height: inherit;
-  background-color: #fff;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-  border-radius: 0.5rem;
-  border: 1px solid #e5e7e9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0.1rem 1rem rgba(52, 73, 94, 0.1); }
 
 .three-dots {
   float: right;

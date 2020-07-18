@@ -3689,7 +3689,7 @@ html {
   /* text-align: center; */ }
 
 .wrap_opt input[type="text"],
-input[type="password"] {
+.wrap_opt input[type="password"] {
   width: 100%;
   box-sizing: border-box;
   padding: 1.5rem 0.5rem;

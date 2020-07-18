@@ -2103,14 +2103,14 @@ figure {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); }
 
 .form__upload + label:hover {
   background-color: #fff;
   color: #df4444;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px); }
 
@@ -2132,8 +2132,8 @@ figure {
   cursor: pointer; }
 
 .btn-update-settings:hover {
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px); }
 

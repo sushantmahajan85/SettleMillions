@@ -45,19 +45,8 @@
     <div class="rightbox">
       <div class="user-view__content">
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md" id="generalSettings">General Settings</h2>
+          <h2 class="heading-secondary" id="generalSettings">General Settings</h2>
           <form class="form form-user-data" id="form-user-data">
-            <div class="form__group">
-              <label class="form__label" for="name">Name</label><input class="form__input" id="name" type="text"
-                value=<%= user.name %> />
-            </div>
-            <div class="form__group ma-bt-md">
-              <label class="form__label" for="email">Email address</label><input class="form__input" id="email"
-                type="email" value=<%=
-                user.email %> />
-            </div>
-            <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
-              class="profile1 " /> -->
             <div class="form__group form__photo-upload">
               <img class="form__user-photo" src=<%=`/img/users/${user.photo}`%> alt="User photo" />
               <input type="file" accept="image/*" class="form__upload" id="photo" name="photo" />
@@ -66,6 +55,26 @@
                   >Choose new photo</a
                 > -->
             </div>
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label><input class="form__input" id="name" type="text"
+                value=<%= user.name %> />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email address</label><input class="form__input" id="email"
+                type="email" value=<%=
+                user.email %> />
+            </div>
+            <div class="form__group gender_option">
+              <label class="form__label" for="gender">Gender</label>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+            <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
+              class="profile1 " /> -->
             <div class="form__group right">
               <button class="btn-update-settings">
                 Save settings
@@ -76,7 +85,7 @@
         <hr class="user_settings_divider" />
         <div class="line">&nbsp;</div>
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md" id="securityLogin">Security & Login</h2>
+          <h2 class="heading-secondary" id="securityLogin">Security & Login</h2>
           <form class="form form-user-settings " id="pass">
             <div class="form__group">
               <label class="form__label" for="password-current">Current Password</label><input class="form__input"
@@ -121,7 +130,7 @@
         <hr class="user_settings_divider" />
         <div class="line">&nbsp;</div>
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md" id="reviewsRatings">My Reviews & Ratings</h2>
+          <h2 class="heading-secondary" id="reviewsRatings">My Reviews & Ratings</h2>
           <div class="user-nav__user user-review settings_user_review">
             <img src="/img/users/default.jpg" alt="User Photo" class="user-nav__user-photo review-photo">
             <div class="review-text">

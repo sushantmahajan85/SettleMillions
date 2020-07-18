@@ -942,16 +942,22 @@ figure {
     border-bottom: 2px solid #d10024; }
 
 .product_name_mainp {
+  text-transform: capitalize;
   text-align: center;
   text-justify: center;
   display: block;
-  font-size: 1.4rem;
+  max-height: 4rem;
+  font-size: 1.46rem;
   margin-top: 1rem;
   color: #000000;
   font-weight: 600;
   line-height: 2rem;
-  letter-spacing: 0.05rem;
-  font-family: "Bitter", serif; }
+  font-family: "Bitter", serif;
+  letter-spacing: 0.05rem; }
+
+.aff_name {
+  width: 100%;
+  height: 2rem; }
 
 .views_time_mp {
   margin-top: 0.8rem;
@@ -983,6 +989,7 @@ figure {
     margin-right: 5rem; }
 
 .card__face {
+  position: relative;
   height: inherit;
   background-color: #fff;
   -webkit-transition: all 0.8s ease;
@@ -996,30 +1003,80 @@ figure {
   box-shadow: 0 0.1rem 0.5rem rgba(52, 73, 94, 0.1); }
 
 .card__picture {
-  width: inherit;
-  height: 17rem; }
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 25rem;
+  width: inherit; }
 
 .deal-photo {
   object-fit: scale-down;
   height: inherit;
   width: 100%;
-  padding: 5%; }
+  padding: 7%; }
 
 .card-text {
-  max-height: 20rem;
+  position: absolute;
+  top: 24rem;
+  height: 20rem;
   margin-top: 0rem;
-  width: 26rem;
-  position: relative;
+  width: 25.75rem;
   text-align: center; }
 
 .card__details {
-  width: 80%;
+  position: absolute;
+  left: 0px;
+  width: inherit;
   display: inline-block;
-  margin: 0 10% 10% 10%;
-  text-align: center; }
+  text-align: center;
+  padding: 0rem 1rem;
+  height: inherit; }
 
 .card__details ul {
   list-style: none; }
+
+.mp_dealbox_three-dots {
+  float: right;
+  position: absolute;
+  bottom: 0rem;
+  top: 16rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: block; }
+  .mp_dealbox_three-dots:hover {
+    background-color: #fff; }
+
+.mp_dealbox_three-dots option {
+  padding: 10rem;
+  background-color: #eee; }
+
+.mp_dealbox_three-dots-menu {
+  position: relative !important;
+  top: 2rem;
+  left: 0;
+  width: 8rem;
+  height: 8rem;
+  background-color: #73a4ca;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  align-items: flex-start;
+  padding: 0.9rem;
+  justify-content: center;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999 !important; }
+
+.mp_dealbox_three-dots-menu-item {
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+  padding: 0.5rem 0; }
+  .mp_dealbox_three-dots-menu-item:not(:last-child) {
+    border-bottom: 1px solid black; }
 
 .dealPageContent {
   display: flex; }

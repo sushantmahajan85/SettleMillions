@@ -201,7 +201,7 @@
 
                             <% if(user){ %>
                             <form action="/" method="GET" class=reportx>
-                                <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)"
+                                <select class="mp_dealbox_three-dots" id="change" name="dealOps" onChange="dealOperations(this)"
                                     onfocus="this.selectedIndex = -1">
                                     <option selected disabled value="empty"></option>
                                     <option value=<%= `report/${deal._id}/${user._id}` %>>Report</option>
@@ -1240,7 +1240,7 @@
 
 
             if (!i) {
-                el.innerHTML = '&#8230<div class="three-dots-menu"><div class="three-dots-menu-item">Report</div><div class="three-dots-menu-item">Like</div></div>'; i = 1;
+                el.innerHTML = '&#8230<div class="mp_dealbox_three-dots-menu"><div class="mp_dealbox_three-dots-menu-item">Report</div><div class="mp_dealbox_three-dots-menu-item">Like</div></div>'; i = 1;
             } else {
                 el.innerHTML = "&#8230"; i = 0;
             }

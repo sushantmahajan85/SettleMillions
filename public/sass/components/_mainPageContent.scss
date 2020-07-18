@@ -573,6 +573,14 @@ height: 2rem;
   }
 }
 
+@media only screen and (max-width: 140rem), only screen and (hover: none) {
+
+  .card {
+    width: 24.75rem;
+  }
+}
+
+
 .card__face {
   position: relative;
   height: inherit;

@@ -988,6 +988,10 @@ figure {
   .card:not(:nth-child(8n)) {
     margin-right: 5rem; }
 
+@media only screen and (max-width: 140rem), only screen and (hover: none) {
+  .card {
+    width: 24.75rem; } }
+
 .card__face {
   position: relative;
   height: inherit;
@@ -2322,14 +2326,6 @@ figure {
   padding: 0.5rem 0; }
   .three-dots-menu-item:not(:last-child) {
     border-bottom: 1px solid black; }
-
-@media only screen and (max-width: 56.25em), only screen and (hover: none) {
-  .card {
-    height: auto;
-    border-radius: 3px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); } }
 
 .main {
   max-height: 550px;

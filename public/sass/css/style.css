@@ -986,7 +986,7 @@ figure {
   z-index: 1;
   margin: 0 0 4rem 0rem; }
   .card:not(:nth-child(8n)) {
-    margin-right: 5rem; }
+    margin-right: 4rem; }
 
 @media only screen and (max-width: 140rem), only screen and (hover: none) {
   .card {

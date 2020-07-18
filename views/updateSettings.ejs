@@ -79,26 +79,41 @@
           <h2 class="heading-secondary ma-bt-md" id="securityLogin">Security & Login</h2>
           <form class="form form-user-settings " id="pass">
             <div class="form__group">
-              <label class="form__label" for="password-current">Current password</label><input class="form__input"
+              <label class="form__label" for="password-current">Current Password</label><input class="form__input"
                 id="current" type="password" placeholder="••••••••" required="required" minlength="8" />
             </div>
             <div class="form__group">
-              <label class="form__label" for="password">New password</label><input class="form__input" id="npassword"
+              <label class="form__label" for="password">New Password</label><input class="form__input" id="npassword"
                 type="password" placeholder="••••••••" required="required" minlength="8" />
             </div>
             <div class="form__group ma-bt-lg">
-              <label class="form__label" for="password-confirm">Confirm password</label><input class="form__input"
+              <label class="form__label" for="password-confirm">Confirm New Password</label><input class="form__input"
                 id="cpassword" type="password" placeholder="••••••••" required="required" minlength="8" />
             </div>
             <div class="form__group right">
               <button class="btn-update-settings">
                 Save password
               </button>
+              <button class="user_settings_forgot_password">
+                Forgot Password
+              </button>
             </div>
           </form>
-          <button class="btn-update-settings" id="twofactorauth">
-            Enable two-factor authentication
-          </button>
+          <div class="user_settings_sub_heading">
+            Two-Factor Authentication
+          </div>
+          <form class="form form-user-data" id="form-user-data">
+            <div class="form__group">
+              <label class="form__label" for="phoneno"></label>
+              <input class="form__input" type="number" id="phoneno" />
+              <button class="btn-update-settings" id="twofactorauth">
+                Enable two-factor authentication
+              </button>
+            </div>
+          </form>
+          <div class="user_settings_sub_heading">
+            Delete Account
+          </div>
           <button class="btn-update-settings" id="deleteAccount">
             Delete Account
           </button>

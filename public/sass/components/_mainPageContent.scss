@@ -514,14 +514,15 @@ figure {
   text-justify: center;
   display: block;
   //   width: 95%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   // margin: 1rem 0 0 1rem;
   margin-top: 1rem;
   color: #000000;
   font-weight: 600;
+  line-height: 2rem;
   // font-family: "Market Sans", Arial, sans-serif;
   // border-bottom: 2px solid #e8e8e8;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-family: "Bitter", serif;
 }
@@ -546,6 +547,47 @@ figure {
 .mp_price {
   font-size: 2.2rem !important;
 }
+.card {
+  // font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  //   "Lucida Sans", Arial, sans-serif;
+
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  // position: relative;
+  height: 44rem;
+  width: 25.75rem;
+  z-index: 1;
+  margin: 0 0 4rem 0rem;
+
+  &:not(:nth-child(8n)) {
+    margin-right: 5rem;
+  }
+}
+
+.card__face {
+  height: inherit;
+  background-color: #fff;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  // -webkit-backface-visibility: hidden;
+  // backface-visibility: hidden;
+  border-radius: 0.5rem;
+  // overflow: hidden;
+  border: 1px solid #e5e7e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // z-index: 0;
+  align-items: center;
+  //-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.1rem 0.5rem rgba(52, 73, 94, 0.1);
+  //    transition: all 0.3s;
+  //    &:hover{
+  // transform: scale(1.03);
+  //    }
+}
+
 
 .card__picture {
   width: inherit;
@@ -555,7 +597,8 @@ figure {
 .deal-photo {
   object-fit: scale-down;
   height: inherit;
-  width: 95%;
+  width: 100%;
+  padding:5%;
 }
 
 .card-text {

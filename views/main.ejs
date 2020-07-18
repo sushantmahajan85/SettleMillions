@@ -164,10 +164,22 @@
                                     </h3>
                                     <!-- <h3 class= "product_name_mainp">Product Name</h3> -->
                                     <div >
-                                        <a class="aff_name" href=<%= `/memb</div>er/${deal.user}` %>><%= deal.owner %> </a><br>
+                                        <a class="aff_name" href=<%= `/memb</div>er/${deal.user}` %>><%= deal.owner %><i class=" mp_aff-name-tag fas fa-check-circle"></i> </a>
                                     </div>
 
                                     <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %>  Reports:<%= deal.reportCount %>  </a><br> -->
+
+                                    
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike> 
+                                                <!-- <span class="price_dis">(70%)</span> </li> -->
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+
+                            
 
                                     <div class="views_time_mp">
                                         <div style="display: inline-block">
@@ -189,12 +201,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
-                                        </li>
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                        <i class="mp_share_deal fas fa-share-square"></i>
+                                        <span class="mp_share_deal">Share</span>
+                                    </div>
+                                        
                                     </div>
                                 </ul>
                             </div>
@@ -277,7 +292,15 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div class="aff_name">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block"><%= deal.owner %> </div>
+                                    </div>
+                                  
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                                 <!-- <span class="price_dis">(70%)</span> </li> -->
+                                        <li style="font-weight: 400;">
+                                        </li>
                                     </div>
                                     <div class="views_time_mp">
                                         <div style="display: inline-block">
@@ -297,12 +320,15 @@
 
                                         </div>
                                     </div>
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
-                                        </li>
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                        <i class="mp_share_deal fas fa-share-square"></i>
+                                        <span class="mp_share_deal">Share</span>
+                                    </div>
+                                        
                                     </div>
                                 </ul>
                             </div>
@@ -385,9 +411,18 @@
                                         </h3>
 
                                         <div class="aff_name">
-                                            <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a><br>
+                                            <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a>
                                             <!-- <div style="display: inline-block">
                                         </div> -->
+                                        </div>
+                                       
+
+                                        <div class="monetory_values_mp">
+                                            <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                                <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike> 
+                                                <!-- <span class="price_dis">(70%)</span> </li> -->
+                                            <li style="font-weight: 400;">
+                                            </li>
                                         </div>
                                         <div class="views_time_mp">
                                             <% if (deal.views > 999) { %>
@@ -405,13 +440,15 @@
                                             <% } %>
 
                                         </div>
-
-                                        <div class="monetory_values_mp">
-                                            <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span>
-                                                <strike class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                    class="price_dis">(70%)</span> </li>
-                                            <li style="font-weight: 400;">
-                                            </li>
+                                        <div class="mp_like-rate">
+                                            <i class="mp_like_deal far fa-heart"></i>
+                                            <span class="mp_like_deal">Like</span>
+    
+                                            <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+                                            
                                         </div>
                                     </ul>
                                 </div>
@@ -487,7 +524,15 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div class="aff_name">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block"><%= deal.owner %> </div>
+                                    </div>
+
+                                    
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                                 <!-- <span class="price_dis">(70%)</span> </li> -->
+                                        <li style="font-weight: 400;">
                                     </div>
 
                                     <div class="views_time_mp">
@@ -509,11 +554,15 @@
                                         </div>
 
                                     </div>
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                        <i class="mp_share_deal fas fa-share-square"></i>
+                                        <span class="mp_share_deal">Share</span>
+                                    </div>
+                                        
                                     </div>
                                     </li>
                                 </ul>
@@ -596,9 +645,18 @@
                                         </h3>
 
                                         <div class="aff_name">
-                                            <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a><br>
+                                            <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a>
                                             <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br> -->
                                         </div>
+                                       
+                                        <div class="monetory_values_mp">
+                                            <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                                <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                                 <!-- <span class="price_dis">(70%)</span> </li> -->
+                                            <li style="font-weight: 400;">
+                                            </li>
+                                        </div>
+
                                         <div class="views_time_mp">
                                             <div style="display: inline-block">
 
@@ -619,12 +677,15 @@
 
                                             </div>
                                         </div>
-                                        <div class="monetory_values_mp">
-                                            <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span>
-                                                <strike class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                    class="price_dis">(70%)</span> </li>
-                                            <li style="font-weight: 400;">
-                                            </li>
+                                        <div class="mp_like-rate">
+                                            <i class="mp_like_deal far fa-heart"></i>
+                                            <span class="mp_like_deal">Like</span>
+    
+                                            <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+                                            
                                         </div>
                                     </ul>
                                 </div>
@@ -697,7 +758,15 @@
                                     </h3>
 
                                     <div class="aff_name">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block"><%= deal.owner %> </div>
+                                    </div>
+
+                                   
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike> 
+                                                <!-- <span class="price_dis">(70%)</span> </li> -->
+                                        <li style="font-weight: 400;">
                                     </div>
 
                                     <div class="views_time_mp">
@@ -719,11 +788,15 @@
                                         </div>
 
                                     </div>
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                        <i class="mp_share_deal fas fa-share-square"></i>
+                                        <span class="mp_share_deal">Share</span>
+                                    </div>
+                                        
                                     </div>
                                     </li>
                                 </ul>
@@ -888,7 +961,7 @@
                 <% for(var deal of recentlyViewed){ %>
 
 
-                <div class="item card">
+                <div class="card">
 
                     <div class="card__face">
                         <div class="card__picture" data-pause="true" data-interval="1000">
@@ -922,13 +995,23 @@
                                     </h3>
 
                                     <div class="aff_name">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block"><%= deal.owner %> </div>
                                     </div>
 
 
 
 
-                                    <div class="view_time_mp">
+                                 
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike> 
+                                                <!-- <span class="price_dis">(70%)</span> </li> -->
+                                        <li style="font-weight: 400;">
+
+                                        </li>
+                                    </div>
+
+                                    <div class="views_time_mp">
                                         <div style="display: inline-block">
 
                                             <% if (deal.views > 999) { %>
@@ -946,13 +1029,15 @@
                                             <% } %>
                                         </div>
                                     </div>
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
 
-                                        </li>
+                                        <div class="mp_share">
+                                        <i class="mp_share_deal fas fa-share-square"></i>
+                                        <span class="mp_share_deal">Share</span>
+                                    </div>
+                                        
                                     </div>
                                 </ul>
                             </div>

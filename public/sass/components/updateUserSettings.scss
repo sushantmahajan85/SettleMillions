@@ -52,7 +52,6 @@
   border-bottom: 3px solid transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  border-radius: 2.5rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* Pseudo element (a visible thing that isn't really in the DOM).
@@ -228,7 +227,7 @@ $body: "Roboto", sans-serif;
 
 .containerSettings {
   background-color: #ECF0F1;
-  height: 175rem;
+  height: 200rem;
   position: relative;
   // box-shadow: 2px 5px 20px rgba($gray, 0.5);
   margin: 0 auto;

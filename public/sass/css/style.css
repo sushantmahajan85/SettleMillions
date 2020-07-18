@@ -2108,7 +2108,6 @@ figure {
   border-bottom: 3px solid transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  border-radius: 2.5rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* Pseudo element (a visible thing that isn't really in the DOM).
@@ -2216,7 +2215,7 @@ figure {
 
 .containerSettings {
   background-color: #ECF0F1;
-  height: 175rem;
+  height: 200rem;
   position: relative;
   margin: 0 auto;
   max-width: 136.5rem;

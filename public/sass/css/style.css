@@ -2223,6 +2223,9 @@ figure {
   margin-top: 4rem;
   font-family: Bitter; }
 
+.user_settings_divider {
+  margin-right: 5rem; }
+
 .three-dots {
   float: right;
   position: absolute;

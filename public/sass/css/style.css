@@ -2293,6 +2293,22 @@ figure {
 .gender_option input {
   margin-left: 1rem; }
 
+.leftbox_second {
+  margin-top: 41rem; }
+
+.leftbox_second_element {
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  font-size: 16px;
+  color: #272727; }
+
+.leftbox_second_list {
+  margin-bottom: 1.5rem; }
+
+.leftbox_second_list a {
+  font-family: Bitter;
+  font-size: 12px;
+  margin-left: 2rem; }
+
 .three-dots {
   float: right;
   position: absolute;

@@ -569,7 +569,7 @@ height: 2rem;
   margin: 0 0 4rem 0rem;
 
   &:not(:nth-child(8n)) {
-    margin-right: 5rem;
+    margin-right: 4rem;
   }
 }
 
@@ -577,6 +577,7 @@ height: 2rem;
 
   .card {
     width: 24.75rem;
+    // margin-right: 4rem;
   }
 }
 

@@ -2090,31 +2090,24 @@ figure {
   color: #fff;
   background-color: #df4444;
   font-size: 1.8rem;
-  padding: 1.2rem 2.5rem;
-  border-radius: 1rem;
-  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-transform: capitalize;
   display: inline-block;
   text-decoration: none;
   position: relative;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   font-weight: 500;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /*Add later when we use this for the button in form*/
   border: 1px solid #df4444;
-  cursor: pointer;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+  cursor: pointer; }
 
 .btn-update-settings:hover {
-  color: #df4444;
-  background-color: white;
-  font-weight: 500;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px); }
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px); }
 
 .CTA {
   width: 80px;

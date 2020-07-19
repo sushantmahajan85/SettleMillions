@@ -3548,7 +3548,7 @@ input#price-max {
   display: inline-block;
   font-weight: 400;
   font-size: 3.8rem;
-  font-family: "Signika", sans-serif;
+  font-family: Bitter, sans-serif;
   margin-bottom: 2rem;
   transition: all 0.3s;
   /* &:hover{

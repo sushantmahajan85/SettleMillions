@@ -41,24 +41,25 @@ exports.calcul = catchAsync(async (req, res) => {
 });
 
 exports.analytics = catchAsync(async (req, res) => {
-  const request = require('request');
+  const request = require("request");
 
-  let url = "https://script.googleusercontent.com/macros/echo?user_content_key=Ss60XtsdwwaRcfR7x0m95o0yRMTwGEkiBSQCdlet-lnzGrrlczZqrImU-eWA8iK6O3ZtH2StheaYNwi-j2rgugMRrW246j5Tm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCs7RR-6uyjaFp-2GnW3Uu8y1g4RwIt-6I-_06dYZkO8O7efpHOMyG-vAnTwF6wMxNCogQohfLvy&lib=MEqTyleoCD_zGvTvg-0RVG2GYJDqTCbLs";
+  let url =
+    "https://script.googleusercontent.com/macros/echo?user_content_key=Ss60XtsdwwaRcfR7x0m95o0yRMTwGEkiBSQCdlet-lnzGrrlczZqrImU-eWA8iK6O3ZtH2StheaYNwi-j2rgugMRrW246j5Tm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCs7RR-6uyjaFp-2GnW3Uu8y1g4RwIt-6I-_06dYZkO8O7efpHOMyG-vAnTwF6wMxNCogQohfLvy&lib=MEqTyleoCD_zGvTvg-0RVG2GYJDqTCbLs";
 
-  let options = {json: true};
+  let options = { json: true };
 
   var dataAnalytics;
 
   request(url, options, (error, respon, body) => {
-      if (error) {
-          return  console.log(error);
-      };
+    if (error) {
+      return console.log(error);
+    }
 
-      if (!error && respon.statusCode == 200) {
-          // console.log(respon.body.result[0].Campaign);
-          dataAnalytics = respon.body.result;
-          res.status(200).render("analytics", { dataAnalytics });
-      };
+    if (!error && respon.statusCode == 200) {
+      // console.log(respon.body.result[0].Campaign);
+      dataAnalytics = respon.body.result;
+      res.status(200).render("analytics", { dataAnalytics });
+    }
   });
 });
 
@@ -78,9 +79,10 @@ exports.getSignupForm = (req, res) => {
   res.status(200).render("signup");
 };
 
-exports.getTrendingDeals = (req, res) => {
-  res.status(200).render("trending");
-};
+exports.getTrendingDeals = catchAsync(async (req, res) => {
+  const deals = await Deal.find();
+  res.status(200).render("trending", { deals });
+});
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
   const user = await User.findById(req.user).populate({
@@ -153,7 +155,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
   //   ).sort({ score: { $meta: "textScore" } });
 
   // Execute query in a callback and return users list
-  query.exec(function (err, users) {
+  query.exec(function(err, users) {
     if (!err) {
       // Method to construct the json result set
       res.send(
@@ -337,7 +339,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         sortOrder = -1;
         property = property.substr(1);
       }
-      return function (a, b) {
+      return function(a, b) {
         /* next line works with strings and numbers,
          * and you may want to customize it to your needs
          */

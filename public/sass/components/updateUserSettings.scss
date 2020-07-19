@@ -46,10 +46,11 @@
   color: inherit;
   padding: 1rem 1.75rem;
   border: none;
-  width: 40% !important;
-  background-color: #ebebeb;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
+  width: 48% !important;
+  background-color: #F4F6F7;
+  // border-top: 3px solid transparent;
+  // border-bottom: 3px solid transparent;
+  border: 1px solid #B3B6B7;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-sizing: border-box;
@@ -67,7 +68,7 @@
 }
 
 .form__group:not(:last-child) {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .form__label {
@@ -290,10 +291,20 @@ $body: "Roboto", sans-serif;
 #deleteAccount {
   display: block;
   margin-top: 2rem;
+  margin-left: 10rem;
+}
+
+.us_delete_acc{
+  color: #212F3D;
+  font-size: 1.5rem;
+  border: 1px solid #212F3D;
+  padding: 0.6rem 0.7rem;
+  border-radius: 2rem;
 }
 
 .settings_user_review {
   margin: 0rem;
+  margin-left: 10rem;
 }
 
 .settings_review_username {

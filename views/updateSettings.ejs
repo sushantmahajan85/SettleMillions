@@ -73,6 +73,12 @@
                 type="email" value=<%=
                 user.email %> />
             </div>
+            
+            <div class="form__group">
+              <label class="form__label" for="mobileno">Mobile Number</label>
+              <input class="form__input" type="number" id="mobileno" />
+            </div>
+
             <div class="form__group gender_option">
               <label class="form__label" for="gender">Gender</label>
               <input type="radio" id="male" name="gender" value="male">
@@ -81,10 +87,6 @@
               <label for="female">Female</label>
               <input type="radio" id="other" name="gender" value="other">
               <label for="other">Other</label>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="mobileno">Mobile Number</label>
-              <input class="form__input" type="number" id="mobileno" />
             </div>
             <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
               class="profile1 " /> -->
@@ -134,11 +136,12 @@
             </div>
           </form>
           <div class="user_settings_sub_heading">
-            Delete Account
+            <a class="us_delete_acc"  href="">Delete Account</a>
+             
           </div>
-          <button class="btn-update-settings" id="deleteAccount">
+          <!-- <button class="btn-update-settings" id="deleteAccount">
             Delete Account
-          </button>
+          </button> -->
         </div>
         <hr class="user_settings_divider" />
         <div class="line">&nbsp;</div>

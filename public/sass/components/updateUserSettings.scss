@@ -67,14 +67,14 @@
 }
 
 .form__group:not(:last-child) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .form__label {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .form__photo-upload {
@@ -313,6 +313,7 @@ $body: "Roboto", sans-serif;
   font-size: 20px;
   margin-top: 4rem;
   font-family: Bitter;
+  margin-left: 10rem;
 }
 
 .user_settings_divider {
@@ -347,4 +348,13 @@ $body: "Roboto", sans-serif;
   font-family: Bitter;
   font-size: 12px;
   margin-left: 2rem;
+}
+
+.form-user-data{
+  margin-left: 10rem;
+}
+
+
+.form-user-settings{
+  margin-left: 10rem;
 }

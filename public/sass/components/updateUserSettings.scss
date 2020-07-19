@@ -11,6 +11,7 @@
   display: -ms-flexbox;
   display: flex;
 }
+
 .user-view__menu {
   -webkit-box-flex: 32rem;
   -ms-flex: 32rem 0 0px;
@@ -25,16 +26,17 @@
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   padding: 4rem 0;
 }
+
 .user-view__content {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 7rem 0;
+  padding: 2rem 0;
 }
+
 .user-view__form-container {
   max-width: 68rem;
-  margin: 0 auto;
-  padding: 0 8rem;
+  margin-bottom: 5rem;
 }
 
 .form__input {
@@ -42,28 +44,24 @@
   font-family: inherit;
   font-size: 1.5rem;
   color: inherit;
-  padding: 1.25rem 1.75rem;
+  padding: 1rem 1.75rem;
   border: none;
-  width: 100%;
-  background-color: #fff;
-  background-color: #f2f2f2;
+  width: 40% !important;
+  background-color: #ebebeb;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  border-radius: 4px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* Pseudo element (a visible thing that isn't really in the DOM).
       Also needs -ms- */
 }
+
 .form__input:focus {
   outline: none;
-  border-bottom: 3px solid #55c57a;
 }
-.form__input:focus:invalid {
-  border-bottom: 3px solid #ff7730;
-}
+
 .form__input::-webkit-input-placeholder {
   color: #bbb;
 }
@@ -105,135 +103,49 @@
   z-index: -1;
 }
 
-.form__upload:focus + label {
-  outline: 3px solid #55c57a;
-  outline-offset: 3px;
-}
-
 .form__upload + label {
-  color: #55c57a;
+  color: #fff;
+  background-color: #df4444;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
-  padding: 3px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  border: 1px solid #df4444;
+  border-radius: 2rem;
+  padding: 3px 10px;
   cursor: pointer;
-}
-.form__upload + label:hover {
-  background-color: #55c57a;
-  color: #fff;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.btn-update-settings,
-.btn-update-settings:link,
-.btn-update-settings:visited {
-  font-size: 1.6rem;
-  padding: 1.4rem 3rem;
-  border-radius: 10rem;
-  text-transform: uppercase;
+.form__upload + label:hover {
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+.btn-update-settings {
+  color: #fff;
+  background-color: #df4444;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-transform: capitalize;
   display: inline-block;
   text-decoration: none;
   position: relative;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  font-weight: 400;
+  font-weight: 500;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /*Add later when we use this for the button in form*/
-  border: none;
+  border: 1px solid #df4444;
   cursor: pointer;
 }
 
 .btn-update-settings:hover {
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-}
-
-.btn-update-settings:active {
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.btn-update-settings:focus {
-  outline: none;
-  background-color: #2e864b;
-}
-
-.btn--green {
-  background-color: #55c57a;
-  color: #fff;
-}
-.btn--green::after {
-  background-color: #55c57a;
-}
-
-.btn--small {
-  padding: 1.25rem 3rem !important;
-  font-size: 1.4rem !important;
-}
-
-.btn-small,
-.btn-small:link,
-.btn-small:visited {
-  background-color: #55c57a;
-  color: #fff;
-  font-size: 1.4rem;
-  padding: 1.25rem 3rem;
-  border-radius: 10rem;
-  text-transform: uppercase;
-  position: relative;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 400;
-  border: none;
-}
-
-.btn-update-settings-small:hover {
-  background-color: #7dd56f;
-}
-
-.btn-update-settings-text:link,
-.btn-update-settings-text:visited {
-  color: #55c57a;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid #55c57a;
-  padding: 3px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.btn-update-settings-text:hover {
-  background-color: #55c57a;
-  color: #fff;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.btn-update-settings-text:active {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.btn-update-settings-text:focus {
-  outline: none;
-  outline: 3px solid #55c57a;
-  outline-offset: 3px;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -315,7 +227,7 @@ $body: "Roboto", sans-serif;
 
 .containerSettings {
   background-color: #ECF0F1;
-  height: 120rem;
+  height: 200rem;
   position: relative;
   // box-shadow: 2px 5px 20px rgba($gray, 0.5);
   margin: 0 auto;
@@ -326,9 +238,9 @@ $body: "Roboto", sans-serif;
 
 .leftbox {
   float: left;
-  position: absolute;
+  position: fixed;
   width: 19%;
-  height: 100%;
+  // height: 100%;
   background-color: #FBFCFC;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-left: 1rem;
@@ -352,20 +264,87 @@ $body: "Roboto", sans-serif;
   margin-right: 10px;
   margin-left: 5px;
   color: rgb(39, 39, 39);
+  height: 16px;
+  width: 16px;
 }
 
 .rightbox {
   padding-left: 5rem;
   float: right;
   width: 77%;
-  height: 100%;
+  height: 95%;
   background-color: #FBFCFC;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;
   margin-top: 8rem;
 }
 
-
 // body{
 //   background-color: rgb(242, 243, 246 );
 // }
+
+#twofactorauth {
+  margin-top: 2rem;
+}
+
+#deleteAccount {
+  display: block;
+  margin-top: 2rem;
+}
+
+.settings_user_review {
+  margin: 0rem;
+}
+
+.settings_review_username {
+  font-size: 1.6rem;
+}
+
+.user_settings_forgot_password {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 14px;
+  margin-left: 1.5rem;
+  color: rgb(0, 0, 88);
+}
+
+.user_settings_sub_heading {
+  font-size: 20px;
+  margin-top: 4rem;
+  font-family: Bitter;
+}
+
+.user_settings_divider {
+  margin-right: 5rem;
+}
+
+.gender_option {
+  font-family: Bitter;
+  font-size: 16px;
+}
+
+.gender_option input {
+  margin-left: 1rem;
+}
+
+.leftbox_second {
+  margin-top: 41rem;
+}
+
+.leftbox_second_element {
+  // text-align: center;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  font-size: 16px;
+  color: rgb(39, 39, 39);
+}
+
+.leftbox_second_list {
+  margin-bottom: 1.5rem;
+}
+
+.leftbox_second_list a {
+  font-family: Bitter;
+  font-size: 12px;
+  margin-left: 2rem;
+}

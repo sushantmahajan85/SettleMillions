@@ -23,41 +23,39 @@
       </nav> -->
       <div class="leftbox_element">
         <i class="fas fa-cog leftbox_icon"></i>
-        General Settings
+        <a href="#generalSettings">General Settings</a>
       </div>
       <div class="leftbox_element">
         <i class="fas fa-lock leftbox_icon"></i>
-        Security & Login
+        <a href="#securityLogin">Security & Login</a>
       </div>
       <div class="leftbox_element">
         <i class="fas fa-star leftbox_icon"></i>
-        My Reviews & Ratings
+        <a href="#reviewsRatings">My Reviews & Ratings</a>
       </div>
       <div class="leftbox_element">
         <i class="fas fa-heart leftbox_icon"></i>
-        My Liked Deals
+        <a href="">My Liked Deals</a>
       </div>
       <div class="leftbox_element">
         <i class="fas fa-sign-out-alt leftbox_icon"></i>
-        Logout
+        <a href="">Logout</a>
+      </div>
+    </div>
+    <div class="leftbox leftbox_second">
+      <div class="leftbox_second_element">
+        <p>Frequently Visited</p>
+      </div>
+      <div class="leftbox_second_list">
+        <a href="#securityLogin">Change Password</a>
+        <a href="">Help Center</a>
       </div>
     </div>
     <div class="rightbox">
       <div class="user-view__content">
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
+          <h2 class="heading-secondary" id="generalSettings">General Settings</h2>
           <form class="form form-user-data" id="form-user-data">
-            <div class="form__group">
-              <label class="form__label" for="name">Name</label><input class="form__input" id="name" type="text"
-                value=<%= user.name %> />
-            </div>
-            <div class="form__group ma-bt-md">
-              <label class="form__label" for="email">Email address</label><input class="form__input" id="email"
-                type="email" value=<%=
-                user.email %> />
-            </div>
-            <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
-              class="profile1 " /> -->
             <div class="form__group form__photo-upload">
               <img class="form__user-photo" src=<%=`/img/users/${user.photo}`%> alt="User photo" />
               <input type="file" accept="image/*" class="form__upload" id="photo" name="photo" />
@@ -66,35 +64,94 @@
                   >Choose new photo</a
                 > -->
             </div>
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label><input class="form__input" id="name" type="text"
+                value=<%= user.name %> />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email address</label><input class="form__input" id="email"
+                type="email" value=<%=
+                user.email %> />
+            </div>
+            <div class="form__group gender_option">
+              <label class="form__label" for="gender">Gender</label>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="mobileno">Mobile Number</label>
+              <input class="form__input" type="number" id="mobileno" />
+            </div>
+            <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
+              class="profile1 " /> -->
             <div class="form__group right">
-              <button class="btn-update-settings btn--small btn--green">
+              <button class="btn-update-settings">
                 Save settings
               </button>
             </div>
           </form>
         </div>
+        <hr class="user_settings_divider" />
         <div class="line">&nbsp;</div>
         <div class="user-view__form-container">
-          <h2 class="heading-secondary ma-bt-md">Password change</h2>
+          <h2 class="heading-secondary" id="securityLogin">Security & Login</h2>
           <form class="form form-user-settings " id="pass">
             <div class="form__group">
-              <label class="form__label" for="password-current">Current password</label><input class="form__input"
+              <label class="form__label" for="password-current">Current Password</label><input class="form__input"
                 id="current" type="password" placeholder="••••••••" required="required" minlength="8" />
             </div>
             <div class="form__group">
-              <label class="form__label" for="password">New password</label><input class="form__input" id="npassword"
+              <label class="form__label" for="password">New Password</label><input class="form__input" id="npassword"
                 type="password" placeholder="••••••••" required="required" minlength="8" />
             </div>
             <div class="form__group ma-bt-lg">
-              <label class="form__label" for="password-confirm">Confirm password</label><input class="form__input"
+              <label class="form__label" for="password-confirm">Confirm New Password</label><input class="form__input"
                 id="cpassword" type="password" placeholder="••••••••" required="required" minlength="8" />
             </div>
             <div class="form__group right">
-              <button class="btn-update-settings btn--small btn--green">
+              <button class="btn-update-settings">
                 Save password
+              </button>
+              <button class="user_settings_forgot_password">
+                Forgot Password
               </button>
             </div>
           </form>
+          <div class="user_settings_sub_heading">
+            Two-Factor Authentication
+          </div>
+          <form class="form form-user-data" id="form-user-data">
+            <div class="form__group">
+              <label class="form__label" for="phoneno"></label>
+              <input class="form__input" type="number" id="phoneno" />
+              <button class="btn-update-settings" id="twofactorauth">
+                Enable two-factor authentication
+              </button>
+            </div>
+          </form>
+          <div class="user_settings_sub_heading">
+            Delete Account
+          </div>
+          <button class="btn-update-settings" id="deleteAccount">
+            Delete Account
+          </button>
+        </div>
+        <hr class="user_settings_divider" />
+        <div class="line">&nbsp;</div>
+        <div class="user-view__form-container">
+          <h2 class="heading-secondary" id="reviewsRatings">My Reviews & Ratings</h2>
+          <div class="user-nav__user user-review settings_user_review">
+            <img src="/img/users/default.jpg" alt="User Photo" class="user-nav__user-photo review-photo">
+            <div class="review-text">
+              <div class="user-nav__user-name settings_review_username">Test Name</div>
+              <div class="rev">This is a test review. This is a test review. This is a test review. This is a test
+                review. This is a test review. This is a test review. This is a test review.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

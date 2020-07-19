@@ -531,20 +531,59 @@ figure {
 
 .aff_name{
 width: 100%;
-height: 2rem;
+height: 2.5rem;
+display: block;
+margin-top: 1rem;
+color: #4A4D4F;
+font-weight: 600;
+font-size: 1.46rem;
+
+&:hover{
+  color: black;
+}
 }
 
+.mp_aff-name-tag{
+  font-size: 1.1rem;
+      position: relative;
+      bottom: 0.1rem;
+      left: 0.5rem;
+}
+
+.mp_like-rate{
+  height: 3rem;
+  width: 100%;
+  position: relative;
+  top:1.4rem;
+}
+
+.mp_like_deal, .mp_share_deal, .mp_ratings-icon{
+  font-size: 1.85rem;
+  display: inline-block;
+  color: #232020;
+}
+
+.mp_share{
+  margin-left: 4rem;
+  display: inline;
+
+}
+// .mp_like_deal{
+//   font-size: 2rem !important;
+//   color: #626567 !important;
+// }
 
 .views_time_mp {
-  margin-top: 0.8rem;
+  // margin-top: 0.8rem;
   font-size: 1.4rem;
   font-weight: 300;
   color: #000;
   font-family: "Bitter", serif;
+  margin-top: 0.6rem;
 }
 
 .monetory_values_mp li {
-  margin-top: 1rem;
+  // margin-top: 1rem;
   font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
@@ -553,7 +592,18 @@ height: 2rem;
 }
 
 .mp_price {
-  font-size: 2.2rem !important;
+  font-size: 2.3rem !important;
+  color: #D10124 !important;
+  font-weight: 500 !important;
+  font-family: "Bitter", serif;
+}
+
+.mp_p-mrp{
+  position: relative;
+  bottom: 0.1rem;
+  margin-left: 0.2rem !important;
+  font-family: "Bitter", serif;
+
 }
 .card {
   // font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -570,6 +620,10 @@ height: 2rem;
 
   &:not(:nth-child(8n)) {
     margin-right: 5rem;
+  }
+
+  &:hover{
+    box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 2px 1rem 5px #E5E7E9;
   }
 }
 
@@ -608,6 +662,10 @@ height: 2rem;
   //    &:hover{
   // transform: scale(1.03);
   //    }
+
+  &:hover{
+    background-color: #FCFCFC;
+  }
 }
 
 
@@ -680,7 +738,7 @@ height: 2rem;
   float: right;
   position: absolute;
   bottom: 0rem;
-  top: 16rem;
+  top: 17.3rem;
   right: 0.5rem;
   font-size: 2rem;
   text-align: center;
@@ -723,3 +781,6 @@ height: 2rem;
   padding: 0.5rem 0;
 }
 
+.owl-stage{
+  padding-top: 1rem;
+}

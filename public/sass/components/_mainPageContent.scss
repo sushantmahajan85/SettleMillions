@@ -32,13 +32,22 @@ body {
 }
 
 .searchpage {
-  display: flex;
+  display: block;
   flex: 0 0 25%;
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
   padding-top: 8.1rem;
 }
+
+.sp_button{
+
+  width: 11rem;
+  height: 5rem;
+
+}
+
+
 
 .searchpage a {
   width: 43rem;

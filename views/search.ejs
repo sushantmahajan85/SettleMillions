@@ -19,16 +19,19 @@
        crossorigin="anonymous"></script>
 
 </head>
+<%- include('partials/navbar.ejs') %>
+<%- include('partials/sidebar.ejs') %>
 <body>
 
-   <%- include('partials/navbar.ejs') %>
-   <%- include('partials/sidebar.ejs') %>
+  
+  
 
    <div class="page-content">
       
+
       <div id="searchpage" class="searchpage">
-         <button onclick="sortPrice()">Sort by mrp</button>
-         <button onclick="sortTrend()">Sort by Trending</button>
+         <button onclick="sortPrice()" class="sp_button">Sort by mrp</button>
+         <button onclick="sortTrend()" class="sp_button">Sort by Trending</button>
          <script>
             function sortPrice(){
          var url = window.location.href;    
@@ -55,8 +58,8 @@ window.location.href = url;
          <% for(var deal of deals) { %>
          <% i++; %>
          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> 
-            <div class="big-deal">
-
+            <!-- <div class="big-deal"> -->
+               <div class="sp_deal-box">
                <div class="big-deal_img" data-pause="true" data-interval="1000">
                   <div
                   class="carousel-item active"
@@ -89,40 +92,71 @@ window.location.href = url;
                   >
                   </div>
                </div>
-               <div class="big-deal_content">
-                  <div class="big-deal_name">
+               <!-- <div class="big-deal_content"> -->
+                  <div class="sp_deal_area-content">
+                     <div class="sp_deal_content-box" style="display: flex;flex-direction: row;align-items: center; ">
+                        <div class=" sp_deal-title"><%= deal.dealName %> </div>
+                      </div>
+                  <!-- <div class="big-deal_name">
                   <h4><%= deal.dealName %> </h4>
-                  </div>
+                  </div> -->
 
-                  <div class="big-deal_buttons">
+                  <div class="sp_deal-r1" style="display: flex;flex-direction: row;align-items: center; ">
+                     <!-- <a href="" class="ld_deal-r1-det"><%= deal.owner %></a> -->
+                     <div class="sp_deal-r1-det"><%= deal.owner %> </div>
+                     <!-- <a href="" class="ld_deal-r1-det">Flipkart</a> -->
+                     <div class="sp_deal-r1-det">Flipkart</div>
+                     <div class="sp_deal-r1-det">May 2020</div>
+                   </div>
+
+                  <!-- <div class="big-deal_buttons">
                   <div class="big-deal_user"><%= deal.owner %> </div>
-                  </div>
-                  <div class="big-deal_vt">
+                  </div> -->
+
+                  <div class="sp_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
+                     <div class="sp_deal-r2-det">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                   </div>
+
+                   <div class="sp_deal-r3" style="display: flex;flex-direction: row ">
+                     <div class="sp_deal-r3-dp">₹<%= deal.dealPrice %></div>
+                     <div class="sp_deal-r3-mrp"><%= deal.mrp %> </div>
+                     <div class="sp_deal-r3-dis">50% OFF</div>
+                   </div>
+
+                   <div class="sp_deal-r4" style="display: flex;flex-direction: row">
+                     <div class="sp_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div>
+                     <div class="sp_deal-r4-det"><i id="img_sp_deal_views"
+                         class="far fa-eye"></i><%= deal.views %> </div>
+                   </div>
+
+                  <!-- <div class="big-deal_vt">
                   <p class="big-deal_views"><%= deal.views %>  views</p>
                   <p class="big-deal_time"><%= deal.mrp %> days ago</p>
-                  </div>
+                  </div> -->
 
-                  <div class="big-deal_des">
+                  <!-- <div class="big-deal_des">
                   <p class="paragraphx">
                      <%= deal.titleDis %> 
                   </p>
-                  </div>
-                  <div class="big-deal_price">
+                  </div> -->
+                  <!-- <div class="big-deal_price">
                   <h4
                      class="heading-normal"
                      style="letter-spacing: 0.2rem;font-size: 2rem"
                   >
                      Rs.<%= deal.mrp %> 
                   </h4>
-                  </div>
-                  <div class="big-deal_dis">
+                  </div> -->
+                  <!-- <div class="big-deal_dis">
                   <strike
                      style="font-size: 1.8rem; color:rgb(82, 80, 80);margin-right: 2rem"
                      >Rs.<%= deal.dealPrice %> </strike
                   >
 
                   <h3 class="big-deal_percent">70% OFF</h3>
-                  </div>
+                  </div> -->
                </div>
             </div>
         </a>

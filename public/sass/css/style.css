@@ -2155,8 +2155,8 @@ figure {
   padding: 1rem 1.75rem;
   border: none;
   width: 48% !important;
-  background-color: #F4F6F7;
-  border: 1px solid #B3B6B7;
+  background-color: #f4f6f7;
+  border: 1px solid #b3b6b7;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-sizing: border-box;
@@ -2265,7 +2265,7 @@ figure {
     transform: scale(1.1); }
 
 .containerSettings {
-  background-color: #ECF0F1;
+  background-color: #ecf0f1;
   height: 210rem;
   position: relative;
   margin: 0 auto;
@@ -2276,7 +2276,7 @@ figure {
   float: left;
   position: fixed;
   width: 19%;
-  background-color: #FBFCFC;
+  background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-left: 1rem;
   margin-top: 8rem; }
@@ -2303,7 +2303,7 @@ figure {
   float: right;
   width: 77%;
   height: 95%;
-  background-color: #FBFCFC;
+  background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;
   margin-top: 8rem; }
@@ -2317,9 +2317,9 @@ figure {
   margin-left: 10rem; }
 
 .us_delete_acc {
-  color: #212F3D;
+  color: #212f3d;
   font-size: 1.5rem;
-  border: 1px solid #212F3D;
+  border: 1px solid #212f3d;
   padding: 0.6rem 0.7rem;
   border-radius: 2rem; }
 
@@ -2675,6 +2675,23 @@ footer {
   float: right;
   margin-right: 1rem;
   font-size: 1rem; }
+
+.deal_area_user {
+  display: flex;
+  margin: 1rem 0rem 1rem 2rem; }
+
+.deal_area_user_pic {
+  height: 70px;
+  width: 70px;
+  cursor: pointer; }
+
+.deal_area_user_pic img {
+  border-radius: 50%; }
+
+.deal_area_user_name {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  cursor: pointer; }
 
 * {
   padding: 0%;

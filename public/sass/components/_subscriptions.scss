@@ -1,0 +1,20 @@
+.deal_area_user {
+  display: flex;
+  margin: 1rem 0rem 1rem 2rem;
+}
+
+.deal_area_user_pic {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.deal_area_user_pic img {
+  border-radius: 50%;
+}
+
+.deal_area_user_name {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}

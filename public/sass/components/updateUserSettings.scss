@@ -47,10 +47,10 @@
   padding: 1rem 1.75rem;
   border: none;
   width: 48% !important;
-  background-color: #F4F6F7;
+  background-color: #f4f6f7;
   // border-top: 3px solid transparent;
   // border-bottom: 3px solid transparent;
-  border: 1px solid #B3B6B7;
+  border: 1px solid #b3b6b7;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-sizing: border-box;
@@ -168,7 +168,6 @@ $hulu: "Nunito Sans", sans-serif;
 $heading: "Montserrat", sans-serif;
 $body: "Roboto", sans-serif;
 
-
 // .logo {
 //   float: right;
 //   margin-right: 12px;
@@ -225,9 +224,8 @@ $body: "Roboto", sans-serif;
 //   color: $aqua;
 // }
 
-
 .containerSettings {
-  background-color: #ECF0F1;
+  background-color: #ecf0f1;
   height: 210rem;
   position: relative;
   // box-shadow: 2px 5px 20px rgba($gray, 0.5);
@@ -236,13 +234,12 @@ $body: "Roboto", sans-serif;
   min-width: 112.5rem;
 }
 
-
 .leftbox {
   float: left;
   position: fixed;
   width: 19%;
   // height: 100%;
-  background-color: #FBFCFC;
+  background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-left: 1rem;
   margin-top: 8rem;
@@ -261,7 +258,7 @@ $body: "Roboto", sans-serif;
   background-color: #f2f2f2;
 }
 
- .leftbox_icon {
+.leftbox_icon {
   margin-right: 10px;
   margin-left: 5px;
   color: rgb(39, 39, 39);
@@ -274,7 +271,7 @@ $body: "Roboto", sans-serif;
   float: right;
   width: 77%;
   height: 95%;
-  background-color: #FBFCFC;
+  background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;
   margin-top: 8rem;
@@ -294,10 +291,10 @@ $body: "Roboto", sans-serif;
   margin-left: 10rem;
 }
 
-.us_delete_acc{
-  color: #212F3D;
+.us_delete_acc {
+  color: #212f3d;
   font-size: 1.5rem;
-  border: 1px solid #212F3D;
+  border: 1px solid #212f3d;
   padding: 0.6rem 0.7rem;
   border-radius: 2rem;
 }
@@ -361,11 +358,10 @@ $body: "Roboto", sans-serif;
   margin-left: 2rem;
 }
 
-.form-user-data{
+.form-user-data {
   margin-left: 10rem;
 }
 
-
-.form-user-settings{
+.form-user-settings {
   margin-left: 10rem;
 }

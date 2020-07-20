@@ -624,6 +624,7 @@ font-size: 1.46rem;
 
   &:hover{
     box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 2px 1rem 5px #E5E7E9;
+    overflow: hidden;
   }
 }
 
@@ -648,7 +649,7 @@ font-size: 1.46rem;
   transition: all 0.8s ease;
   // -webkit-backface-visibility: hidden;
   // backface-visibility: hidden;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   // overflow: hidden;
   border: 1px solid #e5e7e9;
   display: flex;

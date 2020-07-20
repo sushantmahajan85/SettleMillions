@@ -293,18 +293,21 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div class="aff_name">
-                                        <div style="display: inline-block"><%= deal.owner %> </div>
+                                        <div style="display: inline-block"><%= deal.owner %> <i
+                                            class=" mp_aff-name-tag fas fa-check-circle"></i></div>
                                     </div>
 
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
+                                            <!-- <span class="price_dis">(70%)</span>  -->
+                                        </li>
                                         <li style="font-weight: 400;">
                                         </li>
                                     </div>
                                     <div class="views_time_mp">
                                         <div style="display: inline-block">
+                                            
                                             <% if (deal.views > 999) { %>
                                             <span><%=`${vui} views`%></span>
                                             <% } else { %>

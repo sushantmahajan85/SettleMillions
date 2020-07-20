@@ -33,38 +33,42 @@
     <!-- 
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %> -->
-
+<!-- 
     <div class="slideshow-container">
 
         <div class="mySlides fade">
             <a class="butons_mp prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="butons_mp next" onclick="plusSlides(1)">&#10095;</a>
-            <!-- <div class="numbertext">1 / 3</div> -->
+            
             <img src="/images/laptop.jpeg">
             
-            <!-- <div class="text">Caption Text</div> -->
-        </div>
+            
+        </div> -->
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <!-- <div class="text">Caption Text</div> -->
 
-        <div class="mySlides fade">
+        <!-- <div class="mySlides fade">
             <a class="butons_mp prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="butons_mp next" onclick="plusSlides(1)">&#10095;</a>
-            <!-- <div class="numbertext">2 / 3</div> -->
+           
             <img src="/images/deals.jpeg">
-            <!-- <div class="text">Caption Two</div> -->
-        </div>
+        </div> -->
 
-        <div class="mySlides fade">
+         <!-- <div class="numbertext">2 / 3</div> -->
+          <!-- <div class="text">Caption Two</div> -->
+
+        <!-- <div class="mySlides fade">
             <a class="butons_mp prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="butons_mp next" onclick="plusSlides(1)">&#10095;</a>
-            <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="/images/iphone.jpeg">
-            <!-- <div class="text">Caption Three</div> -->
-        </div>
-
+           
+            <img src="/images/iphone.jpeg">  
+        </div> -->
+         <!-- <div class="numbertext">3 / 3</div> -->
+         <!-- <div class="text">Caption Three</div> -->
        
 
-    </div>
-    <br>
+    <!-- </div>
+    <br> -->
 
     <!-- <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -72,9 +76,9 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div> -->
 
-    <div class="page-content">
+    <div class="tp_diff_page-content page-content">
         <a href=" ">
-            <div class="mainpage_titles">TRENDING</div>
+            <div class=" tp_diff_title mainpage_titles">TRENDING</div>
         </a>
         <!-- <hr> -->
 
@@ -163,11 +167,22 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <!-- <h3 class= "product_name_mainp">Product Name</h3> -->
-                                    <div class="aff_name">
-                                        <a href=<%= `/memb</div>er/${deal.user}` %>><%= deal.owner %> </a><br>
+                                    <div>
+                                        <a  class="aff_name" href=<%= `/member/${deal.user}` %>><%= deal.owner %> 
+                                            <i class="mp_aff-name-tag fas fa-check-circle"></i></a>
                                     </div>
 
                                     <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %>  Reports:<%= deal.reportCount %>  </a><br> -->
+
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike> 
+                                                <!-- <span class="price_dis">(70%)</span>  -->
+                                            </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
 
                                     <div class="views_time_mp">
                                         <div style="display: inline-block">
@@ -189,13 +204,18 @@
                                         </div>
                                     </div>
 
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
-                                        </li>
+
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
                                     </div>
+
                                 </ul>
                             </div>
 
@@ -277,8 +297,19 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div class="aff_name">
-                                        <div style="display: inline-block"><%= deal.owner %> </div><br>
+                                        <div style="display: inline-block"><%= deal.owner %>  <i
+                                            class=" mp_aff-name-tag fas fa-check-circle"></i></div>
                                     </div>
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span> <strike
+                                                class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike> 
+                                                <!-- <span class="price_dis">(70%)</span> -->
+                                             </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+                                    
                                     <div class="views_time_mp">
                                         <div style="display: inline-block">
                                             <% if (deal.views > 999) { %>
@@ -297,13 +328,18 @@
 
                                         </div>
                                     </div>
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">Rs.<%= deal.mrp %> </span> <strike
-                                                class="price_mrp"><%= deal.dealPrice %> </strike> <span
-                                                class="price_dis">(70%)</span> </li>
-                                        <li style="font-weight: 400;">
-                                        </li>
+
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
                                     </div>
+                                    
                                 </ul>
                             </div>
                         </div>

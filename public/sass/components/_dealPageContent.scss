@@ -186,6 +186,23 @@
   //   width: 3rem;
   //   height: 3rem;
   // }
+  &_share {
+    display: flex;
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+    &_button {
+      font-size: 16px;
+      margin-left: 3rem;
+      padding: 0.25rem 1.5rem;
+      background-color: #ef233c;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+  }
 }
 
 .deal-with-review {
@@ -429,20 +446,13 @@
   float: left;
 }
 
-
 .deal_area {
   padding-top: 6.5rem;
 }
 
-
-
-
-
 .member-page-content {
   background-color: white;
 }
-
-
 
 .deal_box_description {
   font-family: Arial, Helvetica, sans-serif;

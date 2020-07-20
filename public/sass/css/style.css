@@ -1263,6 +1263,20 @@ figure {
       padding: 0rem;
       border-radius: 50%;
       margin-bottom: 1rem; }
+  .deal-deets_share {
+    display: flex;
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-top: 1rem; }
+    .deal-deets_share_button {
+      font-size: 16px;
+      margin-left: 3rem;
+      padding: 0.25rem 1.5rem;
+      background-color: #ef233c;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      cursor: pointer; }
 
 .deal-with-review {
   display: flex;

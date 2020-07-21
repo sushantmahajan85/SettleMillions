@@ -471,30 +471,28 @@
             <!-- <div class="picture_container">
                         <div class="profile_pic"></div>
                     </div> -->
-            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+            <div class="content_box" style="display: flex; flex-direction: column; justify-content: center">
               <div class="deal_box_nameTime"
-                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-
-                <div class="deal_box_name" style="font-size: 15px !important;">
+                style="display: flex; flex-direction: row; align-items: center">
+                <div class="deal_box_name" style="font-size: 15px !important">
                   <%= deal.dealName %>
                 </div>
 
               </div>
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
+              <div class="deal_box_nameTime" style="display: flex; flex-direction: row; align-items: center">
                 <div class="deal_box_views"><%= deal.owner %></div>
                 <!-- <div class="deal_box_time">Amazon</div> -->
 
               </div>
 
 
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_views"><%= deal.mrp %></div>
-                <div class="deal_box_time">80% OFF</div>
-                <div class="deal_box_time"><%= deal.dealPrice %></div>
+              <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
+                <div class="deal_box_dp">₹<%= deal.dealPrice %></div>
+                <div class="deal_box_mrp">₹<%= deal.mrp %></div>
+                <div class="deal_box_dis">80% OFF</div>
               </div>
 
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+              <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
                 <div class="deal_box_views"><%= deal.views %> views</div>
                 <div class="deal_box_time">3 days ago</div>
               </div>
@@ -525,7 +523,7 @@
                     </div> -->
             <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
               <div class="deal_box_nameTime"
-                style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+                style="display: flex; flex-direction: row; align-items: center">
 
                 <div class="deal_box_name" style="font-size: 15px !important;">
                   <%= deal.dealName %>
@@ -541,9 +539,9 @@
 
 
               <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_views"><%= deal.mrp %></div>
-                <div class="deal_box_time">80% OFF</div>
-                <div class="deal_box_time"><%= deal.dealPrice %></div>
+                <div class="deal_box_dp">₹<%= deal.dealPrice %></div>
+                <div class="deal_box_mrp">₹<%= deal.mrp %></div>
+                <div class="deal_box_dis">80% OFF</div>
               </div>
 
               <div class="deal_box_nameTime" style="display: flex;flex-direction: row">

@@ -873,7 +873,41 @@
 }
 
 .side_deals .deal_area_content {
-  margin-left: 2rem;
+  margin-left: 1.6rem;
   height: 16rem;
   padding-top: 1rem;
+}
+
+.side_deals .deal_box_name {
+  margin-right: 0rem;
+}
+
+.side_deals .deal_box_dp {
+  font-weight: 500;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.side_deals .deal_box_mrp {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #8d99ae;
+  text-decoration: line-through;
+  margin-right: 1rem;
+  margin-bottom: -0.5rem;
+  padding: 5px 0;
+}
+
+.side_deals .deal_box_dis {
+  color: #d10024;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 1rem;
+  margin-bottom: -0.5rem;
+  padding: 5px 0;
 }

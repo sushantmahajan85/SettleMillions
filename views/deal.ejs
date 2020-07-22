@@ -302,7 +302,17 @@
         <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo" class="user-nav__user-photo review-photo">
       </span>
       <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
-      <button id="review_post">Post a review</button>
+      <button id="review_post">Post</button>
+      <div class="add-rating">
+        <div>Add your rating: </div>
+        <div class="rating-stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+      </div>
       <% for( var review of deal.reviews ) { %>
       <div class="user-nav__user user-review">
         <img src=<%=`/img/users/${review.user.photo}`%> alt="User photo" class="user-nav__user-photo review-photo">

@@ -326,6 +326,17 @@
   border: 2px solid #ef233c;
 }
 
+.add-rating {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 7.5rem;
+}
+
+.add-rating .rating-stars {
+  margin-top: 0rem;
+  cursor: pointer;
+}
+
 .review-text {
   display: flex;
   flex-direction: column;

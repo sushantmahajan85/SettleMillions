@@ -30,8 +30,8 @@
       
 
       <div id="searchpage" class="searchpage">
-         <button onclick="sortPrice()" class="sp_button">Sort by mrp</button>
-         <button onclick="sortTrend()" class="sp_button">Sort by Trending</button>
+         <!-- <button onclick="sortPrice()" class="sp_button">Sort by mrp</button>
+         <button onclick="sortTrend()" class="sp_button">Sort by Trending</button> -->
          <script>
             function sortPrice(){
          var url = window.location.href;    
@@ -59,6 +59,188 @@ window.location.href = url;
          <% i++; %>
          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> 
             <!-- <div class="big-deal"> -->
+
+                  <div class="sp_filter-sorting">
+                  
+                     <div class="sp_cateogry">Category<i class="sp_icon fas fa-caret-down"></i>
+
+                        <div class="sp_category-list">
+                     <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 1
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 2
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 3
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb"  name="radio">Category 4
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio" >Category 5
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 6
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 6
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 7
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb" name="radio">Category 8
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container1">
+                        <input type="radio" id="rb"  name="radio">Category 8
+                        <span class="checkmark"></span>
+                      </label>
+
+                     </div>
+                      
+                     </div>
+
+
+                     <div class="sp_sub-category">Sub-Category<i class="sp_icon fas fa-caret-down"></i>
+
+                        <div class="sp_sub-category-list">
+                        <label class="container1">
+                           <input type="checkbox" id="cb">Sub-Category 1
+                           <span class="checkmark"></span>
+                         </label>
+                         <label class="container1">
+                           <input type="checkbox" id="cb">Sub-Category 2
+                           <span class="checkmark"></span>
+                         </label>
+                         <label class="container1">
+                           <input type="checkbox" id="cb">Sub-Category 3
+                           <span class="checkmark" id="cb"></span>
+                         </label>
+                         <label class="container1">
+                           <input type="checkbox" id="cb">Sub-Category 4
+                           <span class="checkmark"></span>
+                         </label>
+                         <label class="container1">
+                           <input type="checkbox" id="cb">Sub-Category 5
+                           <span class="checkmark"></span>
+                         </label>
+                         <label class="container1">
+                           <input type="checkbox" id="cb">Sub-Category 6
+                           <span class="checkmark"></span>
+                         </label>
+                         
+                        </div>
+                     </div>
+                     
+                     <div class="sp_price">Price<i class="sp_icon fas fa-caret-down"></i>
+                     
+                        <div class="sp_price-list">
+                           <label class="container1">
+                              <input type="checkbox" id="cb">₹100-₹200
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container1">
+                              <input type="checkbox" id="cb">₹201-₹500
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container1">
+                              <input type="checkbox" id="cb">₹501-₹1000
+                              <span class="checkmark" id="cb"></span>
+                            </label>
+                            <label class="container1">
+                              <input type="checkbox" id="cb">₹1001-₹5000
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container1">
+                              <input type="checkbox" id="cb">Over ₹5001
+                              <span class="checkmark"></span>
+                            </label>
+                            
+                            
+                           </div>
+                     </div>
+                     
+                     <div class="sp_price_box price_input-boxes">
+                        <div class="input-number price-min">
+                            <input id="price-min" type="text">
+                            <!-- <span class="qty-up">+</span>
+                            <span class="qty-down">-</span> -->
+                        </div>
+                        <span>-</span>
+                        <div class="input-number price-max">
+                            <input id="price-max" type="text">
+                            <!-- <span class="qty-up">+</span>
+                            <span class="qty-down">-</span> -->
+                        </div>
+                    </div>
+                  
+               
+
+
+               <div class="sp_cust-rat">Customer Ratings<i class="sp_icon fas fa-caret-down"></i>
+                  <div class="sp_cust-rat-list">
+  
+                     <a href="#">
+                         <div class="ratings-icon-dp">
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="far fa-star"></i>
+                             
+                           </div>
+                           <span class="ld_rating-text">& Up</span>
+                     </a>
+                     <a href="#">
+                         <div class="ratings-icon-dp">
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="far fa-star"></i>
+                             <i class="far fa-star"></i>
+                            
+                           </div>
+                           <span class="ld_rating-text">& Up</span>
+                     </a>
+                     <a href="#">
+                         <div class="ratings-icon-dp">
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="far fa-star"></i>
+                             <i class="far fa-star"></i>
+                             <i class="far fa-star"></i>
+                             
+                           </div>
+                           <span class="ld_rating-text">& Up</span>
+                     </a>
+                     <a href="#">
+                         <div class="ratings-icon-dp">
+                             <i class="fas fa-star"></i>
+                             <i class="far fa-star"></i>
+                             <i class="far fa-star"></i>
+                             <i class="far fa-star"></i>
+                             <i class="far fa-star"></i>
+                           </div>
+                           <span class="ld_rating-text">& Up</span>
+                     </a>
+                
+
+               </div>
+                  </div>
+
+               </div>
+           
+
                <div class="sp_deal-box">
                <div class="big-deal_img" data-pause="true" data-interval="1000">
                   <div

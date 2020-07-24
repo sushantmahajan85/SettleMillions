@@ -636,10 +636,6 @@ body {
   width: 11rem;
   height: 5rem; }
 
-.searchpage a {
-  width: 43rem;
-  height: 26rem; }
-
 img {
   width: 100%;
   padding: 0.9rem;
@@ -2778,7 +2774,73 @@ footer {
 
 #img_mep_deal_views {
   color: black;
-  margin-right: 0.5rem; }
+  margin-right: 0.5rem;
+  position: relative; }
+
+.sp_filter-sorting {
+  display: inline-block;
+  margin-bottom: 5rem;
+  margin-top: 4rem; }
+
+.sp_cateogry {
+  margin-left: 5rem;
+  display: inline-block;
+  width: 11rem;
+  margin-right: 2.2rem; }
+
+.sp_cust-rat {
+  display: inline-block;
+  margin-left: 5rem;
+  display: inline-flex; }
+
+.sp_sub-category {
+  display: inline-block;
+  width: 15rem;
+  margin-right: 2.2rem; }
+
+.sp_price {
+  display: inline-flex;
+  width: 8rem; }
+
+.sp_price_box {
+  display: inline-flex;
+  width: 16rem; }
+
+.sp_icon {
+  position: relative;
+  margin-left: 0.67rem;
+  line-height: 3rem !important; }
+
+.container1 {
+  margin-left: 4.5rem; }
+
+.sp_category-list, .sp_sub-category-list, .sp_price-list {
+  width: 100rem;
+  line-height: 4rem;
+  margin-top: 2rem; }
+
+.sp_cust-rat-list {
+  width: 100rem;
+  line-height: 4rem;
+  margin-top: 2rem; }
+
+.sp_category-list {
+  display: none; }
+
+.sp_cust-rat-list {
+  display: none; }
+
+.sp_sub-category-list {
+  display: none; }
+
+.sp_price-list {
+  display: none;
+  position: relative;
+  left: 25rem;
+  top: 18rem; }
+
+#cb, #rb {
+  margin-right: 0.8rem; }
 
 .deal_area_user {
   display: flex;

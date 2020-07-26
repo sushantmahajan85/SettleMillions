@@ -1,121 +1,178 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Affiliate</title>
 
-    <link rel="stylesheet" href="/sass/css/style.css" />
-    <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Amaranth"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Signika&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate</title>
 
-      gtag("config", "UA-162941654-1");
-    </script>
-  </head>
+  <link rel="stylesheet" href="/sass/css/style.css" />
+  <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <%- include('partials/navbar.ejs') %> <%- include('partials/sidebar.ejs') %>
+    gtag("config", "UA-162941654-1");
+  </script>
+</head>
 
-    <section class="deal_area">
-      <div class="cover">
-        <div class="cover_pic">
-          <div class="cover_aff-pic"></div>
-          <div class="cover_aff-name">Cooper Deals <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
-          <div class="cover_aff-subs">5k subscribers</div>
+<body>
+  <%- include('partials/navbar.ejs') %> <%- include('partials/sidebar.ejs') %>
 
-          <div class="cover_aff-deals">335 deals</div>
-          <div class="cover_aff-space1">|</div>
-          <div class="cover_aff-likes">720 likes</div>
-          <div class="cover_aff-space2">|</div>
-          <div class="cover_aff-views">2M views</div>
-          <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
-            <h6 class="cover_aff-subs-button-txt">Subscribe</h6>
-          </a>
+  <section class="deal_area">
+    <div class="cover">
+      <div class="cover_pic">
+        <div class="cover_aff-pic">
+          <img src="/images/default.jpg" alt=" " class="mep_pic-user">
+          <div class="mep_pic-user-overlay">
+            <a href="#" class="mep_add-icon" title="User Profile">
+              <i class="add-icon fas fa-plus"></i>
+            </a>
+            </div>
+        </div>
+        <div class="cover_aff-name">Cooper Deals <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
+        <div class="cover_aff-subs">5k subscribers</div>
+
+        <div class="cover_aff-bio">• Add your bio here •</div>
+
+        <div class="cover_aff-deals">335 deals</div>
+        <div class="cover_aff-space1">|</div>
+        <div class="cover_aff-likes">720 likes</div>
+        <div class="cover_aff-space2">|</div>
+        <div class="cover_aff-views">2M views</div>
+        <div class="cover_aff-space3">|</div>
+
+        <div ><a class="cover_aff-youtube" href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div ><a class="cover_aff-fb" href="#"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div > <a class="cover_aff-blog" href="#"><i class="fas fa-blog"></i>
+          <span>blog</span></a>
         </div>
         
+        <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
+          <h6 class="cover_aff-subs-button-txt">Subscribe</h6>
+        </a>
+        <a href="#" id="customize_btn" class="cover_aff-cust-button">
+          <h6 class="cover_aff-cust-button-txt">Customize</h6>
+        </a>
       </div>
-      <div class="profile_area">
-        <!-- <div class="profile_area_pic"></div> -->
-        
-      </div>
-      <div class="member-page-content">
-        <div id="trending" class="trending">
-          <% for(var deal of deals) { %>
 
-          <div class="big-deal">
-            <div class="big-deal_img" data-pause="true" data-interval="1000">
-              <div
-                class="carousel-item active"
-                style="background-color: white !important;"
-              >
-                <img
-                  src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg"
-                  alt="Deal Photo"
-                  class="big-deal_picture"
-                />
-              </div>
-              <div
-                class="carousel-item"
-                style="background-color: white !important;"
-              >
-                <img
-                  src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                  alt="Deal Photo"
-                  class="big-deal_picture"
-                />
-              </div>
-              <div
-                class="carousel-item"
-                style="background-color: white !important;"
-              >
-                <img
-                  src="/images/jeans.jpeg"
-                  alt="Deal Photo"
-                  class="big-deal_picture"
-                />
-              </div>
+    </div>
+    <div class="latest-deals">
+      <div class="latest-deals-title">Latest Deals</div>
+      <!-- <div class="profile_area_pic"></div> -->
+
+      <div class="latest-deals-deal1">
+        <img src="/images/61waHuOP9FL._SL1500_.jpg" alt="">
+
+        <div class="deal1-det">
+          <div class="deal1-det-name">Oneplus 8</div>
+
+          <div class="deal1-det-price">
+            <div class="deal1-det-dp">34200</div>
+            <div class="deal1-det-mrp">38000</div>
+            <div class="deal1-det-dis">10% off</div>
+          </div>
+          <div class="deal1-det-views">69 views</div>
+        </div>
+
+      </div>
+      <div class="latest-deals-deal2">
+        <img src="/images/jeans.jpeg" alt="">
+
+        <div class="deal2-det">
+          <div class="deal2-det-name">Oneplus 8</div>
+
+          <div class="deal2-det-price">
+            <div class="deal2-det-dp">34200</div>
+            <div class="deal2-det-mrp">38000</div>
+            <div class="deal2-det-dis">10% off</div>
+          </div>
+          <div class="deal2-det-views">69 views</div>
+        </div>
+      </div>
+      <div class="latest-deals-deal3">
+        <img src="/images/tallin-electronic-egg-ice-cream-hand-mixer-54156-original-imafdwhdj5ba36sz.jpeg" alt="">
+        <div class="deal3-det">
+          <div class="deal3-det-name">Oneplus 8</div>
+
+          <div class="deal3-det-price">
+            <div class="deal3-det-dp">34200</div>
+            <div class="deal3-det-mrp">38000</div>
+            <div class="deal3-det-dis">10% off</div>
+          </div>
+          <div class="deal3-det-views">69 views</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="member-page-content">
+      <div id="trending" class="trending">
+        <% for(var deal of deals) { %>
+
+        <div class="mep_deal-box">
+
+          <!-- <div class="big_img_container"> -->
+          <div class="mep_deal_box_img" data-pause="true" data-interval="1000">
+            <div class="carousel-item active" style="background-color: white !important;">
+              <img src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg" alt="Deal Photo"
+                class="big-deal_pic" />
             </div>
-            <div class="big-deal_content">
-              <div class="big-deal_name">
+            <div class="carousel-item" style="background-color: white !important;">
+              <img
+                src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                alt="Deal Photo" class="big-deal_pic" />
+            </div>
+            <div class="carousel-item" style="background-color: white !important;">
+              <img src="/images/jeans.jpeg" alt="Deal Photo" class="big-deal_pic" />
+            </div>
+          </div>
+          <!-- </div> -->
+          <div class="mep_deal_area-content">
+            <div class="mep_deal_content-box" style="display: flex;flex-direction: row;align-items: center; ">
+              <div class=" mep_deal-title"><%= deal.dealName %> </div>
+            </div>
+            <!-- <div class=" mep_deal-title">
                 <h4><%= deal.dealName %></h4>
-              </div>
+              </div> -->
 
-              <div class="big-deal_buttons">
-                <a href="" class="big-deal_user"><%= deal.owner %></a>
-              </div>
-              <div class="big-deal_vt">
-                <p class="big-deal_views"><%= `${deal.views} views` %>  </p>
-                <p class="big-deal_time">4 days ago</p>
-              </div>
+            <div class="mep_deal-r1" style="display: flex;flex-direction: row;align-items: center; ">
+              <!-- <a href="" class="ld_deal-r1-det"><%= deal.owner %></a> -->
+              <div class="mep_deal-r1-det"><%= deal.owner %></div>
+              <!-- <a href="" class="ld_deal-r1-det">Flipkart</a> -->
+              <div class="mep_deal-r1-det">Flipkart</div>
+              <div class="mep_deal-r1-det">May 2020</div>
+            </div>
 
-              <div class="big-deal_des">
+            <div class="mep_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
+              <div class="mep_deal-r2-det">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+
+
+            <!-- <div class="big-deal_des">
                 <p class="paragraphx">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Facilis rem, natus quam corrupti...
                 </p>
-              </div>
-              <div class="big-deal_price">
+              </div> -->
+
+            <div class="mep_deal-r3" style="display: flex;flex-direction: row ">
+              <div class="mep_deal-r3-dp">₹999</div>
+              <div class="mep_deal-r3-mrp">₹1999</div>
+              <div class="mep_deal-r3-dis">50% OFF</div>
+            </div>
+
+            <!-- <div class="big-deal_price">
                 <h4
                   class="heading-normal"
                   style="letter-spacing: 0.2rem;font-size: 2rem"
@@ -126,29 +183,41 @@
               <div class="big-deal_dis">
                 <strike>Rs.7854</strike>
                 <h3 class="big-deal_percent">70% OFF</h3>
-              </div>
-              <form action="/" method="GET" class=reportx>
-                <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
-                    <option selected disabled value="empty"></option>
-                    <option value=<%= `${deal._id}/report` %>>Report</option>
-                    <option value=<%= `${deal._id}/like` %>>Like</option>
-                    <% if (user) { %>
-                      <% if (user.id == deal.user) { %>
-                        <option value=<%= `${deal._id}/edit` %>>Edit</option>
-                        <option value=<%= `${deal._id}/delete` %>>Delete</option>
-                        <% } %>
-                    <% } %>
-                   
-                </select>
+              </div> -->
+
+            <div class="mep_deal-r4" style="display: flex;flex-direction: row">
+              <div class="mep_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div>
+              <div class="mep_deal-r4-det"><i id="img_mep_deal_views"
+                  class="far fa-eye"></i><%= `${deal.views} views` %> </div>
+            </div>
+
+            <!-- <div class="big-deal_vt">
+                <p class="big-deal_views"><%= `${deal.views} views` %>  </p> -->
+            <!-- <p class="big-deal_time">4 days ago</p> -->
+            <!-- </div> -->
+
+            <form action="/" method="GET" class=reportx>
+              <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
+                <option selected disabled value="empty"></option>
+                <option value=<%= `${deal._id}/report` %>>Report</option>
+                <option value=<%= `${deal._id}/like` %>>Like</option>
+                <% if (user) { %>
+                <% if (user.id == deal.user) { %>
+                <option value=<%= `${deal._id}/edit` %>>Edit</option>
+                <option value=<%= `${deal._id}/delete` %>>Delete</option>
+                <% } %>
+                <% } %>
+
+              </select>
             </form>
 
-            </div>
           </div>
-          <% } %>
         </div>
+        <% } %>
       </div>
+    </div>
 
-      <!-- <% for(var deal of deals) { %>
+    <!-- <% for(var deal of deals) { %>
         <div class="deal_area_box">
             <div class="bigImg_container">
                 <div class="deal_area_box_img"></div>
@@ -184,51 +253,54 @@
             </div>
         </div>
         <% } %> -->
-    </section>
+  </section>
 
-    <div class="popup" id="popupDelete">
-      <!-- <div class="bg-video">
+  <div class="popup" id="popupDelete">
+    <!-- <div class="bg-video">
           <video  class="bg-video_content" autoplay loop muted>
               <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
           </video>
       </div> -->
-  <div class="popup_content">
-      
-         
-   <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
-  <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-</div>
-  <div class="popup_right">
-      <div class="popup_cross" id="popup_crossdelete">&times;</div>
-  <h1 class="heading-secondary popup_heading center">about us</h1>
-  <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
-  
+    <div class="popup_content">
+
+
+      <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
+          class="popup_img">
+        <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+      </div>
+      <div class="popup_right">
+        <div class="popup_cross" id="popup_crossdelete">&times;</div>
+        <h1 class="heading-secondary popup_heading center">about us</h1>
+        <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity
+          ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing
+          foodie in you. TFF is not just a festival, but also a mission to let food break barriers and make everyone
+          happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience
+          edible infinity.</p>
+
+      </div>
+
+      <button id="delete_btn">Delete</button>
+    </div>
   </div>
 
-  <button id="delete_btn">Delete</button>
-</div>
-</div>
 
+  <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
-    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
+  <script>
+    $(".mep_deal_box_img")
+      .on("mouseenter", function () {
+        $(this).carousel("cycle");
+      })
+      .on("mouseleave", function () {
+        $(this).carousel("pause");
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
-    <script>
-      $(".big-deal_img")
-        .on("mouseenter", function() {
-          $(this).carousel("cycle");
-        })
-        .on("mouseleave", function() {
-          $(this).carousel("pause");
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-
-    <!-- <script>
+  <!-- <script>
       function dealOperations(el){
         console.log($(el).val());
         // var dealKiId = $(el).val().split('/')[1];
@@ -273,26 +345,32 @@
           </video>
       </div> -->
   <div class="popup_content">
-      
-    <form action="/" method="GET" class="reportx">
-      <input type="submit" name="dealOps"  onclick="dealOperations(this)" value="delete">
-      
-      </form>
-   <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
-  <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-</div>
-  <div class="popup_right">
-      <div class="popup_cross" id="popup_cross">&times;</div>
-  <h1 class="heading-secondary popup_heading center">about us</h1>
-  <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
-  
-  </div>
 
-  <button id="report_btn">Report</button>
-</div>
-</div>
-<script>document.getElementById('delete_btn').addEventListener('click', e => {
-  document.getElementById('popup').style.display = 'none'; 
-});</script>
-  </body>
+    <form action="/" method="GET" class="reportx">
+      <input type="submit" name="dealOps" onclick="dealOperations(this)" value="delete">
+
+    </form>
+    <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
+        class="popup_img">
+      <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+    </div>
+    <div class="popup_right">
+      <div class="popup_cross" id="popup_cross">&times;</div>
+      <h1 class="heading-secondary popup_heading center">about us</h1>
+      <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring festivity ever
+        happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie
+        in you. TFF is not just a festival, but also a mission to let food break barriers and make everyone happy on a
+        common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.
+      </p>
+
+    </div>
+
+    <button id="report_btn">Report</button>
+  </div>
+  </div>
+  <script>document.getElementById('delete_btn').addEventListener('click', e => {
+      document.getElementById('popup').style.display = 'none';
+    });</script>
+</body>
+
 </html>

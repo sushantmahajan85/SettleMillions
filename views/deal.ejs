@@ -34,18 +34,18 @@
       <div class="deal-carousel">
         <div class="small-slides">
           <div class="mini-slide">
-            <img class="demo cursor small-pic" src=<%= `/img/deals/${deal.titleImg}` %> style="width:100%" onclick="currentSlide(1)"
-              alt="The Woods">
+            <img class="demo cursor small-pic" src=<%= `/img/deals/${deal.titleImg}` %> style="width:100%"
+              onclick="currentSlide(1)" alt="The Woods">
           </div>
-          <% var i = 1 ;%> 
+          <% var i = 1 ;%>
           <% for( var photo of deal.corouselImgs) { %>
-            <% i++ ;%> 
+          <% i++ ;%>
           <div class="mini-slide">
             <img class="demo cursor small-pic" src=<%= `/img/deals/${photo}` %> style="width:100%"
-              onclick= "currentSlide(<%= `${i}` %>)"   alt="Cinque Terre">
-              
+              onclick="currentSlide(<%= `${i}` %>)" alt="Cinque Terre">
+
           </div>
-          <% } %> 
+          <% } %>
           <!-- <div class="mini-slide">
             <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
               alt="Mountains and fjords">
@@ -74,14 +74,14 @@
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
               <div class="numbertext">1 / 6</div>
-              <img class="deal-carousel-img" src=<%=`/img/deals/${deal.titleImg}` %>  style="width:100%;">
+              <img class="deal-carousel-img" src=<%=`/img/deals/${deal.titleImg}` %> style="width:100%;">
             </div>
             <% for( var photo of deal.corouselImgs) { %>
-            
-            
+
+
             <div class="mySlides fade">
               <div class="numbertext">2 / 6</div>
-              <img class="deal-carousel-img" src=<%= `/img/deals/${photo}` %>  style="width:100%;">
+              <img class="deal-carousel-img" src=<%= `/img/deals/${photo}` %> style="width:100%;">
             </div>
             <% } %>
             <!-- <div class="mySlides fade">
@@ -125,228 +125,240 @@
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
             <span class="dot" onclick="currentSlide(6)"></span> -->
-          </div> 
         </div>
       </div>
+    </div>
 
-        <div class="deal-deets">
-          <div class="deal-deets_name">
-            <h4><%= deal.dealName %> 
-          </div>
-          <div class="deal-highlights-dp">
-            <div class="deal-views-dp">
-              <div class="views-icon-dp">
-                <i class="far fa-eye"></i>
-              </div>
-              <div class="views-text-dp">
-                <span>100+ viewed today</span>
-              </div>
-            </div>
-            <div class="deal-ratings-dp">
-              <div class="ratings-icon-dp">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="ratings-text-dp">
-                <span>Perfect</span>
-              </div>
-            </div>
-           
-          </div>
-          
-          <div class="deal-deets_price">
-            <li class="price" ><span class="price_avail">
-              ₹<%= deal.mrp %> </span> <span class="price_mrp">₹<%= deal.dealPrice %> </span> <span
-                class="price_dis" >70% off</span>
-            </li>
-          </div>
-         
-          <div class="deal-deets_paragraph">
-            <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
-            <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
-          </div>
-          <div class="deal-deets_buttons">
-            <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
-            <% if (user) { %>
-                <% if (like) { %> 
-                
-                <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
-                <% } else { %>
-                  <a href="" class="deal-deets_save" id="like_deal">Add to Wishlist</a>
-
-                <% } %>
-            <% }else{ %>
-            
-              <a  href="#" class="deal-deets_save" id="like_deal_no">Add to wishlist</a>
-
-            <% } %>
-            </div>
-            <div class="deal-deets_vt">
-              <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
-              <span class="deal-deets_categ">Category: Mobiles</span>
-              <p class="deal-deets_time">Posted: <%= deal.mrp %> days ago</p>
-            </div>
-          
-          <div class="deal-deets_affiliate">
-            
-              <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c">
-       
-            <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
-            <% if (user) { %>
-
-                <% if (log) { %>
-                  <a href="" class="deal-deets_subs" id="unsubscribe_btn">un</a>
-                  <% } else { %>
-                <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
-                <% } %>
-
-            <% }else{ %>
-            
-              <button class="deal-deets_subs" id="subscribe_btn_no">Subscribe</button>
-            
-              <% } %>  
-
-          </div>
-         
-        </div>
+    <div class="deal-deets">
+      <div class="deal-deets_name">
+        <h4><%= deal.dealName %>
       </div>
-
-      <div class="reviews" id="reviews">
-        <div class="review-rating">
-          <div class="rating-avg">
-            <span>4.5</span>
-            <div class="rating-stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-o"></i>
-            </div>
+      <div class="deal-highlights-dp">
+        <div class="deal-views-dp">
+          <div class="views-icon-dp">
+            <i class="far fa-eye"></i>
           </div>
-          <ul class="rating">
-            <li> 
-              <div class="rating-stars"> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-              </div> 
-              <div class="rating-progress"> 
-                <div style="width: 80%;"></div> 
-              </div> 
-              <span class="sum">3</span> 
-            </li>
-            <li> 
-              <div class="rating-stars"> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star-o"></i> 
-              </div> 
-              <div class="rating-progress"> 
-                <div style="width: 40%;"></div> 
-              </div> 
-              <span class="sum">2</span> 
-            </li>
-            <li> 
-              <div class="rating-stars"> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star-o"></i> 
-                <i class="fa fa-star-o"></i> 
-              </div> 
-              <div class="rating-progress"> 
-                <div style="width: 0%;"></div> 
-              </div> 
-              <span class="sum">1</span> 
-            </li>
-            <li> 
-              <div class="rating-stars"> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star-o"></i> 
-                <i class="fa fa-star-o"></i> 
-                <i class="fa fa-star-o"></i> 
-              </div> 
-              <div class="rating-progress"> 
-                <div style="width: 0%;"></div> 
-              </div> 
-              <span class="sum">0</span> 
-            </li>
-            <li> 
-              <div class="rating-stars"> 
-                <i class="fa fa-star"></i> 
-                <i class="fa fa-star-o"></i> 
-                <i class="fa fa-star-o"></i> 
-                <i class="fa fa-star-o"></i> 
-                <i class="fa fa-star-o"></i> 
-              </div> 
-              <div class="rating-progress"> 
-                <div style="width: 0%;"></div> 
-              </div> 
-              <span class="sum">0</span> 
-            </li>
-          </ul>
+          <div class="views-text-dp">
+            <span>100+ viewed today</span>
+          </div>
         </div>
-        <div class="review-section">
-          <span class="review-head">
-            <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo"
-              class="user-nav__user-photo review-photo">
-            </span>
-          <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
-            <button id="review_post">Post a review</button>
-          <% for( var review of deal.reviews ) { %>
-          <div class="user-nav__user user-review">
-            <img src=<%=`/img/users/${review.user.photo}`%>  alt="User photo" class="user-nav__user-photo review-photo">
-            <div class="review-text">
-              <div class="user-nav__user-name"><%= review.user.name %> </div>
-              <div class="rev">
-                <%= review.review %>
-              </div>
-            </div>
+        <div class="deal-ratings-dp">
+          <div class="ratings-icon-dp">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
-          <% } %>
-
-
-          <div id="hidden-review">
-            <% for(var i = 0 ; i < 3 ; i++) { %>
-            <div class="user-nav__user user-review">
-              <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
-
-              <div class="review-text">
-                <div class="user-nav__user-name">NJ</div>
-                <div class="rev">
-                  <%= deal.biggerDis %>
-                </div>
-              </div>
-            </div>
-            <% } %>
+          <div class="ratings-text-dp">
+            <span>Perfect</span>
           </div>
-
-          <div id="showMoreBtn">
-            <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
-              <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-              <span class="heading-normal">Show More</span>
-            </a>
-          </div>
-          <div id="showLessBtn">
-            <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
-              <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
-              <span class="heading-normal">Show Less</span>
-            </a>
-          </div>
-
         </div>
 
       </div>
 
-      <!-- <section class="deal_area">
+      <div class="deal-deets_price">
+        <li class="price"><span class="price_avail">
+            ₹<%= deal.mrp %> </span> <span class="price_mrp">₹<%= deal.dealPrice %> </span> <span class="price_dis">70%
+            off</span>
+        </li>
+      </div>
+
+      <div class="deal-deets_paragraph">
+        <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
+        <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
+      </div>
+      <div class="deal-deets_buttons">
+        <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
+        <% if (user) { %>
+        <% if (like) { %>
+
+        <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
+        <% } else { %>
+        <a href="" class="deal-deets_save" id="like_deal">Add to Wishlist</a>
+
+        <% } %>
+        <% }else{ %>
+
+        <a href="#" class="deal-deets_save" id="like_deal_no">Add to wishlist</a>
+
+        <% } %>
+      </div>
+      <div class="deal-deets_vt">
+        <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
+        <span class="deal-deets_categ">Category: Mobiles</span>
+        <p class="deal-deets_time">Posted: <%= deal.mrp %> days ago</p>
+      </div>
+
+      <div class="deal-deets_affiliate">
+
+        <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c">
+
+        <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
+        <% if (user) { %>
+
+        <% if (log) { %>
+        <a href="" class="deal-deets_subs" id="unsubscribe_btn">un</a>
+        <% } else { %>
+        <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
+        <% } %>
+
+        <% }else{ %>
+
+        <button class="deal-deets_subs" id="subscribe_btn_no">Subscribe</button>
+
+        <% } %>
+
+      </div>
+      <div class="deal-deets_share">
+        <div>Share this deal: </div>
+        <div class="deal-deets_share_button">Share</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews" id="reviews">
+    <div class="review-rating">
+      <div class="rating-avg">
+        <span>4.5</span>
+        <div class="rating-stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+      </div>
+      <ul class="rating">
+        <li>
+          <div class="rating-stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <div class="rating-progress">
+            <div style="width: 80%;"></div>
+          </div>
+          <span class="sum">3</span>
+        </li>
+        <li>
+          <div class="rating-stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <div class="rating-progress">
+            <div style="width: 40%;"></div>
+          </div>
+          <span class="sum">2</span>
+        </li>
+        <li>
+          <div class="rating-stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <div class="rating-progress">
+            <div style="width: 0%;"></div>
+          </div>
+          <span class="sum">1</span>
+        </li>
+        <li>
+          <div class="rating-stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <div class="rating-progress">
+            <div style="width: 0%;"></div>
+          </div>
+          <span class="sum">0</span>
+        </li>
+        <li>
+          <div class="rating-stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <div class="rating-progress">
+            <div style="width: 0%;"></div>
+          </div>
+          <span class="sum">0</span>
+        </li>
+      </ul>
+    </div>
+    <div class="review-section">
+      <span class="review-head">
+        <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo" class="user-nav__user-photo review-photo">
+      </span>
+      <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
+      <button id="review_post">Post</button>
+      <div class="add-rating">
+        <div>Add your rating: </div>
+        <div class="rating-stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+      </div>
+      <% for( var review of deal.reviews ) { %>
+      <div class="user-nav__user user-review">
+        <img src=<%=`/img/users/${review.user.photo}`%> alt="User photo" class="user-nav__user-photo review-photo">
+        <div class="review-text">
+          <div class="user-nav__user-name"><%= review.user.name %> </div>
+          <div class="rev">
+            <%= review.review %>
+          </div>
+        </div>
+      </div>
+      <% } %>
+
+
+      <div id="hidden-review">
+        <% for(var i = 0 ; i < 3 ; i++) { %>
+        <div class="user-nav__user user-review">
+          <img src="/img/user.jpg" alt="User photo" class="user-nav__user-photo review-photo">
+
+          <div class="review-text">
+            <div class="user-nav__user-name">NJ</div>
+            <div class="rev">
+              <%= deal.biggerDis %>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+
+      <div id="showMoreBtn">
+        <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
+          <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+          <span class="heading-normal">Show More</span>
+        </a>
+      </div>
+      <div id="showLessBtn">
+        <a href="#reviews" class="show-hide-link" id="more" onclick="revMoreLess()">
+          <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+          <span class="heading-normal">Show Less</span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <section class="deal_area">
           <div class="row">
             <div class="carousel_container">
 
@@ -452,184 +464,182 @@
             </div>
             <% } %>
         </section> -->
-    </div>
+  </div>
 
-    
-    <div class="side_deals">
-      <% var i=0; %>
-      <% for(var deal of reco){ %>
-        <% i++; if(i>cooCount){ %>
-        <div class=" side_deals_item">
-          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
-          <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container">
-              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-            </div>
-            <div class="deal_area_content">
-              <!-- <div class="picture_container">
+
+  <div class="side_deals">
+    <% var i=0; %>
+    <% for(var deal of reco){ %>
+    <% i++; if(i>cooCount){ %>
+    <div class=" side_deals_item">
+      <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+        <div class="deal_area_box" style="width: 100% !important;">
+          <div class="bigImg_container">
+            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+          </div>
+          <div class="deal_area_content">
+            <!-- <div class="picture_container">
                         <div class="profile_pic"></div>
                     </div> -->
-              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-                <div class="deal_box_nameTime"
-                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-  
-                  <div class="deal_box_name" style="font-size: 15px !important;">
-                    <%= deal.dealName %>
-                  </div>
-  
+            <div class="content_box" style="display: flex; flex-direction: column; justify-content: center">
+              <div class="deal_box_nameTime"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div class="deal_box_name" style="font-size: 15px !important">
+                  <%= deal.dealName %>
                 </div>
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-  
-                  <div class="deal_box_views"><%= deal.owner %></div>
-                  <!-- <div class="deal_box_time">Amazon</div> -->
-  
-                </div>
-  
-  
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                  <div class="deal_box_views"><%= deal.mrp %></div>
-                  <div class="deal_box_time">80% OFF</div>
-                  <div class="deal_box_time"><%= deal.dealPrice %></div>
-                </div>
-  
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views"><%= deal.views %></div>
-                  <div class="deal_box_time">3 days ago</div>
-                </div>
-                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+
+              </div>
+              <div class="deal_box_nameTime" style="display: flex; flex-direction: row; align-items: center">
+                <div class="deal_box_views"><%= deal.owner %></div>
+                <!-- <div class="deal_box_time">Amazon</div> -->
+
+              </div>
+
+
+              <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
+                <div class="deal_box_dp">₹<%= deal.dealPrice %></div>
+                <div class="deal_box_mrp">₹<%= deal.mrp %></div>
+                <div class="deal_box_dis">80% OFF</div>
+              </div>
+
+              <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
+                <div class="deal_box_views"><%= deal.views %> views</div>
+                <div class="deal_box_time">3 days ago</div>
+              </div>
+              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
                       <div>80% Off only on HDFC Bank Credit Cards</div>
                     </div> -->
-              </div>
             </div>
           </div>
+        </div>
+      </a>
+    </div>
+    <% } %>
+    <% if(i===cooCount+3){break;} %>
+    <% } %>
+
+    <% var i=0; %>
+    <% for(var deal of trendDeals){ %>
+    <% i++;%>
+    <div class=" side_deals_item">
+      <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+        <div class="deal_area_box" style="width: 100% !important;">
+          <div class="bigImg_container">
+            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+          </div>
+          <div class="deal_area_content">
+            <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                    </div> -->
+            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+              <div class="deal_box_nameTime"
+                style="display: flex; flex-direction: row; align-items: center">
+
+                <div class="deal_box_name" style="font-size: 15px !important;">
+                  <%= deal.dealName %>
+                </div>
+
+              </div>
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                <div class="deal_box_views"><%= deal.owner %></div>
+                <!-- <div class="deal_box_time">Amazon</div> -->
+
+              </div>
+
+
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                <div class="deal_box_dp">₹<%= deal.dealPrice %></div>
+                <div class="deal_box_mrp">₹<%= deal.mrp %></div>
+                <div class="deal_box_dis">80% OFF</div>
+              </div>
+
+              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                <div class="deal_box_views"><%= deal.views %></div>
+                <div class="deal_box_time">3 days ago</div>
+              </div>
+              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                      <div>80% Off only on HDFC Bank Credit Cards</div>
+                    </div> -->
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% if(i===3){break;} %>
+    <% } %>
+
+  </div>
+  <div class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2>About</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>About Us</li>
           </a>
-        </div>
-          <% } %>
-          <% if(i===cooCount+3){break;} %>
-        <% } %>
+          <a href="#">
+            <li>Contact Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Our Team</li>
+          </a>
 
-        <% var i=0; %>
-      <% for(var deal of trendDeals){ %>
-        <% i++;%>
-        <div class=" side_deals_item">
-          <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %> >
-          <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container">
-              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-            </div>
-            <div class="deal_area_content">
-              <!-- <div class="picture_container">
-                        <div class="profile_pic"></div>
-                    </div> -->
-              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-                <div class="deal_box_nameTime"
-                  style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
-  
-                  <div class="deal_box_name" style="font-size: 15px !important;">
-                    <%= deal.dealName %>
-                  </div>
-  
-                </div>
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-  
-                  <div class="deal_box_views"><%= deal.owner %></div>
-                  <!-- <div class="deal_box_time">Amazon</div> -->
-  
-                </div>
-  
-  
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                  <div class="deal_box_views"><%= deal.mrp %></div>
-                  <div class="deal_box_time">80% OFF</div>
-                  <div class="deal_box_time"><%= deal.dealPrice %></div>
-                </div>
-  
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views"><%= deal.views %></div>
-                  <div class="deal_box_time">3 days ago</div>
-                </div>
-                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                      <div>80% Off only on HDFC Bank Credit Cards</div>
-                    </div> -->
-              </div>
-            </div>
-          </div>
-        </a>
-        </div>
-        <% if(i===3){break;} %>
-        <% } %>
-      
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h2>Social</h2>
+        <br>
+        <ul>
+          <a href="https://twitter.com/">
+            <li><i class="fab fa-twitter"></i>Twitter</li>
+          </a>
+          <a href="https://www.facebook.com/">
+            <li><i class="fab fa-facebook-f"></i>Facebook</li>
+          </a>
+          <a href="https://twitter.com/">
+            <li><i class="fab fa-instagram"></i>Instagram</li>
+          </a>
+        </ul>
+      </div>
+      <div class="footer-section policy">
+        <h2>Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Terms and Conditions</li>
+          </a>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+        </ul>
+      </div>
+      <div class="footer-section help">
+        <h2>Help</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>How to Post a Deal</li>
+          </a>
+          <a href="#">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li>Report</li>
+          </a>
+        </ul>
+      </div>
     </div>
-    <div class="footer">
-      <div class="footer-content">
-          <div class="footer-section about">
-              <h2>About</h2>
-              <br>
-              <ul>
-                  <a href="#">
-                      <li>About Us</li>
-                  </a>
-                  <a href="#">
-                      <li>Contact Us</li>
-                  </a>
-                  <a href="#">
-                      <li>Careers</li>
-                  </a>
-                  <a href="#">
-                      <li>Our Team</li>
-                  </a>
+    <div class="footer-bottom">
+      <hr>
+      </hr>
+      &copy; 2020, Your Deal Inc.
 
-              </ul>
-          </div>
-          <div class="footer-section social">
-              <h2>Social</h2>
-              <br>
-              <ul>
-                  <a href="https://twitter.com/">
-                      <li><i class="fab fa-twitter"></i>Twitter</li>
-                  </a>
-                  <a href="https://www.facebook.com/">
-                      <li><i class="fab fa-facebook-f"></i>Facebook</li>
-                  </a>
-                  <a href="https://twitter.com/">
-                      <li><i class="fab fa-instagram"></i>Instagram</li>
-                  </a>
-              </ul>
-          </div>
-          <div class="footer-section policy">
-              <h2>Policy</h2>
-              <br>
-              <ul>
-                  <a href="#">
-                      <li>Terms and Conditions</li>
-                  </a>
-                  <a href="#">
-                      <li>Privacy Policy</li>
-                  </a>
-              </ul>
-          </div>
-          <div class="footer-section help">
-              <h2>Help</h2>
-              <br>
-              <ul>
-                  <a href="#">
-                      <li>How to Post a Deal</li>
-                  </a>
-                  <a href="#">
-                      <li>FAQ</li>
-                  </a>
-                  <a href="#">
-                      <li>Report</li>
-                  </a>
-              </ul>
-          </div>
-      </div>
-      <div class="footer-bottom">
-          <hr>
-          </hr>
-          &copy; 2020, Your Deal Inc.
-
-      </div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
@@ -689,36 +699,41 @@
     }
   </script>
 
-<div class="popup" id="popupLikeLike">
-  <!-- <div class="bg-video">
+  <div class="popup" id="popupLikeLike">
+    <!-- <div class="bg-video">
       <video  class="bg-video_content" autoplay loop muted>
           <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
       </video>
   </div> -->
-<div class="popup_content">
-  
-     
-<div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img">
-<!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-</div>
-<div class="popup_right">
-  <div class="popup_cross" id="popup_crosslikelike">&times;</div>
-<h1 class="heading-secondary popup_heading center">about us</h1>
-<p class="paragraph popup_paragraph">Thapar FLIKELIKEd Festival is the most magnificent and awe-inspiring festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing foodie in you. TFF is not just a festival,  but also a mission to let food break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience edible infinity.</p>    
+    <div class="popup_content">
 
-</div>
 
-<button id="likelike_btn_deal">Signup/Login</button>
-</div>
-</div>
+      <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
+          class="popup_img">
+        <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
+      </div>
+      <div class="popup_right">
+        <div class="popup_cross" id="popup_crosslikelike">&times;</div>
+        <h1 class="heading-secondary popup_heading center">about us</h1>
+        <p class="paragraph popup_paragraph">Thapar FLIKELIKEd Festival is the most magnificent and awe-inspiring
+          festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the
+          ever-growing foodie in you. TFF is not just a festival, but also a mission to let food break barriers and make
+          everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come,
+          experience edible infinity.</p>
+
+      </div>
+
+      <button id="likelike_btn_deal">Signup/Login</button>
+    </div>
+  </div>
 
   <script>
 
-      document.getElementById("likelike_deal_no").addEventListener("click", (e) => {
-        e.preventDefault();
+    document.getElementById("likelike_deal_no").addEventListener("click", (e) => {
+      e.preventDefault();
 
-        document.getElementById('popupLikeLike').style.display = 'block'; 
-      });
+      document.getElementById('popupLikeLike').style.display = 'block';
+    });
 
   </script>
   <script>
@@ -726,10 +741,10 @@
     document.getElementById("subscribe_btn_no").addEventListener("click", (e) => {
       e.preventDefault();
 
-      document.getElementById('popupLikeLike').style.display = 'block'; 
+      document.getElementById('popupLikeLike').style.display = 'block';
     });
 
-</script>
+  </script>
   <script>
 
       // document.getElementById("like_deal").addEventListener("click", (e) => {
@@ -738,13 +753,13 @@
       //   passvalueo();
       // });
 
-    </script>
+  </script>
   <script>
 
     document.getElementById("popup_crosslikelike").addEventListener("click", (e) => {
       e.preventDefault();
 
-      document.getElementById('popupLikeLike').style.display = 'none'; 
+      document.getElementById('popupLikeLike').style.display = 'none';
     });
 
   </script>
@@ -754,7 +769,7 @@
       e.preventDefault();
 
       document.getElementById('popupLikeLike').style.display = 'none';
-      location.assign('/signup'); 
+      location.assign('/signup');
     });
 
   </script>

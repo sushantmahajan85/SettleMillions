@@ -1,0 +1,161 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate</title>
+    <link rel="stylesheet" href="/sass/css/style.css">
+    <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162941654-1');
+    </script>
+
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <%- include('partials/sidebar.ejs') %>
+
+    <section class="deal_area">
+        <% if (xyz.subscribers.length === 0) { %>
+        <!-- <h1>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        </h1> -->
+        <% } else { %>
+        <% for (var i = 0; i < xyz.subscribers.length; i++) { %>
+        <h1> <%= xyz.subscribers[i].subscribedUser.name.toUpperCase() %> </h1>
+        <% for (var j = 0; j < subs[i].subscribedDeals.length; j++) { %>
+        <a href=<%= `/deal/${subs[i].subscribedDeals[j]._id}/postedBy/${subs[i].subscribedDeals[j].user}` %>>
+            <div class="deal_area_box">
+                <div class="bigImg_container">
+                    <div class="deal_area_box_img"></div>
+                </div>
+                <div class="deal_area_content">
+                    <!-- <div class="picture_container">
+                        <div class="profile_pic"></div>
+                         </div> -->
+                    <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                        <div class="deal_box_nameTime"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center; ">
+
+                            <div class="deal_box_name"><%= subs[i].subscribedDeals[j].dealName %> </div>
+
+                        </div>
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+
+                            <div class="deal_box_views"><%= subs[i].subscribedDeals[j].owner %> </div>
+                            <div class="deal_box_time"><%= subs[i].subscribedDeals[j].company %> </div>
+
+                        </div>
+
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                            <div class="deal_box_views"><%=`${subs[i].subscribedDeals[j].dealPrice}rs`%></div>
+                            <div class="deal_box_time">80% OFF</div>
+                            <div class="deal_box_time"><%=`${subs[i].subscribedDeals[j].mrp}rs`%></div>
+                        </div>
+
+                        <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                            <div class="deal_box_views"><%=`${subs[i].subscribedDeals[j].views} views`%></div>
+                            <div class="deal_box_time">
+                                <%= subs[i].subscribedDeals[j].time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %>
+                            </div>
+                        </div>
+                        <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                            <div><%= subs[i].subscribedDeals[j].titleDis %></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% } %>
+        <% } %>
+
+        <% } %>
+    </section>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About</h2>
+                <br>
+                <ul>
+                    <a href="#">
+                        <li>About Us</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact Us</li>
+                    </a>
+                    <a href="#">
+                        <li>Careers</li>
+                    </a>
+                    <a href="#">
+                        <li>Our Team</li>
+                    </a>
+
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Social</h2>
+                <br>
+                <ul>
+                    <a href="https://twitter.com/">
+                        <li><i class="fab fa-twitter"></i>Twitter</li>
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <li><i class="fab fa-facebook-f"></i>Facebook</li>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <li><i class="fab fa-instagram"></i>Instagram</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-section policy">
+                <h2>Policy</h2>
+                <br>
+                <ul>
+                    <a href="#">
+                        <li>Terms and Conditions</li>
+                    </a>
+                    <a href="#">
+                        <li>Privacy Policy</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-section help">
+                <h2>Help</h2>
+                <br>
+                <ul>
+                    <a href="#">
+                        <li>How to Post a Deal</li>
+                    </a>
+                    <a href="#">
+                        <li>FAQ</li>
+                    </a>
+                    <a href="#">
+                        <li>Report</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            </hr>
+            &copy; 2020, Your Deal Inc.
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

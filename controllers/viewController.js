@@ -81,7 +81,7 @@ exports.getSignupForm = (req, res) => {
 
 exports.getTrendingDeals = catchAsync(async (req, res) => {
   const deals = await Deal.find();
-  res.status(200).render("trending", { deals });
+  res.status(200).render("trending", { deals }).sort([["trendRatio", -1]]);
 });
 
 exports.getLikedDeals = catchAsync(async (req, res) => {

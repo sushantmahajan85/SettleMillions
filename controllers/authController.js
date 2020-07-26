@@ -124,7 +124,7 @@ exports.verify = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-  try {
+  
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -138,8 +138,8 @@ exports.login = async (req, res, next) => {
     // await new Email(user, url).sendWelcome();
     if (
       !user ||
-      !(await user.verifyPassword(password, user.password)) ||
-      !user.verified
+      !(await user.verifyPassword(password, user.password)) /*||
+      !user.verified*/
     ) {
       return next(new AppError("No user found", 400));
     }
@@ -172,9 +172,13 @@ exports.login = async (req, res, next) => {
     // await new Email(user, resetURL).sendPasswordReset();
 
     /////////////////////////////////Error in Production/////////////////////////////////////////////
+  try{
     const url = "amazon.in";
     await new Email(user, url).sendWelcome();
-    /////////////////////////////////////////////////////////////////////////////////////////////////
+    // }catch (err) {
+    //   console.log(err);
+    // }
+    //////////////////////////////////////////////////////////////////////////////////////////////////
 
     res.cookie("jwt", token, cookieOptions);
     res.status(200).json({
@@ -186,6 +190,9 @@ exports.login = async (req, res, next) => {
     });
   } catch (error) {
     console.log(error);
+    return next(
+      new AppError("Email Not Sent", 500)
+    );
   }
 };
 

@@ -36,7 +36,7 @@ exports.getDeal = catchAsync(async (req, res) => {
   const deal = await Deal.findOneAndUpdate(
     { _id: req.params.id },
     { $inc: { views: 1 } }
-  ).populate({path: "reviews"});
+  ).populate({ path: "reviews" });
   console.log(deal);
   console.log(req.params.id);
   res.status(200).json({

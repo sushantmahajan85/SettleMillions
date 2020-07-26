@@ -82,6 +82,14 @@ exports.getSignupForm = (req, res) => {
 exports.getTrendingDeals = catchAsync(async (req, res) => {
   const deals = await Deal.find().sort([["trendRatio", -1]]);
   res.status(200).render("trending", { deals });
+
+  for (var deal of deals) {
+    var now = new Date(Date.now());
+    var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    tem = deal.views / tem;
+
+    await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+  }
 });
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
@@ -451,9 +459,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       recentlyViewed,
     });
 
-    const tempideals = await Deal.find();
-
-    for (var deal of tempideals) {
+    for (var deal of deals) {
       var now = new Date(Date.now());
       var tem = (now.getTime() - deal.time.getTime()) / 3600000;
       tem = deal.views / tem;

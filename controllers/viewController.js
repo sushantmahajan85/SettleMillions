@@ -464,8 +464,6 @@ exports.mainPage = catchAsync(async (req, res) => {
       var tem = (now.getTime() - deal.time.getTime()) / 3600000;
       tem = deal.views / tem;
 
-      console.log(deal._id);
-
       await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     }
 

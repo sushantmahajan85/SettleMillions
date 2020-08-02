@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const subscriberSchema = new mongoose.Schema(
   {
+    rank: Number,
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
@@ -23,6 +24,20 @@ subscriberSchema.virtual("subscribedDeals", {
   foreignField: "user",
   localField: "subscribedUser",
 });
+
+// subscriberSchema.pre(/^aggre/, function(next) {
+//   this.populate({
+//     path: "user",
+//     select: 'rank'
+//   }).populate({
+//     path: "subscribedUser",
+//     select: 'rank'
+//   });
+
+  
+
+//   next();
+// });
 
 subscriberSchema.pre(/^find/, function(next) {
   // this.populate({
@@ -46,8 +61,20 @@ subscriberSchema.pre(/^update/, function(next) {
     // select: 'name'
   });
 
+  
+
   next();
 });
+
+subscriberSchema.pre(/^find/, function() {
+  this.rank = this.subscribedUser;
+
+  
+
+  // next();
+});
+
+
 
 const Subscriber = mongoose.model("Subscriber", subscriberSchema);
 module.exports = Subscriber;

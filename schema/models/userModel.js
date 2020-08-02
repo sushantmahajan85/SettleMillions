@@ -65,6 +65,10 @@ const userSchema = new mongoose.Schema(
       type: Number,
       select: false,
     },
+    rank: {
+      type: Number,
+      default: 100000,
+    },
     verification_token_time: {
       type: Date,
     },
@@ -72,6 +76,8 @@ const userSchema = new mongoose.Schema(
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
+
+//userSchema.aggregate({$sort: {'rank': 1}});
 
 userSchema.virtual("likedDeals", {
   ref: "LikedDeal",

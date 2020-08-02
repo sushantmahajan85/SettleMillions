@@ -103,9 +103,20 @@ exports.editDeal = catchAsync(async (req, res) => {
   res.status(200).render("dealEdit", { deal });
 });
 exports.getSubscriptions = catchAsync(async (req, res) => {
+  // await User.aggregate([{$sort: {'rank': -1}}]);
+
   const xyz = await User.findById(req.user).populate({
-    path: "subscribers",
+    path: "subscribers", //options: {sort: {'id': 'desc'}}
   });
+
+  //xyz.aggregate({$sort: {'subscribers.subcribedUser.rank': 1}});
+
+  // console.log(xyz);
+  // console.log(xyz.subscribers[1].subscribedUser);
+
+  // for(user of xyz){
+
+  // }
   //console.log(xyz.subscribers);
 
   // for (var i = 0; i <= xyz.subscribers.length; i++) {
@@ -121,10 +132,91 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
   // };
   // console.log(a);
   // }
+  // function dynamicSort(property) {
+  //     var sortOrder = 1;
+  //     if (property[0] === "-") {
+  //       sortOrder = -1;
+  //       property = property.substr(1);
+  //     }
+  //     return function(a, b) {
+  //       /* next line works with strings and numbers,
+  //        * and you may want to customize it to your needs
+  //        */
+  //       var result =
+  //         a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+  //       return result * sortOrder;
+  //     };
+  //   }
+  // await User.aggregate([{$sort: {'rank': 1}}])
 
-  const subs = await Subscriber.find({ user: req.user }).populate({
-    path: "subscribedDeals",
+  // const dekh = await User.find().sort([['rank', -1]]);
+  // console.log(dekh);
+
+  const subs = await Subscriber.find({ user: req.user })/*.sort([["subscribedUser.rank", -1]])*/.populate({
+    path: "subscribedDeals", //options: {sort: {"_id": "asc"}}
   });
+
+  // console.log(subs);
+
+  // const sub = await Subscriber.aggregate([
+  //   { 
+  //     $addFields: { rank: '$subscribedUser'}
+  //   },
+  //   {
+  //     $lookup: {from: 'User', localField: 'subscribedUser', foreignField: '_id', as: 'subsub'}
+  //   }
+  // ]);
+
+  // console.log(sub);
+
+  // subs.sort(dynamicSort("-_id"));
+
+  // console.log(subs);
+
+  var allDeals1 = new Array;
+  var allDeals2 = new Array;
+  var allDeals3 = new Array;
+
+  for(sub of subs){
+    var tem = new Date(Date.now());
+    var ekdin = new Date(tem.getTime() - 1000*60*60*24*5.5);
+    var dodin = new Date(tem.getTime() - 1000*60*60*24*6.5);
+    var teendin = new Date(tem.getTime() - 1000*60*60*24*7.5);
+    var temp1 = await Deal.find({ user: sub.subscribedUser.id, 
+                                 time: { $gt: ekdin } 
+    });
+    var temp2 = await Deal.find({ user: sub.subscribedUser.id, 
+                                 time: { $gt: dodin, $lt: ekdin } 
+    });
+    var temp3 = await Deal.find({ user: sub.subscribedUser.id, 
+                                 time: { $gt: teendin, $lt: dodin } 
+    });
+
+    for(var i = 0 ; i < temp1.length ; i++){
+      allDeals1.push(temp1[i]);
+    }
+    for(var i = 0 ; i < temp2.length ; i++){
+      allDeals2.push(temp2[i]);
+    }
+    for(var i = 0 ; i < temp3.length ; i++){
+      allDeals3.push(temp3[i]);
+    }
+  }
+
+  console.log(allDeals1);
+  console.log(allDeals2);
+  console.log(allDeals3);
+
+  // allDeals.sort(function(a, b) {
+  //   var keyA = new Date(a.time),
+  //     keyB = new Date(b.time);
+  //   // Compare the 2 dates
+  //   if (keyA < keyB) return 1;
+  //   if (keyA > keyB) return -1;
+  //   return 0;
+  // });
+
+  // console.log(allDeals);
 
   // console.log(subs[0].subscribedDeals);
   //console.log(subs[0].subscribedDeals.length);
@@ -136,6 +228,9 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
   res.status(200).render("subscriptions", {
     xyz,
     subs,
+    allDeals1,
+    allDeals2,
+    allDeals3
   });
 });
 
@@ -459,13 +554,13 @@ exports.mainPage = catchAsync(async (req, res) => {
       recentlyViewed,
     });
 
-    for (var deal of deals) {
-      var now = new Date(Date.now());
-      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
-      tem = deal.views / tem;
+    // for (var deal of deals) {
+    //   var now = new Date(Date.now());
+    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    //   tem = deal.views / tem;
 
-      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    }
+    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    // }
 
   }
 });

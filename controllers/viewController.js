@@ -310,8 +310,10 @@ exports.mainPage = catchAsync(async (req, res) => {
 
   let cooCount = 0;
   let recentlyViewed = [];
-
+  const user = await User.findById(req.logged);
   if (req.cookies.one !== undefined) {
+    user.cookies[user.cookies.length] = req.cookies.one.id;
+
     recentlyViewed[cooCount] = req.cookies.one;
     cooCount++;
     rec1 =
@@ -334,6 +336,7 @@ exports.mainPage = catchAsync(async (req, res) => {
   }
   //console.log(Object.keys(req.cookies.one.tags).length);
   if (req.cookies.two !== undefined) {
+    user.cookies[user.cookies.length] = req.cookies.two.id;
     recentlyViewed[cooCount] = req.cookies.two;
     cooCount++;
     rec2 =
@@ -355,6 +358,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.three !== undefined) {
+    user.cookies[user.cookies.length] = req.cookies.three.id;
     recentlyViewed[cooCount] = req.cookies.three;
     cooCount++;
     rec3 =
@@ -376,6 +380,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.four !== undefined) {
+    user.cookies[user.cookies.length] = req.cookies.four.id;
     recentlyViewed[cooCount] = req.cookies.four;
     cooCount++;
     rec4 =
@@ -397,6 +402,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     }
   }
   if (req.cookies.five !== undefined) {
+    user.cookies[user.cookies.length] = req.cookies.five.id;
     recentlyViewed[cooCount] = req.cookies.five;
     cooCount++;
     rec5 =
@@ -422,6 +428,12 @@ exports.mainPage = catchAsync(async (req, res) => {
 
   //console.log(rec);
   //const t = await Deal.find({ trendRatio: { $gte: 4 } });
+  if (req.logged) {
+    user.recString = rec;
+    user.save();
+  }
+
+  console.log(user);
 
   const recommendedDeals = await Deal.find(
     { $text: { $search: rec } },
@@ -547,17 +559,25 @@ exports.mainPage = catchAsync(async (req, res) => {
     // }
 
     // const user = await User.findById(req.user);
-
+    var subDeals = new Array();
     const subs = await Subscriber.find({
       user: req.logged,
     }).populate({
       path: "subscribedDeals",
     });
+    var rando = Math.floor(Math.random() * subs.length);
 
-    for (var sub of subs) {
-      console.log(sub.subscribedDeals);
+    for (var i = 0; i < subs.length; i++) {
+      subDeals.push(subs[rando]);
+      if (rando == subs.length - 1) {
+        rando = 0;
+      } else {
+        rando++;
+      }
     }
-
+    const newlyJoined = await User.find();
+    const topUsers = await User.find().sort([["rank", -1]]);
+    // console.log(topUsers);
     const deals = await Deal.find().sort([["trendRatio", -1]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);
 
@@ -567,7 +587,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       liveDeals,
       cooCount,
       recentlyViewed,
-      subs,
+      subDeals,
     });
 
     // for (var deal of deals) {

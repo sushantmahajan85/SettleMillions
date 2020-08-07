@@ -72,6 +72,9 @@ const userSchema = new mongoose.Schema(
     verification_token_time: {
       type: Date,
     },
+    rank_difference: Number,
+    cookies: Array,
+    recString: String,
     reportChannelCount: { type: Number, default: 0 },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }

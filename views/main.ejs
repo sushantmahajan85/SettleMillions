@@ -345,16 +345,21 @@
                 <% } %>
                 <% } %>
         </div>
-
         <a href=" ">
-            <div class="mainpage_titles">Hot Deals</div>
+            <div class="mainpage_titles">Subscribed Deals</div>
         </a>
+<% for( var oneSub of subDeals) { %>
+
+
+
+
+       
         <!-- <hr> -->
 
         <div id="trending" class="trending">
 
             <%  var i = 0; %>
-            <% for(var deal of deals) { %>
+            <% for( var deal of oneSub.subscribedDeals ) { %>
             <% i++; %>
             <%  function kFormatter(num) {
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
@@ -510,7 +515,8 @@
             <% if (i === 8){break;}%>
             <% } %>
         </div>
-
+    
+        <% } %>
 
 
 

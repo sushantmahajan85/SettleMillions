@@ -40,10 +40,23 @@ subscriberSchema.virtual("subscribedDeals", {
 // });
 
 subscriberSchema.pre(/^find/, function(next) {
+  // this.populate({
+  //   // path: "user",
+  //   // select: 'name'
+  // })
   this.populate({
-    path: "user",
+    path: "subscribedUser",
     // select: 'name'
-  }).populate({
+  });
+
+  next();
+});
+subscriberSchema.pre(/^update/, function(next) {
+  // this.populate({
+  //   // path: "user",
+  //   // select: 'name'
+  // })
+  this.populate({
     path: "subscribedUser",
     // select: 'name'
   });

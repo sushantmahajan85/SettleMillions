@@ -124,55 +124,55 @@ exports.verify = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-  
-    const { email, password } = req.body;
+  const { email, password } = req.body;
 
-    if (!email || !password) {
-      return next(
-        new AppError("Please provide correct email and password", 400)
-      );
-    }
-    const user = await User.findOne({ email: email }).select("+password");
-    // const test = JSON.stringify(user);
-    // const url = "amazon";
-    // await new Email(user, url).sendWelcome();
-    if (
-      !user ||
-      !(await user.verifyPassword(password, user.password)) /*||
+  if (!email || !password) {
+    return next(new AppError("Please provide correct email and password", 400));
+  }
+  const user = await User.findOne({ email: email }).select("+password");
+  // const test = JSON.stringify(user);
+  // const url = "amazon";
+  // await new Email(user, url).sendWelcome();
+  if (
+    !user ||
+    !(await user.verifyPassword(
+      password,
+      user.password
+    )) /*||
       !user.verified*/
-    ) {
-      return next(new AppError("No user found", 400));
-    }
+  ) {
+    return next(new AppError("No user found", 400));
+  }
 
-    const token = signToken(user._id);
-    const cookieOptions = {
-      expires: new Date(
-        Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
-      ),
-      // secure: true,
-      httpOnly: true,
-    };
-    if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+  const token = signToken(user._id);
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+    ),
+    // secure: true,
+    httpOnly: true,
+  };
+  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-    // const resetURL = `${req.protocol}://${req.get(
-    //   "host"
-    // )}/api/v1/users/resetPassword/${resetToken}`;
+  // const resetURL = `${req.protocol}://${req.get(
+  //   "host"
+  // )}/api/v1/users/resetPassword/${resetToken}`;
 
-    // await sendEmail({
-    //   ////// For Sending Reset Password Mail //////
-    //   email: user.email,
-    //   subject: "Password Reset Token ( Valid For 10 Minutes )",
-    //   message: message,
-    // });
+  // await sendEmail({
+  //   ////// For Sending Reset Password Mail //////
+  //   email: user.email,
+  //   subject: "Password Reset Token ( Valid For 10 Minutes )",
+  //   message: message,
+  // });
 
-    // const resetURL = `${req.protocol}://${req.get(
-    //   "host"
-    // )}/api/v1/users/resetPassword/${resetToken}`;
+  // const resetURL = `${req.protocol}://${req.get(
+  //   "host"
+  // )}/api/v1/users/resetPassword/${resetToken}`;
 
-    // await new Email(user, resetURL).sendPasswordReset();
+  // await new Email(user, resetURL).sendPasswordReset();
 
-    /////////////////////////////////Error in Production/////////////////////////////////////////////
-  try{
+  /////////////////////////////////Error in Production/////////////////////////////////////////////
+  try {
     const url = "amazon.in";
     await new Email(user, url).sendWelcome();
     // }catch (err) {
@@ -190,9 +190,7 @@ exports.login = async (req, res, next) => {
     });
   } catch (error) {
     console.log(error);
-    return next(
-      new AppError("Email Not Sent", 500)
-    );
+    return next(new AppError("Email Not Sent", 500));
   }
 };
 
@@ -202,6 +200,32 @@ exports.logout = (req, res) => {
     // secure: true,
     httpOnly: true,
   });
+  res.cookie("one", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("two", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("three", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("four", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("five", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
   res.status(200).json({ status: "success" });

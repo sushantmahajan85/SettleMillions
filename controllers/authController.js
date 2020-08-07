@@ -124,6 +124,32 @@ exports.verify = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
+  res.cookie("one", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("two", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("three", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("four", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+  res.cookie("five", "cleared", {
+    expires: new Date(Date.now() + 1),
+    // secure: true,
+    httpOnly: true,
+  });
+
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -200,31 +226,7 @@ exports.logout = (req, res) => {
     // secure: true,
     httpOnly: true,
   });
-  res.cookie("one", "cleared", {
-    expires: new Date(Date.now() + 1),
-    // secure: true,
-    httpOnly: true,
-  });
-  res.cookie("two", "cleared", {
-    expires: new Date(Date.now() + 1),
-    // secure: true,
-    httpOnly: true,
-  });
-  res.cookie("three", "cleared", {
-    expires: new Date(Date.now() + 1),
-    // secure: true,
-    httpOnly: true,
-  });
-  res.cookie("four", "cleared", {
-    expires: new Date(Date.now() + 1),
-    // secure: true,
-    httpOnly: true,
-  });
-  res.cookie("five", "cleared", {
-    expires: new Date(Date.now() + 1),
-    // secure: true,
-    httpOnly: true,
-  });
+  
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 

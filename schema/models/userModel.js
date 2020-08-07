@@ -78,7 +78,11 @@ const userSchema = new mongoose.Schema(
     },
     rank_difference: Number,
     cookies: Array,
-    recString: String,
+    r1: String,
+    r2: String,
+    r3: String,
+    r4: String,
+    r5: String,
     reportChannelCount: { type: Number, default: 0 },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }

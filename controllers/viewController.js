@@ -540,6 +540,10 @@ exports.mainPage = catchAsync(async (req, res) => {
     //   // await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     // }
 
+    
+    const topUsersToday = await User.find().sort([['rankLatest', -1]]);
+    console.log(topUsersToday);
+
     // const user = await User.findById(req.user);
     const deals = await Deal.find().sort([["trendRatio", -1]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);

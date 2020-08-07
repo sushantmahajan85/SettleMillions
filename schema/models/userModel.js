@@ -69,6 +69,10 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 100000,
     },
+    rankLatest: {
+      type: Number,
+      default: 100000,
+    },
     verification_token_time: {
       type: Date,
     },

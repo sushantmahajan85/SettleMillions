@@ -117,6 +117,8 @@
     <div class="member-page-content">
       <div id="trending" class="trending">
         <% for(var deal of deals) { %>
+<% if (deal.trendRatio>0 && deal.user == userId) { %>
+ 
 
         <div class="mep_deal-box">
 
@@ -214,6 +216,7 @@
           </div>
         </div>
         <% } %>
+        <% } %>
       </div>
     </div>
 
@@ -300,7 +303,7 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
-  <!-- <script>
+  <script>
       function dealOperations(el){
         console.log($(el).val());
         // var dealKiId = $(el).val().split('/')[1];
@@ -328,7 +331,7 @@
           
       }
   </script>
-  <script>
+ <!--  <script>
   //   document.getElementById('popup_cross').addEventListener('click', e => {
   //      document.getElementById('popup').style.display = 'none'; 
   //  });

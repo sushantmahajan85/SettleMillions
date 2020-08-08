@@ -259,11 +259,7 @@
   </section>
 
   <div class="popup" id="popupDelete">
-    <!-- <div class="bg-video">
-          <video  class="bg-video_content" autoplay loop muted>
-              <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-          </video>
-      </div> -->
+    
     <div class="popup_content">
 
 
@@ -312,7 +308,14 @@
 
         if($(el).val().split('/')[1]=="delete"){
             document.getElementById('popupDelete').style.display = 'block';
-        }else{
+        }else if($(el).val().split('/')[1]=="edit"){
+          var dealwaliid = $(el).val().split('/')[0];
+          console.log(dealwaliid);
+          window.setTimeout(() => {
+                  location.assign(`/edit/${dealwaliid}`);
+          }, 100);
+        }
+        else{
           el.form.submit();
           window.setTimeout(() => {
                   location.assign('/');
@@ -331,7 +334,7 @@
           
       }
   </script>
- <!--  <script>
+ <script>
   //   document.getElementById('popup_cross').addEventListener('click', e => {
   //      document.getElementById('popup').style.display = 'none'; 
   //  });
@@ -342,11 +345,7 @@
 </script>
     <script src="/js/subscribe.js"></script>
     <div class="popup" id="popup">
-      <!-- <div class="bg-video">
-          <video  class="bg-video_content" autoplay loop muted>
-              <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-          </video>
-      </div> -->
+      
   <div class="popup_content">
 
     <form action="/" method="GET" class="reportx">

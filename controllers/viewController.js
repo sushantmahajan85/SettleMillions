@@ -962,7 +962,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
   }
 
   const dealTime = await Deal.find({ user: req.params.id });
-  console.log(rec);
+  // console.log(rec);
   const deals = await Deal.find(
     { $text: { $search: rec } },
     { score: { $meta: "textScore" } }
@@ -991,7 +991,7 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
   // const xyz = await User.findById(req.user).populate({
   //   path: "subscribers",
   // });
-  console.log(user);
+  // console.log(user);
   res.status(200).render("updateSettings", { user });
 });
 

@@ -1,7 +1,7 @@
 .popup {
-  //   background-color: rgba(0, 0, 0, 0.808);
+  background-color: white;
   position: fixed;
-  // height: 50rem;
+  height: 50rem;
   width: 65%;
   top: 50%;
   left: 50%;
@@ -21,11 +21,12 @@
   // }
   &_content {
     opacity: 1;
-    background-color: white;
+    height: 50rem;
+    //background-color: white;
     overflow: hidden;
     // display: table;
     border-radius: inherit;
-    display: none;
+    //display: none;
   }
   &_left {
     width: 33.33333333334%;

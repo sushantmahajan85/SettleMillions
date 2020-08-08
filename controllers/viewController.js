@@ -7,6 +7,7 @@ const appError = require("./../utils/appError");
 const exec = require("child_process").exec;
 const url = require("url");
 const { del } = require("request");
+const Review = require("../schema/models/reviewModel");
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -996,6 +997,26 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
 
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
+  if (req.query.dealOps) {
+    let joChahiye = req.query.dealOps.split("/");
+    console.log(joChahiye);
+
+    // if (joChahiye[0] == "report") {
+    //   await Deal.findOneAndUpdate(
+    //     { _id: joChahiye[1] },
+    //     { $inc: { reportCount: 1 } }
+    //   );
+    // }
+
+    if (joChahiye[1] == "delete") {
+      await Review.findOneAndDelete({ _id: joChahiye[0] });
+    }
+    if (req.logged) {
+      if (joChahiye[1] == "like") {
+        await Review.create({ deal: joChahiye[0], user: req.logged._id });
+      }
+    }
+  }
 
   await Deal.findOneAndUpdate(
     { _id: req.params.dealId },

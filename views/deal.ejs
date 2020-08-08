@@ -322,6 +322,19 @@
             <%= review.review %>
           </div>
         </div>
+        <% if (user) { %>
+          <% if (user.id == review.user._id) { %>
+         <form action= <%= `/deal/${deal._id}/postedBy/${deal.user}` %> method="GET">
+        <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
+          <option selected disabled value="empty"></option>
+          <option value=<%= `${review._id}/edit` %>>Edit</option>
+          <option value=<%= `${review._id}/delete` %>>Delete</option>
+          
+        </select>
+      </form>
+        <% } %>
+          <% } %>
+
       </div>
       <% } %>
 
@@ -679,6 +692,40 @@
     }
 
   </script>
+  <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+ 
+  <script>
+    function dealOperations(el){
+      console.log($(el).val());
+      // var dealKiId = $(el).val().split('/')[1];
+      // var reporter = $(el).val().split('/')[2];
+      // var reportCount = 1;
+
+      if($(el).val().split('/')[1]=="delete"){
+        el.form.submit();
+        var dealId=deal._id;
+        var dealUser=deal.user;
+      
+    //    window.setTimeout(() => {
+  //        location.assign(`/deal/${dealId}/postedBy/${dealUser}`);}, 100);
+ }
+    // else{
+      //  el.form.submit();
+    //    window.setTimeout(() => {
+         //       location.assign('/');
+       // }, 100);
+      
+     // }
+
+     // document.getElementById('delete_btn').addEventListener('click', e => {
+        //  document.getElementById('popupDelete').style.display = 'none'; 
+        
+     // });
+
+        
+    }
+</script>
+
 
   <script type="text/javascript">
     var i = 0;

@@ -40,6 +40,50 @@ const passvalueEdit = async (data) => {
   }
 };
 
+const passvalueEditReview = async (id, revrevrev) => {
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
+
+  const showAlert = (type, msg) => {
+    hideAlert();
+
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
+  // var url = window.location.pathname;
+  // var id = url.substring(url.lastIndexOf("/") + 1);
+  try {
+    const result = await axios({
+      method: "PATCH",
+      url: `/api/v1/reviews/${id}`,
+      data:{
+        review: revrevrev
+      }
+      //   dealName,
+      //   affiliateLink,
+      //   category,
+      //   company,
+      //   mrp,
+      //   dealPrice,
+    });
+    if (result.data.status === "success") {
+      // alert("deal created");
+      showAlert("success", "Review successfully Edited");
+      window.setTimeout(() => {
+        location.reload();
+      }, 800);
+    }
+  } catch (err) {
+    showAlert("error", err.response.data.message);
+  }
+};
+
 document.getElementById("regForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const form = new FormData();

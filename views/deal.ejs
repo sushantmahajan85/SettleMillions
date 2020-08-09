@@ -318,9 +318,16 @@
         <img src=<%=`/img/users/${review.user.photo}`%> alt="User photo" class="user-nav__user-photo review-photo">
         <div class="review-text">
           <div class="user-nav__user-name"><%= review.user.name %> </div>
-          <div class="rev" contenteditable="true" id="revrevrev">
+          <div class="rev" id="normRev">
             <%= review.review %>
           </div>
+          <div style="display: none;" id="editDiv">
+          <div class="rev" contenteditable="true" id="revrevrev" >
+            <%= review.review %>
+            
+          </div>
+          <button style="right: 0;" id="editRevBtn">Edit</button>
+        </div>
         </div>
         <% if (user) { %>
           <% if (user.id == review.user._id) { %>
@@ -695,6 +702,14 @@
   <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
  
   <script>
+    function editRevFun(){
+        console.log($(el).val().split('/')[0]);
+        
+        console.log(revrevrev);
+        passvalueEditReview($(el).val().split('/')[0], revrevrev);
+    
+  
+    }
     function dealOperations(el){
       console.log($(el).val());
       // var dealKiId = $(el).val().split('/')[1];
@@ -706,9 +721,13 @@
         var dealId=deal._id;
         var dealUser=deal.user;
       }else if($(el).val().split('/')[1]=="edit"){
+        document.getElementById("normRev").style.display='none';
+        document.getElementById("editDiv").style.display ='block';
         var revrevrev = document.getElementById("revrevrev").textContent;
         console.log(revrevrev);
-        passvalueEditReview($(el).val().split('/')[0], revrevrev);
+        
+      
+       
       }
     // else{
       //  el.form.submit();

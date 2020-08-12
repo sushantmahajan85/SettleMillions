@@ -83,6 +83,8 @@ const userSchema = new mongoose.Schema(
     r3: String,
     r4: String,
     r5: String,
+    groupCount: Number,
+    numberOfGroups: Number,
     reportChannelCount: { type: Number, default: 0 },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }

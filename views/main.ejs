@@ -1241,14 +1241,26 @@
 
         <hr class="above_newsletter">
 
+        <%
+            const WL = ["https://chat.whatsapp.com/LGhpgcdjnRTG5IPsHtmuTh", "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN"];
+        %>
+
+        <script>
+            const counter = "<%= groupC %>";
+            console.log(counter);
+            if(counter==3){
+                document.getElementById("aTag").href = "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN";
+            }
+        </script>
+
         <div class="newsletter">
             <p id="newsletter_heading">SIGNUP TO OUR NEWSLETTER!</p>
             <p id="newsletter_subtitle">Get info about the latest deals from around the internet....</p>
-            <form action="">
                 <input type="email" placeholder="Enter Your Email!">
-                <button><i class="fas fa-envelope"></i>&nbsp Subscribe</button>
-            </form>
+                <a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()"><i class="fas fa-envelope"></i>&nbsp Subscribe</button></a>
         </div>
+
+        
 
         <div class="footer">
             <div class="footer-content">
@@ -1380,6 +1392,7 @@
     </div>
 
     <script src="/js/report.js"></script>
+    <script src="/js/groupCount.js"></script>
     <script src="/js/likedDeal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 

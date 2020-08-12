@@ -288,6 +288,10 @@ exports.autocomplete = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
+  const categoryDeals = await Deal.find({ category: "sport shoes" }).sort([
+    ["trendRatio", -1],
+  ]);
+  console.log(categoryDeals);
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
     console.log(joChahiye);

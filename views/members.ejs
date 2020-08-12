@@ -117,6 +117,8 @@
     <div class="member-page-content">
       <div id="trending" class="trending">
         <% for(var deal of deals) { %>
+<% if (deal.trendRatio>0 && deal.user == userId) { %>
+ 
 
         <div class="mep_deal-box">
 
@@ -214,6 +216,7 @@
           </div>
         </div>
         <% } %>
+        <% } %>
       </div>
     </div>
 
@@ -256,11 +259,7 @@
   </section>
 
   <div class="popup" id="popupDelete">
-    <!-- <div class="bg-video">
-          <video  class="bg-video_content" autoplay loop muted>
-              <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-          </video>
-      </div> -->
+    
     <div class="popup_content">
 
 
@@ -300,7 +299,7 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
-  <!-- <script>
+  <script>
       function dealOperations(el){
         console.log($(el).val());
         // var dealKiId = $(el).val().split('/')[1];
@@ -309,7 +308,14 @@
 
         if($(el).val().split('/')[1]=="delete"){
             document.getElementById('popupDelete').style.display = 'block';
-        }else{
+        }else if($(el).val().split('/')[1]=="edit"){
+          var dealwaliid = $(el).val().split('/')[0];
+          console.log(dealwaliid);
+          window.setTimeout(() => {
+                  location.assign(`/edit/${dealwaliid}`);
+          }, 100);
+        }
+        else{
           el.form.submit();
           window.setTimeout(() => {
                   location.assign('/');
@@ -321,14 +327,13 @@
             document.getElementById('popupDelete').style.display = 'none'; 
             el.form.submit();
             window.setTimeout(() => {
-                  location.assign('/');
-          }, 100);
+                  location.assign('/');}, 100);
         });
 
           
       }
   </script>
-  <script>
+ <script>
   //   document.getElementById('popup_cross').addEventListener('click', e => {
   //      document.getElementById('popup').style.display = 'none'; 
   //  });
@@ -339,11 +344,7 @@
 </script>
     <script src="/js/subscribe.js"></script>
     <div class="popup" id="popup">
-      <!-- <div class="bg-video">
-          <video  class="bg-video_content" autoplay loop muted>
-              <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-          </video>
-      </div> -->
+      
   <div class="popup_content">
 
     <form action="/" method="GET" class="reportx">

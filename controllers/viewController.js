@@ -7,6 +7,7 @@ const appError = require("./../utils/appError");
 const exec = require("child_process").exec;
 const url = require("url");
 const { del } = require("request");
+const Review = require("../schema/models/reviewModel");
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -27,17 +28,17 @@ let rec5 = "";
 
 exports.calcul = catchAsync(async (req, res) => {
   const tempideals = await Deal.find();
-  console.log('AAO');
+  console.log("AAO");
 
   for (var deal of tempideals) {
-      var now = new Date(Date.now());
-      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
-      tem = deal.views / tem;
+    var now = new Date(Date.now());
+    var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    tem = deal.views / tem;
 
-      console.log(deal._id);
+    console.log(deal._id);
 
-      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    }
+    await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+  }
 });
 
 exports.analytics = catchAsync(async (req, res) => {
@@ -152,14 +153,17 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
   // const dekh = await User.find().sort([['rank', -1]]);
   // console.log(dekh);
 
-  const subs = await Subscriber.find({ user: req.user })/*.sort([["subscribedUser.rank", -1]])*/.populate({
-    path: "subscribedDeals", //options: {sort: {"_id": "asc"}}
-  });
+  const subs = await Subscriber.find({
+    user: req.user,
+  }) /*.sort([["subscribedUser.rank", -1]])*/
+    .populate({
+      path: "subscribedDeals", //options: {sort: {"_id": "asc"}}
+    });
 
   // console.log(subs);
 
   // const sub = await Subscriber.aggregate([
-  //   { 
+  //   {
   //     $addFields: { rank: '$subscribedUser'}
   //   },
   //   {
@@ -173,32 +177,35 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
 
   // console.log(subs);
 
-  var allDeals1 = new Array;
-  var allDeals2 = new Array;
-  var allDeals3 = new Array;
+  var allDeals1 = new Array();
+  var allDeals2 = new Array();
+  var allDeals3 = new Array();
 
-  for(sub of subs){
+  for (sub of subs) {
     var tem = new Date(Date.now());
-    var ekdin = new Date(tem.getTime() - 1000*60*60*24*5.5);
-    var dodin = new Date(tem.getTime() - 1000*60*60*24*6.5);
-    var teendin = new Date(tem.getTime() - 1000*60*60*24*7.5);
-    var temp1 = await Deal.find({ user: sub.subscribedUser.id, 
-                                 time: { $gt: ekdin } 
+    var ekdin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 5.5);
+    var dodin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 6.5);
+    var teendin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 7.5);
+    var temp1 = await Deal.find({
+      user: sub.subscribedUser.id,
+      time: { $gt: ekdin },
     });
-    var temp2 = await Deal.find({ user: sub.subscribedUser.id, 
-                                 time: { $gt: dodin, $lt: ekdin } 
+    var temp2 = await Deal.find({
+      user: sub.subscribedUser.id,
+      time: { $gt: dodin, $lt: ekdin },
     });
-    var temp3 = await Deal.find({ user: sub.subscribedUser.id, 
-                                 time: { $gt: teendin, $lt: dodin } 
+    var temp3 = await Deal.find({
+      user: sub.subscribedUser.id,
+      time: { $gt: teendin, $lt: dodin },
     });
 
-    for(var i = 0 ; i < temp1.length ; i++){
+    for (var i = 0; i < temp1.length; i++) {
       allDeals1.push(temp1[i]);
     }
-    for(var i = 0 ; i < temp2.length ; i++){
+    for (var i = 0; i < temp2.length; i++) {
       allDeals2.push(temp2[i]);
     }
-    for(var i = 0 ; i < temp3.length ; i++){
+    for (var i = 0; i < temp3.length; i++) {
       allDeals3.push(temp3[i]);
     }
   }
@@ -230,7 +237,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     subs,
     allDeals1,
     allDeals2,
-    allDeals3
+    allDeals3,
   });
 });
 
@@ -304,118 +311,242 @@ exports.mainPage = catchAsync(async (req, res) => {
 
   let cooCount = 0;
   let recentlyViewed = [];
+  const user = await User.findById(req.logged);
 
-  if (req.cookies.one !== undefined) {
-    recentlyViewed[cooCount] = req.cookies.one;
-    cooCount++;
-    rec1 =
-      req.cookies.one.dealName +
-      " " +
-      req.cookies.one.titleDis +
-      " " +
-      req.cookies.one.owner +
-      " " +
-      req.cookies.one.company +
-      " " +
-      req.cookies.one.category +
-      " " +
-      req.cookies.one.user;
-    if (req.cookies.one.tags) {
-      for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
-        rec1 = rec1 + " " + req.cookies.one.tags[i];
-      }
-    }
-  }
-  //console.log(Object.keys(req.cookies.one.tags).length);
-  if (req.cookies.two !== undefined) {
-    recentlyViewed[cooCount] = req.cookies.two;
-    cooCount++;
-    rec2 =
-      req.cookies.two.dealName +
-      " " +
-      req.cookies.two.titleDis +
-      " " +
-      req.cookies.two.owner +
-      " " +
-      req.cookies.two.company +
-      " " +
-      req.cookies.two.category +
-      " " +
-      req.cookies.two.user;
-    if (req.cookies.two.tags) {
-      for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
-        rec2 = rec2 + " " + req.cookies.two.tags[i];
-      }
-    }
-  }
-  if (req.cookies.three !== undefined) {
-    recentlyViewed[cooCount] = req.cookies.three;
-    cooCount++;
-    rec3 =
-      req.cookies.three.dealName +
-      " " +
-      req.cookies.three.titleDis +
-      " " +
-      req.cookies.three.owner +
-      " " +
-      req.cookies.three.company +
-      " " +
-      req.cookies.three.category +
-      " " +
-      req.cookies.three.user;
-    if (req.cookies.three.tags) {
-      for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
-        rec3 = rec3 + " " + req.cookies.three.tags[i];
-      }
-    }
-  }
-  if (req.cookies.four !== undefined) {
-    recentlyViewed[cooCount] = req.cookies.four;
-    cooCount++;
-    rec4 =
-      req.cookies.four.dealName +
-      " " +
-      req.cookies.four.titleDis +
-      " " +
-      req.cookies.four.owner +
-      " " +
-      req.cookies.four.company +
-      " " +
-      req.cookies.four.category +
-      " " +
-      req.cookies.four.user;
-    if (req.cookies.four.tags) {
-      for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
-        rec4 = rec4 + " " + req.cookies.four.tags[i];
-      }
-    }
-  }
-  if (req.cookies.five !== undefined) {
-    recentlyViewed[cooCount] = req.cookies.five;
-    cooCount++;
-    rec5 =
-      req.cookies.five.dealName +
-      " " +
-      req.cookies.five.titleDis +
-      " " +
-      req.cookies.five.owner +
-      " " +
-      req.cookies.five.company +
-      " " +
-      req.cookies.five.category +
-      " " +
-      req.cookies.five.user;
-    if (req.cookies.five.tags) {
-      for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
-        rec5 = rec5 + " " + req.cookies.five.tags[i];
-      }
-    }
-  }
+  if (req.logged) {
+    if (req.cookies.one !== undefined) {
+      user.cookies[0] = req.cookies.one.id;
 
-  rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
+      recentlyViewed[cooCount] = req.cookies.one;
+      cooCount++;
+      user.r1 =
+        req.cookies.one.dealName +
+        " " +
+        req.cookies.one.titleDis +
+        " " +
+        req.cookies.one.owner +
+        " " +
+        req.cookies.one.company +
+        " " +
+        req.cookies.one.category +
+        " " +
+        req.cookies.one.user;
+      if (req.cookies.one.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+          user.r1 = user.r1 + " " + req.cookies.one.tags[i];
+        }
+      }
+    }
+    //console.log(Object.keys(req.cookies.one.tags).length);
+    if (req.cookies.two !== undefined) {
+      user.cookies[1] = req.cookies.two.id;
+      recentlyViewed[cooCount] = req.cookies.two;
+      cooCount++;
+      user.r2 =
+        req.cookies.two.dealName +
+        " " +
+        req.cookies.two.titleDis +
+        " " +
+        req.cookies.two.owner +
+        " " +
+        req.cookies.two.company +
+        " " +
+        req.cookies.two.category +
+        " " +
+        req.cookies.two.user;
+      if (req.cookies.two.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
+          user.r2 = user.r2 + " " + req.cookies.two.tags[i];
+        }
+      }
+    }
+    if (req.cookies.three !== undefined) {
+      user.cookies[2] = req.cookies.three.id;
+      recentlyViewed[cooCount] = req.cookies.three;
+      cooCount++;
+      user.r3 =
+        req.cookies.three.dealName +
+        " " +
+        req.cookies.three.titleDis +
+        " " +
+        req.cookies.three.owner +
+        " " +
+        req.cookies.three.company +
+        " " +
+        req.cookies.three.category +
+        " " +
+        req.cookies.three.user;
+      if (req.cookies.three.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
+          user.r3 = user.r3 + " " + req.cookies.three.tags[i];
+        }
+      }
+    }
+    if (req.cookies.four !== undefined) {
+      user.cookies[3] = req.cookies.four.id;
+      recentlyViewed[cooCount] = req.cookies.four;
+      cooCount++;
+      user.r4 =
+        req.cookies.four.dealName +
+        " " +
+        req.cookies.four.titleDis +
+        " " +
+        req.cookies.four.owner +
+        " " +
+        req.cookies.four.company +
+        " " +
+        req.cookies.four.category +
+        " " +
+        req.cookies.four.user;
+      if (req.cookies.four.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
+          user.r4 = user.r4 + " " + req.cookies.four.tags[i];
+        }
+      }
+    }
+    if (req.cookies.five !== undefined) {
+      user.cookies[4] = req.cookies.five.id;
+      recentlyViewed[cooCount] = req.cookies.five;
+      cooCount++;
+      user.r5 =
+        req.cookies.five.dealName +
+        " " +
+        req.cookies.five.titleDis +
+        " " +
+        req.cookies.five.owner +
+        " " +
+        req.cookies.five.company +
+        " " +
+        req.cookies.five.category +
+        " " +
+        req.cookies.five.user;
+      if (req.cookies.five.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
+          user.r5 = user.r5 + " " + req.cookies.five.tags[i];
+        }
+      }
+    }
+
+    user.save();
+    rec =
+      user.r1 + " " + user.r2 + " " + user.r3 + " " + user.r4 + " " + user.r5;
+  } else {
+    if (req.cookies.one !== undefined) {
+      recentlyViewed[cooCount] = req.cookies.one;
+      cooCount++;
+      rec1 =
+        req.cookies.one.dealName +
+        " " +
+        req.cookies.one.titleDis +
+        " " +
+        req.cookies.one.owner +
+        " " +
+        req.cookies.one.company +
+        " " +
+        req.cookies.one.category +
+        " " +
+        req.cookies.one.user;
+      if (req.cookies.one.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+          rec1 = rec1 + " " + req.cookies.one.tags[i];
+        }
+      }
+    }
+    //console.log(Object.keys(req.cookies.one.tags).length);
+    if (req.cookies.two !== undefined) {
+      recentlyViewed[cooCount] = req.cookies.two;
+      cooCount++;
+      rec2 =
+        req.cookies.two.dealName +
+        " " +
+        req.cookies.two.titleDis +
+        " " +
+        req.cookies.two.owner +
+        " " +
+        req.cookies.two.company +
+        " " +
+        req.cookies.two.category +
+        " " +
+        req.cookies.two.user;
+      if (req.cookies.two.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
+          rec2 = rec2 + " " + req.cookies.two.tags[i];
+        }
+      }
+    }
+    if (req.cookies.three !== undefined) {
+      recentlyViewed[cooCount] = req.cookies.three;
+      cooCount++;
+      rec3 =
+        req.cookies.three.dealName +
+        " " +
+        req.cookies.three.titleDis +
+        " " +
+        req.cookies.three.owner +
+        " " +
+        req.cookies.three.company +
+        " " +
+        req.cookies.three.category +
+        " " +
+        req.cookies.three.user;
+      if (req.cookies.three.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
+          rec3 = rec3 + " " + req.cookies.three.tags[i];
+        }
+      }
+    }
+    if (req.cookies.four !== undefined) {
+      recentlyViewed[cooCount] = req.cookies.four;
+      cooCount++;
+      rec4 =
+        req.cookies.four.dealName +
+        " " +
+        req.cookies.four.titleDis +
+        " " +
+        req.cookies.four.owner +
+        " " +
+        req.cookies.four.company +
+        " " +
+        req.cookies.four.category +
+        " " +
+        req.cookies.four.user;
+      if (req.cookies.four.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
+          rec4 = rec4 + " " + req.cookies.four.tags[i];
+        }
+      }
+    }
+    if (req.cookies.five !== undefined) {
+      recentlyViewed[cooCount] = req.cookies.five;
+      cooCount++;
+      rec5 =
+        req.cookies.five.dealName +
+        " " +
+        req.cookies.five.titleDis +
+        " " +
+        req.cookies.five.owner +
+        " " +
+        req.cookies.five.company +
+        " " +
+        req.cookies.five.category +
+        " " +
+        req.cookies.five.user;
+      if (req.cookies.five.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
+          rec5 = rec5 + " " + req.cookies.five.tags[i];
+        }
+      }
+    }
+
+    rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
+  }
 
   //console.log(rec);
   //const t = await Deal.find({ trendRatio: { $gte: 4 } });
+
+  // console.log(user);
+
+  // console.log(rec);
 
   const recommendedDeals = await Deal.find(
     { $text: { $search: rec } },
@@ -432,7 +563,7 @@ exports.mainPage = catchAsync(async (req, res) => {
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;
   }
-  //console.log(recommendedDeals);
+  // console.log(recommendedDeals);
   if (req.query.search || req.query.sort) {
     // await Deal.ensureIndexes({ dealName: 'text' });
 
@@ -540,11 +671,31 @@ exports.mainPage = catchAsync(async (req, res) => {
     //   // await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     // }
 
+    const topUsersToday = await User.find().sort([["rankLatest", -1]]);
+    // console.log(topUsersToday);
+
     // const user = await User.findById(req.user);
+    var subDeals = new Array();
+    const subs = await Subscriber.find({
+      user: req.logged,
+    }).populate({
+      path: "subscribedDeals",
+    });
+    var rando = Math.floor(Math.random() * subs.length);
+
+    for (var i = 0; i < subs.length; i++) {
+      subDeals.push(subs[rando]);
+      if (rando == subs.length - 1) {
+        rando = 0;
+      } else {
+        rando++;
+      }
+    }
+    const newlyJoined = await User.find();
+    const topUsers = await User.find().sort([["rank", -1]]);
+    // console.log(topUsers);
     const deals = await Deal.find().sort([["trendRatio", -1]]);
     const liveDeals = await Deal.find().sort([["time", -1]]);
-
-    //console.log(recentlyViewed);
 
     res.status(200).render("main", {
       deals,
@@ -552,6 +703,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       liveDeals,
       cooCount,
       recentlyViewed,
+      subDeals,
     });
 
     // for (var deal of deals) {
@@ -561,7 +713,6 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
     // }
-
   }
 });
 
@@ -581,11 +732,249 @@ exports.getMemberData = catchAsync(async (req, res) => {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });
     }
   }
+  if (req.logged) {
+    const user = await User.findById(req.logged);
+    if (req.cookies.one !== undefined) {
+      user.cookies[0] = req.cookies.one.id;
 
-  const deals = await Deal.find({ user: req.params.id });
+      // recentlyViewed[cooCount] = req.cookies.one;
+      // cooCount++;
+      user.r1 =
+        req.cookies.one.dealName +
+        " " +
+        req.cookies.one.titleDis +
+        " " +
+        req.cookies.one.owner +
+        " " +
+        req.cookies.one.company +
+        " " +
+        req.cookies.one.category +
+        " " +
+        req.cookies.one.user;
+      if (req.cookies.one.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+          user.r1 = user.r1 + " " + req.cookies.one.tags[i];
+        }
+      }
+    }
+    //console.log(Object.keys(req.cookies.one.tags).length);
+    if (req.cookies.two !== undefined) {
+      user.cookies[1] = req.cookies.two.id;
+      // recentlyViewed[cooCount] = req.cookies.two;
+      // cooCount++;
+      user.r2 =
+        req.cookies.two.dealName +
+        " " +
+        req.cookies.two.titleDis +
+        " " +
+        req.cookies.two.owner +
+        " " +
+        req.cookies.two.company +
+        " " +
+        req.cookies.two.category +
+        " " +
+        req.cookies.two.user;
+      if (req.cookies.two.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
+          user.r2 = user.r2 + " " + req.cookies.two.tags[i];
+        }
+      }
+    }
+    if (req.cookies.three !== undefined) {
+      user.cookies[2] = req.cookies.three.id;
+      // recentlyViewed[cooCount] = req.cookies.three;
+      // cooCount++;
+      user.r3 =
+        req.cookies.three.dealName +
+        " " +
+        req.cookies.three.titleDis +
+        " " +
+        req.cookies.three.owner +
+        " " +
+        req.cookies.three.company +
+        " " +
+        req.cookies.three.category +
+        " " +
+        req.cookies.three.user;
+      if (req.cookies.three.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
+          user.r3 = user.r3 + " " + req.cookies.three.tags[i];
+        }
+      }
+    }
+    if (req.cookies.four !== undefined) {
+      user.cookies[3] = req.cookies.four.id;
+      // recentlyViewed[cooCount] = req.cookies.four;
+      // cooCount++;
+      user.r4 =
+        req.cookies.four.dealName +
+        " " +
+        req.cookies.four.titleDis +
+        " " +
+        req.cookies.four.owner +
+        " " +
+        req.cookies.four.company +
+        " " +
+        req.cookies.four.category +
+        " " +
+        req.cookies.four.user;
+      if (req.cookies.four.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
+          user.r4 = user.r4 + " " + req.cookies.four.tags[i];
+        }
+      }
+    }
+    if (req.cookies.five !== undefined) {
+      user.cookies[4] = req.cookies.five.id;
+      // recentlyViewed[cooCount] = req.cookies.five;
+      // cooCount++;
+      user.r5 =
+        req.cookies.five.dealName +
+        " " +
+        req.cookies.five.titleDis +
+        " " +
+        req.cookies.five.owner +
+        " " +
+        req.cookies.five.company +
+        " " +
+        req.cookies.five.category +
+        " " +
+        req.cookies.five.user;
+      if (req.cookies.five.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
+          user.r5 = user.r5 + " " + req.cookies.five.tags[i];
+        }
+      }
+    }
 
+    user.save();
+    rec =
+      user.r1 + " " + user.r2 + " " + user.r3 + " " + user.r4 + " " + user.r5;
+  } else {
+    if (req.cookies.one !== undefined) {
+      // recentlyViewed[cooCount] = req.cookies.one;
+      // cooCount++;
+      rec1 =
+        req.cookies.one.dealName +
+        " " +
+        req.cookies.one.titleDis +
+        " " +
+        req.cookies.one.owner +
+        " " +
+        req.cookies.one.company +
+        " " +
+        req.cookies.one.category +
+        " " +
+        req.cookies.one.user;
+      if (req.cookies.one.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
+          rec1 = rec1 + " " + req.cookies.one.tags[i];
+        }
+      }
+    }
+    //console.log(Object.keys(req.cookies.one.tags).length);
+    if (req.cookies.two !== undefined) {
+      // recentlyViewed[cooCount] = req.cookies.two;
+      // cooCount++;
+      rec2 =
+        req.cookies.two.dealName +
+        " " +
+        req.cookies.two.titleDis +
+        " " +
+        req.cookies.two.owner +
+        " " +
+        req.cookies.two.company +
+        " " +
+        req.cookies.two.category +
+        " " +
+        req.cookies.two.user;
+      if (req.cookies.two.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
+          rec2 = rec2 + " " + req.cookies.two.tags[i];
+        }
+      }
+    }
+    if (req.cookies.three !== undefined) {
+      // recentlyViewed[cooCount] = req.cookies.three;
+      // cooCount++;
+      rec3 =
+        req.cookies.three.dealName +
+        " " +
+        req.cookies.three.titleDis +
+        " " +
+        req.cookies.three.owner +
+        " " +
+        req.cookies.three.company +
+        " " +
+        req.cookies.three.category +
+        " " +
+        req.cookies.three.user;
+      if (req.cookies.three.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
+          rec3 = rec3 + " " + req.cookies.three.tags[i];
+        }
+      }
+    }
+    if (req.cookies.four !== undefined) {
+      // recentlyViewed[cooCount] = req.cookies.four;
+      // cooCount++;
+      rec4 =
+        req.cookies.four.dealName +
+        " " +
+        req.cookies.four.titleDis +
+        " " +
+        req.cookies.four.owner +
+        " " +
+        req.cookies.four.company +
+        " " +
+        req.cookies.four.category +
+        " " +
+        req.cookies.four.user;
+      if (req.cookies.four.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
+          rec4 = rec4 + " " + req.cookies.four.tags[i];
+        }
+      }
+    }
+    if (req.cookies.five !== undefined) {
+      // recentlyViewed[cooCount] = req.cookies.five;
+      // cooCount++;
+      rec5 =
+        req.cookies.five.dealName +
+        " " +
+        req.cookies.five.titleDis +
+        " " +
+        req.cookies.five.owner +
+        " " +
+        req.cookies.five.company +
+        " " +
+        req.cookies.five.category +
+        " " +
+        req.cookies.five.user;
+      if (req.cookies.five.tags) {
+        for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
+          rec5 = rec5 + " " + req.cookies.five.tags[i];
+        }
+      }
+    }
+
+    rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
+  }
+
+  const dealTime = await Deal.find({ user: req.params.id });
+  // console.log(rec);
+  const deals = await Deal.find(
+    { $text: { $search: rec } },
+    { score: { $meta: "textScore" } }
+
+    //{ trendRatio: { $gte: 4 } }
+  ).sort({ score: { $meta: "textScore" } });
+  const userId = req.params.id;
+  // console.log(recommendedDeals);
   res.status(200).render("members", {
     deals,
+    userId,
+    dealTime,
   });
 });
 
@@ -602,12 +991,32 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
   // const xyz = await User.findById(req.user).populate({
   //   path: "subscribers",
   // });
-  console.log(user);
+  // console.log(user);
   res.status(200).render("updateSettings", { user });
 });
 
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
+  if (req.query.dealOps) {
+    let joChahiye = req.query.dealOps.split("/");
+    console.log(joChahiye);
+
+    // if (joChahiye[0] == "report") {
+    //   await Deal.findOneAndUpdate(
+    //     { _id: joChahiye[1] },
+    //     { $inc: { reportCount: 1 } }
+    //   );
+    // }
+
+    if (joChahiye[1] == "delete") {
+      await Review.findOneAndDelete({ _id: joChahiye[0] });
+    }
+    if (req.logged) {
+      if (joChahiye[1] == "like") {
+        await Review.create({ deal: joChahiye[0], user: req.logged._id });
+      }
+    }
+  }
 
   await Deal.findOneAndUpdate(
     { _id: req.params.dealId },
@@ -902,7 +1311,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
     await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
   }
-
 });
 // function escapeRegex(text) {
 //   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");

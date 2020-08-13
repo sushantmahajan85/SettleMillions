@@ -48,6 +48,106 @@
 
   <body>
     <%- include('partials/navbar.ejs') %>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1321461864731329&autoLogAppEvents=1"
+    ></script>
+
+    <script>
+      function statusChangeCallback(response) {
+        // Called with the results from FB.getLoginStatus().
+        console.log("statusChangeCallback");
+        console.log(response); // The current login status of the person.
+        if (response.status === "connected") {
+          // Logged into your webpage and Facebook.
+          testAPI();
+        } else {
+          // Not logged into your webpage or we are unable to tell.
+          document.getElementById("status").innerHTML =
+            "Please log " + "into this webpage.";
+        }
+      }
+
+      function checkLoginState() {
+        // Called when a person is finished with the Login Button.
+        FB.getLoginStatus(function(response) {
+          // See the onlogin handler
+          statusChangeCallback(response);
+        });
+      }
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "{app-id}",
+          cookie: true, // Enable cookies to allow the server to access the session.
+          xfbml: true, // Parse social plugins on this webpage.
+          version: "{api-version}", // Use this Graph API version for this call.
+        });
+
+        FB.getLoginStatus(function(response) {
+          // Called after the JS SDK has been initialized.
+          statusChangeCallback(response); // Returns the login status.
+        });
+      };
+
+      (function(d, s, id) {
+        // Load the SDK asynchronously
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+
+      function testAPI() {
+        // Testing Graph API after login.
+        //See statusChangeCallback() for  when this call is made.
+        console.log("Welcome!  Fetching your information.... ");
+        FB.api("/me", { fields: "name, email" }, function(response) {
+          console.log(response);
+          console.log("Successful login : " + response.name);
+
+          passvaluefb(response);
+
+          //   try {
+          //         const name = response.name;
+          //         const email = response.email;
+          //         const password = 'password';
+          //         const passwordConfirm = 'password';
+
+          //         console.log(name);
+
+          //         const result = await axios({
+          //             method: 'POST',
+          //             url: '/api/v1/users/signup',
+          //             data: {
+          //                 email,
+          //                 name,
+          //                 password,
+          //                 passwordConfirm
+          //             }
+          //         });
+          //         if (result.data.status === 'success') {
+          //             alert('sign up successful');
+          //             window.setTimeout(() => {
+          //                 location.assign('/');
+          //             }, 1000);
+          //         }
+
+          //   } catch (err) {
+          //         console.log(err);
+          //   }
+
+          // document.getElementById('status').innerHTML =
+          //   'Thanks for logging in, ' + response.name + '!';
+        });
+      }
+    </script>
 
     <!-- <div class="limiter">
       <div class="container-login100">
@@ -133,12 +233,34 @@
         <h4 class="wrap_subtext">
           Sign in to see the best deals from the best platforms.
         </h4>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <fb:login-button
           scope="public_profile,email"
           onlogin="checkLoginState();"
         >
-        </fb:login-button>
+        </fb:login-button> -->
+
+        <div
+          id="GoogeSigninButton"
+          data-height="40"
+          data-width="372"
+          data-longtitle="true"
+          data-theme="dark"
+          data-onsuccess="onSignIn"
+          class="g-signin2"
+          style="margin-top: 1.5rem;"
+        ></div>
+
+        <div
+          class="fb-login-button"
+          data-size="large"
+          data-button-type="login_with"
+          data-layout="default"
+          data-auto-logout-link="false"
+          data-use-continue-as="false"
+          data-width="375"
+          style="margin-top: 1.5rem;"
+        ></div>
 
         <div id="status"></div>
         <!-- <button type="button" class="wrap_signup-via-google g-signin2" data-onsuccess="onSignIn">
@@ -162,7 +284,7 @@
           /> -->
           <input type="submit" value="Sign In" id="submit" />
           <p class="wrap_signup">
-            Don't have an account? <span> <a href="#">Sign up</a></span>
+            Don't have an account? <span> <a href="/signup">Sign up</a></span>
           </p>
         </form>
       </div>

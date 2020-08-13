@@ -1,3 +1,4 @@
+@import "abstracts/variables";
 @import "abstracts/mixins";
 @import "components/contact";
 @import "components/navside";
@@ -9,7 +10,6 @@
 @import "components/searchpage";
 @import "components/subscriptions";
 @import "base/base";
-@import "abstracts/variables";
 @import "layout/grid";
 @import "pages/popup";
 @import "pages/newDeal";

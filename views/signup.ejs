@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
     <link rel="stylesheet" type="text/css" href="sass/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/logo1.png" />
-    <title>Your Deal| A plethora of Lightening Deals</title>
+    <title>Your Deal | Signup</title>
   </head>
   <body>
     <%- include('partials/navbar.ejs') %>
@@ -137,12 +137,16 @@
         <h4 class="wrap_subtext">
           Sign up to see the best deals from the best platforms.
         </h4>
+        <div class="fbG">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <fb:login-button
+        <fb:login-button class="fbBtn"
+          length="long" size="xlarge" 
           scope="public_profile,email"
+          data-layout="rounded" 
           onlogin="checkLoginState();"
-        >
+        >Facebook
         </fb:login-button>
+        </div>
 
         <div id="status"></div>
         <!-- <button type="button" class="wrap_signup-via-google g-signin2" data-onsuccess="onSignIn">

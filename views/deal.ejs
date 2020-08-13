@@ -324,9 +324,8 @@
           <div style="display: none;" id="editDiv">
           <div class="rev" contenteditable="true" id="revrevrev" >
             <%= review.review %>
-            
           </div>
-          <button style="right: 0;" id="editRevBtn">Edit</button>
+          <button style="right: 0;" id="editRevBtn" onclick="editRevFun(this)" name=<%= `${review._id}/edit` %>>Edit</button>
         </div>
         </div>
         <% if (user) { %>
@@ -702,13 +701,11 @@
   <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
  
   <script>
-    function editRevFun(){
-        console.log($(el).val().split('/')[0]);
-        
+    function editRevFun(el){
+        var revrevrev = document.getElementById("revrevrev").textContent;
         console.log(revrevrev);
-        passvalueEditReview($(el).val().split('/')[0], revrevrev);
-    
-  
+        console.log(el.name.split('/')[0]);        
+        passvalueEditReview(el.name.split('/')[0], revrevrev);
     }
     function dealOperations(el){
       console.log($(el).val());
@@ -722,12 +719,8 @@
         var dealUser=deal.user;
       }else if($(el).val().split('/')[1]=="edit"){
         document.getElementById("normRev").style.display='none';
-        document.getElementById("editDiv").style.display ='block';
-        var revrevrev = document.getElementById("revrevrev").textContent;
-        console.log(revrevrev);
-        
-      
-       
+        document.getElementById("editDiv").style.display ='block'; 
+
       }
     // else{
       //  el.form.submit();

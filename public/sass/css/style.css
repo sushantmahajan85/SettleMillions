@@ -3991,6 +3991,10 @@ html {
   padding: 0;
   /* box-sizing: inherit;  */ }
 
+.fbG {
+  display: flex;
+  justify-content: space-around; }
+
 .form_section {
   background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58)), url("/img/backg.jpg");
   background-size: cover;
@@ -4001,7 +4005,7 @@ html {
   max-width: 40rem;
   border-radius: 0.5rem;
   margin: auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   padding: 2rem 4.5rem 4.5rem 1rem;
   color: rgba(0, 0, 0, 0.74);
@@ -4025,7 +4029,6 @@ html {
 .wrap_opt input[type="text"],
 .wrap_opt input[type="password"] {
   width: 100%;
-  box-sizing: border-box;
   padding: 1.5rem 0.5rem;
   background: rgba(0, 0, 0, 0.005);
   outline: none;
@@ -4039,8 +4042,8 @@ html {
   /* for keeping text in center of the button */
   /* justify-content: center; 
     align-items: center; */
-  width: 72%;
-  margin-left: 13%;
+  width: 100%;
+  margin-left: 5%;
   /* box-sizing: border-box; */
   padding: 1rem 4rem;
   margin-top: 3rem;
@@ -4054,7 +4057,6 @@ html {
   text-align: center;
   /* height: 4rem; */
   color: white;
-  margin-right: 3rem;
   transition: all 0.2s; }
 
 .wrap_opt input[type="submit"]:hover {

@@ -175,12 +175,12 @@ html {
 
   outline: none;
   border: none;
-  border-bottom: 1px solid rgb(73, 73, 73);
+  border-bottom: 1px solid rgb(73, 73, 73) !important;
   color: rgba(0, 0, 0, 0.84);
-  border-radius: 0.1rem;
+  // border-radius: 0.1rem;
   margin: 0.8rem;
   font-size: 1.6rem;
-  font-weight: 450;
+  // font-weight: 450;
 }
 
 .wrap_opt input[type="submit"] {

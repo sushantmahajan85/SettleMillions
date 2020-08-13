@@ -292,9 +292,11 @@ body a {
     text-decoration: none;
   }
 }
-
+.search-icon {
+  margin-left: -5rem;
+}
 .search_nv {
-  margin-left: 3rem;
+  margin-left: 10rem;
 }
 
 // .user-nav a{
@@ -320,38 +322,38 @@ body a {
   // font-family: "Bitter", serif;
   font-size: 1.9rem;
 
-  &:hover {
-    color: rgb(231, 76, 60);
-    border-bottom: 2px solid rgb(231, 76, 60);
-  }
+  // &:hover {
+  //   // color: rgb(231, 76, 60);
+  //   // border-bottom: 2px solid rgb(231, 76, 60);
+  // }
 
-  &:focus {
-    color: rgb(231, 76, 60);
-    background-color: transparent;
-  }
+  // &:focus {
+  //   color: rgb(231, 76, 60);
+  //   background-color: transparent;
+  // }
 }
 
 .fa-sign-out-alt {
   display: block;
   margin-right: 0.5rem;
-  color: rgb(223, 68, 68);
+  // color: rgb(223, 68, 68);
 }
 .fa-heart,
 .fa-user-plus,
 .fa-user-shield {
   display: block;
   margin-right: 0.5rem;
-  color: rgb(223, 68, 68);
+  // color: rgb(223, 68, 68);
   text-decoration: none;
 }
 
 .fa-plus-square {
-  color: rgb(223, 68, 68);
+  // color: rgb(223, 68, 68);
   display: block;
   margin-right: 0.5rem;
 }
 .fa-h-square {
-  color: rgb(223, 68, 68);
+  // color: rgb(223, 68, 68);
   display: block;
   margin-right: 0.5rem;
 }
@@ -396,10 +398,12 @@ h2 {
 
 .header {
   font-size: 1.7rem;
-  height: 6.5rem;
+  // height: 6.5rem;
+  padding: 1.8rem 0;
   background-color: #15161d;
-  border-bottom: var(--line);
+  border-bottom: 3px solid $maroon;
   display: -webkit-box;
+  font-family: $family2 !important;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
@@ -408,7 +412,6 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid black;
 }
 @media only screen and (max-width: 31.25em) {
   .header {
@@ -461,16 +464,20 @@ h2 {
   // * D changes *
   // border: 2px solid rgb(146, 43, 33);
   // border: 2px solid rgb(231, 76, 60);
-  border: 0.1px solid rgba(209, 0, 36, 1);
-  border-right: 0px;
-  padding: 0rem 1rem;
+  // border: 0.1px solid rgba(209, 0, 36, 1);
+
+  padding: 0rem 2rem;
   // border-radius: 0.5rem;
   // border-radius: 0 8px 8px 0;
-  width: 100%;
+  border: none !important;
+  font-family: $family2;
+  width: 61%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  margin-right: -3.25rem;
-  height: 3.5rem;
+  margin-left: 1.85rem;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  height: 4rem;
   // margin-left: 3rem;
   color: rgb(23, 32, 42);
   // font-family: "Bitter", serif;
@@ -500,6 +507,7 @@ h2 {
 
 .search__button {
   border: none;
+
   background-color: var(--color-grey-light-2);
 }
 
@@ -523,24 +531,25 @@ h2 {
   // color: rgba(6, 16, 99, 0.7);
   color: #cb4335;
   font-size: 1.6rem;
+  margin-right: 5rem;
 }
 // D *changes * end
 
 //  D *changes * start
 .Navb_logo-text {
-  margin-left: 2rem;
+  margin-left: 6rem;
   display: flex;
   color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.3rem;
-  text-shadow: 0.15rem 0.15rem 0.15rem #00000085;
-  font-size: 2.7rem;
-  max-width: 170px;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  // text-shadow: 0.15rem 0.15rem 0.15rem #00000085;
+  font-size: 3rem;
+  max-width: 400px;
   // height:1.8rem;
   vertical-align: middle;
   // font-family: 'Alegreya SC', serif;
-  font-family: "Metal Mania", cursive;
-
+  // font-family: "Metal Mania", cursive;
+  font-family: $family2;
   // D *changes * end
 
   &:hover {
@@ -557,9 +566,9 @@ h2 {
 .user-nav {
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-
+  // font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  //   "Lucida Sans", Arial, sans-serif;
+  font-family: $family2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,7 +629,7 @@ h2 {
 }
 
 .subscriptions_mp {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $family2;
   &:hover {
     background: #f2f3f4;
   }
@@ -644,28 +653,24 @@ h2 {
 }
 
 .categories_dropdown_nv {
-  margin-left: 1.68rem;
-  padding: 0px 15px;
-  // background: #fff;
-  border: 1px solid #e4e7ed;
-  height: 3.5rem;
-  // border-radius: 8px 0px 0px 8px;
+  margin-right: 1.68rem;
+  padding: 0px 16px;
+  font-family: $family2;
+  background-color: $maroon;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  height: 4rem;
   align-self: center;
-  // border: 2px solid rgb(231, 76, 60);
   border-left: none;
-  border: 0.1px solid rgba(209, 0, 36, 1);
-  color: rgb(23, 32, 42);
-  // font-family: "Bitter", serif;
+  color: white;
+  margin-right: -2rem;
   font-size: 1.5rem;
-  // background-color: rgba(209, 0, 36, 0.9);
-  // color: #fff;
-  // color: rgb(231, 76, 60);
 
   &:hover {
-    background-color: rgba(209, 0, 36, 0.9);
+    // background-color: rgba(209, 0, 36, 0.9);
     color: #fff;
   }
-  width: 15rem;
+  width: 13.5rem;
 }
 /////////////////////////////
 
@@ -800,7 +805,7 @@ ul li ul li {
   width: 100%;
 }
 
-nav li{
+nav li {
   color: white;
   display: block;
   // float: left;
@@ -816,7 +821,7 @@ nav li{
   display: flex;
   flex-direction: row;
   &:hover {
-    background-color: #F0F3F4;
+    background-color: #f0f3f4;
     box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4);
   }
 
@@ -845,16 +850,14 @@ nav li{
   //   -webkit-transform: scaleX(1);
   //   transform: scaleX(1);
   // }
-   
 
   // }
 }
 
-
 .item {
   padding-left: 1.15rem;
   &:hover {
-    background-color: #F0F3F4;
+    background-color: #f0f3f4;
     box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4);
   }
 }

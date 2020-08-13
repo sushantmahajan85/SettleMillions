@@ -36,17 +36,17 @@
 
     <div class="search_nv">
     <form action="/" method="GET" class="search" id="searchx">
-      
-      <input type="text" name="search" id="search" placeholder="Search for awesome deals" class="search__input" />
-
-      <button class="search__button">
-        <i class="fas fa-search search-icon"></i>
-      </button>
       <select class="categories_dropdown_nv">
         <option value="0">Categories</option>
         <option value="1">Category 01</option>
         <option value="1">Category 02</option>
       </select>
+      <input type="text" name="search" id="search" placeholder="Search for awesome deals" class="search__input" />
+
+      <button class="search__button">
+        <i class="fas fa-search search-icon"></i>
+      </button>
+     
       <!-- <select class="sort-drop" name="sort" onchange="this.form.submit()">
           <option selected disabled value="empty"
             >--Choose Parameter--</option
@@ -109,18 +109,18 @@
        
       <a class="titles_nv" href=<%=` /signup `%> id="signup">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <!-- <i class="fas fa-plus"></i> -->
+          
           <div ><i class="fas fa-user-plus"></i>Sign-up</div>
         </div>
       </a>
    
 
-      <a class="titles_nv" href=<%= `/login` %> id="login">
+      <!-- <a class="titles_nv" href=<%= `/login` %> id="login">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <!-- <i class="fas fa-plus"></i> -->
+          
           <div><i class="fas fa-user-shield"></i>Login</div>
         </div>
-      </a>
+      </a> -->
     
       <% } %>
       <% if (user) { %>

@@ -51,13 +51,13 @@
 
       function checkLoginState() {
         // Called when a person is finished with the Login Button.
-        FB.getLoginStatus(function (response) {
+        FB.getLoginStatus(function(response) {
           // See the onlogin handler
           statusChangeCallback(response);
         });
       }
 
-      window.fbAsyncInit = function () {
+      window.fbAsyncInit = function() {
         FB.init({
           appId: "{app-id}",
           cookie: true, // Enable cookies to allow the server to access the session.
@@ -65,13 +65,13 @@
           version: "{api-version}", // Use this Graph API version for this call.
         });
 
-        FB.getLoginStatus(function (response) {
+        FB.getLoginStatus(function(response) {
           // Called after the JS SDK has been initialized.
           statusChangeCallback(response); // Returns the login status.
         });
       };
 
-      (function (d, s, id) {
+      (function(d, s, id) {
         // Load the SDK asynchronously
         var js,
           fjs = d.getElementsByTagName(s)[0];
@@ -86,7 +86,7 @@
         // Testing Graph API after login.
         //See statusChangeCallback() for  when this call is made.
         console.log("Welcome!  Fetching your information.... ");
-        FB.api("/me", { fields: "name, email" }, function (response) {
+        FB.api("/me", { fields: "name, email" }, function(response) {
           console.log(response);
           console.log("Successful login : " + response.name);
 
@@ -137,18 +137,49 @@
         <h4 class="wrap_subtext">
           Sign up to see the best deals from the best platforms.
         </h4>
-        <div class="fbG">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <fb:login-button class="fbBtn"
-          length="long" size="xlarge" 
+
+        <!-- <div class="g-signin2" data-onsuccess="onSignIn">chalja</div> -->
+        <!-- <div
+          class="g-signin2 googleSign"
+          data-width="200"
+          data-height="40"
+          data-longtitle="true"
+          data-onsuccess="onSignIn"
+        ></div> -->
+        <div
+          id="GoogeSigninButton"
+          data-height="40"
+          data-width="372"
+          data-longtitle="true"
+          data-theme="dark"
+          data-onsuccess="onSignIn"
+          class="g-signin2"
+          style="margin-top: 1.5rem;"
+        ></div>
+
+        <div
+          class="fb-login-button"
+          data-size="large"
+          data-button-type="login_with"
+          data-layout="default"
+          data-auto-logout-link="false"
+          data-use-continue-as="false"
+          data-width="375"
+          style="margin-top: 1.5rem;"
+        ></div>
+
+        <!-- <fb:login-button
           scope="public_profile,email"
           data-layout="rounded" 
           onlogin="checkLoginState();"
         >Facebook
         </fb:login-button>
-        </div>
-
-        <div id="status"></div>
+        <button id="customBtn" onclick="checkLoginState()">
+          <span class="icon"></span>
+          <span class="buttonText">Facebook</span>
+        </button>
+        <div id="fb-status-login"></div> -->
+        <!-- <div id="status"></div> -->
         <!-- <button type="button" class="wrap_signup-via-google g-signin2" data-onsuccess="onSignIn">
                 Continue with Google 
             </button> -->
@@ -277,6 +308,22 @@
     <!-- FACEBOOK SDK END -->
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!-- <script>
+      setTimeout(function() {
+        $("#GoogeSigninButton div").text("Custom Sign in Text");
+        $("#GoogeSigninButton div div span span:first").text(
+          "Custom Sign in Text"
+        );
+        $("#GoogeSigninButton div div span span:last").css(
+          "font-family",
+          "Arial"
+        ); //for font formatting
+        $("#GoogeSigninButton div div span span:first").css(
+          "font-family",
+          "Arial"
+        ); //for font formatting
+      }, 2000);
+    </script> -->
     <!--===============================================================================================-->
     <script src="vendor/bootstrap/js/popper.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -284,7 +331,6 @@
     <script src="vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/fbSignup.js"></script>

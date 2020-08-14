@@ -395,7 +395,30 @@ h2 {
     text-decoration: none;
   }
 }
+.header_small {
+  border-bottom: 2px solid $border-color !important;
 
+  padding-top: 10.28rem;
+  background-color: #fff;
+  &-nav {
+    display: flex;
+    color: #333;
+    height: 5rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    &-item {
+      font-size: 1.5rem;
+      font-family: $family2;
+      margin-right: 2.5rem;
+      &-head {
+        font-weight: bolder;
+        border-bottom: 1.7px solid $maroon;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
 .header {
   font-size: 1.7rem;
   // height: 6.5rem;

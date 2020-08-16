@@ -1262,8 +1262,38 @@
 
         <hr>
 
-        <div class="news">
+        <div class="news ">
             <p id="news_heading">NEWS</p>
+            <div class="main-content">
+            <div class="owl-carousel owl-theme">
+            <div class="news_box" id="news_box1">
+                <div class="news_item">
+                    <img src="/img/users/default.jpg" alt="">
+                    <p id="profile_name">Random Name</p>
+                    <p id="news_headline">The arsonist had oddly shaped feet
+                    <p>
+                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
+                        Rock, and that's the vortex of the heart.</p>
+                    <div class="news_tag_container">
+                        <p class="news_tag">Fashion</p>
+                        <p class="news_tag">Technology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="news_box" id="news_box1">
+                <div class="news_item">
+                    <img src="/img/users/default.jpg" alt="">
+                    <p id="profile_name">Random Name</p>
+                    <p id="news_headline">The arsonist had oddly shaped feet
+                    <p>
+                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
+                        Rock, and that's the vortex of the heart.</p>
+                    <div class="news_tag_container">
+                        <p class="news_tag">Fashion</p>
+                        <p class="news_tag">Technology</p>
+                    </div>
+                </div>
+            </div>
             <div class="news_box" id="news_box1">
                 <div class="news_item">
                     <img src="/img/users/default.jpg" alt="">
@@ -1295,7 +1325,7 @@
             <div class="news_box" id="news_box3">
                 <div class="news_item">
                     <img src="/img/users/default.jpg" alt="">
-                    <p id="profile_name">Random Name</p>
+                    <p id="profile_name">Raman</p>
                     <p id="news_headline">The arsonist had oddly shaped feet
                     <p>
                     <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
@@ -1306,6 +1336,7 @@
                         <p class="news_tag">Fashion</p>
                     </div>
                 </div>
+            </div>
             </div>
             <!-- 
             <% for(var i = 0 ; i < 4 ; i++) { %>
@@ -1321,6 +1352,12 @@
                 </figure>
             </a>
             <% } %> -->
+            <div class="owl-theme">
+                <div class="owl-controls">
+                    <div class="custom-nav owl-nav"></div>
+                </div>
+            </div>
+       </div>
         </div>
         <div class="popup_news" id="popup_news1">
             <div class="popup_news_content">
@@ -1666,13 +1703,16 @@
             navContainer: '.main-content .custom-nav',
             responsive: {
                 0: {
-                    items: 4
+                    items: 3
                 },
                 500: {
-                    items: 2
+                    items: 1.5
                 },
                 1000: {
-                    items: 4
+                    items: 2
+                },
+                2000:{
+                    items:4
                 }
             }
         });

@@ -1164,7 +1164,8 @@ figure {
   padding-top: 1rem; }
 
 .dealPageContent {
-  display: flex; }
+  display: flex;
+  margin-top: 5rem; }
 
 .deal-carousel {
   display: flex;
@@ -1656,8 +1657,7 @@ figure {
   width: 20%;
   float: right;
   background-color: white;
-  padding-bottom: 5rem;
-  margin-top: -107rem;
+  margin-top: -95rem;
   margin-right: 2rem; }
 
 .side_deals {

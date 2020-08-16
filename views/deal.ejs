@@ -215,8 +215,220 @@
         <div class="deal-deets_share_button">Share</div>
       </div>
     </div>
+    <div class="side_deals">
+      <% var i=0; %>
+      <% for(var deala of reco){ %>
+      <% i++; if(i>cooCount){ %>
+      <div class=" side_deals_item">
+        <a href=<%= `/deal/${deala._id}/postedBy/${deala.user}` %>>
+          <div class="deal_area_box" style="width: 100% !important;">
+            <div class="bigImg_container">
+              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+            </div>
+            <div class="deal_area_content">
+              <!-- <div class="picture_container">
+                          <div class="profile_pic"></div>
+                      </div> -->
+              <div class="content_box" style="display: flex; flex-direction: column; justify-content: center">
+                <div class="deal_box_nameTime"
+                  style="display: flex; flex-direction: row; align-items: center">
+                  <div class="deal_box_name" style="font-size: 15px !important">
+                    <%= deala.dealName %>
+                  </div>
+  
+                </div>
+                <div class="deal_box_nameTime" style="display: flex; flex-direction: row; align-items: center">
+                  <div class="deal_box_views"><%= deala.owner %></div>
+                  <!-- <div class="deal_box_time">Amazon</div> -->
+  
+                </div>
+  
+  
+                <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
+                  <div class="deal_box_dp">₹<%= deala.dealPrice %></div>
+                  <div class="deal_box_mrp">₹<%= deala.mrp %></div>
+                  <div class="deal_box_dis">80% OFF</div>
+                </div>
+  
+                <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
+                  <div class="deal_box_views"><%= deala.views %> views</div>
+                  <div class="deal_box_time">3 days ago</div>
+                </div>
+                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                        <div>80% Off only on HDFC Bank Credit Cards</div>
+                      </div> -->
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <% } %>
+      <% if(i===cooCount+3){break;} %>
+      <% } %>
+  
+      <% var i=0; %>
+      <% for(var dealo of trendDeals){ %>
+      <% i++;%>
+      <div class=" side_deals_item">
+        <a href=<%= `/deal/${dealo._id}/postedBy/${dealo.user}` %>>
+          <div class="deal_area_box" style="width: 100% !important;">
+            <div class="bigImg_container">
+              <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
+            </div>
+            <div class="deal_area_content">
+              <!-- <div class="picture_container">
+                          <div class="profile_pic"></div>
+                      </div> -->
+              <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
+                <div class="deal_box_nameTime"
+                  style="display: flex; flex-direction: row; align-items: center">
+  
+                  <div class="deal_box_name" style="font-size: 15px !important;">
+                    <%= dealo.dealName %>
+                  </div>
+  
+                </div>
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
+  
+                  <div class="deal_box_views"><%= dealo.owner %></div>
+                  <!-- <div class="deal_box_time">Amazon</div> -->
+  
+                </div>
+  
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                  <div class="deal_box_dp">₹<%= dealo.dealPrice %></div>
+                  <div class="deal_box_mrp">₹<%= dealo.mrp %></div>
+                  <div class="deal_box_dis">80% OFF</div>
+                </div>
+  
+                <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
+                  <div class="deal_box_views"><%= dealo.views %></div>
+                  <div class="deal_box_time">3 days ago</div>
+                </div>
+                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
+                        <div>80% Off only on HDFC Bank Credit Cards</div>
+                      </div> -->
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <% if(i===3){break;} %>
+      <% } %>
+  
+    </div>
   </div>
 
+ 
+  <!-- <section class="deal_area">
+          <div class="row">
+            <div class="carousel_container">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="/images/jeans.jpeg" style="width:100%">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="row">
+                <div class="mini-slide">
+                  <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(1)"
+                    alt="The Woods">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(2)"
+                    alt="Cinque Terre">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
+                    alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(4)"
+                    alt="Northern Lights">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(5)"
+                    alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(6)"
+                    alt="Snowy Mountains">
+                </div>
+              </div>
+              <div class="action_buttons">
+
+                <a href="" id="like_deal"> <button type="button">Like for later</button></a>
+                <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
+                <button type="button">Report</button>
+              </div>
+
+            </div>
+            <div class="deal_info">
+              <div class="deal_heading">
+                <%= deal.dealName %>
+              </div>
+              <div class="deal_price">
+                <%= `${deal.mrp}` %> 80%OFF <%=` ${deal.dealPrice}` %>
+              </div>
+              <div class="deal_price" style="display: flex;">
+                <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
+                <div class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
+
+                  <h6 class="heading-normal"><button id="subscribe_btn">Subscribe</button></h6>
+
+                </div>
+              </div>
+              <div class="paragraph" style="margin-top: 2rem;">
+                <%= deal.biggerDis %>
+              </div>
+            </div>
+            <div class="comment_section">
+              <h2>Please Enter your Review</h2>
+              <textarea name="comment_section" id="" cols="110" rows="10"></textarea>
+              <button type="button">Submit</button>
+            </div>
+            <% for( var review of deal.reviews ) { %>
+            <div>
+              <h3 style="margin-top: 1rem;"><%= review.user.name %> </h6>
+                <p class="paragraph"> <%= review.review  %> </p>
+            </div>
+            <% } %>
+        </section> -->
+        
+  </div>
   <div class="reviews" id="reviews">
     <div class="review-rating">
       <div class="rating-avg">
@@ -377,218 +589,8 @@
 
   </div>
 
-  <!-- <section class="deal_area">
-          <div class="row">
-            <div class="carousel_container">
 
-              <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-
-              <div class="row">
-                <div class="mini-slide">
-                  <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(1)"
-                    alt="The Woods">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(2)"
-                    alt="Cinque Terre">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
-                    alt="Mountains and fjords">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(4)"
-                    alt="Northern Lights">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(5)"
-                    alt="Nature and sunrise">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(6)"
-                    alt="Snowy Mountains">
-                </div>
-              </div>
-              <div class="action_buttons">
-
-                <a href="" id="like_deal"> <button type="button">Like for later</button></a>
-                <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
-                <button type="button">Report</button>
-              </div>
-
-            </div>
-            <div class="deal_info">
-              <div class="deal_heading">
-                <%= deal.dealName %>
-              </div>
-              <div class="deal_price">
-                <%= `${deal.mrp}` %> 80%OFF <%=` ${deal.dealPrice}` %>
-              </div>
-              <div class="deal_price" style="display: flex;">
-                <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
-                <div class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
-
-                  <h6 class="heading-normal"><button id="subscribe_btn">Subscribe</button></h6>
-
-                </div>
-              </div>
-              <div class="paragraph" style="margin-top: 2rem;">
-                <%= deal.biggerDis %>
-              </div>
-            </div>
-            <div class="comment_section">
-              <h2>Please Enter your Review</h2>
-              <textarea name="comment_section" id="" cols="110" rows="10"></textarea>
-              <button type="button">Submit</button>
-            </div>
-            <% for( var review of deal.reviews ) { %>
-            <div>
-              <h3 style="margin-top: 1rem;"><%= review.user.name %> </h6>
-                <p class="paragraph"> <%= review.review  %> </p>
-            </div>
-            <% } %>
-        </section> -->
-  </div>
-
-
-  <div class="side_deals">
-    <% var i=0; %>
-    <% for(var deal of reco){ %>
-    <% i++; if(i>cooCount){ %>
-    <div class=" side_deals_item">
-      <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
-        <div class="deal_area_box" style="width: 100% !important;">
-          <div class="bigImg_container">
-            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-          </div>
-          <div class="deal_area_content">
-            <!-- <div class="picture_container">
-                        <div class="profile_pic"></div>
-                    </div> -->
-            <div class="content_box" style="display: flex; flex-direction: column; justify-content: center">
-              <div class="deal_box_nameTime"
-                style="display: flex; flex-direction: row; align-items: center">
-                <div class="deal_box_name" style="font-size: 15px !important">
-                  <%= deal.dealName %>
-                </div>
-
-              </div>
-              <div class="deal_box_nameTime" style="display: flex; flex-direction: row; align-items: center">
-                <div class="deal_box_views"><%= deal.owner %></div>
-                <!-- <div class="deal_box_time">Amazon</div> -->
-
-              </div>
-
-
-              <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
-                <div class="deal_box_dp">₹<%= deal.dealPrice %></div>
-                <div class="deal_box_mrp">₹<%= deal.mrp %></div>
-                <div class="deal_box_dis">80% OFF</div>
-              </div>
-
-              <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
-                <div class="deal_box_views"><%= deal.views %> views</div>
-                <div class="deal_box_time">3 days ago</div>
-              </div>
-              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                      <div>80% Off only on HDFC Bank Credit Cards</div>
-                    </div> -->
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <% } %>
-    <% if(i===cooCount+3){break;} %>
-    <% } %>
-
-    <% var i=0; %>
-    <% for(var deal of trendDeals){ %>
-    <% i++;%>
-    <div class=" side_deals_item">
-      <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
-        <div class="deal_area_box" style="width: 100% !important;">
-          <div class="bigImg_container">
-            <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-          </div>
-          <div class="deal_area_content">
-            <!-- <div class="picture_container">
-                        <div class="profile_pic"></div>
-                    </div> -->
-            <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
-              <div class="deal_box_nameTime"
-                style="display: flex; flex-direction: row; align-items: center">
-
-                <div class="deal_box_name" style="font-size: 15px !important;">
-                  <%= deal.dealName %>
-                </div>
-
-              </div>
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
-
-                <div class="deal_box_views"><%= deal.owner %></div>
-                <!-- <div class="deal_box_time">Amazon</div> -->
-
-              </div>
-
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                <div class="deal_box_dp">₹<%= deal.dealPrice %></div>
-                <div class="deal_box_mrp">₹<%= deal.mrp %></div>
-                <div class="deal_box_dis">80% OFF</div>
-              </div>
-
-              <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                <div class="deal_box_views"><%= deal.views %></div>
-                <div class="deal_box_time">3 days ago</div>
-              </div>
-              <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                      <div>80% Off only on HDFC Bank Credit Cards</div>
-                    </div> -->
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <% if(i===3){break;} %>
-    <% } %>
-
-  </div>
+ 
   <div class="footer">
     <div class="footer-content">
       <div class="footer-section about">

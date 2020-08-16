@@ -1654,19 +1654,9 @@ figure {
 .side_deals {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  float: right;
-  background-color: white;
-  margin-top: -95rem;
-  margin-right: 2rem; }
-
-.side_deals {
-  display: flex;
-  flex-direction: column;
   width: 25%;
   float: right;
-  background-color: white;
-  padding-bottom: 5rem; }
+  background-color: white; }
 
 .comment_section {
   margin-top: 10rem; }

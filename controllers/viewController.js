@@ -702,10 +702,10 @@ exports.mainPage = catchAsync(async (req, res) => {
     const apnaUser = await User.findById("5f1ec89d3b127343185a7eba");
     console.log(apnaUser.groupCount);
 
-    if(apnaUser.groupCount>0 && apnaUser.groupCount%3==0){
-      await User.findByIdAndUpdate({ _id: "5f1ec89d3b127343185a7eba" }, 
-                                   { groupCount: 0,  $inc: { numberOfGroups: 1 } } 
-                                   
+    if (apnaUser.groupCount > 0 && apnaUser.groupCount % 3 == 0) {
+      await User.findByIdAndUpdate(
+        { _id: "5f1ec89d3b127343185a7eba" },
+        { groupCount: 0, $inc: { numberOfGroups: 1 } }
       );
     }
 
@@ -729,7 +729,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       recentlyViewed,
       subDeals,
       groupC,
-      numberG
+      numberG,
     });
 
     // for (var deal of deals) {
@@ -1093,7 +1093,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   const deal = await Deal.findById({ _id: req.params.dealId }).populate({
     path: "reviews",
   });
-
+  console.log(deal);
   if (!deal) {
     return next(new appError("No Deal With That Id", 404));
   }

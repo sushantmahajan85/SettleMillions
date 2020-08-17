@@ -25,13 +25,19 @@
   <section class="header" style="position: fixed !important;z-index:10;width:100% !important">
     <a href="/">
       <div class="title">
-        <!-- <img src="/img/users/favicon.png" alt="Logo" class="logo" /> -->
-
-        <!-- <h2 class="heading-normal">Affiliate</h2> -->
-        <!-- <img src="/img/users/sidebar.svg" alt="Logo" class="Sidebar_logo" /> -->
         <h2 class="Navb_logo-text">Your Deal</h2>
       </div>
     </a>
+
+    <div class="titles">
+      <div class="titles_nv">
+        <div>TextText</div>
+      </div><div class="titles_nv">
+        <div>TextText</div>
+      </div><div class="titles_nv">
+        <div>TextText</div>
+      </div>
+    </div>
 
 
     <div class="search_nv">
@@ -84,18 +90,17 @@
         </div>
       </a>
       <% }else{ %>
-      <a  class="titles_nv" href="#" id="like_deal_no">
+      <!-- <a  class="titles_nv" href="#" id="like_deal_no">
         <div class="postDeal" style="display: flex; align-items: center; ">
 
          
-          <!-- <i class="fas fa-plus-square"></i> -->
           <div> <i class="far fa-plus-square"></i>Post</div>
         </div>
-      </a>
+      </a> -->
       <% } %>
-      <div class="titles_nv">
+      <!-- <div class="titles_nv">
         <div ><i class="fas fa-heart"></i>Wishlist</div>
-      </div>
+      </div> -->
       
       <% if (user) { %>
       <a  class="titles_nv" href="" id="logout">
@@ -107,10 +112,18 @@
       </a>
       <% } else { %>
        
+        <a class="titles_nv" href=<%=` /signup `%> id="signup">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+          </div>
+        </a><a class="titles_nv" href=<%=` /signup `%> id="signup">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+          </div>
+        </a>  
       <a class="titles_nv" href=<%=` /signup `%> id="signup">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          
-          <div ><i class="fas fa-user-plus"></i>Sign-up</div>
+          <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
         </div>
       </a>
    

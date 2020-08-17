@@ -138,6 +138,41 @@
               var titu = timeSince(nowx - deal.time.getTime());
               var aDay = 24*60*60*1000;
                %>
+
+               <div class="pCard_card">
+                <div class="pCard_up">
+                   <div class="pCard_text">
+                      <h2>Van Goggles</h2>
+                      <p>UI/UX Designer &amp; UI Developer</p>
+                   </div>
+                   <div class="pCard_add"><i class="fa fa-plus"></i></div>
+                </div>
+                <div class="pCard_down">
+                   <div>
+                      <p>Projects</p>
+                      <p>126</p>
+                   </div>
+                   <div>
+                      <p>Views</p>
+                      <p>21,579</p>
+                   </div>
+                   <div>
+                      <p>Likes</p>
+                      <p>1,976</p>
+                   </div>
+                </div>
+                <div class="pCard_back">
+                   <p>See My Latest Work Here</p>
+                   <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
+                   <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
+                   <a href="#"><i class="fa fa-behance fa-2x fa-fw"></i></a> <br>
+                   <a href="#"><i class="fa fa-codepen fa-2x fa-fw"></i></a>
+                   <a href="#"><i class="fa fa-dribbble fa-2x fa-fw"></i></a>
+                   <a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
+                   <p>Follow Me!</p>
+                </div>
+             </div>
+
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
                     <div class="card__face">
@@ -1939,6 +1974,17 @@
             document.getElementById('popup_news3').style.display = 'block';
         });
     </script>
+
+<script>
+    $(function () {
+  "use strict";
+  $(".pCard_add").click(function () {
+    $(".pCard_card").toggleClass("pCard_on");
+    $(".pCard_add i").toggleClass("fa-minus");
+  });
+});
+</script>
+
 </body>
 
 </html> 

@@ -145,8 +145,9 @@
       <% } %>
       <!-- D changes // -->
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
-<div class="user-nav__user">
+
   <% if (user) { %> <% if (user.photo) { %>
+    <div class="user-nav__user">
   <nav role="navigation">
     <ul>
       <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: unset;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
@@ -170,9 +171,9 @@
             </li>
           </ul>
         </nav> <% } %> <% } else { %>
-    
+        </div>
     <% } %>
-  </div>
+  
 
 
 

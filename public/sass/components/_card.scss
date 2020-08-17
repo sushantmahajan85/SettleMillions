@@ -1,5 +1,3 @@
-
-
 .three-dots {
   float: right;
   position: absolute;
@@ -288,45 +286,80 @@ footer {
   background-color: unset !important;
 }
 /////////////////////////////////
-
-.main-content {
+.main-content,
+.main-content2 {
   position: relative;
-  padding-top: 5rem;
-  margin-left: 4rem;
 
   .owl-theme {
     .custom-nav {
       position: absolute;
-      top: 40%;
+      top: 20%;
       left: 0;
       right: 0;
 
       .owl-prev,
       .owl-next {
         position: absolute;
-        height: 6.5rem;
+        height: 100px;
         color: inherit;
         background: none;
         border: none;
         z-index: 100;
-        // background: #E5E7E9;
 
         i {
           font-size: 2.5rem;
-          color: #365575;
+          color: #cecece;
         }
       }
 
       .owl-prev {
-        left: -4rem;
+        left: 0;
       }
 
       .owl-next {
-        right: 1rem;
+        right: 0;
       }
     }
   }
 }
+// .main-content {
+//   position: relative;
+//   padding-top: 5rem;
+//   margin-left: 4rem;
+
+//   .owl-theme {
+//     .custom-nav {
+//       position: absolute;
+//       top: 40%;
+//       left: 0;
+//       right: 0;
+
+//       .owl-prev,
+//       .owl-next {
+//         position: absolute;
+//         height: 6.5rem;
+//         color: inherit;
+//         background: none;
+//         border: none;
+//         z-index: 100;
+//         // background: #E5E7E9;
+
+//         i {
+//           font-size: 2.5rem;
+//           color: #365575;
+//         }
+//       }
+
+//       .owl-prev {
+//         left: -4rem;
+//       }
+
+//       .owl-next {
+//         right: 1rem;
+//       }
+//     }
+//   }
+// }
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 .big-deal {
@@ -676,4 +709,3 @@ Down
   font-size: 38px;
   line-height: 88px;
 }
-

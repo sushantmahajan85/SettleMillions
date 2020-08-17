@@ -8,7 +8,7 @@
   // flex-direction: column;
   width: 12%;
   background-color: rgb(255, 255, 255);
-  margin-top: 6.5rem;
+  margin-top: 8rem;
   height: 100%;
   border: solid 1px lightgrey;
 
@@ -296,42 +296,35 @@ body a {
   margin-left: -5rem;
 }
 
-
-// .user-nav a{
-//   display: block;
-// }
-
-// .title_basic_nv {
-//   display: block;
-//   margin: 0.5rem;
-//   color: #fff;
-
-// &:hover {
-//   color: rgb(231, 76, 60);
-// }
-// &:focus {
-//   color: rgb(231, 76, 60);
-//   background-color: transparent;
-// }
-// }
 .titles {
   display: flex;
   justify-content: space-between;
+  margin-left: -1.6rem;
 }
 
-.title-with-icon{
+.title-with-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.16rem;
 }
 
+#searchx {
+  width: 595px;
+}
 .titles_nv {
   display: block;
   margin: 0 1rem;
   // font-family: "Bitter", serif;
-  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-family: $family2;
+  font-weight: 500;
+  font-size: 1.5rem;
   color: white;
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .fa-sign-out-alt {
@@ -399,7 +392,7 @@ h2 {
 .header_small {
   border-bottom: 2px solid $border-color !important;
 
-  padding-top: 10.28rem;
+  padding-top: 8.8rem;
   background-color: #fff;
   &-nav {
     display: flex;
@@ -422,8 +415,8 @@ h2 {
 }
 .header {
   font-size: 1.7rem;
-  // height: 6.5rem;
-  padding: 1.8rem 0;
+  height: 8rem;
+  // padding: 1.6rem 0;
   background-color: #15161d;
   border-bottom: 3px solid $maroon;
   display: -webkit-box;

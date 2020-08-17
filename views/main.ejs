@@ -88,7 +88,7 @@
 </div>
         </div>
         <br>
-    <div class="titles">
+    <div class="titles_main">
         <a href="#">
             <div class="mainpage_titles">Hot Deals</div>
         </a>
@@ -141,39 +141,6 @@
               var aDay = 24*60*60*1000;
                %>
 
-               <div class="pCard_card">
-                <div class="pCard_up">
-                   <div class="pCard_text">
-                      <h2>Van Goggles</h2>
-                      <p>UI/UX Designer &amp; UI Developer</p>
-                   </div>
-                   <div class="pCard_add"><i class="fa fa-plus"></i></div>
-                </div>
-                <div class="pCard_down">
-                   <div>
-                      <p>Projects</p>
-                      <p>126</p>
-                   </div>
-                   <div>
-                      <p>Views</p>
-                      <p>21,579</p>
-                   </div>
-                   <div>
-                      <p>Likes</p>
-                      <p>1,976</p>
-                   </div>
-                </div>
-                <div class="pCard_back">
-                   <p>See My Latest Work Here</p>
-                   <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
-                   <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
-                   <a href="#"><i class="fa fa-behance fa-2x fa-fw"></i></a> <br>
-                   <a href="#"><i class="fa fa-codepen fa-2x fa-fw"></i></a>
-                   <a href="#"><i class="fa fa-dribbble fa-2x fa-fw"></i></a>
-                   <a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
-                   <p>Follow Me!</p>
-                </div>
-             </div>
 
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
@@ -397,9 +364,14 @@
                 <% } %>
                 <% } %>
         </div>
-        <a href=" ">
-            <div class="mainpage_titles">Subscribed Deals</div>
-        </a>
+        <div class="titles_main">
+            <a href="#">
+                <div class="mainpage_titles">Subscribed Deals</div>
+            </a>
+            <a href="#"><div class="mainpage_titles-options">See All</div></a>
+            <!-- <hr> -->
+        </div>
+       
 <% for( var oneSub of subDeals) { %>
 
 
@@ -587,8 +559,14 @@
 
         <% if(user){ %>
         <% if(cooCount !== 0 || user.cookies.length){ %>
-
-        <div class="mainpage_titles">RECOMMENDED</div>
+            <div class="titles_main">
+                <a href="#">
+                    <div class="mainpage_titles">Recommended</div>
+                </a>
+                <a href="#"><div class="mainpage_titles-options">See All</div></a>
+                <!-- <hr> -->
+            </div>
+           
         <!-- <hr> -->
 
         <div id="recommended" class="trending">
@@ -827,8 +805,14 @@
         <% }else{ %>
 
             <% if(cooCount !== 0){ %>
-
-            <div class="mainpage_titles">RECOMMENDED</div>
+                <div class="titles_main">
+                    <a href="#">
+                        <div class="mainpage_titles">Recommended</div>
+                    </a>
+                    <a href="#"><div class="mainpage_titles-options">See All</div></a>
+                    <!-- <hr> -->
+                </div>
+               
         <!-- <hr> -->
 
         <div id="recommended" class="trending">
@@ -1064,8 +1048,14 @@
         </div>
         <% } %>
         <% } %>
-
-        <div class="mainpage_titles">LIVE</div>
+        <div class="titles_main">
+            <a href="#">
+                <div class="mainpage_titles">Live Deals</div>
+            </a>
+            <a href="#"><div class="mainpage_titles-options">See All</div></a>
+            <!-- <hr> -->
+        </div>
+       
         <!-- <hr> -->
 
         <div id="live" class="trending">
@@ -1171,7 +1161,6 @@
                                     </select>
                                 </form>
 
-                                <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
 
                             </div>
 
@@ -1300,68 +1289,24 @@
         <hr>
 
         <div class="news ">
-            <p id="news_heading">NEWS</p>
-            <div class="main-content">
+            <div class="titles_main">
+                <a href="#">
+                    <div class="mainpage_titles">News</div>
+                </a>
+                <a href="#"><div class="mainpage_titles-options">See All</div></a>
+                <!-- <hr> -->
+            </div>
+           
+            <div class="main-content2">
             <div class="owl-carousel owl-theme">
-            <div class="news_box" id="news_box1">
-                <div class="news_item">
-                    <img src="/img/users/default.jpg" alt="">
-                    <p id="profile_name">Random Name</p>
-                    <p id="news_headline">The arsonist had oddly shaped feet
-                    <p>
-                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
-                        Rock, and that's the vortex of the heart.</p>
-                    <div class="news_tag_container">
-                        <p class="news_tag">Fashion</p>
-                        <p class="news_tag">Technology</p>
-                    </div>
-                </div>
-            </div>
-            <div class="news_box" id="news_box1">
-                <div class="news_item">
-                    <img src="/img/users/default.jpg" alt="">
-                    <p id="profile_name">Random Name</p>
-                    <p id="news_headline">The arsonist had oddly shaped feet
-                    <p>
-                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
-                        Rock, and that's the vortex of the heart.</p>
-                    <div class="news_tag_container">
-                        <p class="news_tag">Fashion</p>
-                        <p class="news_tag">Technology</p>
-                    </div>
-                </div>
-            </div>
-            <div class="news_box" id="news_box1">
-                <div class="news_item">
-                    <img src="/img/users/default.jpg" alt="">
-                    <p id="profile_name">Random Name</p>
-                    <p id="news_headline">The arsonist had oddly shaped feet
-                    <p>
-                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
-                        Rock, and that's the vortex of the heart.</p>
-                    <div class="news_tag_container">
-                        <p class="news_tag">Fashion</p>
-                        <p class="news_tag">Technology</p>
-                    </div>
-                </div>
-            </div>
-            <div class="news_box" id="news_box2">
-                <div class="news_item">
-                    <img src="/img/users/default.jpg" alt="">
-                    <p id="profile_name">Random Name</p>
-                    <p id="news_headline">The arsonist had oddly shaped feet
-                    <p>
-                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
-                        Rock, and that's the vortex of the heart.</p>
-                    <div class="news_tag_container">
-                        <p class="news_tag">Technology</p>
-                        <p class="news_tag">Fashion</p>
-                    </div>
-                </div>
-            </div>
+            
+            
+            
+            <% for(var i = 0 ; i < 4 ; i++) { %>
+                
             <div class="news_box" id="news_box3">
                 <div class="news_item">
-                    <img src="/img/users/default.jpg" alt="">
+                    <img src="/img/users/default.jpg" alt="" style="display: unset !important;width:unset !important">
                     <p id="profile_name">Raman</p>
                     <p id="news_headline">The arsonist had oddly shaped feet
                     <p>
@@ -1374,21 +1319,8 @@
                     </div>
                 </div>
             </div>
-            </div>
-            <!-- 
-            <% for(var i = 0 ; i < 4 ; i++) { %>
-            <a href="#">
-                <figure>
-                    <div class="date"><span class="card-date-day">20</span><span class="card-date-month">APR</span>
-                    </div>
-                    <figcaption>
-                        <h4> <span>The arsonist had oddly shaped feet</span></h4>
-                        <p>The magic Indian is a mysterious spiritual force, and we're going to Cathedral Rock, and
-                            that's the vortex of the heart.</p>
-                    </figcaption>
-                </figure>
-            </a>
-            <% } %> -->
+            <% } %> 
+        </div>
             <div class="owl-theme">
                 <div class="owl-controls">
                     <div class="custom-nav owl-nav"></div>
@@ -1459,8 +1391,14 @@
 
 
         <% if(recentlyViewed.length !== 0){ %>
-
-        <div class="mainpage_titles">RECENTLY VIEWED</div>
+            <div class="titles_main">
+                <a href="#">
+                    <div class="mainpage_titles">Recently Viewed</div>
+                </a>
+                <a href="#"><div class="mainpage_titles-options">See All</div></a>
+                <!-- <hr> -->
+            </div>
+           
         <!-- <hr> -->
 
         <div class="main-content">
@@ -1583,11 +1521,10 @@
             }
         </script>
 
-        <div class="newsletter">
-            <p id="newsletter_heading">SIGNUP TO OUR NEWSLETTER!</p>
+        <div class="newsletter" >
+            <p id="newsletter_heading">Join our exclusive whatsapp channel</p>
             <p id="newsletter_subtitle">Get info about the latest deals from around the internet....</p>
-                <input type="email" placeholder="Enter Your Email!">
-                <a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()"><i class="fas fa-envelope"></i>&nbsp Subscribe</button></a>
+              <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()"><i class="fas fa-envelope"></i>&nbsp Join</button></a></div>
         </div>
 
         
@@ -1728,33 +1665,46 @@
 
     <script>
         $('.main-content .owl-carousel').owlCarousel({
-
-            loop: false,
-            dots: false,
-
-            nav: false,
+            stagePadding: 50,
+            loop: true,
+            margin: 10,
+            nav: true,
             navText: [
                 '<i class="fa fa-angle-left" aria-hidden="true"></i>',
                 '<i class="fa fa-angle-right" aria-hidden="true"></i>'
             ],
             navContainer: '.main-content .custom-nav',
-            responsive: {
-                0: {
-                    items: 3
+            responsive:{
+                0:{
+                    items: 1
                 },
-                500: {
-                    items: 1.5
-                },
-                1000: {
-                    items: 2
-                },
-                2000:{
-                    items:4
+                1000:{
+                    items: 4
                 }
             }
         });
     </script>
-
+    <script>
+        $('.main-content2 .owl-carousel').owlCarousel({
+            stagePadding: 50,
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: [
+                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+            ],
+            navContainer: '.main-content2 .custom-nav',
+            responsive:{
+                0:{
+                    items: 1
+                },
+                1000:{
+                    items: 3
+                }
+            }
+        });
+    </script>
     <script>
         $(".card__picture").on("mouseenter", function () {
             $(this).carousel('cycle');

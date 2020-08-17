@@ -959,17 +959,23 @@ figure {
 #showMore {
   margin-top: 1rem; }
 
+.titles {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 2rem; }
+
 .mainpage_titles {
   text-align: left;
-  display: block;
-  width: 95%;
-  font-size: 3.5rem;
-  margin: 4rem 0 2rem 2.8rem;
-  color: #2e3043;
-  font-weight: 700;
-  font-family: "Market Sans", Arial, sans-serif;
-  border-bottom: 2px solid #e8e8e8;
-  letter-spacing: 0.21rem; }
+  display: inline-block;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-size: 2.84rem;
+  color: #111111;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif; }
+  .mainpage_titles-options {
+    font-family: "Montserrat", sans-serif;
+    float: right; }
   .mainpage_titles:hover {
     color: #d10024;
     border-bottom: 2px solid #d10024; }

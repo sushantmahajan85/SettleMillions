@@ -2740,6 +2740,16 @@ footer {
       .main-content2 .owl-theme .custom-nav .owl-prev:hover,
       .main-content2 .owl-theme .custom-nav .owl-next:hover {
         background: none !important; }
+      .main-content .owl-theme .custom-nav .owl-prev:active,
+      .main-content .owl-theme .custom-nav .owl-next:active,
+      .main-content2 .owl-theme .custom-nav .owl-prev:active,
+      .main-content2 .owl-theme .custom-nav .owl-next:active {
+        background: none !important; }
+      .main-content .owl-theme .custom-nav .owl-prev:target,
+      .main-content .owl-theme .custom-nav .owl-next:target,
+      .main-content2 .owl-theme .custom-nav .owl-prev:target,
+      .main-content2 .owl-theme .custom-nav .owl-next:target {
+        background: none !important; }
       .main-content .owl-theme .custom-nav .owl-prev i,
       .main-content .owl-theme .custom-nav .owl-next i,
       .main-content2 .owl-theme .custom-nav .owl-prev i,

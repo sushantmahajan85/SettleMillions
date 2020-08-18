@@ -308,6 +308,12 @@ footer {
         &:hover {
           background: none !important;
         }
+        &:active {
+          background: none !important;
+        }
+        &:target {
+          background: none !important;
+        }
 
         i {
           // position: absolute;
@@ -319,14 +325,13 @@ footer {
           font-size: 3.5rem;
           padding: 2rem;
           height: 60px;
-          border-radius:50%; 
-          background-color: #fc2c2c; 
+          border-radius: 50%;
+          background-color: #fc2c2c;
           opacity: 0.9;
           color: white;
-
         }
 
-        &:hover{
+        &:hover {
           background: none !important;
           opacity: 1;
         }

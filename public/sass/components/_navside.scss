@@ -389,9 +389,16 @@ h2 {
     text-decoration: none;
   }
 }
+.whats_div {
+  align-self: center;
+  margin-right: 3rem;
+  font-size: 3.1rem;
+  font-weight: bolder;
+}
 .header_small {
   border-bottom: 2px solid $border-color !important;
-
+  display: flex;
+  justify-content: space-between;
   padding-top: 8.8rem;
   background-color: #fff;
   &-nav {

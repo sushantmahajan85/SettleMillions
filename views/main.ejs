@@ -34,12 +34,6 @@
     
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %> 
-   
-    <!-- <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div> -->
 
     <div class="page-content">
          <div class="header_small">
@@ -53,48 +47,47 @@
                 <!-- <li class="header_small-nav-item"></li> -->
             </ul>
             </div>
-        <div class="slideshow-container">
+<div class="slideshow-container">
            
-            
             <div class="corousel_box-large">
                 <img src="/images/laptop.jpeg">
-    
             </div>
     
-    
-           
         <div style="display: flex;flex-wrap:wrap">
-        <div class="carousel_box-small">
-            <img src="/images/laptop.jpeg">
+                <div class="carousel_box-small">
+                    <img src="/images/laptop.jpeg">
 
-        </div>
-    
-        <div class="carousel_box-small">
+                </div>
             
-            <img src="/images/laptop.jpeg">
+                <div class="carousel_box-small">
+                    
+                    <img src="/images/laptop.jpeg">
 
+                </div>
+            
+            
+                <div class="carousel_box-small">
+                    <img src="/images/laptop.jpeg">
+
+            </div>
+                <div class="carousel_box-small">
+                    <img src="/images/laptop.jpeg">
+
+                </div>
         </div>
-    
-    
-        <div class="carousel_box-small">
-            <img src="/images/laptop.jpeg">
 
-    </div>
-        <div class="carousel_box-small">
-            <img src="/images/laptop.jpeg">
 
-        </div>
-    
 </div>
-        </div>
+
         <br>
-    <div class="titles_main">
+
+<div class="titles_main">
         <a href="#">
             <div class="mainpage_titles">Hot Deals</div>
         </a>
         <a href="#"><div class="mainpage_titles-options">See All</div></a>
-        <!-- <hr> -->
-    </div>
+</div>
+
         <div id="trending" class="trending">
 
             <%  var i = 0; %>
@@ -161,16 +154,6 @@
 
                             </div>
                             <% } %>
-
-                            <!-- <div class="carousel-item" >
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" >
-                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
-
-                            </div> -->
                         </div>
 
                         <div class="card-text">
@@ -181,20 +164,16 @@
                                     <h3 class="product_name_mainp">
                                         <%= deal.dealName %>
                                     </h3>
-                                    <!-- <h3 class= "product_name_mainp">Product Name</h3> -->
                                     <div>
                                         <a class="aff_name" href=<%= `/member/${deal.user}` %>><%= deal.owner %><i
                                                 class=" mp_aff-name-tag fas fa-check-circle"></i> </a>
                                     </div>
-
-                                    <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %>  Reports:<%= deal.reportCount %>  </a><br> -->
 
 
 
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
                                         <li style="font-weight: 400;">
                                         </li>
                                     </div>
@@ -244,8 +223,6 @@
                                 </select>
                             </form>
                             <% } %>
-
-                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
 
                         </div>
 
@@ -1521,10 +1498,13 @@
             }
         </script>
 
-        <div class="newsletter" >
-            <p id="newsletter_heading">Join our exclusive whatsapp channel</p>
-            <p id="newsletter_subtitle">Get info about the latest deals from around the internet....</p>
-              <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()"><i class="fas fa-envelope"></i>&nbsp Join</button></a></div>
+        <div class="newsletter">
+            <i class="fas fa-envelope" style="font-size: 8rem;"></i>
+            <p id="newsletter_heading">Join our exclusive <span style="color:#3ADA57">WhatsApp</span> channel</p>
+            <div style="display: flex; justify-content: center; align-items: center;">
+            <p id="newsletter_subtitle">Get info about the latest deals from around the internet</p>
+              <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+            </div>
         </div>
 
         
@@ -1691,8 +1671,8 @@
             margin: 10,
             nav: true,
             navText: [
-                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+                '<i class="fa fa-angle-left arrow" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right arrow" aria-hidden="true"></i>'
             ],
             navContainer: '.main-content2 .custom-nav',
             responsive:{

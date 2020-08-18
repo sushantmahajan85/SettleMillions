@@ -291,10 +291,10 @@ exports.mainPage = catchAsync(async (req, res) => {
   const categoryDeals = await Deal.find({ category: "sport shoes" }).sort([
     ["trendRatio", -1],
   ]);
-  console.log(categoryDeals);
+  //console.log(categoryDeals);
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    console.log(joChahiye);
+    //console.log(joChahiye);
 
     // if (joChahiye[0] == "report") {
     //   await Deal.findOneAndUpdate(
@@ -700,7 +700,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     // console.log(topUsers);
 
     const apnaUser = await User.findById("5f1ec89d3b127343185a7eba");
-    console.log(apnaUser.groupCount);
+    //console.log(apnaUser.groupCount);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 3 == 0) {
       await User.findByIdAndUpdate(
@@ -711,7 +711,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     groupC = apnaUser.groupCount;
     numberG = apnaUser.numberOfGroups;
-    console.log(numberG);
+    //console.log(numberG);
 
     await Deal.findOneAndUpdate(
       { _id: req.params.dealId },

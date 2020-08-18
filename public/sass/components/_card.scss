@@ -306,15 +306,6 @@ footer {
         border: none;
         z-index: 100;
 
-        button{
-          &:target{
-            border: none !important;
-          }
-          &:active{
-            border: none !important;
-          }
-        }
-
         &:target{
           border: none !important;
         }

@@ -2725,16 +2725,6 @@ footer {
       background: none;
       border: none;
       z-index: 100; }
-      .main-content .owl-theme .custom-nav .owl-prev button:target,
-      .main-content .owl-theme .custom-nav .owl-next button:target,
-      .main-content2 .owl-theme .custom-nav .owl-prev button:target,
-      .main-content2 .owl-theme .custom-nav .owl-next button:target {
-        border: none !important; }
-      .main-content .owl-theme .custom-nav .owl-prev button:active,
-      .main-content .owl-theme .custom-nav .owl-next button:active,
-      .main-content2 .owl-theme .custom-nav .owl-prev button:active,
-      .main-content2 .owl-theme .custom-nav .owl-next button:active {
-        border: none !important; }
       .main-content .owl-theme .custom-nav .owl-prev:target,
       .main-content .owl-theme .custom-nav .owl-next:target,
       .main-content2 .owl-theme .custom-nav .owl-prev:target,

@@ -309,16 +309,20 @@ footer {
           background: none !important;
         }
 
+        &:target {
+          border: none !important;
+        }
+
         i {
           // position: absolute;
           // top: 50%;
           // left: 50%;
-          // transform: translate(-50%, -50%);
-          margin-bottom: 10rem;
+          transform: translate(0, 20%);
+          //margin-bottom: 10rem;
           // font-weight: 500;
-          font-size: 3.5rem;
+          font-size: 1.5rem;
           padding: 2rem;
-          height: 60px;
+          height: 51px;
           border-radius: 50%;
           background-color: #fc2c2c;
           opacity: 0.9;

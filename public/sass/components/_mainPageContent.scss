@@ -651,6 +651,8 @@ figure {
   z-index: 1;
   margin: 0 0 4rem 0rem;
 
+  border-radius: 1rem;
+
   &:not(:nth-child(8n)) {
     margin-right: 5rem;
   }
@@ -658,6 +660,7 @@ figure {
   &:hover {
     box-shadow: 0px 0px 6px 0px #e4e7ed, 0px 2px 1rem 5px #e5e7e9;
     overflow: hidden;
+    border-radius: 1rem;
   }
 }
 
@@ -697,6 +700,7 @@ figure {
 
   &:hover {
     background-color: #fcfcfc;
+    border-radius: 1rem;
   }
 }
 

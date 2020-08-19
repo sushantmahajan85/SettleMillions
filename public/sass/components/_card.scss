@@ -305,8 +305,11 @@ footer {
         background: none;
         border: none;
         z-index: 100;
+        &:hover {
+          background: none !important;
+        }
 
-        &:target{
+        &:target {
           border: none !important;
         }
 
@@ -321,10 +324,9 @@ footer {
           background-color: #B7B7B7; 
           opacity: 0.6;
           color: white;
-
         }
 
-        &:hover{
+        &:hover {
           background: none !important;
           opacity: 1;
         }

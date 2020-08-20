@@ -10,6 +10,10 @@
   width: 50rem;
 }
 
+.below-image {
+  display: flex;
+}
+
 .deal-deets {
   font-family: $family2;
   height: inherit;
@@ -45,27 +49,27 @@
   &_buy {
     position: relative;
     // display: block;
-    background-color: #ef233c;
-    border: 2px solid transparent;
+    background-color: white;
+    color: #ef233c;
+    border: 2px solid #ef233c;
     text-align: center;
     height: 5rem;
-    color: white;
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 0.67rem 1.6rem 0.67rem 5rem;
+    padding: 1rem 12.5rem 1rem 12.7rem;
     font-size: 1.8rem;
     margin: 0rem 2rem 0rem 0rem;
     transition: 0.2s all;
   }
   &_buy > i {
     position: absolute;
-    left: 0.2rem;
-    top: -0.15rem;
+    left: 2rem;
+    top: 0.2rem;
     width: 40px;
     height: 40px;
     line-height: 38px;
-    color: white;
+    color: #ef233c;
     // opacity: 0;
     // visibility: hidden;
   }
@@ -82,9 +86,20 @@
   }
   &_save:hover {
     background-color: #fff;
-    color: #333;
-    border-color: #333;
-    // padding: 0px 30px 0px 50px;
+    color: #d10024;
+    border: 2px solid #d10024;
+  }
+
+  &_subs:hover {
+    background-color: #fff;
+    color: #d10024;
+    border: 2px solid #d10024;
+  }
+
+  &_share_button:hover {
+    background-color: #fff;
+    color: #d10024;
+    border: 2px solid #d10024;
   }
 
   &_buy:hover > i {
@@ -94,22 +109,24 @@
   }
 
   &_save {
-    border: 2px solid transparent;
+    //border: 2px solid transparent;
     text-align: center;
-    height: 5rem;
+    height: 60%;
     text-transform: uppercase;
-    font-weight: 700;
     border-radius: 1rem;
+    width: 16rem;
     // display: block;
-    color: #333;
-    border-color: #333;
+    // color: #333;
+    // border-color: #333;
+    background-color: #ef233c;
+    color: white;
     margin-top: 1rem;
-    margin: 1rem 2rem 0rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
 
     // border: 1.5px solid rgb(0, 132, 255);
     // background-color: #;
 
-    padding: 0.67rem 1.6rem 0.67rem 1.6rem;
+    padding: 0.3rem 0.4rem;
 
     border-radius: 1rem;
     font-size: 1.8rem;
@@ -120,13 +137,14 @@
     padding: 1rem;
   }
   &_subs {
-    padding: 0.67rem 1.6rem;
-    border: 1.5px solid #ef233c;
+    padding: 1rem 2rem;
+    border: none;//1.5px solid #ef233c;
     font-weight: 500;
     border-radius: 1rem;
     font-size: 1.7rem;
-    color: #ef233c;
     margin-left: 2rem;
+    background-color: #ef233c;
+    color: white;
     // background-color: #ef233c;
     text-transform: uppercase;
     cursor: pointer;
@@ -206,14 +224,17 @@
   // }
   &_share {
     display: flex;
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-left: 1rem;
     margin-top: 1rem;
+    width: 20rem;
+    align-items: center;
 
     &_button {
+      //height: 5rem;
       font-size: 16px;
       margin-left: 3rem;
-      padding: 0.25rem 1.5rem;
+      padding: 0.6rem 1.4rem;
       background-color: #ef233c;
       color: white;
       text-transform: uppercase;
@@ -231,7 +252,7 @@
 
 .review-section {
   padding: 3.5rem 3.5rem 2rem 2rem;
-  width: 65%;
+  //width: 65%;
 }
 
 .review-rating {
@@ -311,7 +332,7 @@
   background-color: transparent;
   border: none;
   border: 1px solid rgb(230, 230, 230);
-  width: 55%;
+  width: 80%;
   height: 5rem;
   margin-bottom: -2rem;
   margin-right: 2rem;
@@ -365,6 +386,7 @@
   margin-top: 1rem;
   line-height: 2.2rem;
   font-size: 16px;
+  font-family: $family2;
 }
 
 .reviews {
@@ -377,6 +399,31 @@
 
 .review-section {
   font-size: 1.6rem;
+  width: 160rem;
+}
+
+#editRevBtn{
+    //border: 2px solid transparent;
+    text-align: center;
+    height: 60%;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    width: 16rem;
+    // display: block;
+    // color: #333;
+    // border-color: #333;
+    background-color: #ef233c;
+    color: white;
+    margin-top: 1rem;
+    margin: 1rem 0rem 0rem 0rem;
+
+    // border: 1.5px solid rgb(0, 132, 255);
+    // background-color: #;
+
+    padding: 0.3rem 0.4rem;
+
+    border-radius: 1rem;
+    font-size: 1.8rem;
 }
 
 #hidden-review {
@@ -440,6 +487,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 600;
+  text-transform: capitalize;
   // padding: 10px;
   // text-align: center;
   margin-right: 1rem;
@@ -733,17 +781,17 @@
   font-family: $family2;
   // word-spacing: 0.7rem;
   &_avail {
-    font-weight: 700;
-    color: $maroon;
+    font-weight: 500;
+    color: #ef233c;
     font-size: 2.78rem;
   }
   &_dis {
     margin-left: 1.2rem;
-    color: #d10024;
+    color: #ef233c;
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     padding: 0.2rem 0.5rem;
-    border: 2px solid $maroon;
+    //border: 2px solid $maroon;
     // border-radius: 10px;
   }
   &_mrp {

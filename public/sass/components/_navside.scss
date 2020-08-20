@@ -564,6 +564,7 @@ h2 {
 //  D *changes * start
 .Navb_logo-text {
   margin-left: 6rem;
+  margin-right: 2rem;
   display: flex;
   color: #fff;
   font-weight: 800;
@@ -673,6 +674,12 @@ h2 {
   height: 6rem;
   border-radius: 50%;
   margin-top: 10rem;
+}
+
+.user-nav__user-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: $family2;
 }
 
 .logo {

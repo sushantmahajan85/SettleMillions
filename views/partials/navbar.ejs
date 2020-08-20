@@ -86,7 +86,12 @@
 
           <!-- D changes // -->
 
-          <div > <i class="far fa-plus-square"></i>Post</div>
+          <!-- <div > <i class="far fa-plus-square"></i>Post</div> -->
+          <a class="titles_nv" href=<%=` /signup `%> id="signup">
+            <div class="postDeal" style="display: flex; align-items: center; ">
+              <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+            </div>
+          </a>
         </div>
       </a>
       <% }else{ %>
@@ -103,13 +108,17 @@
       </div> -->
       
       <% if (user) { %>
-      <a  class="titles_nv" href="" id="logout">
+      <!-- <a  class="titles_nv" href="" id="logout">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <!-- <i class="fas fa-plus"></i> -->
           <i class="fas fa-sign-out-alt"></i>
           <div >Logout</div>
         </div>
-      </a>
+      </a> -->
+      <a class="titles_nv" href=<%=` /signup `%> id="signup">
+        <div class="postDeal" style="display: flex; align-items: center; ">
+          <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+        </div>
+      </a> 
       <% } else { %>
        
         <a class="titles_nv" href=<%=` /signup `%> id="signup">
@@ -380,6 +389,11 @@
     });
 
   </script>
+
+<script src="/vendor/initial.min.js"></script>
+<script>
+  $(".profile").initial();
+</script>
 
 
 </body>

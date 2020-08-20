@@ -128,6 +128,7 @@
             <span class="dot" onclick="currentSlide(6)"></span> -->
         </div>
       </div>
+      
     </div>
 
     <div class="deal-deets">
@@ -160,19 +161,7 @@
       
       <div class="deal-deets_buttons">
         <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
-        <% if (user) { %>
-        <% if (like) { %>
-
-        <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
-        <% } else { %>
-        <a href="" class="deal-deets_save" id="like_deal">Wishlist</a>
-
-        <% } %>
-        <% }else{ %>
-
-        <a href="#" class="deal-deets_save" id="like_deal_no">Wishlist</a>
-
-        <% } %>
+        
       </div>
       <div class="deal-deets_vt">
         <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
@@ -209,16 +198,34 @@
         <% } %>
 
       </div>
-      <div class="deal-deets_share">
-        <div>Share this deal: </div>
-        <div class="deal-deets_share_button">Share</div>
-      </div>
+      
       <div class="deal-deets_paragraph">
         <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
         <p class="deal-deets_paragraph">Lorem ipsum dolor, sit amet co iusto reiciendis dolore nam perspiciatis, officiis, exercitationem quo aliquam animi nihil error ipsam accusantium harum dolor! Veniam, provident?</p>
       </div>
+      <div class="below-image">
+        <% if (user) { %>
+          <% if (like) { %>
+  
+          <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
+          <% } else { %>
+          <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
+  
+          <% } %>
+          <% }else{ %>
+  
+          <a href="#" class="deal-deets_save" id="like_deal_no"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
+  
+          <% } %>
+  
+          <div class="deal-deets_share">
+            <!-- <div>Share this deal: </div> -->
+            <div class="deal-deets_share_button"><i class="fa fa-share alt" style="margin-right: 1rem;"></i>Share</div>
+          </div>
+        </div>
     </div>
     <div class="side_deals">
+      <div style="display: flex; width: 30rem; padding: 1rem 0.65rem; font-family: Montserrat; font-size: 2rem"><i class="fa fa-fire" style="padding: 0.9rem 1.5rem 0 0;"></i>Recommendations</div>
       <% var i=0; %>
       <% for(var deala of reco){ %>
       <% i++; if(i>cooCount){ %>
@@ -248,9 +255,9 @@
   
   
                 <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
-                  <div class="deal_box_dp">₹<%= deala.dealPrice %></div>
-                  <div class="deal_box_mrp">₹<%= deala.mrp %></div>
-                  <div class="deal_box_dis">80% OFF</div>
+                  <div class="deal_box_dp">Rs.<%= deala.dealPrice %></div>
+                  <div class="deal_box_mrp">Rs.<%= deala.mrp %></div>
+                  <div class="deal_box_dis">-80%</div>
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
@@ -300,13 +307,13 @@
   
   
                 <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
-                  <div class="deal_box_dp">₹<%= dealo.dealPrice %></div>
-                  <div class="deal_box_mrp">₹<%= dealo.mrp %></div>
-                  <div class="deal_box_dis">80% OFF</div>
+                  <div class="deal_box_dp">Rs.<%= dealo.dealPrice %></div>
+                  <div class="deal_box_mrp">Rs.<%= dealo.mrp %></div>
+                  <div class="deal_box_dis">-80%</div>
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views"><%= dealo.views %></div>
+                  <div class="deal_box_views"><%= dealo.views %> views</div>
                   <div class="deal_box_time">3 days ago</div>
                 </div>
                 <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
@@ -518,7 +525,7 @@
       </span>
       <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
       <button id="review_post">Post</button>
-      <div class="add-rating">
+      <!-- <div class="add-rating">
         <div>Add your rating: </div>
         <div class="rating-stars">
           <i class="fa fa-star"></i>
@@ -527,17 +534,23 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
         </div>
-      </div>
+      </div> -->
       <% for( var review of deal.reviews ) { %>
       <div class="user-nav__user user-review">
+        <% if (review.user.photo) { %>
         <img src=<%=`/img/users/${review.user.photo}`%> alt="User photo" class="user-nav__user-photo review-photo">
+        <% } else { %>
+        <a href=<%= `/member/${review.user.id}` %> ><img style="margin-top: unset;"
+          data-name=<%=review.user.name %> data-color="#85e0ce" class="profile
+          user-nav__user-photo"/></a>
+          <% } %>
         <div class="review-text">
           <div class="user-nav__user-name"><%= review.user.name %> </div>
           <div class="rev" id="normRev">
             <%= review.review %>
           </div>
           <div style="display: none;" id="editDiv">
-          <div class="rev" contenteditable="true" id="revrevrev" >
+          <div class="rev" contenteditable="true" id="revrevrev" style="border: 2px solid black;">
             <%= review.review %>
           </div>
           <button style="right: 0;" id="editRevBtn" onclick="editRevFun(this)" name=<%= `${review._id}/edit` %>>Edit</button>

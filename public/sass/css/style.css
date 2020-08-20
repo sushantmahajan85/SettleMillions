@@ -475,6 +475,7 @@ h2 {
 
 .Navb_logo-text {
   margin-left: 6rem;
+  margin-right: 2rem;
   display: flex;
   color: #fff;
   font-weight: 800;
@@ -561,6 +562,11 @@ h2 {
   height: 6rem;
   border-radius: 50%;
   margin-top: 10rem; }
+
+.user-nav__user-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif; }
 
 .logo {
   height: 3.25rem;
@@ -1206,6 +1212,9 @@ figure {
   height: 60rem;
   width: 50rem; }
 
+.below-image {
+  display: flex; }
+
 .deal-deets {
   font-family: "Montserrat", sans-serif;
   height: inherit;
@@ -1233,26 +1242,26 @@ figure {
     font-size: 2rem; }
   .deal-deets_buy {
     position: relative;
-    background-color: #ef233c;
-    border: 2px solid transparent;
+    background-color: white;
+    color: #ef233c;
+    border: 2px solid #ef233c;
     text-align: center;
     height: 5rem;
-    color: white;
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 0.67rem 1.6rem 0.67rem 5rem;
+    padding: 1rem 12.5rem 1rem 12.7rem;
     font-size: 1.8rem;
     margin: 0rem 2rem 0rem 0rem;
     transition: 0.2s all; }
   .deal-deets_buy > i {
     position: absolute;
-    left: 0.2rem;
-    top: -0.15rem;
+    left: 2rem;
+    top: 0.2rem;
     width: 40px;
     height: 40px;
     line-height: 38px;
-    color: white; }
+    color: #ef233c; }
   .deal-deets_save > i {
     margin-right: 1.5rem; }
   .deal-deets_buy:hover {
@@ -1261,24 +1270,31 @@ figure {
     border-color: #d10024; }
   .deal-deets_save:hover {
     background-color: #fff;
-    color: #333;
-    border-color: #333; }
+    color: #d10024;
+    border: 2px solid #d10024; }
+  .deal-deets_subs:hover {
+    background-color: #fff;
+    color: #d10024;
+    border: 2px solid #d10024; }
+  .deal-deets_share_button:hover {
+    background-color: #fff;
+    color: #d10024;
+    border: 2px solid #d10024; }
   .deal-deets_buy:hover > i {
     opacity: 1;
     visibility: visible;
     color: #d10024; }
   .deal-deets_save {
-    border: 2px solid transparent;
     text-align: center;
-    height: 5rem;
+    height: 60%;
     text-transform: uppercase;
-    font-weight: 700;
     border-radius: 1rem;
-    color: #333;
-    border-color: #333;
+    width: 16rem;
+    background-color: #ef233c;
+    color: white;
     margin-top: 1rem;
-    margin: 1rem 2rem 0rem 0rem;
-    padding: 0.67rem 1.6rem 0.67rem 1.6rem;
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 0.3rem 0.4rem;
     border-radius: 1rem;
     font-size: 1.8rem; }
   .deal-deets_vt {
@@ -1286,13 +1302,14 @@ figure {
     font-size: 1.8rem;
     padding: 1rem; }
   .deal-deets_subs {
-    padding: 0.67rem 1.6rem;
-    border: 1.5px solid #ef233c;
+    padding: 1rem 2rem;
+    border: none;
     font-weight: 500;
     border-radius: 1rem;
     font-size: 1.7rem;
-    color: #ef233c;
     margin-left: 2rem;
+    background-color: #ef233c;
+    color: white;
     text-transform: uppercase;
     cursor: pointer; }
   .deal-deets_views {
@@ -1344,13 +1361,15 @@ figure {
       margin-bottom: 1rem; }
   .deal-deets_share {
     display: flex;
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-left: 1rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    width: 20rem;
+    align-items: center; }
     .deal-deets_share_button {
       font-size: 16px;
       margin-left: 3rem;
-      padding: 0.25rem 1.5rem;
+      padding: 0.6rem 1.4rem;
       background-color: #ef233c;
       color: white;
       text-transform: uppercase;
@@ -1363,8 +1382,7 @@ figure {
   width: inherit; }
 
 .review-section {
-  padding: 3.5rem 3.5rem 2rem 2rem;
-  width: 65%; }
+  padding: 3.5rem 3.5rem 2rem 2rem; }
 
 .review-rating {
   padding: 2rem 5rem; }
@@ -1430,7 +1448,7 @@ figure {
   background-color: transparent;
   border: none;
   border: 1px solid #e6e6e6;
-  width: 55%;
+  width: 80%;
   height: 5rem;
   margin-bottom: -2rem;
   margin-right: 2rem;
@@ -1476,7 +1494,8 @@ figure {
 .rev {
   margin-top: 1rem;
   line-height: 2.2rem;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif; }
 
 .reviews {
   display: flex;
@@ -1486,7 +1505,22 @@ figure {
   margin: 5rem 0rem 5rem 2rem; }
 
 .review-section {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  width: 160rem; }
+
+#editRevBtn {
+  text-align: center;
+  height: 60%;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  width: 16rem;
+  background-color: #ef233c;
+  color: white;
+  margin-top: 1rem;
+  margin: 1rem 0rem 0rem 0rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 1rem;
+  font-size: 1.8rem; }
 
 #hidden-review {
   display: none; }
@@ -1526,6 +1560,7 @@ figure {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 600;
+  text-transform: capitalize;
   margin-right: 1rem;
   margin-bottom: -0.5rem; }
 
@@ -1748,16 +1783,15 @@ figure {
 .price {
   font-family: "Montserrat", sans-serif; }
   .price_avail {
-    font-weight: 700;
-    color: #d10024;
+    font-weight: 500;
+    color: #ef233c;
     font-size: 2.78rem; }
   .price_dis {
     margin-left: 1.2rem;
-    color: #d10024;
+    color: #ef233c;
     font-weight: 600;
-    font-size: 2.2rem;
-    padding: 0.2rem 0.5rem;
-    border: 2px solid #d10024; }
+    font-size: 3.5rem;
+    padding: 0.2rem 0.5rem; }
   .price_mrp {
     margin-left: 1.2rem;
     text-decoration: line-through;

@@ -11,33 +11,31 @@
 }
 
 .deal-deets {
-  // background-color: rgb(242, 243, 244);
-  // border: 2px solid rgb(242, 243, 244);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $family2;
   height: inherit;
-  width: 44%;
-  margin-left: 5rem;
-  width: 42rem;
+  width: 150%;
+  margin-left: 0.5rem;
+  width: 53rem;
   height: 60rem;
+  padding-top: 1.1rem;
   margin-top: 0.1rem;
 
   // position: absolute;
 
   &_buttons {
     display: block;
-    padding: 1rem 5rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     margin-right: 4rem;
+    margin-top: 1rem;
   }
   &_name {
-    // border-bottom: 1px solid grey;
-    padding: 0rem 1rem 1rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     font-size: 2rem !important;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 1.1;
 
-    // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    //   sans-serif;
-    line-height: 1.6;
-    color: #1e2021;
+    color: $heading-color;
   }
   &_price {
     padding: 0.5rem 1rem 0rem 1rem;
@@ -46,24 +44,24 @@
   }
   &_buy {
     position: relative;
-    display: block;
+    // display: block;
     background-color: #ef233c;
     border: 2px solid transparent;
     text-align: center;
     height: 5rem;
     color: white;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 1rem;
-    padding: 0.67rem 1.6rem;
+    padding: 0.67rem 1.6rem 0.67rem 5rem;
     font-size: 1.8rem;
     margin: 0rem 2rem 0rem 0rem;
     transition: 0.2s all;
   }
   &_buy > i {
     position: absolute;
-    left: 1rem;
-    top: 0.5rem;
+    left: 0.2rem;
+    top: -0.15rem;
     width: 40px;
     height: 40px;
     line-height: 38px;
@@ -71,11 +69,21 @@
     // opacity: 0;
     // visibility: hidden;
   }
-
+  &_save > i {
+    margin-right: 1.5rem;
+    // opacity: 0;
+    // visibility: hidden;
+  }
   &_buy:hover {
     background-color: #fff;
     color: #d10024;
     border-color: #d10024;
+    // padding: 0px 30px 0px 50px;
+  }
+  &_save:hover {
+    background-color: #fff;
+    color: #333;
+    border-color: #333;
     // padding: 0px 30px 0px 50px;
   }
 
@@ -92,12 +100,16 @@
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 1rem;
-    display: block;
+    // display: block;
+    color: #333;
+    border-color: #333;
     margin-top: 1rem;
     margin: 1rem 2rem 0rem 0rem;
-    background-color: rgb(0, 132, 255);
-    color: white;
-    padding: 0.67rem 1.6rem;
+
+    // border: 1.5px solid rgb(0, 132, 255);
+    // background-color: #;
+
+    padding: 0.67rem 1.6rem 0.67rem 1.6rem;
 
     border-radius: 1rem;
     font-size: 1.8rem;
@@ -109,12 +121,13 @@
   }
   &_subs {
     padding: 0.67rem 1.6rem;
-    border: 2px solid transparent;
+    border: 1.5px solid #ef233c;
     font-weight: 500;
     border-radius: 1rem;
     font-size: 1.7rem;
-    color: white;
-    background-color: #ef233c;
+    color: #ef233c;
+    margin-left: 2rem;
+    // background-color: #ef233c;
     text-transform: uppercase;
     cursor: pointer;
   }
@@ -161,18 +174,22 @@
     font-size: 2rem;
   }
   &_paragraph {
-    padding: 0.5rem 4rem 0rem 0.5rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0.5rem 0rem 0rem 0.5rem;
+    font-family: $family2;
     font-size: 1.4rem;
     color: #333;
+    line-height: 1.567;
+    // width: 70%;
+    hyphens: auto;
     margin-bottom: 1rem;
+    font-weight: 400;
   }
   &_affiliate {
-    margin-right: 5.1rem;
+    // margin-right: rem;
     // display: block;
     padding: 2rem 0rem 2rem 1rem;
-    border: 1px solid #f2f3f4;
 
+    width: 84%;
     &_pic {
       width: 3.5rem;
       height: 3.5rem;
@@ -491,9 +508,8 @@
 .slideshow-dealpage {
   width: 83.5%;
   height: 100%;
-  border: 0.1rem solid #ecf0f1;
+  // border: 0.1rem solid #ecf0f1;
 
-  box-shadow: 1px 1px 1px 1px #f2f3f4;
   margin-top: 0.1rem;
 }
 
@@ -504,14 +520,14 @@
   height: inherit;
   margin-top: 0.1rem;
   margin-left: 2rem;
-
-  border-top: 0.1rem solid #cacfd2;
 }
 
 .mini-slide {
   height: 16.67%;
-  border-bottom: 0.1rem solid #cacfd2;
-  border-left: 0.1rem solid #cacfd2;
+  // border-bottom: 0.1rem solid #cacfd2;
+  // border-left: 0.1rem solid #cacfd2;
+
+  border: 0.1rem solid #cacfd2;
 }
 
 .small-pic {
@@ -714,26 +730,27 @@
 }
 
 .price {
-  // margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $family2;
   // word-spacing: 0.7rem;
   &_avail {
-    font-weight: 600;
-    color: #000;
-    font-size: 3.1rem;
+    font-weight: 700;
+    color: $maroon;
+    font-size: 2.78rem;
   }
   &_dis {
     margin-left: 1.2rem;
     color: #d10024;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid $maroon;
+    // border-radius: 10px;
   }
   &_mrp {
     margin-left: 1.2rem;
     text-decoration: line-through;
-    color: #8d99ae;
-    font-size: 1.7rem;
+    color: #737b8a;
+    font-size: 1.9rem;
     font-weight: 400;
   }
 }
@@ -889,8 +906,8 @@
 
 .side_deals .deal_box_dp {
   font-weight: 500;
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
+  color: $heading-color;
+  font-family: $family2;
   font-size: 1.7rem;
   margin-right: 1rem;
   margin-top: 0.5rem;
@@ -911,7 +928,7 @@
   color: #d10024;
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $family2;
   margin-right: 1rem;
   margin-bottom: -0.5rem;
   padding: 5px 0;

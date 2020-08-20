@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affiliate</title>
   <link rel="stylesheet" href="/sass/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
@@ -134,15 +135,7 @@
         <h4><%= deal.dealName %>
       </div>
       <div class="deal-highlights-dp">
-        <div class="deal-views-dp">
-          <div class="views-icon-dp">
-            <i class="far fa-eye"></i>
-          </div>
-          <div class="views-text-dp">
-            <span>100+ viewed today</span>
-          </div>
-        </div>
-        <div class="deal-ratings-dp">
+        <!-- <div class="deal-ratings-dp">
           <div class="ratings-icon-dp">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -153,21 +146,18 @@
           <div class="ratings-text-dp">
             <span>Perfect</span>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
       <div class="deal-deets_price">
         <li class="price"><span class="price_avail">
-            ₹<%= deal.mrp %> </span> <span class="price_mrp">₹<%= deal.dealPrice %> </span> <span class="price_dis">70%
-            off</span>
+            Rs.<%= deal.mrp %> </span> <span class="price_mrp">Rs.<%= deal.dealPrice %> </span> <span class="price_dis">-70%
+            </span>
         </li>
       </div>
 
-      <div class="deal-deets_paragraph">
-        <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
-        <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
-      </div>
+      
       <div class="deal-deets_buttons">
         <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
         <% if (user) { %>
@@ -175,19 +165,28 @@
 
         <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
         <% } else { %>
-        <a href="" class="deal-deets_save" id="like_deal">Add to Wishlist</a>
+        <a href="" class="deal-deets_save" id="like_deal">Wishlist</a>
 
         <% } %>
         <% }else{ %>
 
-        <a href="#" class="deal-deets_save" id="like_deal_no">Add to wishlist</a>
+        <a href="#" class="deal-deets_save" id="like_deal_no">Wishlist</a>
 
         <% } %>
       </div>
       <div class="deal-deets_vt">
         <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
-        <span class="deal-deets_categ">Category: Mobiles</span>
-        <p class="deal-deets_time">Posted: <%= deal.mrp %> days ago</p>
+          <div class="deal-views-dp">
+          <div class="views-icon-dp">
+            <i class="far fa-eye"></i>
+          </div>
+          <div class="views-text-dp">
+            <span>100 views</span>
+          </div>
+        </div>
+        <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
+        <span class="deal-deets_categ" style="margin-left: 3.5rem;">Category: Mobiles</span>
+      
       </div>
 
       <div class="deal-deets_affiliate">
@@ -213,6 +212,10 @@
       <div class="deal-deets_share">
         <div>Share this deal: </div>
         <div class="deal-deets_share_button">Share</div>
+      </div>
+      <div class="deal-deets_paragraph">
+        <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
+        <p class="deal-deets_paragraph">Lorem ipsum dolor, sit amet co iusto reiciendis dolore nam perspiciatis, officiis, exercitationem quo aliquam animi nihil error ipsam accusantium harum dolor! Veniam, provident?</p>
       </div>
     </div>
     <div class="side_deals">

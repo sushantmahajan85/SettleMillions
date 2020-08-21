@@ -49,8 +49,7 @@
                     </ul>
             <div class="whats_div">
                 <i class="fa fa-whatsapp" aria-hidden="true" style="
-                color: green;
-                "></i>
+                color: green;"></i>
             </div>
                 <!-- <li class="header_small-nav-item"></li> -->
             
@@ -1853,40 +1852,29 @@
     // });
     </script>
     <div class="popup" id="popup">
-        <!-- <div class="bg-video">
-            <video  class="bg-video_content" autoplay loop muted>
-                <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-            </video>
-        </div> -->
-        <div class="popup_content">
-            <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg"
-                    alt="hi" class="popup_img">
-                <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-            </div>
-            <div class="popup_right">
-                <div class="popup_cross" id="popup_cross">&times;</div>
-                <h1 class="heading-secondary popup_heading center">about us</h1>
-                <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
-                    festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to
-                    content the ever-growing foodie in you. TFF is not just a festival, but also a mission to let food
-                    break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging
-                    masses in merry-making. Come, experience edible infinity.</p>
-            </div>
-            <button id="report_btn">Report</button>
+        <div class="popup_right">
+            <div class="popup_cross" id="popup_cross" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+        </div>
+        <div class="popup_content" style="font-size: 2rem; text-align: center;">
+            Do you want to report this deal ?
+            <br>
+            <button id="report_btn" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Report</button><button id="popup_cross_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
         </div>
     </div>
 
-    <div class="popup" id="popupLike">
-        <!-- <div class="bg-video">
-        <video  class="bg-video_content" autoplay loop muted>
-            <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-        </video>
-    </div> -->
+    <div class="popup" id="popup_like" style="display: unset;">
+        <div class="popup_right">
+            <div class="popup_cross" id="popup_cross_like" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+        </div>
+        <div class="popup_content" style="font-size: 2rem; text-align: center;">
+            Do you want to like this deal ?
+            <br>
+            <button id="like_btn" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Like</button><button id="popup_cross_cancel_like" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
+        </div>
+    </div>
+
+    <!-- <div class="popup" id="popupLike">
         <div class="popup_content">
-            <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg"
-                    alt="hi" class="popup_img">
-                <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-            </div>
             <div class="popup_right">
                 <div class="popup_cross" id="popup_crosslike">&times;</div>
                 <h1 class="heading-secondary popup_heading center">about us</h1>
@@ -1898,8 +1886,8 @@
             </div>
             <button id="like_btn">Like</button>
         </div>
-    </div>
-    <script>
+    </div> -->
+    <!-- <script>
         document.getElementById('homie').addEventListener('click', e => {
             e.preventDefault();
             document.getElementById('popup').style.opacity = 1;
@@ -1911,15 +1899,24 @@
                 document.getElementById('popup').style.visibility = 'hidden';
             }, 3000);
         });
-    </script>
+    </script> -->
     <script>
         document.getElementById('popup_cross').addEventListener('click', e => {
             document.getElementById('popup').style.display = 'none';
         });
 
-        document.getElementById('popup_crosslike').addEventListener('click', e => {
-            document.getElementById('popupLike').style.display = 'none';
+        document.getElementById('popup_cross_cancel').addEventListener('click', e => {
+            document.getElementById('popup').style.display = 'none';
         });
+
+        document.getElementById('popup_cross_like').addEventListener('click', e => {
+            document.getElementById('popup_like').style.display = 'none';
+        });
+
+        document.getElementById('popup_cross_cancel_like').addEventListener('click', e => {
+            document.getElementById('popup_like').style.display = 'none';
+        });
+
         document.getElementById('news_box1').addEventListener('click', e => {
             document.getElementById('popup_news1').style.display = 'block';
         });

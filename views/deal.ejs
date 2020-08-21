@@ -206,7 +206,6 @@
       <div class="below-image">
         <% if (user) { %>
           <% if (like) { %>
-  
           <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
           <% } else { %>
           <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
@@ -214,7 +213,7 @@
           <% } %>
           <% }else{ %>
   
-          <a href="#" class="deal-deets_save" id="like_deal_no"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
+          <a href="#" class="deal-deets_save" id="like_btn_no"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
   
           <% } %>
   
@@ -814,12 +813,55 @@
     });
 
   </script>
+  <div class="popup" id="popup_subs">
+    <div class="popup_right">
+        <div class="popup_cross" id="subscribe_btn_no_cross" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+    </div>
+    <div class="popup_content" style="font-size: 2rem; text-align: center;">
+        Please signup / login to subscribe ?
+        <br>
+        <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="subscribe_btn_no_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
+    </div>
+</div>
   <script>
 
     document.getElementById("subscribe_btn_no").addEventListener("click", (e) => {
       e.preventDefault();
+      document.getElementById('popup_subs').style.display = 'block';
+    });
+    document.getElementById("subscribe_btn_no_cancel").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.getElementById('popup_subs').style.display = 'none';
+    });
+    document.getElementById("subscribe_btn_no_cross").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.getElementById('popup_subs').style.display = 'none';
+    });
 
-      document.getElementById('popupLikeLike').style.display = 'block';
+  </script>
+  <div class="popup" id="popup_like_deal_page">
+    <div class="popup_right">
+        <div class="popup_cross" id="like_btn_no_cross" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+    </div>
+    <div class="popup_content" style="font-size: 2rem; text-align: center;">
+        Please signup / login to subscribe ?
+        <br>
+        <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="like_btn_no_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
+    </div>
+</div>
+  <script>
+
+    document.getElementById("like_btn_no").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.getElementById('popup_like_deal_page').style.display = 'block';
+    });
+    document.getElementById("like_btn_no_cancel").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.getElementById('popup_like_deal_page').style.display = 'none';
+    });
+    document.getElementById("like_btn_no_cross").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.getElementById('popup_like_deal_page').style.display = 'none';
     });
 
   </script>

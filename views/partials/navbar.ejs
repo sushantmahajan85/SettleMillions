@@ -32,9 +32,40 @@
     <div class="titles">
       <div class="titles_nv">
         <div>Live Deals</div>
-      </div><div class="titles_nv">
-        <div>Post A Deal</div>
       </div>
+      <% if(user) { %>
+      <div class="titles_nv">
+        <a href="/newDeal"><div>Post A Deal</div></a>
+      </div>
+      <% } else { %>
+        <div class="titles_nv" id="post_no_user">
+          <div>Post A Deal</div>
+        </div>
+      <% } %>
+      
+      <div class="popup" id="popup_post">
+        <div class="popup_right">
+            <div class="popup_cross" id="popup_cross_post" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+        </div>
+        <div class="popup_content" style="font-size: 2rem; text-align: center;">
+            Please signup / login to post a deal ?
+            <br>
+            <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="popup_cross_cancel_post" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById('post_no_user').addEventListener('click', e => {
+        document.getElementById('popup_post').style.display = 'none';
+      });
+      document.getElementById('popup_cross_cancel_post').addEventListener('click', e => {
+            document.getElementById('popup_post').style.display = 'none';
+        });
+
+        document.getElementById('popup_cross_post').addEventListener('click', e => {
+            document.getElementById('popup_post').style.display = 'none';
+        });
+    </script>
       <!-- <div class="titles_nv">
         <div>TextText</div>
       </div> -->
@@ -121,7 +152,7 @@
         </div>
       <% } else { %>
        
-        <a class="titles_nv" href=<%=` /signup `%> id="signup">
+        <a class="titles_nv" href=<%=` /trending `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
             <div class="title-with-icon"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot Deals</div>
           </div>

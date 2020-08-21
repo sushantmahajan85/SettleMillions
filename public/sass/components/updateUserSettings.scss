@@ -106,10 +106,10 @@
 
 .form__upload + label {
   color: #fff;
-  background-color: #df4444;
+  background-color: #ee042b;
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #df4444;
+  border: 1px solid #ee042b;
   border-radius: 2rem;
   padding: 3px 10px;
   cursor: pointer;
@@ -126,7 +126,7 @@
 
 .btn-update-settings {
   color: #fff;
-  background-color: #df4444;
+  background-color: #ee042b;
   font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 2rem;
@@ -138,7 +138,7 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /*Add later when we use this for the button in form*/
-  border: 1px solid #df4444;
+  border: 1px solid #ee042b;
   cursor: pointer;
 }
 
@@ -238,11 +238,11 @@ $body: "Roboto", sans-serif;
 .leftbox {
   float: left;
   position: fixed;
-  width: 19%;
-  // height: 100%;
+  width: 19.25%;
+  height: 100%;
   background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
-  margin-left: 1rem;
+
   margin-top: 8rem;
 }
 

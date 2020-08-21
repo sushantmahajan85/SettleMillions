@@ -851,16 +851,16 @@ a.show-hide-link {
 #showLessR,
 #showLessL {
   margin: 0px auto;
-  width: 10%;
+  width: 100%;
   cursor: pointer;
   display: none;
-  margin-bottom: 2.5rem;
-  margin-top: 2rem;
-  border-radius: 4rem; }
+  background-color: #60606010;
+  text-align: center;
+  border-bottom: 1px solid #6060606b; }
   #showLessT:hover,
   #showLessR:hover,
   #showLessL:hover {
-    border: 0.3px solid #a42a30; }
+    background-color: #6060601f; }
 
 .news {
   align-items: center; }
@@ -2388,10 +2388,10 @@ figure {
 
 .form__upload + label {
   color: #fff;
-  background-color: #df4444;
+  background-color: #ee042b;
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #df4444;
+  border: 1px solid #ee042b;
   border-radius: 2rem;
   padding: 3px 10px;
   cursor: pointer;
@@ -2406,7 +2406,7 @@ figure {
 
 .btn-update-settings {
   color: #fff;
-  background-color: #df4444;
+  background-color: #ee042b;
   font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 2rem;
@@ -2418,7 +2418,7 @@ figure {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /*Add later when we use this for the button in form*/
-  border: 1px solid #df4444;
+  border: 1px solid #ee042b;
   cursor: pointer; }
 
 .btn-update-settings:hover {
@@ -2459,10 +2459,10 @@ figure {
 .leftbox {
   float: left;
   position: fixed;
-  width: 19%;
+  width: 19.25%;
+  height: 100%;
   background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
-  margin-left: 1rem;
   margin-top: 8rem; }
 
 .leftbox_element {
@@ -4254,7 +4254,7 @@ input#price-max {
   display: inline-block;
   font-weight: 400;
   font-size: 3.8rem;
-  font-family: Bitter, sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   margin-bottom: 2rem;
   transition: all 0.3s;
   /* &:hover{

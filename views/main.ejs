@@ -361,7 +361,7 @@
                 <span class="heading-normal">Show Less</span>
             </a>
         </div>
-        <% if (user && subsDeals.length != 0 ) { %>
+        <% if (user && !subDeals  && subsDeals.length != 0 ) { %>
          
         
         <div class="titles_main">
@@ -1862,7 +1862,7 @@
         </div>
     </div>
 
-    <div class="popup" id="popup_like" style="display: unset;">
+    <div class="popup" id="popup_like">
         <div class="popup_right">
             <div class="popup_cross" id="popup_cross_like" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
         </div>

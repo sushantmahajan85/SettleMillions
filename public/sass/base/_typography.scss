@@ -44,7 +44,7 @@
   font-weight: 400;
   font-size: 3.8rem;
   // margin-top: 3rem;
-  font-family: Bitter, sans-serif;
+  font-family: $family2 !important;
   // -webkit-background-clip: text;
   // color: transparent;
   //   background-image: linear-gradient(to right ,rgb(148, 148, 147), rgb(73, 73, 72));
@@ -75,12 +75,10 @@ rgba(0, 0, 0, 0.349);
     margin-bottom: 2rem;
   }
 }
-.heading-normal{
+.heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
   font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
-color:rgb(3, 3,3);
-                                      
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(3, 3, 3);
 }
-

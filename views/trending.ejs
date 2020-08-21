@@ -77,9 +77,377 @@
     </div> -->
 
     <div class="tp_diff_page-content page-content">
-        <a href=" ">
-            <div class=" tp_diff_title mainpage_titles">Hot Deals</div>
-        </a>
+        <div class="titles_main" >
+            <a href="#">
+                <div class="mainpage_titles" style="margin-top: 2rem;">Live Deals</div>
+            </a>
+            <a href="#"><div class="mainpage_titles-options">See All</div></a>
+            <!-- <hr> -->
+        </div>
+        <!-- <hr> -->
+
+        <div id="trending" class="trending">
+
+            <%  var i = 0; %>
+            <% for(var deal of deals) { %>
+            <% i++; %>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %>
+            <% function timeSince(date) {
+
+                var seconds = Math.floor((new Date() - date) / 1000);
+              
+                var interval = Math.floor(seconds / 31536000);
+              
+                if (interval > 1) {
+                  return interval + " years";
+                }
+                interval = Math.floor(seconds / 2592000);
+                if (interval > 1) {
+                  return interval + " months";
+                }
+                interval = Math.floor(seconds / 86400);
+                if (interval > 1) {
+                  return interval + " days";
+                }
+                interval = Math.floor(seconds / 3600);
+                if (interval > 1) {
+                  return interval + " hours";
+                }
+                interval = Math.floor(seconds / 60);
+                if (interval > 1) {
+                  return interval + " minutes";
+                }
+                return Math.floor(seconds) + " seconds";
+              }
+              var nowx = new Date(Date.now());
+              var titu = timeSince(nowx - deal.time.getTime());
+              var aDay = 24*60*60*1000;
+               %>
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
+                            <div class="carousel-item active">
+
+                                <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+
+                            <% for( var photo of deal.corouselImgs) { %>
+
+
+                            <div class="carousel-item ">
+
+                                <img src=<%= `/img/deals/${photo}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <% } %>
+
+                            <!-- <div class="carousel-item" >
+                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                    alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                            </div> -->
+                        </div>
+
+                        <div class="card-text">
+
+
+                            <div class="card__details">
+                                <ul>
+                                    <h3 class="product_name_mainp">
+                                        <%= deal.dealName %>
+                                    </h3>
+                                    <!-- <h3 class= "product_name_mainp">Product Name</h3> -->
+                                    <div>
+                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><%= deal.owner %>
+                                            <i class="mp_aff-name-tag fas fa-check-circle"></i></a>
+                                    </div>
+
+                                    <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %>  Reports:<%= deal.reportCount %>  </a><br> -->
+
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                            <!-- <span class="price_dis">(70%)</span>  -->
+                                        </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+
+                                    <div class="views_time_mp">
+                                        <div style="display: inline-block">
+
+                                            <% if (deal.views > 999) { %>
+                                            <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                            <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                            <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                            <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                            <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
+                                    </div>
+
+                                </ul>
+                            </div>
+
+                            <% if(user){ %>
+                            <form action="/" method="GET" class=reportx>
+                                <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)"
+                                    onfocus="this.selectedIndex = -1">
+                                    <option selected disabled value="empty"></option>
+                                    <option value=<%= `report/${deal._id}/${user._id}` %>>Report</option>
+                                    <option value=<%= `like/${deal._id}/${user._id}` %>>Like</option>
+                                </select>
+                            </form>
+                            <% } %>
+
+                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+            <% } %>
+           
+           
+        </div>
+        <div id="showMoreT">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+                <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">See More</span>
+            </a>
+        </div>
+        <div id="showLessT">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+                <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">Show Less</span>
+            </a>
+        </div>
+
+
+
+        <div class="titles_main">
+            <a href="#">
+                <div class="mainpage_titles">Live Deals</div>
+            </a>
+            <a href="#"><div class="mainpage_titles-options">See All</div></a>
+            <!-- <hr> -->
+        </div>
+        <!-- <hr> -->
+
+        <div id="trending" class="trending">
+
+            <%  var i = 0; %>
+            <% for(var deal of deals) { %>
+            <% i++; %>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %>
+            <% function timeSince(date) {
+
+                var seconds = Math.floor((new Date() - date) / 1000);
+              
+                var interval = Math.floor(seconds / 31536000);
+              
+                if (interval > 1) {
+                  return interval + " years";
+                }
+                interval = Math.floor(seconds / 2592000);
+                if (interval > 1) {
+                  return interval + " months";
+                }
+                interval = Math.floor(seconds / 86400);
+                if (interval > 1) {
+                  return interval + " days";
+                }
+                interval = Math.floor(seconds / 3600);
+                if (interval > 1) {
+                  return interval + " hours";
+                }
+                interval = Math.floor(seconds / 60);
+                if (interval > 1) {
+                  return interval + " minutes";
+                }
+                return Math.floor(seconds) + " seconds";
+              }
+              var nowx = new Date(Date.now());
+              var titu = timeSince(nowx - deal.time.getTime());
+              var aDay = 24*60*60*1000;
+               %>
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
+                            <div class="carousel-item active">
+
+                                <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+
+                            <% for( var photo of deal.corouselImgs) { %>
+
+
+                            <div class="carousel-item ">
+
+                                <img src=<%= `/img/deals/${photo}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <% } %>
+
+                            <!-- <div class="carousel-item" >
+                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                    alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                            </div> -->
+                        </div>
+
+                        <div class="card-text">
+
+
+                            <div class="card__details">
+                                <ul>
+                                    <h3 class="product_name_mainp">
+                                        <%= deal.dealName %>
+                                    </h3>
+                                    <!-- <h3 class= "product_name_mainp">Product Name</h3> -->
+                                    <div>
+                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><%= deal.owner %>
+                                            <i class="mp_aff-name-tag fas fa-check-circle"></i></a>
+                                    </div>
+
+                                    <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %>  Reports:<%= deal.reportCount %>  </a><br> -->
+
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                            <!-- <span class="price_dis">(70%)</span>  -->
+                                        </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+
+                                    <div class="views_time_mp">
+                                        <div style="display: inline-block">
+
+                                            <% if (deal.views > 999) { %>
+                                            <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                            <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                            <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                            <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                            <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
+                                    </div>
+
+                                </ul>
+                            </div>
+
+                            <% if(user){ %>
+                            <form action="/" method="GET" class=reportx>
+                                <select class="three-dots" id="change" name="dealOps" onChange="dealOperations(this)"
+                                    onfocus="this.selectedIndex = -1">
+                                    <option selected disabled value="empty"></option>
+                                    <option value=<%= `report/${deal._id}/${user._id}` %>>Report</option>
+                                    <option value=<%= `like/${deal._id}/${user._id}` %>>Like</option>
+                                </select>
+                            </form>
+                            <% } %>
+
+                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+            <% } %>
+           
+           
+        </div>
+        <div id="showMoreT">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+                <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">See More</span>
+            </a>
+        </div>
+        <div id="showLessT">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+                <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">Show Less</span>
+            </a>
+        </div>
+
+        <div class="titles_main">
+            <a href="#">
+                <div class="mainpage_titles">Live Deals</div>
+            </a>
+            <a href="#"><div class="mainpage_titles-options">See All</div></a>
+            <!-- <hr> -->
+        </div>
         <!-- <hr> -->
 
         <div id="trending" class="trending">
@@ -253,6 +621,7 @@
                 <span class="heading-normal">Show Less</span>
             </a>
         </div>
+
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-section about">
@@ -325,67 +694,30 @@
             </div>
         </div>
 
-        <!-- <footer class="footer-distributed">
-
-            <h3 style="text-align: center; padding-bottom: 2rem;">Your<span>Deal</span></h3>
-
-            <div class="footer-left">
-
-                <p class="footer-links">
-                    <a href="" id="homie">&#8226 Home</a>
-                    <a href="#">&#8226 About</a>
-                    <a href="#">&#8226 FAQ</a>
-                    <a href="#">&#8226 Contact</a>
-                </p>
-
-                <p class="footer-company-name">YourDeal &copy; 2020</p>
-            </div>
-
-            <div class="footer-center">
-
-                <div>
-                    <i class="fa fa-map-marker"></i>
-                    <p><span>21 Revolution Street</span> Delhi, India</p>
-                </div>
-
-                <div>
-                    <i class="fa fa-phone"></i>
-                    <p>+1 555 123456</p>
-                </div>
-
-                <div>
-                    <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:support@company.com">contact@yourdeal.com</a></p>
-                </div>
-
-            </div>
-
-            <div class="footer-right">
-
-                <p class="footer-company-about">
-                    <span>About the company</span>
-                    Your Deal is a spiritual force, and we're going to Cathedral Rock, and that's the vortex of the
-                    heart.
-                </p>
-
-                <div class="footer-icons">
-
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-
-                </div>
-
-            </div>
-
-        </footer> -->
     </div>
 
     <script src="/js/report.js"></script>
     <script src="/js/likedDeal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script>
+    var i = 0;
+    function trendMoreLess2() {
+        if (!i) {
+            document.getElementById("hideTrending").style.display = "flex";
+            document.getElementById("showLessT").style.display = "block";
+            document.getElementById("showMoreT").style.display = "none";
 
+            i = 1;
+        }
+        else {
+            document.getElementById("hideTrending").style.display = "none";
+            document.getElementById("showLessT").style.display = "none";
+            document.getElementById("showMoreT").style.display = "block";
+            i = 0;
+        }
+    }
+
+</script>
     <script>
         $('.main-content .owl-carousel').owlCarousel({
 

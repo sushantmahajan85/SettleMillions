@@ -16,8 +16,7 @@ body {
   // background-position-y: 5rem;
 }
 
-.arrow{
-  
+.arrow {
 }
 
 .page-content {
@@ -247,22 +246,22 @@ a.show-hide-link {
 #showMoreT,
 #showMoreL {
   margin: 0px auto;
-  width: 10%;
+  width: 100%;
   // height: 60px;
   // max-height: 5rem;
   // margin-left: 40%;
   // text-align: center;
   // border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
-  margin-bottom: 2.5rem;
-  margin-top: 2rem;
-  border-radius: 4rem;
 
+  background-color: #60606010;
+  text-align: center;
+  border-bottom: 1px solid #6060606b;
   &:hover {
-    // background-color: #F8F9F9;
+    background-color: #6060601f;
     // background-color:  #A42A30;
     // text-decoration: underline;
-    border: 0.3px solid #a42a30;
+    // border: 0.3px solid #a42a30;
   }
 }
 
@@ -538,7 +537,6 @@ figure {
   }
   &:hover {
     color: #d10024;
-    border-bottom: 2px solid #d10024;
   }
 }
 

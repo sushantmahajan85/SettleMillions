@@ -348,7 +348,23 @@
 
                 <% } %>
                 <% } %>
+
         </div>
+        <div id="showMoreT">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
+                <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">See More</span>
+            </a>
+        </div>
+        <div id="showLessT">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
+                <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
+                <span class="heading-normal">Show Less</span>
+            </a>
+        </div>
+        <% if (user && subsDeals.length != 0 ) { %>
+         
+        
         <div class="titles_main">
             <a href="#">
                 <div class="mainpage_titles">Subscribed Deals</div>
@@ -541,7 +557,7 @@
                 <span class="heading-normal">Show Less</span>
             </a>
         </div>
-
+        <% } %>
         <% if(user){ %>
         <% if(cooCount !== 0 || user.cookies.length){ %>
             <div class="titles_main">
@@ -1271,7 +1287,7 @@
             </a>
         </div>
 
-        <hr>
+        
 
         <div class="news ">
             <div class="titles_main">
@@ -1507,7 +1523,7 @@
         </script>
 
         <div class="newsletter">
-            <i class="fas fa-envelope" style="font-size: 8rem;"></i>
+            
             <p id="newsletter_heading">Join our exclusive <span style="color:#3ADA57">WhatsApp</span> channel</p>
             <div style="display: flex; justify-content: center; align-items: center;">
             <p id="newsletter_subtitle">Get info about the latest deals from around the internet</p>

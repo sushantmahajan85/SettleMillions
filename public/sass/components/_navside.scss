@@ -894,23 +894,27 @@ nav li {
   padding-left: 1.15rem;
   &:hover {
     background-color: #f0f3f4;
-    box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4);
+    box-shadow: 0px 1px 2px 2px rgba(105, 156, 173, 0.4);
   }
 }
 
-.sidebar_button{
+.sidebar_button {
   position: relative;
-    // display: block;
-    background-color: white;
-    color: #ef233c;
-    border: 2px solid #ef233c;
-    text-align: center;
-    height: 5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 1rem;
-    padding: 1rem 1rem 1rem 1rem;
-    font-size: 1.7rem;
-    margin: 0rem 2rem 0rem 0rem;
-    transition: 0.2s all;
+  // display: block;
+  background-color: white;
+  color: $maroon;
+  border: 1.2px solid $maroon;
+  text-align: center;
+
+  height: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  font-size: 1.6rem;
+  margin: 0rem 0rem 0rem 0.2rem;
+  // transition: 0.2s all;
+  // &:hover {
+  //   transform: translateY(-2px);
+  // }
 }

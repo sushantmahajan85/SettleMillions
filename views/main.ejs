@@ -1748,8 +1748,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script type="text/javascript">
-        var i = 0;
         function trendMoreLess() {
+            var i = 0;
             if (!i) {
                 document.getElementById("hideTrending").style.display = "flex";
                 document.getElementById("showLessT").style.display = "block";
@@ -1766,47 +1766,49 @@
         }
 
         function recMoreLess() {
-            if (!i) {
+            var j = 0;
+            if (!j) {
                 document.getElementById("hideRecommended").style.display = "flex";
                 document.getElementById("showLessR").style.display = "block";
                 document.getElementById("showMoreR").style.display = "none";
 
-                i = 1;
+                j = 1;
             }
             else {
                 document.getElementById("hideRecommended").style.display = "none";
                 document.getElementById("showLessR").style.display = "none";
                 document.getElementById("showMoreR").style.display = "block";
-                i = 0;
+                j = 0;
             }
         }
 
         function liveMoreLess() {
-            if (!i) {
+            var k = 0;
+            if (!k) {
                 document.getElementById("hideLive").style.display = "flex";
                 document.getElementById("showLessL").style.display = "block";
                 document.getElementById("showMoreL").style.display = "none";
 
-                i = 1;
+                k = 1;
             }
             else {
                 document.getElementById("hideLive").style.display = "none";
                 document.getElementById("showLessL").style.display = "none";
                 document.getElementById("showMoreL").style.display = "block";
-                i = 0;
+                k = 0;
             }
         }
     </script>
 
     <script type="text/javascript">
-        var i = 0;
+        var l = 0;
         function report(el) {
 
 
-            if (!i) {
-                el.innerHTML = '&#8230<div class="mp_dealbox_three-dots-menu"><div class="mp_dealbox_three-dots-menu-item">Report</div><div class="mp_dealbox_three-dots-menu-item">Like</div></div>'; i = 1;
+            if (!l) {
+                el.innerHTML = '&#8230<div class="mp_dealbox_three-dots-menu"><div class="mp_dealbox_three-dots-menu-item">Report</div><div class="mp_dealbox_three-dots-menu-item">Like</div></div>'; l = 1;
             } else {
-                el.innerHTML = "&#8230"; i = 0;
+                el.innerHTML = "&#8230"; l = 0;
             }
 
         }

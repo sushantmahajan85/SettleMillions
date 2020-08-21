@@ -31,12 +31,13 @@
 
     <div class="titles">
       <div class="titles_nv">
-        <div>TextText</div>
+        <div>Live Deals</div>
       </div><div class="titles_nv">
-        <div>TextText</div>
-      </div><div class="titles_nv">
-        <div>TextText</div>
+        <div>Post A Deal</div>
       </div>
+      <!-- <div class="titles_nv">
+        <div>TextText</div>
+      </div> -->
     </div>
 
 
@@ -89,7 +90,7 @@
           <!-- <div > <i class="far fa-plus-square"></i>Post</div> -->
           <a class="titles_nv" href=<%=` /signup `%> id="signup">
             <div class="postDeal" style="display: flex; align-items: center; ">
-              <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+              <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot Deals</div>
             </div>
           </a>
         </div>
@@ -114,25 +115,24 @@
           <div >Logout</div>
         </div>
       </a> -->
-      <a class="titles_nv" href=<%=` /signup `%> id="signup">
+      <a class="titles_nv" href=<%=` /analytics `%> id="signup">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+          <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
         </div>
-      </a> 
       <% } else { %>
        
         <a class="titles_nv" href=<%=` /signup `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+            <div class="title-with-icon"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot Deals</div>
           </div>
-        </a><a class="titles_nv" href=<%=` /signup `%> id="signup">
+        </a><a class="titles_nv" href=<%=` /analytics `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+            <div class="title-with-icon"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
           </div>
         </a>  
       <a class="titles_nv" href=<%=` /signup `%> id="signup">
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <div class="title-with-icon"><i class="fas fa-user-plus"></i>Sign-up</div>
+          <div class="title-with-icon"><i class="fas fa-user-plus" style="margin-bottom: 0.591rem;"></i>Sign Up</div>
         </div>
       </a>
    
@@ -159,7 +159,7 @@
     <div class="user-nav__user">
   <nav role="navigation">
     <ul>
-      <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: unset;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
+      <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: -0.95rem;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
             class="user-nav__user-photo" /></a>
         <ul class="dropdown" style="background-color: black;">
           <li><a href="#">Sub-1</a></li>
@@ -169,7 +169,7 @@
       </nav>
          <% } else { %><nav role="navigation">
           <ul>
-            <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: unset;"
+            <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: -0.95rem;"
               data-name=<%=user.name %> data-color="#85e0ce" class="profile
               user-nav__user-photo"/></a>
               <ul class="dropdown" style="background-color: black;">

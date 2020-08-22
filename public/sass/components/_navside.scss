@@ -323,6 +323,7 @@ body a {
   font-size: 1.7rem;
   color: white;
   transition: all 0.2s;
+  cursor: pointer;
   &:hover {
     transform: translateY(-2px);
   }

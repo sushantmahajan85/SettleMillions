@@ -294,7 +294,8 @@ body a {
   font-weight: 500;
   font-size: 1.7rem;
   color: white;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  cursor: pointer; }
   .titles_nv:hover {
     transform: translateY(-2px); }
 

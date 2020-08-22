@@ -245,14 +245,122 @@
            
            
         </div>
+        <div id="hideTrending" class="trending">
+            <% var j = 0; %>
+            <% for(var deal of deals) { %>
+            <% j++; %>
+
+            <% if(j > 8) {%>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %>
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
+                            <div class="carousel-item active">
+
+                                <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+
+                            <% for( var photo of deal.corouselImgs) { %>
+
+
+                            <div class="carousel-item ">
+
+                                <img src=<%= `/img/deals/${photo}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <% } %>
+
+                            <!-- <div class="carousel-item" >
+                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                        <div class="carousel-item" >
+                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                        </div> -->
+                        </div>
+
+                        <div class="card-text">
+
+
+                            <div class="card__details">
+                                <ul>
+                                    <h3 class="product_name_mainp">
+                                        <%= deal.dealName %>
+                                    </h3>
+                                    <div class="aff_name">
+                                        <div style="display: inline-block"><%= deal.owner %> <i
+                                            class=" mp_aff-name-tag fas fa-check-circle"></i></div>
+                                    </div>
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                            <!-- <span class="price_dis">(70%)</span>  -->
+                                        </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+                                    <div class="views_time_mp">
+                                        <div style="display: inline-block">
+                                            
+                                            <% if (deal.views > 999) { %>
+                                            <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                            <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                    </div>
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <% } %>
+                <% } %>
+
+        </div>
         <div id="showMoreT">
-            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
                 <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
                 <span class="heading-normal">See More</span>
             </a>
         </div>
         <div id="showLessT">
-            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
                 <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
                 <span class="heading-normal">Show Less</span>
             </a>
@@ -428,14 +536,122 @@
            
            
         </div>
-        <div id="showMoreT">
-            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+        <div id="hideRecommended" class="trending">
+            <% var j = 0; %>
+            <% for(var deal of deals) { %>
+            <% j++; %>
+
+            <% if(j > 8) {%>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %>
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
+                            <div class="carousel-item active">
+
+                                <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+
+                            <% for( var photo of deal.corouselImgs) { %>
+
+
+                            <div class="carousel-item ">
+
+                                <img src=<%= `/img/deals/${photo}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <% } %>
+
+                            <!-- <div class="carousel-item" >
+                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                        <div class="carousel-item" >
+                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                        </div> -->
+                        </div>
+
+                        <div class="card-text">
+
+
+                            <div class="card__details">
+                                <ul>
+                                    <h3 class="product_name_mainp">
+                                        <%= deal.dealName %>
+                                    </h3>
+                                    <div class="aff_name">
+                                        <div style="display: inline-block"><%= deal.owner %> <i
+                                            class=" mp_aff-name-tag fas fa-check-circle"></i></div>
+                                    </div>
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                            <!-- <span class="price_dis">(70%)</span>  -->
+                                        </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+                                    <div class="views_time_mp">
+                                        <div style="display: inline-block">
+                                            
+                                            <% if (deal.views > 999) { %>
+                                            <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                            <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                    </div>
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <% } %>
+                <% } %>
+
+        </div>
+        <div id="showMoreR">
+            <a href="#hideRecommended" class="show-hide-link" id="more" onclick="recMoreLess()">
                 <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
                 <span class="heading-normal">See More</span>
             </a>
         </div>
-        <div id="showLessT">
-            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess2()">
+        <div id="showLessR">
+            <a href="#hideRecommended" class="show-hide-link" id="more" onclick="recMoreLess()">
                 <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
                 <span class="heading-normal">Show Less</span>
             </a>
@@ -609,14 +825,122 @@
            
            
         </div>
-        <div id="showMoreT">
-            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
+        <div id="hideLive" class="trending">
+            <% var j = 0; %>
+            <% for(var deal of deals) { %>
+            <% j++; %>
+
+            <% if(j > 8) {%>
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deal.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %>
+            <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                <div class="card">
+                    <div class="card__face">
+                        <div class="card__picture" data-pause="true" data-interval="1000">
+                            <div class="carousel-item active">
+
+                                <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+
+                            <% for( var photo of deal.corouselImgs) { %>
+
+
+                            <div class="carousel-item ">
+
+                                <img src=<%= `/img/deals/${photo}` %> alt="Deal Photo" class="deal-photo">
+
+                            </div>
+                            <% } %>
+
+                            <!-- <div class="carousel-item" >
+                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
+                                alt="Deal Photo" class="deal-photo">
+
+                        </div>
+                        <div class="carousel-item" >
+                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
+
+                        </div> -->
+                        </div>
+
+                        <div class="card-text">
+
+
+                            <div class="card__details">
+                                <ul>
+                                    <h3 class="product_name_mainp">
+                                        <%= deal.dealName %>
+                                    </h3>
+                                    <div class="aff_name">
+                                        <div style="display: inline-block"><%= deal.owner %> <i
+                                            class=" mp_aff-name-tag fas fa-check-circle"></i></div>
+                                    </div>
+
+                                    <div class="monetory_values_mp">
+                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
+                                            <!-- <span class="price_dis">(70%)</span>  -->
+                                        </li>
+                                        <li style="font-weight: 400;">
+                                        </li>
+                                    </div>
+                                    <div class="views_time_mp">
+                                        <div style="display: inline-block">
+                                            
+                                            <% if (deal.views > 999) { %>
+                                            <span><%=`${vui} views`%></span>
+                                            <% } else { %>
+                                            <span><%=`${deal.views} views`%></span>
+                                            <% } %>
+
+                                            <% if (tem > 24) { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${day} day(s) ago`%></span>
+                                            <% } else if (tem > 1) { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${tem} hr ago`%></span>
+                                            <% } else { %>
+                                            <span style="margin-left: 0.7rem;"><%=`${tem*60} min ago`%></span>
+                                            <% } %>
+
+                                        </div>
+                                    </div>
+                                    <div class="mp_like-rate">
+                                        <i class="mp_like_deal far fa-heart"></i>
+                                        <span class="mp_like_deal">Like</span>
+
+                                        <div class="mp_share">
+                                            <i class="mp_share_deal fas fa-share-square"></i>
+                                            <span class="mp_share_deal">Share</span>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <% } %>
+                <% } %>
+
+        </div>
+        <div id="showMoreL">
+            <a href="#hideLive" class="show-hide-link" id="more" onclick="liveMoreLess()">
                 <i class="fas fa-caret-down font_icon" id="down" style="color: red;margin:0 1.2rem 0 1rem;"></i>
                 <span class="heading-normal">See More</span>
             </a>
         </div>
-        <div id="showLessT">
-            <a href="#hidetrending" class="show-hide-link" id="more" onclick="trendMoreLess()">
+        <div id="showLessL">
+            <a href="#hideLive" class="show-hide-link" id="more" onclick="liveMoreLess()">
                 <i class="fas fa-caret-up font_icon" id="up" style="color: red;margin:0 1.2rem 0 1rem;"></i>
                 <span class="heading-normal">Show Less</span>
             </a>
@@ -699,25 +1023,58 @@
     <script src="/js/report.js"></script>
     <script src="/js/likedDeal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-<script>
-    var i = 0;
-    function trendMoreLess2() {
-        if (!i) {
-            document.getElementById("hideTrending").style.display = "flex";
-            document.getElementById("showLessT").style.display = "block";
-            document.getElementById("showMoreT").style.display = "none";
+    <script type="text/javascript">
+        var i = 0;
+        function trendMoreLess() {
+            if (!i) {
+                document.getElementById("hideTrending").style.display = "flex";
+                document.getElementById("showLessT").style.display = "block";
+                document.getElementById("showMoreT").style.display = "none";
 
-            i = 1;
+                i = 1;
+            }
+            else {
+                document.getElementById("hideTrending").style.display = "none";
+                document.getElementById("showLessT").style.display = "none";
+                document.getElementById("showMoreT").style.display = "block";
+                i = 0;
+            }
         }
-        else {
-            document.getElementById("hideTrending").style.display = "none";
-            document.getElementById("showLessT").style.display = "none";
-            document.getElementById("showMoreT").style.display = "block";
-            i = 0;
-        }
-    }
+        
+        var j = 0;
+        function recMoreLess() {
+            if (!j) {
+                document.getElementById("hideRecommended").style.display = "flex";
+                document.getElementById("showLessR").style.display = "block";
+                document.getElementById("showMoreR").style.display = "none";
 
-</script>
+                j = 1;
+            }
+            else {
+                document.getElementById("hideRecommended").style.display = "none";
+                document.getElementById("showLessR").style.display = "none";
+                document.getElementById("showMoreR").style.display = "block";
+                j = 0;
+            }
+        }
+        
+        var k = 0;
+        function liveMoreLess() {
+            if (!k) {
+                document.getElementById("hideLive").style.display = "flex";
+                document.getElementById("showLessL").style.display = "block";
+                document.getElementById("showMoreL").style.display = "none";
+
+                k = 1;
+            }
+            else {
+                document.getElementById("hideLive").style.display = "none";
+                document.getElementById("showLessL").style.display = "none";
+                document.getElementById("showMoreL").style.display = "block";
+                k = 0;
+            }
+        }
+    </script>
     <script>
         $('.main-content .owl-carousel').owlCarousel({
 

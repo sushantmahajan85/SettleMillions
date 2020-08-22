@@ -30,12 +30,18 @@
       
 
       <div id="searchpage" class="searchpage">
-         <!-- <button onclick="sortPrice()" class="sp_button">Sort by mrp</button>
-         <button onclick="sortTrend()" class="sp_button">Sort by Trending</button> -->
+         <div style="display: flex;justify-content:flex-start;border-bottom:1px solid #60606042;margin-bottom:3.7rem">
+
+<h3 style="margin:2.5rem 0 2rem 10.5rem;font-size:1.9rem;font-family:'Montserrat', sans-serif;">Sort according to your preference: </h3>
+         <button onclick="sortPrice()" class="sp_button" style="margin:2rem;background-color:#d10024;border:none;color:white;border-radius:0.6rem">Sort by Mrp</button>
+         <button onclick="sortTrend()" class="sp_button" style="margin:2rem;background-color:#d10024;border:none;color:white;border-radius:0.6rem">Sort by Trending</button>
+      </div>
          <script>
             function sortPrice(){
          var url = window.location.href;    
          if (url.indexOf('?') > -1){
+            
+  url = url.split('&')[0];
             url += '&sort=mrp'
          }else{
             url += '?param=1'
@@ -45,8 +51,10 @@
 </script>
 <script>
    function sortTrend(){
-var url = window.location.href;    
+var url = window.location.href;
+    
 if (url.indexOf('?') > -1){
+  url = url.split('&')[0];
    url += '&sort=trendRatio'
 }else{
    url += '?param=1'
@@ -55,7 +63,7 @@ window.location.href = url;
 }
 </script>
 
-            <div class="sp_filter-sorting">
+            <!-- <div class="sp_filter-sorting">
                               
                <div class="sp_cateogry">Category<i class="sp_icon fas fa-caret-down"></i>
 
@@ -103,9 +111,9 @@ window.location.href = url;
 
                </div>
                
-               </div>
+               </div> -->
 
-
+<!-- 
                <div class="sp_sub-category">Sub-Category<i class="sp_icon fas fa-caret-down"></i>
 
                   <div class="sp_sub-category-list">
@@ -135,9 +143,9 @@ window.location.href = url;
                   </label>
                   
                   </div>
-               </div>
+               </div> -->
                
-               <div class="sp_price">Price<i class="sp_icon fas fa-caret-down"></i>
+               <!-- <div class="sp_price">Price<i class="sp_icon fas fa-caret-down"></i>
                
                   <div class="sp_price-list">
                      <label class="container1">
@@ -163,26 +171,26 @@ window.location.href = url;
                      
                      
                      </div>
-               </div>
-               
+               </div> -->
+<!--                
                <div class="sp_price_box price_input-boxes">
                   <div class="input-number price-min">
-                     <input id="price-min" type="text">
+                     <input id="price-min" type="text"> -->
                      <!-- <span class="qty-up">+</span>
                      <span class="qty-down">-</span> -->
-                  </div>
+                  <!-- </div>
                   <span>-</span>
                   <div class="input-number price-max">
                      <input id="price-max" type="text">
-                     <!-- <span class="qty-up">+</span>
-                     <span class="qty-down">-</span> -->
+                     <span class="qty-up">+</span>
+                     <span class="qty-down">-</span>
                   </div>
-            </div>
+            </div> -->
 
 
 
 
-            <div class="sp_cust-rat">Customer Ratings<i class="sp_icon fas fa-caret-down"></i>
+            <!-- <div class="sp_cust-rat">Customer Ratings<i class="sp_icon fas fa-caret-down"></i>
             <div class="sp_cust-rat-list">
 
                <a href="#">
@@ -231,18 +239,20 @@ window.location.href = url;
 
 
             </div>
-            </div>
+            </div> -->
 
-            </div>
+            <!-- </div> -->
+
 
          <%  var i = 0; %>
          <% for(var deal of deals) { %>
          <% i++; %>
-         <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> 
+         
             <!-- <div class="big-deal"> -->
         
 
                <div class="sp_deal-box">
+                  <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> 
                <div class="big-deal_img" data-pause="true" data-interval="1000">
                   <div
                   class="carousel-item active"
@@ -276,7 +286,7 @@ window.location.href = url;
                   </div>
                </div>
                <!-- <div class="big-deal_content"> -->
-                  <div class="sp_deal_area-content">
+                  <div class="sp_deal_area-content" style="padding-left: 22.78rem;">
                      <div class="sp_deal_content-box" style="display: flex;flex-direction: row;align-items: center; ">
                         <div class=" sp_deal-title"><%= deal.dealName %> </div>
                       </div>
@@ -289,14 +299,14 @@ window.location.href = url;
                      <div class="sp_deal-r1-det"><%= deal.owner %> </div>
                      <!-- <a href="" class="ld_deal-r1-det">Flipkart</a> -->
                      <div class="sp_deal-r1-det">Flipkart</div>
-                     <div class="sp_deal-r1-det">May 2020</div>
+                    
                    </div>
 
                   <!-- <div class="big-deal_buttons">
                   <div class="big-deal_user"><%= deal.owner %> </div>
                   </div> -->
 
-                  <div class="sp_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
+                  <div class="sp_deal-r2" style="display: flex;flex-direction: row;align-items: center; width: 70rem;" >
                      <div class="sp_deal-r2-det">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
@@ -309,9 +319,11 @@ window.location.href = url;
                    </div>
 
                    <div class="sp_deal-r4" style="display: flex;flex-direction: row">
-                     <div class="sp_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div>
-                     <div class="sp_deal-r4-det"><i id="img_sp_deal_views"
-                         class="far fa-eye"></i><%= deal.views %> </div>
+                     <!-- <div class="sp_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div> -->
+                     <div class="sp_deal-r4-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
+                         class="far fa-eye"></i><%= deal.views %> views </div>
+                         <div class="sp_deal-r1-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
+                           class="far fa-clock"></i>May 2020</div>
                    </div>
 
                   <!-- <div class="big-deal_vt">
@@ -341,8 +353,9 @@ window.location.href = url;
                   <h3 class="big-deal_percent">70% OFF</h3>
                   </div> -->
                </div>
+            </a>
             </div>
-        </a>
+        
         <% if (i === 20){break;}%>
         <% } %>
         </div>

@@ -3132,6 +3132,7 @@ Down
 
 .sp_deal-box {
   display: flex;
+  font-family: "Montserrat", sans-serif;
   margin: 0.5rem;
   margin-left: 10rem;
   width: 100rem;
@@ -3148,10 +3149,13 @@ Down
   .sp_deal-box:hover {
     box-shadow: 1px 0px 3px 2px #b3b6b7; }
 
+.img_sp_deal_views {
+  margin-right: 1rem; }
+
 .sp_deal_area-content {
   margin-left: 3.5rem;
   width: 75rem;
-  padding-top: 1.5rem; }
+  padding-top: 0.8rem; }
 
 .sp_deal-title {
   font-size: 2.6rem;
@@ -3160,7 +3164,6 @@ Down
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   margin-top: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 1.5rem; }
 
 .sp_deal-r1 {
@@ -3168,7 +3171,6 @@ Down
   color: #626567;
   margin-left: 0.3rem; }
   .sp_deal-r1-det {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-right: 1rem; }
@@ -3181,7 +3183,6 @@ Down
   margin-left: 0.3rem;
   line-height: 2rem; }
   .sp_deal-r2-det {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-right: 1rem; }
     .sp_deal-r2-det:hover {
@@ -3193,12 +3194,10 @@ Down
   .sp_deal-r3-dp {
     font-weight: 500;
     color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     margin-right: 1rem;
     margin-bottom: -0.5rem; }
   .sp_deal-r3-mrp {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
     font-weight: 400;
     color: #8d99ae;
@@ -3210,7 +3209,6 @@ Down
     color: #d10024;
     font-size: 1.7rem;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
     margin-right: 1rem;
     margin-bottom: -0.5rem;
     padding: 5px 0; }
@@ -3218,11 +3216,11 @@ Down
 .sp_deal-r4 {
   margin-bottom: 2rem;
   color: #626567;
-  margin-left: 0.3rem; }
+  margin-left: 0.3rem;
+  margin-right: 1rem; }
   .sp_deal-r4-det {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    margin-right: 1rem; }
+    margin-right: 2rem; }
     .sp_deal-r4-det:hover {
       color: black; }
 
@@ -3268,7 +3266,9 @@ Down
 .container1 {
   margin-left: 4.5rem; }
 
-.sp_category-list, .sp_sub-category-list, .sp_price-list {
+.sp_category-list,
+.sp_sub-category-list,
+.sp_price-list {
   width: 100rem;
   line-height: 4rem;
   margin-top: 2rem; }
@@ -3293,7 +3293,8 @@ Down
   left: 25rem;
   top: 18rem; }
 
-#cb, #rb {
+#cb,
+#rb {
   margin-right: 0.8rem; }
 
 .deal_area_user {

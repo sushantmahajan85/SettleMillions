@@ -17,19 +17,6 @@
 </head>
 
 <body>
-  <!-- <script>
-      const openSidebar = (event) => {
-         w3_open();
-         document.getElementById('openBar').style.display = 'none';
-         document.getElementById('closeBar').style.display = 'block'; 
-      }
-      const closeSidebar = (event) => {
-         w3_close();
-         document.getElementById('closeBar').style.display = 'none';  
-         document.getElementById('openBar').style.display = 'block'; 
-      }
-   </script> -->
-
   <section class="header" style="position: fixed !important;z-index:10;width:100% !important">
     <a href="/">
       <div class="title">
@@ -64,7 +51,7 @@
 
     <script>
       document.getElementById('post_no_user').addEventListener('click', e => {
-        document.getElementById('popup_post').style.display = 'none';
+        document.getElementById('popup_post').style.display = 'block';
       });
       document.getElementById('popup_cross_cancel_post').addEventListener('click', e => {
             document.getElementById('popup_post').style.display = 'none';
@@ -74,86 +61,34 @@
             document.getElementById('popup_post').style.display = 'none';
         });
     </script>
-      <!-- <div class="titles_nv">
-        <div>TextText</div>
-      </div> -->
     </div>
 
 
     <div class="search_nv">
     <form action="/" method="GET" class="search" id="searchx">
       <select class="categories_dropdown_nv">
-        <option value="0">Categories</option>
-        <option value="1">Category 01</option>
-        <option value="1">Category 02</option>
+        <option value="0" disabled>Categories</option>
+        <option value="1">Electronics</option>
+        <option value="1">Sports</option>
+        <option value="1">Music</option>
+        <option value="1">Women</option>
+        <option value="1">Men</option>
       </select>
       <input type="text" name="search" id="search" placeholder="Search for awesome deals" class="search__input" />
 
       <button class="search__button">
         <i class="fas fa-search search-icon"></i>
       </button>
-     
-      <!-- <select class="sort-drop" name="sort" onchange="this.form.submit()">
-          <option selected disabled value="empty"
-            >--Choose Parameter--</option
-          >
-          <option value="mrp">Price</option>
-          <option value="trendRatio">Views</option>
-        </select> -->
-      <!-- <div>SortBy</div> -->
     </form>
   </div>
-    <nav class="user-nav">
 
-      <!-- <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p> -->
-      <!-- <div> -->
-      <!-- <i class="fas fa-th"></i> -->
-
-      <!-- <div style="margin: 5px; display: inline;">CATEGORIES</div> -->
-
-      <!-- <img src="/img/users/da.svg" alt="Logo" class="catgories_logo" /> -->
-      <!-- <img src="down_arrow.png"> -->
-      <!-- </div> -->
-
-      <% if(user){ %>
-      <a  class="titles_nv" href="/newDeal">
-        <div class="postDeal" style="display: flex; align-items: center; ">
-
-          <!-- D changes -->
-
-          <!-- <i class="fas fa-plus"></i> -->
-         
-
-          <!-- D changes // -->
-
-          <!-- <div > <i class="far fa-plus-square"></i>Post</div> -->
-          <a class="titles_nv" href=<%=` /signup `%> id="signup">
-            <div class="postDeal" style="display: flex; align-items: center; ">
-              <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot Deals</div>
-            </div>
-          </a>
-        </div>
-      </a>
-      <% }else{ %>
-      <!-- <a  class="titles_nv" href="#" id="like_deal_no">
-        <div class="postDeal" style="display: flex; align-items: center; ">
-
-         
-          <div> <i class="far fa-plus-square"></i>Post</div>
-        </div>
-      </a> -->
-      <% } %>
-      <!-- <div class="titles_nv">
-        <div ><i class="fas fa-heart"></i>Wishlist</div>
-      </div> -->
-      
+    <nav class="user-nav">      
       <% if (user) { %>
-      <!-- <a  class="titles_nv" href="" id="logout">
-        <div class="postDeal" style="display: flex; align-items: center; ">
-          <i class="fas fa-sign-out-alt"></i>
-          <div >Logout</div>
-        </div>
-      </a> -->
+        <a class="titles_nv" href=<%=` /trending `%> id="signup">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot Deals</div>
+          </div>
+        </a>
       <a class="titles_nv" href=<%=` /analytics `%> id="signup">
         <div class="postDeal" style="display: flex; align-items: center; ">
           <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
@@ -174,25 +109,7 @@
           <div class="title-with-icon"><i class="fas fa-user-plus" style="margin-bottom: 0.591rem;"></i>Sign Up</div>
         </div>
       </a>
-   
-
-      <!-- <a class="titles_nv" href=<%= `/login` %> id="login">
-        <div class="postDeal" style="display: flex; align-items: center; ">
-          
-          <div><i class="fas fa-user-shield"></i>Login</div>
-        </div>
-      </a> -->
-    
       <% } %>
-      <% if (user) { %>
-      <!-- <div class="user-nav__icon-box">
-        <i class="fas fa-bell"></i>
-        <span class="user-nav__notification">7</span>
-      </div> -->
-
-      <% } %>
-      <!-- D changes // -->
-<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
 
   <% if (user) { %> <% if (user.photo) { %>
     <div class="user-nav__user">
@@ -201,119 +118,37 @@
       <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: -0.95rem;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
             class="user-nav__user-photo" /></a>
         <ul class="dropdown" style="background-color: black;">
-          <li><a href="#">Sub-1</a></li>
-          <li><a href="#">Sub-2</a></li>
-          <li><a href="#">Sub-3</a></li>
+          <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
+          <li><a href="/updateUserSettings">Edit Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
         </ul>
       </nav>
-         <% } else { %><nav role="navigation">
+         <% } else { %>
+        <nav role="navigation">
           <ul>
             <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: -0.95rem;"
               data-name=<%=user.name %> data-color="#85e0ce" class="profile
               user-nav__user-photo"/></a>
               <ul class="dropdown" style="background-color: black;">
-                <li><a href="#">Sub-1</a></li>
-                <li><a href="#">Sub-2</a></li>
-                <li><a href="#">Sub-3</a></li>
+                <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
+                <li><a href="/updateUserSettings">Edit Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
               </ul>
             </li>
           </ul>
-        </nav> <% } %> <% } else { %>
-        </div>
-    <% } %>
-  
-
-
-
-
-      <!-- <div class="user-nav__user">
-       
-      <% if (user) { %> <% if (user.photo) { %>
-    
-         <nav role="navigation">
-          <ul>
-            <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: unset;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
-                  class="user-nav__user-photo" /></a>
-              <ul class="dropdown" style="background-color: black;">
-                <li><a href="#">Sub-1</a></li>
-                <li><a href="#">Sub-2</a></li>
-                <li><a href="#">Sub-3</a></li>
-              </ul>
-            </li>
-          </ul>
-            </nav>
-        </div>
-               <% } else { %>
-                <div class="user-nav__user">
-                <nav role="navigation">
-                <ul style="list-style: none !important;">
-                  <li style="list-style: none !important;"><a href=<%= `/member/${user.id}` %> ><img style="margin-top: unset;"
-                    data-name=<%=user.name %> data-color="#85e0ce" class="profile
-                    user-nav__user-photo"/></a>
-                    <ul class="dropdown" style="background-color: black;">
-                      <li><a href="#">Sub-1</a></li>
-                      <li><a href="#">Sub-2</a></li>
-                      <li><a href="#">Sub-3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav> 
-            </div>
-              <% } %> <% } %> 
-         -->
-
-      <!-- <div style="margin: 5px;">SIGNUP</div>
-        <div style="margin: 5px;">LOGIN</div> -->
-
-      <!-- D changes // -->
-
-
-    </nav>
+        </nav> <% } %> 
+        <% } else { %>
+        <% } %>
+      </nav>
+    </div>
   </section>
+
   <script src="/vendor/initial.min.js"></script>
   <script>
     $(".profile").initial();
   </script>
   <script src="/js/logout.js"></script>
-  <!-- <script src="/vendor/jquery.bootcomplete.js"></script>
-
-    <script>
-      (function($) {
-        $(function() {
-          $("#search").bootcomplete({
-            url: "/search",
-            method: "get",
-          });
-        });
-      })(jQuery);
-    </script> -->
-  <!-- <script>
-      $(function() {
-        $("#search").autocomplete({
-          source: function(req, res) {
-            $.ajax({
-              url: "/search",
-              dataType: "json",
-              type: "GET",
-              data: req,
-              success: function(data) {
-                console.log(data);
-              },
-              error: function(err) {
-                console.log(err.status);
-              },
-            });
-          },
-          minLength: 1,
-          select: function(event, ui) {
-            if (ui.item) {
-              $("#search").text(ui.item.label);
-            }
-          },
-        });
-      });
-    </script> -->
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script>
     $(function () {
@@ -362,35 +197,6 @@
     });
   </script>
 
-
-  <div class="popup" id="popupLike">
-    <!-- <div class="bg-video">
-      <video  class="bg-video_content" autoplay loop muted>
-          <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-      </video>
-  </div> -->
-    <div class="popup_content">
-
-
-      <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
-          class="popup_img">
-        <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-      </div>
-      <div class="popup_right">
-        <div class="popup_cross" id="popup_crosslike">&times;</div>
-        <h1 class="heading-secondary popup_heading center">about us</h1>
-        <p class="paragraph popup_paragraph">Thapar Fd Festival is the most magnificent and awe-inspiring festivity
-          ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the ever-growing
-          foodie in you. TFF is not just a festival, but also a mission to let food break barriers and make everyone
-          happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come, experience
-          edible infinity.</p>
-
-      </div>
-
-      <button id="like_btn_deal">Signup/Login</button>
-    </div>
-  </div>
-
   <script>
 
     document.getElementById("like_deal_no").addEventListener("click", (e) => {
@@ -401,12 +207,6 @@
 
   </script>
   <script>
-
-      // document.getElementById("like_deal").addEventListener("click", (e) => {
-      //   e.preventDefault();
-
-      //   location.assign("/newDeal");
-      // });
 
   </script>
   <script>

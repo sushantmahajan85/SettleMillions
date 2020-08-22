@@ -51,6 +51,10 @@ exports.analytics = catchAsync(async (req, res) => {
 
   var dataAnalytics;
 
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+
   request(url, options, (error, respon, body) => {
     if (error) {
       return console.log(error);
@@ -59,7 +63,7 @@ exports.analytics = catchAsync(async (req, res) => {
     if (!error && respon.statusCode == 200) {
       // console.log(respon.body.result[0].Campaign);
       dataAnalytics = respon.body.result;
-      res.status(200).render("analytics", { dataAnalytics });
+      res.status(200).render("analytics", { dataAnalytics, subs });
     }
   });
 });
@@ -82,7 +86,10 @@ exports.getSignupForm = (req, res) => {
 
 exports.getTrendingDeals = catchAsync(async (req, res) => {
   const deals = await Deal.find().sort([["trendRatio", -1]]);
-  res.status(200).render("trending", { deals });
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+  res.status(200).render("trending", { deals, subs });
 
   for (var deal of deals) {
     var now = new Date(Date.now());
@@ -94,10 +101,13 @@ exports.getTrendingDeals = catchAsync(async (req, res) => {
 });
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
   const user = await User.findById(req.user).populate({
     path: "likedDeals subscribers",
   });
-  res.status(200).render("likedDeals", { user });
+  res.status(200).render("likedDeals", { user, subs });
 });
 exports.editDeal = catchAsync(async (req, res) => {
   const deal = await Deal.findById(req.params.id);
@@ -730,6 +740,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       subDeals,
       groupC,
       numberG,
+      subs
     });
 
     // for (var deal of deals) {
@@ -996,19 +1007,31 @@ exports.getMemberData = catchAsync(async (req, res) => {
     //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
   const userId = req.params.id;
+
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+
   // console.log(recommendedDeals);
   res.status(200).render("members", {
     deals,
     userId,
     dealTime,
+    subs
   });
 });
 
 exports.recently = catchAsync(async (req, res) => {
   const deals = req.cookies;
   console.log(deals.one);
+
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+
   res.status(200).render("recent", {
     deals,
+    subs
   });
 });
 

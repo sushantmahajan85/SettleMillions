@@ -53,22 +53,6 @@
 
           </div>
           <% } %>
-          <!-- <div class="mini-slide">
-            <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
-              alt="Mountains and fjords">
-          </div>
-          <div class="mini-slide">
-            <img class="demo cursor small-pic" src="/images/oneplusback.jpg" style="width:100%"
-              onclick="currentSlide(4)" alt="Northern Lights">
-          </div>
-          <div class="mini-slide">
-            <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(5)"
-              alt="Nature and sunrise">
-          </div>
-          <div class="mini-slide">
-            <img class="demo cursor small-pic" src="/images/oneplusback.jpg" style="width:100%"
-              onclick="currentSlide(6)" alt="Snowy Mountains">
-          </div> -->
         </div>
 
         <div class="slideshow-dealpage">
@@ -91,53 +75,56 @@
               <img class="deal-carousel-img" src=<%= `/img/deals/${photo}` %> style="width:100%;">
             </div>
             <% } %>
-            <!-- <div class="mySlides fade">
-              <div class="numbertext">2 / 6</div>
-              <img class="deal-carousel-img" src="/images/oneplusback.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 6</div>
-              <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">4 / 6</div>
-              <img class="deal-carousel-img" src="/images/oneplusback.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">5 / 6</div>
-              <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">6 / 6</div>
-              <img class="deal-carousel-img" src="/images/oneplusback.jpg" style="width:100%">
-            </div> -->
 
           </div>
           <br>
 
-          <!-- The dots/circles -->
-          <!-- <div style="text-align:center">
-            
-            <span class="dot" onclick="currentSlide(1)"></span>
-             <% var dots =1; %> 
-            <% for( var photo of deal.corouselImgs) { %>
-              <% dots++; %> 
-            <span class="dot" onclick="currentSlide(`${dots}`)"></span>
-          <% } %>    
-             <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span> -->
         </div>
       </div>
       
     </div>
 
     <div class="deal-deets">
+      <%  function kFormatter(num) {
+        return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+    } 
+    var vui = kFormatter(deal.views);
+
+    var now = new Date(Date.now());
+    var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+    var day = Math.round((tem/2.4))/10;
+    %>
+    <% function timeSince(date) {
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+      
+        var interval = Math.floor(seconds / 31536000);
+      
+        if (interval > 1) {
+          return interval + " years";
+        }
+        interval = Math.floor(seconds / 2592000);
+        if (interval > 1) {
+          return interval + " months";
+        }
+        interval = Math.floor(seconds / 86400);
+        if (interval > 1) {
+          return interval + " days";
+        }
+        interval = Math.floor(seconds / 3600);
+        if (interval > 1) {
+          return interval + " hours";
+        }
+        interval = Math.floor(seconds / 60);
+        if (interval > 1) {
+          return interval + " minutes";
+        }
+        return Math.floor(seconds) + " seconds"; 
+      }
+      var nowx = new Date(Date.now());
+      var titu = timeSince(nowx - deal.time.getTime());
+      var aDay = 24*60*60*1000;
+       %>
       <div class="deal-deets_name">
         <h4><%= deal.dealName %>
       </div>
@@ -170,17 +157,26 @@
         
       </div>
       <div class="deal-deets_vt">
-        <!-- <p class="deal-deets_views"><%= deal.views %> k views</p> -->
           <div class="deal-views-dp">
           <div class="views-icon-dp">
             <i class="far fa-eye"></i>
           </div>
           <div class="views-text-dp">
-            <span>100 views</span>
+            <span><% if (deal.views > 999) { %>
+              <span><%=`${vui} views`%></span>
+              <% } else { %>
+              <span><%=`${deal.views} views`%></span>
+              <% } %> views</span>
           </div>
         </div>
-        <p class="deal-deets_time"><%= deal.mrp %> days ago</p>
-        <span class="deal-deets_categ" style="margin-left: 3.5rem;">Category: Mobiles</span>
+        <p class="deal-deets_time"><% if (tem > 24) { %>
+          <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
+          <% } else if (tem > 1) { %>
+          <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
+          <% } else { %>
+          <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
+          <% } %></p>
+        <span class="deal-deets_categ" style="margin-left: 3.5rem;">Category: <%= deal.category %></span>
       
       </div>
 
@@ -192,7 +188,7 @@
         <% if (user) { %>
 
         <% if (log) { %>
-        <a href="" class="deal-deets_subs" id="unsubscribe_btn">un</a>
+        <a href="" class="deal-deets_subs" id="unsubscribe_btn">Unsubscribe</a>
         <% } else { %>
         <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
         <% } %>
@@ -206,13 +202,12 @@
       </div>
       
       <div class="deal-deets_paragraph">
-        <!-- <h3 class="heading-normal" style="margin-bottom: 0.6rem;margin-left:0.5rem">Description</h3> -->
-        <p class="deal-deets_paragraph">Lorem ipsum dolor, sit amet co iusto reiciendis dolore nam perspiciatis, officiis, exercitationem quo aliquam animi nihil error ipsam accusantium harum dolor! Veniam, provident?</p>
+        <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
       </div>
       <div class="below-image">
         <% if (user) { %>
           <% if (like) { %>
-          <a href="" class="deal-deets_save" id="dislike_deal">Dislike</a>
+          <a href="" class="deal-deets_save" id="dislike_deal">Unlike</a>
           <% } else { %>
           <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
   
@@ -224,7 +219,6 @@
           <% } %>
   
           <div class="deal-deets_share">
-            <!-- <div>Share this deal: </div> -->
             <div class="deal-deets_share_button"><i class="fa fa-share alt" style="margin-right: 1rem;"></i>Share</div>
           </div>
         </div>
@@ -235,15 +229,52 @@
       <% for(var deala of reco){ %>
       <% i++; if(i>cooCount){ %>
       <div class=" side_deals_item">
+            <%  function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+            } 
+            var vui = kFormatter(deala.views);
+
+            var now = new Date(Date.now());
+            var tem = Math.round((now.getTime() - deala.time.getTime())/360000)/10;
+            var day = Math.round((tem/2.4))/10;
+            %>
+            <% function timeSince(date) {
+
+                var seconds = Math.floor((new Date() - date) / 1000);
+              
+                var interval = Math.floor(seconds / 31536000);
+              
+                if (interval > 1) {
+                  return interval + " years";
+                }
+                interval = Math.floor(seconds / 2592000);
+                if (interval > 1) {
+                  return interval + " months";
+                }
+                interval = Math.floor(seconds / 86400);
+                if (interval > 1) {
+                  return interval + " days";
+                }
+                interval = Math.floor(seconds / 3600);
+                if (interval > 1) {
+                  return interval + " hours";
+                }
+                interval = Math.floor(seconds / 60);
+                if (interval > 1) {
+                  return interval + " minutes";
+                }
+                return Math.floor(seconds) + " seconds"; 
+              }
+              var nowx = new Date(Date.now());
+              var titu = timeSince(nowx - deala.time.getTime());
+              var aDay = 24*60*60*1000;
+               %>
         <a href=<%= `/deal/${deala._id}/postedBy/${deala.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
             <div class="bigImg_container">
               <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
             </div>
             <div class="deal_area_content">
-              <!-- <div class="picture_container">
-                          <div class="profile_pic"></div>
-                      </div> -->
               <div class="content_box" style="display: flex; flex-direction: column; justify-content: center">
                 <div class="deal_box_nameTime"
                   style="display: flex; flex-direction: row; align-items: center">
@@ -254,7 +285,6 @@
                 </div>
                 <div class="deal_box_nameTime" style="display: flex; flex-direction: row; align-items: center">
                   <div class="deal_box_views"><%= deala.owner %></div>
-                  <!-- <div class="deal_box_time">Amazon</div> -->
   
                 </div>
   
@@ -266,12 +296,20 @@
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
-                  <div class="deal_box_views"><%= deala.views %> views</div>
-                  <div class="deal_box_time">3 days ago</div>
+                  <div class="deal_box_views"><% if (deala.views > 999) { %>
+                    <span><%=`${vui} views`%></span>
+                    <% } else { %>
+                    <span><%=`${deala.views} views`%></span>
+                    <% } %></div>
+                  <div class="deal_box_time"><% if (tem > 24) { %>
+                    <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
+                    <% } else if (tem > 1) { %>
+                    <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
+                    <% } else { %>
+                    <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
+                    <% } %></div>
+                  
                 </div>
-                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                        <div>80% Off only on HDFC Bank Credit Cards</div>
-                      </div> -->
               </div>
             </div>
           </div>
@@ -291,9 +329,6 @@
               <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
             </div>
             <div class="deal_area_content">
-              <!-- <div class="picture_container">
-                          <div class="profile_pic"></div>
-                      </div> -->
               <div class="content_box" style="display: flex;flex-direction: column;justify-content: center;">
                 <div class="deal_box_nameTime"
                   style="display: flex; flex-direction: row; align-items: center">
@@ -306,7 +341,6 @@
                 <div class="deal_box_nameTime" style="display: flex;flex-direction: row;align-items: center; ">
   
                   <div class="deal_box_views"><%= dealo.owner %></div>
-                  <!-- <div class="deal_box_time">Amazon</div> -->
   
                 </div>
   
@@ -318,12 +352,19 @@
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views"><%= dealo.views %> views</div>
-                  <div class="deal_box_time">3 days ago</div>
+                  <div class="deal_box_views"><% if (deala.views > 999) { %>
+                    <span><%=`${vui} views`%></span>
+                    <% } else { %>
+                    <span><%=`${deala.views} views`%></span>
+                    <% } %></div>
+                  <div class="deal_box_time"><% if (tem > 24) { %>
+                    <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
+                    <% } else if (tem > 1) { %>
+                    <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
+                    <% } else { %>
+                    <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
+                    <% } %></div>
                 </div>
-                <!-- <div class="deal_box_description" style="display: flex; flex-direction: row;">
-                        <div>80% Off only on HDFC Bank Credit Cards</div>
-                      </div> -->
               </div>
             </div>
           </div>
@@ -334,114 +375,6 @@
   
     </div>
   </div>
-
- 
-  <!-- <section class="deal_area">
-          <div class="row">
-            <div class="carousel_container">
-
-              <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img class="deal-carousel-img" src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="/images/jeans.jpeg" style="width:100%">
-              </div>
-
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-
-              <div class="row">
-                <div class="mini-slide">
-                  <img class="demo cursor small-pic" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(1)"
-                    alt="The Woods">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(2)"
-                    alt="Cinque Terre">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(3)"
-                    alt="Mountains and fjords">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(4)"
-                    alt="Northern Lights">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(5)"
-                    alt="Nature and sunrise">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="/images/jeans.jpeg" style="width:100%" onclick="currentSlide(6)"
-                    alt="Snowy Mountains">
-                </div>
-              </div>
-              <div class="action_buttons">
-
-                <a href="" id="like_deal"> <button type="button">Like for later</button></a>
-                <a href="<%= deal.affiliateLink %>"><button type="button">Buy Now</button></a>
-                <button type="button">Report</button>
-              </div>
-
-            </div>
-            <div class="deal_info">
-              <div class="deal_heading">
-                <%= deal.dealName %>
-              </div>
-              <div class="deal_price">
-                <%= `${deal.mrp}` %> 80%OFF <%=` ${deal.dealPrice}` %>
-              </div>
-              <div class="deal_price" style="display: flex;">
-                <h3 style="margin-right: 2rem;"> <%= deal.owner %> </h3>
-                <div class="profile_area_subs" style="margin-right: 0 !important; margin-top: 0 !important;">
-
-                  <h6 class="heading-normal"><button id="subscribe_btn">Subscribe</button></h6>
-
-                </div>
-              </div>
-              <div class="paragraph" style="margin-top: 2rem;">
-                <%= deal.biggerDis %>
-              </div>
-            </div>
-            <div class="comment_section">
-              <h2>Please Enter your Review</h2>
-              <textarea name="comment_section" id="" cols="110" rows="10"></textarea>
-              <button type="button">Submit</button>
-            </div>
-            <% for( var review of deal.reviews ) { %>
-            <div>
-              <h3 style="margin-top: 1rem;"><%= review.user.name %> </h6>
-                <p class="paragraph"> <%= review.review  %> </p>
-            </div>
-            <% } %>
-        </section> -->
         
   </div>
   <div class="reviews" id="reviews">
@@ -745,19 +678,6 @@
         document.getElementById("editDiv").style.display ='block'; 
 
       }
-    // else{
-      //  el.form.submit();
-    //    window.setTimeout(() => {
-         //       location.assign('/');
-       // }, 100);
-      
-     // }
-
-     // document.getElementById('delete_btn').addEventListener('click', e => {
-        //  document.getElementById('popupDelete').style.display = 'none'; 
-        
-     // });
-
         
     }
 </script>
@@ -781,34 +701,6 @@
       }
     }
   </script>
-
-  <div class="popup" id="popupLikeLike">
-    <!-- <div class="bg-video">
-      <video  class="bg-video_content" autoplay loop muted>
-          <source src="sass/img/coverr-philippines-spices-1559212666899.mp4" type="video/mp4">
-      </video>
-  </div> -->
-    <div class="popup_content">
-
-
-      <div class="popup_left"><img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
-          class="popup_img">
-        <!-- <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi" class="popup_img"> -->
-      </div>
-      <div class="popup_right">
-        <div class="popup_cross" id="popup_crosslikelike">&times;</div>
-        <h1 class="heading-secondary popup_heading center">about us</h1>
-        <p class="paragraph popup_paragraph">Thapar FLIKELIKEd Festival is the most magnificent and awe-inspiring
-          festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to content the
-          ever-growing foodie in you. TFF is not just a festival, but also a mission to let food break barriers and make
-          everyone happy on a common stage. We are a journey, ever-growing indulging masses in merry-making. Come,
-          experience edible infinity.</p>
-
-      </div>
-
-      <button id="likelike_btn_deal">Signup/Login</button>
-    </div>
-  </div>
 
   <script>
 
@@ -877,12 +769,6 @@
   </script>
  
   <script>
-
-      // document.getElementById("like_deal").addEventListener("click", (e) => {
-      //   e.preventDefault();
-
-      //   passvalueo();
-      // });
 
   </script>
   <script>

@@ -31,7 +31,12 @@
 <body>
     
     <%- include('partials/navbar.ejs') %>
-    <%- include('partials/sidebar.ejs') %> 
+    <%- include('partials/sidebar.ejs') %>
+    
+    
+    <%
+        const WL = ["https://chat.whatsapp.com/LGhpgcdjnRTG5IPsHtmuTh", "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN"];
+    %>
 
     <div class="page-content">
          <div class="header_small">
@@ -45,13 +50,15 @@
                 <li class="header_small-nav-item">Women</li>
                 <li class="header_small-nav-item">Men</li>
                     </ul>
-            <div class="whats_div">
-                <i class="fa fa-whatsapp" aria-hidden="true" style="
-                color: green;"></i>
-            </div>
-                <!-- <li class="header_small-nav-item"></li> -->
+            <a href=<%= WL[numberG] %> id="aTag">
+                <div class="whats_div" style="cursor: pointer;" onclick="incrementGC()">
+                    <i class="fa fa-whatsapp" aria-hidden="true" style="
+                    color: green;"></i>
+                </div>
+            </a>
             
             </div>
+
 <div class="slideshow-container">
            
             <div class="corousel_box-large">
@@ -90,7 +97,7 @@
         <a href="#">
             <div class="mainpage_titles">Hot Deals</div>
         </a>
-        <a href="#"><div class="mainpage_titles-options">See All</div></a>
+        <a href="/trending"><div class="mainpage_titles-options">See All</div></a>
 </div>
 
         <div id="trending" class="trending">
@@ -273,16 +280,6 @@
 
                             </div>
                             <% } %>
-
-                            <!-- <div class="carousel-item" >
-                            <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                alt="Deal Photo" class="deal-photo">
-
-                        </div>
-                        <div class="carousel-item" >
-                            <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
-
-                        </div> -->
                         </div>
 
                         <div class="card-text">
@@ -359,7 +356,7 @@
                 <span class="heading-normal">Show Less</span>
             </a>
         </div>
-        <% if (user && !subDeals  && subsDeals.length != 0 ) { %>
+        <% if (user && subDeals.length != 0 ) { %>
          
         
         <div class="titles_main">
@@ -367,17 +364,9 @@
                 <div class="mainpage_titles">Subscribed Deals</div>
             </a>
             <a href="#"><div class="mainpage_titles-options">See All</div></a>
-            <!-- <hr> -->
         </div>
        
 <% for( var oneSub of subDeals) { %>
-
-
-
-
-       
-        <!-- <hr> -->
-
         <div id="trending" class="trending">
 
             <%  var i = 0; %>
@@ -442,16 +431,6 @@
 
                             </div>
                             <% } %>
-
-                            <!-- <div class="carousel-item" >
-                                <img src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                                    alt="Deal Photo" class="deal-photo">
-
-                            </div>
-                            <div class="carousel-item" >
-                                <img src="/images/jeans.jpeg" alt="Deal Photo" class="deal-photo">
-
-                            </div> -->
                         </div>
 
                         <div class="card-text">
@@ -462,7 +441,6 @@
                                     <h3 class="product_name_mainp">
                                         <%= deal.dealName %>
                                     </h3>
-                                    <!-- <h3 class= "product_name_mainp">Product Name</h3> -->
                                     <div>
                                         <a class="aff_name" href=<%= `/member/${deal.user}` %>><%= deal.owner %><i
                                                 class=" mp_aff-name-tag fas fa-check-circle"></i> </a>
@@ -475,7 +453,6 @@
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
                                         <li style="font-weight: 400;">
                                         </li>
                                     </div>
@@ -525,9 +502,6 @@
                                 </select>
                             </form>
                             <% } %>
-
-                            <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
-
                         </div>
 
                     </div>
@@ -562,11 +536,8 @@
                     <div class="mainpage_titles">Recommended</div>
                 </a>
                 <a href="#"><div class="mainpage_titles-options">See All</div></a>
-                <!-- <hr> -->
             </div>
            
-        <!-- <hr> -->
-
         <div id="recommended" class="trending">
 
             <%  var i = 0,n = 0; %>
@@ -619,8 +590,6 @@
 
                                         <div class="aff_name">
                                             <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a>
-                                            <!-- <div style="display: inline-block">
-                                        </div> -->
                                         </div>
 
 
@@ -628,7 +597,6 @@
                                             <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %>
                                                 </span>
                                                 <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                                <!-- <span class="price_dis">(70%)</span> </li> -->
                                             <li style="font-weight: 400;">
                                             </li>
                                         </div>
@@ -668,9 +636,6 @@
                                         <option value=<%= `${deal._id}/like` %>>Like</option>
                                     </select>
                                 </form>
-
-                                <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
-
                             </div>
 
                         </div>
@@ -739,7 +704,6 @@
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
                                         <li style="font-weight: 400;">
                                     </div>
 
@@ -808,11 +772,8 @@
                         <div class="mainpage_titles">Recommended</div>
                     </a>
                     <a href="#"><div class="mainpage_titles-options">See All</div></a>
-                    <!-- <hr> -->
                 </div>
                
-        <!-- <hr> -->
-
         <div id="recommended" class="trending">
 
             <%  var i = 0,n = 0; %>
@@ -865,8 +826,6 @@
 
                                         <div class="aff_name">
                                             <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a>
-                                            <!-- <div style="display: inline-block">
-                                        </div> -->
                                         </div>
 
 
@@ -914,9 +873,6 @@
                                         <option value=<%= `${deal._id}/like` %>>Like</option>
                                     </select>
                                 </form>
-
-                                <!-- <div id="three-dots" class="three-dots" onclick="report(this)">&#8230</div> -->
-
                             </div>
 
                         </div>
@@ -985,7 +941,6 @@
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
                                         <li style="font-weight: 400;">
                                     </div>
 
@@ -1051,11 +1006,8 @@
                 <div class="mainpage_titles">Live Deals</div>
             </a>
             <a href="#"><div class="mainpage_titles-options">See All</div></a>
-            <!-- <hr> -->
         </div>
        
-        <!-- <hr> -->
-
         <div id="live" class="trending">
 
             <%  var i = 0; %>
@@ -1106,14 +1058,12 @@
 
                                         <div class="aff_name">
                                             <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> </a>
-                                            <!-- <a href=<%= `/member/${deal.user}` %>><%= deal.owner %> --- Reports:<%= deal.reportCount %>  </a><br> -->
                                         </div>
 
                                         <div class="monetory_values_mp">
                                             <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %>
                                                 </span>
                                                 <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                                <!-- <span class="price_dis">(70%)</span> </li> -->
                                             <li style="font-weight: 400;">
                                             </li>
                                         </div>
@@ -1225,7 +1175,6 @@
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
                                         <li style="font-weight: 400;">
                                     </div>
 
@@ -1292,7 +1241,6 @@
                     <div class="mainpage_titles">News</div>
                 </a>
                 <a href="#"><div class="mainpage_titles-options">See All</div></a>
-                <!-- <hr> -->
             </div>
            
             <div class="main-content2">
@@ -1333,7 +1281,6 @@
                         class="popup_news_img">
                 </div>
                 <div class="popup_news_right">
-                    <!-- <div class="popup_cross" id="popup_crosslike">&times;</div> -->
                     <h1 class="heading-secondary popup_news_heading center">about us</h1>
                     <p class="paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
                         festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
@@ -1353,7 +1300,6 @@
                         class="popup_news_img">
                 </div>
                 <div class="popup_news_right">
-                    <!-- <div class="popup_cross" id="popup_crosslike">&times;</div> -->
                     <h1 class="heading-secondary popup_news_heading center">about us</h1>
                     <p class="paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
                         festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
@@ -1373,7 +1319,6 @@
                         class="popup_news_img">
                 </div>
                 <div class="popup_news_right">
-                    <!-- <div class="popup_cross" id="popup_crosslike">&times;</div> -->
                     <h1 class="heading-secondary popup_news_heading center">about us</h1>
                     <p class="paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
                         festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
@@ -1394,19 +1339,11 @@
                     <div class="mainpage_titles">Recently Viewed</div>
                 </a>
                 <a href="#"><div class="mainpage_titles-options">See All</div></a>
-                <!-- <hr> -->
             </div>
-           
-        <!-- <hr> -->
 
         <div class="main-content">
             <div class="owl-carousel owl-theme">
-
-
-
                 <% for(var deal of recentlyViewed){ %>
-
-
                 <div class="card">
 
                     <div class="card__face">
@@ -1451,7 +1388,6 @@
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
                                             <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <!-- <span class="price_dis">(70%)</span> </li> -->
                                         <li style="font-weight: 400;">
 
                                         </li>
@@ -1507,17 +1443,12 @@
 
         <hr class="above_newsletter">
 
-        <%
-            const WL = ["https://chat.whatsapp.com/LGhpgcdjnRTG5IPsHtmuTh", "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN"];
-        %>
-
-        <script>
+    <script>
             const counter = "<%= groupC %>";
-            console.log(counter);
-            if(counter==3){
+            if(counter==256){
                 document.getElementById("aTag").href = "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN";
             }
-        </script>
+    </script>
 
         <div class="newsletter">
             
@@ -1757,7 +1688,7 @@
         }
 
     </script>
-    <!-- <script src="/js/reportPatch.js"></script> -->
+    
     <script>
         function dealOperations(el) {
             console.log($(el).val());
@@ -1774,13 +1705,6 @@
             document.getElementById('report_btn').addEventListener('click', e => {
                 document.getElementById('popup').style.display = 'none';
                 passvalueR(dealKiId, reporter, reportCount);
-                // passvaluePa(dealKiId,reportCount);
-
-                //el.form.submit();
-
-                // window.setTimeout(() => {
-                //         location.assign('/');
-                // }, 100);
             });
 
             document.getElementById('like_btn').addEventListener('click', e => {
@@ -1788,13 +1712,6 @@
                 passvalueo(dealKiId, reporter);
             });
         }
-    //Use the id of the form instead of #change
-    // $('#change').change(function(){
-    //     //this is just getting the value that is selected
-    //     // var title = $(this).val();
-    //     // $('.modal-title').html(title);
-    //     $('.popup').modal('show');
-    // });
     </script>
     <div class="popup" id="popup">
         <div class="popup_right">
@@ -1818,33 +1735,6 @@
         </div>
     </div>
 
-    <!-- <div class="popup" id="popupLike">
-        <div class="popup_content">
-            <div class="popup_right">
-                <div class="popup_cross" id="popup_crosslike">&times;</div>
-                <h1 class="heading-secondary popup_heading center">about us</h1>
-                <p class="paragraph popup_paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
-                    festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard to
-                    content the ever-growing foodie in you. TFF is not just a festival, but also a mission to let food
-                    break barriers and make everyone happy on a common stage. We are a journey, ever-growing indulging
-                    masses in merry-making. Come, experience edible infinity.</p>
-            </div>
-            <button id="like_btn">Like</button>
-        </div>
-    </div> -->
-    <!-- <script>
-        document.getElementById('homie').addEventListener('click', e => {
-            e.preventDefault();
-            document.getElementById('popup').style.opacity = 1;
-            document.getElementById('popup').style.visibility = 'visible';
-            window.setTimeout(() => {
-
-                document.getElementById('popup').style.opacity = 0;
-
-                document.getElementById('popup').style.visibility = 'hidden';
-            }, 3000);
-        });
-    </script> -->
     <script>
         document.getElementById('popup_cross').addEventListener('click', e => {
             document.getElementById('popup').style.display = 'none';
@@ -1872,16 +1762,6 @@
             document.getElementById('popup_news3').style.display = 'block';
         });
     </script>
-
-<script>
-    $(function () {
-  "use strict";
-  $(".pCard_add").click(function () {
-    $(".pCard_card").toggleClass("pCard_on");
-    $(".pCard_add i").toggleClass("fa-minus");
-  });
-});
-</script>
 
 </body>
 

@@ -53,7 +53,8 @@
       </a>
 
       <% if (user) { %>
-      <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
+        <% if (subs.length != 0 ) { %>
+          <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
         SUBSCRIPTIONS
       </h3>
        <% var i = 0; %>
@@ -124,9 +125,16 @@
           <span class="heading-normal">Show Less</span>
         </a>
       </div>
+          <% } else {%>
+            <h1 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem;">
+              SUBSCRIPTIONS
+            </h1>
+              <h3 class="heading-normal" style="margin: 0 auto; border-bottom: 1px solid rgb(212,211,211); color: rgb(100, 96, 96); padding-left: 1rem;">You have not yet subscribed to any user</h3>
+          <% } %>
+
       <% } else {%>
         <h3 class="heading-normal" style="margin: 1rem 0.5rem 0.5rem 1.8rem">
-          Sign-in to like deals subscribe and earn
+          Sign in to like deals subscribe and earn
         </h3>
         <div class="deal-deets_buttons" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem">
           <a href="" class="sidebar_button"> <i

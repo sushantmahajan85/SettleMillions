@@ -1876,7 +1876,8 @@ figure {
 
 .cover {
   width: 100%;
-  height: 30rem; }
+  height: 30rem;
+  font-family: "Montserrat", sans-serif; }
 
 .cover_pic {
   height: 30rem;
@@ -1960,7 +1961,6 @@ figure {
     font-size: 3rem;
     color: #f4f6f7;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.3;
     position: absolute;
     top: 15%;
@@ -1974,7 +1974,6 @@ figure {
     font-size: 1.8rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 30%;
@@ -1983,7 +1982,6 @@ figure {
     font-size: 1.3rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 45%;
@@ -1994,7 +1992,6 @@ figure {
     font-size: 1.8rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 80%;
@@ -2003,7 +2000,6 @@ figure {
     font-size: 1.8rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 80%;
@@ -2011,7 +2007,6 @@ figure {
   .cover_aff-views, .cover_aff-youtube, .cover_aff-fb, .cover_aff-blog {
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute; }
   .cover_aff-views {
@@ -2034,7 +2029,6 @@ figure {
     font-size: 3rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
@@ -2043,7 +2037,6 @@ figure {
     font-size: 3rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
@@ -2052,7 +2045,6 @@ figure {
     font-size: 3rem;
     color: #f4f6f7;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
@@ -2069,7 +2061,6 @@ figure {
       transform: translateY(-3px); }
     .cover_aff-subs-button-txt {
       font-size: 1.6rem;
-      font-family: Arial, Helvetica, sans-serif;
       color: #0c8bcf; }
   .cover_aff-cust-button {
     padding: 0.5rem 1.5rem;
@@ -2083,7 +2074,6 @@ figure {
       transform: translateY(-3px); }
     .cover_aff-cust-button-txt {
       font-size: 1.6rem;
-      font-family: Arial, Helvetica, sans-serif;
       color: #0c8bcf; }
 
 .latest-deals {
@@ -2097,7 +2087,6 @@ figure {
     font-size: 3rem;
     color: #a6acaf;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.3;
     position: absolute;
     top: 5%;
@@ -2224,7 +2213,6 @@ figure {
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   margin-top: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 1.5rem; }
 
 .mep_deal-r1 {
@@ -2232,7 +2220,6 @@ figure {
   color: #626567;
   margin-left: 0.3rem; }
   .mep_deal-r1-det {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-right: 1rem; }
@@ -2245,7 +2232,6 @@ figure {
   margin-left: 0.3rem;
   line-height: 2rem; }
   .mep_deal-r2-det {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-right: 1rem; }
     .mep_deal-r2-det:hover {
@@ -2257,12 +2243,10 @@ figure {
   .mep_deal-r3-dp {
     font-weight: 500;
     color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     margin-right: 1rem;
     margin-bottom: -0.5rem; }
   .mep_deal-r3-mrp {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
     font-weight: 400;
     color: #8d99ae;
@@ -2274,7 +2258,6 @@ figure {
     color: #d10024;
     font-size: 1.7rem;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
     margin-right: 1rem;
     margin-bottom: -0.5rem;
     padding: 5px 0; }
@@ -2284,7 +2267,6 @@ figure {
   color: #626567;
   margin-left: 0.3rem; }
   .mep_deal-r4-det {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-right: 1rem; }
     .mep_deal-r4-det:hover {
@@ -2299,6 +2281,28 @@ figure {
   height: 26rem;
   width: 100%;
   padding: 0rem; }
+
+#analyticsForm {
+  padding-left: 15%;
+  padding-top: 20%;
+  font-family: "Montserrat", sans-serif; }
+
+#analyticsInput {
+  padding: 1rem 20rem 1rem 1rem;
+  background-color: #e9e5e5;
+  border: none !important;
+  border-radius: 0.5rem; }
+
+.generated {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 43rem;
+  left: 23rem;
+  color: #110e0e;
+  background-color: #d4d3d3;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem; }
 
 .user-view {
   background-color: #fff;
@@ -2449,7 +2453,6 @@ figure {
     transform: scale(1.1); }
 
 .containerSettings {
-  background-color: #ecf0f1;
   height: 210rem;
   position: relative;
   margin: 0 auto;
@@ -2486,7 +2489,7 @@ figure {
   padding-left: 5rem;
   float: right;
   width: 77%;
-  height: 95%;
+  height: 110.9%;
   background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;

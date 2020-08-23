@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Analytics</title>
-   <link rel="stylesheet" href="/sass/css/style.css">
-
-</head>
-<body>
-
-   <div style="height: 12vh;">
-      <%- include('partials/navbar.ejs') %>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics</title>
+    <link rel="stylesheet" href="/sass/css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %> <%- include('partials/sidebar.ejs') %>
 
     <form id="analyticsForm">
-      <h1 class="Post-box-title">Analytics</h1>
-
-          <input placeholder="Link...(Required)" id="analyticsInput" />
-          <!-- <input placeholder="Campaign Source...(Required)" />
+      <button id="copied" onclick="coping()">copy</button>
+      <h1 class="Post-box-title">
+        Make your own links and <span style="color: #d10024;">earn</span>
+      </h1>
+      <div style="margin-top: 1rem;">
+        <input placeholder="Link...(Required)" id="analyticsInput" />
+        <!-- <input placeholder="Campaign Source...(Required)" />
           <input placeholder="Campaign ------...(Required)" /> -->
-          <button type="submit" id="analytics">Do Analytics</button>
-   </form>
+        <button type="submit" id="analytics" class="deal-deets_subs">
+          Generate
+        </button>
+      </div>
+    </form>
 
-   <div>
-    <% for(var campaign of dataAnalytics){ %>
-       <div><%= campaign.Campaign %></div>
-       <div><%= campaign["New users"] %></div>
-    <% } %>
-   </div>
+    <div>
+      <% for(var campaign of dataAnalytics){ %>
+      <div><%= campaign.Campaign %></div>
+      <div><%= campaign["New users"] %></div>
+      <% } %>
+    </div>
 
-   <!-- <div class="footer">
+    <!-- <div class="footer">
       <div class="footer-content">
           <div class="footer-section about">
               <h2>About</h2>
@@ -101,22 +103,39 @@
       </div>
    </div> -->
 
-   <script>
-      console.log('chal');
+    <script>
+      console.log("chal");
 
-      document.getElementById("analyticsForm").addEventListener("submit", (e) => {
-         e.preventDefault();
-         var url = document.getElementById("analyticsInput").value;
-         console.log(url);
+      document
+        .getElementById("analyticsForm")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          var url = document.getElementById("analyticsInput").value;
+          console.log(url);
 
-         var affURL = `${url}?utm_source=userId&utm_medium=userId&utm_campaign=userId`;
-         var newDiv = document.createElement("div"); 
-         var newContent = document.createTextNode(affURL); 
-         newDiv.appendChild(newContent); 
+          var affURL = `${url}?utm_source=userId&utm_medium=userId&utm_campaign=userId`;
+          var newDiv = document.createElement("div");
 
-         document.body.insertBefore(newDiv, analyticsForm); 
-      });
-   </script>
+          var newContent = document.createTextNode(affURL);
 
-</body>
+          newDiv.classList.add("generated");
+          document.body.insertBefore(newDiv, analyticsForm);
+        });
+    </script>
+    <script>
+      function coping() {
+        var copyText = document.getElementsByClassName("generated");
+        console.log(copyText);
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+
+        /* Alert the copied text */
+        alert("Copied the text: " + copyText.value);
+      }
+    </script>
+  </body>
 </html>

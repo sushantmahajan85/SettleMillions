@@ -44,7 +44,7 @@
 
         <div class="cover_aff-deals">335 deals</div>
         <div class="cover_aff-space1">|</div>
-        <div class="cover_aff-likes">720 likes</div>
+        <div class="cover_aff-likes">2M views</div>
         <div class="cover_aff-space2">|</div>
         <div class="cover_aff-views">2M views</div>
         <div class="cover_aff-space3">|</div>
@@ -57,9 +57,24 @@
           <span>blog</span></a>
         </div>
         
+  
+          <% if (user) { %>
+
+            <% if (log) { %>
+              <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
+                <h6 class="cover_aff-subs-button-txt" id="unsubscribe_btn">Unsubscribe</h6>
+              </a>
+              <% } else { %>
         <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
-          <h6 class="cover_aff-subs-button-txt">Subscribe</h6>
+          <h6 class="cover_aff-subs-button-txt" id="subscribe_btn">Subscribe</h6>
         </a>
+        <% } %>
+  
+          <% }else{ %>
+            <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
+              <h6 class="cover_aff-subs-button-txt" id="subscribe_btn_no">Subscribe</h6>
+            </a>
+            <% } %>
         <a href="#" id="customize_btn" class="cover_aff-cust-button">
           <h6 class="cover_aff-cust-button-txt">Customize</h6>
         </a>
@@ -150,14 +165,12 @@
               <!-- <a href="" class="ld_deal-r1-det"><%= deal.owner %></a> -->
               <div class="mep_deal-r1-det"><%= deal.owner %></div>
               <!-- <a href="" class="ld_deal-r1-det">Flipkart</a> -->
-              <div class="mep_deal-r1-det">Flipkart</div>
+              <div class="mep_deal-r1-det"><%= deal.company %></div>
               <div class="mep_deal-r1-det">May 2020</div>
             </div>
 
             <div class="mep_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
-              <div class="mep_deal-r2-det">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              <div class="mep_deal-r2-det"><%= deal.biggerDis %></div>
             </div>
 
 
@@ -169,8 +182,8 @@
               </div> -->
 
             <div class="mep_deal-r3" style="display: flex;flex-direction: row ">
-              <div class="mep_deal-r3-dp">₹999</div>
-              <div class="mep_deal-r3-mrp">₹1999</div>
+              <div class="mep_deal-r3-dp">₹<%= deal.dealPrice %></div>
+              <div class="mep_deal-r3-mrp">₹<%= deal.mrp %></div>
               <div class="mep_deal-r3-dis">50% OFF</div>
             </div>
 
@@ -188,7 +201,7 @@
               </div> -->
 
             <div class="mep_deal-r4" style="display: flex;flex-direction: row">
-              <div class="mep_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div>
+              <!-- <div class="mep_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div> -->
               <div class="mep_deal-r4-det"><i id="img_mep_deal_views"
                   class="far fa-eye"></i><%= `${deal.views} views` %> </div>
             </div>
@@ -342,6 +355,8 @@
        document.getElementById('popupDelete').style.display = 'none'; 
    });
 </script>
+
+<!-- <script src="/js/subscribe.js"></script> -->
     <script src="/js/subscribe.js"></script>
     <div class="popup" id="popup">
       

@@ -1,0 +1,25 @@
+#analyticsForm {
+  padding-left: 15%;
+  padding-top: 20%;
+  font-family: $family2;
+}
+#analyticsInput {
+  padding: 1rem 20rem 1rem 1rem;
+  background-color: rgb(233, 229, 229);
+  border: none !important;
+  border-radius: 0.5rem;
+}
+.generated {
+  //   padding-left: 20rem;
+  //   padding-top: 20rem;
+  font-family: $family2;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 43rem;
+  left: 23rem;
+  //   border: 2px solid $maroon;
+  color: rgb(17, 14, 14);
+  background-color: rgb(212, 211, 211);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}

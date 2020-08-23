@@ -2450,7 +2450,6 @@ figure {
     transform: scale(1.1); }
 
 .containerSettings {
-  background-color: #ecf0f1;
   height: 210rem;
   position: relative;
   margin: 0 auto;
@@ -2487,7 +2486,7 @@ figure {
   padding-left: 5rem;
   float: right;
   width: 77%;
-  height: 95%;
+  height: 110.9%;
   background-color: #fbfcfc;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
   margin-right: 2rem;

@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/css/style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/sass/css/style.css" />
+    <title>Update</title>
+  </head>
 
-  <title>Update</title>
-</head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
 
-<body>
-  <%- include('partials/navbar.ejs') %>
+    <div class="containerSettings">
+      <div class="leftbox">
+        <div class="leftbox_element">
+          <i class="fas fa-cog leftbox_icon"></i>
+          <a href="#generalSettings">General Settings</a>
+        </div>
+        <div class="leftbox_element">
+          <i class="fas fa-star leftbox_icon"></i>
+          <a href="#aboutme">About Me</a>
+        </div>
+        <div class="leftbox_element">
+          <i class="fas fa-lock leftbox_icon"></i>
+          <a href="#securityLogin">Security & Login</a>
+        </div>
 
-  <div class="containerSettings">
-    <div class="leftbox">
-      <!-- <nav>
-          <a id="profile" class="active"><i class="fa fa-user"></i></a>
-          <a id="payment"><i class="fa fa-credit-card"></i></a>
-          <a id="subscription"><i class="fa fa-tv"></i></a>
-          <a id="privacy"><i class="fa fa-tasks"></i></a>
-          <a id="settings"><i class="fa fa-cog"></i></a> 
-      </nav> -->
-      <div class="leftbox_element">
-        <i class="fas fa-cog leftbox_icon"></i>
-        <a href="#generalSettings">General Settings</a>
+        <div class="leftbox_element">
+          <i class="fas fa-heart leftbox_icon"></i>
+          <a href="">My Liked Deals</a>
+        </div>
+        <div class="leftbox_element">
+          <i class="fas fa-sign-out-alt leftbox_icon"></i>
+          <a href="">Logout</a>
+        </div>
       </div>
-      <div class="leftbox_element">
-        <i class="fas fa-lock leftbox_icon"></i>
-        <a href="#securityLogin">Security & Login</a>
-      </div>
-      <!-- <div class="leftbox_element">
-        <i class="fas fa-star leftbox_icon"></i>
-        <a href="#reviewsRatings">My Reviews & Ratings</a>
-      </div> -->
-      <div class="leftbox_element">
-        <i class="fas fa-heart leftbox_icon"></i>
-        <a href="">My Liked Deals</a>
-      </div>
-      <div class="leftbox_element">
-        <i class="fas fa-sign-out-alt leftbox_icon"></i>
-        <a href="">Logout</a>
-      </div>
-    </div>
-    <!-- <div class="leftbox leftbox_second"> -->
+      <!-- <div class="leftbox leftbox_second"> -->
       <!-- <div class="leftbox_second_element">
         <p>Frequently Visited</p>
       </div> -->
@@ -50,80 +43,95 @@
         <a href="#securityLogin">Change Password</a>
         <a href="">Help Center</a>
       </div> -->
-    <!-- </div> -->
-    <div class="rightbox">
-      <div class="user-view__content">
-        <div class="user-view__form-container">
-          <h2 class="heading-secondary" id="generalSettings">General Settings</h2>
-          <form class="form form-user-data" id="form-user-data">
-            <div class="form__group form__photo-upload">
-              <img class="form__user-photo" src=<%=`/img/users/${user.photo}`%> alt="User photo" />
-              <input type="file" accept="image/*" class="form__upload" id="photo" name="photo" />
-              <label for="photo">Choose new photo</label>
-              <!-- <a class="btn-update-settings-text" href=""
+      <!-- </div> -->
+      <div class="rightbox">
+        <div class="user-view__content">
+          <div class="user-view__form-container">
+            <h2 class="heading-secondary" id="generalSettings">
+              General Settings
+            </h2>
+            <form class="form form-user-data" id="form-user-data">
+              <div class="form__group form__photo-upload">
+                <img class="form__user-photo"
+                src=<%=`/img/users/${user.photo}`%> alt="User photo" />
+                <input
+                  type="file"
+                  accept="image/*"
+                  class="form__upload"
+                  id="photo"
+                  name="photo"
+                />
+                <label for="photo">Choose new photo</label>
+                <!-- <a class="btn-update-settings-text" href=""
                   >Choose new photo</a
                 > -->
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="name">Username</label><input class="form__input" id="name" type="text"
-                value=<%= user.name %> />
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="email">Email address</label><input class="form__input" id="email"
-                type="email" value=<%=
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="name">Username</label><input
+                class="form__input" id="name" type="text" value=<%= user.name %>
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">Email address</label
+                ><input class="form__input" id="email" type="email" value=<%=
                 user.email %> />
-            </div>
-            
-            <div class="form__group">
-              <label class="form__label" for="mobileno">Mobile Number</label>
-              <input class="form__input" type="number" id="mobileno" />
-            </div>
+              </div>
 
-            <div class="form__group gender_option">
-              <label class="form__label" for="gender">Gender</label>
-              <input type="radio" id="male" name="gender" value="male">
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label>
-              <input type="radio" id="other" name="gender" value="other">
-              <label for="other">Other</label>
-            </div>
-            <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
+              <div class="form__group">
+                <label class="form__label" for="mobileno">Mobile Number</label>
+                <input class="form__input" type="number" id="mobileno" />
+              </div>
+
+              <div class="form__group gender_option">
+                <label class="form__label" for="gender">Gender</label>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" />
+                <label for="other">Other</label>
+              </div>
+              <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
               class="profile1 " /> -->
-            <div class="form__group right">
-              <button class="btn-update-settings">
-                Save settings
-              </button>
-            </div>
-          </form>
-        </div>
-        <hr class="user_settings_divider" />
-        <div class="line">&nbsp;</div>
-        <div class="user-view__form-container">
-          <h2 class="heading-secondary" id="securityLogin">Security & Login</h2>
-          <form class="form form-user-settings " id="pass">
-            <div class="form__group">
-              <label class="form__label" for="password-current">Current Password</label><input class="form__input"
-                id="current" type="password" placeholder="••••••••" required="required" minlength="8" />
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="password">New Password</label><input class="form__input" id="npassword"
-                type="password" placeholder="••••••••" required="required" minlength="8" />
-            </div>
-            <div class="form__group ma-bt-lg">
-              <label class="form__label" for="password-confirm">Confirm New Password</label><input class="form__input"
-                id="cpassword" type="password" placeholder="••••••••" required="required" minlength="8" />
-            </div>
-            <div class="form__group right">
-              <button class="btn-update-settings">
-                Save password
-              </button>
-              <button class="user_settings_forgot_password">
-                Forgot Password
-              </button>
-            </div>
-          </form>
-          <!-- <div class="user_settings_sub_heading">
+              <div class="form__group right">
+                <button class="btn-update-settings">
+                  Save settings
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <hr class="user_settings_divider" />
+          <div class="line">&nbsp;</div>
+          <div class="user-view__form-container">
+            <h2 class="heading-secondary" id="aboutme">
+              About Me
+            </h2>
+            <form class="form form-user-settings " id="pass">
+              <div class="form__group">
+                <label class="form__label" for="password">Your Bio</label
+                ><input class="form__input" id="" type="text" placeholder="" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="password">Youtube Link</label
+                ><input class="form__input" id="" type="text" placeholder="" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="password">Blog Link</label
+                ><input class="form__input" id="" type="text" placeholder="" />
+              </div>
+              <div class="form__group ma-bt-lg">
+                <label class="form__label" for="password-confirm"
+                  >Facebook</label
+                ><input class="form__input" id="" type="text" placeholder="" />
+              </div>
+              <div class="form__group right">
+                <button class="btn-update-settings">
+                  Update Settings
+                </button>
+              </div>
+            </form>
+            <!-- <div class="user_settings_sub_heading">
             Two-Factor Authentication
           </div>
           <form class="form form-user-data" id="form-user-data">
@@ -135,17 +143,82 @@
               </button>
             </div>
           </form> -->
-          <div class="user_settings_sub_heading">
-            <a class="us_delete_acc"  href="">Delete Account</a>
-             
           </div>
-          <!-- <button class="btn-update-settings" id="deleteAccount">
+
+          <hr class="user_settings_divider" />
+          <div class="line">&nbsp;</div>
+          <div class="user-view__form-container">
+            <h2 class="heading-secondary" id="securityLogin">
+              Security & Login
+            </h2>
+            <form class="form form-user-settings " id="pass">
+              <div class="form__group">
+                <label class="form__label" for="password-current"
+                  >Current Password</label
+                ><input
+                  class="form__input"
+                  id="current"
+                  type="password"
+                  placeholder="••••••••"
+                  required="required"
+                  minlength="8"
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="password">New Password</label
+                ><input
+                  class="form__input"
+                  id="npassword"
+                  type="password"
+                  placeholder="••••••••"
+                  required="required"
+                  minlength="8"
+                />
+              </div>
+              <div class="form__group ma-bt-lg">
+                <label class="form__label" for="password-confirm"
+                  >Confirm New Password</label
+                ><input
+                  class="form__input"
+                  id="cpassword"
+                  type="password"
+                  placeholder="••••••••"
+                  required="required"
+                  minlength="8"
+                />
+              </div>
+              <div class="form__group right">
+                <button class="btn-update-settings">
+                  Save password
+                </button>
+                <button class="user_settings_forgot_password">
+                  Forgot Password
+                </button>
+              </div>
+            </form>
+            <!-- <div class="user_settings_sub_heading">
+            Two-Factor Authentication
+          </div>
+          <form class="form form-user-data" id="form-user-data">
+            <div class="form__group">
+              <label class="form__label" for="phoneno"></label>
+              <input class="form__input" type="number" id="phoneno" />
+              <button class="btn-update-settings" id="twofactorauth">
+                Enable two-factor authentication
+              </button>
+            </div>
+          </form> -->
+            <div class="user_settings_sub_heading">
+              <a class="us_delete_acc" href="">Delete Account</a>
+            </div>
+            <!-- <button class="btn-update-settings" id="deleteAccount">
             Delete Account
           </button> -->
-        </div>
-        <hr class="user_settings_divider" />
-        <div class="line">&nbsp;</div>
-        <!-- <div class="user-view__form-container">
+          </div>
+
+          <hr class="user_settings_divider" />
+          <div class="line">&nbsp;</div>
+          <!-- <div class="user-view__form-container">
           <h2 class="heading-secondary" id="reviewsRatings">My Reviews & Ratings</h2>
           <div class="user-nav__user user-review settings_user_review">
             <img src="/img/users/default.jpg" alt="User Photo" class="user-nav__user-photo review-photo">
@@ -156,20 +229,19 @@
             </div>
           </div>
         </div> -->
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="vendor/initial.min.js"></script>
-  <script>
-    $(".profile").initial();
-  </script>
-  <script>
-    $(".profile1").initial();
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-  <script src="/js/userData.js"></script>
-  <script src="/js/password.js"></script>
-</body>
-
+    <script src="vendor/initial.min.js"></script>
+    <script>
+      $(".profile").initial();
+    </script>
+    <script>
+      $(".profile1").initial();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="/js/userData.js"></script>
+    <script src="/js/password.js"></script>
+  </body>
 </html>

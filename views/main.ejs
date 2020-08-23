@@ -16,8 +16,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
@@ -151,6 +151,7 @@
                 <div class="card">
                     <div class="card__face">
                         <div class="card__picture" data-pause="true" data-interval="1000">
+                            <div class="discount" style="position: absolute; top: 2%; right:2%; color: #d10024; background: none; border: 1.8px solid #d10024; height: 2.8rem; font-size: 1.5rem; padding: 0 0.5rem">-70%</div>
                             <div class="carousel-item active">
 
                                 <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo" class="deal-photo">
@@ -177,11 +178,11 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div>
-                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><%= deal.owner %><i
-                                                class=" mp_aff-name-tag fas fa-check-circle"></i> </a>
+                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                        </a>
                                     </div>
 
-
+                                    <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
 
                                     <div class="monetory_values_mp">
                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
@@ -212,7 +213,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="mp_like-rate">
+                                    <!-- <div class="mp_like-rate">
                                         <i class="mp_like_deal far fa-heart"></i>
                                         <span class="mp_like_deal">Like</span>
 
@@ -221,7 +222,7 @@
                                             <span class="mp_share_deal">Share</span>
                                         </div>
 
-                                    </div>
+                                    </div> -->
                                 </ul>
                             </div>
 
@@ -1539,6 +1540,8 @@
     <script src="/js/groupCount.js"></script>
     <script src="/js/likedDeal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script src="/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
     <script>
         $('.main-content .owl-carousel').owlCarousel({

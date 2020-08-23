@@ -1102,7 +1102,7 @@ figure {
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 44rem;
+  height: 41rem;
   width: 25.75rem;
   z-index: 1;
   margin: 0 0 4rem 0rem;
@@ -1175,10 +1175,9 @@ figure {
 .mp_dealbox_three-dots {
   float: right;
   position: absolute;
-  bottom: 0rem;
-  top: 17.3rem;
-  right: 0.5rem;
-  font-size: 2rem;
+  bottom: 20%;
+  right: 2%;
+  font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
   border-radius: 50%;

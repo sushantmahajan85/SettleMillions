@@ -999,6 +999,22 @@ exports.getMemberData = catchAsync(async (req, res) => {
   }
 
   const dealTime = await Deal.find({ user: req.params.id });
+  // console.log(dealTime);
+  // const totalLikes = await Deal.find({ user: req.params.id });
+  const totalLikes = await Deal.aggregate([{ 
+    // $match: {
+    //   user: req.params.id
+    // },
+    $group: { 
+        _id: "$user", 
+        total: { 
+            $sum: "$views" 
+        },
+        count: { $sum: 1 }
+    }
+  }]);
+  console.log(totalLikes);
+
   // console.log(rec);
   const deals = await Deal.find(
     { $text: { $search: rec } },

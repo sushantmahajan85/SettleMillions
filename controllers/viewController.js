@@ -740,7 +740,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       subDeals,
       groupC,
       numberG,
-      subs
+      subs,
     });
 
     // for (var deal of deals) {
@@ -1007,17 +1007,47 @@ exports.getMemberData = catchAsync(async (req, res) => {
     //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
   const userId = req.params.id;
+  if (req.logged) {
+    const xyz = await User.findById(req.logged.id);
+
+    // console.log(xyz);
+    if (xyz) {
+      const likeModel = await LikedDeal.findOneAndDelete({
+        deal: req.params.dealId,
+        user: xyz._id,
+      });
+      //console.log(likeModel);
+      res.locals.like = likeModel;
+    } else {
+      res.locals.like = null;
+    }
+
+    if (xyz) {
+      const subModel = await Subscriber.findOneAndDelete({
+        subscribedUser: req.params.id,
+        user: xyz._id,
+      });
+      console.log(subModel);
+      res.locals.log = subModel;
+    } else {
+      res.locals.log = null;
+    }
+  } else {
+    res.locals.like = null;
+    res.locals.log = null;
+  }
 
   const subs = await Subscriber.find({
     user: req.logged,
   });
 
-  // console.log(recommendedDeals);
+  // console.log(subs);
   res.status(200).render("members", {
     deals,
     userId,
     dealTime,
-    subs
+    // subModel,
+    subs,
   });
 });
 
@@ -1031,7 +1061,7 @@ exports.recently = catchAsync(async (req, res) => {
 
   res.status(200).render("recent", {
     deals,
-    subs
+    subs,
   });
 });
 

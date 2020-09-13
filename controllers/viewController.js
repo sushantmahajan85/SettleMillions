@@ -298,13 +298,11 @@ exports.autocomplete = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
-  const categoryDeals = await Deal.find({ category: "sport shoes" }).sort([
-    ["trendRatio", -1],
-  ]);
-  //console.log(categoryDeals);
+  // const categoryDeals = await Deal.find({ category: "sport shoes" }).sort([
+  //   ["trendRatio", -1],
+  // ]);
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    //console.log(joChahiye);
 
     // if (joChahiye[0] == "report") {
     //   await Deal.findOneAndUpdate(
@@ -555,31 +553,15 @@ exports.mainPage = catchAsync(async (req, res) => {
     rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
   }
 
-  //console.log(rec);
-  //const t = await Deal.find({ trendRatio: { $gte: 4 } });
-
-  // console.log(user);
-
-  // console.log(rec);
-
   const recommendedDeals = await Deal.find(
     { $text: { $search: rec } },
     { score: { $meta: "textScore" } }
-    //{ trendRatio: { $gte: 4 } }
   ).sort({ score: { $meta: "textScore" } });
-
-  // for(var k=cooCount; k<recommendedDeals.length; k++){
-  //   if(recommendedDeals[k].trendRatio < 4){
-  //     recommendedDeals[k] = undefined;
-  //   }
-  // }
 
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;
   }
-  // console.log(recommendedDeals);
   if (req.query.search || req.query.sort) {
-    // await Deal.ensureIndexes({ dealName: 'text' });
 
     function dynamicSort(property) {
       var sortOrder = 1;
@@ -588,46 +570,16 @@ exports.mainPage = catchAsync(async (req, res) => {
         property = property.substr(1);
       }
       return function(a, b) {
-        /* next line works with strings and numbers,
-         * and you may want to customize it to your needs
-         */
         var result =
           a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
         return result * sortOrder;
       };
     }
 
-    // const tempideals = await Deal.find();
-
-    // for (var deal of tempideals) {
-    //   var now = new Date(Date.now());
-    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
-    //   tem = deal.views / tem;
-
-    //   console.log(deal._id);
-
-    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    // }
-
-    //console.log(req.query.search);
-    // var regex = new RegExp(req.query["term"], "i");
-
     const deals = await Deal.find(
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
-    ).sort([[{ score: { $meta: "textScore" } }]]); //.sort({ score: { $meta: "textScore" } });
-    // console.log(deals);
-    // const dela = await deals.find().sort([[req.query.sort, 1]]);
-    // console.log(dela);
-    // const sortDeals = await deals.sort(views);
-    // console.log(sortDeals);
-    //res.status(200).render("search", { deals /*recommendedDeals*/ });
-
-    // const user = await User.findById(req.user.id);
-    // console.log(user);
-
-    // let sortBy = "trendRatio";
-    // let order = -1;
+    ).sort([[{ score: { $meta: "textScore" } }]]); 
 
     if (req.query.sort === "mrp") {
       deals.sort(dynamicSort("mrp"));
@@ -636,78 +588,27 @@ exports.mainPage = catchAsync(async (req, res) => {
       deals.sort(dynamicSort("-trendRatio"));
     }
 
-    // const deals = await Deal.find().sort([[`${sortBy}`, order]]);
-
-    // const regex = new RegExp(escapeRegex(req.query.search), "gi");
-    // var result = [];
-    // await Deal.find({
-    //   dealName: regex,
-    //   // owner: regex,
-    // }).then((usrs) => {
-    //   if (usrs && usrs.length && usrs.length > 0) {
-    //     usrs.forEach((user) => {
-    //       let obj = {
-    //         id: user._id,
-    //         label: user.dealName,
-    //       };
-
-    //       result.push(obj);
-    //     });
-    //   }
-    //   res.json(result);
-    // });
-    // //console.log(deals);
     res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
-    // let sortBy = "trendRatio";
-    // let order = -1;
-    // if (req.query.sort === "mrp") {
-    //   sortBy = "" + req.query.sort;
-    //   order = 1;
+    // const topUsersToday = await User.find().sort([["rankLatest", -1]]);
+    // var subDeals = new Array();
+    // const subs = await Subscriber.find({
+    //   user: req.logged,
+    // }).populate({
+    //   path: "subscribedDeals",
+    // });
+    // var rando = Math.floor(Math.random() * subs.length);
+
+    // for (var i = 0; i < subs.length; i++) {
+    //   subDeals.push(subs[rando]);
+    //   if (rando == subs.length - 1) {
+    //     rando = 0;
+    //   } else {
+    //     rando++;
+    //   }
     // }
-    // if (req.query.sort === "trendRatio") {
-    //   sortBy = "" + req.query.sort;
-    //   order = -1;
-    // }
-
-    // const tempDeals = await Deal.find();
-
-    // for (var deal of tempDeals) {
-    //   var now = new Date(Date.now());
-    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
-    //   tem = deal.views / tem;
-
-    //   console.log(deal._id);
-
-    //   deal.trendRatio = tem;
-    //   await deal.save();
-
-    //   // await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    // }
-
-    const topUsersToday = await User.find().sort([["rankLatest", -1]]);
-    // console.log(topUsersToday);
-
-    // const user = await User.findById(req.user);
-    var subDeals = new Array();
-    const subs = await Subscriber.find({
-      user: req.logged,
-    }).populate({
-      path: "subscribedDeals",
-    });
-    var rando = Math.floor(Math.random() * subs.length);
-
-    for (var i = 0; i < subs.length; i++) {
-      subDeals.push(subs[rando]);
-      if (rando == subs.length - 1) {
-        rando = 0;
-      } else {
-        rando++;
-      }
-    }
-    const newlyJoined = await User.find();
-    const topUsers = await User.find().sort([["rank", -1]]);
-    // console.log(topUsers);
+    // const newlyJoined = await User.find();
+    // const topUsers = await User.find().sort([["rank", -1]]);
 
     const apnaUser = await User.findById("5f1ec89d3b127343185a7eba");
     //console.log(apnaUser.groupCount);
@@ -721,7 +622,6 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     groupC = apnaUser.groupCount;
     numberG = apnaUser.numberOfGroups;
-    //console.log(numberG);
 
     await Deal.findOneAndUpdate(
       { _id: req.params.dealId },
@@ -737,19 +637,19 @@ exports.mainPage = catchAsync(async (req, res) => {
       liveDeals,
       cooCount,
       recentlyViewed,
-      subDeals,
+      // subDeals,
       groupC,
       numberG,
-      subs,
+      // subs,
     });
 
-    // for (var deal of deals) {
-    //   var now = new Date(Date.now());
-    //   var tem = (now.getTime() - deal.time.getTime()) / 3600000;
-    //   tem = deal.views / tem;
+    for (var deal of deals) {
+      var now = new Date(Date.now());
+      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      tem = deal.views / tem;
 
-    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    // }
+      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    }
   }
 });
 

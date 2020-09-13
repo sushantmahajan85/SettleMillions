@@ -87,8 +87,8 @@ exports.resizeDealImages = catchAsync(async (req, res, next) => {
   // req.body.titleImg = `deal-${Date.now()}-title.jpeg`;
 
   await sharp(req.files.titleImg[0].buffer)
-    .toFormat("jpeg")
-    .jpeg({ quality: 90 })
+    .toFormat("webp")
+    .jpeg({ quality: 10 })
     .toFile(`public/img/deals/${req.body.titleImg}`);
   // .resize(2000, 1333)
 

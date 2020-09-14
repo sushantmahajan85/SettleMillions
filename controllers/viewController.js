@@ -562,7 +562,6 @@ exports.mainPage = catchAsync(async (req, res) => {
     recommendedDeals[i] = undefined;
   }
   if (req.query.search || req.query.sort) {
-
     function dynamicSort(property) {
       var sortOrder = 1;
       if (property[0] === "-") {
@@ -579,7 +578,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     const deals = await Deal.find(
       { $text: { $search: req.query.search } },
       { score: { $meta: "textScore" } }
-    ).sort([[{ score: { $meta: "textScore" } }]]); 
+    ).sort([[{ score: { $meta: "textScore" } }]]);
 
     if (req.query.sort === "mrp") {
       deals.sort(dynamicSort("mrp"));
@@ -591,22 +590,22 @@ exports.mainPage = catchAsync(async (req, res) => {
     res.status(200).render("search", { deals /*recommendedDeals*/ });
   } else {
     // const topUsersToday = await User.find().sort([["rankLatest", -1]]);
-    // var subDeals = new Array();
-    // const subs = await Subscriber.find({
-    //   user: req.logged,
-    // }).populate({
-    //   path: "subscribedDeals",
-    // });
-    // var rando = Math.floor(Math.random() * subs.length);
+    var subDeals = new Array();
+    const subs = await Subscriber.find({
+      user: req.logged,
+    }).populate({
+      path: "subscribedDeals",
+    });
+    var rando = Math.floor(Math.random() * subs.length);
 
-    // for (var i = 0; i < subs.length; i++) {
-    //   subDeals.push(subs[rando]);
-    //   if (rando == subs.length - 1) {
-    //     rando = 0;
-    //   } else {
-    //     rando++;
-    //   }
-    // }
+    for (var i = 0; i < subs.length; i++) {
+      subDeals.push(subs[rando]);
+      if (rando == subs.length - 1) {
+        rando = 0;
+      } else {
+        rando++;
+      }
+    }
     // const newlyJoined = await User.find();
     // const topUsers = await User.find().sort([["rank", -1]]);
 
@@ -628,8 +627,12 @@ exports.mainPage = catchAsync(async (req, res) => {
       { $inc: { views: 1 } }
     );
 
-    const deals = await Deal.find().sort([["trendRatio", -1]]);
-    const liveDeals = await Deal.find().sort([["time", -1]]);
+    const deals = await Deal.find()
+      .sort([["trendRatio", -1]])
+      .limit(16);
+    const liveDeals = await Deal.find()
+      .sort([["time", -1]])
+      .limit(16);
 
     res.status(200).render("main", {
       deals,
@@ -637,10 +640,10 @@ exports.mainPage = catchAsync(async (req, res) => {
       liveDeals,
       cooCount,
       recentlyViewed,
-      // subDeals,
+      subDeals,
       groupC,
       numberG,
-      // subs,
+      subs,
     });
 
     for (var deal of deals) {

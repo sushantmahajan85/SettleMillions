@@ -838,7 +838,8 @@ a.show-hide-link {
 
 #showMoreR,
 #showMoreT,
-#showMoreL {
+#showMoreL,
+#showMoreS {
   margin: 0px auto;
   width: 100%;
   cursor: pointer;
@@ -847,12 +848,14 @@ a.show-hide-link {
   border-bottom: 1px solid #6060606b; }
   #showMoreR:hover,
   #showMoreT:hover,
-  #showMoreL:hover {
+  #showMoreL:hover,
+  #showMoreS:hover {
     background-color: #6060601f; }
 
 #showLessT,
 #showLessR,
-#showLessL {
+#showLessL,
+#showLessS {
   margin: 0px auto;
   width: 100%;
   cursor: pointer;
@@ -862,7 +865,8 @@ a.show-hide-link {
   border-bottom: 1px solid #6060606b; }
   #showLessT:hover,
   #showLessR:hover,
-  #showLessL:hover {
+  #showLessL:hover,
+  #showLessS:hover {
     background-color: #6060601f; }
 
 .news {

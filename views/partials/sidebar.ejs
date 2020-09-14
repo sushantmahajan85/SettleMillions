@@ -61,7 +61,7 @@
        <% var i = 0; %>
         
          
-        
+        <div style="border-bottom:1px solid rgb(212, 211, 211);">
        <% for( var sub of user.subscribers) {
      %> <% i++; %> <% if (sub.subscribedUser) { %>
 
@@ -79,6 +79,7 @@
      </a>
 
      <% } %> <% if (i === 5){break;}%> <% } %> 
+     </div>
      <div id="hide">
        <% var j = 0; %> <% for( var sub of user.subscribers ) { %> <% j++ %> <%
        if (j>5) { %>
@@ -89,43 +90,46 @@
            <%= sub.subscribedUser.name %>
          </h4>
        </div>
+
        <% } %> <% } %>
      </div>
      
-     
-     <div id="showMore">
-       <a
-         href="#"
-         class="w3-bar-item w3-button sidebar_link"
-         style="border-bottom: 1px solid rgb(212, 211, 211);"
-         id="more"
-         onclick="read()"
-       >
-         <i
-           class="fas fa-sort-down font_icon"
-           id="down"
-           style="color: red;margin:0 1.2rem 0 1rem;"
-         ></i>
-         <span class="heading-normal show_m"> Show More</span>
-       </a>
-     </div>
-
-     <div id="showLess">
-       <a
-         href="#"
-         class="w3-bar-item w3-button sidebar_link"
-         style="border-bottom: 1px solid rgb(212, 211, 211);"
-         id="more"
-         onclick="read()"
-       >
-         <i
-           class="fas fa-caret-up font_icon"
-           id="up"
-           style="color: red;margin: 0 1.2rem 0 1rem"
-         ></i>
-         <span class="heading-normal">Show Less</span>
-       </a>
-     </div>
+     <% if (user.subscribers.length >5) { %>
+      <div id="showMore">
+        <a
+          href="#"
+          class="w3-bar-item w3-button sidebar_link"
+          style="border-bottom: 1px solid rgb(212, 211, 211);"
+          id="more"
+          onclick="read()"
+        >
+          <i
+            class="fas fa-sort-down font_icon"
+            id="down"
+            style="color: red;margin:0 1.2rem 0 1rem;"
+          ></i>
+          <span class="heading-normal show_m"> Show More</span>
+        </a>
+      </div>
+ 
+      <div id="showLess">
+        <a
+          href="#"
+          class="w3-bar-item w3-button sidebar_link"
+          style="border-bottom: 1px solid rgb(212, 211, 211);"
+          id="more"
+          onclick="read()"
+        >
+          <i
+            class="fas fa-caret-up font_icon"
+            id="up"
+            style="color: red;margin: 0 1.2rem 0 1rem"
+          ></i>
+          <span class="heading-normal">Show Less</span>
+        </a>
+      </div>
+      
+     <% } %>
          <% } else {%>
            <h1 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem;">
              SUBSCRIPTIONS

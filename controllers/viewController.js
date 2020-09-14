@@ -994,7 +994,17 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
   // console.log(user);
   res.status(200).render("updateSettings", { user });
 });
+exports.live = catchAsync(async (req, res) => {
+  const liveDeals = await Deal.find().sort([["time", -1]]);
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+  const user = await User.findById(req.user).populate({
+    path: "subscribers",
+  });
 
+  res.status(200).render("live", { liveDeals, subs, user });
+});
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
   if (req.query.dealOps) {

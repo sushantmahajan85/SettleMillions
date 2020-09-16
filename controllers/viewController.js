@@ -32,7 +32,7 @@ exports.calcul = catchAsync(async (req, res) => {
 
   for (var deal of tempideals) {
     var now = new Date(Date.now());
-    var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    var tem = (now.getTime() - 1000000000000) / 3600000;
     tem = deal.views / tem;
 
     console.log(deal._id);
@@ -93,7 +93,7 @@ exports.getTrendingDeals = catchAsync(async (req, res) => {
 
   for (var deal of deals) {
     var now = new Date(Date.now());
-    var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    var tem = (now.getTime() - 1000000000000) / 3600000;
     tem = deal.views / tem;
 
     await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
@@ -193,20 +193,20 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
 
   for (sub of subs) {
     var tem = new Date(Date.now());
-    var ekdin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 5.5);
-    var dodin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 6.5);
-    var teendin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 7.5);
+    var ekdin = new Date(tem.getTime() - 1000 * 60 * 60 * 24);
+    var dodin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 2);
+    var teendin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 3);
     var temp1 = await Deal.find({
       user: sub.subscribedUser.id,
-      time: { $gt: ekdin },
+      createdAt: { $gt: ekdin },
     });
     var temp2 = await Deal.find({
       user: sub.subscribedUser.id,
-      time: { $gt: dodin, $lt: ekdin },
+      createdAt: { $gt: dodin, $lt: ekdin },
     });
     var temp3 = await Deal.find({
       user: sub.subscribedUser.id,
-      time: { $gt: teendin, $lt: dodin },
+      createdAt: { $gt: teendin, $lt: dodin },
     });
 
     for (var i = 0; i < temp1.length; i++) {
@@ -220,9 +220,10 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     }
   }
 
-  console.log(allDeals1);
-  console.log(allDeals2);
-  console.log(allDeals3);
+  console.log(temp1);
+  // console.log(allDeals1);
+  // console.log(allDeals2);
+  // console.log(allDeals3);
 
   // allDeals.sort(function(a, b) {
   //   var keyA = new Date(a.time),
@@ -648,7 +649,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     for (var deal of deals) {
       var now = new Date(Date.now());
-      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      var tem = (now.getTime() - 100000000000000) / 3600000;
       tem = deal.views / tem;
 
       await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });

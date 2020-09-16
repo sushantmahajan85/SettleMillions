@@ -192,21 +192,20 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
   var allDeals3 = new Array();
 
   for (sub of subs) {
-    var tem = new Date(Date.now());
-    var ekdin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 5.5);
-    var dodin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 6.5);
-    var teendin = new Date(tem.getTime() - 1000 * 60 * 60 * 24 * 7.5);
+    var ekdin = 1000 * 60 * 60 * 24 * 1;
+    var dodin = 1000 * 60 * 60 * 24 * 2;
+    var teendin = 1000 * 60 * 60 * 24 * 3;
     var temp1 = await Deal.find({
       user: sub.subscribedUser.id,
-      time: { $gt: ekdin },
+      //time: { $lte: ekdin },
     });
     var temp2 = await Deal.find({
       user: sub.subscribedUser.id,
-      time: { $gt: dodin, $lt: ekdin },
+      time: { $lte: dodin, $gt: ekdin },
     });
     var temp3 = await Deal.find({
       user: sub.subscribedUser.id,
-      time: { $gt: teendin, $lt: dodin },
+      time: { $lte: teendin, $gt: dodin },
     });
 
     for (var i = 0; i < temp1.length; i++) {
@@ -220,7 +219,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     }
   }
 
-  console.log(allDeals1);
+  console.log(temp1);
   console.log(allDeals2);
   console.log(allDeals3);
 

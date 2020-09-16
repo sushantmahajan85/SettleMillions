@@ -32,7 +32,7 @@ exports.calcul = catchAsync(async (req, res) => {
 
   for (var deal of tempideals) {
     var now = new Date(Date.now());
-    var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    var tem = (now.getTime() - 1000000000000) / 3600000;
     tem = deal.views / tem;
 
     console.log(deal._id);
@@ -93,7 +93,7 @@ exports.getTrendingDeals = catchAsync(async (req, res) => {
 
   for (var deal of deals) {
     var now = new Date(Date.now());
-    var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+    var tem = (now.getTime() - 1000000000000) / 3600000;
     tem = deal.views / tem;
 
     await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
@@ -647,7 +647,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     for (var deal of deals) {
       var now = new Date(Date.now());
-      var tem = (now.getTime() - deal.time.getTime()) / 3600000;
+      var tem = (now.getTime() - 100000000000000) / 3600000;
       tem = deal.views / tem;
 
       await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
@@ -993,7 +993,17 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
   // console.log(user);
   res.status(200).render("updateSettings", { user });
 });
+exports.live = catchAsync(async (req, res) => {
+  const liveDeals = await Deal.find().sort([["time", -1]]);
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+  const user = await User.findById(req.user).populate({
+    path: "subscribers",
+  });
 
+  res.status(200).render("live", { liveDeals, subs, user });
+});
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
   if (req.query.dealOps) {

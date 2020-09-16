@@ -28,8 +28,9 @@ const dealSchema = new mongoose.Schema(
       //   message: "Passwords Do Not Match",
       // },
     },
-    time: {
-      type: Date,
+    time: { type: Number, default: 0 },
+    createdAt: {
+      type: Number,
       default: Date.now(),
     },
     titleDis: {

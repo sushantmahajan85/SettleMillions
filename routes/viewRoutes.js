@@ -34,6 +34,7 @@ router.get("/logout", authController.logout);
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);
+router.get("/live", viewController.live);
 router.get(
   "/updateUserSettings",
   authController.protect,

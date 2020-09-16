@@ -54,41 +54,11 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var now = deal.time;
+            var tem = now/(1000*60*60);
             var day = Math.round((tem/2.4))/10;
             %>
-            <% function timeSince(date) {
-
-                var seconds = Math.floor((new Date() - date) / 1000);
-              
-                var interval = Math.floor(seconds / 31536000);
-              
-                if (interval > 1) {
-                  return interval + " years";
-                }
-                interval = Math.floor(seconds / 2592000);
-                if (interval > 1) {
-                  return interval + " months";
-                }
-                interval = Math.floor(seconds / 86400);
-                if (interval > 1) {
-                  return interval + " days";
-                }
-                interval = Math.floor(seconds / 3600);
-                if (interval > 1) {
-                  return interval + " hours";
-                }
-                interval = Math.floor(seconds / 60);
-                if (interval > 1) {
-                  return interval + " minutes";
-                }
-                return Math.floor(seconds) + " seconds";
-              }
-              var nowx = new Date(Date.now());
-              var titu = timeSince(nowx - deal.time.getTime());
-              var aDay = 24*60*60*1000;
-               %>
+        
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
                     <div class="card__face">
@@ -214,8 +184,8 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var now = deal.time;
+            var tem = now/(1000*60*60);
             var day = Math.round((tem/2.4))/10;
             %>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -345,41 +315,10 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var now = deal.time;
+            var tem = now/(1000*60*60);
             var day = Math.round((tem/2.4))/10;
             %>
-            <% function timeSince(date) {
-
-                var seconds = Math.floor((new Date() - date) / 1000);
-              
-                var interval = Math.floor(seconds / 31536000);
-              
-                if (interval > 1) {
-                  return interval + " years";
-                }
-                interval = Math.floor(seconds / 2592000);
-                if (interval > 1) {
-                  return interval + " months";
-                }
-                interval = Math.floor(seconds / 86400);
-                if (interval > 1) {
-                  return interval + " days";
-                }
-                interval = Math.floor(seconds / 3600);
-                if (interval > 1) {
-                  return interval + " hours";
-                }
-                interval = Math.floor(seconds / 60);
-                if (interval > 1) {
-                  return interval + " minutes";
-                }
-                return Math.floor(seconds) + " seconds";
-              }
-              var nowx = new Date(Date.now());
-              var titu = timeSince(nowx - deal.time.getTime());
-              var aDay = 24*60*60*1000;
-               %>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
                     <div class="card__face">
@@ -505,8 +444,8 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var now = deal.time;
+            var tem = now/(1000*60*60);
             var day = Math.round((tem/2.4))/10;
             %>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -634,41 +573,10 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var now = deal.time;
+            var tem = now/(1000*60*60);
             var day = Math.round((tem/2.4))/10;
             %>
-            <% function timeSince(date) {
-
-                var seconds = Math.floor((new Date() - date) / 1000);
-              
-                var interval = Math.floor(seconds / 31536000);
-              
-                if (interval > 1) {
-                  return interval + " years";
-                }
-                interval = Math.floor(seconds / 2592000);
-                if (interval > 1) {
-                  return interval + " months";
-                }
-                interval = Math.floor(seconds / 86400);
-                if (interval > 1) {
-                  return interval + " days";
-                }
-                interval = Math.floor(seconds / 3600);
-                if (interval > 1) {
-                  return interval + " hours";
-                }
-                interval = Math.floor(seconds / 60);
-                if (interval > 1) {
-                  return interval + " minutes";
-                }
-                return Math.floor(seconds) + " seconds";
-              }
-              var nowx = new Date(Date.now());
-              var titu = timeSince(nowx - deal.time.getTime());
-              var aDay = 24*60*60*1000;
-               %>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
                 <div class="card">
                     <div class="card__face">
@@ -794,8 +702,8 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - deal.time.getTime())/360000)/10;
+            var now = deal.time;
+            var tem = now/(1000*60*60);
             var day = Math.round((tem/2.4))/10;
             %>
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>

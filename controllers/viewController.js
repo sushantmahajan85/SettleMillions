@@ -85,19 +85,20 @@ exports.getSignupForm = (req, res) => {
 };
 
 exports.getTrendingDeals = catchAsync(async (req, res) => {
-  const deals = await Deal.find().sort([["trendRatio", -1]]);
+  var tindin = 1000 * 60 * 60 * 24 * 3;
+  const deals = await Deal.find({time: { $lte: tindin }}).sort([["trendRatio", -1]]);
   const subs = await Subscriber.find({
     user: req.logged,
   });
   res.status(200).render("trending", { deals, subs });
 
-  for (var deal of deals) {
-    var now = new Date(Date.now());
-    var tem = (now.getTime() - 1000000000000) / 3600000;
-    tem = deal.views / tem;
+  // for (var deal of deals) {
+  //   var now = new Date(Date.now());
+  //   var tem = (now.getTime() - 1000000000000) / 3600000;
+  //   tem = deal.views / tem;
 
-    await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-  }
+  //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+  // }
 });
 
 exports.getLikedDeals = catchAsync(async (req, res) => {
@@ -197,16 +198,16 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     var teendin = 1000 * 60 * 60 * 24 * 3;
     var temp1 = await Deal.find({
       user: sub.subscribedUser.id,
-      //time: { $lte: ekdin },
-    });
+      time: { $lte: ekdin },
+    }).limit(8);
     var temp2 = await Deal.find({
       user: sub.subscribedUser.id,
       time: { $lte: dodin, $gt: ekdin },
-    });
+    }).limit(8);
     var temp3 = await Deal.find({
       user: sub.subscribedUser.id,
       time: { $lte: teendin, $gt: dodin },
-    });
+    }).limit(8);
 
     for (var i = 0; i < temp1.length; i++) {
       allDeals1.push(temp1[i]);

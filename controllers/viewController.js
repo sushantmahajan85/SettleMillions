@@ -86,7 +86,9 @@ exports.getSignupForm = (req, res) => {
 
 exports.getTrendingDeals = catchAsync(async (req, res) => {
   var tindin = 1000 * 60 * 60 * 24 * 3;
-  const deals = await Deal.find({time: { $lte: tindin }}).sort([["trendRatio", -1]]);
+  const deals = await Deal.find({ time: { $lte: tindin } }).sort([
+    ["trendRatio", -1],
+  ]);
   const subs = await Subscriber.find({
     user: req.logged,
   });
@@ -609,12 +611,12 @@ exports.mainPage = catchAsync(async (req, res) => {
     // const newlyJoined = await User.find();
     // const topUsers = await User.find().sort([["rank", -1]]);
 
-    const apnaUser = await User.findById("5f1ec89d3b127343185a7eba");
+    const apnaUser = await User.findById("5f2411f9da1e940017e5aadd");
     //console.log(apnaUser.groupCount);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 3 == 0) {
       await User.findByIdAndUpdate(
-        { _id: "5f1ec89d3b127343185a7eba" },
+        { _id: "5f2411f9da1e940017e5aadd" },
         { groupCount: 0, $inc: { numberOfGroups: 1 } }
       );
     }

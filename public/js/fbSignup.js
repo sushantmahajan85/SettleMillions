@@ -46,9 +46,9 @@ const passvaluefb = async (response) => {
   }
 };
 
-FB.logout(function(response) {
-  // Person is now logged out
-});
+// FB.logout(function(response) {
+//   // Person is now logged out
+// });
 
 // //    // FB.logout(function(response) {
 // //    //    // Person is now logged out

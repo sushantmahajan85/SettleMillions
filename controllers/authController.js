@@ -226,10 +226,10 @@ exports.logout = (req, res) => {
     // secure: true,
     httpOnly: true,
   });
-  
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
+  res.redirect("/");
   res.status(200).json({ status: "success" });
 };
 

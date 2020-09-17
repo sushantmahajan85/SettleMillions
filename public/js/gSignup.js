@@ -43,3 +43,9 @@ async function onSignIn(googleUser) {
     showAlert("error", err.response.data.message);
   }
 }
+function signOut() {
+  var auth2 = gapi.authAuthInstance();
+  auth2.signOut().then(function() {
+    alert("gsignout");
+  });
+}

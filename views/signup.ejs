@@ -173,9 +173,14 @@
 
          <fb:login-button
           scope="public_profile,email"
-          data-layout="rounded" 
+          data-size="large"
+          data-button-type="login_with"
+          data-layout="default"
+          data-auto-logout-link="false"
+          data-use-continue-as="false"
+          data-width="375"
           onlogin="checkLoginState();"
-        >Facebook
+        >Login with Facebook
         </fb:login-button>
         <!--<button id="customBtn" onclick="checkLoginState()">
           <span class="icon"></span>

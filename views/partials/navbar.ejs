@@ -120,7 +120,7 @@
         <ul class="dropdown" style="background-color: black;">
           <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
           <li><a href="/updateUserSettings">Edit Profile</a></li>
-          <li><a href="/logout">Logout</a></li>
+          <li><a href="/logout" onclick="signout()">Logout</a></li>
         </ul>
       </nav>
          <% } else { %>
@@ -132,7 +132,7 @@
               <ul class="dropdown" style="background-color: black;">
                 <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
                 <li><a href="/updateUserSettings">Edit Profile</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/logout" onclick="signout()">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -228,7 +228,7 @@
     });
 
   </script>
-
+<script src="/js/gSignup.js"></script>
 <script src="/vendor/initial.min.js"></script>
 <script>
   $(".profile").initial();

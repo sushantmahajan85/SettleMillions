@@ -29,6 +29,8 @@ router.get(
   authController.protect,
   viewController.getSubscriptions
 );
+
+router.get("/logout", authController.logout);
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);

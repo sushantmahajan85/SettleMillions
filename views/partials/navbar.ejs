@@ -132,7 +132,7 @@
               <ul class="dropdown" style="background-color: black;">
                 <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
                 <li><a href="/updateUserSettings">Edit Profile</a></li>
-                <li><a onclick="signOut()">Logout</a></li>
+                <li><a onclick="loca();signOut()">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -142,11 +142,13 @@
       </nav>
     </div>
   </section>
-
+<script>function loca(){ location.assign('/logout');}</script>
   <script>
     function signOut() {
+      
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function() {
+        
         console.log("User signed out.");
       });
     };

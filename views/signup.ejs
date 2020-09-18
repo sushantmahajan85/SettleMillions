@@ -157,7 +157,7 @@
           style="margin-top: 1.5rem;"
         ></div>
 
-        <div
+        <!-- <div
           class="fb-login-button"
           data-size="large"
           data-button-type="login_with"
@@ -165,16 +165,22 @@
           data-auto-logout-link="false"
           data-use-continue-as="false"
           data-width="375"
+          data-onsuccess="checkLoginState();"
           style="margin-top: 1.5rem;"
-        ></div>
+        ></div> -->
 
-        <!-- <fb:login-button
+         <fb:login-button
           scope="public_profile,email"
-          data-layout="rounded" 
+          data-size="large"
+          data-button-type="login_with"
+          data-layout="default"
+          data-auto-logout-link="false"
+          data-use-continue-as="false"
+          data-width="375"
           onlogin="checkLoginState();"
-        >Facebook
+        >Login with Facebook
         </fb:login-button>
-        <button id="customBtn" onclick="checkLoginState()">
+        <!--<button id="customBtn" onclick="checkLoginState()">
           <span class="icon"></span>
           <span class="buttonText">Facebook</span>
         </button>
@@ -337,6 +343,13 @@
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/fbSignup.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script>
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function() {
+          console.log("User signed out.");
+        });
+      };
+    </script>
   </body>
 </html>

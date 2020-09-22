@@ -17,8 +17,9 @@ const passvaluefb = async (response) => {
   try {
     const name = response.name;
     const email = response.email;
-    const password = "password";
-    const passwordConfirm = "password";
+    const gSignin = response.id;
+    // const password = "password";
+    // const passwordConfirm = "password";
 
     console.log(name, email, password, passwordConfirm);
 
@@ -28,8 +29,9 @@ const passvaluefb = async (response) => {
       method: "POST",
       url: "/api/v1/users/signup",
       data: {
-        email: "a@a.com",
-        name: "name",
+        email,
+        name,
+        gSignin,
         password: "password",
         passwordConfirm: "password",
       },

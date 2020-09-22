@@ -28,10 +28,10 @@ const passvaluefb = async (response) => {
       method: "POST",
       url: "/api/v1/users/signup",
       data: {
-        email,
-        name,
-        password,
-        passwordConfirm,
+        email: "a@a.com",
+        name: "name",
+        password: "password",
+        passwordConfirm: "password",
       },
     });
     if (result.data.status === "success") {

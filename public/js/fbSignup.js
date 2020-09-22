@@ -21,7 +21,7 @@ const passvaluefb = async (response) => {
     // const password = "password";
     // const passwordConfirm = "password";
 
-    console.log(name, email, password, passwordConfirm);
+    // console.log(name, email, password, passwordConfirm);
 
     // const email = 'njkdhsgegdhdjd@j.com';
 

@@ -36,6 +36,7 @@ const passvaluefb = async (response) => {
         passwordConfirm: "password",
       },
     });
+    console.log(result.data.status);
     if (result.data.status === "success") {
       //   alert("sign up successful");
       showAlert("success", "signup successful");
@@ -44,6 +45,7 @@ const passvaluefb = async (response) => {
       }, 800);
     }
   } catch (err) {
+    console.log(err);
     showAlert("error", err.response.data.message);
   }
 };

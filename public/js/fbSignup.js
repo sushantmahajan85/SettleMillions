@@ -32,8 +32,8 @@ const passvaluefb = async (response) => {
         email,
         name,
         gSignin,
-        password: "password",
-        passwordConfirm: "password",
+        password: "test1234",
+        passwordConfirm: "test1234",
       },
     });
     console.log(result.data.status);

@@ -14,6 +14,106 @@ const signToken = (id) =>
 
 exports.signUp = async (req, res) => {
   try {
+    const newz = await User.findOne({ gSignin: req.body.gSignin });
+    if (newz) {
+      res.cookie("one", "cleared", {
+        expires: new Date(Date.now() + 1),
+        // secure: true,
+        httpOnly: true,
+      });
+      res.cookie("two", "cleared", {
+        expires: new Date(Date.now() + 1),
+        // secure: true,
+        httpOnly: true,
+      });
+      res.cookie("three", "cleared", {
+        expires: new Date(Date.now() + 1),
+        // secure: true,
+        httpOnly: true,
+      });
+      res.cookie("four", "cleared", {
+        expires: new Date(Date.now() + 1),
+        // secure: true,
+        httpOnly: true,
+      });
+      res.cookie("five", "cleared", {
+        expires: new Date(Date.now() + 1),
+        // secure: true,
+        httpOnly: true,
+      });
+
+      const { email, password } = req.body;
+
+      if (!email || !password) {
+        return next(
+          new AppError("Please provide correct email and password", 400)
+        );
+      }
+      const user = await User.findOne({ email: email }).select("+password");
+      // const test = JSON.stringify(user);
+      // const url = "amazon";
+      // await new Email(user, url).sendWelcome();
+      if (
+        !user ||
+        !(await user.verifyPassword(
+          password,
+          user.password
+        )) /*||
+          !user.verified*/
+      ) {
+        return next(new AppError("No user found", 400));
+      }
+
+      const token = signToken(user._id);
+      const cookieOptions = {
+        expires: new Date(
+          Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
+        ),
+        // secure: true,
+        httpOnly: true,
+      };
+      if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+
+      // const resetURL = `${req.protocol}://${req.get(
+      //   "host"
+      // )}/api/v1/users/resetPassword/${resetToken}`;
+
+      // await sendEmail({
+      //   ////// For Sending Reset Password Mail //////
+      //   email: user.email,
+      //   subject: "Password Reset Token ( Valid For 10 Minutes )",
+      //   message: message,
+      // });
+
+      // const resetURL = `${req.protocol}://${req.get(
+      //   "host"
+      // )}/api/v1/users/resetPassword/${resetToken}`;
+
+      // await new Email(user, resetURL).sendPasswordReset();
+
+      /////////////////////////////////Error in Production/////////////////////////////////////////////
+      try {
+        const url = "amazon.in";
+        await new Email(user, url).sendWelcome();
+        // }catch (err) {
+        //   console.log(err);
+        // }
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+
+        res.cookie("jwt", token, cookieOptions);
+        res.status(200).json({
+          status: "success",
+          token,
+          data: {
+            user,
+          },
+        });
+      } catch (error) {
+        console.log(error);
+        return next(new AppError("Email Not Sent", 500));
+      }
+    }
+
     const newUser = await User.create({
       name: req.body.name,
       password: req.body.password,

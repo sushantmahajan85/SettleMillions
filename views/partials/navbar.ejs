@@ -36,6 +36,17 @@
       <div class="titles_nv">
         <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
       </div>
+      <div
+      id="GoogeSigninButton"
+      data-height="40"
+      data-width="372"
+      data-longtitle="true"
+      data-theme="dark"
+      data-onsuccess="onSignIn"
+      class="g-signin2"
+      style="margin-top: 1.5rem;display:none;visibility:hidden"
+    ></div>
+
       <% } else { %>
         <div class="titles_nv" id="post_no_user">
           <div>Post A Deal</div>
@@ -60,7 +71,6 @@
       document.getElementById('popup_cross_cancel_post').addEventListener('click', e => {
             document.getElementById('popup_post').style.display = 'none';
         });
-
         document.getElementById('popup_cross_post').addEventListener('click', e => {
             document.getElementById('popup_post').style.display = 'none';
         });
@@ -136,7 +146,7 @@
               <ul class="dropdown" style="background-color: black;">
                 <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
                 <li><a href="/updateUserSettings">Edit Profile</a></li>
-                <li><a onclick="loca();signOut()">Logout</a></li>
+                <li><a onclick="signOut();loca()">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -146,16 +156,16 @@
       </nav>
     </div>
   </section>
-<script>function loca(){ location.assign('/logout');}</script>
+<script>function loca(){
+location.assign('/logout');  
+} </script>
   <script>
     function signOut() {
-      
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function() {
-        
         console.log("User signed out.");
-        location.href("/logout");
       });
+    
     };
   </script>
   <script src="/vendor/initial.min.js"></script>
@@ -186,10 +196,8 @@
             },
           });
         },
-
         // The minimum number of characters a user must type before a search is performed.
         minLength: 2,
-
         // set an onFocus event to show the result on input field when result is focused
         focus: function (event, ui) {
           this.value = ui.item.label;
@@ -213,13 +221,10 @@
   </script>
 
   <script>
-
     document.getElementById("like_deal_no").addEventListener("click", (e) => {
       e.preventDefault();
-
       document.getElementById('popupLike').style.display = 'block';
     });
-
   </script>
   <script
   src="https://apis.google.com/js/platform.js?onload=init"
@@ -228,23 +233,17 @@
 ></script>
 <script src="/js/gSignup.js"></script>
   <script>
-
     document.getElementById("popup_crosslike").addEventListener("click", (e) => {
       e.preventDefault();
-
       document.getElementById('popupLike').style.display = 'none';
     });
-
   </script>
   <script>
-
     document.getElementById("like_btn_deal").addEventListener("click", (e) => {
       e.preventDefault();
-
       document.getElementById('popupLike').style.display = 'none';
       location.assign('/signup');
     });
-
   </script>
 <script src="/js/gSignup.js"></script>
 <script src="/vendor/initial.min.js"></script>

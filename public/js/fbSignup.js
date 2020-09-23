@@ -17,10 +17,11 @@ const passvaluefb = async (response) => {
   try {
     const name = response.name;
     const email = response.email;
+    const gSignin = response.id;
     const password = "password";
     const passwordConfirm = "password";
 
-    console.log(name, email, password, passwordConfirm);
+    // console.log(name, email, password, passwordConfirm);
 
     // const email = 'njkdhsgegdhdjd@j.com';
 
@@ -30,10 +31,12 @@ const passvaluefb = async (response) => {
       data: {
         email,
         name,
+        gSignin,
         password,
         passwordConfirm,
       },
     });
+    // console.log(result.data.status);
     if (result.data.status === "success") {
       //   alert("sign up successful");
       showAlert("success", "signup successful");
@@ -42,6 +45,7 @@ const passvaluefb = async (response) => {
       }, 800);
     }
   } catch (err) {
+    // console.log(err);
     showAlert("error", err.response.data.message);
   }
 };

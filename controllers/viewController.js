@@ -41,6 +41,14 @@ exports.calcul = catchAsync(async (req, res) => {
   }
 });
 
+exports.shortshort = catchAsync(async (req, res) => {
+  const deal = await Deal.find({short: req.params.short});
+
+  if(deal){
+    res.redirect(deal.long);
+  }  
+});
+
 exports.analytics = catchAsync(async (req, res) => {
   const request = require("request");
 

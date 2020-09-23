@@ -1009,6 +1009,7 @@ exports.live = catchAsync(async (req, res) => {
 });
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
+  var fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
     console.log(joChahiye);
@@ -1310,6 +1311,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     reco,
     cooCount,
     trendDeals,
+    fullUrl,
   });
 
   const tempDeals = await Deal.find();

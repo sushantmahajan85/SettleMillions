@@ -218,9 +218,9 @@
   
           <% } %>
   
-          <div class="deal-deets_share">
-            <div class="deal-deets_share_button"><i class="fa fa-share alt" style="margin-right: 1rem;"></i>Share</div>
-          </div>
+          <a class="deal-deets_share" id="share_popup_btn" onclick="disaplay()">
+            <div class="deal-deets_share_button" ><i class="fa fa-share alt"  style="margin-right: 1rem;"></i>Share</div>
+          </a>
         </div>
     </div>
     <div class="side_deals">
@@ -352,10 +352,10 @@
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
-                  <div class="deal_box_views"><% if (deala.views > 999) { %>
+                  <div class="deal_box_views"><% if (dealo.views > 999) { %>
                     <span><%=`${vui} views`%></span>
                     <% } else { %>
-                    <span><%=`${deala.views} views`%></span>
+                    <span><%=`${dealo.views} views`%></span>
                     <% } %></div>
                   <div class="deal_box_time"><% if (tem > 24) { %>
                     <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
@@ -701,7 +701,34 @@
       }
     }
   </script>
-
+<div class="share_popup" id="share_popup">
+    <div class="popup_right">
+        <div class="popup_cross" id="share_cross" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+    </div>
+    <div class="popup_content" style="font-size: 2rem; text-align: center;">
+        Please signup / login to subscribe ?
+        <br>
+ 
+        <textarea name="" id="" class="generated" cols="30" rows="10" > <%= deal.dealName %> <%= deal.dealPrice %>  <%= deal.discount %> <%= fullUrl %>   </textarea>
+        <button id="copied" onclick="coping()">copy</button>
+        <!-- <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="subscribe_btn_no_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button> -->
+    </div>
+</div>
+<script>
+  function coping() {
+    var copyText = document.getElementsByClassName("generated");
+      copyText[0].select();
+      document.execCommand("copy");
+  }
+</script>
+<script>
+  function disaplay(){
+    document.getElementById("share_popup").style.display ="block";
+  }
+  document.getElementById("share_cross").addEventListener('click',()=>{
+    document.getElementById("share_popup").style.display ="none";
+  });
+</script>
   <script>
 
     document.getElementById("likelike_deal_no").addEventListener("click", (e) => {
@@ -709,8 +736,10 @@
 
       document.getElementById('popupLikeLike').style.display = 'block';
     });
+    
 
   </script>
+  
   <div class="popup" id="popup_subs">
     <div class="popup_right">
         <div class="popup_cross" id="subscribe_btn_no_cross" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>

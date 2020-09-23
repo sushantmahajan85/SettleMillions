@@ -57,24 +57,20 @@
           <span>blog</span></a>
         </div>
         
-  
-          <% if (user) { %>
+   <% if (user) { %>
 
-            <% if (log) { %>
-              <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
-                <h6 class="cover_aff-subs-button-txt" id="unsubscribe_btn">Unsubscribe</h6>
-              </a>
-              <% } else { %>
-        <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
-          <h6 class="cover_aff-subs-button-txt" id="subscribe_btn">Subscribe</h6>
-        </a>
+        <% if (log) { %>
+        <a href="" class="deal-deets_subs cover_aff-subs-button-txt" id="unsubscribe_btn">Unsubscribe</a>
+        <% } else { %>
+        <a href="" class="deal-deets_subs cover_aff-subs-button-txt" id="subscribe_btn">Subscribe</a>
         <% } %>
-  
-          <% }else{ %>
-            <a href="#" id="subscribe_btn" class="cover_aff-subs-button">
-              <h6 class="cover_aff-subs-button-txt" id="subscribe_btn_no">Subscribe</h6>
-            </a>
-            <% } %>
+
+        <% }else{ %>
+
+        <button class="deal-deets_subs cover_aff-subs-button-txt" id="subscribe_btn_no">Subscribe</button>
+
+        <% } %>
+
         <a href="#" id="customize_btn" class="cover_aff-cust-button">
           <h6 class="cover_aff-cust-button-txt">Customize</h6>
         </a>

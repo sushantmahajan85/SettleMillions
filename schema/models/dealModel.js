@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const shortid = require("shortid");
 
 const dealSchema = new mongoose.Schema(
   {
@@ -12,6 +13,16 @@ const dealSchema = new mongoose.Schema(
     },
 
     affiliateLink: {
+      type: String,
+      //required: true,
+      //unique: true
+    },
+    long: {
+      type: String,
+      //required: true,
+      //unique: true
+    },
+    short: {
       type: String,
       //required: true,
       //unique: true
@@ -88,6 +99,17 @@ dealSchema.virtual("reviews", {
   ref: "Review",
   foreignField: "deal",
   localField: "_id",
+});
+
+dealSchema.post("save", function(next) {
+  this.long = `https://apple-crumble-54348.herokuapp.com/deal/${this._id}/postedBy/${this.user}`;
+  next();
+});
+
+dealSchema.post("save", function(next) {
+  const shorter = shortid.generate();
+  this.short = `https://apple-crumble-54348.herokuapp.com/${shorter}`;
+  next();
 });
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

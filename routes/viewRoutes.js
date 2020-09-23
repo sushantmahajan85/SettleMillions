@@ -30,6 +30,7 @@ router.get(
   viewController.getSubscriptions
 );
 
+router.get("/:short", viewController.shortshort);
 router.get("/logout", authController.logout);
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/edit/:id", viewController.editDeal);

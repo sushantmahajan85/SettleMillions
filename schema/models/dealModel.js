@@ -102,13 +102,13 @@ dealSchema.virtual("reviews", {
 });
 
 dealSchema.post("save", function(next) {
-  this.long = `https://apple-crumble-54348.herokuapp.com/deal/${this._id}/postedBy/${this.user}`;
+  this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
   next();
 });
 
 dealSchema.post("save", function(next) {
   const shorter = shortid.generate();
-  this.short = `https://apple-crumble-54348.herokuapp.com/${shorter}`;
+  this.short = `127.0.0.1:4000/${shorter}`;
   next();
 });
 const Deal = mongoose.model("Deal", dealSchema);

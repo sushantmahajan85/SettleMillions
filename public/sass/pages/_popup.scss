@@ -105,6 +105,113 @@
     opacity: 0;
   }
 }
+#share_popup {
+  background-color: white;
+  position: fixed;
+  height: 14rem;
+  width: 35%;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999999999999;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
+  // opacity: 0;
+  // visibility: hidden;
+  display: none;
+  transition: all 0.3s;
+
+  // &:target {
+  //   opacity: 1;
+  //   // animation: cssAnimation 5s forwards;
+  //   visibility: visible;
+  // }
+  &_content {
+    opacity: 1;
+    height: 50rem;
+    //background-color: white;
+    overflow: hidden;
+    // display: table;
+    border-radius: inherit;
+    //display: none;
+  }
+  &_left {
+    width: 33.33333333334%;
+    vertical-align: top;
+    display: table-cell;
+    @include respond(tab-port) {
+      width: 0%;
+    }
+  }
+  &_right {
+    width: 66.66666667;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    display: table-cell;
+    // vertical-align: middle;
+    padding: 2rem 3rem 0rem 3rem;
+  }
+  &_cross {
+    cursor: pointer;
+    &:link,
+    &:visited {
+      font-size: 4rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 800;
+      position: absolute;
+      top: 0.7rem;
+      right: 5rem;
+      @include respond(tab-port) {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+  }
+  &_img {
+    background-position: center;
+    background-size: 100% 100%;
+    display: block;
+    width: 100%;
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  &_paragraph {
+    column-count: 2;
+
+    font-size: 1.7rem;
+    font-weight: 600;
+    @include respond(tab-port) {
+      column-count: unset;
+      column-rule: unset;
+      column-gap: unset;
+      text-align: start;
+    }
+
+    column-rule: 0.5px solid darkgrey;
+    column-gap: 4rem;
+    hyphens: auto;
+  }
+  &_heading {
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+}
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .popup_news {
   //   background-color: rgba(0, 0, 0, 0.808);

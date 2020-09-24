@@ -42,11 +42,12 @@ exports.calcul = catchAsync(async (req, res) => {
 });
 
 exports.shortshort = catchAsync(async (req, res) => {
-  const deal = await Deal.find({short: req.params.short});
+  const deal = await Deal.findOne({ short: req.params.short });
+  console.log(deal);
 
-  if(deal){
-    res.redirect(deal.long);
-  }  
+  if (deal) {
+    res.redirect(deal.long.split("4000")[1]);
+  }
 });
 
 exports.analytics = catchAsync(async (req, res) => {

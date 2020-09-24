@@ -101,15 +101,13 @@ dealSchema.virtual("reviews", {
   localField: "_id",
 });
 
-dealSchema.post("save", function(next) {
+dealSchema.post("save", function() {
   this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
-  next();
 });
 
-dealSchema.post("save", function(next) {
+dealSchema.post("save", function() {
   const shorter = shortid.generate();
   this.short = `127.0.0.1:4000/${shorter}`;
-  next();
 });
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

@@ -101,15 +101,10 @@ dealSchema.virtual("reviews", {
   localField: "_id",
 });
 
-dealSchema.post("save", function(next) {
-  this.long = `https://apple-crumble-54348.herokuapp.com/deal/${this._id}/postedBy/${this.user}`;
-  next();
-});
-
-dealSchema.post("save", function(next) {
+dealSchema.post("save", function() {
   const shorter = shortid.generate();
+  this.long = `https://apple-crumble-54348.herokuapp.com/deal/${this._id}/postedBy/${this.user}`;
   this.short = `https://apple-crumble-54348.herokuapp.com/${shorter}`;
-  next();
 });
 const Deal = mongoose.model("Deal", dealSchema);
 module.exports = Deal;

@@ -978,7 +978,7 @@
             <% for(var deal of recommendedDeals) { %>
             <% i++; %>
 
-            <% if(i>cooCount && deal.trendRatio > 4) {%>
+            <% if(i>cooCount) {%>
             <% n++; %>
             <!-- <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> -->
                 <%  function kFormatter(num) {

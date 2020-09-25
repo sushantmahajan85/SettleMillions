@@ -645,8 +645,8 @@ figure {
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 41rem;
-  width: 25.75rem;
+  // height: 41rem;
+  width: 38rem;
   z-index: 1;
   margin: 0 0 4rem 0rem;
 
@@ -686,10 +686,10 @@ figure {
   // overflow: hidden;
   border: 1px solid #e5e7e9;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // flex-direction: column;
+  // justify-content: center;
   // z-index: 0;
-  align-items: center;
+  // align-items: center;
   //-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.1rem 0.5rem rgba(52, 73, 94, 0.1);
   //    transition: all 0.3s;
@@ -704,13 +704,13 @@ figure {
 }
 
 .card__picture {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  // position: absolute;
+  // top: 0px;
+  // left: 0px;
+  // right: 0px;
+  // bottom: 0px;
   height: 25rem;
-  width: inherit;
+  // width: 30%;
   // height: 17rem;
 }
 
@@ -722,27 +722,28 @@ figure {
 }
 
 .card-text {
-  position: absolute;
-  top: 24rem;
+  // position: absolute;
+  // top: 24rem;
   // height: inherit;
+  width: 70%;
   height: 20rem;
   margin-top: 0rem;
 
-  width: 25.75rem;
+  // width: 25.75rem;
   // padding-left: 1.9rem;
   // background-color: rgb(248, 245, 245);
   // margin-left: -0.5rem;
   // position: relative;
-  text-align: center;
+  // text-align: center;
 }
 
 .card__details {
-  position: absolute;
-  left: 0px;
+  // position: absolute;
+  // left: 0px;
   width: inherit;
   display: inline-block;
   // margin: 0 10% 10% 10%;
-  text-align: center;
+  // text-align: center;
   padding: 1.3rem 1rem;
   height: inherit;
 }

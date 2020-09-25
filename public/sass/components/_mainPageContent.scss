@@ -646,14 +646,14 @@ figure {
   perspective: 150rem;
   -moz-perspective: 150rem;
   // height: 41rem;
-  width: 38rem;
+  // width: 38rem;
   z-index: 1;
   margin: 0 0 4rem 0rem;
 
   border-radius: 1rem;
 
   &:not(:nth-child(8n)) {
-    margin-right: 5rem;
+    margin-right: 1.5rem;
   }
 
   &:hover {
@@ -676,7 +676,8 @@ figure {
 
 .card__face {
   position: relative;
-  height: inherit;
+  height: 20rem;
+  width: 28.2rem;
   background-color: #fff;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
@@ -709,7 +710,7 @@ figure {
   // left: 0px;
   // right: 0px;
   // bottom: 0px;
-  height: 25rem;
+  height: 20rem;
   // width: 30%;
   // height: 17rem;
 }
@@ -717,7 +718,7 @@ figure {
 .deal-photo {
   object-fit: scale-down;
   height: inherit;
-  width: 100%;
+  width: 10rem;
   padding: 7%;
 }
 

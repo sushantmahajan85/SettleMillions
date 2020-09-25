@@ -727,8 +727,8 @@
             <%  var i = 0,n = 0; %>
             <% for(var deal of recommendedDeals) { %>
             <% i++; %>
-
-            <% if(i>cooCount && ((Date.now() - deal.time) < 2*24*3600*1000)) {%>
+            <!-- && ((Date.now() - deal.time) < 2*24*3600*1000) -->
+            <% if(i>cooCount) {%>
             <% n++; %>
             <!-- <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> -->
                 <%  function kFormatter(num) {

@@ -42,8 +42,8 @@ exports.calcul = catchAsync(async (req, res) => {
 });
 
 exports.shortshort = catchAsync(async (req, res) => {
-  const deal = await Deal.findOne({short: req.params.short.split("/")[1]});
-  console.log(deal.long);
+  const deal = await Deal.findOne({short: `127.0.0.1:4000/${req.params.short}`});
+  console.log(`127.0.0.1:4000/${req.params.short}`);
 
   if(deal){
     res.redirect(deal.long.split("4000")[1]);
@@ -569,9 +569,13 @@ exports.mainPage = catchAsync(async (req, res) => {
     { score: { $meta: "textScore" } }
   ).sort({ score: { $meta: "textScore" } });
 
+
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;
   }
+
+  console.log(recommendedDeals);
+
   if (req.query.search || req.query.sort) {
     function dynamicSort(property) {
       var sortOrder = 1;
@@ -657,13 +661,13 @@ exports.mainPage = catchAsync(async (req, res) => {
       subs,
     });
 
-    for (var deal of deals) {
-      var now = new Date(Date.now());
-      var tem = (now.getTime() - 100000000000000) / 3600000;
-      tem = deal.views / tem;
+    // for (var deal of deals) {
+    //   var now = new Date(Date.now());
+    //   var tem = (now.getTime() - 100000000000000) / 3600000;
+    //   tem = deal.views / tem;
 
-      await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-    }
+    //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+    // }
   }
 });
 

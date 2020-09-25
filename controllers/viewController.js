@@ -42,13 +42,8 @@ exports.calcul = catchAsync(async (req, res) => {
 });
 
 exports.shortshort = catchAsync(async (req, res) => {
-<<<<<<< HEAD
-  const deal = await Deal.findOne({short: `127.0.0.1:4000/${req.params.short}`});
-  console.log(`127.0.0.1:4000/${req.params.short}`);
-=======
   const deal = await Deal.findOne({ short: req.params.short });
   console.log(deal);
->>>>>>> 4dada193ffb04bc9e9ada0135e0140aa6b5d4bd4
 
   if (deal) {
     res.redirect(deal.long.split("4000")[1]);
@@ -573,7 +568,6 @@ exports.mainPage = catchAsync(async (req, res) => {
     { $text: { $search: rec } },
     { score: { $meta: "textScore" } }
   ).sort({ score: { $meta: "textScore" } });
-
 
   for (var i = 0; i < cooCount; i++) {
     recommendedDeals[i] = undefined;

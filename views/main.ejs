@@ -160,94 +160,7 @@
 
 
             <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
-                <div class=" side_deals_item">
-                    <%  function kFormatter(num) {
-                        return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
-                    } 
-                    var vui = kFormatter(deal.views);
-        
-                    var now = new Date(Date.now());
-                    var tem = Math.round((now.getTime() - 10000000000)/360000)/10;
-                    var day = Math.round((tem/2.4))/10;
-                    %>
-                    <% function timeSince(date) {
-        
-                        var seconds = Math.floor((new Date() - date) / 1000);
-                      
-                        var interval = Math.floor(seconds / 31536000);
-                      
-                        if (interval > 1) {
-                          return interval + " years";
-                        }
-                        interval = Math.floor(seconds / 2592000);
-                        if (interval > 1) {
-                          return interval + " months";
-                        }
-                        interval = Math.floor(seconds / 86400);
-                        if (interval > 1) {
-                          return interval + " days";
-                        }
-                        interval = Math.floor(seconds / 3600);
-                        if (interval > 1) {
-                          return interval + " hours";
-                        }
-                        interval = Math.floor(seconds / 60);
-                        if (interval > 1) {
-                          return interval + " minutes";
-                        }
-                        return Math.floor(seconds) + " seconds"; 
-                      }
-                      var nowx = new Date(Date.now());
-                      var titu = timeSince(nowx - 10000000000);
-                      var aDay = 24*60*60*1000;
-                       %>
-                <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
-                  <div class="deal_area_box" style="width: 100% !important;">
-                    <div class="bigImg_container">
-                      <div class="deal_area_box_img" style="padding: 7rem !important;"></div>
-                    </div>
-                    <div class="deal_area_content">
-                      <div class="content_box" style="display: flex; flex-direction: column; justify-content: center">
-                        <div class="deal_box_nameTime"
-                          style="display: flex; flex-direction: row; align-items: center">
-                          <div class="deal_box_name" style="font-size: 15px !important">
-                            <%= deal.dealName %>
-                          </div>
-          
-                        </div>
-                        <div class="deal_box_nameTime" style="display: flex; flex-direction: row; align-items: center">
-                          <div class="deal_box_views"><%= deal.owner %></div>
-          
-                        </div>
-          
-          
-                        <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
-                          <div class="deal_box_dp">Rs.<%= deal.dealPrice %></div>
-                          <div class="deal_box_mrp">Rs.<%= deal.mrp %></div>
-                          <div class="deal_box_dis">-80%</div>
-                        </div>
-          
-                        <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
-                          <div class="deal_box_views"><% if (deal.views > 999) { %>
-                            <span><%=`${vui} views`%></span>
-                            <% } else { %>
-                            <span><%=`${deal.views} views`%></span>
-                            <% } %></div>
-                          <div class="deal_box_time"><% if (tem > 24) { %>
-                            <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
-                            <% } else if (tem > 1) { %>
-                            <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
-                            <% } else { %>
-                            <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
-                            <% } %></div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-                <!-- <div class="card">
+                <div class="card">
                     <div class="card__face">
                         <div class="card__picture" data-pause="true" data-interval="1000">
                             <div class="discount" style="position: absolute; top: 2%; right:2%; color: #d10024; background: none; border: 1.8px solid #d10024; height: 2.8rem; font-size: 1.5rem; padding: 0 0.5rem; z-index: 1000">-70%</div>
@@ -309,7 +222,7 @@
                                             <% } %>
 
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </ul>
                             </div>
 

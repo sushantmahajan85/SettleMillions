@@ -24,6 +24,7 @@ const dealSchema = new mongoose.Schema(
     },
     short: {
       type: String,
+      default: shortid.generate(),
       //required: true,
       //unique: true
     },
@@ -102,13 +103,10 @@ dealSchema.virtual("reviews", {
 });
 
 dealSchema.post("save", async function() {
-  this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
-  this.save();
-});
+  // const shorter = shortid.generate();
+  // this.short = shorter;
 
-dealSchema.post("save", async function() {
-  const shorter = shortid.generate();
-  this.short = `127.0.0.1:4000/${shorter}`;
+  this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
   this.save();
 });
 const Deal = mongoose.model("Deal", dealSchema);

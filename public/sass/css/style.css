@@ -685,9 +685,9 @@ body {
   display: flex;
   flex: 0 0 25%;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-content: center;
-  padding-top: 2.5rem;
-  margin-left: 2%; }
+  padding-top: 2.5rem; }
 
 .searchpage {
   display: block;
@@ -1031,12 +1031,9 @@ figure {
 
 .product_name_mainp {
   text-transform: capitalize;
-  text-align: center;
-  text-justify: center;
   display: block;
   max-height: 4rem;
-  font-size: 1.46rem;
-  margin-top: 1rem;
+  font-size: 1.5rem;
   color: #000000;
   font-weight: 600;
   line-height: 2rem;
@@ -1050,7 +1047,7 @@ figure {
   margin-top: 0.5rem;
   color: #4a4d4f;
   font-weight: 600;
-  font-size: 1.46rem; }
+  font-size: 1.26rem; }
   .aff_name:hover {
     color: black; }
 
@@ -1085,16 +1082,13 @@ figure {
   margin-top: 0.6rem; }
 
 .monetory_values_mp li {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
   height: 1.7rem;
-  text-align: center;
-  justify-content: center;
   font-family: "Montserrat", sans-serif; }
 
 .mp_price {
-  font-size: 2.3rem !important;
-  color: #d10124 !important;
+  font-size: 1.5rem;
   font-weight: 500 !important;
   font-family: "Montserrat", sans-serif; }
 
@@ -1112,7 +1106,7 @@ figure {
   margin: 0 0 4rem 0rem;
   border-radius: 1rem; }
   .card:not(:nth-child(8n)) {
-    margin-right: 1.5rem; }
+    margin-right: 1rem; }
   .card:hover {
     box-shadow: 0px 0px 6px 0px #e4e7ed, 0px 2px 1rem 5px #e5e7e9;
     overflow: hidden;
@@ -1127,7 +1121,7 @@ figure {
 .card__face {
   position: relative;
   height: 20rem;
-  width: 28.2rem;
+  width: 28.9rem;
   background-color: #fff;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
@@ -1154,7 +1148,6 @@ figure {
   margin-top: 0rem; }
 
 .card__details {
-  width: inherit;
   display: inline-block;
   padding: 1.3rem 1rem;
   height: inherit; }

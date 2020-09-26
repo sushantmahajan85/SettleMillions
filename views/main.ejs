@@ -214,11 +214,11 @@
                                             <% } %>
 
                                             <% if (tem > 24) { %>
-                                            <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
+                                            <span style="margin-left: 1rem;"><%=`${deal.time} day(s) ago`%></span>
                                             <% } else if (tem > 1) { %>
-                                            <span style="margin-left: 1rem;"><%=`${tem} hr ago`%></span>
+                                            <span style="margin-left: 1rem;"><%=`${deal.time} hr ago`%></span>
                                             <% } else { %>
-                                            <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
+                                            <span style="margin-left: 1rem;"><%=`${deal.time} min ago`%></span>
                                             <% } %>
 
                                         </div>

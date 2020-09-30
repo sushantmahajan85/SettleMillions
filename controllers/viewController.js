@@ -231,7 +231,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     }
   }
 
-  console.log(temp1);
+  console.log(allDeals1);
   console.log(allDeals2);
   console.log(allDeals3);
 

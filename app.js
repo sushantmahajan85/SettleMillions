@@ -36,7 +36,7 @@ app.use(express.json());
 // });
 
 const limiter = rateLimit({
-  max: 160,
+  max: 300,
   windowMs: 60 * 60 * 1000,
   message: "<h1>too many request from this ip..try again in an hour</h1>",
 });

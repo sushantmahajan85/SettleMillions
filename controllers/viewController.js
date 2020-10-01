@@ -1315,7 +1315,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //   await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
   // }
 
-  // const user = await User.findById(req.user);
+  const postedBy = await User.findById(req.params.sellerId);
   const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
 
   res.status(200).render("deal", {
@@ -1323,6 +1323,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     reco,
     cooCount,
     trendDeals,
+    postedBy,
     fullUrl,
   });
 

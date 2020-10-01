@@ -122,8 +122,8 @@
             } 
             var vui = kFormatter(deal.views);
 
-            var now = new Date(Date.now());
-            var tem = Math.round((now.getTime() - 100000000000)/360000)/10;
+            
+            var tem = Math.round(deal.time/360000)/10;
             var day = Math.round((tem/2.4))/10;
             %>
             <% function timeSince(date) {

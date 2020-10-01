@@ -152,9 +152,26 @@
       </div>
 
       
-      <div class="deal-deets_buttons">
+      <div class="deal-deets_buttons" style="display: flex;">
         <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
-        
+        <div class="below-image">
+          <% if (user) { %>
+            <% if (like) { %>
+            <a href="" class="deal-deets_save" id="dislike_deal">Unlike</a>
+            <% } else { %>
+            <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i></a>
+    
+            <% } %>
+            <% }else{ %>
+    
+            <a href="#" class="deal-deets_save" id="like_btn_no"><i class="fa fa-heart" style="margin-right: 1rem;"></i></a>
+    
+            <% } %>
+    
+            <a class="deal-deets_share" id="share_popup_btn" onclick="disaplay()">
+              <div class="deal-deets_share_button" ><i class="fa fa-share alt"  style="margin-right: 1rem;font-size:2.4rem"></i></div>
+            </a>
+          </div>
       </div>
       <div class="deal-deets_vt">
           <div class="deal-views-dp">
@@ -166,9 +183,10 @@
               <span><%=`${vui} views`%></span>
               <% } else { %>
               <span><%=`${deal.views} views`%></span>
-              <% } %> views</span>
+              <% } %></span>
           </div>
         </div>
+        <i class="fas fa-clock" style="margin-left: 4.5rem;margin-top:0.5rem;color:rgba(0, 0, 0, 0.432)"></i>
         <p class="deal-deets_time"><% if (tem > 24) { %>
           <span style="margin-left: 1rem;"><%=`${day} day(s) ago`%></span>
           <% } else if (tem > 1) { %>
@@ -181,10 +199,16 @@
       </div>
 
       <div class="deal-deets_affiliate">
+        <% if (postedBy.photo) { %>
+          <img src=<%=`/img/users/${postedBy.photo}`%> alt="User photo" class="user-nav__user-photo review-photo">
+          <% } else { %>
+          <a href=<%= `/member/${postedBy.id}` %> ><img style="margin-top: unset;"
+            data-name=<%=postedBy.name %> data-color="#85e0ce" class="profile
+            user-nav__user-photo review-photo"/></a>
+            <% } %>
+        <!-- <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c"> -->
 
-        <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c">
-
-        <a href="" class="deal-deets_user"> <%= deal.owner %> </a>
+        <a href="" class="deal-deets_user"> <%= postedBy.name %> </a>
         <% if (user) { %>
 
         <% if (log) { %>
@@ -200,28 +224,14 @@
         <% } %>
 
       </div>
-      
-      <div class="deal-deets_paragraph">
-        <p class="deal-deets_paragraph"><%= deal.biggerDis %></p>
-      </div>
-      <div class="below-image">
-        <% if (user) { %>
-          <% if (like) { %>
-          <a href="" class="deal-deets_save" id="dislike_deal">Unlike</a>
-          <% } else { %>
-          <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
-  
-          <% } %>
-          <% }else{ %>
-  
-          <a href="#" class="deal-deets_save" id="like_btn_no"><i class="fa fa-heart" style="margin-right: 1rem;"></i>Wishlist</a>
-  
-          <% } %>
-  
-          <a class="deal-deets_share" id="share_popup_btn" onclick="disaplay()">
-            <div class="deal-deets_share_button" ><i class="fa fa-share alt"  style="margin-right: 1rem;"></i>Share</div>
-          </a>
+      <% if (deal.biggerDis) { %>
+        <h2 style="border-bottom: 1px solid rgba(0, 0, 0, 0.233); margin-left:1.3rem;width:17.6%">Description</h2>
+        <div class="deal-deets_paragraph">
+          <p class="deal-deets_paragraph"> <%= deal.biggerDis%>  </p>
         </div>
+      <% } %>
+      
+      
     </div>
     <div class="side_deals">
       <div style="display: flex; width: 30rem; padding: 1rem 0.65rem; font-family: Montserrat; font-size: 2rem"><i class="fa fa-fire" style="padding: 0.9rem 1.5rem 0 0;"></i>Recommendations</div>
@@ -461,7 +471,7 @@
       <span class="review-head">
         <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo" class="user-nav__user-photo review-photo">
       </span>
-      <textarea placeholder="Add A Review" id="review_input" class="add-review-text-area"></textarea>
+      <input placeholder="Add A Review" id="review_input" class="add-review-text-area" style="padding-left: 2rem;">
       <button id="review_post">Post</button>
       <!-- <div class="add-rating">
         <div>Add your rating: </div>
@@ -545,7 +555,7 @@
 
 
  
-  <div class="footer">
+  <div class="footer" style="margin-top: 10rem;">
     <div class="footer-content">
       <div class="footer-section about">
         <h2>About</h2>

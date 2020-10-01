@@ -35,6 +35,7 @@
 .side_bar {
   width: 12%;
   background-color: white;
+  margin-top: 8rem;
   height: 100%;
   border: solid 1px lightgrey; }
 
@@ -357,7 +358,7 @@ h2 {
   border-bottom: 2px solid #e4e7ed !important;
   display: flex;
   justify-content: space-between;
-  padding-top: 0.89rem;
+  padding-top: 8.1rem;
   background-color: #fff; }
   .header_small-nav {
     display: flex;
@@ -1267,61 +1268,47 @@ figure {
     font-size: 2rem; }
   .deal-deets_buy {
     position: relative;
-    background-color: white;
-    color: #ef233c;
-    border: 2px solid #ef233c;
+    background-color: #ef233c;
     text-align: center;
     height: 5rem;
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 1rem 12.5rem 1rem 12.7rem;
+    color: white;
+    padding: 1rem 2.35rem 1rem 5rem;
     font-size: 1.8rem;
     margin: 0rem 2rem 0rem 0rem;
     transition: 0.2s all; }
   .deal-deets_buy > i {
     position: absolute;
-    left: 2rem;
-    top: 0.2rem;
+    left: 0.5rem;
+    top: 0.55rem;
     width: 40px;
     height: 40px;
     line-height: 38px;
-    color: #ef233c; }
+    transition: 0.2s all; }
   .deal-deets_save > i {
-    margin-right: 1.5rem; }
+    margin-right: 0.5rem;
+    margin-left: 2rem;
+    font-size: 2.4rem; }
+  .deal-deets_share > i {
+    margin-right: 1.5rem;
+    font-size: 3rem !important; }
   .deal-deets_buy:hover {
-    background-color: #fff;
-    color: #d10024;
-    border-color: #d10024; }
-  .deal-deets_save:hover {
-    background-color: #fff;
-    color: #d10024;
-    border: 2px solid #d10024; }
+    transform: translateY(-2px); }
   .deal-deets_subs:hover {
     background-color: #fff;
     color: #d10024;
     border: 2px solid #d10024; }
-  .deal-deets_share_button:hover {
-    background-color: #fff;
-    color: #d10024;
-    border: 2px solid #d10024; }
-  .deal-deets_buy:hover > i {
-    opacity: 1;
-    visibility: visible;
-    color: #d10024; }
   .deal-deets_save {
     text-align: center;
     height: 60%;
     text-transform: uppercase;
     border-radius: 1rem;
-    width: 16rem;
-    background-color: #ef233c;
-    color: white;
-    margin-top: 1rem;
-    margin: 1rem 0rem 0rem 0rem;
-    padding: 0.3rem 0.4rem;
+    color: gray;
+    margin-top: 1.5rem;
     border-radius: 1rem;
-    font-size: 1.8rem; }
+    font-size: 2.4rem; }
   .deal-deets_vt {
     display: flex;
     font-size: 1.8rem;
@@ -1353,8 +1340,7 @@ figure {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     color: #333;
-    display: inline;
-    margin-left: 4.5rem; }
+    display: inline; }
   .deal-deets_categ {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
@@ -1386,17 +1372,15 @@ figure {
       margin-bottom: 1rem; }
   .deal-deets_share {
     display: flex;
-    font-size: 1.8rem;
     margin-left: 1rem;
     margin-top: 1rem;
     width: 20rem;
     align-items: center; }
     .deal-deets_share_button {
       font-size: 16px;
-      margin-left: 3rem;
-      padding: 0.6rem 1.4rem;
-      background-color: #ef233c;
-      color: white;
+      margin-left: 1rem;
+      padding-bottom: 0.7rem;
+      color: gray;
       text-transform: uppercase;
       border-radius: 1rem;
       cursor: pointer; }

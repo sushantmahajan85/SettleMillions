@@ -49,45 +49,53 @@
   &_buy {
     position: relative;
     // display: block;
-    background-color: white;
-    color: #ef233c;
-    border: 2px solid #ef233c;
+    background-color: #ef233c;
+
+    // border: 2px solid #ef233c;
     text-align: center;
     height: 5rem;
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 1rem 12.5rem 1rem 12.7rem;
+    color: white;
+
+    padding: 1rem 2.35rem 1rem 5rem;
     font-size: 1.8rem;
     margin: 0rem 2rem 0rem 0rem;
     transition: 0.2s all;
   }
   &_buy > i {
     position: absolute;
-    left: 2rem;
-    top: 0.2rem;
+    left: 0.5rem;
+    top: 0.55rem;
     width: 40px;
     height: 40px;
     line-height: 38px;
-    color: #ef233c;
+
+    // opacity: 0;
+    // visibility: hidden;
+    transition: 0.2s all;
+  }
+  &_save > i {
+    margin-right: 0.5rem;
+    margin-left: 2rem;
+    font-size: 2.4rem;
     // opacity: 0;
     // visibility: hidden;
   }
-  &_save > i {
+  &_share > i {
     margin-right: 1.5rem;
+    font-size: 3rem !important;
     // opacity: 0;
     // visibility: hidden;
   }
   &_buy:hover {
-    background-color: #fff;
-    color: #d10024;
-    border-color: #d10024;
-    // padding: 0px 30px 0px 50px;
+    transform: translateY(-2px);
   }
   &_save:hover {
-    background-color: #fff;
-    color: #d10024;
-    border: 2px solid #d10024;
+    // background-color: #fff;
+    // color: #d10024;
+    // border: 2px solid #d10024;
   }
 
   &_subs:hover {
@@ -97,15 +105,9 @@
   }
 
   &_share_button:hover {
-    background-color: #fff;
-    color: #d10024;
-    border: 2px solid #d10024;
-  }
-
-  &_buy:hover > i {
-    opacity: 1;
-    visibility: visible;
-    color: #d10024;
+    // background-color: #fff;
+    // color: #d10024;
+    // border: 2px solid #d10024;
   }
 
   &_save {
@@ -114,22 +116,22 @@
     height: 60%;
     text-transform: uppercase;
     border-radius: 1rem;
-    width: 16rem;
+    // width: 16rem;
     // display: block;
     // color: #333;
     // border-color: #333;
-    background-color: #ef233c;
-    color: white;
-    margin-top: 1rem;
-    margin: 1rem 0rem 0rem 0rem;
+    // background-color: #ef233c;
+    color: gray;
+    margin-top: 1.5rem;
+    // margin: 0rem 0rem 0rem 0rem;
 
     // border: 1.5px solid rgb(0, 132, 255);
     // background-color: #;
 
-    padding: 0.3rem 0.4rem;
+    // padding: 0.3rem 0.4rem;
 
     border-radius: 1rem;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
   &_vt {
     display: flex;
@@ -138,7 +140,7 @@
   }
   &_subs {
     padding: 1rem 2rem;
-    border: none;//1.5px solid #ef233c;
+    border: none; //1.5px solid #ef233c;
     font-weight: 500;
     border-radius: 1rem;
     font-size: 1.7rem;
@@ -173,7 +175,6 @@
     color: #333;
     // margin-right: 8rem;
     display: inline;
-    margin-left: 4.5rem;
   }
   &_categ {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -224,7 +225,7 @@
   // }
   &_share {
     display: flex;
-    font-size: 1.8rem;
+    // font-size: 2.4rem !important;
     margin-left: 1rem;
     margin-top: 1rem;
     width: 20rem;
@@ -233,10 +234,11 @@
     &_button {
       //height: 5rem;
       font-size: 16px;
-      margin-left: 3rem;
-      padding: 0.6rem 1.4rem;
-      background-color: #ef233c;
-      color: white;
+      margin-left: 1rem;
+      // padding: 0.6rem 1.4rem;
+      // background-color: #ef233c;
+      padding-bottom: 0.7rem;
+      color: gray;
       text-transform: uppercase;
       border-radius: 1rem;
       cursor: pointer;
@@ -402,28 +404,28 @@
   width: 160rem;
 }
 
-#editRevBtn{
-    //border: 2px solid transparent;
-    text-align: center;
-    height: 60%;
-    text-transform: uppercase;
-    border-radius: 1rem;
-    width: 16rem;
-    // display: block;
-    // color: #333;
-    // border-color: #333;
-    background-color: #ef233c;
-    color: white;
-    margin-top: 1rem;
-    margin: 1rem 0rem 0rem 0rem;
+#editRevBtn {
+  //border: 2px solid transparent;
+  text-align: center;
+  height: 60%;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  width: 16rem;
+  // display: block;
+  // color: #333;
+  // border-color: #333;
+  background-color: #ef233c;
+  color: white;
+  margin-top: 1rem;
+  margin: 1rem 0rem 0rem 0rem;
 
-    // border: 1.5px solid rgb(0, 132, 255);
-    // background-color: #;
+  // border: 1.5px solid rgb(0, 132, 255);
+  // background-color: #;
 
-    padding: 0.3rem 0.4rem;
+  padding: 0.3rem 0.4rem;
 
-    border-radius: 1rem;
-    font-size: 1.8rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
 }
 
 #hidden-review {

@@ -185,12 +185,7 @@
                                         </a>
                                     </div>
                                     <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
-                                    <div class="monetory_values_mp">
-                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                        <li style="font-weight: 400;">
-                                        </li>
-                                    </div>
+
                                     <div class="views_time_mp">
                                         <div style="display: inline-block; color: #737b8a">
                                             <i class="fas fa-eye"></i>
@@ -209,6 +204,12 @@
                                             <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
                                             <% } %>
 
+                                        </div>
+                                        <div class="monetory_values_mp">
+                                            <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                                <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                            <li style="font-weight: 400;">
+                                            </li>
                                         </div>
                                     <!-- <div class="mp_like-rate">
                                         <i class="mp_like_deal far fa-heart"></i>
@@ -2015,6 +2016,40 @@
             <button id="like_btn" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Like</button><button id="popup_cross_cancel_like" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
         </div>
     </div>
+    <div class="popup" id="popup" style="display: block;">
+                
+        <div class="popup1_content">
+            <div class="popup1_left">
+                <img src="/img/2.png" alt="hi" class="popup1_img">
+            </div>
+            <div class="popup1_right">
+                <a href="#section-about" class="popup1_cross">&times;</a>
+            <h1 class="heading-secondary popup1_heading">achievements of 2016</h1>
+            <p class="paragraph popup1_paragraph">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
+                </p>    
+            
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup_whatsapp_telegram">
+        <div class="popup1_left">
+            <img src="/img/2.png" alt="hi" class="popup1_img">
+        </div>  
+        
+        <div class="popup_right">
+            <div class="popup_cross" id="popup_cross_whatsapp_telegram" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+        <h1 class="heading-secondary popup1_heading">achievements of 2016</h1>
+        <p class="paragraph popup1_paragraph">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
+            </p>  
+            <p id="newsletter_heading"style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
+            <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="display: flex;">
+              <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+            </div>
+            <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+        </div>
+        </div>
+    </div>
 
     <script defer>
         document.getElementById('popup_cross').addEventListener('click', e => {
@@ -2023,6 +2058,14 @@
 
         document.getElementById('popup_cross_cancel').addEventListener('click', e => {
             document.getElementById('popup').style.display = 'none';
+        });
+
+        document.getElementById('popup_cross_whatsapp_telegram').addEventListener('click', e => {
+            document.getElementById('popup_whatsapp_telegram').style.display = 'none';
+        });
+
+        document.getElementById('popup_cross_cancel_whatsapp_telegram').addEventListener('click', e => {
+            document.getElementById('popup_whatsapp_telegram').style.display = 'none';
         });
 
         document.getElementById('popup_cross_like').addEventListener('click', e => {

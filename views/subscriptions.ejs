@@ -24,15 +24,23 @@
 <body>
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %>
-
+   
     <section class="deal_area">
+        <% if (allDeals1.length == 0 && allDeals2.length == 0 && allDeals3.length ==0) { %>
+            <h1 class="titles_main mainpage_titles" style="padding-top: 4rem;">Please first subscribe to someone's channel.</h1> 
+             
+            <% } %>
+        
+        <% if (allDeals1.length) { %>
+         
+        
         <div class="titles_main">
             <a href="#">
                 <div class="mainpage_titles">Hot Deals</div>
             </a>
             <a href="/trending"><div class="mainpage_titles-options">See All</div></a>
     </div>
-    
+    <% } %>
             <div id="trending" class="trending">
     
                 <%  var i = 0; %>
@@ -159,14 +167,17 @@
                 <% if (i === 8){break;}%>
                 <% } %>
             </div>
+            <% if (allDeals2.length) { %>
 
             <div class="titles_main">
+                 
                 <a href="#">
                     <div class="mainpage_titles">Hot Deals</div>
                 </a>
                 <a href="/trending"><div class="mainpage_titles-options">See All</div></a>
         </div>
         
+        <% } %>
                 <div id="trending" class="trending">
         
                     <%  var i = 0; %>
@@ -293,6 +304,9 @@
                     <% if (i === 8){break;}%>
                     <% } %>
                 </div>
+                
+                <% if (allDeals3.length) { %>
+                 
                 <div class="titles_main">
                     <a href="#">
                         <div class="mainpage_titles">Hot Deals</div>
@@ -300,6 +314,7 @@
                     <a href="/trending"><div class="mainpage_titles-options">See All</div></a>
             </div>
             
+            <% } %>
                     <div id="trending" class="trending">
             
                         <%  var i = 0; %>
@@ -429,7 +444,7 @@
         
     </section>
 
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="footer-content">
             <div class="footer-section about">
                 <h2>About</h2>
@@ -499,7 +514,7 @@
             &copy; 2020, Your Deal Inc.
 
         </div>
-    </div>
+    </div> -->
 
 
 </body>

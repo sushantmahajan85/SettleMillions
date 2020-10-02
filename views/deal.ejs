@@ -716,10 +716,10 @@
         <div class="popup_cross" id="share_cross" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
     </div>
     <div class="popup_content" style="font-size: 2rem; text-align: center;">
-        Please signup / login to subscribe ?
+        Share
         <br>
  
-        <textarea name="" id="" class="generated" cols="30" rows="10" > <%= deal.dealName %> <%= deal.dealPrice %>  <%= deal.discount %> <%= fullUrl %>   </textarea>
+        <textarea name="" id="" class="generated" cols="30" rows="5" ><%= deal.dealName %>&#10;<%= deal.dealPrice %>  <%= deal.discount %>&#10;<%= fullUrl %>   </textarea>
         <button id="copied" onclick="coping()">copy</button>
         <!-- <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="subscribe_btn_no_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button> -->
     </div>

@@ -28,7 +28,7 @@
 
     <div class="deal_area">
 
-        <div class="filter_container">
+        <!-- <div class="filter_container">
             <div class="filter_head">
                 <i class="fas fa-filter" onclick="filterList()"></i>
                 <p id="filter_heading" onclick="filterList()">Filter</p>
@@ -142,11 +142,11 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="liked_D_container">
         <% if (user.likedDeals.length === 0) { %>
- <!-- <h1>Empty bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1> -->
+ <h1>Empty bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1>
  <% } else { %>
     <% for(var likedDeal of user.likedDeals) { %>
         <a href=<%= `/deal/${likedDeal.deal._id}/postedBy/${likedDeal.deal.user}` %>>

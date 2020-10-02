@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affiliate</title>
     <link rel="stylesheet" href="sass/css/style.css">
-    <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fdec90a950.js" crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -28,7 +27,7 @@
 
     <div class="deal_area">
 
-        <div class="filter_container">
+        <!-- <div class="filter_container">
             <div class="filter_head">
                 <i class="fas fa-filter" onclick="filterList()"></i>
                 <p id="filter_heading" onclick="filterList()">Filters & Sorting</p>
@@ -99,14 +98,10 @@
                         <div class="price_input-boxes">
                         <div class="input-number price-min">
                             <input id="price-min" type="text">
-                            <!-- <span class="qty-up">+</span>
-                            <span class="qty-down">-</span> -->
                         </div>
                         <span>-</span>
                         <div class="input-number price-max">
                             <input id="price-max" type="text">
-                            <!-- <span class="qty-up">+</span>
-                            <span class="qty-down">-</span> -->
                         </div>
                     </div>
                     </div>
@@ -195,11 +190,11 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="liked_D_container">
         <% if (user.likedDeals.length === 0) { %>
- <!-- <h1>Empty bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h1> -->
+ <h1 >You haven't liked any deal yet.</h1>
  <% } else { %>
     <% for(var likedDeal of user.likedDeals) { %>
         <a href=<%= `/deal/${likedDeal.deal._id}/postedBy/${likedDeal.deal.user}` %>>

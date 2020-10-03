@@ -648,6 +648,11 @@ exports.mainPage = catchAsync(async (req, res) => {
       .sort([["time", -1]])
       .limit(16);
 
+    var yesNo = 0;
+    if(req.cookies.Joined){
+      yesNo = 1;
+    }
+
     res.status(200).render("main", {
       deals,
       recommendedDeals,
@@ -658,6 +663,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       groupC,
       numberG,
       subs,
+      yesNo
     });
 
     // for (var deal of deals) {

@@ -33,9 +33,12 @@
         <div>Live Deals</div>
       </div>
       <% if(user) { %>
-      <div class="titles_nv">
-        <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
-      </div>
+        <% if (user.role == 'admin') { %>
+          <div class="titles_nv">
+            <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
+          </div>
+         
+        <% } %>
       <div
       id="GoogeSigninButton"
       data-height="40"
@@ -104,9 +107,12 @@
           </div>
         </a>
       <a class="titles_nv" href=<%=` /analytics `%> id="signup">
-        <div class="postDeal" style="display: flex; align-items: center; ">
-          <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
-        </div>
+        <% if (user.role == 'admin') { %>
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
+          </div>
+        <% } %>
+       
       <% } else { %>
        
         <a class="titles_nv" href=<%=` /trending `%> id="signup">

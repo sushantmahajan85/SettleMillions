@@ -1476,6 +1476,45 @@
         </div>
         <% } %>
         
+        <div class="news ">
+            <div class="titles_main">
+                <a href="#">
+                    <div class="mainpage_titles">News</div>
+                </a>
+                <a href="#"><div class="mainpage_titles-options">See All</div></a>
+            </div>
+           
+            <div class="main-content3">
+            <div class="owl-carousel owl-theme">
+            
+            
+            
+            <% for(var i = 0 ; i < 6 ; i++) { %>
+                
+            <div class="news_box" id="news_box3">
+                <div class="news_item">
+                    <img src="/img/users/default.jpg" alt="" style="display: unset !important;width:unset !important">
+                    <p id="profile_name">Raman</p>
+                    <p id="news_headline">The arsonist had oddly shaped feet
+                    <p>
+                    <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
+                        Rock, and that's the vortex of the heart.</p>
+                    <div class="news_tag_container">
+                        <p class="news_tag">Hardware</p>
+                        <p class="news_tag">Technology</p>
+                        <p class="news_tag">Fashion</p>
+                    </div>
+                </div>
+            </div>
+            <% } %> 
+        </div>
+            <div class="owl-theme">
+                <div class="owl-controls">
+                    <div class="custom-nav owl-nav"></div>
+                </div>
+            </div>
+       </div>
+        </div>
 
         <div class="news ">
             <div class="titles_main">
@@ -1799,6 +1838,7 @@
     <script defer src="/js/likedDeal.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+   
     <script>
         $('.main-content .owl-carousel').owlCarousel({
             stagePadding: 50,
@@ -1847,6 +1887,28 @@
             }
         });
     </script>
+    <script>
+        $('.main-content3 .owl-carousel').owlCarousel({
+            stagePadding: 50,
+            loop: false,
+            margin: 10,
+            nav: true,
+            navText: [
+                '<i class="fa fa-angle-left arrow" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right arrow" aria-hidden="true"></i>'
+            ],
+            navContainer: '.main-content3 .custom-nav',
+            responsive:{
+                0:{
+                    items: 1
+                },
+                1000:{
+                    items: 3
+                }
+            }
+        });
+    </script>
+   
     <script>
         $(".card__picture").on("mouseenter", function () {
             $(this).carousel('cycle');

@@ -139,16 +139,16 @@
     padding: 1rem;
   }
   &_subs {
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border: none; //1.5px solid #ef233c;
-    font-weight: 500;
-    border-radius: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
     font-size: 1.7rem;
     margin-left: 2rem;
     background-color: #ef233c;
     color: white;
     // background-color: #ef233c;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     cursor: pointer;
   }
   &_views {

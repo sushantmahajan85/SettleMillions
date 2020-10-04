@@ -33,6 +33,7 @@
         <div>Live Deals</div>
       </div>
       <% if(user) { %>
+<<<<<<< HEAD
         <% if (user.role == 'admin') { %>
           <div class="titles_nv">
             <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
@@ -40,6 +41,12 @@
          
         <% } %>
       <div
+=======
+      <div class="titles_nv">
+        <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
+      </div>
+      <!-- <div
+>>>>>>> 6ce762f4606ac59c415a2d5e1451a78cfdaffe63
       id="GoogeSigninButton"
       data-height="40"
       data-width="372"
@@ -48,7 +55,7 @@
       data-onsuccess="onSignIn"
       class="g-signin2"
       style="margin-top: 1.5rem;display:none;visibility:hidden"
-    ></div>
+    ></div> -->
 
       <% } else { %>
         <div class="titles_nv" id="post_no_user">

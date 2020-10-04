@@ -573,7 +573,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     recommendedDeals[i] = undefined;
   }
 
-  console.log(recommendedDeals);
+  // console.log(recommendedDeals);
 
   if (req.query.search || req.query.sort) {
     function dynamicSort(property) {
@@ -651,6 +651,8 @@ exports.mainPage = catchAsync(async (req, res) => {
     var yesNo = 0;
     if(req.cookies.Joined){
       yesNo = 1;
+    }else if(req.cookies.NotJoined){
+      yesNo = 2;
     }
 
     res.status(200).render("main", {

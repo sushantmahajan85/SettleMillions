@@ -21,7 +21,53 @@
 </head>
 
 <body>
-  <section class="header" style="width:100% !important; position:fixed">
+  <section class="header" style=" position:fixed">
+    <div
+      id="mySidenav"
+      class="sidenav"
+      style="z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <h3 class="nav_tff">Thapar Food Festival</h3>
+      <div class="navigation_link navigation_item">
+        <a href="#popup" onclick="closeNav()">About</a>
+        <a href="events.html" onclick="closeNav()">Events</a>
+        <a href="#section_pic" onclick="closeNav()">Sponsors</a>
+        <a href="#popup4" onclick="closeNav()">Theme</a>
+        <a href="#team_section" onclick="closeNav()">Gallery</a>
+        <a href="coupons.html" onclick="closeNav()">Campaign</a>
+      </div>
+      <h3 class="follow_us">Follow Us On</h3>
+      <div class="nav_logos">
+        <a
+          href="https://www.facebook.com/thaparfoodfestival/"
+          class="fa fa-facebook"
+        ></a>
+        <a
+          href="https://www.instagram.com/thaparfoodfestival/?hl=en"
+          class="fa fa-instagram"
+        ></a>
+      </div>
+    </div>
+    <span
+      class="nav_logo"
+      style="font-size:30px;cursor:pointer;color:white;position: fixed"
+      onclick="openNav()"
+      >&#9776;
+    </span>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("nav_logo").style.visibility = "hidden";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
     <a href="/">
       <div class="title">
         <h2 class="Navb_logo-text">Your Deal</h2>
@@ -33,10 +79,13 @@
         <div>Live Deals</div>
       </div>
       <% if(user) { %>
-      <div class="titles_nv">
-        <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
-      </div>
-      <!-- <div
+        <% if (user.role == 'admin') { %>
+          <div class="titles_nv">
+            <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
+          </div>
+         
+        <% } %>
+      <div
       id="GoogeSigninButton"
       data-height="40"
       data-width="372"
@@ -95,7 +144,9 @@
       </button>
     </form>
   </div>
-
+  <button class="search__button search_phone">
+    <i class="fas fa-search search-icon search_i"></i>
+  </button>
     <nav class="user-nav">      
       <% if (user) { %>
         <a class="titles_nv" href=<%=` /trending `%> id="signup">
@@ -104,9 +155,12 @@
           </div>
         </a>
       <a class="titles_nv" href=<%=` /analytics `%> id="signup">
-        <div class="postDeal" style="display: flex; align-items: center; ">
-          <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
-        </div>
+        <% if (user.role == 'admin') { %>
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
+          </div>
+        <% } %>
+       
       <% } else { %>
        
         <a class="titles_nv" href=<%=` /trending `%> id="signup">

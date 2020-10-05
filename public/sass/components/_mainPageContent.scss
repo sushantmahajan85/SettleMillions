@@ -19,6 +19,9 @@ body {
   margin-left: 12%;
   // padding-top: 8rem;
   background-color: rgb(255, 255, 255);
+  @include respond(tab-land) {
+    margin-left: 1%;
+  }
 }
 
 .trending {
@@ -28,8 +31,24 @@ body {
   align-content: center;
   padding-top: 3.5rem;
   margin-left: 2%;
+  @include respond(phone) {
+    margin-left: 3rem;
+    padding-top: 1.6rem;
+  }
 }
-
+.owl-stage {
+  @include respond(phone) {
+    padding-left: 2rem !important;
+  }
+}
+.social_chan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
 .searchpage {
   display: block;
   flex: 0 0 25%;
@@ -75,6 +94,9 @@ img {
   height: 30rem;
   //   margin: auto;
   //   float: right;
+  @include respond(phone) {
+    padding-top: 12rem;
+  }
 }
 img {
   padding: 0.5rem !important;
@@ -651,7 +673,10 @@ figure {
   margin: 0 0 4rem 0rem;
 
   border-radius: 1rem;
-
+  @include respond(tab-land) {
+    width: 22rem;
+    height: 38rem;
+  }
   &:not(:nth-child(8n)) {
     margin-right: 5rem;
   }
@@ -663,15 +688,14 @@ figure {
   }
 }
 
-@media only screen and (max-width: 1400px), only screen and (hover: none) {
-  .card {
-    width: 24.75rem;
-    // margin-right: 4rem;
-  }
+// @media only screen and (max-width: 1400px), only screen and (hover: none) {
+//   .card {
+//     width: 24.75rem;
+//     // margin-right: 4rem;
+//   }
 
-  .card:not(:nth-child(8n)) {
-    margin-right: 4rem;
-  }
+.card:not(:nth-child(8n)) {
+  margin-right: 3rem;
 }
 
 .card__face {

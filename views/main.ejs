@@ -1479,7 +1479,7 @@
         <div class="news ">
             <div class="titles_main">
                 <a href="#">
-                    <div class="mainpage_titles">News</div>
+                    <div class="mainpage_titles">Pages</div>
                 </a>
                 <a href="#"><div class="mainpage_titles-options">See All</div></a>
             </div>
@@ -1499,11 +1499,11 @@
                     <p>
                     <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
                         Rock, and that's the vortex of the heart.</p>
-                    <div class="news_tag_container">
+                    <!-- <div class="news_tag_container">
                         <p class="news_tag">Hardware</p>
                         <p class="news_tag">Technology</p>
                         <p class="news_tag">Fashion</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <% } %> 
@@ -1539,11 +1539,11 @@
                     <p>
                     <p id="news_content">The magic Indian is a mysterious spiritual force, and we're going to Cathedral
                         Rock, and that's the vortex of the heart.</p>
-                    <div class="news_tag_container">
+                    <!-- <div class="news_tag_container">
                         <p class="news_tag">Hardware</p>
                         <p class="news_tag">Technology</p>
                         <p class="news_tag">Fashion</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <% } %> 
@@ -1746,12 +1746,14 @@
         <div class="newsletter">
             
             <p id="newsletter_heading">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
-            <div style="display: flex; justify-content: center; align-items: center;">
+            <div  class="social_chan">
             <p id="newsletter_subtitle">Get info about the latest deals from around the internet</p>
+            <div class="channelx">
             <div style="display: flex;">
               <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
             </div>
             <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem;"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+        </div>
         </div>
     </div>
 

@@ -4663,7 +4663,6 @@ a {
   margin-top: 2rem; }
 
 html {
-  font-size: 62.5%;
   height: 100%; }
 
 * {
@@ -4676,7 +4675,7 @@ html {
   justify-content: space-around; }
 
 .form_section {
-  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58));
+  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58)), url("/img/backg.jpg");
   background-size: cover;
   background-size: cover;
   padding: 10rem 0; }

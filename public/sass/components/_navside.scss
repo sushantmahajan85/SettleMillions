@@ -13,6 +13,9 @@
   border: solid 1px lightgrey;
 
   // overflow-y: scroll !important;
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 //  D changes end

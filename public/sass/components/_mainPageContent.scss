@@ -72,7 +72,7 @@ img {
   display: flex;
   // flex-wrap: wrap;
   //   position: absolute;
-  height: 45rem;
+  height: 30rem;
   //   margin: auto;
   //   float: right;
 }
@@ -262,7 +262,7 @@ a.show-hide-link {
   }
 }
 
-#showLessT, 
+#showLessT,
 #showLessR,
 #showLessL,
 #showLessS {
@@ -626,7 +626,7 @@ figure {
 }
 
 .mp_price {
-  font-size: 2.3rem !important;
+  font-size: 1.8rem !important;
   color: #d10124 !important;
   font-weight: 500 !important;
   font-family: $family2;
@@ -786,7 +786,7 @@ figure {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: '';
+  text-overflow: "";
   &:hover {
     background-color: #fff;
   }

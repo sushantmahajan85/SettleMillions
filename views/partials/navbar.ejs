@@ -94,7 +94,7 @@
       data-onsuccess="onSignIn"
       class="g-signin2"
       style="margin-top: 1.5rem;display:none;visibility:hidden"
-    ></div> -->
+    ></div>
 
       <% } else { %>
         <div class="titles_nv" id="post_no_user">
@@ -147,6 +147,17 @@
   <button class="search__button search_phone">
     <i class="fas fa-search search-icon search_i"></i>
   </button>
+  <script>
+      document.querySelector('.search_phone').addEventListener('click', () => { 
+      document.querySelector(".search").style.display = "block";
+      document.querySelector(".search").style.visibility = "visible";
+      document.querySelector(".Navb_logo-text").style.display = "none";
+      document.querySelector(".nav_logo").style.display = "none";
+      document.querySelector(".search_nv").style.width = "20%";
+      document.querySelector(".search_phone").style.display = "none";
+      document.querySelector(".search_phone").style.visibility = "hidden";
+    })
+  </script>
     <nav class="user-nav">      
       <% if (user) { %>
         <a class="titles_nv" href=<%=` /trending `%> id="signup">

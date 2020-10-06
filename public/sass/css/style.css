@@ -438,7 +438,7 @@ h2 {
 .header_small {
   border-bottom: 2px solid #e4e7ed !important;
   display: flex;
-  width: 100%;
+  width: 100% !important;
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff; }
@@ -471,7 +471,7 @@ h2 {
 .header {
   font-size: 1.7rem;
   height: 8rem;
-  width: 100vw;
+  width: 100%;
   background-color: #15161d;
   border-bottom: 3px solid #d10024;
   display: -webkit-box;
@@ -892,7 +892,7 @@ nav li {
   font-family: "Amaranth"; }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -948,7 +948,8 @@ body {
   flex-wrap: wrap;
   align-content: center;
   padding-top: 3.5rem;
-  margin-left: 2%; }
+  justify-content: space-around;
+  margin: 0rem 4rem 3rem 4rem; }
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
@@ -1415,7 +1416,6 @@ figure {
   -moz-perspective: 150rem;
   height: 41rem;
   width: 25.75rem;
-  z-index: 1;
   margin: 0 0 4rem 0rem;
   border-radius: 1rem; }
   @media (max-width: 75em) {
@@ -1428,15 +1428,10 @@ figure {
     .card .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
-  .card:not(:nth-child(8n)) {
-    margin-right: 5rem; }
   .card:hover {
     box-shadow: 0px 0px 6px 0px #e4e7ed, 0px 2px 1rem 5px #e5e7e9;
     overflow: hidden;
     border-radius: 1rem; }
-
-.card:not(:nth-child(8n)) {
-  margin-right: 3rem; }
 
 .card__face {
   position: relative;
@@ -1538,6 +1533,19 @@ figure {
 
 .owl-stage {
   padding-top: 1rem; }
+
+#mybutton {
+  background-color: white;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6); }
+
+#mybutton i {
+  font-size: 5rem;
+  cursor: pointer; }
 
 .dealPageContent {
   display: flex;
@@ -4587,7 +4595,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -4671,7 +4679,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -4692,7 +4700,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }
@@ -4913,12 +4921,30 @@ html {
   height: 22rem;
   display: flex;
   margin: 0% 19%; }
+  @media (max-width: 37.5em) {
+    .footer-content {
+      margin: 0% 0%; } }
+  @media (max-width: 1380px) {
+    .footer-content .p {
+      font-size: 2rem; }
+    .footer-content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .footer-content h2 {
   color: #fff;
   text-align: left;
   font-size: 2.5rem;
   margin-left: 10px; }
+  @media (max-width: 37.5em) {
+    .footer-content h2 {
+      margin-left: 0rem; } }
+  @media (max-width: 1380px) {
+    .footer-content h2 .p {
+      font-size: 2rem; }
+    .footer-content h2 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .footer-section {
   padding: 1.8rem;
@@ -4932,6 +4958,15 @@ html {
 
 .footer-section.about {
   margin-left: 3.5rem; }
+  @media (max-width: 37.5em) {
+    .footer-section.about {
+      margin-left: 0rem; } }
+  @media (max-width: 1380px) {
+    .footer-section.about .p {
+      font-size: 2rem; }
+    .footer-section.about .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .footer-section ul {
   list-style-type: none;
@@ -5022,7 +5057,9 @@ hr {
   font-size: 38px; }
   @media (max-width: 37.5em) {
     #newsletter_heading {
-      font-size: 32px; } }
+      font-size: 18px;
+      line-height: 5rem;
+      margin-top: 1rem; } }
   @media (max-width: 1380px) {
     #newsletter_heading .p {
       font-size: 2rem; }
@@ -5037,6 +5074,17 @@ hr {
   text-align: center;
   font-size: 20px;
   color: #404040; }
+  @media (max-width: 37.5em) {
+    #newsletter_subtitle {
+      font-size: 11px;
+      line-height: 3rem;
+      margin-bottom: 3rem; } }
+  @media (max-width: 1380px) {
+    #newsletter_subtitle .p {
+      font-size: 2rem; }
+    #newsletter_subtitle .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .newsletter form {
   margin-top: 50px;
@@ -5056,15 +5104,19 @@ hr {
 
 .newsletter button {
   border: none;
-  padding: 9.5px 30px 10.5px 30px;
-  border-radius: 0px 8px 8px 0px;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  display: inline-block;
-  margin-left: -2.93px;
-  margin-top: -1px; }
+  display: inline-block; }
 
 .newsletter input::placeholder {
   font-size: 15px;
   font-weight: 500; }
+
+.social_button {
+  border-radius: 5%;
+  padding: 9.5px 30px 10.5px 30px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 2rem; }

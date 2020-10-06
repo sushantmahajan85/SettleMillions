@@ -321,6 +321,9 @@ html {
   height: 22rem;
   display: flex;
   margin: 0% 19%;
+  @include respond(phone) {
+    margin: 0% 0%;
+  }
 }
 
 .footer-content h2 {
@@ -328,6 +331,9 @@ html {
   text-align: left;
   font-size: 2.5rem;
   margin-left: 10px;
+  @include respond(phone) {
+    margin-left: 0rem;
+  }
 }
 
 .footer-section {
@@ -345,6 +351,9 @@ html {
 
 .footer-section.about {
   margin-left: 3.5rem;
+  @include respond(phone) {
+    margin-left: 0rem;
+  }
 }
 
 .footer-section ul {

@@ -36,6 +36,9 @@
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %>
     
+    <div id="mybutton">
+        <i class="fa fa-telegram" style= "color: rgb(45,160,214)"></i>
+    </div>
     
     <%
         const WL = ["https://chat.whatsapp.com/LGhpgcdjnRTG5IPsHtmuTh", "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN"];
@@ -1750,9 +1753,9 @@
             <p id="newsletter_subtitle">Get info about the latest deals from around the internet</p>
             <div class="channelx">
             <div style="display: flex;">
-              <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+              <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button class="social_button" onclick="incrementGC()" style="background-color: #3ADA57;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
             </div>
-            <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC()" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem;"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+            <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button class="social_button" onclick="incrementGC()" style="background-color: rgb(45,160,214);"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
         </div>
         </div>
     </div>

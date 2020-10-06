@@ -407,7 +407,7 @@ h2 {
 .header_small {
   border-bottom: 2px solid $border-color !important;
   display: flex;
-  width: 100%;
+  width: 100% !important;
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff;
@@ -437,7 +437,7 @@ h2 {
 .header {
   font-size: 1.7rem;
   height: 8rem;
-  width: 100vw;
+  width: 100%;
   // padding: 1.6rem 0;
   background-color: #15161d;
   border-bottom: 3px solid $maroon;

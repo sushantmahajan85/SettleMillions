@@ -6,7 +6,6 @@ const router = express.Router();
 
 //router.get(viewController.getSignupApp);
 
-
 router.use(authController.isLoggedIn);
 
 router.get("/login", viewController.getLoginForm);
@@ -31,6 +30,7 @@ router.get(
   viewController.getSubscriptions
 );
 
+router.get("/search", viewController.autocomplete);
 router.get("/:short", viewController.shortshort);
 router.get("/logout", authController.logout);
 router.get("/newDeal", viewController.createNewDeal);
@@ -42,5 +42,4 @@ router.get(
   authController.protect,
   viewController.updateUserSettings
 );
-router.get("/search", viewController.autocomplete);
 module.exports = router;

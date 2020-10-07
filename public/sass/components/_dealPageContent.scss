@@ -6,7 +6,7 @@
 
 .deal-carousel {
   display: flex;
-  height: 60rem;
+  height: 50rem;
   width: 50rem;
 }
 
@@ -19,17 +19,19 @@
   height: inherit;
   width: 150%;
   margin-left: 0.5rem;
-  width: 53rem;
-  height: 60rem;
-  padding-top: 1.1rem;
-  margin-top: 0.1rem;
+  width: 45rem;
+  height: 50rem;
+  padding: 1.4rem 0rem 0rem 0.8rem;
+  margin-top: 1.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.01);
 
   // position: absolute;
 
   &_buttons {
     display: block;
     padding: 1rem 1rem 1rem 1rem;
-    margin-right: 4rem;
     margin-top: 1rem;
   }
   &_name {
@@ -89,25 +91,11 @@
     // opacity: 0;
     // visibility: hidden;
   }
-  &_buy:hover {
-    transform: translateY(-2px);
-  }
-  &_save:hover {
-    // background-color: #fff;
-    // color: #d10024;
-    // border: 2px solid #d10024;
-  }
 
   &_subs:hover {
     background-color: #fff;
     color: #d10024;
     border: 2px solid #d10024;
-  }
-
-  &_share_button:hover {
-    // background-color: #fff;
-    // color: #d10024;
-    // border: 2px solid #d10024;
   }
 
   &_save {
@@ -246,10 +234,17 @@
   }
 }
 
+.deal-deets hr {
+  width: 93%;
+  margin-right: 2.1rem;
+  color: #c4c4c4;
+}
+
 .deal-with-review {
   display: flex;
   flex-direction: column;
   width: inherit;
+  margin-top: 2.5rem;
 }
 
 .review-section {
@@ -556,7 +551,7 @@
 }
 
 .slideshow-dealpage {
-  width: 83.5%;
+  width: 90%;
   height: 100%;
   // border: 0.1rem solid #ecf0f1;
 
@@ -566,14 +561,14 @@
 .small-slides {
   display: flex;
   flex-direction: column;
-  width: 12.5%;
+  width: 25%;
   height: inherit;
   margin-top: 0.1rem;
   margin-left: 2rem;
 }
 
 .mini-slide {
-  height: 16.67%;
+  height: 20%;
   // border-bottom: 0.1rem solid #cacfd2;
   // border-left: 0.1rem solid #cacfd2;
 
@@ -783,24 +778,24 @@
   font-family: $family2;
   // word-spacing: 0.7rem;
   &_avail {
-    font-weight: 500;
-    color: #ef233c;
-    font-size: 2.78rem;
+    font-weight: 600;
+    color: #3f3f3f;
+    font-size: 2.3rem;
   }
   &_dis {
-    margin-left: 1.2rem;
+    margin-left: 1rem;
     color: #ef233c;
     font-weight: 600;
-    font-size: 3.5rem;
+    font-size: 2.3rem;
     padding: 0.2rem 0.5rem;
     //border: 2px solid $maroon;
     // border-radius: 10px;
   }
   &_mrp {
-    margin-left: 1.2rem;
+    margin-left: 1rem;
     text-decoration: line-through;
-    color: #737b8a;
-    font-size: 1.6rem;
+    color: #474747;
+    font-size: 1.8rem;
     font-weight: 400;
   }
 }

@@ -280,6 +280,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
     { dealName: regex },
     { score: { $meta: "textScore" } }
   ).sort({ score: { $meta: "textScore" } });
+  console.log("bhgvyvy");
   //   const query = await Deal.find(
   //     { $text: { $search: req.query.search } },
   //     { score: { $meta: "textScore" } }
@@ -649,9 +650,9 @@ exports.mainPage = catchAsync(async (req, res) => {
       .limit(16);
 
     var yesNo = 0;
-    if(req.cookies.Joined){
+    if (req.cookies.Joined) {
       yesNo = 1;
-    }else if(req.cookies.NotJoined){
+    } else if (req.cookies.NotJoined) {
       yesNo = 2;
     }
 
@@ -665,7 +666,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       groupC,
       numberG,
       subs,
-      yesNo
+      yesNo,
     });
 
     // for (var deal of deals) {

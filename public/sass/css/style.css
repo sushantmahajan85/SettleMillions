@@ -942,6 +942,18 @@ body {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+@media (max-width: 37.5em) {
+  .owl-nav {
+    display: none;
+    visibility: hidden; } }
+
+@media (max-width: 1380px) {
+  .owl-nav .p {
+    font-size: 2rem; }
+  .owl-nav .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
 .trending {
   display: flex;
   flex: 0 0 25%;
@@ -953,7 +965,8 @@ body {
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
-      padding-top: 1.6rem; } }
+      padding-top: 1.6rem;
+      margin: 0rem 1.8rem 3rem 1.8rem; } }
   @media (max-width: 1380px) {
     .trending .p {
       font-size: 2rem; }
@@ -5109,8 +5122,7 @@ hr {
   box-shadow: 0px 1px 2px 2px rgba(208, 211, 212, 0.4); }
 
 .newsletter button {
-  border: none;
-  display: inline-block; }
+  border: none; }
 
 .newsletter input::placeholder {
   font-size: 15px;

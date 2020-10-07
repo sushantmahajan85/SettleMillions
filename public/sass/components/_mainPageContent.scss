@@ -23,7 +23,12 @@ body {
     margin-left: 1%;
   }
 }
-
+.owl-nav {
+  @include respond(phone) {
+    display: none;
+    visibility: hidden;
+  }
+}
 .trending {
   display: flex;
   flex: 0 0 25%;
@@ -37,6 +42,7 @@ body {
   @include respond(phone) {
     margin-left: 3rem;
     padding-top: 1.6rem;
+    margin: 0rem 1.8rem 3rem 1.8rem;
   }
 }
 .owl-stage {

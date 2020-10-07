@@ -5,11 +5,6 @@
     text-align: center;
     -webkit-tap-highlight-color: transparent;
 
-    @include respond(phone) {
-      display: none;
-      visibility: hidden;
-    }
-
     [class*="owl-"] {
       color: $nav-color;
       font-size: $nav-font-size;

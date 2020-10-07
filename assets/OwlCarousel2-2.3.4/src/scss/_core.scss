@@ -69,10 +69,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    @include respond(phone) {
-      display: none;
-      visibility: hidden;
-    }
   }
 
   .owl-nav button.owl-prev,

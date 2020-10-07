@@ -1083,7 +1083,7 @@ img {
   height: 30rem; }
   @media (max-width: 37.5em) {
     .slideshow-container {
-      padding-top: 8rem; } }
+      padding-top: 10rem; } }
   @media (max-width: 1380px) {
     .slideshow-container .p {
       font-size: 2rem; }

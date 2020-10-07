@@ -961,9 +961,9 @@ nav li {
   }
 }
 .sidenav a {
-  padding: 8px 8px 8px 28px;
+  padding: 0.5rem 28px;
   text-decoration: none;
-  font-size: 17.5px;
+  font-size: 12.5px;
   color: #555555;
   background-image: linear-gradient(
     120deg,
@@ -972,7 +972,7 @@ nav li {
     white 50%
   );
   background-size: 220%;
-  color: grey;
+  color: white;
   display: block;
   transition: 0.5s all;
   margin-bottom: 1.3rem;
@@ -986,7 +986,7 @@ nav li {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 0;
   font-size: 25px;
   margin-left: 50px;
   color: white;
@@ -1052,9 +1052,9 @@ nav li {
 .nav_tff {
   text-align: start;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-left: 4rem;
-  margin-bottom: 4rem;
+  // margin-bottom: 4rem;
   font-family: "Amaranth";
 }
 

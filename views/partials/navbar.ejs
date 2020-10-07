@@ -30,14 +30,14 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <h3 class="nav_tff">Thapar Food Festival</h3>
+      <h3 class="nav_tff">Your Deal</h3>
       <div class="navigation_link navigation_item">
-        <a href="#popup" onclick="closeNav()">About</a>
-        <a href="events.html" onclick="closeNav()">Events</a>
-        <a href="#section_pic" onclick="closeNav()">Sponsors</a>
-        <a href="#popup4" onclick="closeNav()">Theme</a>
-        <a href="#team_section" onclick="closeNav()">Gallery</a>
-        <a href="coupons.html" onclick="closeNav()">Campaign</a>
+        <a href="#popup" onclick="closeNav()"><i class="fas fa-h-square font_icon"></i> Home</a>
+        <a href="events.html" onclick="closeNav()"><i class="fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
+        <a href="#section_pic" onclick="closeNav()"><i class="fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+        <a href="#popup4" onclick="closeNav()"><i class="fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
+        <a href="#team_section" onclick="closeNav()"><i class="fas fa-heart font_icon"></i> Favourites</a>
+        <a href="coupons.html" onclick="closeNav()"><i class="fas fa-clock font_icon"></i> Live Deals</a>
       </div>
       <h3 class="follow_us">Follow Us On</h3>
       <div class="nav_logos">
@@ -59,7 +59,7 @@
     </div>
     <span
       class="nav_logo"
-      style="font-size:30px;cursor:pointer;color:white;position: fixed"
+      style="font-size:20px; cursor:pointer; color:white; position: fixed"
       onclick="openNav()"
       >&#9776;
     </span>
@@ -143,6 +143,7 @@
         <option value="1">Women</option>
         <option value="1">Men</option>
       </select>
+      <i class="fa fa-arrow-left backSearch" style="display: none; color: white;"></i>
       <input type="text" name="search" id="search" placeholder="Search for awesome deals" class="search__input" />
 
       <button class="search__button">
@@ -151,11 +152,12 @@
     </form>
   </div>
   <button class="search__button search_phone">
-    <i class="fas fa-search search-icon search_i"></i>
+    <i class="fas fa-search search-icon search_i" style="color: white;"></i>
   </button>
   <script>
       document.querySelector('.search_phone').addEventListener('click', () => { 
       document.querySelector(".search").style.display = "block";
+      document.querySelector(".backSearch").style.display = "inline-block";
       document.querySelector(".search").style.visibility = "visible";
       document.querySelector(".search__input").style.borderRadius = "100px";
       document.querySelector(".search__input").style.width = "44rem";
@@ -167,6 +169,22 @@
       document.querySelector(".search_nv").style.marginLeft = "35rem";
       document.querySelector(".search_phone").style.display = "none";
       document.querySelector(".search_phone").style.visibility = "hidden";
+    });
+
+    document.querySelector('.backSearch').addEventListener('click', () => { 
+      document.querySelector(".search").style.display = "none";
+      document.querySelector(".backSearch").style.display = "none";
+      document.querySelector(".search").style.visibility = "visible";
+      document.querySelector(".search__input").style.borderRadius = "100px";
+      document.querySelector(".search__input").style.width = "44rem";
+      document.querySelector(".Navb_logo-text").style.display = "flex";
+      document.querySelector(".categories_dropdown_nv").style.display = "none";
+      document.querySelector(".yourDeal").style.display = "flex";
+      document.querySelector(".titles").style.display = "none";
+      document.querySelector(".nav_logo").style.display = "inline-block";
+      document.querySelector(".search_nv").style.marginLeft = "35rem";
+      document.querySelector(".search_phone").style.display = "inline-block";
+      document.querySelector(".search_phone").style.visibility = "visible";
     })
   </script>
     <nav class="user-nav">      

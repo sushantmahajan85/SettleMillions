@@ -37,6 +37,11 @@
   position: absolute;
   top: 15%;
   left: 5%;
+
+  @include respond(phone) {
+    top: 20%;
+    left: 3%;
+  }
 }
 
 .container {
@@ -106,6 +111,11 @@
     position: absolute;
     top: 15%;
     left: 14%;
+
+    @include respond(phone) {
+      top: 18%;
+      left: 23%;
+    }
     // background: linear-gradient(to right, #EA089B 0%, #330867 100%);
     // background-clip: border-box;
     // -webkit-background-clip: text;
@@ -128,6 +138,11 @@
     position: absolute;
     top: 30%;
     left: 14.5%;
+
+    @include respond(phone) {
+      top: 34%;
+      left: 23%;
+    }
   }
 
   &-bio {
@@ -152,6 +167,10 @@
     position: absolute;
     top: 80%;
     left: 14.5%;
+
+    @include respond(phone) {
+      left: 23%;
+    }
   }
 
   &-likes {
@@ -185,18 +204,31 @@
     top: 81%;
     left: 44.5%;
     font-size: 3rem;
+
+    @include respond(phone) {
+      left: 45.5%;
+    }
   }
 
   &-fb {
     top: 81.3%;
     left: 49%;
     font-size: 2.7rem;
+
+    @include respond(phone) {
+      top: 82%;
+      left: 54%;
+    }
   }
 
   &-blog {
     top: 78.5%;
     left: 53%;
     font-size: 2.3rem;
+
+    @include respond(phone) {
+      left: 61%;
+    }
   }
 
   &-space1 {
@@ -228,6 +260,10 @@
     position: absolute;
     top: 75.5%;
     left: 42%;
+
+    @include respond(phone) {
+      left: 39.5%;
+    }
   }
 
   &-subs-button {
@@ -237,6 +273,11 @@
     border-radius: 0.5rem;
     top: 21%;
     left: 36%;
+
+    @include respond(phone) {
+      top: 23%;
+      left: 69%;
+    }
 
     &:hover {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
@@ -257,6 +298,10 @@
     border-radius: 0.5rem;
     top: 21%;
     left: 46%;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     &:hover {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);

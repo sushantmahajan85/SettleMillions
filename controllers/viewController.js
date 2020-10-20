@@ -287,7 +287,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
   //   ).sort({ score: { $meta: "textScore" } });
 
   // Execute query in a callback and return users list
-  query.exec(function(err, users) {
+  query.exec(function (err, users) {
     if (!err) {
       // Method to construct the json result set
       res.send(
@@ -583,7 +583,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         sortOrder = -1;
         property = property.substr(1);
       }
-      return function(a, b) {
+      return function (a, b) {
         var result =
           a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
         return result * sortOrder;

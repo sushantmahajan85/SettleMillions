@@ -2566,6 +2566,15 @@ figure {
       .cover_aff-cust-button .para {
         font-size: 1.5rem;
         margin-right: 1rem; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button {
+        left: 49%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button .p {
+        font-size: 2rem; }
+      .cover_aff-cust-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     .cover_aff-cust-button:hover {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
       transform: translateY(-3px); }

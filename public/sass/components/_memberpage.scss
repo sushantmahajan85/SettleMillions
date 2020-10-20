@@ -303,6 +303,10 @@
       display: none;
     }
 
+    @include respond(achi2) {
+      left: 49%;
+    }
+
     &:hover {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
       transform: translateY(-3px);

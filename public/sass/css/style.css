@@ -891,7 +891,7 @@ nav li {
   font-family: "Amaranth"; }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -2456,7 +2456,7 @@ figure {
     font-size: 1.8rem; }
   .cover_aff-youtube {
     top: 81%;
-    left: 44.5%;
+    left: 24.5%;
     font-size: 3rem; }
     @media (max-width: 37.5em) {
       .cover_aff-youtube {
@@ -2469,7 +2469,7 @@ figure {
         margin-right: 1rem; } }
   .cover_aff-fb {
     top: 81.3%;
-    left: 49%;
+    left: 29%;
     font-size: 2.7rem; }
     @media (max-width: 37.5em) {
       .cover_aff-fb {
@@ -2483,7 +2483,7 @@ figure {
         margin-right: 1rem; } }
   .cover_aff-blog {
     top: 78.5%;
-    left: 53%;
+    left: 33%;
     font-size: 2.3rem; }
     @media (max-width: 37.5em) {
       .cover_aff-blog {
@@ -2517,7 +2517,7 @@ figure {
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
-    left: 42%; }
+    left: 22%; }
     @media (max-width: 37.5em) {
       .cover_aff-space3 {
         left: 39.5%; } }
@@ -4787,7 +4787,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -4871,7 +4871,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -4892,7 +4892,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

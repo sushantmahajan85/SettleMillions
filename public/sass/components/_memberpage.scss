@@ -202,7 +202,7 @@
 
   &-youtube {
     top: 81%;
-    left: 44.5%;
+    left: 24.5%;
     font-size: 3rem;
 
     @include respond(phone) {
@@ -212,7 +212,7 @@
 
   &-fb {
     top: 81.3%;
-    left: 49%;
+    left: 29%;
     font-size: 2.7rem;
 
     @include respond(phone) {
@@ -223,7 +223,7 @@
 
   &-blog {
     top: 78.5%;
-    left: 53%;
+    left: 33%;
     font-size: 2.3rem;
 
     @include respond(phone) {
@@ -259,7 +259,7 @@
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
-    left: 42%;
+    left: 22%;
 
     @include respond(phone) {
       left: 39.5%;

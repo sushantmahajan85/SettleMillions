@@ -4957,7 +4957,7 @@ html {
   background-image: linear-gradient(to right, rgba(238, 247, 255, 0.58), rgba(238, 247, 255, 0.58)), url("/img/backg.jpg");
   background-size: cover;
   background-size: cover;
-  padding: 10rem 0; }
+  padding: 8rem 0; }
 
 .wrap {
   max-width: 40rem;
@@ -4969,11 +4969,39 @@ html {
   color: rgba(0, 0, 0, 0.74);
   margin-top: 6rem;
   margin-bottom: 0rem; }
+  @media (max-width: 56.25em) {
+    .wrap {
+      padding: 1.3rem 4.5rem 3rem 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap .p {
+      font-size: 2rem; }
+    .wrap .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap {
+      padding: 1.3rem 4.5rem 3rem 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap .p {
+      font-size: 2rem; }
+    .wrap .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap {
+      padding: 1.3rem 4.5rem 3rem 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap .p {
+      font-size: 2rem; }
+    .wrap .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .wrap_title {
   text-align: center;
   font-size: 3rem;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-left: 1.5rem; }
 
 .wrap_subtext {
   text-align: center;
@@ -4981,12 +5009,40 @@ html {
   font-size: 1.6rem;
   font-weight: 400;
   color: #575757;
-  padding: 0.4rem 5rem;
+  padding: 0rem 4rem;
+  margin-left: 2.5rem;
   /* text-align: center; */ }
+  @media (max-width: 1380px) {
+    .wrap_subtext {
+      padding: 1.3rem 4.5rem 2rem 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap_subtext .p {
+      font-size: 2rem; }
+    .wrap_subtext .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_subtext {
+      padding: 1.3rem 4.5rem 1rem 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap_subtext .p {
+      font-size: 2rem; }
+    .wrap_subtext .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .wrap_subtext {
+      padding: 1.3rem 4.5rem 0rem 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap_subtext .p {
+      font-size: 2rem; }
+    .wrap_subtext .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .wrap_opt input[type="text"],
 .wrap_opt input[type="password"] {
-  width: 100%;
+  width: 97.5%;
   padding: 1.5rem 0.5rem;
   background: rgba(0, 0, 0, 0.005);
   outline: none;
@@ -5016,6 +5072,36 @@ html {
   /* height: 4rem; */
   color: white;
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .wrap_opt input[type="submit"] {
+      width: 80%;
+      margin-left: 13%; } }
+  @media (max-width: 1380px) {
+    .wrap_opt input[type="submit"] .p {
+      font-size: 2rem; }
+    .wrap_opt input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_opt input[type="submit"] {
+      width: 80%;
+      margin-left: 13%; } }
+  @media (max-width: 1380px) {
+    .wrap_opt input[type="submit"] .p {
+      font-size: 2rem; }
+    .wrap_opt input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap_opt input[type="submit"] {
+      width: 80%;
+      margin-left: 13%; } }
+  @media (max-width: 1380px) {
+    .wrap_opt input[type="submit"] .p {
+      font-size: 2rem; }
+    .wrap_opt input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .wrap_opt input[type="submit"]:hover {
   transform: translateY(-2px);
@@ -5032,6 +5118,33 @@ html {
   margin-bottom: 0rem;
   font-size: 1.4rem;
   font-weight: 450; }
+  @media (max-width: 56.25em) {
+    .wrap_signin {
+      margin: 2rem 0rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signin .p {
+      font-size: 2rem; }
+    .wrap_signin .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_signin {
+      margin: 2rem 0rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signin .p {
+      font-size: 2rem; }
+    .wrap_signin .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signin {
+      margin: 2rem 0rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signin .p {
+      font-size: 2rem; }
+    .wrap_signin .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .wrap_signin a {
   text-decoration: none;
@@ -5058,7 +5171,7 @@ html {
   height: 1.5em;
   opacity: 1;
   margin-top: 2.5rem;
-  margin-left: 2rem; }
+  margin-left: 0.9rem; }
 
 .hr-text:before {
   content: "";

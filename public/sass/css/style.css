@@ -1630,6 +1630,19 @@ figure {
   font-size: 5rem;
   cursor: pointer; }
 
+.trending_main_title {
+  padding: 10rem 2rem 2rem 2rem;
+  margin: 0; }
+  @media (max-width: 37.5em) {
+    .trending_main_title {
+      padding: 13rem 2rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .trending_main_title .p {
+      font-size: 2rem; }
+    .trending_main_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
 .dealPageContent {
   display: flex;
   margin-top: 1rem;

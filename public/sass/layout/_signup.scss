@@ -218,7 +218,7 @@ html {
     @include respond(phone) {
       margin-left: 3.5rem;
     }
-  
+
     @include respond(small-phone) {
       margin-left: 2.5rem;
     }
@@ -325,7 +325,6 @@ html {
     margin: 2rem 0rem 2rem -1.2rem;
   }
 
-
   @include respond(phone) {
     margin: 2rem 0rem 0rem -1.2rem;
   }
@@ -354,7 +353,7 @@ html {
 }
 
 div#GoogeSigninButton {
-  margin-left: 2rem;
+  margin-left: 2.8rem;
   margin-bottom: 1.5rem;
 
   @include respond(tab-port) {
@@ -385,11 +384,9 @@ div#GoogeSigninButton {
     height: 4rem !important;
     width: 25rem !important;
   }
-  
 }
 
-.abcRioButtonBlue .abcRioButtonIcon{
-
+.abcRioButtonBlue .abcRioButtonIcon {
   @include respond(tab-port) {
     padding: 0.8rem !important;
   }
@@ -401,11 +398,9 @@ div#GoogeSigninButton {
   @include respond(small-phone) {
     padding: 0.2rem !important;
   }
-  
-  
 }
 
-.abcRioButtonContents{
+.abcRioButtonContents {
   font-size: 18px !important;
 
   @include respond(tab-port) {
@@ -425,7 +420,6 @@ div#GoogeSigninButton {
     line-height: 3.8rem !important;
     margin-right: 2.2rem !important;
   }
-
 
   @include respond(small-phone) {
     font-size: 11px !important;

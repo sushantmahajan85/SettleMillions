@@ -4969,7 +4969,7 @@ html {
   color: rgba(0, 0, 0, 0.74);
   margin-top: 6rem;
   margin-bottom: 0rem; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 1380px) {
     .wrap {
       padding: 1.3rem 4.5rem 3rem 1rem; } }
   @media (max-width: 1380px) {
@@ -4987,7 +4987,7 @@ html {
     .wrap .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
-  @media (max-width: 1380px) {
+  @media (max-width: 56.25em) {
     .wrap {
       padding: 1.3rem 4.5rem 3rem 1rem; } }
   @media (max-width: 1380px) {
@@ -5014,7 +5014,8 @@ html {
   /* text-align: center; */ }
   @media (max-width: 1380px) {
     .wrap_subtext {
-      padding: 1.3rem 4.5rem 2rem 1rem; } }
+      padding: 1.3rem 4.5rem 2rem 1rem;
+      margin-left: 5.5rem; } }
   @media (max-width: 1380px) {
     .wrap_subtext .p {
       font-size: 2rem; }
@@ -5023,7 +5024,8 @@ html {
       margin-right: 1rem; } }
   @media (max-width: 75em) {
     .wrap_subtext {
-      padding: 1.3rem 4.5rem 1rem 1rem; } }
+      padding: 1.3rem 4.5rem 1rem 1rem;
+      margin-left: 5.5rem; } }
   @media (max-width: 1380px) {
     .wrap_subtext .p {
       font-size: 2rem; }
@@ -5032,7 +5034,8 @@ html {
       margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .wrap_subtext {
-      padding: 1.3rem 4.5rem 0rem 1rem; } }
+      padding: 1.3rem 4.5rem 0rem 1rem;
+      margin-left: 5.5rem; } }
   @media (max-width: 1380px) {
     .wrap_subtext .p {
       font-size: 2rem; }
@@ -5072,7 +5075,7 @@ html {
   /* height: 4rem; */
   color: white;
   transition: all 0.2s; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 1380px) {
     .wrap_opt input[type="submit"] {
       width: 80%;
       margin-left: 13%; } }
@@ -5092,7 +5095,7 @@ html {
     .wrap_opt input[type="submit"] .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
-  @media (max-width: 1380px) {
+  @media (max-width: 56.25em) {
     .wrap_opt input[type="submit"] {
       width: 80%;
       margin-left: 13%; } }
@@ -5160,6 +5163,21 @@ html {
 .wrap_signup a {
   text-decoration: none;
   color: #3e7ca9; }
+
+div#GoogeSigninButton {
+  margin-left: 2.5rem; }
+
+@media (max-width: 56.25em) {
+  .abcRioButton.abcRioButtonBlue {
+    height: 4rem !important;
+    width: 25rem !important; } }
+
+@media (max-width: 1380px) {
+  .abcRioButton.abcRioButtonBlue .p {
+    font-size: 2rem; }
+  .abcRioButton.abcRioButtonBlue .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 .hr-text {
   line-height: 1em;

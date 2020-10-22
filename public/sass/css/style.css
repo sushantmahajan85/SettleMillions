@@ -2456,7 +2456,7 @@ figure {
     font-size: 1.8rem; }
   .cover_aff-youtube {
     top: 81%;
-    left: 44.5%;
+    left: 24.5%;
     font-size: 3rem; }
     @media (max-width: 37.5em) {
       .cover_aff-youtube {
@@ -2469,7 +2469,7 @@ figure {
         margin-right: 1rem; } }
   .cover_aff-fb {
     top: 81.3%;
-    left: 49%;
+    left: 29%;
     font-size: 2.7rem; }
     @media (max-width: 37.5em) {
       .cover_aff-fb {
@@ -2483,7 +2483,7 @@ figure {
         margin-right: 1rem; } }
   .cover_aff-blog {
     top: 78.5%;
-    left: 53%;
+    left: 33%;
     font-size: 2.3rem; }
     @media (max-width: 37.5em) {
       .cover_aff-blog {
@@ -2517,7 +2517,7 @@ figure {
     letter-spacing: 0.1;
     position: absolute;
     top: 75.5%;
-    left: 42%; }
+    left: 22%; }
     @media (max-width: 37.5em) {
       .cover_aff-space3 {
         left: 39.5%; } }

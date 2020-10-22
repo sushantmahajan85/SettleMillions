@@ -51,11 +51,12 @@
             <ul class="header_small-nav">
                 
                 <li class="header_small-nav-item header_small-nav-item-head">Trending in :</li>
-                <li class="header_small-nav-item">Electronics</li>
-                <li class="header_small-nav-item">Sports</li>
-                <li class="header_small-nav-item">Music</li>
-                <li class="header_small-nav-item">Women</li>
-                <li class="header_small-nav-item">Men</li>
+               <a href=<%= `/category/electronics` %>><li class="header_small-nav-item">Electronics</li></a> 
+               <a href=<%= `/category/menFashion` %>> <li class="header_small-nav-item">Men's Fashion</li></a> 
+                <a href=<%= `/category/womenFashion` %>> <li class="header_small-nav-item">Women's Fashion</li></a> 
+                    <a href=<%= `/category/home&kitchen` %>> <li class="header_small-nav-item">Home and kitchen</li></a> 
+                        <a href=<%= `/category/beauty` %>> <li class="header_small-nav-item">Beauty</li></a> 
+                            <a href=<%= `/category/personalCare` %>> <li class="header_small-nav-item">Personal Care</li></a> 
                     </ul>
                     <div style="display: flex;">
             <a href=<%= WL[numberG] %> id="aTag">

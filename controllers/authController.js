@@ -16,7 +16,7 @@ exports.signUp = async (req, res) => {
   try {
     const newz = await User.findOne({ gSignin: req.body.gSignin });
     console.log(newz);
-    if (newz) {
+    if (newz && req.body.gSignin != null) {
       res.cookie("one", "cleared", {
         expires: new Date(Date.now() + 1),
         // secure: true,

@@ -6,7 +6,6 @@ const router = express.Router();
 
 //router.get(viewController.getSignupApp);
 
-router.get("/liveDeal", viewController.livePage);
 router.use(authController.isLoggedIn);
 
 router.get("/newDeal", viewController.createNewDeal);
@@ -25,6 +24,8 @@ router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
 router.get("/forgotPassword", viewController.forgot);
 router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/trending", viewController.getTrendingDeals);
+
+router.get("/liveDeal",viewController.livePage);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get(
   "/subscriptions",

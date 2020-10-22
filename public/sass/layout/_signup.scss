@@ -151,9 +151,9 @@ html {
 
   background: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
-  padding: 2rem 4.5rem 4.5rem 1rem;
+  padding: 1rem 3rem 2.5rem 2rem;
   color: rgba(0, 0, 0, 0.74);
-  margin-top: 6rem;
+  margin-top: 4rem;
   margin-bottom: 0rem;
 
   @include respond(achi2) {
@@ -166,6 +166,14 @@ html {
   @include respond(tab-port) {
     padding: 1.3rem 2.5rem 3rem 2rem;
   }
+
+  @include respond(phone) {
+    padding: 1.3rem 3rem 3rem 2rem;
+  }
+
+  @include respond(small-phone) {
+    padding: 1.3rem 4.5rem 3rem 4rem;
+  }
 }
 
 .wrap_title {
@@ -173,6 +181,14 @@ html {
   font-size: 3rem;
   font-weight: 600;
   margin-left: 0.5rem;
+
+  @include respond(phone) {
+    margin-left: -0.5rem;
+  }
+
+  @include respond(small-phone) {
+    margin-left: -0.5rem;
+  }
 }
 
 .wrap_subtext {
@@ -182,7 +198,7 @@ html {
   font-weight: 400;
   color: rgb(87, 87, 87);
   padding: 0rem 4rem;
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
   /* text-align: center; */
 
   @include respond(achi2) {
@@ -198,6 +214,14 @@ html {
   @include respond(tab-port) {
     padding: 0.3rem 4.5rem 0.5rem 1rem;
     margin-left: 5.5rem;
+
+    @include respond(phone) {
+      margin-left: 3.5rem;
+    }
+
+    @include respond(small-phone) {
+      margin-left: 2.5rem;
+    }
   }
 }
 
@@ -222,11 +246,11 @@ html {
   /* for keeping text in center of the button */
   /* justify-content: center; 
     align-items: center; */
-  width: 100%;
-  margin-left: 5%;
+  width: 80%;
+  margin-left: 10%;
   /* box-sizing: border-box; */
   padding: 1rem 4rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
   outline: none;
   border: none;
   background-color: $maroon;
@@ -256,6 +280,19 @@ html {
     width: 80%;
     margin-left: 9%;
   }
+
+  @include respond(phone) {
+    width: 70%;
+    margin-left: 12%;
+    font-size: 1.9rem;
+  }
+
+  @include respond(small-phone) {
+    width: 70%;
+    margin-left: 12%;
+    font-size: 1.8rem;
+    padding: 1rem 2.2rem;
+  }
 }
 
 .wrap_opt input[type="submit"]:hover {
@@ -271,7 +308,7 @@ html {
 
 .wrap_signin {
   text-align: center;
-  margin: 3rem;
+  margin: 2rem 3rem 3rem 3rem;
   margin-bottom: 0rem;
   font-size: 1.4rem;
   font-weight: 450;
@@ -286,6 +323,14 @@ html {
 
   @include respond(tab-port) {
     margin: 2rem 0rem 2rem -1.2rem;
+  }
+
+  @include respond(phone) {
+    margin: 2rem 0rem 0rem -1.2rem;
+  }
+
+  @include respond(small-phone) {
+    margin: 2rem 0rem 0rem -1.2rem;
   }
 }
 
@@ -308,14 +353,81 @@ html {
 }
 
 div#GoogeSigninButton {
-  margin-left: 2rem;
+  margin-left: 2.8rem;
   margin-bottom: 1.5rem;
+
+  @include respond(tab-port) {
+    margin-left: 5rem !important;
+  }
+
+  @include respond(phone) {
+    margin-left: 5rem !important;
+  }
+
+  @include respond(small-phone) {
+    margin-left: 2.5rem !important;
+  }
 }
 
 .abcRioButton.abcRioButtonBlue {
   @include respond(tab-port) {
     height: 4rem !important;
+    width: 27rem !important;
+  }
+
+  @include respond(phone) {
+    height: 4rem !important;
     width: 25rem !important;
+  }
+
+  @include respond(small-phone) {
+    height: 4rem !important;
+    width: 25rem !important;
+  }
+}
+
+.abcRioButtonBlue .abcRioButtonIcon {
+  @include respond(tab-port) {
+    padding: 0.8rem !important;
+  }
+
+  @include respond(phone) {
+    padding: 0.6rem !important;
+  }
+
+  @include respond(small-phone) {
+    padding: 0.2rem !important;
+  }
+}
+
+.abcRioButtonContents {
+  font-size: 18px !important;
+
+  @include respond(tab-port) {
+    font-size: 15px !important;
+    position: absolute !important;
+    right: 1rem !important;
+    // bottom: -1rem !important;
+    line-height: 3.8rem !important;
+    margin-right: 2.5rem !important;
+  }
+
+  @include respond(phone) {
+    font-size: 12px !important;
+    position: absolute !important;
+    right: 1rem !important;
+    // bottom: -1rem !important;
+    line-height: 3.8rem !important;
+    margin-right: 2.2rem !important;
+  }
+
+  @include respond(small-phone) {
+    font-size: 11px !important;
+    position: absolute !important;
+    right: 1rem !important;
+    // bottom: -1rem !important;
+    line-height: 4.3rem !important;
+    margin-right: 1.7rem !important;
   }
 }
 

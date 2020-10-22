@@ -155,14 +155,11 @@
   </head>
   <body>
    
+    <%- include('partials/navbar.ejs') %>
 
-    <section class="header" style="z-index:10;width:100% !important">
+    <!-- <section class="header" style="z-index:10;width:100% !important">
       <a href="/">
         <div class="title">
-          <!-- <img src="/img/users/favicon.png" alt="Logo" class="logo" /> -->
-  
-          <!-- <h2 class="heading-normal">Affiliate</h2> -->
-          <!-- <img src="/img/users/sidebar.svg" alt="Logo" class="Sidebar_logo" /> -->
           <h2 class="Navb_logo-text">Your Deal</h2>
         </div>
       </a>
@@ -181,38 +178,15 @@
           <option value="1">Category 01</option>
           <option value="1">Category 02</option>
         </select>
-        <!-- <select class="sort-drop" name="sort" onchange="this.form.submit()">
-            <option selected disabled value="empty"
-              >--Choose Parameter--</option
-            >
-            <option value="mrp">Price</option>
-            <option value="trendRatio">Views</option>
-          </select> -->
-        <!-- <div>SortBy</div> -->
       </form>
     </div>
       <nav class="user-nav">
   
-        <!-- <p><time class="timeago" datetime="2011-12-17T09:24:17Z"> </time></p> -->
-        <!-- <div> -->
-        <!-- <i class="fas fa-th"></i> -->
-  
-        <!-- <div style="margin: 5px; display: inline;">CATEGORIES</div> -->
-  
-        <!-- <img src="/img/users/da.svg" alt="Logo" class="catgories_logo" /> -->
-        <!-- <img src="down_arrow.png"> -->
-        <!-- </div> -->
   
         <% if(user){ %>
         <a  class="titles_nv" href="/newDeal">
           <div class="postDeal" style="display: flex; align-items: center; ">
   
-            <!-- D changes -->
-  
-            <!-- <i class="fas fa-plus"></i> -->
-           
-  
-            <!-- D changes // -->
   
             <div > <i class="far fa-plus-square"></i>Post</div>
           </div>
@@ -222,7 +196,6 @@
           <div class="postDeal" style="display: flex; align-items: center; ">
   
            
-            <!-- <i class="fas fa-plus-square"></i> -->
             <div> <i class="far fa-plus-square"></i>Post</div>
           </div>
         </a>
@@ -234,7 +207,7 @@
         <% if (user) { %>
         <a  class="titles_nv" href="" id="logout">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <!-- <i class="fas fa-plus"></i> -->
+            
             <i class="fas fa-sign-out-alt"></i>
             <div >Logout</div>
           </div>
@@ -243,7 +216,7 @@
          
         <a class="titles_nv" href=<%=` /signup `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <!-- <i class="fas fa-plus"></i> -->
+            
             <div ><i class="fas fa-user-plus"></i>Sign-up</div>
           </div>
         </a>
@@ -251,20 +224,17 @@
   
         <a class="titles_nv" href=<%= `/login` %> id="login">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <!-- <i class="fas fa-plus"></i> -->
+            
             <div><i class="fas fa-user-shield"></i>Login</div>
           </div>
         </a>
       
         <% } %>
         <% if (user) { %>
-        <!-- <div class="user-nav__icon-box">
-          <i class="fas fa-bell"></i>
-          <span class="user-nav__notification">7</span>
-        </div> -->
+
   
         <% } %>
-        <!-- D changes // -->
+        
         
         <% if (user) { %> <% if (user.photo) { %>
         <div class="user-nav__user">
@@ -293,14 +263,10 @@
                 </nav> <% } %> <% } %> 
           </div>
   
-        <!-- <div style="margin: 5px;">SIGNUP</div>
-          <div style="margin: 5px;">LOGIN</div> -->
-  
-        <!-- D changes // -->
   
   
       </nav>
-    </section>
+    </section> -->
     <script src="/vendor/initial.min.js"></script>
     <script>
       $(".profile").initial();

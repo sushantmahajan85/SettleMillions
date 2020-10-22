@@ -24,7 +24,7 @@ router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
 router.get("/forgotPassword", viewController.forgot);
 router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/trending", viewController.getTrendingDeals);
-
+router.get("/logout", authController.logout);
 router.get("/liveDeal",viewController.livePage);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get(
@@ -35,7 +35,7 @@ router.get(
 router.get("/category/:cat", viewController.category);
 router.get("/search", viewController.autocomplete);
 router.get("/:short", viewController.shortshort);
-router.get("/logout", authController.logout);
+
 router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);
 router.get(

@@ -299,6 +299,13 @@ body a {
   margin-left: -5rem;
 }
 
+.search_ii{
+  display: none;
+  @include respond(phone) {
+    display: block;
+  }
+}
+
 .titles {
   display: flex;
   justify-content: space-between;

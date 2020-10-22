@@ -150,11 +150,11 @@
       </button>
     </form>
   </div>
-  <button class="search__button search_phone">
-    <i class="fas fa-search search-icon search_i" style="color: white;"></i>
-  </button>
+  <div class="search_ii">
+    <i class="fas fa-search search_i" style="color: white;"></i>
+  </div>
   <script>
-      document.querySelector('.search_phone').addEventListener('click', () => { 
+      document.querySelector('.search_i').addEventListener('click', () => { 
       document.querySelector(".search").style.display = "block";
       document.querySelector(".backSearch").style.display = "inline-block";
       document.querySelector(".search").style.visibility = "visible";
@@ -166,24 +166,28 @@
       document.querySelector(".titles").style.display = "none";
       document.querySelector(".nav_logo").style.display = "none";
       document.querySelector(".search_nv").style.marginLeft = "35rem";
-      document.querySelector(".search_phone").style.display = "none";
-      document.querySelector(".search_phone").style.visibility = "hidden";
+      document.querySelector(".search_i").style.display = "none";
+      document.querySelector(".search_ii").style.display = "none";
+      document.querySelector(".search_nv").style.display = "block";
     });
 
     document.querySelector('.backSearch').addEventListener('click', () => { 
       document.querySelector(".search").style.display = "none";
       document.querySelector(".backSearch").style.display = "none";
+      document.querySelector(".search_nv").style.display = "none";
       document.querySelector(".search").style.visibility = "visible";
       document.querySelector(".search__input").style.borderRadius = "100px";
       document.querySelector(".search__input").style.width = "44rem";
       document.querySelector(".Navb_logo-text").style.display = "flex";
+      document.querySelector(".Navb_logo-text").style.marginLeft = "0";
       document.querySelector(".categories_dropdown_nv").style.display = "none";
       document.querySelector(".yourDeal").style.display = "flex";
       document.querySelector(".titles").style.display = "none";
       document.querySelector(".nav_logo").style.display = "inline-block";
       document.querySelector(".search_nv").style.marginLeft = "35rem";
-      document.querySelector(".search_phone").style.display = "inline-block";
-      document.querySelector(".search_phone").style.visibility = "visible";
+      document.querySelector(".search_i").style.display = "inline-block";
+      document.querySelector(".search_ii").style.display = "inline-block";
+      document.querySelector(".search_i").style.marginRight = "-5rem";
     })
   </script>
     <nav class="user-nav">      

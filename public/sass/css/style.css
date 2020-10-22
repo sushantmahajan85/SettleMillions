@@ -345,6 +345,18 @@ body a {
 .search-icon {
   margin-left: -5rem; }
 
+.search_ii {
+  display: none; }
+  @media (max-width: 37.5em) {
+    .search_ii {
+      display: block; } }
+  @media (max-width: 1380px) {
+    .search_ii .p {
+      font-size: 2rem; }
+    .search_ii .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
 .titles {
   display: flex;
   justify-content: space-between;
@@ -934,6 +946,15 @@ body {
   @media (max-width: 75em) {
     .page-content {
       margin-left: 1%; } }
+  @media (max-width: 1380px) {
+    .page-content .p {
+      font-size: 2rem; }
+    .page-content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .page-content {
+      margin-left: 0%; } }
   @media (max-width: 1380px) {
     .page-content .p {
       font-size: 2rem; }
@@ -1618,10 +1639,32 @@ figure {
   font-size: 5rem;
   cursor: pointer; }
 
+.trending_main_title {
+  padding: 10rem 2rem 2rem 2rem;
+  margin: 0; }
+  @media (max-width: 37.5em) {
+    .trending_main_title {
+      padding: 13rem 2rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .trending_main_title .p {
+      font-size: 2rem; }
+    .trending_main_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
 .dealPageContent {
   display: flex;
   margin-top: 1rem;
   justify-content: space-between; }
+  @media (max-width: 37.5em) {
+    .dealPageContent {
+      flex-direction: column; } }
+  @media (max-width: 1380px) {
+    .dealPageContent .p {
+      font-size: 2rem; }
+    .dealPageContent .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .deal-carousel {
   display: flex;
@@ -1643,6 +1686,15 @@ figure {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.01); }
+  @media (max-width: 37.5em) {
+    .deal-deets {
+      margin-left: 4.4rem; } }
+  @media (max-width: 1380px) {
+    .deal-deets .p {
+      font-size: 2rem; }
+    .deal-deets .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .deal-deets_buttons {
     display: block;
     padding: 1rem 1rem 1rem 1rem;
@@ -1858,6 +1910,15 @@ figure {
   margin-right: 2rem;
   color: black;
   font-size: 2rem; }
+  @media (max-width: 37.5em) {
+    .add-review-text-area {
+      width: 34%; } }
+  @media (max-width: 1380px) {
+    .add-review-text-area .p {
+      font-size: 2rem; }
+    .add-review-text-area .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .review-section textarea::placeholder {
   font-family: Bitter; }
@@ -2135,6 +2196,15 @@ figure {
   width: 25%;
   float: right;
   margin-top: -2.5rem; }
+  @media (max-width: 37.5em) {
+    .side_deals {
+      display: none; } }
+  @media (max-width: 1380px) {
+    .side_deals .p {
+      font-size: 2rem; }
+    .side_deals .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .comment_section {
   margin-top: 10rem; }

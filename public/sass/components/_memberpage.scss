@@ -39,7 +39,7 @@
   left: 4%;
 
   @include respond(phone) {
-    top: 20%;
+    top: 24%;
     left: 3%;
   }
 }
@@ -113,7 +113,7 @@
     left: 14%;
 
     @include respond(phone) {
-      top: 18%;
+      top: 22%;
       left: 23%;
     }
     // background: linear-gradient(to right, #EA089B 0%, #330867 100%);
@@ -140,7 +140,7 @@
     left: 14.2%;
 
     @include respond(phone) {
-      top: 34%;
+      top: 40%;
       left: 23%;
     }
   }
@@ -206,7 +206,7 @@
     font-size: 3rem;
 
     @include respond(phone) {
-      left: 45.5%;
+      left: 44.5%;
     }
   }
 
@@ -216,7 +216,7 @@
     font-size: 2.7rem;
 
     @include respond(phone) {
-      top: 82%;
+      top: 80%;
       left: 54%;
     }
   }
@@ -275,7 +275,7 @@
     left: 38%;
 
     @include respond(phone) {
-      top: 23%;
+      top: 28%;
       left: 69%;
     }
 

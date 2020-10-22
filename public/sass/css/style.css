@@ -2312,7 +2312,7 @@ figure {
   left: 4%; }
   @media (max-width: 37.5em) {
     .cover_aff-pic {
-      top: 20%;
+      top: 24%;
       left: 3%; } }
   @media (max-width: 1380px) {
     .cover_aff-pic .p {
@@ -2379,7 +2379,7 @@ figure {
     left: 14%; }
     @media (max-width: 37.5em) {
       .cover_aff-name {
-        top: 18%;
+        top: 22%;
         left: 23%; } }
     @media (max-width: 1380px) {
       .cover_aff-name .p {
@@ -2402,7 +2402,7 @@ figure {
     left: 14.2%; }
     @media (max-width: 37.5em) {
       .cover_aff-subs {
-        top: 34%;
+        top: 40%;
         left: 23%; } }
     @media (max-width: 1380px) {
       .cover_aff-subs .p {
@@ -2460,7 +2460,7 @@ figure {
     font-size: 3rem; }
     @media (max-width: 37.5em) {
       .cover_aff-youtube {
-        left: 45.5%; } }
+        left: 44.5%; } }
     @media (max-width: 1380px) {
       .cover_aff-youtube .p {
         font-size: 2rem; }
@@ -2473,7 +2473,7 @@ figure {
     font-size: 2.7rem; }
     @media (max-width: 37.5em) {
       .cover_aff-fb {
-        top: 82%;
+        top: 80%;
         left: 54%; } }
     @media (max-width: 1380px) {
       .cover_aff-fb .p {
@@ -2536,7 +2536,7 @@ figure {
     left: 38%; }
     @media (max-width: 37.5em) {
       .cover_aff-subs-button {
-        top: 23%;
+        top: 28%;
         left: 69%; } }
     @media (max-width: 1380px) {
       .cover_aff-subs-button .p {

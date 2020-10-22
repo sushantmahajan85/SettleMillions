@@ -2,6 +2,10 @@
   display: flex;
   margin-top: 1rem;
   justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
 }
 
 .deal-carousel {
@@ -26,6 +30,10 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.01);
+
+  @include respond(phone) {
+    margin-left: 4.4rem;
+  }
 
   // position: absolute;
 
@@ -335,6 +343,10 @@
   margin-right: 2rem;
   color: black;
   font-size: 2rem;
+
+  @include respond(phone) {
+    width: 34%;
+  }
 }
 
 .review-section textarea::placeholder {
@@ -709,6 +721,10 @@
   // background-color: white;
   margin-top: -2.5rem;
   // padding-bottom: 5rem;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .comment_section {

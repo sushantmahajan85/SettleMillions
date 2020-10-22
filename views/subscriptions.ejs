@@ -51,8 +51,8 @@
                 } 
                 var vui = kFormatter(deal.views);
     
-                var now = new Date(Date.now());
-                var tem = Math.round((now.getTime() - 100000000000)/360000)/10;
+                
+                var tem = Math.round(deal.time/360000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <% function timeSince(date) {
@@ -114,12 +114,7 @@
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
-                                        <div class="monetory_values_mp">
-                                            <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                            <li style="font-weight: 400;">
-                                            </li>
-                                        </div>
+    
                                         <div class="views_time_mp">
                                             <div style="display: inline-block; color: #737b8a">
                                                 <i class="fas fa-eye"></i>
@@ -138,6 +133,12 @@
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
                                                 <% } %>
     
+                                            </div>
+                                            <div class="monetory_values_mp">
+                                                <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                <li style="font-weight: 400;">
+                                                </li>
                                             </div>
                                         <!-- <div class="mp_like-rate">
                                             <i class="mp_like_deal far fa-heart"></i>
@@ -188,8 +189,8 @@
                     } 
                     var vui = kFormatter(deal.views);
         
-                    var now = new Date(Date.now());
-                    var tem = Math.round((now.getTime() - 100000000000)/360000)/10;
+                    
+                    var tem = Math.round(deal.time/360000)/10;
                     var day = Math.round((tem/2.4))/10;
                     %>
                     <% function timeSince(date) {
@@ -251,12 +252,7 @@
                                                 </a>
                                             </div>
                                             <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
-                                            <div class="monetory_values_mp">
-                                                <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                                <li style="font-weight: 400;">
-                                                </li>
-                                            </div>
+        
                                             <div class="views_time_mp">
                                                 <div style="display: inline-block; color: #737b8a">
                                                     <i class="fas fa-eye"></i>
@@ -275,6 +271,12 @@
                                                     <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
                                                     <% } %>
         
+                                                </div>
+                                                <div class="monetory_values_mp">
+                                                    <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                                        <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <li style="font-weight: 400;">
+                                                    </li>
                                                 </div>
                                             <!-- <div class="mp_like-rate">
                                                 <i class="mp_like_deal far fa-heart"></i>
@@ -327,6 +329,15 @@
             
                         var now = new Date(Date.now());
                         var tem = Math.round((now.getTime() - 100000000000)/360000)/10;
+                        var day = Math.round((tem/2.4))/10;
+                        %>
+                        <%  function kFormatter(num) {
+                            return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+                        } 
+                        var vui = kFormatter(deal.views);
+            
+                        
+                        var tem = Math.round(deal.time/360000)/10;
                         var day = Math.round((tem/2.4))/10;
                         %>
                         <% function timeSince(date) {
@@ -388,12 +399,7 @@
                                                     </a>
                                                 </div>
                                                 <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
-                                                <div class="monetory_values_mp">
-                                                    <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                        <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike>
-                                                    <li style="font-weight: 400;">
-                                                    </li>
-                                                </div>
+            
                                                 <div class="views_time_mp">
                                                     <div style="display: inline-block; color: #737b8a">
                                                         <i class="fas fa-eye"></i>
@@ -412,6 +418,12 @@
                                                         <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
                                                         <% } %>
             
+                                                    </div>
+                                                    <div class="monetory_values_mp">
+                                                        <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
+                                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                        <li style="font-weight: 400;">
+                                                        </li>
                                                     </div>
                                                 <!-- <div class="mp_like-rate">
                                                     <i class="mp_like_deal far fa-heart"></i>

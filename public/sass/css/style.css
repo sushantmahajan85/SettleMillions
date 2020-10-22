@@ -2312,7 +2312,7 @@ figure {
   left: 4%; }
   @media (max-width: 37.5em) {
     .cover_aff-pic {
-      top: 20%;
+      top: 24%;
       left: 3%; } }
   @media (max-width: 1380px) {
     .cover_aff-pic .p {
@@ -2377,9 +2377,18 @@ figure {
     position: absolute;
     top: 14%;
     left: 14%; }
+    @media (max-width: 56.25em) {
+      .cover_aff-name {
+        left: 16%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-name .p {
+        font-size: 2rem; }
+      .cover_aff-name .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-name {
-        top: 18%;
+        top: 22%;
         left: 23%; } }
     @media (max-width: 1380px) {
       .cover_aff-name .p {
@@ -2400,9 +2409,18 @@ figure {
     position: absolute;
     top: 33%;
     left: 14.2%; }
+    @media (max-width: 56.25em) {
+      .cover_aff-subs {
+        left: 16.2%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-subs .p {
+        font-size: 2rem; }
+      .cover_aff-subs .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-subs {
-        top: 34%;
+        top: 40%;
         left: 23%; } }
     @media (max-width: 1380px) {
       .cover_aff-subs .p {
@@ -2428,6 +2446,15 @@ figure {
     position: absolute;
     top: 78%;
     left: 14.5%; }
+    @media (max-width: 56.25em) {
+      .cover_aff-deals {
+        left: 16.2%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-deals .p {
+        font-size: 2rem; }
+      .cover_aff-deals .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-deals {
         left: 23%; } }
@@ -2458,9 +2485,18 @@ figure {
     top: 79%;
     left: 24.5%;
     font-size: 3rem; }
+    @media (max-width: 56.25em) {
+      .cover_aff-youtube {
+        left: 27.5%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-youtube .p {
+        font-size: 2rem; }
+      .cover_aff-youtube .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-youtube {
-        left: 45.5%; } }
+        left: 44.5%; } }
     @media (max-width: 1380px) {
       .cover_aff-youtube .p {
         font-size: 2rem; }
@@ -2471,9 +2507,19 @@ figure {
     top: 79.3%;
     left: 29%;
     font-size: 2.7rem; }
+    @media (max-width: 56.25em) {
+      .cover_aff-fb {
+        top: 79.5%;
+        left: 32.5%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-fb .p {
+        font-size: 2rem; }
+      .cover_aff-fb .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-fb {
-        top: 82%;
+        top: 80%;
         left: 54%; } }
     @media (max-width: 1380px) {
       .cover_aff-fb .p {
@@ -2482,9 +2528,18 @@ figure {
         font-size: 1.5rem;
         margin-right: 1rem; } }
   .cover_aff-blog {
-    top: 75.5%;
+    top: 76%;
     left: 33%;
     font-size: 2.3rem; }
+    @media (max-width: 56.25em) {
+      .cover_aff-blog {
+        left: 36.5%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-blog .p {
+        font-size: 2rem; }
+      .cover_aff-blog .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-blog {
         left: 61%; } }
@@ -2518,6 +2573,15 @@ figure {
     position: absolute;
     top: 72.5%;
     left: 22%; }
+    @media (max-width: 56.25em) {
+      .cover_aff-space3 {
+        left: 25%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-space3 .p {
+        font-size: 2rem; }
+      .cover_aff-space3 .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-space3 {
         left: 39.5%; } }
@@ -2534,9 +2598,18 @@ figure {
     border-radius: 0.5rem;
     top: 19%;
     left: 38%; }
+    @media (max-width: 56.25em) {
+      .cover_aff-subs-button {
+        left: 42%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-subs-button .p {
+        font-size: 2rem; }
+      .cover_aff-subs-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-subs-button {
-        top: 23%;
+        top: 28%;
         left: 69%; } }
     @media (max-width: 1380px) {
       .cover_aff-subs-button .p {
@@ -2557,18 +2630,27 @@ figure {
     border-radius: 0.5rem;
     top: 19%;
     left: 46%; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 1380px) {
       .cover_aff-cust-button {
-        display: none; } }
+        left: 51%; } }
     @media (max-width: 1380px) {
       .cover_aff-cust-button .p {
         font-size: 2rem; }
       .cover_aff-cust-button .para {
         font-size: 1.5rem;
         margin-right: 1rem; } }
-    @media (max-width: 1380px) {
+    @media (max-width: 56.25em) {
       .cover_aff-cust-button {
-        left: 51%; } }
+        left: 58%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button .p {
+        font-size: 2rem; }
+      .cover_aff-cust-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 37.5em) {
+      .cover_aff-cust-button {
+        display: none; } }
     @media (max-width: 1380px) {
       .cover_aff-cust-button .p {
         font-size: 2rem; }
@@ -2787,6 +2869,23 @@ figure {
   height: 26rem;
   width: 100%;
   padding: 0rem; }
+
+.cover .fa-cogs {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  display: none; }
+  @media (max-width: 37.5em) {
+    .cover .fa-cogs {
+      display: block;
+      top: 80%;
+      left: 89%; } }
+  @media (max-width: 1380px) {
+    .cover .fa-cogs .p {
+      font-size: 2rem; }
+    .cover .fa-cogs .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 #analyticsForm {
   padding-left: 15%;
@@ -4462,6 +4561,15 @@ Down
   padding-top: 6.5rem;
   margin-left: 12%; }
   @media (max-width: 37.5em) {
+    .deal_area {
+      margin-left: 0%; } }
+  @media (max-width: 1380px) {
+    .deal_area .p {
+      font-size: 2rem; }
+    .deal_area .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
     .deal_area {
       margin-left: 0%; } }
   @media (max-width: 1380px) {

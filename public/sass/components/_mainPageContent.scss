@@ -19,8 +19,13 @@ body {
   margin-left: 12%;
   // padding-top: 8rem;
   background-color: rgb(255, 255, 255);
+
   @include respond(tab-land) {
     margin-left: 1%;
+  }
+
+  @include respond(phone) {
+    margin-left: 0%;
   }
 }
 .owl-nav {

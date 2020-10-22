@@ -952,6 +952,15 @@ body {
     .page-content .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .page-content {
+      margin-left: 0%; } }
+  @media (max-width: 1380px) {
+    .page-content .p {
+      font-size: 2rem; }
+    .page-content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media (max-width: 37.5em) {
   .owl-nav {

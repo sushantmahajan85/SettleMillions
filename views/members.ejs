@@ -41,7 +41,7 @@
         <div class="cover_aff-subs">5k subscribers</div>
 
         <!-- <div class="cover_aff-bio">• Add your bio here •</div> -->
-
+        <i class="fas fa-cogs"></i>
         <div class="cover_aff-deals" style="margin-right: -10rem !important"><%= deals.length %> deals</div>
         <!-- <div class="cover_aff-space1">|</div>https://discord.gg/WRdUQD
         <div class="cover_aff-likes">2M views</div> -->
@@ -136,7 +136,7 @@
 
     </div> -->
     <div class="member-page-content">
-      <div id="trending" class="trending">
+      <div id="trending" class="trending" style="padding-top: 2.3rem;">
         <% var j = 0 %> 
         <% for(var deal of deals) { %>
 <% if (deal.time<2*24*60*60*1000 && deal.user == userId) { %>
@@ -243,7 +243,7 @@
         <% } %>
         
       </div>
-      <div id="trending" class="trending">
+      <div id="trending" class="trending" style="padding-top: 2.3rem;">
         <% var k = 0 %> 
         <% for(var deal of deals) { %>
 <% if (deal.user == userId) { %>

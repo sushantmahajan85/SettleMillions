@@ -44,7 +44,7 @@
           </h4>
         </div>
       </a>
-      <a href="../likedDeals">
+      <a href="../liveDeal">
         <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
           <h4 class="heading-normal">
             <i class="fas fa-clock font_icon"></i> Live Deals
@@ -53,7 +53,6 @@
       </a>
 
       <% if (user) { %>
-        <!-- subCommentSidebar -->
          <% if (subs.length != 0 ) { %>
           <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
         SUBSCRIPTIONS
@@ -64,20 +63,17 @@
         <div style="border-bottom:1px solid rgb(212, 211, 211);">
        <% for( var sub of user.subscribers) {
      %> <% i++; %> <% if (sub.subscribedUser) { %>
-
      <a  href=<%=`/member/${sub.subscribedUser._id} `%> >
        <div class="subscriptions_mp item2">
-         <% if (sub.subscribedUser.photo) { %> <img
-         src=<%=`/img/users/${sub.subscribedUser.photo}`%> alt="hi"
-         class="social_icons" /> <% } else { %> <img
-         data-name=<%=sub.subscribedUser.name %> data-color="#85e0ce"
+         <% if (sub.subscribedUser.photo) { %>
+           <img src=<%=`/img/users/${sub.subscribedUser.photo}`%> alt="hi" class="social_icons" /> <% } else { %> <img data-name=<%=sub.subscribedUser.name %> data-color="#85e0ce"
          class="profile social_icons"/> <% } %>
          <h4 class="heading-normal" style="margin-top:0.2rem">
            <%= sub.subscribedUser.name %>
          </h4>
        </div>
      </a>
-
+     
      <% } %> <% if (i === 5){break;}%> <% } %> 
      </div>
      <div id="hide">

@@ -28,14 +28,14 @@ let rec5 = "";
 
 exports.calcul = catchAsync(async (req, res) => {
   const tempideals = await Deal.find();
-  console.log("AAO");
+  
 
   for (var deal of tempideals) {
     var now = new Date(Date.now());
     var tem = (now.getTime() - 1000000000000) / 3600000;
     tem = deal.views / tem;
 
-    console.log(deal._id);
+    
 
     await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
   }
@@ -43,7 +43,7 @@ exports.calcul = catchAsync(async (req, res) => {
 
 exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
-  console.log(deal);
+  
 
   if (deal) {
     res.redirect(deal.long.split("4000")[1]);
@@ -231,9 +231,6 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     }
   }
 
-  console.log(allDeals1);
-  console.log(allDeals2);
-  console.log(allDeals3);
 
   // allDeals.sort(function(a, b) {
   //   var keyA = new Date(a.time),
@@ -280,7 +277,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
     { dealName: regex },
     { score: { $meta: "textScore" } }
   ).sort({ score: { $meta: "textScore" } });
-  console.log("bhgvyvy");
+
   //   const query = await Deal.find(
   //     { $text: { $search: req.query.search } },
   //     { score: { $meta: "textScore" } }
@@ -691,7 +688,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 exports.getMemberData = catchAsync(async (req, res) => {
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    console.log(joChahiye[1]);
+
 
     if (joChahiye[1] == "report") {
       await Deal.findOneAndUpdate(
@@ -950,7 +947,6 @@ exports.getMemberData = catchAsync(async (req, res) => {
       },
     },
   ]);
-  console.log(totalLikes);
 
   // console.log(rec);
   const deals = await Deal.find(
@@ -980,7 +976,6 @@ exports.getMemberData = catchAsync(async (req, res) => {
         subscribedUser: req.params.id,
         user: xyz._id,
       });
-      console.log(subModel);
       res.locals.log = subModel;
     } else {
       res.locals.log = null;
@@ -1006,7 +1001,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
 
 exports.recently = catchAsync(async (req, res) => {
   const deals = req.cookies;
-  console.log(deals.one);
+
 
   const subs = await Subscriber.find({
     user: req.logged,
@@ -1033,18 +1028,16 @@ exports.livePage = catchAsync(async (req, res) => {
   const subs = await Subscriber.find({
     user: req.logged,
   });
-  const user = await User.findById(req.user).populate({
-    path: "subscribers",
-  });
+  
 
-  res.status(200).render("live", { liveDeals, subs, user });
+  res.status(200).render("live", { liveDeals, subs });
 });
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
   var fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-    console.log(joChahiye);
+    // console.log(joChahiye);
 
     // if (joChahiye[0] == "report") {
     //   await Deal.findOneAndUpdate(
@@ -1112,7 +1105,6 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   const deal = await Deal.findById({ _id: req.params.dealId }).populate({
     path: "reviews",
   });
-  console.log(deal);
   if (!deal) {
     return next(new appError("No Deal With That Id", 404));
   }
@@ -1337,8 +1329,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   const postedBy = await User.findById(req.params.sellerId);
   const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
-  console.log('hey');
-console.log(postedBy);
+ 
   res.status(200).render("deal", {
     deal,
     reco,

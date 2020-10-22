@@ -112,10 +112,15 @@
     top: 14%;
     left: 14%;
 
+    @include respond(tab-port) {
+      left: 16%;
+    }
+
     @include respond(phone) {
       top: 22%;
       left: 23%;
     }
+
     // background: linear-gradient(to right, #EA089B 0%, #330867 100%);
     // background-clip: border-box;
     // -webkit-background-clip: text;
@@ -138,6 +143,10 @@
     position: absolute;
     top: 33%;
     left: 14.2%;
+
+    @include respond(tab-port) {
+      left: 16.2%;
+    }
 
     @include respond(phone) {
       top: 40%;
@@ -167,6 +176,10 @@
     position: absolute;
     top: 78%;
     left: 14.5%;
+
+    @include respond(tab-port) {
+      left: 16.2%;
+    }
 
     @include respond(phone) {
       left: 23%;
@@ -205,6 +218,10 @@
     left: 24.5%;
     font-size: 3rem;
 
+    @include respond(tab-port) {
+      left: 27.5%;
+    }
+
     @include respond(phone) {
       left: 44.5%;
     }
@@ -215,6 +232,11 @@
     left: 29%;
     font-size: 2.7rem;
 
+    @include respond(tab-port) {
+      top: 79.5%;
+      left: 32.5%;
+    }
+
     @include respond(phone) {
       top: 80%;
       left: 54%;
@@ -222,9 +244,13 @@
   }
 
   &-blog {
-    top: 75.5%;
+    top: 76%;
     left: 33%;
     font-size: 2.3rem;
+
+    @include respond(tab-port) {
+      left: 36.5%;
+    }
 
     @include respond(phone) {
       left: 61%;
@@ -261,6 +287,10 @@
     top: 72.5%;
     left: 22%;
 
+    @include respond(tab-port) {
+      left: 25%;
+    }
+
     @include respond(phone) {
       left: 39.5%;
     }
@@ -273,6 +303,10 @@
     border-radius: 0.5rem;
     top: 19%;
     left: 38%;
+
+    @include respond(tab-port) {
+      left: 42%;
+    }
 
     @include respond(phone) {
       top: 28%;
@@ -299,12 +333,16 @@
     top: 19%;
     left: 46%;
 
-    @include respond(phone) {
-      display: none;
-    }
-
     @include respond(achi2) {
       left: 51%;
+    }
+
+    @include respond(tab-port) {
+      left: 58%;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
 
     &:hover {

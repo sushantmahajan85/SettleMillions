@@ -182,6 +182,19 @@ html {
   font-weight: 600;
   margin-left: 0.5rem;
 
+  @include respond(achi2) {
+    margin-left: 0.5rem;
+  }
+
+  @include respond(tab-land) {
+    margin-left: 0.5rem;
+  }
+
+  @include respond(tab-port) {
+    margin-left: -0.5rem;
+  }
+
+
   @include respond(phone) {
     margin-left: -0.5rem;
   }
@@ -212,8 +225,8 @@ html {
   }
 
   @include respond(tab-port) {
-    padding: 0.3rem 4.5rem 0.5rem 1rem;
-    margin-left: 5.5rem;
+    padding: 0.3rem 4.5rem 0.5rem 0rem;
+    margin-left: 4.5rem;
 
     @include respond(phone) {
       margin-left: 3.5rem;
@@ -283,7 +296,7 @@ html {
 
   @include respond(phone) {
     width: 70%;
-    margin-left: 12%;
+    margin-left: 14%;
     font-size: 1.9rem;
   }
 
@@ -326,7 +339,7 @@ html {
   }
 
   @include respond(phone) {
-    margin: 2rem 0rem 0rem -1.2rem;
+    margin: 2rem 0rem 0rem 0rem;
   }
 
   @include respond(small-phone) {
@@ -345,6 +358,26 @@ html {
   margin-bottom: 0rem;
   font-size: 1.4rem;
   font-weight: 450;
+
+  @include respond(achi2) {
+    margin: 2rem 0rem 2rem 2rem;
+  }
+
+  @include respond(tab-land) {
+    margin: 2rem 0rem 2rem 0rem;
+  }
+
+  @include respond(tab-port) {
+    margin: 2rem 0rem 2rem -1.2rem;
+  }
+
+  @include respond(phone) {
+    margin: 2rem 0rem 0rem 0rem;
+  }
+
+  @include respond(small-phone) {
+    margin: 2rem 0rem 0rem -1.2rem;
+  }
 }
 
 .wrap_signup a {
@@ -353,11 +386,20 @@ html {
 }
 
 div#GoogeSigninButton {
-  margin-left: 2.8rem;
+  margin-left: 2.6rem;
   margin-bottom: 1.5rem;
 
+
+  @include respond(achi2) {
+    margin-left: 4.5rem !important;
+  }
+
+  @include respond(tab-land) {
+    margin-left: 4.5rem !important;
+  }
+
   @include respond(tab-port) {
-    margin-left: 5rem !important;
+    margin-left: 4.5rem !important;
   }
 
   @include respond(phone) {
@@ -370,6 +412,11 @@ div#GoogeSigninButton {
 }
 
 .abcRioButton.abcRioButtonBlue {
+
+  @include respond(achi2) {
+    height: 4rem !important;
+    width: 27rem !important;
+  }
   @include respond(tab-port) {
     height: 4rem !important;
     width: 27rem !important;
@@ -396,7 +443,7 @@ div#GoogeSigninButton {
   }
 
   @include respond(small-phone) {
-    padding: 0.2rem !important;
+    padding: 0.3rem !important;
   }
 }
 
@@ -428,6 +475,31 @@ div#GoogeSigninButton {
     // bottom: -1rem !important;
     line-height: 4.3rem !important;
     margin-right: 1.7rem !important;
+  }
+}
+
+.abcRioButton.abcRioButtonBlue {
+  height: 4rem !important;
+  width: 31rem !important;
+
+  @include respond(achi2) {
+    height: 4rem !important;
+    width: 27rem !important;
+  }
+
+  @include respond(tab-port) {
+    height: 4rem !important;
+    width: 27rem !important;
+  }
+
+  @include respond(phone) {
+    height: 4rem !important;
+    width: 25rem !important;
+  }
+
+  @include respond(small-phone) {
+    height: 4rem !important;
+    width: 25rem !important;
   }
 }
 

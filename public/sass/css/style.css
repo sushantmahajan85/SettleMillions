@@ -5128,6 +5128,33 @@ html {
   font-size: 3rem;
   font-weight: 600;
   margin-left: 0.5rem; }
+  @media (max-width: 1380px) {
+    .wrap_title {
+      margin-left: 0.5rem; } }
+  @media (max-width: 1380px) {
+    .wrap_title .p {
+      font-size: 2rem; }
+    .wrap_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_title {
+      margin-left: 0.5rem; } }
+  @media (max-width: 1380px) {
+    .wrap_title .p {
+      font-size: 2rem; }
+    .wrap_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .wrap_title {
+      margin-left: -0.5rem; } }
+  @media (max-width: 1380px) {
+    .wrap_title .p {
+      font-size: 2rem; }
+    .wrap_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .wrap_title {
       margin-left: -0.5rem; } }
@@ -5178,8 +5205,8 @@ html {
       margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .wrap_subtext {
-      padding: 0.3rem 4.5rem 0.5rem 1rem;
-      margin-left: 5.5rem; } }
+      padding: 0.3rem 4.5rem 0.5rem 0rem;
+      margin-left: 4.5rem; } }
   @media (max-width: 56.25em) and (max-width: 37.5em) {
     .wrap_subtext {
       margin-left: 3.5rem; } }
@@ -5270,7 +5297,7 @@ html {
   @media (max-width: 37.5em) {
     .wrap_opt input[type="submit"] {
       width: 70%;
-      margin-left: 12%;
+      margin-left: 14%;
       font-size: 1.9rem; } }
   @media (max-width: 1380px) {
     .wrap_opt input[type="submit"] .p {
@@ -5335,7 +5362,7 @@ html {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .wrap_signin {
-      margin: 2rem 0rem 0rem -1.2rem; } }
+      margin: 2rem 0rem 0rem 0rem; } }
   @media (max-width: 1380px) {
     .wrap_signin .p {
       font-size: 2rem; }
@@ -5362,17 +5389,80 @@ html {
   margin-bottom: 0rem;
   font-size: 1.4rem;
   font-weight: 450; }
+  @media (max-width: 1380px) {
+    .wrap_signup {
+      margin: 2rem 0rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_signup {
+      margin: 2rem 0rem 2rem 0rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .wrap_signup {
+      margin: 2rem 0rem 2rem -1.2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .wrap_signup {
+      margin: 2rem 0rem 0rem 0rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .wrap_signup {
+      margin: 2rem 0rem 0rem -1.2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .wrap_signup a {
   text-decoration: none;
   color: #3e7ca9; }
 
 div#GoogeSigninButton {
-  margin-left: 2.8rem;
+  margin-left: 2.6rem;
   margin-bottom: 1.5rem; }
+  @media (max-width: 1380px) {
+    div#GoogeSigninButton {
+      margin-left: 4.5rem !important; } }
+  @media (max-width: 1380px) {
+    div#GoogeSigninButton .p {
+      font-size: 2rem; }
+    div#GoogeSigninButton .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    div#GoogeSigninButton {
+      margin-left: 4.5rem !important; } }
+  @media (max-width: 1380px) {
+    div#GoogeSigninButton .p {
+      font-size: 2rem; }
+    div#GoogeSigninButton .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     div#GoogeSigninButton {
-      margin-left: 5rem !important; } }
+      margin-left: 4.5rem !important; } }
   @media (max-width: 1380px) {
     div#GoogeSigninButton .p {
       font-size: 2rem; }
@@ -5397,6 +5487,18 @@ div#GoogeSigninButton {
     div#GoogeSigninButton .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+
+@media (max-width: 1380px) {
+  .abcRioButton.abcRioButtonBlue {
+    height: 4rem !important;
+    width: 27rem !important; } }
+
+@media (max-width: 1380px) {
+  .abcRioButton.abcRioButtonBlue .p {
+    font-size: 2rem; }
+  .abcRioButton.abcRioButtonBlue .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 @media (max-width: 56.25em) {
   .abcRioButton.abcRioButtonBlue {
@@ -5458,7 +5560,7 @@ div#GoogeSigninButton {
 
 @media (max-width: 22.2em) {
   .abcRioButtonBlue .abcRioButtonIcon {
-    padding: 0.2rem !important; } }
+    padding: 0.3rem !important; } }
 
 @media (max-width: 1380px) {
   .abcRioButtonBlue .abcRioButtonIcon .p {
@@ -5506,6 +5608,50 @@ div#GoogeSigninButton {
     .abcRioButtonContents .p {
       font-size: 2rem; }
     .abcRioButtonContents .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+.abcRioButton.abcRioButtonBlue {
+  height: 4rem !important;
+  width: 31rem !important; }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 27rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 27rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 25rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 25rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 

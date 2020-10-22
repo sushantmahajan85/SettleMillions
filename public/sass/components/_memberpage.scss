@@ -698,3 +698,16 @@
   width: 100%;
   padding: 0rem;
 }
+
+.cover .fa-cogs {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+    top: 80%;
+    left: 89%;
+  }
+}

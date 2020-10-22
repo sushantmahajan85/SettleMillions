@@ -2870,6 +2870,23 @@ figure {
   width: 100%;
   padding: 0rem; }
 
+.cover .fa-cogs {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  display: none; }
+  @media (max-width: 37.5em) {
+    .cover .fa-cogs {
+      display: block;
+      top: 80%;
+      left: 89%; } }
+  @media (max-width: 1380px) {
+    .cover .fa-cogs .p {
+      font-size: 2rem; }
+    .cover .fa-cogs .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
 #analyticsForm {
   padding-left: 15%;
   padding-top: 20%;

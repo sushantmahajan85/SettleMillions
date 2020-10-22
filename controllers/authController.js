@@ -280,6 +280,7 @@ exports.login = async (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
+  console.log('fdfdfdfdfdfd');
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 1),
     // secure: true,

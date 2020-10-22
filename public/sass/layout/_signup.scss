@@ -156,27 +156,23 @@ html {
   margin-top: 6rem;
   margin-bottom: 0rem;
 
-  
-
   @include respond(achi2) {
-    padding: 1.3rem 4.5rem 3rem 1rem;
+    padding: 1.3rem 3.5rem 3rem 2rem;
   }
   @include respond(tab-land) {
-    padding: 1.3rem 4.5rem 3rem 1rem;
+    padding: 1.3rem 3.5rem 3rem 2rem;
   }
 
   @include respond(tab-port) {
-    padding: 1.3rem 4.5rem 3rem 1rem;
+    padding: 1.3rem 2.5rem 3rem 2rem;
   }
-
-  
 }
 
 .wrap_title {
   text-align: center;
   font-size: 3rem;
   font-weight: 600;
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 .wrap_subtext {
@@ -190,17 +186,17 @@ html {
   /* text-align: center; */
 
   @include respond(achi2) {
-    padding: 1.3rem 4.5rem 2rem 1rem;
-    margin-left: 5.5rem;
+    padding: 1.3rem 4.5rem 0.5rem 1rem;
+    margin-left: 4rem;
   }
 
   @include respond(tab-land) {
-    padding: 1.3rem 4.5rem 1rem 1rem;
+    padding: 1.3rem 4.5rem 0.5rem 1rem;
     margin-left: 5.5rem;
   }
 
   @include respond(tab-port) {
-    padding: 1.3rem 4.5rem 0rem 1rem;
+    padding: 0.3rem 4.5rem 0.5rem 1rem;
     margin-left: 5.5rem;
   }
 }
@@ -246,23 +242,19 @@ html {
   //margin-right: 3rem;
   transition: all 0.2s;
 
-  
-
-  
-
   @include respond(achi2) {
     width: 80%;
-    margin-left: 13%;
+    margin-left: 10.5%;
   }
 
   @include respond(tab-land) {
     width: 80%;
-    margin-left: 13%;
+    margin-left: 10.5%;
   }
 
   @include respond(tab-port) {
     width: 80%;
-    margin-left: 13%;
+    margin-left: 9%;
   }
 }
 
@@ -284,16 +276,16 @@ html {
   font-size: 1.4rem;
   font-weight: 450;
 
-  @include respond(tab-port) {
+  @include respond(achi2) {
     margin: 2rem 0rem 2rem 2rem;
   }
 
   @include respond(tab-land) {
-    margin: 2rem 0rem 2rem 2rem;
+    margin: 2rem 0rem 2rem 0rem;
   }
 
-  @include respond(achi2) {
-    margin: 2rem 0rem 2rem 2rem;
+  @include respond(tab-port) {
+    margin: 2rem 0rem 2rem -1.2rem;
   }
 }
 
@@ -316,15 +308,26 @@ html {
 }
 
 div#GoogeSigninButton {
-  margin-left: 2.5rem;
-
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.abcRioButton.abcRioButtonBlue{
+.abcRioButton.abcRioButtonBlue {
   @include respond(tab-port) {
-    height: 4rem !important; 
+    height: 4rem !important;
     width: 25rem !important;
   }
+}
+
+.fb_iframe_widget {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  // height: 4rem !important;
+  width: 25rem !important;
+}
+
+.fwb {
+  padding: 2px 5.4rem !important;
 }
 
 .hr-text {

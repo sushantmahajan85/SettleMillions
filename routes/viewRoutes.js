@@ -6,6 +6,7 @@ const router = express.Router();
 
 //router.get(viewController.getSignupApp);
 
+router.get("/liveDeal", viewController.livePage);
 router.use(authController.isLoggedIn);
 
 router.get("/login", viewController.getLoginForm);
@@ -29,14 +30,13 @@ router.get(
   authController.protect,
   viewController.getSubscriptions
 );
-
+router.get("/category/:cat", viewController.category);
 router.get("/search", viewController.autocomplete);
 router.get("/:short", viewController.shortshort);
 router.get("/logout", authController.logout);
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);
-router.get("/live", viewController.live);
 router.get(
   "/updateUserSettings",
   authController.protect,

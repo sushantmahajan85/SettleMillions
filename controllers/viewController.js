@@ -287,7 +287,7 @@ exports.autocomplete = catchAsync(async (req, res) => {
   //   ).sort({ score: { $meta: "textScore" } });
 
   // Execute query in a callback and return users list
-  query.exec(function(err, users) {
+  query.exec(function (err, users) {
     if (!err) {
       // Method to construct the json result set
       res.send(
@@ -308,11 +308,20 @@ exports.autocomplete = catchAsync(async (req, res) => {
     }
   });
 });
+exports.category = catchAsync(async (req, res) => {
+  const categoryDeals = await Deal.find({ category: req.params.cat }).sort([
+    ["time", -1],
+  ]).limit(100);
+  const subs = await Subscriber.find({
+    user: req.logged,
+  });
+
+  res.status(200).render("category",{categoryDeals,subs});
+})
+
 
 exports.mainPage = catchAsync(async (req, res) => {
-  // const categoryDeals = await Deal.find({ category: "sport shoes" }).sort([
-  //   ["trendRatio", -1],
-  // ]);
+  
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
 
@@ -583,7 +592,7 @@ exports.mainPage = catchAsync(async (req, res) => {
         sortOrder = -1;
         property = property.substr(1);
       }
-      return function(a, b) {
+      return function (a, b) {
         var result =
           a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
         return result * sortOrder;
@@ -1017,8 +1026,10 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
   // console.log(user);
   res.status(200).render("updateSettings", { user });
 });
-exports.live = catchAsync(async (req, res) => {
-  const liveDeals = await Deal.find().sort([["time", -1]]);
+exports.livePage = catchAsync(async (req, res) => {
+  
+  const liveDeals = await Deal.find().sort([["time", -1]]).limit(100);
+ 
   const subs = await Subscriber.find({
     user: req.logged,
   });
@@ -1326,7 +1337,8 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   const postedBy = await User.findById(req.params.sellerId);
   const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
-
+  console.log('hey');
+console.log(postedBy);
   res.status(200).render("deal", {
     deal,
     reco,

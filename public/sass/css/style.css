@@ -4527,6 +4527,16 @@ Down
   cursor: pointer;
   border-radius: 1rem;
   font-weight: 550; }
+  @media (max-width: 37.5em) {
+    .new_deal_button {
+      padding: 1rem 2rem;
+      font-size: 2.2rem; } }
+  @media (max-width: 1380px) {
+    .new_deal_button .p {
+      font-size: 2rem; }
+    .new_deal_button .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .new_deal_button {
       padding: 1rem 2rem;

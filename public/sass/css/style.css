@@ -4554,10 +4554,10 @@ Down
 
 .form_container {
   background-color: #F2F3F4;
-  box-shadow: 10px 10px 7px 8px #444040;
-  margin: 0px auto;
+  box-shadow: 6px 6px 7px 8px #444040;
+  margin: 6rem auto 0rem auto;
   font-family: Bitter;
-  padding: 40px;
+  padding: 3.5rem 5rem 2.5rem 5rem;
   width: 35%;
   min-width: 300px;
   height: 80%;
@@ -4577,7 +4577,7 @@ Down
     font-size: 15px;
     font-family: Bitter;
     border: 1px solid #BDC3C7;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.8rem;
     border-radius: 0.6rem;
     background-color: #F8F9F9; }
   .form_container textarea {
@@ -4599,7 +4599,8 @@ Down
 .tab_headings {
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: 1rem; }
 
 .tab ::placeholder {
   color: rgba(0, 0, 0, 0.9); }

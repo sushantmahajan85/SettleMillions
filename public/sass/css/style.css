@@ -4527,6 +4527,16 @@ Down
   cursor: pointer;
   border-radius: 1rem;
   font-weight: 550; }
+  @media (max-width: 22.2em) {
+    .new_deal_button {
+      padding: 1rem 2rem;
+      font-size: 2.5rem; } }
+  @media (max-width: 1380px) {
+    .new_deal_button .p {
+      font-size: 2rem; }
+    .new_deal_button .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .step {
   height: 15px;
@@ -4562,6 +4572,35 @@ Down
   min-width: 300px;
   height: 80%;
   opacity: 0.8; }
+  @media (max-width: 56.25em) {
+    .form_container {
+      padding: 3.5rem 3.5rem 2.5rem 3.5rem; } }
+  @media (max-width: 1380px) {
+    .form_container .p {
+      font-size: 2rem; }
+    .form_container .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .form_container {
+      padding: 3.5rem 3.5rem 2.5rem 3.5rem; } }
+  @media (max-width: 1380px) {
+    .form_container .p {
+      font-size: 2rem; }
+    .form_container .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .form_container {
+      padding: 3.5rem 5rem 2.5rem 5rem;
+      margin: 10rem auto 0rem auto;
+      min-width: 45rem; } }
+  @media (max-width: 1380px) {
+    .form_container .p {
+      font-size: 2rem; }
+    .form_container .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .form_container select {
     padding: 9px;
     width: 100%;
@@ -4571,6 +4610,33 @@ Down
     margin-bottom: 0.8rem;
     border-radius: 0.6rem;
     background-color: #F8F9F9; }
+    @media (max-width: 56.25em) {
+      .form_container select {
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .form_container select .p {
+        font-size: 2rem; }
+      .form_container select .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 37.5em) {
+      .form_container select {
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .form_container select .p {
+        font-size: 2rem; }
+      .form_container select .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 22.2em) {
+      .form_container select {
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .form_container select .p {
+        font-size: 2rem; }
+      .form_container select .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .form_container input {
     padding: 9px;
     width: 100%;
@@ -4580,6 +4646,33 @@ Down
     margin-bottom: 1.8rem;
     border-radius: 0.6rem;
     background-color: #F8F9F9; }
+    @media (max-width: 56.25em) {
+      .form_container input {
+        font-size: 1.5rem; } }
+    @media (max-width: 1380px) {
+      .form_container input .p {
+        font-size: 2rem; }
+      .form_container input .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 37.5em) {
+      .form_container input {
+        font-size: 1.5rem; } }
+    @media (max-width: 1380px) {
+      .form_container input .p {
+        font-size: 2rem; }
+      .form_container input .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 22.2em) {
+      .form_container input {
+        font-size: 1.75rem; } }
+    @media (max-width: 1380px) {
+      .form_container input .p {
+        font-size: 2rem; }
+      .form_container input .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .form_container textarea {
     padding: 9px;
     width: 100%;
@@ -4591,6 +4684,33 @@ Down
 
 .form_container h1 {
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .form_container h1 {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .form_container h1 .p {
+      font-size: 2rem; }
+    .form_container h1 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .form_container h1 {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .form_container h1 .p {
+      font-size: 2rem; }
+    .form_container h1 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .form_container h1 {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .form_container h1 .p {
+      font-size: 2rem; }
+    .form_container h1 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .Post-box-title {
   text-transform: uppercase;
@@ -4601,6 +4721,33 @@ Down
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1rem; }
+  @media (max-width: 56.25em) {
+    .tab_headings {
+      font-size: 1.75rem; } }
+  @media (max-width: 1380px) {
+    .tab_headings .p {
+      font-size: 2rem; }
+    .tab_headings .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .tab_headings {
+      font-size: 1.75rem; } }
+  @media (max-width: 1380px) {
+    .tab_headings .p {
+      font-size: 2rem; }
+    .tab_headings .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .tab_headings {
+      font-size: 1.8rem; } }
+  @media (max-width: 1380px) {
+    .tab_headings .p {
+      font-size: 2rem; }
+    .tab_headings .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .tab ::placeholder {
   color: rgba(0, 0, 0, 0.9); }

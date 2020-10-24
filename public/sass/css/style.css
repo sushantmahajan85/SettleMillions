@@ -903,7 +903,7 @@ nav li {
   font-family: "Amaranth"; }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -946,6 +946,15 @@ body {
   @media (max-width: 75em) {
     .page-content {
       margin-left: 1%; } }
+  @media (max-width: 1380px) {
+    .page-content .p {
+      font-size: 2rem; }
+    .page-content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .page-content {
+      margin-left: 0%; } }
   @media (max-width: 1380px) {
     .page-content .p {
       font-size: 2rem; }
@@ -1629,6 +1638,19 @@ figure {
 #mybutton i {
   font-size: 5rem;
   cursor: pointer; }
+
+.trending_main_title {
+  padding: 10rem 2rem 2rem 2rem;
+  margin: 0; }
+  @media (max-width: 37.5em) {
+    .trending_main_title {
+      padding: 13rem 2rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .trending_main_title .p {
+      font-size: 2rem; }
+    .trending_main_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .dealPageContent {
   display: flex;
@@ -4505,12 +4527,32 @@ Down
   cursor: pointer;
   border-radius: 1rem;
   font-weight: 550; }
+  @media (max-width: 37.5em) {
+    .new_deal_button {
+      padding: 1rem 2rem;
+      font-size: 2.2rem; } }
+  @media (max-width: 1380px) {
+    .new_deal_button .p {
+      font-size: 2rem; }
+    .new_deal_button .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .new_deal_button {
+      padding: 1rem 2rem;
+      font-size: 2.5rem; } }
+  @media (max-width: 1380px) {
+    .new_deal_button .p {
+      font-size: 2rem; }
+    .new_deal_button .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .step {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbbbbb;
+  background-color: #bbbbbb !important;
   border: none;
   border-radius: 50%;
   display: inline-block;
@@ -4532,14 +4574,43 @@ Down
 
 .form_container {
   background-color: #F2F3F4;
-  box-shadow: 10px 10px 7px 8px #444040;
-  margin: 0px auto;
+  box-shadow: 6px 6px 7px 8px #444040;
+  margin: 6rem auto 0rem auto;
   font-family: Bitter;
-  padding: 40px;
+  padding: 3.5rem 5rem 2.5rem 5rem;
   width: 35%;
   min-width: 300px;
   height: 80%;
   opacity: 0.8; }
+  @media (max-width: 56.25em) {
+    .form_container {
+      padding: 3.5rem 3.5rem 2.5rem 3.5rem; } }
+  @media (max-width: 1380px) {
+    .form_container .p {
+      font-size: 2rem; }
+    .form_container .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .form_container {
+      padding: 3.5rem 3.5rem 2.5rem 3.5rem; } }
+  @media (max-width: 1380px) {
+    .form_container .p {
+      font-size: 2rem; }
+    .form_container .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .form_container {
+      padding: 3.5rem 5rem 2.5rem 5rem;
+      margin: 10rem auto 0rem auto;
+      min-width: 45rem; } }
+  @media (max-width: 1380px) {
+    .form_container .p {
+      font-size: 2rem; }
+    .form_container .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .form_container select {
     padding: 9px;
     width: 100%;
@@ -4549,15 +4620,69 @@ Down
     margin-bottom: 0.8rem;
     border-radius: 0.6rem;
     background-color: #F8F9F9; }
+    @media (max-width: 56.25em) {
+      .form_container select {
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .form_container select .p {
+        font-size: 2rem; }
+      .form_container select .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 37.5em) {
+      .form_container select {
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .form_container select .p {
+        font-size: 2rem; }
+      .form_container select .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 22.2em) {
+      .form_container select {
+        font-size: 1.6rem; } }
+    @media (max-width: 1380px) {
+      .form_container select .p {
+        font-size: 2rem; }
+      .form_container select .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .form_container input {
     padding: 9px;
     width: 100%;
     font-size: 15px;
     font-family: Bitter;
     border: 1px solid #BDC3C7;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.8rem;
     border-radius: 0.6rem;
     background-color: #F8F9F9; }
+    @media (max-width: 56.25em) {
+      .form_container input {
+        font-size: 1.5rem; } }
+    @media (max-width: 1380px) {
+      .form_container input .p {
+        font-size: 2rem; }
+      .form_container input .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 37.5em) {
+      .form_container input {
+        font-size: 1.5rem; } }
+    @media (max-width: 1380px) {
+      .form_container input .p {
+        font-size: 2rem; }
+      .form_container input .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 22.2em) {
+      .form_container input {
+        font-size: 1.75rem; } }
+    @media (max-width: 1380px) {
+      .form_container input .p {
+        font-size: 2rem; }
+      .form_container input .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .form_container textarea {
     padding: 9px;
     width: 100%;
@@ -4569,6 +4694,33 @@ Down
 
 .form_container h1 {
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .form_container h1 {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .form_container h1 .p {
+      font-size: 2rem; }
+    .form_container h1 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .form_container h1 {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .form_container h1 .p {
+      font-size: 2rem; }
+    .form_container h1 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .form_container h1 {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .form_container h1 .p {
+      font-size: 2rem; }
+    .form_container h1 .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .Post-box-title {
   text-transform: uppercase;
@@ -4577,7 +4729,35 @@ Down
 .tab_headings {
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: 1rem; }
+  @media (max-width: 56.25em) {
+    .tab_headings {
+      font-size: 1.75rem; } }
+  @media (max-width: 1380px) {
+    .tab_headings .p {
+      font-size: 2rem; }
+    .tab_headings .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .tab_headings {
+      font-size: 1.75rem; } }
+  @media (max-width: 1380px) {
+    .tab_headings .p {
+      font-size: 2rem; }
+    .tab_headings .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .tab_headings {
+      font-size: 1.8rem; } }
+  @media (max-width: 1380px) {
+    .tab_headings .p {
+      font-size: 2rem; }
+    .tab_headings .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .tab ::placeholder {
   color: rgba(0, 0, 0, 0.9); }
@@ -4943,7 +5123,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -5027,7 +5207,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -5048,7 +5228,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }
@@ -5176,6 +5356,33 @@ html {
   font-size: 3rem;
   font-weight: 600;
   margin-left: 0.5rem; }
+  @media (max-width: 1380px) {
+    .wrap_title {
+      margin-left: 0.5rem; } }
+  @media (max-width: 1380px) {
+    .wrap_title .p {
+      font-size: 2rem; }
+    .wrap_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_title {
+      margin-left: 0.5rem; } }
+  @media (max-width: 1380px) {
+    .wrap_title .p {
+      font-size: 2rem; }
+    .wrap_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .wrap_title {
+      margin-left: -0.5rem; } }
+  @media (max-width: 1380px) {
+    .wrap_title .p {
+      font-size: 2rem; }
+    .wrap_title .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .wrap_title {
       margin-left: -0.5rem; } }
@@ -5226,8 +5433,8 @@ html {
       margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .wrap_subtext {
-      padding: 0.3rem 4.5rem 0.5rem 1rem;
-      margin-left: 5.5rem; } }
+      padding: 0.3rem 4.5rem 0.5rem 0rem;
+      margin-left: 4.5rem; } }
   @media (max-width: 56.25em) and (max-width: 37.5em) {
     .wrap_subtext {
       margin-left: 3.5rem; } }
@@ -5318,7 +5525,7 @@ html {
   @media (max-width: 37.5em) {
     .wrap_opt input[type="submit"] {
       width: 70%;
-      margin-left: 12%;
+      margin-left: 14%;
       font-size: 1.9rem; } }
   @media (max-width: 1380px) {
     .wrap_opt input[type="submit"] .p {
@@ -5383,7 +5590,7 @@ html {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .wrap_signin {
-      margin: 2rem 0rem 0rem -1.2rem; } }
+      margin: 2rem 0rem 0rem 0rem; } }
   @media (max-width: 1380px) {
     .wrap_signin .p {
       font-size: 2rem; }
@@ -5410,17 +5617,80 @@ html {
   margin-bottom: 0rem;
   font-size: 1.4rem;
   font-weight: 450; }
+  @media (max-width: 1380px) {
+    .wrap_signup {
+      margin: 2rem 0rem 2rem 2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .wrap_signup {
+      margin: 2rem 0rem 2rem 0rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .wrap_signup {
+      margin: 2rem 0rem 2rem -1.2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .wrap_signup {
+      margin: 2rem 0rem 0rem 0rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .wrap_signup {
+      margin: 2rem 0rem 0rem -1.2rem; } }
+  @media (max-width: 1380px) {
+    .wrap_signup .p {
+      font-size: 2rem; }
+    .wrap_signup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .wrap_signup a {
   text-decoration: none;
   color: #3e7ca9; }
 
 div#GoogeSigninButton {
-  margin-left: 2.8rem;
+  margin-left: 2.6rem;
   margin-bottom: 1.5rem; }
+  @media (max-width: 1380px) {
+    div#GoogeSigninButton {
+      margin-left: 4.5rem !important; } }
+  @media (max-width: 1380px) {
+    div#GoogeSigninButton .p {
+      font-size: 2rem; }
+    div#GoogeSigninButton .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    div#GoogeSigninButton {
+      margin-left: 4.5rem !important; } }
+  @media (max-width: 1380px) {
+    div#GoogeSigninButton .p {
+      font-size: 2rem; }
+    div#GoogeSigninButton .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     div#GoogeSigninButton {
-      margin-left: 5rem !important; } }
+      margin-left: 4.5rem !important; } }
   @media (max-width: 1380px) {
     div#GoogeSigninButton .p {
       font-size: 2rem; }
@@ -5445,6 +5715,18 @@ div#GoogeSigninButton {
     div#GoogeSigninButton .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+
+@media (max-width: 1380px) {
+  .abcRioButton.abcRioButtonBlue {
+    height: 4rem !important;
+    width: 27rem !important; } }
+
+@media (max-width: 1380px) {
+  .abcRioButton.abcRioButtonBlue .p {
+    font-size: 2rem; }
+  .abcRioButton.abcRioButtonBlue .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 @media (max-width: 56.25em) {
   .abcRioButton.abcRioButtonBlue {
@@ -5506,7 +5788,7 @@ div#GoogeSigninButton {
 
 @media (max-width: 22.2em) {
   .abcRioButtonBlue .abcRioButtonIcon {
-    padding: 0.2rem !important; } }
+    padding: 0.3rem !important; } }
 
 @media (max-width: 1380px) {
   .abcRioButtonBlue .abcRioButtonIcon .p {
@@ -5554,6 +5836,50 @@ div#GoogeSigninButton {
     .abcRioButtonContents .p {
       font-size: 2rem; }
     .abcRioButtonContents .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+.abcRioButton.abcRioButtonBlue {
+  height: 4rem !important;
+  width: 31rem !important; }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 27rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 27rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 25rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .abcRioButton.abcRioButtonBlue {
+      height: 4rem !important;
+      width: 25rem !important; } }
+  @media (max-width: 1380px) {
+    .abcRioButton.abcRioButtonBlue .p {
+      font-size: 2rem; }
+    .abcRioButton.abcRioButtonBlue .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 

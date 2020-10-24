@@ -21,7 +21,15 @@ router
     dealController.setDealUserIds,
     dealController.createDeal
   );
-//
+
+router
+  .route("/newsDeal")
+  .post(authController.protect,dealController.createNews);
+  
+router
+.route("/pageDeal")
+.post(authController.protect,dealController.createPage);
+
 router
   .route("/:id")
   .get(dealController.getDeal)

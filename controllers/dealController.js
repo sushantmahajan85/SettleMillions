@@ -2,6 +2,10 @@ const fs = require("fs");
 const multer = require("multer");
 const sharp = require("sharp");
 const Deal = require("./../schema/models/dealModel");
+
+const News = require("./../schema/models/newsModel");
+
+const Page = require("./../schema/models/pageModel");
 const catchAsync = require("./../utils/catchAsync");
 
 const factory = require("./handlerFactory");
@@ -17,6 +21,8 @@ exports.setDealUserIds = async (req, res, next) => {
 exports.getAllDeals = factory.getAll(Deal);
 // exports.getDeal = factory.getOne(Deal, { path: "reviews" });
 exports.createDeal = factory.createOne(Deal);
+exports.createNews = factory.createOne(News);
+exports.createPage = factory.createOne(Page);
 exports.updateDeal = factory.updateOne(Deal);
 exports.deleteDeal = factory.deleteOne(Deal);
 exports.getTrending = catchAsync(async (req, res) => {

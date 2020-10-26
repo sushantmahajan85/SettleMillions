@@ -110,9 +110,29 @@ body {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
-.small-sidebar {
-  width: 19px;
-  margin-right: 4px !important; }
+@media (max-width: 75em) {
+  .small-sidebar {
+    width: 19px;
+    margin-right: 4px !important; } }
+
+@media (max-width: 1380px) {
+  .small-sidebar .p {
+    font-size: 2rem; }
+  .small-sidebar .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 22.2em) {
+  .small-sidebar {
+    margin-left: 2.5rem !important;
+    width: 1.5rem; } }
+
+@media (max-width: 1380px) {
+  .small-sidebar .p {
+    font-size: 2rem; }
+  .small-sidebar .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 .w3-sidebar {
   max-width: 15%; }
@@ -830,6 +850,33 @@ nav li {
   display: block;
   transition: 0.5s all;
   margin-bottom: 1.3rem; }
+  @media (max-width: 56.25em) {
+    .sidenav a {
+      font-size: 12.5px !important; } }
+  @media (max-width: 1380px) {
+    .sidenav a .p {
+      font-size: 2rem; }
+    .sidenav a .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .sidenav a {
+      font-size: 12.5px !important; } }
+  @media (max-width: 1380px) {
+    .sidenav a .p {
+      font-size: 2rem; }
+    .sidenav a .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .sidenav a {
+      font-size: 2.4rem !important; } }
+  @media (max-width: 1380px) {
+    .sidenav a .p {
+      font-size: 2rem; }
+    .sidenav a .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .sidenav a:hover {
   color: black;
@@ -848,9 +895,7 @@ nav li {
 
 @media screen and (max-height: 450px) {
   .sidenav {
-    padding-top: 15px; }
-  .sidenav a {
-    font-size: 18px; } }
+    padding-top: 15px; } }
 
 .navigation_item {
   font-size: 0.2rem;
@@ -905,6 +950,125 @@ nav li {
   font-size: 3.5rem;
   margin-left: 4rem;
   font-family: "Amaranth"; }
+  @media (max-width: 75em) {
+    .nav_tff {
+      margin-left: 3rem; } }
+  @media (max-width: 1380px) {
+    .nav_tff .p {
+      font-size: 2rem; }
+    .nav_tff .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .nav_tff {
+      margin-left: 3.6rem; } }
+  @media (max-width: 1380px) {
+    .nav_tff .p {
+      font-size: 2rem; }
+    .nav_tff .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .nav_tff {
+      margin-left: 4.2rem !important; } }
+  @media (max-width: 1380px) {
+    .nav_tff .p {
+      font-size: 2rem; }
+    .nav_tff .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .nav_tff {
+      margin-left: 4.9rem !important; } }
+  @media (max-width: 1380px) {
+    .nav_tff .p {
+      font-size: 2rem; }
+    .nav_tff .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+@media (max-width: 1380px) {
+  .scale_button1 {
+    height: 3.71rem !important;
+    width: 19.5rem  !important;
+    color: #15161d !important;
+    line-height: 3rem;
+    margin-left: 2.9rem !important; } }
+
+@media (max-width: 1380px) {
+  .scale_button1 .p {
+    font-size: 2rem; }
+  .scale_button1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 75em) {
+  .scale_button1 {
+    height: 3.71rem !important;
+    width: 19.5rem  !important;
+    color: #15161d !important;
+    line-height: 3rem;
+    margin-left: 2.9rem !important;
+    margin-top: 0.1rem !important; } }
+
+@media (max-width: 1380px) {
+  .scale_button1 .p {
+    font-size: 2rem; }
+  .scale_button1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 56.25em) {
+  .scale_button1 {
+    height: 3.71rem !important;
+    width: 22.7rem  !important;
+    color: #15161d !important;
+    line-height: 2.3rem;
+    font-size: 1.8rem;
+    margin-top: 0.1rem !important;
+    margin-left: 2.9rem !important;
+    margin-top: 0.1rem !important; } }
+
+@media (max-width: 1380px) {
+  .scale_button1 .p {
+    font-size: 2rem; }
+  .scale_button1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 37.5em) {
+  .scale_button1 {
+    height: 3.71rem !important;
+    width: 26.5rem  !important;
+    color: #15161d !important;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 0.1rem !important;
+    margin-left: 2.9rem !important; } }
+
+@media (max-width: 1380px) {
+  .scale_button1 .p {
+    font-size: 2rem; }
+  .scale_button1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 22.2em) {
+  .scale_button1 {
+    height: 3.71rem !important;
+    width: 35.5rem  !important;
+    color: #15161d !important;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 0.1rem !important;
+    margin-left: 2.9rem !important; } }
+
+@media (max-width: 1380px) {
+  .scale_button1 .p {
+    font-size: 2rem; }
+  .scale_button1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 .sidenav {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -916,6 +1080,104 @@ nav li {
   font-size: 2.5rem;
   margin-left: 4rem;
   margin-top: 4rem; }
+  @media (max-width: 75em) {
+    .follow_us {
+      display: block;
+      visibility: visible;
+      margin-left: 3.3rem;
+      margin-top: 1.75rem !important; } }
+  @media (max-width: 1380px) {
+    .follow_us .p {
+      font-size: 2rem; }
+    .follow_us .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .follow_us {
+      display: block;
+      visibility: visible;
+      margin-left: 3.3rem;
+      margin-top: 2rem !important; } }
+  @media (max-width: 1380px) {
+    .follow_us .p {
+      font-size: 2rem; }
+    .follow_us .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .follow_us {
+      font-size: 2.8rem !important;
+      margin-top: 2rem; } }
+  @media (max-width: 1380px) {
+    .follow_us .p {
+      font-size: 2rem; }
+    .follow_us .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+@media (max-width: 1380px) {
+  .signin-sub_text {
+    font-size: 1.45rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 30.7rem !important; } }
+
+@media (max-width: 1380px) {
+  .signin-sub_text .p {
+    font-size: 2rem; }
+  .signin-sub_text .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 75em) {
+  .signin-sub_text {
+    font-size: 1.45rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 25.7rem !important; } }
+
+@media (max-width: 1380px) {
+  .signin-sub_text .p {
+    font-size: 2rem; }
+  .signin-sub_text .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 56.25em) {
+  .signin-sub_text {
+    font-size: 1.7rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 30.7rem !important; } }
+
+@media (max-width: 1380px) {
+  .signin-sub_text .p {
+    font-size: 2rem; }
+  .signin-sub_text .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 37.5em) {
+  .signin-sub_text {
+    font-size: 2rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 32.7rem !important; } }
+
+@media (max-width: 1380px) {
+  .signin-sub_text .p {
+    font-size: 2rem; }
+  .signin-sub_text .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 22.2em) {
+  .signin-sub_text {
+    font-size: 2rem !important;
+    padding: 1rem 1rem 1rem 4rem; } }
+
+@media (max-width: 1380px) {
+  .signin-sub_text .p {
+    font-size: 2rem; }
+  .signin-sub_text .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 .navigation_link:link,
 .navigation_link:visited {
@@ -1703,6 +1965,15 @@ figure {
     display: block;
     padding: 1rem 1rem 1rem 1rem;
     margin-top: 1rem; }
+    @media (max-width: 22.2em) {
+      .deal-deets_buttons {
+        margin-top: 0.1rem; } }
+    @media (max-width: 1380px) {
+      .deal-deets_buttons .p {
+        font-size: 2rem; }
+      .deal-deets_buttons .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .deal-deets_name {
     padding: 0rem 1rem 0rem 1rem;
     font-size: 2rem !important;

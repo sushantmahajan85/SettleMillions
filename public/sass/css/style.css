@@ -110,6 +110,10 @@ body {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+.small-sidebar {
+  width: 19px;
+  margin-right: 4px !important; }
+
 .w3-sidebar {
   max-width: 15%; }
 

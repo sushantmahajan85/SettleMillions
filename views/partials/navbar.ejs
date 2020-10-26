@@ -85,7 +85,18 @@
       <% if(user) { %>
         <% if (user.role == 'admin') { %>
           <div class="titles_nv">
-            <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
+            <!-- <div class="user-nav__user"> -->
+              <nav role="navigation">
+                <ul>
+                  <li style="font-size:1.75rem"> Post
+                    <ul class="dropdown" style="background-color: black;">
+                      <li><a href=<%= `/newDeal` %>>Deal</a></li>
+                      <li><a href="/pageDeal">Page</a></li>
+                      <li><a href="/newsDeal">News</a></li>
+                    </ul>
+                  </nav>
+               
+            <!-- <a href="/newDeal"><div style="color: white;">Post A Deal</div></a> -->
           </div>
          
         <% } %>

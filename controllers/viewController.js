@@ -641,12 +641,12 @@ exports.mainPage = catchAsync(async (req, res) => {
     // const newlyJoined = await User.find();
     // const topUsers = await User.find().sort([["rank", -1]]);
 
-    const apnaUser = await User.findById("5f2411f9da1e940017e5aadd");
-    //console.log(apnaUser.groupCount);
+    const apnaUser = await User.findById("5f6b9fc84df4c90017adb18b");
+    console.log(apnaUser);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 3 == 0) {
       await User.findByIdAndUpdate(
-        { _id: "5f2411f9da1e940017e5aadd" },
+        { _id: "5f6b9fc84df4c90017adb18b" },
         { groupCount: 0, $inc: { numberOfGroups: 1 } }
       );
     }

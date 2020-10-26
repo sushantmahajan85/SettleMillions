@@ -1559,17 +1559,17 @@
                     <h2>About</h2>
                     <br>
                     <ul>
-                        <a href="#">
-                            <li>About Us</li>
+                        <a >
+                            <li onclick="about()">About Us</li>
+                        </a>
+                        <a  >
+                            <li onclick="contact()">Contact Us</li>
                         </a>
                         <a href="#">
-                            <li>Contact Us</li>
+                            <!-- <li>Careers</li> -->
                         </a>
                         <a href="#">
-                            <li>Careers</li>
-                        </a>
-                        <a href="#">
-                            <li>Our Team</li>
+                            <!-- <li>Our Team</li> -->
                         </a>
 
                     </ul>
@@ -1593,15 +1593,15 @@
                     <h2>Policy</h2>
                     <br>
                     <ul>
-                        <a href="#">
-                            <li>Terms and Conditions</li>
+                        <a >
+                            <li onclick="terms()">Terms and Conditions</li>
                         </a>
-                        <a href="#">
-                            <li>Privacy Policy</li>
+                        <a >
+                            <li onclick="privacy()">Privacy Policy</li>
                         </a>
                     </ul>
                 </div>
-                <div class="footer-section help">
+                <!-- <div class="footer-section help">
                     <h2>Help</h2>
                     <br>
                     <ul>
@@ -1615,7 +1615,7 @@
                             <li>Report</li>
                         </a>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="footer-bottom">
                 <hr>
@@ -1896,7 +1896,120 @@
         </div>
     </div>
     <% } %>
+<div class="popup" id="popup_about" style="display: none; height: 30rem; width: 55rem;">
+                
+        <div class="popup1_content" style="display: flex;">
+            <div class="popup1_left" style="width: 225%;">
+                <img src="/img/2.png" alt="hi" class="popup1_img">
+            </div>
+            <div class="popup1_right">
+                <div class="popup_cross" id="popup_cross_about" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
+                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
+                <p style="font-size: 1rem !important;">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
+                </p> 
+                
+                <div style="display: flex; justify-content: space-around; align-items: center;">
+                    <div style="display: flex;">
+                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    </div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup_contact" style="display: none; height: 30rem; width: 55rem;">
+                
+        <div class="popup1_content" style="display: flex;">
+            <div class="popup1_left" style="width: 225%;">
+                <img src="/img/2.png" alt="hi" class="popup1_img">
+            </div>
+            <div class="popup1_right">
+                <div class="popup_cross" id="popup_cross_contact" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
+                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
+                <p style="font-size: 1rem !important;">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
+                </p> 
+                
+                <div style="display: flex; justify-content: space-around; align-items: center;">
+                    <div style="display: flex;">
+                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    </div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup_terms" style="display: none; height: 30rem; width: 55rem;">
+                
+        <div class="popup1_content" style="display: flex;">
+            <div class="popup1_left" style="width: 225%;">
+                <img src="/img/2.png" alt="hi" class="popup1_img">
+            </div>
+            <div class="popup1_right">
+                <div class="popup_cross" id="popup_cross_terms" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
+                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
+                <p style="font-size: 1rem !important;">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
+                </p> 
+                
+                <div style="display: flex; justify-content: space-around; align-items: center;">
+                    <div style="display: flex;">
+                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    </div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                </div>
+            
+            </div>
+        </div>
+    </div><div class="popup" id="popup_privacy" style="display: none; height: 30rem; width: 55rem;">
+                
+        <div class="popup1_content" style="display: flex;">
+            <div class="popup1_left" style="width: 225%;">
+                <img src="/img/2.png" alt="hi" class="popup1_img">
+            </div>
+            <div class="popup1_right">
+                <div class="popup_cross" id="popup_cross_privacy" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
+                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
+                <p style="font-size: 1rem !important;">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
+                </p> 
+                
+                <div style="display: flex; justify-content: space-around; align-items: center;">
+                    <div style="display: flex;">
+                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    </div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <script>
+function about(){
+    document.getElementById("popup_about").style.display = "block";
+}
+function privacy(){
+    document.getElementById("popup_privacy").style.display = "block";
+}
+function terms(){
+    document.getElementById("popup_terms").style.display = "block";
+}
+function contact(){
+    document.getElementById("popup_contact").style.display = "block";
+}
+document.getElementById("popup_cross_about").addEventListener("click",()=>{
+    document.getElementById("popup_about").style.display = "none";
+})
+document.getElementById("popup_cross_privacy").addEventListener("click",()=>{
+    document.getElementById("popup_privacy").style.display = "none";
+})
+document.getElementById("popup_cross_terms").addEventListener("click",()=>{
+    document.getElementById("popup_terms").style.display = "none";
+})
+document.getElementById("popup_cross_contact").addEventListener("click",()=>{
+    document.getElementById("popup_contact").style.display = "none";
+})
 
+    </script>
     <script>
         function setCookie(cname, cvalue, exdays) {
             var d = new Date();

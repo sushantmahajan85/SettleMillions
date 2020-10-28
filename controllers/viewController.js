@@ -1,4 +1,6 @@
 const Deal = require("./../schema/models/dealModel");
+const News = require("./../schema/models/newsModel");
+const Page = require("./../schema/models/pageModel");
 const Subscriber = require("./../schema/models/subscriberModel");
 const LikedDeal = require("./../schema/models/likedDealModel");
 const User = require("./../schema/models/userModel");
@@ -8,6 +10,7 @@ const exec = require("child_process").exec;
 const url = require("url");
 const { del } = require("request");
 const Review = require("../schema/models/reviewModel");
+
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -77,6 +80,14 @@ exports.analytics = catchAsync(async (req, res) => {
   });
 });
 
+exports.pageDeal = (req, res) => {
+  
+  res.status(200).render("pageDeal");
+};
+exports.newsDeal = (req, res) => {
+  
+  res.status(200).render("newsDeal");
+};
 exports.forgot = (req, res) => {
   res.status(200).render("forgot");
 };
@@ -630,12 +641,12 @@ exports.mainPage = catchAsync(async (req, res) => {
     // const newlyJoined = await User.find();
     // const topUsers = await User.find().sort([["rank", -1]]);
 
-    const apnaUser = await User.findById("5f2411f9da1e940017e5aadd");
-    //console.log(apnaUser.groupCount);
+    const apnaUser = await User.findById("5f6b9fc84df4c90017adb18b");
+    console.log(apnaUser);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 3 == 0) {
       await User.findByIdAndUpdate(
-        { _id: "5f2411f9da1e940017e5aadd" },
+        { _id: "5f6b9fc84df4c90017adb18b" },
         { groupCount: 0, $inc: { numberOfGroups: 1 } }
       );
     }
@@ -654,7 +665,9 @@ exports.mainPage = catchAsync(async (req, res) => {
     const liveDeals = await Deal.find()
       .sort([["time", -1]])
       .limit(16);
+const news = await News.find().limit(10);
 
+const page = await Page.find().limit(10);
     var yesNo = 0;
     if (req.cookies.Joined) {
       yesNo = 1;
@@ -673,6 +686,8 @@ exports.mainPage = catchAsync(async (req, res) => {
       numberG,
       subs,
       yesNo,
+      news,
+      page
     });
 
     // for (var deal of deals) {

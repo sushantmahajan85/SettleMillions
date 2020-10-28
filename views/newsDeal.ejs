@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+    <script
+      src="https://kit.fontawesome.com/6e422c4989.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" type="text/css" href="sass/css/util.css" />
+    <link rel="stylesheet" type="text/css" href="sass/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/logo1.png" />
+    <title>Your Deal | Signup</title>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+   
+
+    
+
+    <section class="form_section">
+      <div class="wrap">
+        <h2 class="wrap_title">Your Deal</h2>
+        <h4 class="wrap_subtext">
+          Sign up to see the best deals from the best platforms.
+        </h4>
+
+        <form class="wrap_opt" id="signup_form">
+          
+          <input
+            placeholder="Title Description"
+            id="cpassword"
+            required
+          />
+          <input
+            placeholder="Bigger Description"
+            id="password"
+            required
+          />
+          <input type="submit" value="Submit" id="submit" />
+          
+        </form>
+      </div>
+    </section>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>About</h2>
+          <br />
+          <ul>
+            <a href="#"><li>About Us</li></a>
+            <a href="#"><li>Contact Us</li></a>
+            <a href="#"><li>Careers</li></a>
+            <a href="#"><li>Our Team</li></a>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h2>Social</h2>
+          <br />
+          <ul>
+            <a href="https://twitter.com/"
+              ><li><i class="fab fa-twitter"></i>Twitter</li></a
+            >
+            <a href="https://www.facebook.com/"
+              ><li><i class="fab fa-facebook-f"></i>Facebook</li></a
+            >
+            <a href="https://twitter.com/"
+              ><li><i class="fab fa-instagram"></i>Instagram</li></a
+            >
+          </ul>
+        </div>
+        <div class="footer-section policy">
+          <h2>Policy</h2>
+          <br />
+          <ul>
+            <a href="#"><li>Terms and Conditions</li></a>
+            <a href="#"><li>Privacy Policy</li></a>
+          </ul>
+        </div>
+        <div class="footer-section help">
+          <h2>Help</h2>
+          <br />
+          <ul>
+            <a href="#"><li>How to Post a Deal</li></a>
+            <a href="#"><li>FAQ</li></a>
+            <a href="#"><li>Report</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <hr />
+        &copy; 2020, Your Deal Inc.
+      </div>
+    </div>
+
+    <!-- //footer -->
+
+    <!-- <div class="sign_up-box">
+              <h2>Your Deal</h2>
+              <h4>Sign up to see the best deals from the best platforms</h4>
+
+              <form>
+                  <input type="text" f
+              </form>
+
+
+          </div> -->
+    <!-- FACEBOOK SDK -->
+
+    <!-- <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1321461864731329',
+                cookie: true,
+                xfbml: true,
+                version: 'v6.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script> -->
+
+    <script src="/js/newsDeal.js"></script>
+    <!-- FACEBOOK SDK END -->
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/js/alerts.js"></script>
+    <!-- <script>
+      setTimeout(function() {
+        $("#GoogeSigninButton div").text("Custom Sign in Text");
+        $("#GoogeSigninButton div div span span:first").text(
+          "Custom Sign in Text"
+        );
+        $("#GoogeSigninButton div div span span:last").css(
+          "font-family",
+          "Arial"
+        ); //for font formatting
+        $("#GoogeSigninButton div div span span:first").css(
+          "font-family",
+          "Arial"
+        ); //for font formatting
+      }, 2000);
+    </script> -->
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+ 
+    <!-- <script>
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function() {
+          console.log("User signed out.");
+        });
+      };
+    </script> -->
+  </body>
+</html>

@@ -17,6 +17,8 @@ router.get(
   authController.protect,
   viewController.getRecruitmentsData
 );
+router.get("/pageDeal",viewController.pageDeal);
+router.get("/newsDeal",viewController.newsDeal);
 router.get("/", viewController.mainPage);
 router.get("/analytics", viewController.analytics);
 router.get("/member/:id", viewController.getMemberData);
@@ -26,6 +28,14 @@ router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/trending", viewController.getTrendingDeals);
 router.get("/logout", authController.logout);
 router.get("/liveDeal",viewController.livePage);
+
+router.get("/:short", viewController.shortshort);
+
+router.get(
+  "/updateUserSettings",
+  authController.protect,
+  viewController.updateUserSettings
+);
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get(
   "/subscriptions",
@@ -34,13 +44,8 @@ router.get(
 );
 router.get("/category/:cat", viewController.category);
 router.get("/search", viewController.autocomplete);
-router.get("/:short", viewController.shortshort);
 
 router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);
-router.get(
-  "/updateUserSettings",
-  authController.protect,
-  viewController.updateUserSettings
-);
+
 module.exports = router;

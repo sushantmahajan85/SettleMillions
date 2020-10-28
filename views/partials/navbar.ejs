@@ -30,26 +30,24 @@
       >
       <h3 class="nav_tff">Your Deal</h3>
       <div class="navigation_link navigation_item">
-        <a href="#popup" onclick="closeNav()"><i class="fas fa-h-square font_icon"></i> Home</a>
-        <a href="events.html" onclick="closeNav()"><i class="fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
-        <a href="#section_pic" onclick="closeNav()"><i class="fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
-        <a href="#popup4" onclick="closeNav()"><i class="fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
-        <a href="#team_section" onclick="closeNav()"><i class="fas fa-heart font_icon"></i> Favourites</a>
-        <a href="coupons.html" onclick="closeNav()"><i class="fas fa-clock font_icon"></i> Live Deals</a>
+        <a href="#popup" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>
+        <a href="events.html" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
+        <a href="#section_pic" onclick="closeNav()"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+        <a href="#popup4" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
+        <a href="#team_section" onclick="closeNav()"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
+        <a href="coupons.html" onclick="closeNav()"><i class="small-sidebar fas fa-clock font_icon"></i> Live Deals</a>
       </div>
       <h3 class="follow_us">Follow Us On</h3>
       <div class="nav_logos">
         <% if (user) { %>
         <% } else {%>
-          <h3 class="heading-normal" style="padding: 8px 8px 8px 16px; margin: 1rem 0.5rem 0.5rem 1.8rem; color: white;">
+          <h3 class="signin-sub_text heading-normal" style="color: white;">
             Sign in to like deals subscribe and earn
           </h3>
-          <div class="deal-deets_buttons" style="padding: 8px 8px 8px 28px; font-size: 1 rem; border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem;">
-            <a href="" class="sidebar_button" style="height: 7.71rem"> <i
+          <div class="deal-deets_buttons" style=" font-size: 1rem; border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem;">
+            <a href="" class="scale_button1 sidebar_button" style="height: 7.71rem"> <i
               class="fas fa-user-plus "
-            ></i>
-           Sign Up</a>
-            
+            ></i> Sign Up </a>
           </div>
         <% } %>
         ></a>
@@ -85,7 +83,18 @@
       <% if(user) { %>
         <% if (user.role == 'admin') { %>
           <div class="titles_nv">
-            <a href="/newDeal"><div style="color: white;">Post A Deal</div></a>
+            <!-- <div class="user-nav__user"> -->
+              <nav role="navigation">
+                <ul>
+                  <li style="font-size:1.75rem"> Post
+                    <ul class="dropdown" style="background-color: black;">
+                      <li><a href=<%= `/newDeal` %>>Deal</a></li>
+                      <li><a href="/pageDeal">Page</a></li>
+                      <li><a href="/newsDeal">News</a></li>
+                    </ul>
+                  </nav>
+               
+            <!-- <a href="/newDeal"><div style="color: white;">Post A Deal</div></a> -->
           </div>
          
         <% } %>

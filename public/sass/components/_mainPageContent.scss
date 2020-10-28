@@ -19,8 +19,13 @@ body {
   margin-left: 12%;
   // padding-top: 8rem;
   background-color: rgb(255, 255, 255);
+
   @include respond(tab-land) {
     margin-left: 1%;
+  }
+
+  @include respond(phone) {
+    margin-left: 0%;
   }
 }
 .owl-nav {
@@ -915,4 +920,13 @@ figure {
 #mybutton i {
   font-size: 5rem;
   cursor: pointer;
+}
+
+.trending_main_title {
+  padding: 10rem 2rem 2rem 2rem;
+  margin: 0;
+
+  @include respond(phone) {
+    padding: 13rem 2rem 2rem 2rem;
+  }
 }

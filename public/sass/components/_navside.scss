@@ -18,6 +18,20 @@
   }
 }
 
+.small-sidebar{
+
+  @include respond(tab-land) {
+    width:19px;
+    margin-right: 4px !important;
+  }
+
+  @include respond(small-phone) {
+    margin-left: 2.5rem !important;
+    width:1.5rem;
+  }
+}
+
+
 //  D changes end
 
 //  text-decoration: none;
@@ -984,6 +998,19 @@ nav li {
   display: block;
   transition: 0.5s all;
   margin-bottom: 1.3rem;
+
+  @include respond(tab-port) {
+    font-size: 12.5px !important;
+  }
+
+  @include respond(phone) {
+    font-size: 12.5px !important;
+  }
+
+  @include respond(small-phone) {
+    font-size: 2.4rem !important;
+  }
+  
 }
 
 .sidenav a:hover {
@@ -1008,9 +1035,9 @@ nav li {
   .sidenav {
     padding-top: 15px;
   }
-  .sidenav a {
-    font-size: 18px;
-  }
+  // .sidenav a {
+  //   font-size: 18px;
+  // }
 }
 .navigation_item {
   font-size: 0.2rem;
@@ -1064,6 +1091,71 @@ nav li {
   margin-left: 4rem;
   // margin-bottom: 4rem;
   font-family: "Amaranth";
+
+  @include respond(tab-land) {
+    margin-left: 3rem;
+  }
+
+  @include respond(tab-port) {
+    margin-left: 3.6rem;
+  }
+
+  @include respond(phone) {
+    margin-left: 4.2rem !important;
+  }
+
+  @include respond(small-phone) {
+    margin-left: 4.9rem !important;
+  }
+}
+
+.scale_button1{
+  @include respond(achi2) {
+    height: 3.71rem !important;
+    width:19.5rem  !important;
+    color: #15161d !important;
+    line-height: 3rem;
+    margin-left: 2.9rem !important;
+  }
+  @include respond(tab-land) {
+    height: 3.71rem !important;
+    width:19.5rem  !important;
+    color: #15161d !important;
+    line-height: 3rem;
+    margin-left: 2.9rem !important;
+    margin-top: 0.1rem !important;
+  }
+
+  @include respond(tab-port) {
+    height: 3.71rem !important;
+    width:22.7rem  !important;
+    color: #15161d !important;
+    line-height: 2.3rem;
+    font-size: 1.8rem;
+    margin-top: 0.1rem !important;
+    margin-left: 2.9rem !important;
+    margin-top: 0.1rem !important;
+  }
+
+  @include respond(phone) {
+    height: 3.71rem !important;
+    width:26.5rem  !important;
+    color: #15161d !important;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 0.1rem !important;
+    margin-left: 2.9rem !important;
+  }
+
+  @include respond(small-phone) {
+    height: 3.71rem !important;
+    width:35.5rem  !important;
+    color: #15161d !important;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 0.1rem !important;
+    margin-left: 2.9rem !important;
+  }
 }
 
 .sidenav {
@@ -1078,6 +1170,66 @@ nav li {
   font-size: 2.5rem;
   margin-left: 4rem;
   margin-top: 4rem;
+
+  @include respond(tab-land) {
+    display: block;
+    visibility: visible;
+    margin-left: 3.3rem;
+    margin-top: 1.75rem !important;
+  }
+
+  @include respond(tab-port) {
+    display: block;
+    visibility: visible;
+    margin-left: 3.3rem;
+    margin-top: 2rem !important;
+  }
+
+  // @include respond(tab-port) {
+  //   margin-left: 4.5rem !important;
+  // }
+
+  // @include respond(phone) {
+  //   margin-left: 5rem !important;
+  // }
+
+  @include respond(small-phone) {
+    font-size: 2.8rem !important;
+    margin-top: 2rem;
+  }
+}
+
+.signin-sub_text {
+
+
+  @include respond(achi2) {
+    font-size: 1.45rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 30.7rem !important;
+  }
+
+  @include respond(tab-land) {
+    font-size: 1.45rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 25.7rem !important;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.7rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 30.7rem !important;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+    width: 32.7rem !important;
+  }
+
+  @include respond(small-phone) {
+    font-size: 2rem !important;
+    padding: 1rem 1rem 1rem 4rem;
+  }
 }
 
 .navigation_link:link,

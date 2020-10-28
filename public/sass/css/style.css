@@ -6310,9 +6310,6 @@ div#GoogeSigninButton {
 
 .footer-section.about {
   margin-left: 3.5rem; }
-  @media (max-width: 37.5em) {
-    .footer-section.about {
-      margin-left: 0rem; } }
   @media (max-width: 1380px) {
     .footer-section.about .p {
       font-size: 2rem; }
@@ -6343,8 +6340,7 @@ div#GoogeSigninButton {
   color: #fff;
   display: block;
   padding: 4px;
-  font-weight: bold;
-  height: 3rem; }
+  font-weight: bold; }
 
 [class^="icon"] {
   /* float:left; */

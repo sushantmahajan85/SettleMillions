@@ -194,7 +194,6 @@ html {
     margin-left: -0.5rem;
   }
 
-
   @include respond(phone) {
     margin-left: -0.5rem;
   }
@@ -389,7 +388,6 @@ div#GoogeSigninButton {
   margin-left: 2.6rem;
   margin-bottom: 1.5rem;
 
-
   @include respond(achi2) {
     margin-left: 4.5rem !important;
   }
@@ -412,7 +410,6 @@ div#GoogeSigninButton {
 }
 
 .abcRioButton.abcRioButtonBlue {
-
   @include respond(achi2) {
     height: 4rem !important;
     width: 27rem !important;
@@ -614,7 +611,7 @@ div#GoogeSigninButton {
 .footer-section.about {
   margin-left: 3.5rem;
   @include respond(phone) {
-    margin-left: 0rem;
+    // margin-left: 0rem;
   }
 }
 
@@ -647,7 +644,7 @@ div#GoogeSigninButton {
   display: block;
   padding: 4px;
   font-weight: bold;
-  height: 3rem;
+  // height: 3rem;
 }
 
 [class^="icon"] {

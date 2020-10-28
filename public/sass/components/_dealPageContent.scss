@@ -258,6 +258,10 @@
 .review-section {
   padding: 3.5rem 3.5rem 2rem 2rem;
   //width: 65%;
+
+  @include respond(phone) {
+    width: 91vw !important;
+  }
 }
 
 .review-rating {
@@ -404,6 +408,10 @@
   background-color: white;
   width: 95rem;
   margin: 5rem 0rem 5rem 2rem;
+
+  @include respond(phone) {
+    width: 90vw;
+  }
 }
 
 .review-section {
@@ -442,12 +450,20 @@
 #showMoreBtn {
   width: 25%;
   margin: 0px auto;
+
+  @include respond(phone) {
+    width: 8.1rem;
+  }
 }
 
 #showLessBtn {
   width: 25%;
   margin: 0px auto;
   display: none;
+
+  @include respond(phone) {
+    width: 100vw;
+  }
 }
 
 .deal_area_box {
@@ -723,7 +739,9 @@
   // padding-bottom: 5rem;
 
   @include respond(phone) {
-    display: none;
+    height: unset !important;
+    width: 94.5%;
+    margin-top: 0;
   }
 }
 

@@ -504,7 +504,8 @@ h2 {
     flex-wrap: wrap;
     -ms-flex-line-pack: distribute;
     align-content: space-around;
-    height: 11rem; } }
+    height: 11rem;
+    width: 100vw; } }
 
 .search {
   border-radius: 0.1rem;
@@ -1817,6 +1818,15 @@ figure {
 
 .review-section {
   padding: 3.5rem 3.5rem 2rem 2rem; }
+  @media (max-width: 37.5em) {
+    .review-section {
+      width: 91vw !important; } }
+  @media (max-width: 1380px) {
+    .review-section .p {
+      font-size: 2rem; }
+    .review-section .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .review-rating {
   padding: 2rem 5rem; }
@@ -1946,6 +1956,15 @@ figure {
   background-color: white;
   width: 95rem;
   margin: 5rem 0rem 5rem 2rem; }
+  @media (max-width: 37.5em) {
+    .reviews {
+      width: 90vw; } }
+  @media (max-width: 1380px) {
+    .reviews .p {
+      font-size: 2rem; }
+    .reviews .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .review-section {
   font-size: 1.6rem;
@@ -1971,11 +1990,29 @@ figure {
 #showMoreBtn {
   width: 25%;
   margin: 0px auto; }
+  @media (max-width: 37.5em) {
+    #showMoreBtn {
+      width: 8.1rem; } }
+  @media (max-width: 1380px) {
+    #showMoreBtn .p {
+      font-size: 2rem; }
+    #showMoreBtn .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 #showLessBtn {
   width: 25%;
   margin: 0px auto;
   display: none; }
+  @media (max-width: 37.5em) {
+    #showLessBtn {
+      width: 100vw; } }
+  @media (max-width: 1380px) {
+    #showLessBtn .p {
+      font-size: 2rem; }
+    #showLessBtn .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .deal_area_box {
   display: flex;
@@ -2176,7 +2213,9 @@ figure {
   margin-top: -2.5rem; }
   @media (max-width: 37.5em) {
     .side_deals {
-      display: none; } }
+      height: unset !important;
+      width: 94.5%;
+      margin-top: 0; } }
   @media (max-width: 1380px) {
     .side_deals .p {
       font-size: 2rem; }

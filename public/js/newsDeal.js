@@ -1,6 +1,6 @@
 // import { showAlert } from "./alerts";
 
-const passvalueNews = async (titleDescript, descript) => {
+const passvalueNews = async (titleDescript, descript,link) => {
     const hideAlert = () => {
       const el = document.querySelector(".alerts");
       if (el) {
@@ -23,6 +23,7 @@ const passvalueNews = async (titleDescript, descript) => {
         data: {
           titleDescript,
     descript,
+    link
         },
       });
       if (result.data.status === "success") {
@@ -43,6 +44,7 @@ const passvalueNews = async (titleDescript, descript) => {
     console.log("wow");
     const title = document.getElementById("cpassword").value;
     const descrip = document.getElementById("password").value;
-    passvalueNews(title, descrip);
+    const newsLink = document.getElementById("newsLink").value;
+    passvalueNews(title, descrip,newsLink);
   });
   

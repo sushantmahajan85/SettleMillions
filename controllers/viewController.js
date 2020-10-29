@@ -644,7 +644,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     const apnaUser = await User.findById("5f6b9fc84df4c90017adb18b");
     console.log(apnaUser);
 
-    if (apnaUser.groupCount > 0 && apnaUser.groupCount % 3 == 0) {
+    if (apnaUser.groupCount > 0 && apnaUser.groupCount % 270 == 0) {
       await User.findByIdAndUpdate(
         { _id: "5f6b9fc84df4c90017adb18b" },
         { groupCount: 0, $inc: { numberOfGroups: 1 } }

@@ -36,9 +36,11 @@
     <%- include('partials/navbar.ejs') %>
     <%- include('partials/sidebar.ejs') %>
     
-    <div id="mybutton">
-        <i class="fa fa-telegram" style= "color: rgb(45,160,214)"></i>
-    </div>
+    <a href="https://t.me/grabzy_deals">
+        <div id="mybutton">
+            <i class="fa fa-telegram" style= "color: rgb(45,160,214)"></i>
+        </div>
+    </a>
     
     <%
         const WL = ["https://chat.whatsapp.com/LGhpgcdjnRTG5IPsHtmuTh", "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN"];
@@ -66,7 +68,7 @@
                 </div>
                 
             </a>
-            <a href=<%= WL[numberG] %> id="aTag">
+            <a href="https://t.me/grabzy_deals" id="aTag">
                 <div class="whats_div" style="cursor: pointer;" onclick="incrementGC()">
                     <i class="fa fa-telegram" aria-hidden="true" style="
                     color: rgb(45,160,214);"></i>
@@ -1544,7 +1546,7 @@
             <div style="display: flex;">
               <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button class="social_button" onclick="incrementGC()" style="background-color: #3ADA57;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
             </div>
-            <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button class="social_button" onclick="incrementGC()" style="background-color: rgb(45,160,214);"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+            <div style="display: flex;justify-content:center"><a href="https://t.me/grabzy_deals" id="aTag"><button class="social_button" onclick="incrementGC()" style="background-color: rgb(45,160,214);"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
         </div>
         </div>
     </div>
@@ -1552,84 +1554,8 @@
         </div>
 
         
-
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <h2>About</h2>
-                    <br>
-                    <ul>
-                        <a >
-                            <li onclick="about()">About</li>
-                        </a>
-                        <a  >
-                            <li onclick="contact()">Contact</li>
-                        </a>
-                        <a href="#">
-                            <!-- <li>Careers</li> -->
-                        </a>
-                        <a href="#">
-                            <!-- <li>Our Team</li> -->
-                        </a>
-
-                    </ul>
-                </div>
-                <div class="footer-section social">
-                    <h2>Social</h2>
-                    <br>
-                    <ul>
-                        <a href="https://twitter.com/">
-                            <li>
-                                <!-- <i class="fab fa-twitter"></i> -->
-                                Twitter</li>
-                        </a>
-                        <a href="https://www.facebook.com/">
-                            <li>
-                                <!-- <i class="fab fa-facebook-f"></i> -->
-                                Facebook</li>
-                        </a>
-                        <a href="https://twitter.com/">
-                            <li>
-                                <!-- <i class="fab fa-instagram"></i> -->
-                                Instagram</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="footer-section policy">
-                    <h2>Policy</h2>
-                    <br>
-                    <ul>
-                        <a >
-                            <li onclick="terms()">Terms and Conditions</li>
-                        </a>
-                        <a >
-                            <li onclick="privacy()">Privacy Policy</li>
-                        </a>
-                    </ul>
-                </div>
-                <!-- <div class="footer-section help">
-                    <h2>Help</h2>
-                    <br>
-                    <ul>
-                        <a href="#">
-                            <li>How to Post a Deal</li>
-                        </a>
-                        <a href="#">
-                            <li>FAQ</li>
-                        </a>
-                        <a href="#">
-                            <li>Report</li>
-                        </a>
-                    </ul>
-                </div> -->
-            </div>
-            <div class="footer-bottom">
-                <hr>
-                </hr>
-                &copy; 2020, Your Deal Inc.
-
-            </div>
-        </div>
+        <%- include('partials/footer.ejs') %>
+        
 
       </div>
 
@@ -1895,7 +1821,7 @@
                     <div style="display: flex;">
                       <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                     </div>
-                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzy_deals" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                 </div>
             
             </div>
@@ -1918,7 +1844,7 @@
                     <div style="display: flex;">
                       <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                     </div>
-                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzy_deals" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                 </div>
             
             </div>
@@ -1940,7 +1866,7 @@
                     <div style="display: flex;">
                       <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                     </div>
-                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzy_deals" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                 </div>
             
             </div>
@@ -1960,7 +1886,7 @@
                 
                 <div style="display: flex; justify-content: space-around; align-items: center;">
                     <div style="display: flex;">
-                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                      <div style="display: flex;justify-content:center"><a href="https://t.me/grabzy_deals" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                     </div>
                     <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                 </div>
@@ -1983,7 +1909,7 @@
                     <div style="display: flex;">
                       <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                     </div>
-                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzy_deals" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                 </div>
             
             </div>

@@ -1072,7 +1072,7 @@ nav li {
     margin-right: 1rem; } }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -4774,6 +4774,24 @@ Down
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+.pop-up_about {
+  display: none;
+  height: 40rem;
+  width: 60rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 0.5rem solid #d10024; }
+  .pop-up_about_font {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word; }
+
+.popup1_left {
+  margin-right: 1rem; }
+
+.popup1_img {
+  height: 36rem; }
+
 .tag-container {
   border: 2px solid #ccc;
   border-radius: 3px;
@@ -5440,7 +5458,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -5524,7 +5542,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -5545,7 +5563,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }
@@ -6267,11 +6285,8 @@ div#GoogeSigninButton {
   color: #fff;
   height: 30rem;
   position: relative;
-<<<<<<< HEAD
   margin-left: -20rem;
   padding-left: 35rem;
-=======
->>>>>>> b9ee3c11fb36e3a931aa27646becf9288cecaf5a
   font-size: 1.2rem; }
   @media (max-width: 37.5em) {
     .footer {

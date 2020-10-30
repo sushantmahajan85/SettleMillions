@@ -307,3 +307,26 @@
     }
   }
 }
+
+.pop-up_about {
+  display: none;
+  height: 40rem;
+  width: 60rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 0.5rem solid #d10024;
+
+  &_font {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+.popup1_left {
+  margin-right: 1rem;
+}
+
+.popup1_img {
+  height: 36rem;
+}

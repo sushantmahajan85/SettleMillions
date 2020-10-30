@@ -4792,6 +4792,28 @@ Down
 .popup1_img {
   height: 36rem; }
 
+.popup1_img_content {
+  height: 27rem; }
+
+.pop-up_content {
+  display: none;
+  height: 32rem;
+  width: 60rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 0.5rem solid #d10024; }
+  .pop-up_content_buttons-bar {
+    margin-top: 1rem !important; }
+  .pop-up_content_heading {
+    font-size: 3.5rem !important; }
+  .pop-up_content_subheading {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem; }
+  .pop-up_content_font {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word; }
+
 .tag-container {
   border: 2px solid #ccc;
   border-radius: 3px;

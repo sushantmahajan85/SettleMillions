@@ -991,7 +991,7 @@ nav li {
 @media (max-width: 1380px) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 19.5rem  !important;
+    width: 19.5rem !important;
     color: #15161d !important;
     line-height: 3rem;
     margin-left: 2.9rem !important; } }
@@ -1006,7 +1006,7 @@ nav li {
 @media (max-width: 75em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 19.5rem  !important;
+    width: 19.5rem !important;
     color: #15161d !important;
     line-height: 3rem;
     margin-left: 2.9rem !important;
@@ -1022,7 +1022,7 @@ nav li {
 @media (max-width: 56.25em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 22.7rem  !important;
+    width: 22.7rem !important;
     color: #15161d !important;
     line-height: 2.3rem;
     font-size: 1.8rem;
@@ -1040,7 +1040,7 @@ nav li {
 @media (max-width: 37.5em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 26.5rem  !important;
+    width: 26.5rem !important;
     color: #15161d !important;
     line-height: 2.5rem;
     font-size: 1.8rem;
@@ -1057,7 +1057,7 @@ nav li {
 @media (max-width: 22.2em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 35.5rem  !important;
+    width: 35.5rem !important;
     color: #15161d !important;
     line-height: 2.5rem;
     font-size: 1.8rem;
@@ -1115,6 +1115,11 @@ nav li {
     .follow_us .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+
+.categories_title {
+  font-size: 2rem !important;
+  margin-left: 0.7rem;
+  color: #15161d !important; }
 
 @media (max-width: 1380px) {
   .signin-sub_text {
@@ -4793,7 +4798,7 @@ Down
   height: 36rem; }
 
 .popup1_img_content {
-  height: 27rem; }
+  height: 28.5rem; }
 
 .pop-up_content {
   display: none;

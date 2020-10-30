@@ -12,6 +12,7 @@ const newsSchema = new mongoose.Schema(
     
       required: [true, "Description is required"],
     },
+    link: String,
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );

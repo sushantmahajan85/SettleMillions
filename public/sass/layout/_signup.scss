@@ -574,8 +574,12 @@ div#GoogeSigninButton {
   color: #fff;
   height: 30rem;
   position: relative;
+<<<<<<< HEAD
   margin-left: -20rem;
   padding-left: 35rem;
+=======
+  // margin-left: 17rem;
+>>>>>>> b9ee3c11fb36e3a931aa27646becf9288cecaf5a
   font-size: 1.2rem;
   @include respond(phone) {
     margin-left: 0rem;

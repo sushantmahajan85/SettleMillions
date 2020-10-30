@@ -1539,6 +1539,7 @@ a.show-hide-link {
 .news_box {
   display: inline-block;
   padding: 2rem 0;
+  padding-left: 1rem;
   max-width: 100%;
   border: solid thin #e9e9e9;
   border-radius: 5px;
@@ -1548,7 +1549,6 @@ a.show-hide-link {
   margin-bottom: 20px;
   height: 20rem;
   width: 30rem;
-  text-align: center;
   cursor: pointer; }
   .news_box:hover {
     transform: scale(1.03);
@@ -6267,11 +6267,13 @@ div#GoogeSigninButton {
   color: #fff;
   height: 30rem;
   position: relative;
-  margin-left: 17rem;
+  margin-left: -20rem;
+  padding-left: 35rem;
   font-size: 1.2rem; }
   @media (max-width: 37.5em) {
     .footer {
-      margin-left: 0rem; } }
+      margin-left: 0rem;
+      padding-left: 0rem; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }

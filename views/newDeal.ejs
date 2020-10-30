@@ -488,12 +488,12 @@
                 <option value="" disabled selected
                   >Choose Category (Required)</option
                 >
-                <option>Electronics</option>
-                <option>Men's Fashion</option>
-                <option>Women's Fashion</option>
-                <option>Home and Kitchen</option>
-                <option>Beauty</option>
-                <option>Personal Care</option>
+                <option value="electronics">Electronics</option>
+                <option value="menFashion">Men's Fashion</option>
+                <option value="womenFashion">Women's Fashion</option>
+                <option value="homeKitchen">Home and Kitchen</option>
+                <option value="beauty">Beauty</option>
+                <option value="personalCare">Personal Care</option>
               </select>
             </p>
             <p>
@@ -701,8 +701,12 @@
 
     <script type="text/javascript">
       var subcategory = {
-        Mobile: ["Nokia", "Redmi", "Samsung"],
-        Clothes: ["Shirt", "Pant", "T-shirt"],
+        electronics: ["Arcade Equipment", "Audio", "Circuit Boards & Components", "Communications", "Computers", "Accessories", "Video"],
+        menFashion: ["Baby & Toddler Clothing", "Pants", "Sleepwear & Loungewear", "Suits", "Ceremonial Clothing", "Underwear & Socks"],
+        womenFashion: ["Baby & Toddler Clothing", "Pants", "Shirts & Tops", "Sleepwear & Loungewear", "Suits", "Ceremonial Clothing", "Underwear & Socks", "Dresses"],
+        homeKitchen: ["Bathroom Accessories", "Business & Home Security", "Decor", "Household Appliance", "Cookware", "Food Storage", "Kitchen Appliance", "Kitchen Tools & Utensils"],
+        beauty: ["Jewelry", "Nail Care", "Perfume & Cologne", "Skin Care", "Foot Care"],
+        personalCare: ["Hair Care", "Massage & Relaxation", "Oral Care", "Shaving & Grooming", "Sleeping Aids"],
       };
 
       function makeSubmenu(value) {

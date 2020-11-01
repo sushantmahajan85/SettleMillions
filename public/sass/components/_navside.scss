@@ -999,6 +999,7 @@ nav li {
 
   @include respond(tab-port) {
     font-size: 12.5px !important;
+    
   }
 
   @include respond(phone) {
@@ -1008,6 +1009,8 @@ nav li {
   @include respond(small-phone) {
     font-size: 2.4rem !important;
   }
+
+  
 }
 
 .sidenav a:hover {
@@ -1253,4 +1256,36 @@ nav li {
 .navigation_link:active {
   color: #7ed56f;
   background-position: 100%;
+}
+
+.small_sidebar_cat1{
+  // @include respond(achi2) {
+  //   font-size: 1.45rem !important;
+    
+  // }
+
+  @include respond(tab-land) {
+    font-size: 1.8rem !important;
+ 
+  }
+
+  @include respond(tab-port) {
+    font-size: 2.1rem !important;
+    margin-left: 2.1rem !important;
+    margin-bottom: 1rem;
+    
+  }
+
+  @include respond(phone) {
+    font-size: 2rem !important;
+    margin-left: 2.7rem !important;
+    margin-bottom: 1rem;
+   
+  }
+
+  @include respond(small-phone) {
+    font-size: 2rem !important;
+    margin-left: 5rem !important;
+    margin-bottom: 1rem;
+  }
 }

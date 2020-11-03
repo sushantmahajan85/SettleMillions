@@ -1859,12 +1859,13 @@ figure {
   height: 2rem;
   width: 2rem;
   display: block;
-  background-image: url("../../img/icons8-more-24.png");
+  background-image: url("../../img/deals/ml.PNG");
   background-size: 2rem 2rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: ""; }
+  text-overflow: "";
+  transform: scale(1.4); }
   .mp_dealbox_three-dots:hover {
     background-color: #fff; }
 

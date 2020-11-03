@@ -861,17 +861,18 @@ figure {
   text-align: center;
   cursor: pointer;
   // border-radius: 50%;
-  //object-fit: contain;
+  // object-fit: contain;
   border: none;
   height: 2rem;
   width: 2rem;
   display: block;
-  background-image: url("../../img/icons8-more-24.png");
+  background-image: url("../../img/deals/ml.PNG");
   background-size: 2rem 2rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: "";
+  transform: scale(1.4);
   &:hover {
     background-color: #fff;
   }

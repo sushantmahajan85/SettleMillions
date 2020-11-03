@@ -13,6 +13,10 @@ const pageSchema = new mongoose.Schema(
       required: [true, "Description is required"],
     },
     link: String,
+    time:{
+      type: Date,
+      default: Date.now()
+    }
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );

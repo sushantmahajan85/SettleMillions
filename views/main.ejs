@@ -1437,10 +1437,12 @@
         
                     
                     var tem = Math.round(deal.time/360000)/10;
-                    var day = Math.round((tem/2.4))/10;
-                    %>
-                    <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+                    var day = Math.round((tem/2.4))/10; %>
+                    
+                   
                         <div class="card">
+                            
+                    <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}`%>>
                             <div class="card__face">
                                 <div class="card__picture" data-pause="true" data-interval="1000">
                                     <!-- <div class="discount" style="position: absolute; top: 2%; right:2%; color: #d10024; background: none; border: 1.8px solid #d10024; height: 2.8rem; font-size: 1.5rem; padding: 0 0.5rem; z-index: 1000">-70%</div> -->
@@ -1513,8 +1515,9 @@
                                     <% } %>
                                 </div>
                             </div>
+                        </a>
                         </div>
-                    </a>
+                    
 
                 <% } %>
 
@@ -1581,7 +1584,7 @@
                     items: 1
                 },  
                 1000:{
-                    items: 8
+                    items: 4
                 }
             }
         });

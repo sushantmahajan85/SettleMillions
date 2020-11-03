@@ -991,7 +991,7 @@ nav li {
 @media (max-width: 1380px) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 19.5rem  !important;
+    width: 19.5rem !important;
     color: #15161d !important;
     line-height: 3rem;
     margin-left: 2.9rem !important; } }
@@ -1006,7 +1006,7 @@ nav li {
 @media (max-width: 75em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 19.5rem  !important;
+    width: 19.5rem !important;
     color: #15161d !important;
     line-height: 3rem;
     margin-left: 2.9rem !important;
@@ -1022,7 +1022,7 @@ nav li {
 @media (max-width: 56.25em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 22.7rem  !important;
+    width: 22.7rem !important;
     color: #15161d !important;
     line-height: 2.3rem;
     font-size: 1.8rem;
@@ -1040,7 +1040,7 @@ nav li {
 @media (max-width: 37.5em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 26.5rem  !important;
+    width: 26.5rem !important;
     color: #15161d !important;
     line-height: 2.5rem;
     font-size: 1.8rem;
@@ -1057,7 +1057,7 @@ nav li {
 @media (max-width: 22.2em) {
   .scale_button1 {
     height: 3.71rem !important;
-    width: 35.5rem  !important;
+    width: 35.5rem !important;
     color: #15161d !important;
     line-height: 2.5rem;
     font-size: 1.8rem;
@@ -1072,7 +1072,7 @@ nav li {
     margin-right: 1rem; } }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -1115,6 +1115,11 @@ nav li {
     .follow_us .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+
+.categories_title {
+  font-size: 2rem !important;
+  margin-left: 0.7rem;
+  color: #15161d !important; }
 
 @media (max-width: 1380px) {
   .signin-sub_text {
@@ -1194,6 +1199,56 @@ nav li {
 .navigation_link:active {
   color: #7ed56f;
   background-position: 100%; }
+
+@media (max-width: 75em) {
+  .small_sidebar_cat1 {
+    font-size: 1.8rem !important; } }
+
+@media (max-width: 1380px) {
+  .small_sidebar_cat1 .p {
+    font-size: 2rem; }
+  .small_sidebar_cat1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 56.25em) {
+  .small_sidebar_cat1 {
+    font-size: 2.1rem !important;
+    margin-left: 2.1rem !important;
+    margin-bottom: 1rem; } }
+
+@media (max-width: 1380px) {
+  .small_sidebar_cat1 .p {
+    font-size: 2rem; }
+  .small_sidebar_cat1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 37.5em) {
+  .small_sidebar_cat1 {
+    font-size: 2rem !important;
+    margin-left: 2.7rem !important;
+    margin-bottom: 1rem; } }
+
+@media (max-width: 1380px) {
+  .small_sidebar_cat1 .p {
+    font-size: 2rem; }
+  .small_sidebar_cat1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 22.2em) {
+  .small_sidebar_cat1 {
+    font-size: 2rem !important;
+    margin-left: 5rem !important;
+    margin-bottom: 1rem; } }
+
+@media (max-width: 1380px) {
+  .small_sidebar_cat1 .p {
+    font-size: 2rem; }
+  .small_sidebar_cat1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 body {
   height: 100%;
@@ -1539,6 +1594,7 @@ a.show-hide-link {
 .news_box {
   display: inline-block;
   padding: 2rem 0;
+  padding-left: 1rem;
   max-width: 100%;
   border: solid thin #e9e9e9;
   border-radius: 5px;
@@ -1548,7 +1604,6 @@ a.show-hide-link {
   margin-bottom: 20px;
   height: 20rem;
   width: 30rem;
-  text-align: center;
   cursor: pointer; }
   .news_box:hover {
     transform: scale(1.03);
@@ -3017,7 +3072,7 @@ figure {
     position: absolute;
     border-radius: 0.5rem;
     top: 19%;
-    left: 46%; }
+    left: 49%; }
     @media (max-width: 1380px) {
       .cover_aff-cust-button {
         left: 51%; } }
@@ -4775,6 +4830,46 @@ Down
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+.pop-up_about {
+  display: none;
+  height: 40rem;
+  width: 60rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 0.5rem solid #d10024; }
+  .pop-up_about_font {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word; }
+
+.popup1_left {
+  margin-right: 1rem; }
+
+.popup1_img {
+  height: 100%; }
+
+.popup1_img_content {
+  height: 28.5rem; }
+
+.pop-up_content {
+  display: none;
+  height: 32rem;
+  width: 60rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 0.5rem solid #d10024; }
+  .pop-up_content_buttons-bar {
+    margin-top: 1rem !important; }
+  .pop-up_content_heading {
+    font-size: 3.5rem !important; }
+  .pop-up_content_subheading {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem; }
+  .pop-up_content_font {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word; }
+
 .tag-container {
   border: 2px solid #ccc;
   border-radius: 3px;
@@ -5441,7 +5536,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -5525,7 +5620,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -5546,7 +5641,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }
@@ -6268,10 +6363,13 @@ div#GoogeSigninButton {
   color: #fff;
   height: 30rem;
   position: relative;
+  margin-left: -20rem;
+  padding-left: 35rem;
   font-size: 1.2rem; }
   @media (max-width: 37.5em) {
     .footer {
-      margin-left: 0rem; } }
+      margin-left: 0rem;
+      padding-left: 0rem; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }

@@ -16,13 +16,9 @@
 <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 <link rel="stylesheet" href="/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
 <link rel="stylesheet" href="/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
-<script src="/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-<script src="/vendor/jquery/jquery-3.5.1.min.js"></script>
 <!-- integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" -->
-<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> --> 
-<script defer src="/vendor/bootstrap/bootstrap.min.js"></script>
     <!-- integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous" -->
     <!-- <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -60,9 +56,9 @@
                <a href=<%= `/category/electronics` %>><li class="header_small-nav-item">Electronics</li></a> 
                <a href=<%= `/category/menFashion` %>> <li class="header_small-nav-item">Men's Fashion</li></a> 
                 <a href=<%= `/category/womenFashion` %>> <li class="header_small-nav-item">Women's Fashion</li></a> 
-                    <a href=<%= `/category/home&kitchen` %>> <li class="header_small-nav-item">Home and kitchen</li></a> 
-                        <a href=<%= `/category/beauty` %>> <li class="header_small-nav-item">Beauty</li></a> 
-                            <a href=<%= `/category/personalCare` %>> <li class="header_small-nav-item">Personal Care</li></a> 
+                <a href=`/category/home&kitchen`> <li class="header_small-nav-item">Home and kitchen</li></a> 
+                <a href=`/category/beauty`> <li class="header_small-nav-item">Beauty</li></a> 
+                <a href=`/category/personalCare`> <li class="header_small-nav-item">Personal Care</li></a> 
                     </ul>
                     <div style="display: flex;">
             <a href=<%= WL[numberG] %> id="aTag">
@@ -1811,7 +1807,7 @@
     <% if(yesNo == 0){ %>
     <div class="popup" id="popup_whatsapp_telegram" style="display: block; height: 30rem; width: 55rem;">
                 
-        <div class="popup1_content" style="display: flex;">
+        <div class="popup1_content" style="display: flex; height: 100%;">
             <div class="popup1_left" style="width: 150%;">
                 <img src="/img/2.png" alt="hi" class="popup1_img">
             </div>
@@ -1834,17 +1830,17 @@
         </div>
     </div>
     <% } %>
-<div class="popup" id="popup_about" style="display: none; height: 30rem; width: 55rem;">
+<div class="popup pop-up_about" id="popup_about">
                 
-        <div class="popup1_content" style="display: flex;">
-            <div class="popup1_left" style="width: 225%;">
-                <img src="/img/2.png" alt="hi" class="popup1_img">
+        <div class="popup1_content" style="display: flex; height: 100%;">
+            <div class="popup1_left" style="width: 150%;">
+                <img src="/img/8.jpg" alt="hi" class="popup1_img">
             </div>
             <div class="popup1_right">
                 <div class="popup_cross" id="popup_cross_about" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
                 <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
-                <p style="font-size: 1rem !important;">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
-                </p> 
+                <p class="pop-up_about_font">Welcome to Grabzy, your number one source for buying products. We're dedicated to providing you the very best of deals, with an emphasis on discount, your liking, and newest trends.<br>
+                <p class="pop-up_about_font">We hope you enjoy our deals as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us. </p>
                 
                 <div style="display: flex; justify-content: space-around; align-items: center;">
                     <div style="display: flex;">
@@ -1856,21 +1852,23 @@
             </div>
         </div>
     </div>
-    <div class="popup" id="popup_contact" style="display: none; height: 30rem; width: 55rem;">
+    <div class="popup pop-up_content" id="popup_contact" >
                 
-        <div class="popup1_content" style="display: flex;">
-            <div class="popup1_left" style="width: 225%;">
-                <img src="/img/2.png" alt="hi" class="popup1_img">
+        <div class="popup1_content" style="display: flex; height: 100%;">
+            <div class="popup1_left" style="width: 65%;">
+                <img src="/img/2.png" alt="hi" class="popup1_img_content">
             </div>
             <div class="popup1_right">
                 <div class="popup_cross" id="popup_cross_contact" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
-                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
-                <p style="font-size: 1rem !important;">This was the birth year of a tasty genre. The Thapar Food Festival was the first and one of a kind Food Festival all over India on a university level. It has always tried to bring up smiles on the faces of people through food, after all, the way to a person’s heart is through the stomach.
-                </p> 
+                <p class="pop-up_content_heading" id="newsletter_heading" > <span style="color:#d10024">Contact Us</span></p>
+                <p class="pop-up_content_subheading" > <strong>We would love to receive your feedback and product suggestions </strong> </p>
+                <p  class="pop-up_content_text" class="pop-up_about_font" style="font-size: 1.5rem !important;"> <strong>Email: </strong> <span>xyz@gmail.com</span></p>
+                <p class="pop-up_content_text" style="font-size: 1.5rem !important;"> <strong>Numbers: </strong> <span> +91-8872703300,+91-8556881616</span></p>
+                <p class="pop-up_content_text" style="font-size: 1.5rem !important;"> <strong>Timings: </strong><span></span>Monday-Sunday 9AM-9PM </span></p>
                 
-                <div style="display: flex; justify-content: space-around; align-items: center;">
+                <div class="pop-up_content_buttons-bar" style="display: flex; justify-content: space-around; align-items: center;">
                     <div style="display: flex;">
-                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
+                      <div style="display: flex;justify-content:center"><a href=<%= WL[numberG] %> id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 0.2rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                     </div>
                     <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzy_deals" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
                 </div>
@@ -1880,7 +1878,7 @@
     </div>
     <div class="popup" id="popup_terms" style="display: none; height: 30rem; width: 55rem;">
                 
-        <div class="popup1_content" style="display: flex;">
+        <div class="popup1_content" style="display: flex; height: 100%;">
             <div class="popup1_left" style="width: 225%;">
                 <img src="/img/2.png" alt="hi" class="popup1_img">
             </div>
@@ -1901,7 +1899,7 @@
         </div>
     </div><div class="popup" id="popup_privacy" style="display: none; height: 30rem; width: 55rem;">
                 
-        <div class="popup1_content" style="display: flex;">
+        <div class="popup1_content" style="display: flex; height: 100%;">
             <div class="popup1_left" style="width: 225%;">
                 <img src="/img/2.png" alt="hi" class="popup1_img">
             </div>
@@ -1921,6 +1919,10 @@
             </div>
         </div>
     </div>
+    <script src="/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="/vendor/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script defer src="/vendor/bootstrap/bootstrap.min.js"></script>
     <script>
 function about(){
     document.getElementById("popup_about").style.display = "block";

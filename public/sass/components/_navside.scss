@@ -18,19 +18,17 @@
   }
 }
 
-.small-sidebar{
-
+.small-sidebar {
   @include respond(tab-land) {
-    width:19px;
+    width: 19px;
     margin-right: 4px !important;
   }
 
   @include respond(small-phone) {
     margin-left: 2.5rem !important;
-    width:1.5rem;
+    width: 1.5rem;
   }
 }
-
 
 //  D changes end
 
@@ -313,7 +311,7 @@ body a {
   margin-left: -5rem;
 }
 
-.search_ii{
+.search_ii {
   display: none;
   @include respond(phone) {
     display: block;
@@ -1010,7 +1008,6 @@ nav li {
   @include respond(small-phone) {
     font-size: 2.4rem !important;
   }
-  
 }
 
 .sidenav a:hover {
@@ -1109,17 +1106,17 @@ nav li {
   }
 }
 
-.scale_button1{
+.scale_button1 {
   @include respond(achi2) {
     height: 3.71rem !important;
-    width:19.5rem  !important;
+    width: 19.5rem !important;
     color: #15161d !important;
     line-height: 3rem;
     margin-left: 2.9rem !important;
   }
   @include respond(tab-land) {
     height: 3.71rem !important;
-    width:19.5rem  !important;
+    width: 19.5rem !important;
     color: #15161d !important;
     line-height: 3rem;
     margin-left: 2.9rem !important;
@@ -1128,7 +1125,7 @@ nav li {
 
   @include respond(tab-port) {
     height: 3.71rem !important;
-    width:22.7rem  !important;
+    width: 22.7rem !important;
     color: #15161d !important;
     line-height: 2.3rem;
     font-size: 1.8rem;
@@ -1139,7 +1136,7 @@ nav li {
 
   @include respond(phone) {
     height: 3.71rem !important;
-    width:26.5rem  !important;
+    width: 26.5rem !important;
     color: #15161d !important;
     line-height: 2.5rem;
     font-size: 1.8rem;
@@ -1149,7 +1146,7 @@ nav li {
 
   @include respond(small-phone) {
     height: 3.71rem !important;
-    width:35.5rem  !important;
+    width: 35.5rem !important;
     color: #15161d !important;
     line-height: 2.5rem;
     font-size: 1.8rem;
@@ -1199,9 +1196,13 @@ nav li {
   }
 }
 
+.categories_title {
+  font-size: 2rem !important;
+  margin-left: 0.7rem;
+  color: #15161d !important;
+}
+
 .signin-sub_text {
-
-
   @include respond(achi2) {
     font-size: 1.45rem !important;
     padding: 1rem 1rem 1rem 4rem;
@@ -1252,4 +1253,33 @@ nav li {
 .navigation_link:active {
   color: #7ed56f;
   background-position: 100%;
+}
+
+.small_sidebar_cat1 {
+  // @include respond(achi2) {
+  //   font-size: 1.45rem !important;
+
+  // }
+
+  @include respond(tab-land) {
+    font-size: 1.8rem !important;
+  }
+
+  @include respond(tab-port) {
+    font-size: 2.1rem !important;
+    margin-left: 2.1rem !important;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem !important;
+    margin-left: 2.7rem !important;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(small-phone) {
+    font-size: 2rem !important;
+    margin-left: 5rem !important;
+    margin-bottom: 1rem;
+  }
 }

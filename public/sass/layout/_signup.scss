@@ -574,10 +574,13 @@ div#GoogeSigninButton {
   color: #fff;
   height: 30rem;
   position: relative;
+  margin-left: -20rem;
+  padding-left: 35rem;
   // margin-left: 17rem;
   font-size: 1.2rem;
   @include respond(phone) {
     margin-left: 0rem;
+    padding-left: 0rem;
   }
 }
 .footer-content {

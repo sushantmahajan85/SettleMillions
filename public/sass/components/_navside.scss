@@ -11,6 +11,7 @@
   margin-top: 8rem;
   height: 100%;
   border: solid 1px lightgrey;
+  z-index: 2;
 
   // overflow-y: scroll !important;
   @include respond(tab-land) {
@@ -380,10 +381,10 @@ body a {
   margin-right: 0.5rem;
 }
 
-.fa-fire,
-.fa-user {
-  color: #494343;
-}
+// .fa-fire,
+// .fa-user {
+//   color: #494343;
+// }
 
 .fa-plus {
   color: orange;

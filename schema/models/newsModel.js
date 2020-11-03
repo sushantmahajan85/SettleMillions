@@ -13,6 +13,10 @@ const newsSchema = new mongoose.Schema(
       required: [true, "Description is required"],
     },
     link: String,
+    time:{
+      type: String,
+      default: Date.now()
+    }
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );

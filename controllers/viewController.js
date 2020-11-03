@@ -665,9 +665,9 @@ exports.mainPage = catchAsync(async (req, res) => {
     const liveDeals = await Deal.find()
       .sort([["time", -1]])
       .limit(16);
-const news = await News.find().limit(10);
+const news = await News.find().sort([["time",-1]]).limit(10);
 
-const page = await Page.find().limit(10);
+const page = await Page.find().sort([["time",-1]]).limit(10);
     var yesNo = 0;
     if (req.cookies.Joined) {
       yesNo = 1;

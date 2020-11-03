@@ -331,11 +331,11 @@ a.show-hide-link {
   // border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
 
-  background-color: #60606010;
+  background-color: #f8f9f9;
   text-align: center;
   border-bottom: 1px solid #6060606b;
   &:hover {
-    background-color: #6060601f;
+    background-color: #f2f3f4;
     // background-color:  #A42A30;
     // text-decoration: underline;
     // border: 0.3px solid #a42a30;
@@ -355,11 +355,11 @@ a.show-hide-link {
   // border-bottom: 1px solid rgb(212, 211, 211);
   cursor: pointer;
   display: none;
-  background-color: #60606010;
+  background-color: #f8f9f9;
   text-align: center;
   border-bottom: 1px solid #6060606b;
   &:hover {
-    background-color: #6060601f;
+    background-color: #f2f3f4;
     // background-color:  #A42A30;
     // text-decoration: underline;
     // border: 0.3px solid #a42a30;
@@ -917,7 +917,8 @@ figure {
   right: 30px;
   border-radius: 50%;
   z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
 }
 
 #mybutton i {

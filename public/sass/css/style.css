@@ -99,7 +99,8 @@ body {
   background-color: white;
   margin-top: 8rem;
   height: 100%;
-  border: solid 1px lightgrey; }
+  border: solid 1px lightgrey;
+  z-index: 2; }
   @media (max-width: 75em) {
     .side_bar {
       display: none; } }
@@ -436,10 +437,6 @@ body a {
 .fa-h-square {
   display: block;
   margin-right: 0.5rem; }
-
-.fa-fire,
-.fa-user {
-  color: #494343; }
 
 .fa-plus {
   color: orange; }
@@ -1562,14 +1559,14 @@ a.show-hide-link {
   margin: 0px auto;
   width: 100%;
   cursor: pointer;
-  background-color: #60606010;
+  background-color: #f8f9f9;
   text-align: center;
   border-bottom: 1px solid #6060606b; }
   #showMoreR:hover,
   #showMoreT:hover,
   #showMoreL:hover,
   #showMoreS:hover {
-    background-color: #6060601f; }
+    background-color: #f2f3f4; }
 
 #showLessT,
 #showLessR,
@@ -1579,14 +1576,14 @@ a.show-hide-link {
   width: 100%;
   cursor: pointer;
   display: none;
-  background-color: #60606010;
+  background-color: #f8f9f9;
   text-align: center;
   border-bottom: 1px solid #6060606b; }
   #showLessT:hover,
   #showLessR:hover,
   #showLessL:hover,
   #showLessS:hover {
-    background-color: #6060601f; }
+    background-color: #f2f3f4; }
 
 .news {
   align-items: center; }
@@ -1958,7 +1955,7 @@ figure {
   right: 30px;
   border-radius: 50%;
   z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6); }
+  font-size: 1rem; }
 
 #mybutton i {
   font-size: 5rem;

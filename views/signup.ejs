@@ -268,7 +268,6 @@
     <script
       src="https://apis.google.com/js/platform.js?onload=init"
       async
-      defer
     ></script>
     <script src="/js/gSignup.js"></script>
 
@@ -327,23 +326,25 @@
         ); //for font formatting
       }, 2000);
     </script> -->
+    <script>
+      window.onload = function() {
+        console.log("run kar rha");
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function() {
+          console.log("User signed out.");
+        });
+      }
+    </script>
     <!--===============================================================================================-->
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/popper.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/select2/select2.min.js"></script>
+    <script src="/vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/fbSignup.js"></script>
-    <!-- <script>
-      function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function() {
-          console.log("User signed out.");
-        });
-      };
-    </script> -->
+    
   </body>
 </html>

@@ -35,6 +35,8 @@ async function onSignIn(googleUser) {
     if (result.data.status === "success") {
       // alert("sign up successful");
       showAlert("success", "Signup successful");
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.disconnect();
       window.setTimeout(() => {
         location.assign("/");
       }, 800);

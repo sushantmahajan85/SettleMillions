@@ -87,24 +87,28 @@
   
 <% if (deal.time<2*24*60*60*1000 && deal.user == userId) { %>
   <% i++ %> 
-  <div class="latest-deals-deal1">
-    <img src="/img/4.jpg" alt="">
+  <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+  <div class=<%= `latest-deals-deal${i}` %>>
+    <img src=<%= `/img/deals/${deal.titleImg}` %> alt="">
 
     <div class="deal1-det">
-      <div class="deal1-det-name">Oneplus 8</div>
+      <div class="deal1-det-name"><%= deal.dealName %></div>
 
       <div class="deal1-det-price">
-        <div class="deal1-det-dp">34200</div>
-        <div class="deal1-det-mrp">38000</div>
+        <div class="deal1-det-dp"><%= deal.mrp %></div>
+        <div class="deal1-det-mrp"><%= deal.dealPrice %></div>
         <div class="deal1-det-dis">10% off</div>
       </div>
-      <div class="deal1-det-views">69 views</div>
+      <div class="deal1-det-views"><%= deal.views %></div>
     </div>
 
   </div>
+</a>
   <% if (i === 3){break;}%>
   <% } %>                
 <% } %>
+
+</div>
       
       <!-- <div class="latest-deals-deal2">
         <img src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685161-3.jpeg" alt="">
@@ -142,23 +146,23 @@
 <% if (deal.time<2*24*60*60*1000 && deal.user == userId) { %>
  <% j++ %> 
 <% if (j>3) { %>
- 
+  <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
   <div class="mep_deal-box">
 
     <!-- <div class="big_img_container"> -->
     <div class="mep_deal_box_img" data-pause="true" data-interval="1000">
       <div class="carousel-item active" style="background-color: white !important;">
-        <img src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685122-title.jpeg" alt="Deal Photo"
+        <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo"
           class="big-deal_pic" />
       </div>
-      <div class="carousel-item" style="background-color: white !important;">
+      <!-- <div class="carousel-item" style="background-color: white !important;">
         <img
           src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685161-4.jpeg"
           alt="Deal Photo" class="big-deal_pic" />
       </div>
       <div class="carousel-item" style="background-color: white !important;">
         <img src="/images/jeans.jpeg" alt="Deal Photo" class="big-deal_pic" />
-      </div>
+      </div> -->
     </div>
     <!-- </div> -->
     <div class="mep_deal_area-content">
@@ -236,6 +240,7 @@
 
     </div>
   </div>
+</a>
   
   <% if (j === 30){break;}%>
 <% } %>
@@ -249,23 +254,23 @@
 <% if (deal.user == userId) { %>
  <% k++ %> 
 <% if (k>30) { %>
- 
+  <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
   <div class="mep_deal-box">
 
     <!-- <div class="big_img_container"> -->
     <div class="mep_deal_box_img" data-pause="true" data-interval="1000">
       <div class="carousel-item active" style="background-color: white !important;">
-        <img src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685122-title.jpeg" alt="Deal Photo"
+        <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo"
           class="big-deal_pic" />
       </div>
-      <div class="carousel-item" style="background-color: white !important;">
+      <!-- <div class="carousel-item" style="background-color: white !important;">
         <img
           src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685161-4.jpeg"
           alt="Deal Photo" class="big-deal_pic" />
       </div>
       <div class="carousel-item" style="background-color: white !important;">
         <img src="/images/jeans.jpeg" alt="Deal Photo" class="big-deal_pic" />
-      </div>
+      </div> -->
     </div>
     <!-- </div> -->
     <div class="mep_deal_area-content">
@@ -343,6 +348,7 @@
 
     </div>
   </div>
+</a>
   
 <% } %>
         <% } %>

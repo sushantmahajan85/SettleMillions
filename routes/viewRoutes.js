@@ -20,6 +20,7 @@ router.get(
 router.get("/pageDeal",viewController.pageDeal);
 router.get("/newsDeal",viewController.newsDeal);
 router.get("/", viewController.mainPage);
+router.get("/search", viewController.autocomplete);
 router.get("/analytics", viewController.analytics);
 router.get("/member/:id", viewController.getMemberData);
 router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
@@ -44,7 +45,6 @@ router.get(
 );
 
 router.get("/category/:cat", viewController.category);
-router.get("/search", viewController.autocomplete);
 
 router.get("/edit/:id", viewController.editDeal);
 router.get("/recent", viewController.recently);

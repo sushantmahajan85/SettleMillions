@@ -570,12 +570,11 @@ h2 {
   padding: 0rem 2rem;
   border: none !important;
   font-family: "Montserrat", sans-serif;
-  width: 61%;
+  width: 90%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-left: 1.85rem;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-radius: 100px;
   height: 4rem;
   color: #17202a;
   font-size: 1.5rem; }

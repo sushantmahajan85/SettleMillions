@@ -537,12 +537,12 @@ h2 {
   // border-radius: 0 8px 8px 0;
   border: none !important;
   font-family: $family2;
-  width: 61%;
+  width: 90%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin-left: 1.85rem;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-radius: 100px;
+  // border-bottom-right-radius: 100px;
   height: 4rem;
   // margin-left: 3rem;
   color: rgb(23, 32, 42);

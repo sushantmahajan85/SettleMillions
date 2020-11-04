@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"></link>
   <meta
       name="google-signin-client_id"
       content="881941748196-g7mq7257r81aq3abb7k7e0np92rcioaf.apps.googleusercontent.com"
@@ -162,7 +164,7 @@
 
     <div class="search_nv">
     <form action="/" method="GET" class="search" id="searchx">
-      <select class="categories_dropdown_nv">
+      <!-- <select class="categories_dropdown_nv">
         <option value="0" disabled>Categories</option>
         <option value="1"><a href=<%= `/category/electronics` %>>Electronics</a></option>
         <option value="1"><a href=<%= `/category/electronics` %>>Men's Fashion</a></option>
@@ -170,9 +172,9 @@
         <option value="1"><a href=<%= `/category/electronics` %>>Home and kitchen</a></option>
         <option value="1"><a href=<%= `/category/electronics` %>>Beauty</a></option>
         <option value="1"><a href=<%= `/category/electronics` %>>Personal Care</a></option>
-      </select>
+      </select> -->
       <i class="fa fa-arrow-left backSearch" style="display: none; color: white;"></i>
-      <input type="text" name="search" id="search" placeholder="Search for awesome deals" class="search__input" />
+      <input type="text" name="search" id="search" placeholder="Search by name" class="search__input" />
 
       <button class="search__button">
         <i class="fas fa-search search-icon"></i>

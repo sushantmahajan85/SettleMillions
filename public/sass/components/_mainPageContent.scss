@@ -92,6 +92,7 @@ body {
     flex-direction: column;
   }
 }
+
 .searchpage {
   display: block;
   flex: 0 0 25%;
@@ -99,11 +100,26 @@ body {
   align-content: center;
   justify-content: space-evenly;
   padding-top: 8.1rem;
+
+  @include respond(phone) {
+    padding-top: 10.5rem;
+  }
 }
 
 .sp_button {
+  margin: 2rem 2rem 2rem 2rem;
+  background-color: #d10024;
+  border: none;
+  color: white;
+  border-radius: 0.6rem;
   width: 11rem;
   height: 5rem;
+
+  @include respond(phone) {
+    margin: 3.5rem 2rem 2rem 2rem;
+    width: 14rem;
+    height: 5.5rem;
+  }
 }
 
 // .searchpage a {

@@ -32,9 +32,9 @@
       <div id="searchpage" class="searchpage">
          <div style="display: flex;justify-content:flex-start;border-bottom:1px solid #60606042;margin-bottom:3.7rem">
 
-<h3 style="margin:2.5rem 0 2rem 10.5rem;font-size:1.9rem;font-family:'Montserrat', sans-serif;">Sort according to your preference: </h3>
-         <button onclick="sortPrice()" class="sp_button" style="margin:2rem;background-color:#d10024;border:none;color:white;border-radius:0.6rem">Sort by Mrp</button>
-         <button onclick="sortTrend()" class="sp_button" style="margin:2rem;background-color:#d10024;border:none;color:white;border-radius:0.6rem">Sort by Trending</button>
+<h3 class="sp_sort-heading">Sort according to your preference: </h3>
+         <button onclick="sortPrice()" class="sp_button">Sort by Mrp</button>
+         <button onclick="sortTrend()" class="sp_button">Sort by Trending</button>
       </div>
          <script>
             function sortPrice(){
@@ -322,7 +322,7 @@ window.location.href = url;
                      <!-- <div class="sp_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div> -->
                      <div class="sp_deal-r4-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
                          class="far fa-eye"></i><%= deal.views %> views </div>
-                         <div class="sp_deal-r1-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
+                         <div class="sp_deal-r4-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
                            class="far fa-clock"></i>May 2020</div>
                    </div>
 

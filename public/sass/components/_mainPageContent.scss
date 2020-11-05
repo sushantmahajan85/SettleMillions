@@ -877,7 +877,11 @@ figure {
     background-color: #fff;
   }
 }
-
+.owl-item {
+  @include respond(phone) {
+    width: 200px !important;
+  }
+}
 .mp_dealbox_three-dots option {
   padding: 10rem;
   background-color: #eee;

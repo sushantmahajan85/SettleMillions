@@ -3,6 +3,10 @@
   font-size: 1.9rem;
   font-family: "Montserrat", sans-serif;
 
+  @include respond(tab-port) {
+    margin: 2.5rem 0 2rem 2.5rem;
+  }
+
   @include respond(phone) {
     margin: 2.5rem 0 2rem 2.5rem;
   }
@@ -26,6 +30,12 @@
   transition: all 0.3s;
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2;
+
+  @include respond(tab-port) {
+    margin-left: 1rem;
+    width: 97%;
+    height: 27.5rem;
+  }
 
   @include respond(phone) {
     margin-left: 2rem;

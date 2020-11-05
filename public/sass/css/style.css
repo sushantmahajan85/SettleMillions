@@ -4256,6 +4256,15 @@ Down
   margin: 2.5rem 0 2rem 10.5rem;
   font-size: 1.9rem;
   font-family: "Montserrat", sans-serif; }
+  @media (max-width: 56.25em) {
+    .sp_sort-heading {
+      margin: 2.5rem 0 2rem 2.5rem; } }
+  @media (max-width: 1380px) {
+    .sp_sort-heading .p {
+      font-size: 2rem; }
+    .sp_sort-heading .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .sp_sort-heading {
       margin: 2.5rem 0 2rem 2.5rem; } }
@@ -4282,6 +4291,17 @@ Down
   transition: all 0.3s;
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2; }
+  @media (max-width: 56.25em) {
+    .sp_deal-box {
+      margin-left: 1rem;
+      width: 97%;
+      height: 27.5rem; } }
+  @media (max-width: 1380px) {
+    .sp_deal-box .p {
+      font-size: 2rem; }
+    .sp_deal-box .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .sp_deal-box {
       margin-left: 2rem;

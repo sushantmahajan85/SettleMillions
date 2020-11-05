@@ -114,6 +114,8 @@ body {
   border-radius: 0.6rem;
   width: 11rem;
   height: 5rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 
   @include respond(phone) {
     margin: 3.5rem 2rem 2rem 2rem;

@@ -660,6 +660,14 @@
   //   color: #212F3D;
   //   background-color: rgb(202,207,210);
   // }
+
+  @include respond(phone) {
+    top: 29%;
+}
+
+@include respond(small-phone) {
+  top: 22%;
+}
 }
 
 .prev {

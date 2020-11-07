@@ -661,20 +661,13 @@
   //   background-color: rgb(202,207,210);
   // }
 
-  @include respond(tab-land) {
-    top: 100%;
-  }
-
-  @include respond(tab-port) {
-    top: 97%;
-  }
   @include respond(phone) {
-    top: 63%;
-  }
+    top: 29%;
+}
 
-  @include respond(small-phone) {
-    top: 47%;
-  }
+@include respond(small-phone) {
+  top: 22%;
+}
 }
 
 .prev {

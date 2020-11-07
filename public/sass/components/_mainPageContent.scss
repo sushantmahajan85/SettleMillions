@@ -156,8 +156,15 @@ img {
 
   //   margin: auto;
   //   float: right;
+  @include respond(tab-land) {
+    height: 52vh;
+  }
   @include respond(phone) {
-    padding-top: 12rem;
+    padding-top: 7.8rem;
+     height: 25rem;
+  }
+  @include respond(small-phone) {
+    padding-top: 11.1rem;
     height: 25rem;
   }
 }
@@ -214,7 +221,7 @@ img {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-
+}
  
 
 /* Position the "next button" to the right */
@@ -962,12 +969,17 @@ figure {
 .carousel_image_small-1{
   height: 25vh;
 
-  @include respond(small-phone) {
-    height: 14vh;
+  @include respond(tab-land) {
+    height: 60vh;
   }
 
+  
   @include respond(phone) {
-    height: 18vh;
+    height: 43vh;
   }
+  @include respond(small-phone) {
+    height: 34vh;
+  }
+
 
 }

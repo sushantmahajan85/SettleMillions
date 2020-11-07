@@ -1265,7 +1265,7 @@ body {
   background-color: white; }
   @media (max-width: 75em) {
     .page-content {
-      margin-left: 1%; } }
+      margin-left: 0rem; } }
   @media (max-width: 1380px) {
     .page-content .p {
       font-size: 2rem; }
@@ -2037,7 +2037,7 @@ figure {
   height: 25vh; }
   @media (max-width: 75em) {
     .carousel_image_small-1 {
-      height: 60vh; } }
+      height: 53vh; } }
   @media (max-width: 1380px) {
     .carousel_image_small-1 .p {
       font-size: 2rem; }

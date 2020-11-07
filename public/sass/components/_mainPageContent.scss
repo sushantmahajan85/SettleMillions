@@ -21,7 +21,7 @@ body {
   background-color: rgb(255, 255, 255);
 
   @include respond(tab-land) {
-    margin-left: 1%;
+    margin-left: 0rem;
   }
 
   @include respond(phone) {
@@ -161,7 +161,7 @@ img {
   }
   @include respond(phone) {
     padding-top: 7.8rem;
-     height: 25rem;
+    height: 25rem;
   }
   @include respond(small-phone) {
     padding-top: 11.1rem;
@@ -222,7 +222,6 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
- 
 
 /* Position the "next button" to the right */
 .next {
@@ -966,20 +965,18 @@ figure {
   }
 }
 
-.carousel_image_small-1{
+.carousel_image_small-1 {
   height: 25vh;
 
   @include respond(tab-land) {
-    height: 60vh;
+    height: 53vh;
   }
 
-  
   @include respond(phone) {
     height: 43vh;
   }
+
   @include respond(small-phone) {
     height: 34vh;
   }
-
-
 }

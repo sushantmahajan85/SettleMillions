@@ -5524,7 +5524,7 @@ Down
   height: 200rem;
   padding-top: 6.5rem;
   margin-left: 12%; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 75em) {
     .deal_area {
       margin-left: 0%; } }
   @media (max-width: 1380px) {
@@ -5534,6 +5534,15 @@ Down
       font-size: 1.5rem;
       margin-right: 1rem; } }
   @media (max-width: 56.25em) {
+    .deal_area {
+      margin-left: 0%; } }
+  @media (max-width: 1380px) {
+    .deal_area .p {
+      font-size: 2rem; }
+    .deal_area .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
     .deal_area {
       margin-left: 0%; } }
   @media (max-width: 1380px) {

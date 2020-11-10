@@ -1797,18 +1797,32 @@ figure {
     color: #d10024; }
 
 .product_name_mainp {
+  width: 90%;
   text-transform: capitalize;
   text-align: center;
   text-justify: center;
   display: block;
-  max-height: 4rem;
-  font-size: 1.46rem;
+  max-height: 2rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
   color: #000000;
   font-weight: 600;
   line-height: 2rem;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.05rem; }
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 1.2rem; }
+  @media (max-width: 75em) {
+    .product_name_mainp {
+      margin-left: 1.6rem; } }
+  @media (max-width: 1380px) {
+    .product_name_mainp .p {
+      font-size: 2rem; }
+    .product_name_mainp .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .aff_name {
   width: 100%;

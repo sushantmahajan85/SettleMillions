@@ -650,18 +650,27 @@ figure {
 }
 
 .product_name_mainp {
+  width: 90%;
   text-transform: capitalize;
   text-align: center;
   text-justify: center;
   display: block;
-  max-height: 4rem;
-  font-size: 1.46rem;
+  max-height: 2rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
   color: #000000;
   font-weight: 600;
   line-height: 2rem;
   font-family: $family2;
   letter-spacing: 0.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 1.2rem;
+
+  @include respond(tab-land) {
+    margin-left: 1.6rem;
+  }
   // font-family: "Market Sans", Arial, sans-serif;
   // border-bottom: 2px solid #e8e8e8;
   // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;

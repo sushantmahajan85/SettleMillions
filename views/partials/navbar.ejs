@@ -5,17 +5,18 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <!-- <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"></link> -->
   <meta
       name="google-signin-client_id"
       content="881941748196-g7mq7257r81aq3abb7k7e0np92rcioaf.apps.googleusercontent.com"
     />
   <script src="https://kit.fontawesome.com/fdec90a950.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
- <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> 
+  
+ 
 
   <title>Document</title>
 </head>
@@ -47,26 +48,26 @@
             Sign in to like deals subscribe and earn
           </h3>
           <div class="deal-deets_buttons" style=" font-size: 1rem; border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem;">
-            <a href="" class="scale_button1 sidebar_button" style="height: 7.71rem"> <i
+            <a href="/signup" class="scale_button1 sidebar_button" style="height: 7.71rem"> <i
               class="fas fa-user-plus "
             ></i> Sign Up </a>
           </div>
-
+        
           <div class="navigation_link navigation_item">
             <p class="small_sidebar_cat1">  Categories </p>
-            <a href=" "  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Electronics </a>
-            <a href=" "  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Men's Fashion </a>
-            <a href=" "  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Women's Fashion </a>
-            <a href=" "  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Home & Kitchen </a>
-            <a href=" "  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Beauty </a>
-            <a href=" " style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Personal Case </a>
+            <a href="/category/electronics" onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Electronics </a>
+            <a href="/category/menFashion"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Men's Fashion </a>
+            <a href="/category/womenFashion"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Women's Fashion </a>
+            <a href="/category/homeKitchen"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Home & Kitchen </a>
+            <a href="/category/beauty"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Beauty </a>
+            <a href="/category/personalCare" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Personal Case </a>
           </div>
 
           <div class="navigation_link navigation_item">
-          <a href=" "  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> About Us </a>
-          <a href=" "  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Contact Us </a>
-          <a href=" "  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Terms & Conditions </a>
-          <a href=" " style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Privacy Policy </a>
+          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> About Us </a>
+          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Contact Us </a>
+          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Terms & Conditions </a>
+          <a href="" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Privacy Policy </a>
         </div>
 
 
@@ -120,7 +121,7 @@
           </div>
          
         <% } %>
-      <div
+      <!-- <div
       id="GoogeSigninButton"
       data-height="40"
       data-width="372"
@@ -129,7 +130,7 @@
       data-onsuccess="onSignIn"
       class="g-signin2"
       style="margin-top: 1.5rem;display:none;visibility:hidden"
-    ></div>
+    ></div> -->
 
       <% } else { %>
         <!-- <div class="titles_nv" id="post_no_user">
@@ -228,11 +229,17 @@
             <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot</div>
           </div>
         </a>
+        <a class="titles_nv" href="/liveDeal" id="signup">
+          <div class="postDeal" style="display: flex; align-items: center; ">
+            <div class="title-with-icon"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: white; font-size:1.6rem;"></i>Live</div>
+          </div>
+        </a>  
       <a class="titles_nv" href=<%=` /analytics `%> id="signup">
         <% if (user.role == 'admin') { %>
           <div class="postDeal" style="display: flex; align-items: center; ">
             <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
           </div>
+
         <% } %>
        
       <% } else { %>
@@ -241,7 +248,7 @@
           <div class="postDeal" style="display: flex; align-items: center; ">
             <div class="title-with-icon"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot</div>
           </div>
-        </a><a class="titles_nv" href="/liveDeal" id="signup">
+        <a class="titles_nv" href="/liveDeal" id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
             <div class="title-with-icon"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: white; font-size:1.6rem;"></i>Live</div>
           </div>
@@ -262,7 +269,7 @@
         <ul class="dropdown" style="background-color: black;">
           <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
           <li><a href="/updateUserSettings">Edit Profile</a></li>
-          <li><a onclick="signOut()">Logout</a></li>
+          <li><a onclick="loca();signOut()">Logout</a></li>
         </ul>
       </nav>
          <% } else { %>
@@ -274,7 +281,7 @@
               <ul class="dropdown" style="background-color: black;">
                 <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
                 <li><a href="/updateUserSettings">Edit Profile</a></li>
-                <li><a onclick="signOut();loca()">Logout</a></li>
+                <li><a onclick="loca();signOut()">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -301,8 +308,8 @@ location.assign('/logout');
     $(".profile").initial();
   </script>
   <script src="/js/logout.js"></script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
     $(function() {
       $("#search").autocomplete({

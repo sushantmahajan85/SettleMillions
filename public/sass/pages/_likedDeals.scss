@@ -7,11 +7,15 @@
   padding-top: 6.5rem;
   margin-left: 12%;
 
-  @include respond(phone) {
+  @include respond(tab-land) {
     margin-left: 0%;
   }
 
   @include respond(tab-port) {
+    margin-left: 0%;
+  }
+
+  @include respond(phone) {
     margin-left: 0%;
   }
 }

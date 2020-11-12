@@ -1,3 +1,17 @@
+.sp_sort-heading {
+  margin: 2.5rem 0 2rem 10.5rem;
+  font-size: 1.9rem;
+  font-family: "Montserrat", sans-serif;
+
+  @include respond(tab-port) {
+    margin: 2.5rem 0 2rem 2.5rem;
+  }
+
+  @include respond(phone) {
+    margin: 2.5rem 0 2rem 2.5rem;
+  }
+}
+
 .sp_deal-box {
   display: flex;
   // background-color: white;
@@ -17,6 +31,17 @@
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2;
 
+  @include respond(tab-port) {
+    margin-left: 1rem;
+    width: 97%;
+    height: 27.5rem;
+  }
+
+  @include respond(phone) {
+    margin-left: 2rem;
+    width: 93%;
+  }
+
   &:hover {
     box-shadow: 1px 0px 3px 2px #b3b6b7;
     // border: 1.5px solid #f2f3f4;
@@ -29,6 +54,12 @@
   margin-left: 3.5rem;
   width: 75rem;
   padding-top: 0.8rem;
+
+  @include respond(phone) {
+    margin-left: 0rem;
+    width: 51%;
+    padding-top: 0rem;
+  }
 }
 
 .sp_deal-title {
@@ -41,6 +72,10 @@
   margin-top: 1rem;
   // font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 1.5rem;
+
+  @include respond(phone) {
+    font-size: 2.3rem;
+  }
 }
 
 .sp_deal-r1 {
@@ -48,11 +83,19 @@
   color: #626567;
   margin-left: 0.3rem;
 
+  @include respond(phone) {
+    margin-bottom: 1.5rem;
+  }
+
   &-det {
     // font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     margin-right: 1rem;
+
+    @include respond(phone) {
+      font-size: 12px;
+    }
 
     &:hover {
       color: black;
@@ -66,10 +109,19 @@
   margin-left: 0.3rem;
   line-height: 2rem;
 
+  @include respond(phone) {
+    margin-bottom: 1.5rem;
+  }
+
   &-det {
     // font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-right: 1rem;
+
+    @include respond(phone) {
+      font-size: 11px;
+    }
+
     &:hover {
       color: black;
     }
@@ -80,6 +132,10 @@
   margin-bottom: 2rem;
   margin-left: 0.3rem;
 
+  @include respond(phone) {
+    margin-bottom: 1.5rem;
+  }
+
   &-dp {
     font-weight: 500;
     color: #000000;
@@ -87,6 +143,11 @@
     font-size: 2.5rem;
     margin-right: 1rem;
     margin-bottom: -0.5rem;
+
+    @include respond(phone) {
+      font-size: 2.1rem;
+      margin-bottom: 0rem;
+    }
   }
   &-mrp {
     // font-family: Arial, Helvetica, sans-serif;
@@ -97,6 +158,12 @@
     margin-right: 1rem;
     margin-bottom: -0.5rem;
     padding: 5px 0;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+      margin-bottom: 0rem;
+      padding: 3px 0;
+    }
   }
   &-dis {
     color: #d10024;
@@ -106,6 +173,11 @@
     margin-right: 1rem;
     margin-bottom: -0.5rem;
     padding: 5px 0;
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
+      padding: 2px 0;
+    }
   }
 }
 
@@ -114,10 +186,17 @@
   color: #626567;
   margin-left: 0.3rem;
   margin-right: 1rem;
+
   &-det {
     // font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-right: 2rem;
+
+    @include respond(phone) {
+      font-size: 11px;
+      margin-right: 1.5rem;
+    }
+
     &:hover {
       color: black;
     }

@@ -21,7 +21,7 @@ body {
   background-color: rgb(255, 255, 255);
 
   @include respond(tab-land) {
-    margin-left: 1%;
+    margin-left: 0rem;
   }
 
   @include respond(phone) {
@@ -92,6 +92,7 @@ body {
     flex-direction: column;
   }
 }
+
 .searchpage {
   display: block;
   flex: 0 0 25%;
@@ -99,11 +100,28 @@ body {
   align-content: center;
   justify-content: space-evenly;
   padding-top: 8.1rem;
+
+  @include respond(phone) {
+    padding-top: 10.5rem;
+  }
 }
 
 .sp_button {
+  margin: 2rem 2rem 2rem 2rem;
+  background-color: #d10024;
+  border: none;
+  color: white;
+  border-radius: 0.6rem;
   width: 11rem;
   height: 5rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+
+  @include respond(phone) {
+    margin: 3.5rem 2rem 2rem 2rem;
+    width: 14rem;
+    height: 5.5rem;
+  }
 }
 
 // .searchpage a {
@@ -138,8 +156,15 @@ img {
 
   //   margin: auto;
   //   float: right;
+  @include respond(tab-land) {
+    height: 52vh;
+  }
   @include respond(phone) {
-    padding-top: 12rem;
+    padding-top: 7.8rem;
+    height: 25rem;
+  }
+  @include respond(small-phone) {
+    padding-top: 11.1rem;
     height: 25rem;
   }
 }
@@ -625,18 +650,27 @@ figure {
 }
 
 .product_name_mainp {
+  width: 90%;
   text-transform: capitalize;
   text-align: center;
   text-justify: center;
   display: block;
-  max-height: 4rem;
-  font-size: 1.46rem;
+  max-height: 2rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
   color: #000000;
   font-weight: 600;
   line-height: 2rem;
   font-family: $family2;
   letter-spacing: 0.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 1.2rem;
+
+  @include respond(tab-land) {
+    margin-left: 1.6rem;
+  }
   // font-family: "Market Sans", Arial, sans-serif;
   // border-bottom: 2px solid #e8e8e8;
   // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
@@ -877,7 +911,11 @@ figure {
     background-color: #fff;
   }
 }
-
+.owl-item {
+  @include respond(phone) {
+    width: 200px !important;
+  }
+}
 .mp_dealbox_three-dots option {
   padding: 10rem;
   background-color: #eee;
@@ -933,5 +971,21 @@ figure {
 
   @include respond(phone) {
     padding: 13rem 2rem 2rem 2rem;
+  }
+}
+
+.carousel_image_small-1 {
+  height: 25vh;
+
+  @include respond(tab-land) {
+    height: 53vh;
+  }
+
+  @include respond(phone) {
+    height: 43vh;
+  }
+
+  @include respond(small-phone) {
+    height: 34vh;
   }
 }

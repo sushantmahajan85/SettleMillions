@@ -410,7 +410,7 @@
   color: black;
   background-color: white;
   width: 95rem;
-  margin: 5rem 0rem 5rem 2rem;
+  margin: 2.5rem 0rem 2.5rem 2rem;
 
   @include respond(phone) {
     width: 90vw;
@@ -622,6 +622,18 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.deal-with-deal-deets{
+  display: flex;
+  height: 54rem;
+  padding: 0rem 0rem 0rem 1rem;
+}
+
+.deal-with-deal-reviews{
+  height: 100rem;
+  margin-bottom: 1rem;
 }
 
 .cursor {
@@ -650,7 +662,7 @@
   border-radius: 0rem 0rem 0rem 0rem;
   user-select: none;
   -webkit-user-select: none;
-  z-index: 20000000000000;
+  // z-index: 20000000000000;
   // background-color: rgb(202,207,210);
   visibility: initial;
   // height: 10px;
@@ -660,6 +672,20 @@
   //   color: #212F3D;
   //   background-color: rgb(202,207,210);
   // }
+  @include respond(tab-land) {
+    top: 100%;
+  }
+
+  @include respond(tab-port) {
+    top: 97%;
+  }
+  @include respond(phone) {
+    top: 63%;
+}
+
+@include respond(small-phone) {
+  top: 47%;
+}
 }
 
 .prev {
@@ -968,8 +994,8 @@
   }
 }
 .side_deals {
-  height: 15rem;
-  margin-right: 1rem;
+  // height: 15rem;
+  margin-right: 2rem;
 }
 
 .side_deals .deal_area_box_img {

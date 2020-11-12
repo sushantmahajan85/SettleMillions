@@ -320,8 +320,8 @@ footer {
           font-size: 1.5rem;
           padding: 2rem;
           height: 51px;
-          border-radius:50%; 
-          background-color: #B7B7B7; 
+          border-radius: 50%;
+          background-color: #b7b7b7;
           opacity: 0.6;
           color: white;
         }
@@ -403,6 +403,10 @@ footer {
     height: inherit;
     width: 30%;
     // background-color: red;
+
+    @include respond(phone) {
+      width: 22%;
+    }
   }
   &_content {
     height: inherit;

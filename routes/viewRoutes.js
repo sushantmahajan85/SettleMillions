@@ -29,6 +29,12 @@ router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/trending", viewController.getTrendingDeals);
 router.get("/logout", authController.logout);
 router.get("/liveDeal",viewController.livePage);
+
+router.get(
+  "/updateUserSettings",
+  authController.protect,
+  viewController.updateUserSettings
+);
 router.get(
   "/subscriptions",
   authController.protect,
@@ -38,11 +44,6 @@ router.get(
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 router.get("/:short", viewController.shortshort);
 
-router.get(
-  "/updateUserSettings",
-  authController.protect,
-  viewController.updateUserSettings
-);
 
 router.get("/category/:cat", viewController.category);
 

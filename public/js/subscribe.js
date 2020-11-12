@@ -1,7 +1,7 @@
 // console.log('hey there');
 //const Deal = require('./../../schema/models/dealModel');
 
-const passvalue2 = async function() {
+const passvaluesubscribe = async function() {
   console.log("hey there");
   const hideAlert = () => {
     const el = document.querySelector(".alerts");
@@ -56,5 +56,5 @@ document.getElementById("subscribe_btn").addEventListener("click", (e) => {
   // const company = document.getElementById('company').value;
   // const mrp = document.getElementById('mrp').value;
   // const dealPrice = document.getElementById('dealPrice').value;
-  passvalue2();
+  passvaluesubscribe();
 });

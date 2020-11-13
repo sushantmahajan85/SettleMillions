@@ -34,7 +34,7 @@ const passvaluec = async (data) => {
       }, 800);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Something went wrong");
   }
 };
 

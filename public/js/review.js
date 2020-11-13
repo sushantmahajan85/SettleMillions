@@ -45,7 +45,7 @@ const passvalueReview = async (review) => {
       location.reload(true);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Only one review per post");
     console.log(err);
   }
 };

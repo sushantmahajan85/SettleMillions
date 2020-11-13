@@ -976,7 +976,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
 
     // console.log(xyz);
     if (xyz) {
-      const likeModel = await LikedDeal.findOneAndDelete({
+      const likeModel = await LikedDeal.findOne({
         deal: req.params.dealId,
         user: xyz._id,
       });
@@ -987,7 +987,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
     }
 
     if (xyz) {
-      const subModel = await Subscriber.findOneAndDelete({
+      const subModel = await Subscriber.findOne({
         subscribedUser: req.params.id,
         user: xyz._id,
       });

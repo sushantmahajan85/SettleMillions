@@ -1805,14 +1805,14 @@
         </div>
     </div>
 
-    <div class="popup" id="popup_like">
+    <div class="popup" id="popupLike">
         <div class="popup_right">
-            <div class="popup_cross" id="popup_cross_like" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+            <div class="popup_cross" id="popup_cross_like" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="document.getElementById('popupLike').style.display = 'none'">&times;</div>
         </div>
         <div class="popup_content" style="font-size: 2rem; text-align: center;">
             Do you want to like this deal ?
             <br>
-            <button id="like_btn" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Like</button><button id="popup_cross_cancel_like" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button>
+            <button id="like_btn" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Like</button><button id="popup_cross_cancel_like" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68" onclick="document.getElementById('popupLike').style.display = 'none'">Cancel</button>
         </div>
     </div>
     <% if(yesNo == 0){ %>
@@ -2013,11 +2013,13 @@ document.getElementById("popup_cross_contact").addEventListener("click",()=>{
         });
 
         document.getElementById('popup_cross_like').addEventListener('click', e => {
-            document.getElementById('popup_like').style.display = 'none';
+            console.log("crosss")
+            document.getElementById('popupLike').style.display = 'none';
         });
 
         document.getElementById('popup_cross_cancel_like').addEventListener('click', e => {
-            document.getElementById('popup_like').style.display = 'none';
+            console.log("cancel")
+            document.getElementById('popupLike').style.display = 'none';
         });
 
         document.getElementById('news_box1').addEventListener('click', e => {

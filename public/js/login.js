@@ -34,7 +34,7 @@ const passvalue = async (email, password) => {
     }
     // console.log(request.data);
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Something went wrong. Please try again later");
   }
 };
 

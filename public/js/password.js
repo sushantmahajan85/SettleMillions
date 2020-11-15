@@ -33,7 +33,7 @@ const passvaluey = async (current, npassword, cpassword) => {
     }
     // console.log(result);
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Something went wrong");
   }
 };
 

@@ -40,7 +40,7 @@ const passvaluesubscribe = async function() {
       }, 1000);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Something went wrong");
   }
 };
 

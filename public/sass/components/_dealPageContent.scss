@@ -3,6 +3,11 @@
   margin-top: 1rem;
   justify-content: space-between;
 
+  @include respond(achi2) {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+
   @include respond(phone) {
     flex-direction: column;
   }

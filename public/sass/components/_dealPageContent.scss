@@ -34,6 +34,11 @@
   @include respond(phone) {
     margin-left: 4.4rem;
   }
+  @include respond(small-phone) {
+    margin-left: 4.4rem;
+    height: 32rem;
+    width: 52rem;
+  }
 
   // position: absolute;
 
@@ -72,7 +77,7 @@
     border-radius: 1rem;
     color: white;
 
-    padding:1rem 0.35rem 1rem 4rem;
+    padding: 1rem 0.35rem 1rem 4rem;
     font-size: 1.8rem;
     margin: 0rem 0rem 0rem 0rem;
     transition: 0.2s all;
@@ -85,6 +90,9 @@
     width: 40px;
     height: 40px;
     line-height: 38px;
+    @include respond(small-phone) {
+      top: -0.7rem;
+    }
 
     // opacity: 0;
     // visibility: hidden;
@@ -175,12 +183,20 @@
     color: #333;
     // margin-right: 8rem;
     display: inline;
+
+    @include respond(small-phone) {
+      font-size: 1.8rem;
+    }
   }
   &_categ {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     color: #333;
     display: inline;
+
+    @include respond(small-phone) {
+      font-size: 1.8rem;
+    }
   }
   &_user {
     font-weight: 700;
@@ -265,6 +281,7 @@
 
   @include respond(phone) {
     width: 91vw !important;
+    padding: 3.5rem 0.5rem 2rem 2rem;
   }
 }
 
@@ -352,8 +369,8 @@
   color: black;
   font-size: 2rem;
 
-  @include respond(phone) {
-    width: 34%;
+  @include respond(small-phone) {
+    width: 67%;
   }
 }
 
@@ -411,7 +428,7 @@
   color: black;
   background-color: white;
   width: 95rem;
-  margin: 2.5rem 0rem 2.5rem 2rem;
+  margin: 0.5rem 0rem 0.5rem 3rem;
 
   @include respond(phone) {
     width: 90vw;
@@ -500,6 +517,17 @@
 
 .deal_box_nameTime {
   margin-bottom: 2rem;
+  // @include respond(tab-port) {
+  //   font-size: 12.5px !important;
+  // }
+
+  // @include respond(phone) {
+  //   font-size: 12.5px !important;
+  // }
+
+  @include respond(small-phone) {
+    margin-bottom: 1.55rem;
+  }
 }
 
 // .deal_box_name {
@@ -521,6 +549,10 @@
   // text-align: center;
   margin-right: 1rem;
   margin-bottom: -0.5rem;
+
+  @include respond(small-phone) {
+    font-size: 2.2rem !important;
+  }
 }
 
 .deal_box_time {
@@ -528,13 +560,25 @@
   font-size: 13px;
   margin-right: 1rem;
   margin-bottom: -0.5rem;
+
+  @include respond(small-phone) {
+    font-size: 1.8rem !important;
+  }
 }
 
 .deal_box_views {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  // font-size: 13px;
   margin-right: 1rem;
   margin-bottom: -0.5rem;
+
+  // @include respond(phone) {
+  //   font-size: 12.5px !important;
+  // }
+
+  @include respond(small-phone) {
+    font-size: 1.8rem !important;
+  }
 }
 
 .profile_pic {
@@ -597,6 +641,10 @@
   height: inherit;
   margin-top: 0.25rem;
   margin-left: 2rem;
+
+  @include respond(small-phone) {
+    margin-top: 0.75rem;
+  }
 }
 
 .mini-slide {
@@ -626,13 +674,26 @@
   height: 100%;
 }
 
-.deal-with-deal-deets{
+.deal-with-deal-deets {
   display: flex;
   height: 54rem;
   padding: 0rem 0rem 0rem 1rem;
+
+  // @include respond(tab-port) {
+  //   font-size: 12.5px !important;
+  // }
+
+  // @include respond(phone) {
+  //   font-size: 12.5px !important;
+  // }
+
+  @include respond(small-phone) {
+    display: block;
+    height: 86rem;
+  }
 }
 
-.deal-with-deal-reviews{
+.deal-with-deal-reviews {
   height: 100rem;
   margin-bottom: 1rem;
 }
@@ -682,11 +743,11 @@
   }
   @include respond(phone) {
     top: 63%;
-}
+  }
 
-@include respond(small-phone) {
-  top: 47%;
-}
+  @include respond(small-phone) {
+    top: 47%;
+  }
 }
 
 .prev {
@@ -809,6 +870,11 @@
   display: inline;
   font-size: 1.5rem;
   width: 10rem;
+
+  @include respond(small-phone) {
+    font-size: 1.8rem;
+    width: 11rem;
+  }
 }
 .views-icon-dp {
   display: inline;
@@ -993,11 +1059,15 @@
   box-shadow: 0px 1px 2.5px rgba(175, 175, 175, 0.4);
   &:hover {
     box-shadow: 0px 5px 10px rgba(175, 175, 175, 0.4);
-
+  }
 }
 .side_deals {
   // height: 15rem;
   margin-right: 2rem;
+  @include respond(small-phone) {
+    margin-left: 1.2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .side_deals .deal_area_box_img {
@@ -1021,6 +1091,10 @@
   font-size: 1.7rem;
   margin-right: 1rem;
   margin-top: 0.5rem;
+
+  @include respond(small-phone) {
+    margin-top: 0.9rem;
+  }
 }
 
 .side_deals .deal_box_mrp {
@@ -1053,4 +1127,10 @@
   font-family: $family2;
   text-transform: uppercase;
   border: none;
+}
+
+.clock_icon1 {
+  @include respond(small-phone) {
+    margin-top: 0.7rem !important;
+  }
 }

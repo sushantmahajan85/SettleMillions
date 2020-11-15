@@ -658,8 +658,8 @@ exports.mainPage = catchAsync(async (req, res) => {
       { _id: req.params.dealId },
       { $inc: { views: 1 } }
     );
-
-    const deals = await Deal.find()
+    var dodin = 1000 * 60 * 60 * 24 * 2;
+    const deals = await Deal.find({time: { $lte: dodin}})
       .sort([["trendRatio", -1]])
       .limit(16);
     const liveDeals = await Deal.find()

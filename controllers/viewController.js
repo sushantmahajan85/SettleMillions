@@ -1038,7 +1038,7 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
 });
 exports.livePage = catchAsync(async (req, res) => {
   
-  const liveDeals = await Deal.find().sort([["time", -1]]).limit(100);
+  const liveDeals = await Deal.find().sort([["time", 1]]).limit(100);
  
   const subs = await Subscriber.find({
     user: req.logged,

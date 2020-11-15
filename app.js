@@ -17,6 +17,7 @@ const viewRouter = require("./routes/viewRoutes");
 const reportRouter = require("./routes/reportRoutes");
 
 const testingRouter = require("./routes/testRoutes");
+const { json } = require("express");
 
 //const authController = require("./controllers/authController");
 
@@ -73,18 +74,24 @@ app.use(cookieParser());
 //     next();
 // });
 
+app.use(globalErrorHandler);
+
 app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/deals", dealRouter);
+
+app.use("/", viewRouter);
 app.use("/api/v1/reviews", reviewRouter);
 app.use("/api/v1/likedDeal", likedDealRouter);
 app.use("/api/v1/subscribe", subscriberRouter);
 app.use("/api/v1/testing", testingRouter);
-app.use("/", viewRouter);
-// app.all("*", (req, res, next) => {
-//   return next(new appError("route not implemented", 404));
-// });
-// app.use(globalErrorHandler);
+
+app.all("*", (req, res, next) => {
+  console.log("fuehfue");
+  res.status(200).render("error");
+  next();
+  // return next(new appError("route not implemented", 404));
+});
 const port = process.env.PORT;
 app.listen(port || 4000, () => {
   console.log("Listening bro");

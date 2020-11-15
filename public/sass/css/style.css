@@ -2083,8 +2083,7 @@ figure {
   justify-content: space-between; }
   @media (max-width: 1380px) {
     .dealPageContent {
-      margin-top: 5rem;
-      flex-direction: column; } }
+      margin-top: 5rem; } }
   @media (max-width: 1380px) {
     .dealPageContent .p {
       font-size: 2rem; }

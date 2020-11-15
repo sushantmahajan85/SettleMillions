@@ -41,7 +41,7 @@ const passvaluehaha = async (username, email, password, passwordConfirm) => {
       }, 800);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Something went wrong. Please try again later");
   }
 };
 

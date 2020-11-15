@@ -35,7 +35,7 @@ const passvalueNews = async (titleDescript, descript,link) => {
       }
       // console.log(request.data);
     } catch (err) {
-      showAlert("error", err.response.data.message);
+      showAlert("error", "Something went wrong");
     }
   };
   

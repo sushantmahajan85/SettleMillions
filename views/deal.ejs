@@ -214,7 +214,7 @@
         <% if (user) { %>
 
         <% if (log) { %>
-        <a href="" class="deal-deets_subs" id="unsubscribe_btn">Unsubscribe</a>
+        <a href="" class="deal-deets_subs" id="unsubscribe_btn" onclick="dealOperationssubscribe(`<%= log.id %>`)">Unsubscribe</a>
         <% } else { %>
         <a href="" class="deal-deets_subs" id="subscribe_btn">Subscribe</a>
         <% } %>
@@ -739,6 +739,10 @@
 
       }
         
+    }
+    function dealOperationssubscribe(el){
+      console.log(el);
+      passvalueunsubscribe(el);
     }
 </script>
 

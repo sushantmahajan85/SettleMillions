@@ -28,7 +28,7 @@ const passvalueo = async function(dealId, whoLiked) {
       method: "POST",
       url: "/api/v1/likedDeal",
       data: {
-        deal: last_segment
+        deal: dealId
         //user: whoLiked
       },
     });
@@ -42,7 +42,7 @@ const passvalueo = async function(dealId, whoLiked) {
       // }, 1000);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    showAlert("error", "Something went wrong");
   }
 };
 

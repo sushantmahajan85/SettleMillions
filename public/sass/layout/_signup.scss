@@ -14,8 +14,8 @@ html {
   justify-content: space-around;
 }
 
-.fbBtn {
-}
+// .fbBtn {
+// }
 // D changes
 
 // body {
@@ -578,9 +578,19 @@ div#GoogeSigninButton {
   padding-left: 35rem;
   // margin-left: 17rem;
   font-size: 1.2rem;
+
+  @include respond(tab-port) {
+    width: 133rem;
+  }
+
   @include respond(phone) {
     margin-left: 0rem;
     padding-left: 0rem;
+    width: 94rem;
+  }
+
+  @include respond(small-phone) {
+    width: 61rem;
   }
 }
 .footer-content {
@@ -588,7 +598,10 @@ div#GoogeSigninButton {
   display: flex;
   margin: 0% 19%;
   @include respond(phone) {
-    margin: 0% 0%;
+    margin: 0% 23%;
+  }
+  @include respond(small-phone) {
+    margin: 0% 8%;
   }
 }
 

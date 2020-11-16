@@ -155,7 +155,7 @@
 
       
       <div class="deal-deets_buttons" style="display: flex;">
-        <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i>Buy now</a>
+        <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i><span class="buy-now_text"> Buy now</span></a>
         <div class="below-image">
           <% if (user) { %>
             <% if (like) { %>
@@ -196,7 +196,7 @@
           <% } else { %>
           <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
           <% } %></p>
-        <span class="deal-deets_categ" style="margin-left: 1.5rem;">Category: <%= deal.category %></span>
+        <span class="deal-deets_categ" >Category: <%= deal.category %></span>
       
       </div>
 
@@ -450,7 +450,7 @@
          %>
         <a href=<%= `/deal/${deala._id}/postedBy/${deala.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container" style="width: 60rem; height: 15rem;">
+            <div class="bigImg_container" style="height: 15rem;">
                 <img src=<%= `/img/deals/${deala.titleImg}` %> alt="Deal Photo" class="deal-photo">
             </div>
             <div class="deal_area_content">
@@ -468,7 +468,7 @@
                 </div>
   
   
-                <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
+                <div class="deal_box_nameTime dp-price-row" style="display: flex; flex-direction: row">
                   <div class="deal_box_dp">Rs.<%= deala.dealPrice %></div>
                   <div class="deal_box_mrp">Rs.<%= deala.mrp %></div>
                   <div class="deal_box_dis">-80%</div>
@@ -544,7 +544,7 @@
       <div class=" side_deals_item">
         <a href=<%= `/deal/${dealo._id}/postedBy/${dealo.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container" style="width: 60rem; height: 15rem;">
+            <div class="bigImg_container" style=" height: 15rem;">
               <img src=<%= `/img/deals/${dealo.titleImg}` %> alt="Deal Photo" class="deal-photo">
             </div>
             <div class="deal_area_content">
@@ -564,7 +564,7 @@
                 </div>
   
   
-                <div class="deal_box_nameTime" style="display: flex;flex-direction: row ">
+                <div class="deal_box_nameTime dp-price-row" style="display: flex;flex-direction: row ">
                   <div class="deal_box_dp">Rs.<%= dealo.dealPrice %></div>
                   <div class="deal_box_mrp">Rs.<%= dealo.mrp %></div>
                   <div class="deal_box_dis">-80%</div>

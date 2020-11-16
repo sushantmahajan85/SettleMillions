@@ -1359,6 +1359,15 @@ body {
     .trending .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .trending {
+      margin-top: 6rem; } }
+  @media (max-width: 1380px) {
+    .trending .p {
+      font-size: 2rem; }
+    .trending .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media (max-width: 37.5em) {
   .owl-stage {
@@ -1780,6 +1789,15 @@ figure {
   display: flex;
   justify-content: space-between;
   margin: 2rem 2rem; }
+  @media (max-width: 22.2em) {
+    .titles_main {
+      margin: 8rem 2rem -5rem 2rem; } }
+  @media (max-width: 1380px) {
+    .titles_main .p {
+      font-size: 2rem; }
+    .titles_main .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .mainpage_titles {
   text-align: left;

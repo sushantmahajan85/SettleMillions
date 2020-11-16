@@ -78,6 +78,10 @@ body {
     padding-top: 1.6rem;
     margin: 0rem 1.8rem 3rem 1.8rem;
   }
+
+  @include respond(small-phone) {
+    margin-top: 6rem;
+  }
 }
 .owl-stage {
   @include respond(phone) {
@@ -626,6 +630,10 @@ figure {
   display: flex;
   justify-content: space-between;
   margin: 2rem 2rem;
+
+  @include respond(small-phone) {
+   margin:8rem 2rem -5rem 2rem;
+  }
 }
 .mainpage_titles {
   text-align: left;

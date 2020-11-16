@@ -5721,13 +5721,13 @@ Down
 
 .form_box {
   background-color: #f1f1f1;
-  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.3), rgba(238, 247, 255, 0.3)), url("/images/post_page5.jpg");
+  background-image: linear-gradient(to right, rgba(238, 247, 255, 0.3), rgba(238, 247, 255, 0.3)), url("/img/newDealbackg.jpg");
   background-size: cover;
   background-size: cover;
   padding: 6rem 0; }
 
 .form_container {
-  background-color: #F2F3F4;
+  background-color: #f2f3f4;
   box-shadow: 6px 6px 7px 8px #444040;
   margin: 6rem auto 0rem auto;
   font-family: Bitter;
@@ -5770,10 +5770,10 @@ Down
     width: 100%;
     font-size: 15px;
     font-family: Bitter;
-    border: 1px solid #BDC3C7;
+    border: 1px solid #bdc3c7;
     margin-bottom: 0.8rem;
     border-radius: 0.6rem;
-    background-color: #F8F9F9; }
+    background-color: #f8f9f9; }
     @media (max-width: 56.25em) {
       .form_container select {
         font-size: 1.6rem; } }
@@ -5806,10 +5806,10 @@ Down
     width: 100%;
     font-size: 15px;
     font-family: Bitter;
-    border: 1px solid #BDC3C7;
+    border: 1px solid #bdc3c7;
     margin-bottom: 1.8rem;
     border-radius: 0.6rem;
-    background-color: #F8F9F9; }
+    background-color: #f8f9f9; }
     @media (max-width: 56.25em) {
       .form_container input {
         font-size: 1.5rem; } }
@@ -5842,9 +5842,9 @@ Down
     width: 100%;
     font-size: 15px;
     font-family: Bitter;
-    border: 1px solid #BDC3C7;
+    border: 1px solid #bdc3c7;
     border-radius: 0.6rem;
-    background-color: #F8F9F9; }
+    background-color: #f8f9f9; }
 
 .form_container h1 {
   text-align: center; }
@@ -5928,9 +5928,9 @@ Down
   width: 100%;
   font-size: 1.5rem;
   font-family: Bitter;
-  border: 1px solid #BDC3C7;
+  border: 1px solid #bdc3c7;
   border-radius: 0.6rem;
-  background-color: #F8F9F9; }
+  background-color: #f8f9f9; }
 
 .tp_diff_page-content {
   margin-top: 6rem; }

@@ -18,6 +18,10 @@
   height: 50rem;
   width: 50rem;
 
+  @include respond(tab-land) {
+    width: 40rem;
+  }
+
   @include respond(tab-port) {
     width: 58rem;
   }
@@ -43,6 +47,12 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.01);
+
+  @include respond(tab-land) {
+    // margin-left: 12rem;
+    // height: 33.5rem;
+    width: 43rem;
+  }
 
   @include respond(tab-port) {
     margin-left: 12rem;
@@ -432,6 +442,10 @@
   color: black;
   font-size: 2rem;
 
+  @include respond(tab-land) {
+    width: 70%;
+  }
+
   @include respond(tab-port) {
     width: 50%;
   }
@@ -722,6 +736,10 @@
   margin-top: 0.25rem;
   margin-left: 2rem;
 
+  @include respond(tab-land) {
+    margin-left: 0.2rem;
+  }
+
   @include respond(tab-port) {
     margin-left: 0.5rem;
   }
@@ -803,6 +821,11 @@
 .deal-with-deal-reviews {
   height: 100rem;
   margin-bottom: 1rem;
+
+  @include respond(tab-land) {
+    width: 71%;
+  }
+
 
   @include respond(tab-port) {
     width: 67%;
@@ -949,6 +972,10 @@
   // background-color: white;
   margin-top: -2.5rem;
   // padding-bottom: 5rem;
+
+  @include respond(tab-land) {
+    width: 28%;
+  }
 
   @include respond(tab-port) {
     width: 31%;

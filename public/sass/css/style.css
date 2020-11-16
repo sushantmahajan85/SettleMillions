@@ -2236,6 +2236,15 @@ figure {
       .deal-deets_buy .para {
         font-size: 1.5rem;
         margin-right: 1rem; } }
+    @media (max-width: 22.2em) {
+      .deal-deets_buy {
+        padding: 1rem 1.35rem 1rem 4rem; } }
+    @media (max-width: 1380px) {
+      .deal-deets_buy .p {
+        font-size: 2rem; }
+      .deal-deets_buy .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .deal-deets_buy > i {
     position: absolute;
     left: 0.5rem;
@@ -2387,7 +2396,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 22.2em) {
       .deal-deets_categ {
-        font-size: 1.8rem; } }
+        font-size: 1.8rem;
+        margin-left: 1.3rem; } }
     @media (max-width: 1380px) {
       .deal-deets_categ .p {
         font-size: 2rem; }
@@ -2966,6 +2976,15 @@ figure {
   width: 100%;
   height: 100%;
   align-items: center; }
+  @media (max-width: 22.2em) {
+    .slideshow-container-deal {
+      margin-left: 4rem; } }
+  @media (max-width: 1380px) {
+    .slideshow-container-deal .p {
+      font-size: 2rem; }
+    .slideshow-container-deal .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .prev,
 .next {
@@ -3320,7 +3339,8 @@ figure {
 
 @media (max-width: 22.2em) {
   .clock_icon1 {
-    margin-top: 0.7rem !important; } }
+    margin-top: 0.7rem !important;
+    margin-left: 0rem !important; } }
 
 @media (max-width: 1380px) {
   .clock_icon1 .p {
@@ -7192,7 +7212,7 @@ div#GoogeSigninButton {
   font-size: 1.2rem; }
   @media (max-width: 56.25em) {
     .footer {
-      width: 133rem; } }
+      width: 132.5rem; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7203,7 +7223,7 @@ div#GoogeSigninButton {
     .footer {
       margin-left: 0rem;
       padding-left: 0rem;
-      width: 94rem; } }
+      width: 86rem; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7212,7 +7232,7 @@ div#GoogeSigninButton {
       margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .footer {
-      width: 61rem; } }
+      width: 62.2rem; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }

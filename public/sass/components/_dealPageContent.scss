@@ -349,8 +349,12 @@
 }
 
 .review-section {
-  padding: 3.5rem 3.5rem 2rem 2rem;
+  padding: 3.5rem 0.5rem 2rem 2rem;
   //width: 65%;
+
+  @include respond(tab-port) {
+    font-size: 12.5px !important;
+  }
 
   @include respond(phone) {
     width: 91vw !important;
@@ -1312,4 +1316,14 @@
 
 .dp-price-row{
   margin-bottom: 1.2rem;
+}
+
+
+.bigImg_container{
+
+  @include respond(tab-land) {
+    width: 37rem !important;
+  }
+
+ 
 }

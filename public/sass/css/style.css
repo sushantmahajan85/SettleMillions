@@ -2454,7 +2454,16 @@ figure {
   margin-top: 2.5rem; }
 
 .review-section {
-  padding: 3.5rem 3.5rem 2rem 2rem; }
+  padding: 3.5rem 0.5rem 2rem 2rem; }
+  @media (max-width: 56.25em) {
+    .review-section {
+      font-size: 12.5px !important; } }
+  @media (max-width: 1380px) {
+    .review-section .p {
+      font-size: 2rem; }
+    .review-section .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .review-section {
       width: 91vw !important;
@@ -3322,6 +3331,17 @@ figure {
 
 .dp-price-row {
   margin-bottom: 1.2rem; }
+
+@media (max-width: 75em) {
+  .bigImg_container {
+    width: 37rem !important; } }
+
+@media (max-width: 1380px) {
+  .bigImg_container .p {
+    font-size: 2rem; }
+  .bigImg_container .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 .cover {
   width: 100%;

@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/sass/css/style.css">
 <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap" rel="stylesheet"> -->
 <link href="vendor/montserrat.css" rel="stylesheet">
-<link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 <link rel="stylesheet" href="/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
 <link rel="stylesheet" href="/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
 <!-- integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" -->
@@ -21,11 +21,11 @@
 <script src="/vendor/jquery/jquery-3.5.1.min.js"></script>
 <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 <script src="/vendor/bootstrap/bootstrap.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> --> 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
     <!-- integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous" -->
-    <!-- <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    ></script> -->
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    ></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
 <script>
@@ -217,7 +217,7 @@
                                 <!-- <a href="https://www.amazon.in/Cadbury-Dairy-Hazelnut-Chocolate-Pouch/dp/B07KY37F5J/ref=as_li_ss_il?almBrandId=ctnow&crid=2WZ9WN1FG57CC&dchild=1&fpw=alm&keywords=dairy+milk+silk&qid=1600012862&refinements=p_85:10440599031&rnid=10440598031&rps=1&s=grocery&sbo=m6DjfpMzMLDmL8pSMKX8hw==&sprefix=dairy,grocery,458&sr=1-1&linkCode=li3&tag=topaffiliat01-21&linkId=c922ef5ec4446ac11092c0241394c341&language=en_IN" target="_blank"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07KY37F5J&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=topaffiliat01-21&language=en_IN" ></a><img src="https://ir-in.amazon-adsystem.com/e/ir?t=topaffiliat01-21&language=en_IN&l=li3&o=31&a=B07KY37F5J" width="1" height="1" border="0" alt="" class="deal-photo" style="border:none !important; margin:0px !important;" /> -->
                             </div>
                             <% for( var photo of deal.corouselImgs) { %>
-                            <div class="carousel-item ">
+                            <div class="carousel-item">
                                 <img src=<%= `/img/deals/${photo}` %> alt="Deal Photo" class="deal-photo">
                             </div>
                             <% } %>
@@ -1602,6 +1602,14 @@
   async
   defer
 ></script>
+
+<script>
+    $(".card__picture").on("mouseenter", function () {
+        $(this).carousel('cycle');
+    }).on("mouseleave", function () {
+        $(this).carousel('pause');
+    });
+</script>
 <script src="/js/gSignup.js"></script>
     <script>
         $('.main-content2 .owl-carousel').owlCarousel({
@@ -1646,13 +1654,6 @@
         });
     </script>
    
-    <script>
-        $(".card__picture").on("mouseenter", function () {
-            $(this).carousel('cycle');
-        }).on("mouseleave", function () {
-            $(this).carousel('pause');
-        });
-    </script>
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);

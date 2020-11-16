@@ -4,7 +4,7 @@
   justify-content: space-between;
 
   @include respond(achi2) {
-    margin-top: 5rem;
+    margin-top: 3rem;
     
   }
 
@@ -17,6 +17,14 @@
   display: flex;
   height: 50rem;
   width: 50rem;
+
+  @include respond(tab-port) {
+    width: 58rem;
+  }
+
+  @include respond(phone) {
+    width: 47rem;
+  }
 }
 
 .below-image {
@@ -36,12 +44,20 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.01);
 
+  @include respond(tab-port) {
+    margin-left: 12rem;
+    height: 33.5rem;
+    width: 47rem;
+  }
+
   @include respond(phone) {
-    margin-left: 4.4rem;
+    margin-left: 0rem;
+    height: 49.5rem;
+    width: 40.5rem;
   }
   @include respond(small-phone) {
     margin-left: 4.4rem;
-    height: 32rem;
+    height: 35rem;
     width: 52rem;
   }
 
@@ -87,6 +103,11 @@
     margin: 0rem 0rem 0rem 0rem;
     transition: 0.2s all;
     width: 20rem;
+
+
+  @include respond(phone) {
+    padding: 1rem 8.35rem 1rem 4rem;
+  }
   }
   &_buy > i {
     position: absolute;
@@ -95,6 +116,14 @@
     width: 40px;
     height: 40px;
     line-height: 38px;
+
+    @include respond(tab-port) {
+      top: 0.2rem;
+    }
+
+    @include respond(phone) {
+      top: -0.1rem;
+    }
     @include respond(small-phone) {
       top: -0.7rem;
     }
@@ -150,6 +179,13 @@
     display: flex;
     font-size: 1.8rem;
     padding: 1rem;
+
+  @include respond(phone) {
+      display: block;
+    }
+  @include respond(small-phone) {
+    display: flex;
+    }
   }
   &_subs {
     padding: 0.5rem 2rem;
@@ -163,6 +199,11 @@
     // background-color: #ef233c;
     // text-transform: uppercase;
     cursor: pointer;
+
+    @include respond(phone) {
+      padding: 1.3rem 2rem;
+      margin-left: 0rem;
+    }
   }
   &_views {
     color: rgb(122, 122, 122);
@@ -189,6 +230,10 @@
     // margin-right: 8rem;
     display: inline;
 
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+
     @include respond(small-phone) {
       font-size: 1.8rem;
     }
@@ -198,6 +243,13 @@
     font-size: 1.4rem;
     color: #333;
     display: inline;
+    margin-left: 1.5rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+      display: block;
+      margin-left: 0rem;
+    }
 
     @include respond(small-phone) {
       font-size: 1.8rem;
@@ -228,8 +280,14 @@
     // margin-right: rem;
     // display: block;
     padding: 2rem 0rem 2rem 1rem;
-
     width: 84%;
+
+
+    @include respond(phone) {
+      width: 88%;
+    }
+
+    
     &_pic {
       width: 3.5rem;
       height: 3.5rem;
@@ -374,6 +432,13 @@
   color: black;
   font-size: 2rem;
 
+  @include respond(tab-port) {
+    width: 50%;
+  }
+
+  @include respond(phone) {
+    width: 76%;
+  }
   @include respond(small-phone) {
     width: 67%;
   }
@@ -566,6 +631,10 @@
   margin-right: 1rem;
   margin-bottom: -0.5rem;
 
+  // @include respond(phone) {
+  //   font-size: 2rem !important;
+  // }
+
   @include respond(small-phone) {
     font-size: 1.8rem !important;
   }
@@ -576,6 +645,8 @@
   // font-size: 13px;
   margin-right: 1rem;
   margin-bottom: -0.5rem;
+
+  font-size: 13px;
 
   // @include respond(phone) {
   //   font-size: 12.5px !important;
@@ -629,6 +700,10 @@
   display: block;
   position: relative;
   height: inherit;
+
+  // @include respond(phone) {
+  //   width: 93%;
+  // }
 }
 
 .slideshow-dealpage {
@@ -646,6 +721,14 @@
   height: inherit;
   margin-top: 0.25rem;
   margin-left: 2rem;
+
+  @include respond(tab-port) {
+    margin-left: 0.5rem;
+  }
+
+  @include respond(phone) {
+    margin-left: 1rem;
+  }
 
   @include respond(small-phone) {
     margin-top: 0.75rem;
@@ -677,6 +760,14 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 100%;
+
+  // @include respond(tab-port) {
+  //   left: 42%;
+  // }
+
+  @include respond(phone) {
+    left: 44%;
+  }
 }
 
 .deal-with-deal-deets {
@@ -692,15 +783,40 @@
   //   font-size: 12.5px !important;
   // }
 
-  @include respond(small-phone) {
+  @include respond(tab-port) {
+
     display: block;
     height: 86rem;
+  }
+
+  
+  @include respond(phone) {
+    display: flex;
+    height: 55.5rem;
+  }
+  @include respond(small-phone) {
+    display: block;
+    height: 88rem;
   }
 }
 
 .deal-with-deal-reviews {
   height: 100rem;
   margin-bottom: 1rem;
+
+  @include respond(tab-port) {
+    width: 67%;
+  }
+
+  @include respond(phone) {
+    display: block;
+    height: 68.5rem;
+  }
+
+  @include respond(small-phone) {
+    display: block;
+    height: 101.5rem;
+  }
 }
 
 .cursor {
@@ -834,6 +950,11 @@
   margin-top: -2.5rem;
   // padding-bottom: 5rem;
 
+  @include respond(tab-port) {
+    width: 31%;
+  }
+
+
   @include respond(phone) {
     height: unset !important;
     width: 94.5%;
@@ -860,6 +981,14 @@
 
 .d_next {
   margin-right: 0rem;
+
+  // @include respond(tab-port) {
+  //   margin-right: 5rem;
+  // }
+
+  @include respond(phone) {
+    margin-right: 4rem;
+  }
 }
 
 .d_prev {
@@ -876,9 +1005,14 @@
   font-size: 1.5rem;
   width: 10rem;
 
+  @include respond(phone) {
+    font-size: 2rem;
+    width: 12rem;
+  }
+
   @include respond(small-phone) {
     font-size: 1.8rem;
-    width: 11rem;
+    // width: 11rem;
   }
 }
 .views-icon-dp {
@@ -1069,6 +1203,11 @@
 .side_deals {
   // height: 15rem;
   margin-right: 2rem;
+
+  @include respond(phone) {
+    margin-left: 5.5rem;
+    margin-bottom: 2rem;
+  }
   @include respond(small-phone) {
     margin-left: 1.2rem;
     margin-bottom: 2rem;
@@ -1138,4 +1277,12 @@
   @include respond(small-phone) {
     margin-top: 0.7rem !important;
   }
+}
+
+// .buy-now_text{
+
+// }
+
+.dp-price-row{
+  margin-bottom: 1.2rem;
 }

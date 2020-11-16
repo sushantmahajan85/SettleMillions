@@ -670,7 +670,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       .sort([["trendRatio", -1]])
       .limit(16);
     const liveDeals = await Deal.find()
-      .sort([["time", -1]])
+      .sort([["time", 1]])
       .limit(16);
 const news = await News.find().sort([["time",-1]]).limit(10);
 
@@ -953,24 +953,28 @@ exports.getMemberData = catchAsync(async (req, res) => {
   }
 
   const dealTime = await Deal.find({ user: req.params.id });
+  const numDeals = dealTime.length;
   // console.log(dealTime);
   // const totalLikes = await Deal.find({ user: req.params.id });
-  const totalLikes = await Deal.aggregate([
-    {
-      // $match: {
-      //   user: req.params.id
-      // },
-      $group: {
-        _id: "$user",
-        total: {
-          $sum: "$views",
-        },
-        count: { $sum: 1 },
-      },
-    },
-  ]);
-
+  // const totalLikes = await Deal.aggregate([
+  //   {
+  //     // $match: {
+  //     //   user: req.params.id
+  //     // },
+  //     $group: {
+  //       _id: "$user",
+  //       total: {
+  //         $sum: "$views",
+  //       },
+  //       count: { $sum: 1 },
+  //     },
+  //   },
+  // ]);
+// const numDeals = await Deal.find({user: req.params.id});
+// console.log(totalLikes); 
   // console.log(rec);
+  const numSubscribers = await Subscriber.find({subscribedUser: req.params.id});
+   const numSub = numSubscribers.length;
   const deals = await Deal.find(
     { $text: { $search: rec } },
     { score: { $meta: "textScore" } }
@@ -1016,6 +1020,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
     deals,
     userId,
     dealTime,
+    numDeals,
+    numSub,
     // subModel,
     subs,
   });
@@ -1045,7 +1051,7 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
 });
 exports.livePage = catchAsync(async (req, res) => {
   
-  const liveDeals = await Deal.find().sort([["time", -1]]).limit(100);
+  const liveDeals = await Deal.find().sort([["time", 1]]).limit(100);
  
   const subs = await Subscriber.find({
     user: req.logged,

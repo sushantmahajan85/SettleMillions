@@ -20,6 +20,7 @@
           </h4>
         </div>
       </a>
+      <% if (user) { %>
       <a href="../subscriptions">
         <div class="item2">
           <h4 class="heading-normal">
@@ -27,6 +28,13 @@
           </h4>
         </div>
       </a>
+      <% } else { %>
+        <div class="item2" onclick="document.getElementById('popup_subscribe_sidebar').style.display = 'block'">
+          <h4 class="heading-normal">
+            <i class="small-sidebar fas fa-user font_icon"></i> Subscriptions
+          </h4>
+        </div>
+      <% } %>
       <% if (user) { %>
         <a href=<%=`/member/${user._id}`%> >
           <div class="item2">
@@ -37,6 +45,7 @@
         </a>
       <% } %>
       
+      <% if (user) { %>
       <a href="../likedDeals">
         <div class="item2">
           <h4 class="heading-normal">
@@ -44,6 +53,13 @@
           </h4>
         </div>
       </a>
+      <% } else { %>
+        <div class="item2" onclick="document.getElementById('popup_like_sidebar').style.display = 'block'">
+          <h4 class="heading-normal">
+            <i class="small-sidebar fas fa-heart font_icon"></i> Favourites
+          </h4>
+        </div>
+      <% } %>
       <a href="../liveDeal">
         <div class="item2" style="border-bottom: 1px solid rgb(212, 211, 211);">
           <h4 class="heading-normal">
@@ -333,6 +349,32 @@
         </a>
       <% } %>
     </div>
+
+    <div class="popup" id="popup_subscribe_sidebar">
+      <div class="popup_right">
+          <div class="popup_cross" id="popup_cross_subscribe_sidebar" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="document.getElementById('popup_subscribe_sidebar').style.display = 'none'">&times;</div>
+      </div>
+      <div class="popup_content" style="font-size: 2rem; text-align: center;">
+          Signup / Login to subscribe deals
+          <br>
+          <a href="../signup"><button href="../signup" id="subscribe_sidebar" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Signup / Login</button></a>
+          <button id="popup_cross_cancel_subscribe_sidebar" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68" onclick="document.getElementById('popup_subscribe_sidebar').style.display = 'none'">Cancel</button>
+      </div>
+  </div>
+
+  <div class="popup" id="popup_like_sidebar">
+    <div class="popup_right">
+        <div class="popup_cross" id="popup_cross_like_sidebar" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="document.getElementById('popup_like_sidebar').style.display = 'none'">&times;</div>
+    </div>
+    <div class="popup_content" style="font-size: 2rem; text-align: center;">
+        Signup / Login to like deals
+        <br>
+        <a href="../signup">
+        <button id="like_sidebar" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Signup / Login</button>
+        </a>
+        <button id="popup_cross_cancel_like_sidebar" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68" onclick="document.getElementById('popup_like_sidebar').style.display = 'none'">Cancel</button>
+    </div>
+</div>
 
     <script src="/vendor/initial.min.js"></script>
     <script>

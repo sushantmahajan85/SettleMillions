@@ -105,14 +105,21 @@ exports.getSignupForm = (req, res) => {
 };
 
 exports.getTrendingDeals = catchAsync(async (req, res) => {
-  var tindin = 1000 * 60 * 60 * 24 * 3;
-  const deals = await Deal.find({ time: { $lte: tindin } }).sort([
+  var ekdin = 1000 * 60 * 60 * 24 * 1;
+  var dodin = 1000 * 60 * 60 * 24 * 2;
+  var teendin = 1000 * 60 * 60 * 24 * 3;
+  const deals1 = await Deal.find({ time: { $lte: ekdin } }).sort([
+    ["trendRatio", -1],
+  ]);const deals2 = await Deal.find({ time: { $lte: dodin, $gt: ekdin } }).sort([
+    ["trendRatio", -1],
+  ]);
+  const deals3 = await Deal.find({ time: { $lte: teendin, $gt: dodin } }).sort([
     ["trendRatio", -1],
   ]);
   const subs = await Subscriber.find({
     user: req.logged,
   });
-  res.status(200).render("trending", { deals, subs });
+  res.status(200).render("trending", { deals1, deals2, deals3, subs });
 
   // for (var deal of deals) {
   //   var now = new Date(Date.now());
@@ -658,8 +665,8 @@ exports.mainPage = catchAsync(async (req, res) => {
       { _id: req.params.dealId },
       { $inc: { views: 1 } }
     );
-
-    const deals = await Deal.find()
+    var dodin = 1000 * 60 * 60 * 24 * 2;
+    const deals = await Deal.find({time: { $lte: dodin}})
       .sort([["trendRatio", -1]])
       .limit(16);
     const liveDeals = await Deal.find()

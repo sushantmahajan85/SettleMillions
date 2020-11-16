@@ -47,7 +47,7 @@
         <div id="trending" class="trending">
 
             <%  var i = 0; %>
-            <% for(var deal of deals) { %>
+            <% for(var deal of deals1) { %>
             <% i++; %>
             <%  function kFormatter(num) {
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
@@ -173,7 +173,7 @@
         </div>
         <div id="hideTrending" class="trending">
             <% var j = 0; %>
-            <% for(var deal of deals) { %>
+            <% for(var deal of deals1) { %>
             <% j++; %>
 
             <% if(j > 8) {%>
@@ -328,7 +328,7 @@
         <div id="trending" class="trending">
 
             <%  var i = 0; %>
-            <% for(var deal of deals) { %>
+            <% for(var deal of deals2) { %>
             <% i++; %>
             <%  function kFormatter(num) {
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
@@ -454,7 +454,7 @@
         </div>
         <div id="hideRecommended" class="trending">
             <% var j = 0; %>
-            <% for(var deal of deals) { %>
+            <% for(var deal of deals2) { %>
             <% j++; %>
 
             <% if(j > 8) {%>
@@ -607,7 +607,7 @@
         <div id="trending" class="trending">
 
             <%  var i = 0; %>
-            <% for(var deal of deals) { %>
+            <% for(var deal of deals3) { %>
             <% i++; %>
             <%  function kFormatter(num) {
                 return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
@@ -733,7 +733,7 @@
         </div>
         <div id="hideLive" class="trending">
             <% var j = 0; %>
-            <% for(var deal of deals) { %>
+            <% for(var deal of deals3) { %>
             <% j++; %>
 
             <% if(j > 8) {%>

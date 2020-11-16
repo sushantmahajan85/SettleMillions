@@ -1351,7 +1351,7 @@ body {
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
-      padding-top: 1.6rem;
+      padding-top: 3.6rem;
       margin: 0rem 1.8rem 3rem 1.8rem; } }
   @media (max-width: 1380px) {
     .trending .p {
@@ -1789,9 +1789,18 @@ figure {
   display: flex;
   justify-content: space-between;
   margin: 2rem 2rem; }
+  @media (max-width: 37.5em) {
+    .titles_main {
+      margin: 5rem 2rem 0rem 5rem; } }
+  @media (max-width: 1380px) {
+    .titles_main .p {
+      font-size: 2rem; }
+    .titles_main .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .titles_main {
-      margin: 8rem 2rem -5rem 2rem; } }
+      margin: 8rem 2rem -5rem 6rem; } }
   @media (max-width: 1380px) {
     .titles_main .p {
       font-size: 2rem; }

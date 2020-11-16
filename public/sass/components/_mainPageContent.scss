@@ -75,7 +75,7 @@ body {
   // margin-left: 2%;
   @include respond(phone) {
     margin-left: 3rem;
-    padding-top: 1.6rem;
+    padding-top: 3.6rem;
     margin: 0rem 1.8rem 3rem 1.8rem;
   }
 
@@ -631,8 +631,12 @@ figure {
   justify-content: space-between;
   margin: 2rem 2rem;
 
+  @include respond(phone) {
+    margin:5rem 2rem 0rem 5rem;
+   }
+
   @include respond(small-phone) {
-   margin:8rem 2rem -5rem 2rem;
+   margin:8rem 2rem -5rem 6rem;
   }
 }
 .mainpage_titles {

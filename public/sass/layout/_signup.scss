@@ -580,17 +580,17 @@ div#GoogeSigninButton {
   font-size: 1.2rem;
 
   @include respond(tab-port) {
-    width: 133rem;
+    width: 132.5rem;
   }
 
   @include respond(phone) {
     margin-left: 0rem;
     padding-left: 0rem;
-    width: 94rem;
+    width: 86rem;
   }
 
   @include respond(small-phone) {
-    width: 61rem;
+    width: 62.2rem;
   }
 }
 .footer-content {

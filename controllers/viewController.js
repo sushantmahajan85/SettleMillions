@@ -670,7 +670,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       .sort([["trendRatio", -1]])
       .limit(16);
     const liveDeals = await Deal.find()
-      .sort([["time", -1]])
+      .sort([["time", 1]])
       .limit(16);
 const news = await News.find().sort([["time",-1]]).limit(10);
 

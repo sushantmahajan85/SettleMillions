@@ -309,8 +309,8 @@
     }
 
     @include respond(phone) {
-      top: 28%;
-      left: 69%;
+      top: 27%;
+      left: 72%;
     }
 
     &:hover {
@@ -606,6 +606,13 @@
   //   // border-right: 1px solid #f2f3f4;
 
   // }
+
+  @include respond(phone) {
+    margin-left: 0rem;
+    width: 98%;
+    height: 23rem;
+  }
+
   &:hover {
     box-shadow: 1px 0px 3px 2px #b3b6b7;
     // border: 1.5px solid #f2f3f4;
@@ -615,12 +622,23 @@
 .mep_deal_box_img {
   width: 23%;
   margin-left: 0.1rem;
+
+  @include respond(phone) {
+    margin-left: 0rem;
+    width: 46%;
+  }
 }
 
 .mep_deal_area-content {
   margin-left: 3.5rem;
   width: 75rem;
   padding-top: 1.5rem;
+
+  @include respond(phone) {
+    margin-left: 1.5rem;
+    width: 71%;
+    padding-top: 0.5rem;
+  }
 }
 
 .mep_deal-title {

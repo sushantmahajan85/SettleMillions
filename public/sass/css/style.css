@@ -1070,7 +1070,7 @@ nav li {
     margin-right: 1rem; } }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -3723,8 +3723,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-subs-button {
-        top: 28%;
-        left: 69%; } }
+        top: 27%;
+        left: 72%; } }
     @media (max-width: 1380px) {
       .cover_aff-subs-button .p {
         font-size: 2rem; }
@@ -3928,17 +3928,49 @@ figure {
   transition: all 0.3s;
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2; }
+  @media (max-width: 37.5em) {
+    .mep_deal-box {
+      margin-left: 0rem;
+      width: 98%;
+      height: 23rem; } }
+  @media (max-width: 1380px) {
+    .mep_deal-box .p {
+      font-size: 2rem; }
+    .mep_deal-box .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .mep_deal-box:hover {
     box-shadow: 1px 0px 3px 2px #b3b6b7; }
 
 .mep_deal_box_img {
   width: 23%;
   margin-left: 0.1rem; }
+  @media (max-width: 37.5em) {
+    .mep_deal_box_img {
+      margin-left: 0rem;
+      width: 46%; } }
+  @media (max-width: 1380px) {
+    .mep_deal_box_img .p {
+      font-size: 2rem; }
+    .mep_deal_box_img .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .mep_deal_area-content {
   margin-left: 3.5rem;
   width: 75rem;
   padding-top: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .mep_deal_area-content {
+      margin-left: 1.5rem;
+      width: 71%;
+      padding-top: 0.5rem; } }
+  @media (max-width: 1380px) {
+    .mep_deal_area-content .p {
+      font-size: 2rem; }
+    .mep_deal_area-content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .mep_deal-title {
   font-size: 2.6rem;
@@ -4323,6 +4355,15 @@ figure {
   height: 2rem;
   width: 2rem;
   display: block; }
+  @media (max-width: 37.5em) {
+    .three-dots {
+      bottom: 2rem; } }
+  @media (max-width: 1380px) {
+    .three-dots .p {
+      font-size: 2rem; }
+    .three-dots .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .three-dots:hover {
     background-color: #fff; }
 
@@ -6407,7 +6448,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -6491,7 +6532,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -6512,7 +6553,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

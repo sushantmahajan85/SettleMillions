@@ -586,7 +586,7 @@ div#GoogeSigninButton {
   @include respond(phone) {
     margin-left: 0rem;
     padding-left: 0rem;
-    width: 86rem;
+    width: 100%;
   }
 
   @include respond(small-phone) {
@@ -598,7 +598,7 @@ div#GoogeSigninButton {
   display: flex;
   margin: 0% 19%;
   @include respond(phone) {
-    margin: 0% 23%;
+    margin: 0% auto;
   }
   @include respond(small-phone) {
     margin: 0% 8%;

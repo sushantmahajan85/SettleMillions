@@ -36,11 +36,11 @@
     "path": "^0.12.7",
     "pug": "^2.0.4",
     "require": "^2.4.20",
-    "sharp": "^0.25.2",
+    "sharp": "^0.25.4",
+    "shortid": "^2.2.15",
     "simplebar": "^5.1.0",
     "url": "^0.11.0",
-    "validator": "^12.2.0",
-    "shortid": "^2.2.15"
+    "validator": "^12.2.0"
   },
   "devDependencies": {
     "@popperjs/core": "^2.4.0",

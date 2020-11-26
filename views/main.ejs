@@ -1338,10 +1338,8 @@
                 <a href="#"><div class="mainpage_titles-options">See All</div></a>
             </div>
            
-            <div class="main-content2">
-            <div class="owl-carousel owl-theme">
-            
-            
+    <div class="main-content2">
+        <div class="owl-carousel owl-theme">
             
             <% for(var pageDeal of page) { %>
                 
@@ -1366,7 +1364,7 @@
                     <div class="custom-nav owl-nav"></div>
                 </div>
             </div>
-       </div>
+    </div>
         </div>
         <div class="popup_news" id="popup_news1">
             <div class="popup_news_content">
@@ -1635,9 +1633,9 @@
     <script>
         $('.main-content3 .owl-carousel').owlCarousel({
             stagePadding: 50,
-            loop: false,
+            loop: true,
             margin: 10,
-            nav: true,
+            nav: false,
             navText: [
                 '<i class="fa fa-angle-left arrow" aria-hidden="true"></i>',
                 '<i class="fa fa-angle-right arrow" aria-hidden="true"></i>'

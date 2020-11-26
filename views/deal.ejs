@@ -450,7 +450,7 @@
          %>
         <a href=<%= `/deal/${deala._id}/postedBy/${deala.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container" style="height: 15rem;">
+            <div class="bigImg_container" style="height: 15rem; width: 100%;">
                 <img src=<%= `/img/deals/${deala.titleImg}` %> alt="Deal Photo" class="deal-photo">
             </div>
             <div class="deal_area_content">
@@ -544,7 +544,7 @@
       <div class=" side_deals_item">
         <a href=<%= `/deal/${dealo._id}/postedBy/${dealo.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container" style=" height: 15rem;">
+            <div class="bigImg_container" style=" height: 15rem; width: 100%;">
               <img src=<%= `/img/deals/${dealo.titleImg}` %> alt="Deal Photo" class="deal-photo">
             </div>
             <div class="deal_area_content">
@@ -773,7 +773,7 @@
         Share
         <br>
  
-        <textarea name="" id="" class="generated" cols="30" rows="5" ><%= deal.dealName %>&#10;<%= deal.dealPrice %>  <%= deal.discount %>&#10;<%= fullUrl %>   </textarea>
+        <textarea name="" id="" class="generated" cols="30" rows="5" ><%= deal.dealName %>&#10;Rs.<%= deal.dealPrice %>  <%= deal.discount %>&#10;<%= fullUrl %>   </textarea>
         <button id="copied" onclick="coping()">copy</button>
         <!-- <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="subscribe_btn_no_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button> -->
     </div>

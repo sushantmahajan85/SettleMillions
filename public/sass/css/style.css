@@ -1294,6 +1294,9 @@ body {
     font-size: 1.5rem;
     margin-right: 1rem; } }
 
+.owl-dots {
+  display: none; }
+
 .carousel_phn {
   display: none;
   visibility: hidden;
@@ -3354,10 +3357,10 @@ figure {
   padding: 5px 0; }
 
 #copied {
-  width: 89%;
+  width: 20%;
   padding: 1rem 0;
   border-radius: 5px;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   color: white;
   background-color: #d10024;
   font-family: "Montserrat", sans-serif;
@@ -5513,8 +5516,8 @@ Down
 #share_popup {
   background-color: white;
   position: fixed;
-  height: 22.9rem;
-  width: 20%;
+  height: 24.9rem;
+  width: 28%;
   top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);

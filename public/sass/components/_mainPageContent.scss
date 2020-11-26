@@ -34,6 +34,11 @@ body {
     visibility: hidden;
   }
 }
+
+.owl-dots {
+  display: none;
+}
+
 .carousel_phn {
   display: none;
   visibility: hidden;
@@ -632,11 +637,11 @@ figure {
   margin: 2rem 2rem;
 
   @include respond(phone) {
-    margin:5rem 2rem 0rem 5rem;
-   }
+    margin: 5rem 2rem 0rem 5rem;
+  }
 
   @include respond(small-phone) {
-   margin:8rem 2rem -5rem 6rem;
+    margin: 8rem 2rem -5rem 6rem;
   }
 }
 .mainpage_titles {

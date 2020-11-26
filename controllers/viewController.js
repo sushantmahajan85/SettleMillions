@@ -1062,7 +1062,6 @@ exports.livePage = catchAsync(async (req, res) => {
 });
 exports.dealPage = catchAsync(async (req, res, next) => {
   // console.log(req.cookies);
-  var fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
     // console.log(joChahiye);
@@ -1133,6 +1132,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   const deal = await Deal.findById({ _id: req.params.dealId }).populate({
     path: "reviews",
   });
+  var fullUrl = req.protocol + "://" + req.get("host") + "/" + deal.short;
   if (!deal) {
     return next(new appError("No Deal With That Id", 404));
   }

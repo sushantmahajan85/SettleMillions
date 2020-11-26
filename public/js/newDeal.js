@@ -43,8 +43,8 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   const form = new FormData();
   form.append("dealName", document.getElementById("dealName").value);
   form.append("affiliateLink", document.getElementById("link").value);
-  form.append("dealPrice", document.getElementById("fprice").value);
-  form.append("mrp", document.getElementById("percent").value);
+  form.append("dealPrice", document.getElementById("dealPrice").value);
+  form.append("mrp", document.getElementById("mrp").value);
   form.append("category", document.getElementById("category").value);
   // form.append(
   //   "categorySelect",

@@ -2438,6 +2438,8 @@ figure {
     font-weight: 700;
     color: #15161d;
     margin-right: 2rem;
+    display: inline-block;
+    width: 16.5rem;
     border-radius: 1rem;
     font-size: 2rem; }
   .deal-deets_paragraph {
@@ -2451,7 +2453,7 @@ figure {
     font-weight: 400; }
   .deal-deets_affiliate {
     padding: 2rem 0rem 2rem 1rem;
-    width: 84%; }
+    width: 100%; }
     @media (max-width: 37.5em) {
       .deal-deets_affiliate {
         width: 88%; } }
@@ -2569,7 +2571,7 @@ figure {
   height: 5rem;
   width: 5rem;
   margin-top: -1px;
-  margin-right: 2rem;
+  margin-right: 1rem;
   padding: 0rem; }
 
 .review-head {

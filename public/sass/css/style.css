@@ -500,6 +500,15 @@ h2 {
       font-size: 1.5rem;
       font-family: "Montserrat", sans-serif;
       margin-right: 2.5rem; }
+      @media (max-width: 75em) {
+        .header_small-nav-item {
+          margin-right: 2rem; } }
+      @media (max-width: 1380px) {
+        .header_small-nav-item .p {
+          font-size: 2rem; }
+        .header_small-nav-item .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
       .header_small-nav-item-head {
         font-weight: bolder;
         border-bottom: 1.7px solid #d10024;
@@ -7525,7 +7534,8 @@ hr {
       margin-right: 1rem; } }
 
 .channelx {
-  display: flex; }
+  display: flex;
+  margin-top: 1.5rem; }
 
 #newsletter_subtitle {
   text-align: center;

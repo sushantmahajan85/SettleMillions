@@ -448,6 +448,9 @@ h2 {
       font-size: 1.5rem;
       font-family: $family2;
       margin-right: 2.5rem;
+      @include respond(tab-land) {
+        margin-right: 2rem;
+      }
       &-head {
         font-weight: bolder;
         border-bottom: 1.7px solid $maroon;

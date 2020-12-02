@@ -1927,7 +1927,7 @@ figure {
   border-radius: 1rem; }
   @media (max-width: 1500px) {
     .card {
-      margin: 0 4.2rem 4rem 0rem; } }
+      margin: 0 3.2rem 4rem 1rem; } }
   @media (max-width: 1380px) {
     .card .p {
       font-size: 2rem; }
@@ -1936,7 +1936,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 1380px) {
     .card {
-      margin: 0 3.5rem 4rem 0rem; } }
+      margin: 0 2.5rem 4rem 1rem; } }
   @media (max-width: 1380px) {
     .card .p {
       font-size: 2rem; }
@@ -7307,9 +7307,41 @@ div#GoogeSigninButton {
   margin-left: -20rem;
   padding-left: 35rem;
   font-size: 1.2rem; }
+  @media (max-width: 1500px) {
+    .footer {
+      margin-left: 0rem;
+      padding-left: 23%; } }
+  @media (max-width: 1380px) {
+    .footer .p {
+      font-size: 2rem; }
+    .footer .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .footer {
+      margin-left: 0rem;
+      padding-left: 17%; } }
+  @media (max-width: 1380px) {
+    .footer .p {
+      font-size: 2rem; }
+    .footer .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .footer {
+      margin-left: 0rem;
+      padding-left: 9%; } }
+  @media (max-width: 1380px) {
+    .footer .p {
+      font-size: 2rem; }
+    .footer .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .footer {
-      width: 132.5rem; } }
+      width: 100%;
+      margin-left: 0rem;
+      padding-left: 8%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7540,7 +7572,7 @@ hr {
   font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-left: 3rem;
+  margin-left: 1rem;
   color: white;
   font-size: 15px;
   margin-bottom: 2rem; }

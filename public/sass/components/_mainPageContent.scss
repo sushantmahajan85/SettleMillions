@@ -74,9 +74,10 @@ body {
   flex-wrap: wrap;
   align-content: center;
   padding-top: 3.5rem;
-  justify-content: space-around;
+  // justify-content: space-around;
+  justify-content: center;
 
-  margin: 0rem 4rem 3rem 4rem;
+  // margin: 0rem 4rem 3rem 4rem;
   // margin-left: 2%;
   @include respond(phone) {
     margin-left: 3rem;
@@ -783,9 +784,18 @@ figure {
   height: 41rem;
   width: 25.75rem;
   // z-index: 1;
-  margin: 0 0 4rem 0rem;
+  // margin: 0 0 4rem 0rem;
+  margin: 0 5rem 4rem 0rem;
 
   border-radius: 1rem;
+
+  @include respond(achi) {
+    margin: 0 4.2rem 4rem 0rem;
+  }
+  @include respond(achi2) {
+    margin: 0 3.5rem 4rem 0rem;
+  }
+
   @include respond(tab-land) {
     width: 22rem;
     height: 38rem;
@@ -1008,7 +1018,7 @@ figure {
   }
 }
 
-.mp_icon1{
+.mp_icon1 {
   position: relative;
   top: 0.13rem;
 }

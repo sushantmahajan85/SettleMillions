@@ -1351,8 +1351,7 @@ body {
   flex-wrap: wrap;
   align-content: center;
   padding-top: 3.5rem;
-  justify-content: space-around;
-  margin: 0rem 4rem 3rem 4rem; }
+  justify-content: center; }
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
@@ -1924,8 +1923,26 @@ figure {
   -moz-perspective: 150rem;
   height: 41rem;
   width: 25.75rem;
-  margin: 0 0 4rem 0rem;
+  margin: 0 5rem 4rem 0rem;
   border-radius: 1rem; }
+  @media (max-width: 1500px) {
+    .card {
+      margin: 0 4.2rem 4rem 0rem; } }
+  @media (max-width: 1380px) {
+    .card .p {
+      font-size: 2rem; }
+    .card .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .card {
+      margin: 0 3.5rem 4rem 0rem; } }
+  @media (max-width: 1380px) {
+    .card .p {
+      font-size: 2rem; }
+    .card .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 75em) {
     .card {
       width: 22rem;

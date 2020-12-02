@@ -764,12 +764,13 @@ figure {
   color: #d10124 !important;
   font-weight: 500 !important;
   font-family: $family2;
+  margin-left: 0.5rem;
 }
 
 .mp_p-mrp {
   position: relative;
   bottom: 0.1rem;
-  margin-left: 0.2rem !important;
+  margin-left: 0.5rem !important;
   font-family: $family2;
 }
 .card {
@@ -1005,4 +1006,9 @@ figure {
   @include respond(small-phone) {
     height: 34vh;
   }
+}
+
+.mp_icon1{
+  position: relative;
+  top: 0.13rem;
 }

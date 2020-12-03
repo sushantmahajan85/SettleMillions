@@ -28,7 +28,7 @@ const passvalueo = async function(dealId, whoLiked) {
       method: "POST",
       url: "/api/v1/likedDeal",
       data: {
-        deal: dealId
+        deal: last_segment
         //user: whoLiked
       },
     });

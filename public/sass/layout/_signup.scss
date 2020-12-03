@@ -579,8 +579,32 @@ div#GoogeSigninButton {
   // margin-left: 17rem;
   font-size: 1.2rem;
 
+  @include respond(achi) {
+    // width: 132.5rem;
+    // width: 100%;
+    margin-left: 0rem;
+    padding-left: 23%;
+  }
+
+  @include respond(achi2) {
+    // width: 132.5rem;
+    // width: 100%;
+    margin-left: 0rem;
+    padding-left: 17%;
+  }
+
+  @include respond(tab-land) {
+    // width: 132.5rem;
+    // width: 100%;
+    margin-left: 0rem;
+    padding-left: 9%;
+  }
+
   @include respond(tab-port) {
-    width: 132.5rem;
+    // width: 132.5rem;
+    width: 100%;
+    margin-left: 0rem;
+    padding-left: 8%;
   }
 
   @include respond(phone) {

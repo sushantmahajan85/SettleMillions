@@ -116,27 +116,28 @@
       </div>
     </a>
 
-    <!-- <div class="titles"> -->
+    <div class="titles">
       <!-- <div class="titles_nv"> -->
         <!-- <div>Live Deals</div> -->
       <!-- </div> -->
-      <!-- <% if(user) { %> -->
-        <!-- <% if (user.role == 'admin') { %> -->
-          <!-- <div class="titles_nv"> -->
+      <% if(user) { %>
+        <% if (user.role == 'admin') { %>
+          <div class="titles_nv">
             <!-- <div class="user-nav__user"> -->
-              <!-- <nav role="navigation"> -->
-                <!-- <ul> -->
-                  <!-- <li style="font-size:1.75rem"> Post -->
-                    <!-- <ul class="dropdown" style="background-color: black;"> -->
-                      <!-- <li><a href=<%= `/newDeal` %>>Deal</a></li> -->
-                      <!-- <li><a href="/pageDeal">Page</a></li> -->
-                      <!-- <li><a href="/newsDeal">News</a></li> -->
-                    <!-- </ul> -->
-                  <!-- </nav> -->
+              <nav role="navigation">
+                <ul>
+                  <li style="font-size:1.75rem"> Post
+                    <ul class="dropdown" style="background-color: black;">
+                      <li><a href=<%= `/newDeal` %>>Deal</a></li>
+                      <li><a href="/pageDeal">Page</a></li>
+                      <li><a href="/newsDeal">News</a></li>
+                    </ul>
+                  </nav>
+               
             <!-- <a href="/newDeal"><div style="color: white;">Post A Deal</div></a> -->
-          <!-- </div> -->
+          </div>
          
-        <!-- <% } %> -->
+        <% } %>
       <!-- <div
       id="GoogeSigninButton"
       data-height="40"
@@ -148,7 +149,11 @@
       style="margin-top: 1.5rem;display:none;visibility:hidden"
     ></div> -->
 
-      <!-- <% } %> -->
+      <% } else { %>
+        <!-- <div class="titles_nv" id="post_no_user">
+          <div>Post A Deal</div>
+        </div> -->
+      <% } %>
       
       <div class="popup" id="popup_post">
         <div class="popup_right">

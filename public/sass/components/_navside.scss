@@ -719,6 +719,31 @@ h2 {
   padding: 0 0.2rem;
   align-items: center;
 }
+
+.dropdown {
+  background-color: white;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.dropdown li {
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #28292e;
+  }
+
+  &:hover > a {
+    color: white;
+  }
+}
+
+.dropdown li a {
+  color: black;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+
 .user-nav__user-photo {
   width: 5rem;
   height: 5rem;
@@ -873,7 +898,7 @@ ul li ul {
   min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   left: 0;
   display: none;
 }
@@ -894,7 +919,7 @@ nav li {
   color: white;
   display: block;
   // float: left;
-  padding: 1rem;
+  // padding: 1rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;

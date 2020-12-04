@@ -283,7 +283,7 @@
     <ul>
       <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: 0rem;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
             class="user-nav__user-photo" /></a>
-        <ul class="dropdown" style="background-color: black;">
+        <ul class="dropdown">
           <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
           <li><a href="/updateUserSettings">Edit Profile</a></li>
           <li><a onclick="loca();signOut()">Logout</a></li>
@@ -295,7 +295,7 @@
             <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: 0rem;"
               data-name=<%=user.name %> data-color="#85e0ce" class="profile
               user-nav__user-photo"/></a>
-              <ul class="dropdown" style="background-color: black;">
+              <ul class="dropdown">
                 <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
                 <li><a href="/updateUserSettings">Edit Profile</a></li>
                 <li><a onclick="loca();signOut()">Logout</a></li>

@@ -79,9 +79,8 @@
       </div>
 
     </div>
-    <div class="latest-deals">
+    <!-- <div class="latest-deals">
       <div class="latest-deals-title">Latest Deals</div>
-      <!-- <div class="profile_area_pic"></div> -->
       <% var i = 0%> 
 <% for(var deal of deals ) { %>
   
@@ -101,46 +100,14 @@
       </div>
       <div class="deal1-det-views"><%= deal.views %></div>
     </div>
-
-  </div>
-</a>
+  </a>
   <% if (i === 3){break;}%>
   <% } %>                
 <% } %>
 
-</div>
-      
-      <!-- <div class="latest-deals-deal2">
-        <img src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685161-3.jpeg" alt="">
-
-        <div class="deal2-det">
-          <div class="deal2-det-name">Oneplus 8</div>
-
-          <div class="deal2-det-price">
-            <div class="deal2-det-dp">34200</div>
-            <div class="deal2-det-mrp">38000</div>
-            <div class="deal2-det-dis">10% off</div>
-          </div>
-          <div class="deal2-det-views">69 views</div>
-        </div>
-      </div>
-      <div class="latest-deals-deal3">
-        <img src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685122-title.jpeg" alt="">
-        <div class="deal3-det">
-          <div class="deal3-det-name">Oneplus 8</div>
-
-          <div class="deal3-det-price">
-            <div class="deal3-det-dp">34200</div>
-            <div class="deal3-det-mrp">38000</div>
-            <div class="deal3-det-dis">10% off</div>
-          </div>
-          <div class="deal3-det-views">69 views</div>
-        </div>
-      </div>
-
-    </div> -->
+</div> -->
     <div class="member-page-content">
-      <div id="trending" class="trending" style="padding-top: 2.3rem;">
+      <div id="trending" class="trending" style="padding-top: 9.3rem;">
         <% var j = 0 %> 
         <% for(var deal of deals) { %>
 <% if (deal.user == userId) { %>
@@ -154,7 +121,6 @@
   var day = Math.round((tem/2.4))/10;
   %>
  <% j++ %> 
-<% if (j>3) { %>
   <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
   <div class="mep_deal-box">
 
@@ -258,7 +224,6 @@
 </a>
   
   <% if (j === 30){break;}%>
-<% } %>
         <% } %>
         <% } %>
         

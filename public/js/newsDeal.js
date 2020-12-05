@@ -27,7 +27,7 @@ const passvalueNews = async (titleDescript, descript,link) => {
         },
       });
       if (result.data.status === "success") {
-        showAlert("success", "login successful");
+        showAlert("success", "News Successfully Posted!");
         //   alert("successful");
         window.setTimeout(() => {
           location.assign("/");

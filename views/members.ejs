@@ -84,7 +84,7 @@
       <% var i = 0%> 
 <% for(var deal of deals ) { %>
   
-<% if (deal.time<2*24*60*60*1000 && deal.user == userId) { %>
+<% if ( deal.user == userId) { %>
   <% i++ %> 
   <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
   <div class=<%= `latest-deals-deal${i}` %>>

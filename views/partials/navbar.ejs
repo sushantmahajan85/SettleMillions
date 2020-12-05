@@ -31,7 +31,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <h3 class="nav_tff">Your Deal</h3>
+      <h3 class="nav_tff">Grabzy</h3>
       <div class="navigation_link navigation_item">
         <a href="#popup" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>
         <a href="events.html" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
@@ -112,7 +112,7 @@
     </script>
     <a href="/" class="yourDeal">
       <div class="title">
-        <h2 class="Navb_logo-text">Your Deal</h2>
+        <h2 class="Navb_logo-text">Grabzy</h2>
       </div>
     </a>
 
@@ -251,7 +251,7 @@
             <div class="title-with-icon"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: white; font-size:1.6rem;"></i>Live</div>
           </div>
         </a>  
-      <a class="titles_nv" href=<%=` /analytics `%> id="signup">
+      <!-- <a class="titles_nv" href=<%=` /analytics `%> id="signup"> -->
         <% if (user.role == 'admin') { %>
           <div class="postDeal" style="display: flex; align-items: center; ">
             <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
@@ -281,24 +281,24 @@
     <div class="user-nav__user">
   <nav role="navigation">
     <ul>
-      <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: -0.95rem;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
+      <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: 0rem;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
             class="user-nav__user-photo" /></a>
-        <ul class="dropdown" style="background-color: black;">
-          <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
-          <li><a href="/updateUserSettings">Edit Profile</a></li>
-          <li><a onclick="loca();signOut()">Logout</a></li>
+        <ul class="dropdown">
+          <li><a href=<%= `/member/${user.id}` %>><i class="fas fa-user"></i>Profile</a></li>
+          <li><a href="/updateUserSettings"><i class="fas fa-user-edit"></i>Edit Profile</a></li>
+          <li><a onclick="loca();signOut()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
         </ul>
       </nav>
          <% } else { %>
         <nav role="navigation">
           <ul>
-            <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: -0.95rem;"
+            <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: 0rem;"
               data-name=<%=user.name %> data-color="#85e0ce" class="profile
               user-nav__user-photo"/></a>
-              <ul class="dropdown" style="background-color: black;">
-                <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
-                <li><a href="/updateUserSettings">Edit Profile</a></li>
-                <li><a onclick="loca();signOut()">Logout</a></li>
+              <ul class="dropdown">
+                <li><a href=<%= `/member/${user.id}` %>><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="/updateUserSettings"><i class="fas fa-user-edit"></i>Edit Profile</a></li>
+                <li><a onclick="loca();signOut()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
               </ul>
             </li>
           </ul>

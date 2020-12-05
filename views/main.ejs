@@ -48,7 +48,7 @@
     <%
         const WL = ["https://chat.whatsapp.com/LGhpgcdjnRTG5IPsHtmuTh", "https://chat.whatsapp.com/CUFwLpY27RILJXgYkde1dN"];
     %>
-
+<!-- <div></div> -->
    
     <div class="page-content">
          <div class="header_small">
@@ -229,7 +229,7 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div>
-                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                         </a>
                                     </div>
                                     <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -255,7 +255,7 @@
                                         </div>
                                         <div class="monetory_values_mp">
                                             <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                             <li style="font-weight: 400;">
                                             </li>
                                         </div>
@@ -327,7 +327,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -353,7 +353,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -451,7 +451,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -477,7 +477,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -549,7 +549,7 @@
                                                     <%= deal.dealName %>
                                                 </h3>
                                                 <div>
-                                                    <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                                    <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                                     </a>
                                                 </div>
                                                 <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -575,7 +575,7 @@
                                                     </div>
                                                     <div class="monetory_values_mp">
                                                         <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                            <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                         <li style="font-weight: 400;">
                                                         </li>
                                                     </div>
@@ -671,7 +671,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -697,7 +697,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -770,7 +770,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -796,7 +796,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -895,7 +895,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -921,7 +921,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -994,7 +994,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -1020,7 +1020,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -1113,7 +1113,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -1139,7 +1139,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -1215,7 +1215,7 @@
                                             <%= deal.dealName %>
                                         </h3>
                                         <div>
-                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                            <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                             </a>
                                         </div>
                                         <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -1241,7 +1241,7 @@
                                             </div>
                                             <div class="monetory_values_mp">
                                                 <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                    <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                 <li style="font-weight: 400;">
                                                 </li>
                                             </div>
@@ -1338,10 +1338,8 @@
                 <a href="#"><div class="mainpage_titles-options">See All</div></a>
             </div>
            
-            <div class="main-content2">
-            <div class="owl-carousel owl-theme">
-            
-            
+    <div class="main-content2">
+        <div class="owl-carousel owl-theme">
             
             <% for(var pageDeal of page) { %>
                 
@@ -1366,7 +1364,7 @@
                     <div class="custom-nav owl-nav"></div>
                 </div>
             </div>
-       </div>
+    </div>
         </div>
         <div class="popup_news" id="popup_news1">
             <div class="popup_news_content">
@@ -1471,7 +1469,7 @@
                                                 <%= deal.dealName %>
                                             </h3>
                                             <div>
-                                                <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="fa fa-amazon"></i>
+                                                <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                                 </a>
                                             </div>
                                             <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -1497,7 +1495,7 @@
                                                 </div>
                                                 <div class="monetory_values_mp">
                                                     <li class="price"><span class="mp_price price_avail">₹<%= deal.mrp %> </span>
-                                                        <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail">(70%) </span>
+                                                        <strike class="mp_p-mrp price_mrp">₹<%= deal.dealPrice %> </strike><span class="mp_price price_avail"> (<%= deal.discount%>%) </span>
                                                     <li style="font-weight: 400;">
                                                     </li>
                                                 </div>
@@ -1635,9 +1633,9 @@
     <script>
         $('.main-content3 .owl-carousel').owlCarousel({
             stagePadding: 50,
-            loop: false,
+            loop: true,
             margin: 10,
-            nav: true,
+            nav: false,
             navText: [
                 '<i class="fa fa-angle-left arrow" aria-hidden="true"></i>',
                 '<i class="fa fa-angle-right arrow" aria-hidden="true"></i>'

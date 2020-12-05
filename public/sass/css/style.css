@@ -97,11 +97,13 @@ body {
   display: none; }
 
 .side_bar {
+  top: 8rem;
   width: 12%;
   background-color: white;
-  margin-top: 8rem;
-  height: 100%;
+  height: 90%;
   border: solid 1px lightgrey;
+  overflow: hidden;
+  overflow-y: scroll;
   z-index: 2; }
   @media (max-width: 75em) {
     .side_bar {
@@ -498,6 +500,15 @@ h2 {
       font-size: 1.5rem;
       font-family: "Montserrat", sans-serif;
       margin-right: 2.5rem; }
+      @media (max-width: 75em) {
+        .header_small-nav-item {
+          margin-right: 2rem; } }
+      @media (max-width: 1380px) {
+        .header_small-nav-item .p {
+          font-size: 2rem; }
+        .header_small-nav-item .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
       .header_small-nav-item-head {
         font-weight: bolder;
         border-bottom: 1.7px solid #d10024;
@@ -708,9 +719,30 @@ h2 {
   padding: 0 0.2rem;
   align-items: center; }
 
+.dropdown {
+  background-color: white;
+  width: 130px;
+  border-radius: 5px;
+  text-align: left; }
+
+.dropdown li {
+  padding: 5px 10px; }
+  .dropdown li:hover {
+    background-color: #28292e; }
+  .dropdown li:hover > a {
+    color: white; }
+
+.dropdown li a {
+  color: black;
+  font-size: 14px;
+  font-family: "Montserrat"; }
+
+.dropdown li a i {
+  margin-right: 5px; }
+
 .user-nav__user-photo {
-  width: 6.5rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   margin-top: 10rem; }
 
@@ -763,7 +795,6 @@ ul li ul {
   min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
   left: 0;
   display: none; }
 
@@ -780,7 +811,6 @@ ul li ul li {
 nav li {
   color: white;
   display: block;
-  padding: 1rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s; }
@@ -1294,6 +1324,9 @@ body {
     font-size: 1.5rem;
     margin-right: 1rem; } }
 
+.owl-dots {
+  display: none; }
+
 .carousel_phn {
   display: none;
   visibility: hidden;
@@ -1346,8 +1379,7 @@ body {
   flex-wrap: wrap;
   align-content: center;
   padding-top: 3.5rem;
-  justify-content: space-around;
-  margin: 0rem 4rem 3rem 4rem; }
+  justify-content: center; }
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
@@ -1904,12 +1936,13 @@ figure {
   font-size: 1.8rem !important;
   color: #d10124 !important;
   font-weight: 500 !important;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  margin-left: 0.5rem; }
 
 .mp_p-mrp {
   position: relative;
   bottom: 0.1rem;
-  margin-left: 0.2rem !important;
+  margin-left: 0.5rem !important;
   font-family: "Montserrat", sans-serif; }
 
 .card {
@@ -1918,8 +1951,26 @@ figure {
   -moz-perspective: 150rem;
   height: 41rem;
   width: 25.75rem;
-  margin: 0 0 4rem 0rem;
+  margin: 0 5rem 4rem 0rem;
   border-radius: 1rem; }
+  @media (max-width: 1500px) {
+    .card {
+      margin: 0 3.2rem 4rem 1rem; } }
+  @media (max-width: 1380px) {
+    .card .p {
+      font-size: 2rem; }
+    .card .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .card {
+      margin: 0 2.5rem 4rem 1rem; } }
+  @media (max-width: 1380px) {
+    .card .p {
+      font-size: 2rem; }
+    .card .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 75em) {
     .card {
       width: 22rem;
@@ -2104,9 +2155,13 @@ figure {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
+.mp_icon1 {
+  position: relative;
+  top: 0.13rem; }
+
 .dealPageContent {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 3rem;
   justify-content: space-between; }
   @media (max-width: 1380px) {
     .dealPageContent {
@@ -2435,6 +2490,8 @@ figure {
     font-weight: 700;
     color: #15161d;
     margin-right: 2rem;
+    display: inline-block;
+    width: 16.5rem;
     border-radius: 1rem;
     font-size: 2rem; }
   .deal-deets_paragraph {
@@ -2448,7 +2505,7 @@ figure {
     font-weight: 400; }
   .deal-deets_affiliate {
     padding: 2rem 0rem 2rem 1rem;
-    width: 84%; }
+    width: 100%; }
     @media (max-width: 37.5em) {
       .deal-deets_affiliate {
         width: 88%; } }
@@ -2566,7 +2623,7 @@ figure {
   height: 5rem;
   width: 5rem;
   margin-top: -1px;
-  margin-right: 2rem;
+  margin-right: 1rem;
   padding: 0rem; }
 
 .review-head {
@@ -3354,10 +3411,10 @@ figure {
   padding: 5px 0; }
 
 #copied {
-  width: 89%;
+  width: 20%;
   padding: 1rem 0;
   border-radius: 5px;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   color: white;
   background-color: #d10024;
   font-family: "Montserrat", sans-serif;
@@ -3723,8 +3780,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .cover_aff-subs-button {
-        top: 28%;
-        left: 69%; } }
+        top: 27%;
+        left: 72%; } }
     @media (max-width: 1380px) {
       .cover_aff-subs-button .p {
         font-size: 2rem; }
@@ -3744,9 +3801,27 @@ figure {
     border-radius: 0.5rem;
     top: 19%;
     left: 49%; }
-    @media (max-width: 1380px) {
+    @media (max-width: 1500px) {
       .cover_aff-cust-button {
         left: 51%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button .p {
+        font-size: 2rem; }
+      .cover_aff-cust-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button {
+        left: 51.75%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button .p {
+        font-size: 2rem; }
+      .cover_aff-cust-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 75em) {
+      .cover_aff-cust-button {
+        left: 52.75%; } }
     @media (max-width: 1380px) {
       .cover_aff-cust-button .p {
         font-size: 2rem; }
@@ -3861,11 +3936,11 @@ figure {
 .deal2-det,
 .deal3-det {
   display: inline-block;
-  position: absolute;
-  top: 2.3rem;
+  position: relative;
+  top: 4.3rem;
+  left: 1.5rem;
   font-size: 1.3rem;
-  color: #626567;
-  margin-left: 1rem; }
+  color: #626567; }
   .deal1-det-name,
   .deal2-det-name,
   .deal3-det-name {
@@ -3928,17 +4003,49 @@ figure {
   transition: all 0.3s;
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2; }
+  @media (max-width: 37.5em) {
+    .mep_deal-box {
+      margin-left: 0rem;
+      width: 98%;
+      height: 23rem; } }
+  @media (max-width: 1380px) {
+    .mep_deal-box .p {
+      font-size: 2rem; }
+    .mep_deal-box .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .mep_deal-box:hover {
     box-shadow: 1px 0px 3px 2px #b3b6b7; }
 
 .mep_deal_box_img {
   width: 23%;
   margin-left: 0.1rem; }
+  @media (max-width: 37.5em) {
+    .mep_deal_box_img {
+      margin-left: 0rem;
+      width: 46%; } }
+  @media (max-width: 1380px) {
+    .mep_deal_box_img .p {
+      font-size: 2rem; }
+    .mep_deal_box_img .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .mep_deal_area-content {
   margin-left: 3.5rem;
   width: 75rem;
   padding-top: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .mep_deal_area-content {
+      margin-left: 1.5rem;
+      width: 71%;
+      padding-top: 0.5rem; } }
+  @media (max-width: 1380px) {
+    .mep_deal_area-content .p {
+      font-size: 2rem; }
+    .mep_deal_area-content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .mep_deal-title {
   font-size: 2.6rem;
@@ -4323,6 +4430,15 @@ figure {
   height: 2rem;
   width: 2rem;
   display: block; }
+  @media (max-width: 37.5em) {
+    .three-dots {
+      bottom: 2rem; } }
+  @media (max-width: 1380px) {
+    .three-dots .p {
+      font-size: 2rem; }
+    .three-dots .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .three-dots:hover {
     background-color: #fff; }
 
@@ -5472,8 +5588,8 @@ Down
 #share_popup {
   background-color: white;
   position: fixed;
-  height: 22.9rem;
-  width: 20%;
+  height: 24.9rem;
+  width: 28%;
   top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -7237,9 +7353,41 @@ div#GoogeSigninButton {
   margin-left: -20rem;
   padding-left: 35rem;
   font-size: 1.2rem; }
+  @media (max-width: 1500px) {
+    .footer {
+      margin-left: 0rem;
+      padding-left: 23%; } }
+  @media (max-width: 1380px) {
+    .footer .p {
+      font-size: 2rem; }
+    .footer .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 1380px) {
+    .footer {
+      margin-left: 0rem;
+      padding-left: 17%; } }
+  @media (max-width: 1380px) {
+    .footer .p {
+      font-size: 2rem; }
+    .footer .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .footer {
+      margin-left: 0rem;
+      padding-left: 9%; } }
+  @media (max-width: 1380px) {
+    .footer .p {
+      font-size: 2rem; }
+    .footer .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .footer {
-      width: 132.5rem; } }
+      width: 100%;
+      margin-left: 0rem;
+      padding-left: 8%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7250,7 +7398,7 @@ div#GoogeSigninButton {
     .footer {
       margin-left: 0rem;
       padding-left: 0rem;
-      width: 86rem; } }
+      width: 100%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7273,7 +7421,7 @@ div#GoogeSigninButton {
   margin: 0% 19%; }
   @media (max-width: 37.5em) {
     .footer-content {
-      margin: 0% 23%; } }
+      margin: 0% auto; } }
   @media (max-width: 1380px) {
     .footer-content .p {
       font-size: 2rem; }
@@ -7423,7 +7571,8 @@ hr {
       margin-right: 1rem; } }
 
 .channelx {
-  display: flex; }
+  display: flex;
+  margin-top: 1.5rem; }
 
 #newsletter_subtitle {
   text-align: center;
@@ -7470,7 +7619,7 @@ hr {
   font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-left: 3rem;
+  margin-left: 1rem;
   color: white;
   font-size: 15px;
   margin-bottom: 2rem; }

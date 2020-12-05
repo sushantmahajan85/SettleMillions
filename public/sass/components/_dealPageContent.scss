@@ -1,11 +1,10 @@
 .dealPageContent {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 3rem;
   justify-content: space-between;
 
   @include respond(achi2) {
     margin-top: 3rem;
-    
   }
 
   @include respond(phone) {
@@ -114,14 +113,13 @@
     transition: 0.2s all;
     width: 20rem;
 
+    @include respond(phone) {
+      padding: 1rem 8.35rem 1rem 4rem;
+    }
 
-  @include respond(phone) {
-    padding: 1rem 8.35rem 1rem 4rem;
-  }
-
-  @include respond(small-phone) {
-    padding: 1rem 1.35rem 1rem 4rem;
-  }
+    @include respond(small-phone) {
+      padding: 1rem 1.35rem 1rem 4rem;
+    }
   }
   &_buy > i {
     position: absolute;
@@ -194,11 +192,11 @@
     font-size: 1.8rem;
     padding: 1rem;
 
-  @include respond(phone) {
+    @include respond(phone) {
       display: block;
     }
-  @include respond(small-phone) {
-    display: flex;
+    @include respond(small-phone) {
+      display: flex;
     }
   }
   &_subs {
@@ -276,7 +274,8 @@
     // padding: 0.67rem 1.6rem;
     margin-right: 2rem;
     // margin-top: 0.7rem;
-
+    display: inline-block;
+    width: 16.5rem;
     border-radius: 1rem;
     font-size: 2rem;
   }
@@ -295,14 +294,12 @@
     // margin-right: rem;
     // display: block;
     padding: 2rem 0rem 2rem 1rem;
-    width: 84%;
-
+    width: 100%;
 
     @include respond(phone) {
       width: 88%;
     }
 
-    
     &_pic {
       width: 3.5rem;
       height: 3.5rem;
@@ -432,7 +429,7 @@
   height: 5rem;
   width: 5rem;
   margin-top: -1px;
-  margin-right: 2rem;
+  margin-right: 1rem;
   padding: 0rem;
 }
 
@@ -811,12 +808,10 @@
   // }
 
   @include respond(tab-port) {
-
     display: block;
     height: 86rem;
   }
 
-  
   @include respond(phone) {
     display: flex;
     height: 55.5rem;
@@ -834,7 +829,6 @@
   @include respond(tab-land) {
     width: 71%;
   }
-
 
   @include respond(tab-port) {
     width: 67%;
@@ -993,7 +987,6 @@
   @include respond(tab-port) {
     width: 31%;
   }
-
 
   @include respond(phone) {
     height: unset !important;
@@ -1302,10 +1295,10 @@
   padding: 5px 0;
 }
 #copied {
-  width: 89%;
+  width: 20%;
   padding: 1rem 0;
   border-radius: 5px;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   color: white;
   background-color: #d10024;
   font-family: $family2;
@@ -1324,16 +1317,12 @@
 
 // }
 
-.dp-price-row{
+.dp-price-row {
   margin-bottom: 1.2rem;
 }
 
-
-.bigImg_container{
-
+.bigImg_container {
   @include respond(tab-land) {
     width: 37rem !important;
   }
-
- 
 }

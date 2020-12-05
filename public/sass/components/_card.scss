@@ -10,6 +10,11 @@
   height: 2rem;
   width: 2rem;
   display: block;
+
+  @include respond(phone) {
+    bottom: 2rem;
+  }
+
   &:hover {
     background-color: #fff;
   }

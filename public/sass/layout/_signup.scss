@@ -579,14 +579,38 @@ div#GoogeSigninButton {
   // margin-left: 17rem;
   font-size: 1.2rem;
 
+  @include respond(achi) {
+    // width: 132.5rem;
+    // width: 100%;
+    margin-left: 0rem;
+    padding-left: 23%;
+  }
+
+  @include respond(achi2) {
+    // width: 132.5rem;
+    // width: 100%;
+    margin-left: 0rem;
+    padding-left: 17%;
+  }
+
+  @include respond(tab-land) {
+    // width: 132.5rem;
+    // width: 100%;
+    margin-left: 0rem;
+    padding-left: 9%;
+  }
+
   @include respond(tab-port) {
-    width: 132.5rem;
+    // width: 132.5rem;
+    width: 100%;
+    margin-left: 0rem;
+    padding-left: 8%;
   }
 
   @include respond(phone) {
     margin-left: 0rem;
     padding-left: 0rem;
-    width: 86rem;
+    width: 100%;
   }
 
   @include respond(small-phone) {
@@ -598,7 +622,7 @@ div#GoogeSigninButton {
   display: flex;
   margin: 0% 19%;
   @include respond(phone) {
-    margin: 0% 23%;
+    margin: 0% auto;
   }
   @include respond(small-phone) {
     margin: 0% 8%;

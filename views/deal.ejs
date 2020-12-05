@@ -61,8 +61,8 @@
           <!-- Slideshow container -->
           <div class="slideshow-container-deal">
 
-            <a class="slider_b_deals d_prev prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="slider_b_deals d_next next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- <a class="slider_b_deals d_prev prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slider_b_deals d_next next" onclick="plusSlides(1)">&#10095;</a> -->
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
@@ -148,7 +148,7 @@
       <hr />
       <div class="deal-deets_price">
         <li class="price"><span class="price_avail">
-            Rs. <%= deal.mrp %> </span> <span class="price_mrp">Rs. <%= deal.dealPrice %> </span> <span class="price_dis">(70% OFF)
+            Rs. <%= deal.mrp %> </span> <span class="price_mrp">Rs. <%= deal.dealPrice %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
             </span>
         </li>
       </div>
@@ -450,7 +450,7 @@
          %>
         <a href=<%= `/deal/${deala._id}/postedBy/${deala.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container" style="height: 15rem;">
+            <div class="bigImg_container" style="height: 15rem; width: 100%;">
                 <img src=<%= `/img/deals/${deala.titleImg}` %> alt="Deal Photo" class="deal-photo">
             </div>
             <div class="deal_area_content">
@@ -471,7 +471,7 @@
                 <div class="deal_box_nameTime dp-price-row" style="display: flex; flex-direction: row">
                   <div class="deal_box_dp">Rs.<%= deala.dealPrice %></div>
                   <div class="deal_box_mrp">Rs.<%= deala.mrp %></div>
-                  <div class="deal_box_dis">-80%</div>
+                  <div class="deal_box_dis">-<%= deala.discount%>%</div>
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex; flex-direction: row">
@@ -544,7 +544,7 @@
       <div class=" side_deals_item">
         <a href=<%= `/deal/${dealo._id}/postedBy/${dealo.user}` %>>
           <div class="deal_area_box" style="width: 100% !important;">
-            <div class="bigImg_container" style=" height: 15rem;">
+            <div class="bigImg_container" style=" height: 15rem; width: 100%;">
               <img src=<%= `/img/deals/${dealo.titleImg}` %> alt="Deal Photo" class="deal-photo">
             </div>
             <div class="deal_area_content">
@@ -567,7 +567,7 @@
                 <div class="deal_box_nameTime dp-price-row" style="display: flex;flex-direction: row ">
                   <div class="deal_box_dp">Rs.<%= dealo.dealPrice %></div>
                   <div class="deal_box_mrp">Rs.<%= dealo.mrp %></div>
-                  <div class="deal_box_dis">-80%</div>
+                  <div class="deal_box_dis">-<%= dealo.discount%>%</div>
                 </div>
   
                 <div class="deal_box_nameTime" style="display: flex;flex-direction: row">
@@ -773,7 +773,7 @@
         Share
         <br>
  
-        <textarea name="" id="" class="generated" cols="30" rows="5" ><%= deal.dealName %>&#10;<%= deal.dealPrice %>  <%= deal.discount %>&#10;<%= fullUrl %>   </textarea>
+        <textarea name="" id="" class="generated" cols="30" rows="5" ><%= deal.dealName %>&#10;Rs.<%= deal.dealPrice %>  <%= deal.discount %>&#10;<%= fullUrl %>   </textarea>
         <button id="copied" onclick="coping()">copy</button>
         <!-- <a href="/signup"><button id="go_sign_post" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Sign Up</button></a><button id="subscribe_btn_no_cancel" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68">Cancel</button> -->
     </div>

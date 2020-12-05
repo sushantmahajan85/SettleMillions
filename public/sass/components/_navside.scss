@@ -6,11 +6,14 @@
 .side_bar {
   // display: flex;
   // flex-direction: column;
+  top: 8rem;
   width: 12%;
   background-color: rgb(255, 255, 255);
-  margin-top: 8rem;
-  height: 100%;
+  // margin-top: 8rem;
+  height: 90%;
   border: solid 1px lightgrey;
+  overflow: hidden;
+  overflow-y: scroll;
   z-index: 2;
 
   // overflow-y: scroll !important;
@@ -446,6 +449,9 @@ h2 {
       font-size: 1.5rem;
       font-family: $family2;
       margin-right: 2.5rem;
+      @include respond(tab-land) {
+        margin-right: 2rem;
+      }
       &-head {
         font-weight: bolder;
         border-bottom: 1.7px solid $maroon;
@@ -713,9 +719,39 @@ h2 {
   padding: 0 0.2rem;
   align-items: center;
 }
+
+.dropdown {
+  background-color: white;
+  width: 130px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.dropdown li {
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #28292e;
+  }
+
+  &:hover > a {
+    color: white;
+  }
+}
+
+.dropdown li a {
+  color: black;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+
+.dropdown li a i {
+  margin-right: 5px;
+}
+
 .user-nav__user-photo {
-  width: 6.5rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   margin-top: 10rem;
 }
@@ -867,7 +903,7 @@ ul li ul {
   min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   left: 0;
   display: none;
 }
@@ -888,7 +924,7 @@ nav li {
   color: white;
   display: block;
   // float: left;
-  padding: 1rem;
+  // padding: 1rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;

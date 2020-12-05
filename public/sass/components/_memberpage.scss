@@ -333,9 +333,18 @@
     top: 19%;
     left: 49%;
 
-    @include respond(achi2) {
+    @include respond(achi) {
       left: 51%;
     }
+
+    @include respond(achi2) {
+      left: 51.75%;
+    }
+
+    @include respond(tab-land) {
+      left: 52.75%;
+    }
+
 
     @include respond(tab-port) {
       left: 58%;
@@ -454,11 +463,13 @@
 .deal2-det,
 .deal3-det {
   display: inline-block;
-  position: absolute;
-  top: 2.3rem;
+  // position: absolute;
+  position: relative;
+  top: 4.3rem;
+  left: 1.5rem;
   font-size: 1.3rem;
   color: #626567;
-  margin-left: 1rem;
+  // margin-left: 1rem;
 
   &-name {
     font-size: 1.4rem;

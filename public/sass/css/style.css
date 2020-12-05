@@ -3801,9 +3801,27 @@ figure {
     border-radius: 0.5rem;
     top: 19%;
     left: 49%; }
-    @media (max-width: 1380px) {
+    @media (max-width: 1500px) {
       .cover_aff-cust-button {
         left: 51%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button .p {
+        font-size: 2rem; }
+      .cover_aff-cust-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button {
+        left: 51.75%; } }
+    @media (max-width: 1380px) {
+      .cover_aff-cust-button .p {
+        font-size: 2rem; }
+      .cover_aff-cust-button .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
+    @media (max-width: 75em) {
+      .cover_aff-cust-button {
+        left: 52.75%; } }
     @media (max-width: 1380px) {
       .cover_aff-cust-button .p {
         font-size: 2rem; }
@@ -3918,11 +3936,11 @@ figure {
 .deal2-det,
 .deal3-det {
   display: inline-block;
-  position: absolute;
-  top: 2.3rem;
+  position: relative;
+  top: 4.3rem;
+  left: 1.5rem;
   font-size: 1.3rem;
-  color: #626567;
-  margin-left: 1rem; }
+  color: #626567; }
   .deal1-det-name,
   .deal2-det-name,
   .deal3-det-name {

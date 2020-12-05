@@ -722,7 +722,8 @@ h2 {
 .dropdown {
   background-color: white;
   width: 130px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  text-align: left; }
 
 .dropdown li {
   padding: 5px 10px; }
@@ -735,6 +736,9 @@ h2 {
   color: black;
   font-size: 14px;
   font-family: "Montserrat"; }
+
+.dropdown li a i {
+  margin-right: 5px; }
 
 .user-nav__user-photo {
   width: 5rem;

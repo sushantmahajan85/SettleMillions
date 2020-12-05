@@ -283,10 +283,10 @@
     <ul>
       <li><a href=<%= `/member/${user.id}` %>><img style="margin-top: 0rem;" src=<%=`/img/users/${user.photo}` %> alt="User photo"
             class="user-nav__user-photo" /></a>
-        <ul class="dropdown" style="background-color: black;">
-          <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
-          <li><a href="/updateUserSettings">Edit Profile</a></li>
-          <li><a onclick="loca();signOut()">Logout</a></li>
+        <ul class="dropdown">
+          <li><a href=<%= `/member/${user.id}` %>><i class="fas fa-user"></i>Profile</a></li>
+          <li><a href="/updateUserSettings"><i class="fas fa-user-edit"></i>Edit Profile</a></li>
+          <li><a onclick="loca();signOut()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
         </ul>
       </nav>
          <% } else { %>
@@ -295,10 +295,10 @@
             <li><a href=<%= `/member/${user.id}` %> ><img style="margin-top: 0rem;"
               data-name=<%=user.name %> data-color="#85e0ce" class="profile
               user-nav__user-photo"/></a>
-              <ul class="dropdown" style="background-color: black;">
-                <li><a href=<%= `/member/${user.id}` %>>Profile</a></li>
-                <li><a href="/updateUserSettings">Edit Profile</a></li>
-                <li><a onclick="loca();signOut()">Logout</a></li>
+              <ul class="dropdown">
+                <li><a href=<%= `/member/${user.id}` %>><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="/updateUserSettings"><i class="fas fa-user-edit"></i>Edit Profile</a></li>
+                <li><a onclick="loca();signOut()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
               </ul>
             </li>
           </ul>

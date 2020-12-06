@@ -247,113 +247,116 @@ window.location.href = url;
          <%  var i = 0; %>
          <% for(var deal of deals) { %>
          <% i++; %>
-         
-            <!-- <div class="big-deal"> -->
+         <%  function kFormatter(num) {
+            return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+          } 
+          var vui = kFormatter(deal.views);
         
-
-               <div class="sp_deal-box">
-                  <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>> 
-               <div class="big-deal_img" data-pause="true" data-interval="1000">
-                  <div
-                  class="carousel-item active"
-                  style="background-color: white !important;"
-                  >
+        
+          var tem = Math.round(deal.time/360000)/10;
+          var day = Math.round((tem/2.4))/10;
+          %>
+         <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
+            <div class="mep_deal-box">
+          
+              <!-- <div class="big_img_container"> -->
+              <div class="mep_deal_box_img" data-pause="true" data-interval="1000">
+                <div class="carousel-item active" style="background-color: white !important;">
+                  <img src=<%= `/img/deals/${deal.titleImg}` %> alt="Deal Photo"
+                    class="big-deal_pic" />
+                </div>
+                <!-- <div class="carousel-item" style="background-color: white !important;">
                   <img
-                     src="/images/acer-na-gaming-laptop-original-imafj5dpnuuy2dvd.jpeg"
-                     alt="Deal Photo"
-                     class="big-deal_picture"
-                  >
-                  </div>
-                  <div
-                  class="carousel-item"
-                  style="background-color: white !important;"
-                  >
-                  <img
-                     src="/images/durex-400-play-massage-gel-2-in-1-sensual-stimulating-combo-original-imaey2yuygdhkamq.jpeg"
-                     alt="Deal Photo"
-                     class="big-deal_picture"
-                  >
-                  </div>
-                  <div
-                  class="carousel-item"
-                  style="background-color: white !important;"
-                  >
-                  <img
-                     src="/images/jeans.jpeg"
-                     alt="Deal Photo"
-                     class="big-deal_picture"
-                  >
-                  </div>
-               </div>
-               <!-- <div class="big-deal_content"> -->
-                  <div class="sp_deal_area-content" style="padding-left: 22.78rem;">
-                     <div class="sp_deal_content-box" style="display: flex;flex-direction: row;align-items: center; ">
-                        <div class=" sp_deal-title"><%= deal.dealName %> </div>
-                      </div>
-                  <!-- <div class="big-deal_name">
-                  <h4><%= deal.dealName %> </h4>
+                    src="/img/deals/deal-5f6b8b6f33e4780a88627d08-1600883685161-4.jpeg"
+                    alt="Deal Photo" class="big-deal_pic" />
+                </div>
+                <div class="carousel-item" style="background-color: white !important;">
+                  <img src="/images/jeans.jpeg" alt="Deal Photo" class="big-deal_pic" />
+                </div> -->
+              </div>
+              <!-- </div> -->
+              <div class="mep_deal_area-content">
+                <div class="mep_deal_content-box" style="display: flex;flex-direction: row;align-items: center; ">
+                  <div class=" mep_deal-title"><%= deal.dealName %> </div>
+                </div>
+                <!-- <div class=" mep_deal-title">
+                    <h4><%= deal.dealName %></h4>
                   </div> -->
-
-                  <div class="sp_deal-r1" style="display: flex;flex-direction: row;align-items: center; ">
-                     <!-- <a href="" class="ld_deal-r1-det"><%= deal.owner %></a> -->
-                     <div class="sp_deal-r1-det"><%= deal.owner %> </div>
-                     <!-- <a href="" class="ld_deal-r1-det">Flipkart</a> -->
-                     <div class="sp_deal-r1-det">Flipkart</div>
-                    
-                   </div>
-
-                  <!-- <div class="big-deal_buttons">
-                  <div class="big-deal_user"><%= deal.owner %> </div>
-                  </div> -->
-
-                  <div class="sp_deal-r2" style="display: flex;flex-direction: row;align-items: center; width: 70rem;" >
-                     <div class="sp_deal-r2-det"><%= deal.biggerDis %> </div>
-                   </div>
-
-                   <div class="sp_deal-r3" style="display: flex;flex-direction: row ">
-                     <div class="sp_deal-r3-dp">₹<%= deal.dealPrice %></div>
-                     <div class="sp_deal-r3-mrp"><%= deal.mrp %> </div>
-                     <div class="sp_deal-r3-dis">50% OFF</div>
-                   </div>
-
-                   <div class="sp_deal-r4" style="display: flex;flex-direction: row">
-                     <!-- <div class="sp_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div> -->
-                     <div class="sp_deal-r4-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
-                         class="far fa-eye"></i><%= deal.views %> views </div>
-                         <div class="sp_deal-r4-det"><i id="img_sp_deal_views" style="margin-right: 0.5rem;"
-                           class="far fa-clock"></i>May 2020</div>
-                   </div>
-
-                  <!-- <div class="big-deal_vt">
-                  <p class="big-deal_views"><%= deal.views %>  views</p>
-                  <p class="big-deal_time"><%= deal.mrp %> days ago</p>
-                  </div> -->
-
+          
+                <div class="mep_deal-r1" style="display: flex;flex-direction: row;align-items: center; ">
+                  <!-- <a href="" class="ld_deal-r1-det"><%= deal.owner %></a> -->
+                  <div class="mep_deal-r1-det"><%= deal.owner %></div>
+                  <!-- <a href="" class="ld_deal-r1-det">Flipkart</a> -->
+                  <div class="mep_deal-r1-det"><%= deal.company %></div>
+                  <% if (tem > 24) { %>
+                    <div class="mep_deal-r1-det"><%=`${day} day(s)`%></div>
+                    <% } else if (tem > 1) { %>
+                    <div class="mep_deal-r1-det"><%=`${tem} hr`%></div>
+                    <% } else { %>
+                    <div class="mep_deal-r1-det"><%=`${tem*60} min`%></div>
+                    <% } %>
+                  </div>
+            
+                  <div class="mep_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
+                    <div class="mep_deal-r2-det"><%= deal.biggerDis %></div>
+                  </div>
+            
+            
                   <!-- <div class="big-deal_des">
-                  <p class="paragraphx">
-                     <%= deal.titleDis %> 
-                  </p>
-                  </div> -->
+                      <p class="paragraphx">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis rem, natus quam corrupti...
+                      </p>
+                    </div> -->
+            
+                  <div class="mep_deal-r3" style="display: flex;flex-direction: row ">
+                    <div class="mep_deal-r3-dp">₹<%= deal.dealPrice %></div>
+                    <div class="mep_deal-r3-mrp">₹<%= deal.mrp %></div>
+                    <div class="mep_deal-r3-dis">50% OFF</div>
+                  </div>
+            
                   <!-- <div class="big-deal_price">
-                  <h4
-                     class="heading-normal"
-                     style="letter-spacing: 0.2rem;font-size: 2rem"
-                  >
-                     Rs.<%= deal.mrp %> 
-                  </h4>
-                  </div> -->
-                  <!-- <div class="big-deal_dis">
-                  <strike
-                     style="font-size: 1.8rem; color:rgb(82, 80, 80);margin-right: 2rem"
-                     >Rs.<%= deal.dealPrice %> </strike
-                  >
-
-                  <h3 class="big-deal_percent">70% OFF</h3>
-                  </div> -->
-               </div>
-            </a>
+                      <h4
+                        class="heading-normal"
+                        style="letter-spacing: 0.2rem;font-size: 2rem"
+                      >
+                        Rs. 4366
+                      </h4>
+                    </div>
+                    <div class="big-deal_dis">
+                      <strike>Rs.7854</strike>
+                      <h3 class="big-deal_percent">70% OFF</h3>
+                    </div> -->
+            
+                  <div class="mep_deal-r4" style="display: flex;flex-direction: row">
+                    <!-- <div class="mep_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div> -->
+                    <div class="mep_deal-r4-det"><i id="img_mep_deal_views"
+                        class="far fa-eye"></i><%= `${vui} views` %> </div>
+                  </div>
+          
+                <!-- <div class="big-deal_vt">
+                    <p class="big-deal_views"><%= `${deal.views} views` %>  </p> -->
+                <!-- <p class="big-deal_time">4 days ago</p> -->
+                <!-- </div> -->
+          
+                <form action="/" method="GET" class=reportx>
+                  <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
+                    <option selected disabled value="empty"></option>
+                    <option value=<%= `${deal._id}/report` %>>Report</option>
+                    <option value=<%= `${deal._id}/like` %>>Like</option>
+                    <% if (user) { %>
+                    <% if (user.id == deal.user) { %>
+                    <option value=<%= `${deal._id}/edit` %>>Edit</option>
+                    <option value=<%= `${deal._id}/delete` %>>Delete</option>
+                    <% } %>
+                    <% } %>
+          
+                  </select>
+                </form>
+          
+              </div>
             </div>
-        
+          </a>        
         <% if (i === 20){break;}%>
         <% } %>
         </div>

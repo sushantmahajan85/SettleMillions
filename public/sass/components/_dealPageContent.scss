@@ -457,7 +457,7 @@
   font-size: 2rem;
 
   @include respond(tab-land) {
-    width: 68%;
+    width: 75%;
   }
 
   @include respond(tab-port) {
@@ -528,6 +528,10 @@
   background-color: white;
   width: 95rem;
   margin: 0.5rem 0rem 0.5rem 3rem;
+
+  @include respond(tab-land) {
+    width: 68vw;
+  }
 
   @include respond(tab-port) {
     width: 63rem;

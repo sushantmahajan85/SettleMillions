@@ -1,3 +1,11 @@
+.navbar_wrapper {
+  height: 12vh;
+
+  @include respond(tab-land) {
+    height: 7vh;
+  }
+}
+
 .dealPageContent {
   display: flex;
   margin-top: 3rem;
@@ -453,12 +461,13 @@
   }
 
   @include respond(tab-port) {
-    width: 50%;
+    width: 73%;
   }
 
   @include respond(phone) {
     width: 76%;
   }
+
   @include respond(small-phone) {
     width: 67%;
   }
@@ -519,6 +528,11 @@
   background-color: white;
   width: 95rem;
   margin: 0.5rem 0rem 0.5rem 3rem;
+
+  @include respond(tab-port) {
+    width: 63rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+  }
 
   @include respond(phone) {
     width: 90vw;

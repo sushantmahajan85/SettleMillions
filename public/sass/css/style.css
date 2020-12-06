@@ -951,7 +951,8 @@ nav li {
   @media (max-width: 75em) {
     .nav_logo {
       display: block;
-      visibility: visible; } }
+      visibility: visible;
+      top: 1.7rem; } }
   @media (max-width: 1380px) {
     .nav_logo .p {
       font-size: 2rem; }
@@ -2159,6 +2160,18 @@ figure {
   position: relative;
   top: 0.13rem; }
 
+.navbar_wrapper {
+  height: 12vh; }
+  @media (max-width: 75em) {
+    .navbar_wrapper {
+      height: 7vh; } }
+  @media (max-width: 1380px) {
+    .navbar_wrapper .p {
+      font-size: 2rem; }
+    .navbar_wrapper .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
 .dealPageContent {
   display: flex;
   margin-top: 3rem;
@@ -2650,7 +2663,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .add-review-text-area {
-      width: 50%; } }
+      width: 73%; } }
   @media (max-width: 1380px) {
     .add-review-text-area .p {
       font-size: 2rem; }
@@ -2724,6 +2737,16 @@ figure {
   background-color: white;
   width: 95rem;
   margin: 0.5rem 0rem 0.5rem 3rem; }
+  @media (max-width: 56.25em) {
+    .reviews {
+      width: 63rem;
+      margin: 0.5rem 0rem 0.5rem 0rem; } }
+  @media (max-width: 1380px) {
+    .reviews .p {
+      font-size: 2rem; }
+    .reviews .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .reviews {
       width: 90vw; } }

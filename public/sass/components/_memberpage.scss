@@ -345,7 +345,6 @@
       left: 52.75%;
     }
 
-
     @include respond(tab-port) {
       left: 58%;
     }
@@ -423,12 +422,22 @@
     left: 5%;
     width: 32rem;
 
+    @include respond(phone) {
+      width: 18rem;
+      left: 1%;
+    }
+
     & img {
       object-fit: scale-down;
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply;
       border: 2px solid #ecf0f1;
+
+      @include respond(phone) {
+        width: 10rem;
+        height: 16rem;
+      }
     }
   }
   &-deal2 {
@@ -437,11 +446,19 @@
     left: 35%;
     width: 32rem;
 
+    @include respond(phone) {
+      width: 18rem;
+      left: 34%;
+    }
     & img {
       object-fit: scale-down;
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply;
+      @include respond(phone) {
+        width: 10rem;
+        height: 16rem;
+      }
     }
   }
   &-deal3 {
@@ -450,11 +467,21 @@
     left: 65%;
     width: 32rem;
 
+    @include respond(phone) {
+      width: 18rem;
+      left: 67%;
+    }
+
     & img {
       object-fit: scale-down;
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply;
+
+      @include respond(phone) {
+        width: 10rem;
+        height: 16rem;
+      }
     }
   }
 }
@@ -592,7 +619,7 @@
   display: flex;
   // background-color: white;
   margin: 0.5rem;
-  margin-left: 10rem;
+  // margin-left: 10rem;
   width: 100rem;
   height: 25rem;
   margin-bottom: 3.5rem;
@@ -618,10 +645,18 @@
 
   // }
 
+  @include respond(tab-land) {
+    width: 90rem;
+  }
+
+  @include respond(tab-port) {
+    width: 90rem;
+  }
+
   @include respond(phone) {
     margin-left: 0rem;
-    width: 98%;
-    height: 23rem;
+    width: 53rem;
+    height: 21rem;
   }
 
   &:hover {
@@ -636,7 +671,7 @@
 
   @include respond(phone) {
     margin-left: 0rem;
-    width: 46%;
+    width: 28%;
   }
 }
 

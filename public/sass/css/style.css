@@ -2162,6 +2162,15 @@ figure {
 
 .navbar_wrapper {
   height: 12vh; }
+  @media (max-width: 1380px) {
+    .navbar_wrapper {
+      height: 8vh; } }
+  @media (max-width: 1380px) {
+    .navbar_wrapper .p {
+      font-size: 2rem; }
+    .navbar_wrapper .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 75em) {
     .navbar_wrapper {
       height: 7vh; } }
@@ -2654,7 +2663,7 @@ figure {
   font-size: 2rem; }
   @media (max-width: 75em) {
     .add-review-text-area {
-      width: 68%; } }
+      width: 75%; } }
   @media (max-width: 1380px) {
     .add-review-text-area .p {
       font-size: 2rem; }
@@ -2737,9 +2746,18 @@ figure {
   background-color: white;
   width: 95rem;
   margin: 0.5rem 0rem 0.5rem 3rem; }
+  @media (max-width: 75em) {
+    .reviews {
+      width: 68vw; } }
+  @media (max-width: 1380px) {
+    .reviews .p {
+      font-size: 2rem; }
+    .reviews .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .reviews {
-      width: 63rem;
+      width: 66vw;
       margin: 0.5rem 0rem 0.5rem 0rem; } }
   @media (max-width: 1380px) {
     .reviews .p {
@@ -2826,6 +2844,15 @@ figure {
 
 .deal_box_nameTime {
   margin-bottom: 2rem; }
+  @media (max-width: 56.25em) {
+    .deal_box_nameTime {
+      margin-bottom: 1.2rem; } }
+  @media (max-width: 1380px) {
+    .deal_box_nameTime .p {
+      font-size: 2rem; }
+    .deal_box_nameTime .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .deal_box_nameTime {
       margin-bottom: 1.55rem; } }
@@ -3393,6 +3420,15 @@ figure {
   margin-left: 1.6rem;
   height: 16rem;
   padding-top: 1rem; }
+  @media (max-width: 56.25em) {
+    .side_deals .deal_area_content {
+      padding-top: 0; } }
+  @media (max-width: 1380px) {
+    .side_deals .deal_area_content .p {
+      font-size: 2rem; }
+    .side_deals .deal_area_content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .side_deals .deal_box_name {
   margin-right: 0rem; }
@@ -3458,6 +3494,15 @@ figure {
 
 .dp-price-row {
   margin-bottom: 1.2rem; }
+  @media (max-width: 56.25em) {
+    .dp-price-row {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .dp-price-row .p {
+      font-size: 2rem; }
+    .dp-price-row .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media (max-width: 75em) {
   .bigImg_container {

@@ -1,6 +1,10 @@
 .navbar_wrapper {
   height: 12vh;
 
+  @include respond(achi2) {
+    height: 8vh;
+  }
+
   @include respond(tab-land) {
     height: 7vh;
   }
@@ -534,7 +538,7 @@
   }
 
   @include respond(tab-port) {
-    width: 63rem;
+    width: 66vw;
     margin: 0.5rem 0rem 0.5rem 0rem;
   }
 
@@ -632,6 +636,10 @@
   // @include respond(phone) {
   //   font-size: 12.5px !important;
   // }
+
+  @include respond(tab-port) {
+    margin-bottom: 1.2rem;
+  }
 
   @include respond(small-phone) {
     margin-bottom: 1.55rem;
@@ -1273,6 +1281,10 @@
   margin-left: 1.6rem;
   height: 16rem;
   padding-top: 1rem;
+
+  @include respond(tab-port) {
+    padding-top: 0;
+  }
 }
 
 .side_deals .deal_box_name {
@@ -1337,6 +1349,10 @@
 
 .dp-price-row {
   margin-bottom: 1.2rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 1rem;
+  }
 }
 
 .bigImg_container {

@@ -98,7 +98,7 @@ body {
 
 .side_bar {
   top: 8rem;
-  width: 12%;
+  width: 13%;
   background-color: white;
   height: 90%;
   border: solid 1px lightgrey;
@@ -1292,7 +1292,7 @@ body {
   box-sizing: border-box; }
 
 .page-content {
-  margin-left: 12%;
+  margin-left: 13%;
   background-color: white; }
   @media (max-width: 75em) {
     .page-content {
@@ -6750,7 +6750,7 @@ rgba(0, 0, 0, 0.349);
       margin-right: 1rem; } }
 
 .heading-normal {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
   font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }

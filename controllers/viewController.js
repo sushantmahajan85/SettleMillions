@@ -31,14 +31,11 @@ let rec5 = "";
 
 exports.calcul = catchAsync(async (req, res) => {
   const tempideals = await Deal.find();
-  
 
   for (var deal of tempideals) {
     var now = new Date(Date.now());
     var tem = (now.getTime() - 1000000000000) / 3600000;
     tem = deal.views / tem;
-
-    
 
     await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
   }
@@ -46,7 +43,6 @@ exports.calcul = catchAsync(async (req, res) => {
 
 exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
-  
 
   if (deal) {
     res.redirect(deal.long.split("4000")[1]);
@@ -81,11 +77,9 @@ exports.analytics = catchAsync(async (req, res) => {
 });
 
 exports.pageDeal = (req, res) => {
-  
   res.status(200).render("pageDeal");
 };
 exports.newsDeal = (req, res) => {
-  
   res.status(200).render("newsDeal");
 };
 exports.forgot = (req, res) => {
@@ -110,7 +104,8 @@ exports.getTrendingDeals = catchAsync(async (req, res) => {
   var teendin = 1000 * 60 * 60 * 24 * 3;
   const deals1 = await Deal.find({ time: { $lte: ekdin } }).sort([
     ["trendRatio", -1],
-  ]);const deals2 = await Deal.find({ time: { $lte: dodin, $gt: ekdin } }).sort([
+  ]);
+  const deals2 = await Deal.find({ time: { $lte: dodin, $gt: ekdin } }).sort([
     ["trendRatio", -1],
   ]);
   const deals3 = await Deal.find({ time: { $lte: teendin, $gt: dodin } }).sort([
@@ -249,7 +244,6 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
     }
   }
 
-
   // allDeals.sort(function(a, b) {
   //   var keyA = new Date(a.time),
   //     keyB = new Date(b.time);
@@ -324,19 +318,17 @@ exports.autocomplete = catchAsync(async (req, res) => {
   });
 });
 exports.category = catchAsync(async (req, res) => {
-  const categoryDeals = await Deal.find({ category: req.params.cat }).sort([
-    ["time", -1],
-  ]).limit(100);
+  const categoryDeals = await Deal.find({ category: req.params.cat })
+    .sort([["time", -1]])
+    .limit(100);
   const subs = await Subscriber.find({
     user: req.logged,
   });
 
-  res.status(200).render("category",{categoryDeals,subs});
-})
-
+  res.status(200).render("category", { categoryDeals, subs });
+});
 
 exports.mainPage = catchAsync(async (req, res) => {
-  
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
 
@@ -665,16 +657,20 @@ exports.mainPage = catchAsync(async (req, res) => {
       { _id: req.params.dealId },
       { $inc: { views: 1 } }
     );
-    var dodin = 1000 * 60 * 60 * 24 * 2;
-    const deals = await Deal.find({time: { $lte: dodin}})
+    // var dodin = 1000 * 60 * 60 * 24 * 2;
+    const deals = await Deal.find()
       .sort([["trendRatio", -1]])
       .limit(16);
     const liveDeals = await Deal.find()
       .sort([["time", 1]])
       .limit(16);
-const news = await News.find().sort([["time",-1]]).limit(10);
+    const news = await News.find()
+      .sort([["time", -1]])
+      .limit(10);
 
-const page = await Page.find().sort([["time",-1]]).limit(10);
+    const page = await Page.find()
+      .sort([["time", -1]])
+      .limit(10);
     var yesNo = 0;
     if (req.cookies.Joined) {
       yesNo = 1;
@@ -694,7 +690,7 @@ const page = await Page.find().sort([["time",-1]]).limit(10);
       subs,
       yesNo,
       news,
-      page
+      page,
     });
 
     // for (var deal of deals) {
@@ -710,7 +706,6 @@ const page = await Page.find().sort([["time",-1]]).limit(10);
 exports.getMemberData = catchAsync(async (req, res) => {
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
-
 
     if (joChahiye[1] == "report") {
       await Deal.findOneAndUpdate(
@@ -970,12 +965,14 @@ exports.getMemberData = catchAsync(async (req, res) => {
   //     },
   //   },
   // ]);
-// const numDeals = await Deal.find({user: req.params.id});
-// console.log(totalLikes); 
+  // const numDeals = await Deal.find({user: req.params.id});
+  // console.log(totalLikes);
   // console.log(rec);
-  const numSubscribers = await Subscriber.find({subscribedUser: req.params.id});
-   const numSub = numSubscribers.length;
-   const deals = await Deal.find({user:req.params.id}).sort([['time',-1]]);
+  const numSubscribers = await Subscriber.find({
+    subscribedUser: req.params.id,
+  });
+  const numSub = numSubscribers.length;
+  const deals = await Deal.find({ user: req.params.id }).sort([["time", -1]]);
   //  console.log(deals);
   // const deals = await Deal.find(
   //   { $text: { $search: rec } },
@@ -1032,7 +1029,6 @@ exports.getMemberData = catchAsync(async (req, res) => {
 exports.recently = catchAsync(async (req, res) => {
   const deals = req.cookies;
 
-
   const subs = await Subscriber.find({
     user: req.logged,
   });
@@ -1052,13 +1048,13 @@ exports.updateUserSettings = catchAsync(async (req, res) => {
   res.status(200).render("updateSettings", { user });
 });
 exports.livePage = catchAsync(async (req, res) => {
-  
-  const liveDeals = await Deal.find().sort([["time", 1]]).limit(100);
- 
+  const liveDeals = await Deal.find()
+    .sort([["time", 1]])
+    .limit(100);
+
   const subs = await Subscriber.find({
     user: req.logged,
   });
-  
 
   res.status(200).render("live", { liveDeals, subs });
 });
@@ -1359,7 +1355,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   const postedBy = await User.findById(req.params.sellerId);
   const trendDeals = await Deal.find().sort([[`${sortBy}`, order]]);
- 
+
   res.status(200).render("deal", {
     deal,
     reco,

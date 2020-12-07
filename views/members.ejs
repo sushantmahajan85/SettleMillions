@@ -36,7 +36,7 @@
               <i class="add-icon fas fa-plus"></i>
             </a>
             </div>
-        </div>
+        </div>  
         <div class="cover_aff-name">Cooper Deals <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
         <div class="cover_aff-subs"><%=`${numSub} subscribers`%></div>
 
@@ -84,7 +84,7 @@
       <% var i = 0%> 
 <% for(var deal of deals ) { %>
   
-<% if ( deal.user == userId) { %>
+
   <% i++ %> 
   <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
   <div class=<%= `latest-deals-deal${i}` %>>
@@ -102,7 +102,7 @@
     </div>
   </a>
   <% if (i === 3){break;}%>
-  <% } %>                
+                 
 <% } %>
 
 </div> -->
@@ -110,7 +110,7 @@
       <div id="trending" class="trending" style="padding-top: 9.3rem;">
         <% var j = 0 %> 
         <% for(var deal of deals) { %>
-<% if (deal.user == userId) { %>
+
   <%  function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
   } 
@@ -224,7 +224,7 @@
 </a>
   
   <% if (j === 30){break;}%>
-        <% } %>
+    
         <% } %>
         
       </div>

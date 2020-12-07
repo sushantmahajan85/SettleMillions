@@ -975,12 +975,14 @@ exports.getMemberData = catchAsync(async (req, res) => {
   // console.log(rec);
   const numSubscribers = await Subscriber.find({subscribedUser: req.params.id});
    const numSub = numSubscribers.length;
-  const deals = await Deal.find(
-    { $text: { $search: rec } },
-    { score: { $meta: "textScore" } }
+   const deals = await Deal.find({user:req.params.id}).sort([['time',-1]]);
+  //  console.log(deals);
+  // const deals = await Deal.find(
+  //   { $text: { $search: rec } },
+  //   { score: { $meta: "textScore" } }
 
-    //{ trendRatio: { $gte: 4 } }
-  ).sort({ score: { $meta: "textScore" } });
+  //   //{ trendRatio: { $gte: 4 } }
+  // ).sort({ score: { $meta: "textScore" } });
   const userId = req.params.id;
   if (req.logged) {
     const xyz = await User.findById(req.logged.id);

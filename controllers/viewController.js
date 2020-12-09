@@ -329,6 +329,7 @@ exports.category = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
+  console.log("ec2 checking");
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
 
@@ -641,7 +642,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     // const topUsers = await User.find().sort([["rank", -1]]);
 
     const apnaUser = await User.findById("5f6b9fc84df4c90017adb18b");
-    console.log(apnaUser);
+    // console.log(apnaUser);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 270 == 0) {
       await User.findByIdAndUpdate(

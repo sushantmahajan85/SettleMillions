@@ -434,10 +434,16 @@ h2 {
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+
   @include respond(phone) {
     display: none;
     visibility: hidden;
   }
+
   &-nav {
     display: flex;
     color: #333;

@@ -479,6 +479,15 @@ h2 {
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff; }
+  @media (max-width: 56.25em) {
+    .header_small {
+      display: none; } }
+  @media (max-width: 1380px) {
+    .header_small .p {
+      font-size: 2rem; }
+    .header_small .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .header_small {
       display: none;

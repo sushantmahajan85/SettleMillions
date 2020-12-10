@@ -65,7 +65,7 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   if (document.getElementById("corousel4").files[0]) {
     form.append("corouselImgs", document.getElementById("corousel4").files[0]);
   }
-
+  form.append("brand", document.getElementById("brand").value);
   // form.append("corousel", document.getElementById("corousel").files[0]);
   form.append("titleDis", document.getElementById("titleDis").value);
   form.append("biggerDis", document.getElementById("biggerDis").value);

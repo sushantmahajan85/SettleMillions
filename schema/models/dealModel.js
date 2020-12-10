@@ -28,6 +28,9 @@ const dealSchema = new mongoose.Schema(
       //required: true,
       //unique: true
     },
+    brand:{
+type: String
+    },
     views: {
       type: Number,
       default: 0,

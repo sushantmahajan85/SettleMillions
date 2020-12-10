@@ -24,7 +24,7 @@ const dealSchema = new mongoose.Schema(
     },
     short: {
       type: String,
-      default: shortid.generate(),
+      // default: shortid.generate(),
       //required: true,
       //unique: true
     },
@@ -91,6 +91,7 @@ type: String
       type: Number,
     },
     corouselImgs: [String],
+    subCat: String,
     discount: Number,
     tags: Array,
     user: {
@@ -109,9 +110,9 @@ dealSchema.virtual("reviews", {
 });
 
 dealSchema.post("save", async function() {
-  // const shorter = shortid.generate();
-  // this.short = shorter;
-  this.discount = Math.round((((this.mrp - this.dealPrice)/(this.mrp))*100));
+  const shorter = shortid.generate();
+  this.short = shorter;
+  this.discount = Math.round((((this.dealPrice - this.mrp)/(this.dealPrice))*100));
   this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
   this.save();
 });

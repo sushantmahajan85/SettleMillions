@@ -46,10 +46,10 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   form.append("dealPrice", document.getElementById("dealPrice").value);
   form.append("mrp", document.getElementById("mrp").value);
   form.append("category", document.getElementById("category").value);
-  // form.append(
-  //   "categorySelect",
-  //   document.getElementById("categorySelect").value
-  // );
+  form.append(
+    "categorySelect",
+    document.getElementById("categorySelect").value
+  );
   if (document.getElementById("photos").files[0]) {
     form.append("titleImg", document.getElementById("photos").files[0]);
   }

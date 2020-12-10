@@ -111,7 +111,7 @@ dealSchema.virtual("reviews", {
 dealSchema.post("save", async function() {
   // const shorter = shortid.generate();
   // this.short = shorter;
-  this.discount = ((this.mrp - this.dealPrice)/(this.mrp))*100;
+  this.discount = Math.round((((this.mrp - this.dealPrice)/(this.mrp))*100));
   this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
   this.save();
 });

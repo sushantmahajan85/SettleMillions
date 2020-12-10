@@ -1485,7 +1485,7 @@ img {
   padding-top: 1rem; }
   @media (max-width: 75em) {
     .slideshow-container_phn {
-      height: 52vh; } }
+      height: 45vh; } }
   @media (max-width: 1380px) {
     .slideshow-container_phn .p {
       font-size: 2rem; }
@@ -2141,7 +2141,7 @@ figure {
   height: 25vh; }
   @media (max-width: 75em) {
     .carousel_image_small-1 {
-      height: 53vh; } }
+      height: 45vh; } }
   @media (max-width: 1380px) {
     .carousel_image_small-1 .p {
       font-size: 2rem; }

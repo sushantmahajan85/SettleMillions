@@ -167,7 +167,7 @@ img {
   //   margin: auto;
   //   float: right;
   @include respond(tab-land) {
-    height: 52vh;
+    height: 45vh;
   }
   @include respond(phone) {
     padding-top: 10.6rem;
@@ -1008,7 +1008,7 @@ figure {
   height: 25vh;
 
   @include respond(tab-land) {
-    height: 53vh;
+    height: 45vh;
   }
 
   @include respond(phone) {

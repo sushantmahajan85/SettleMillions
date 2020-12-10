@@ -434,10 +434,16 @@ h2 {
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+
   @include respond(phone) {
     display: none;
     visibility: hidden;
   }
+
   &-nav {
     display: flex;
     color: #333;
@@ -624,6 +630,10 @@ h2 {
   // font-family: "Metal Mania", cursive;
   font-family: $family2;
   // D *changes * end
+
+  @include respond(tab-land) {
+    margin-left: 0rem;
+  }
 
   &:hover {
     color: rgb(231, 76, 60);
@@ -1100,7 +1110,8 @@ nav li {
   @include respond(tab-land) {
     display: block;
     visibility: visible;
-    top: 1.7rem;
+    top: 1.5rem;
+    left: 3rem;
   }
   // background-color: black;
 }

@@ -87,7 +87,7 @@ app.use("/api/v1/subscribe", subscriberRouter);
 app.use("/api/v1/testing", testingRouter);
 app.use("/", viewRouter);
 app.all("*", (req, res, next) => {
-  res.status(200).render(error);
+  res.status(200).render('error');
 });
 app.use(globalErrorHandler);
 const port = process.env.PORT;

@@ -60,7 +60,7 @@
    <% if (user) { %>
 
         <% if (log) { %>
-        <a href="" class="deal-deets_subs cover_aff-subs-button-txt cover_aff-unsub-button" id="unsubscribe_btn">Unsubscribe</a>
+        <a href="" class="deal-deets_subs cover_aff-subs-button-txt cover_aff-unsub-button" id="unsubscribe_btn" onclick="dealOperationssubscribe(`<%= log.id %>`)">Unsubscribe</a>
         <% } else { %>
         <a href="" class="deal-deets_subs cover_aff-subs-button-txt cover_aff-subs-button" id="subscribe_btn">Subscribe</a>
         <% } %>
@@ -68,7 +68,7 @@
         <% }else{ %>
         
         <a href="#" id="subscribe_btn_no" class="deal-deets_subs cover_aff-subs-button-txt cover_aff-subs-button">
-          <h6 class="cover_aff-cust-button-txt">Subscribe</h6>
+          <h6 class="cover_aff-cust-button-txt" onclick="document.getElementById('popupSubscribeMemberPage').style.display = 'block'">Subscribe</h6>
         </a>
 
         <% } %>
@@ -205,7 +205,7 @@
       <!-- </div> -->
 
       <form action="/" method="GET" class=reportx>
-        <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
+        <select class="mp_dealbox_three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
           <option selected disabled value="empty"></option>
           <option value=<%= `${deal._id}/report` %>>Report</option>
           <option value=<%= `${deal._id}/like` %>>Like</option>
@@ -327,7 +327,7 @@
       <!-- </div> -->
 
       <form action="/" method="GET" class=reportx>
-        <select class="three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
+        <select class="mp_dealbox_three-dots" id="big-three-dots" name="dealOps" onchange="dealOperations(this)">
           <option selected disabled value="empty"></option>
           <option value=<%= `${deal._id}/report` %>>Report</option>
           <option value=<%= `${deal._id}/like` %>>Like</option>
@@ -503,9 +503,30 @@
     <button id="report_btn">Report</button>
   </div>
   </div>
+
+  <div class="popup" id="popupSubscribeMemberPage">
+    <div class="popup_right">
+        <div class="popup_cross" id="popup_cross_like" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="document.getElementById('popupSubscribeMemberPage').style.display = 'none'">&times;</div>
+    </div>
+    <div class="popup_content" style="font-size: 2rem; text-align: center;">
+        Signup / Login to subscribe
+        <br>
+        <a href="/signup">
+        <button id="like_btn" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Signup / Login</button>
+        </a>
+      <button id="popup_cross_cancel_like" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68" onclick="document.getElementById('popupSubscribeMemberPage').style.display = 'none'">Cancel</button>
+    </div>
+</div>
   <script>document.getElementById('delete_btn').addEventListener('click', e => {
       document.getElementById('popup').style.display = 'none';
-    });</script>
+    });
+
+    function dealOperationssubscribe(el){
+      console.log(el);
+      passvalueunsubscribe(el);
+    }
+    
+    </script>
 </body>
 
 </html>

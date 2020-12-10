@@ -479,7 +479,7 @@ h2 {
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 75em) {
     .header_small {
       display: none; } }
   @media (max-width: 1380px) {
@@ -645,6 +645,15 @@ h2 {
   max-width: 400px;
   vertical-align: middle;
   font-family: "Montserrat", sans-serif; }
+  @media (max-width: 75em) {
+    .Navb_logo-text {
+      margin-left: 0rem; } }
+  @media (max-width: 1380px) {
+    .Navb_logo-text .p {
+      font-size: 2rem; }
+    .Navb_logo-text .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .Navb_logo-text:hover {
     color: #e74c3c; }
   .Navb_logo-text .Sidebar_logo {
@@ -961,7 +970,8 @@ nav li {
     .nav_logo {
       display: block;
       visibility: visible;
-      top: 1.7rem; } }
+      top: 1.5rem;
+      left: 3rem; } }
   @media (max-width: 1380px) {
     .nav_logo .p {
       font-size: 2rem; }

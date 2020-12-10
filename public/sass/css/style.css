@@ -1101,7 +1101,7 @@ nav li {
     margin-right: 1rem; } }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -6107,7 +6107,8 @@ Down
   background-image: linear-gradient(to right, rgba(238, 247, 255, 0.3), rgba(238, 247, 255, 0.3)), url("/img/newDealbackg.jpg");
   background-size: cover;
   background-size: cover;
-  padding: 6rem 0; }
+  padding: 6rem 0;
+  padding-bottom: 14rem; }
 
 .form_container {
   background-color: #f2f3f4;
@@ -6228,6 +6229,82 @@ Down
     border: 1px solid #bdc3c7;
     border-radius: 0.6rem;
     background-color: #f8f9f9; }
+
+.form_container input[type="submit"] {
+  width: 80%;
+  margin-left: 10%;
+  /* box-sizing: border-box; */
+  padding: 1rem 4rem;
+  margin-top: 4rem;
+  outline: none;
+  border: none;
+  background-color: #d10024;
+  /* opacity:0.1; */
+  border-radius: 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  /* height: 4rem; */
+  color: white;
+  transition: all 0.2s; }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] {
+      width: 80%;
+      margin-left: 10.5%; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .form_container input[type="submit"] {
+      width: 80%;
+      margin-left: 10.5%; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .form_container input[type="submit"] {
+      width: 80%;
+      margin-left: 9%; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .form_container input[type="submit"] {
+      width: 70%;
+      margin-left: 14%;
+      font-size: 1.9rem; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .form_container input[type="submit"] {
+      width: 70%;
+      margin-left: 12%;
+      font-size: 1.8rem;
+      padding: 1rem 2.2rem; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+.form_container input[type="submit"]:hover {
+  transform: translateY(-2px);
+  /* opacity:1; */
+  cursor: pointer; }
 
 .form_container h1 {
   text-align: center; }
@@ -6669,7 +6746,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -6753,7 +6830,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.4rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -6774,7 +6851,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

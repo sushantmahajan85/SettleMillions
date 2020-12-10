@@ -122,6 +122,7 @@
   background-size: cover;
   background-size: cover;
   padding: 6rem 0;
+  padding-bottom: 14rem;
 }
 
 .form_container {
@@ -213,6 +214,63 @@
     border-radius: 0.6rem;
     background-color: #f8f9f9;
   }
+}
+
+.form_container input[type="submit"] {
+  width: 80%;
+  margin-left: 10%;
+  /* box-sizing: border-box; */
+  padding: 1rem 4rem;
+  margin-top: 4rem;
+  outline: none;
+  border: none;
+  background-color: $maroon;
+  // background: linear-gradient($maroon, rgb(251, 251, 251));
+  /* opacity:0.1; */
+  border-radius: 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+
+  /* height: 4rem; */
+  color: white;
+  //margin-right: 3rem;
+  transition: all 0.2s;
+
+  @include respond(achi2) {
+    width: 80%;
+    margin-left: 10.5%;
+  }
+
+  @include respond(tab-land) {
+    width: 80%;
+    margin-left: 10.5%;
+  }
+
+  @include respond(tab-port) {
+    width: 80%;
+    margin-left: 9%;
+  }
+
+  @include respond(phone) {
+    width: 70%;
+    margin-left: 14%;
+    font-size: 1.9rem;
+  }
+
+  @include respond(small-phone) {
+    width: 70%;
+    margin-left: 12%;
+    font-size: 1.8rem;
+    padding: 1rem 2.2rem;
+  }
+}
+
+.form_container input[type="submit"]:hover {
+  transform: translateY(-2px);
+  // background: linear-gradient($maroon, $maroon-saturated);
+  /* opacity:1; */
+  cursor: pointer;
 }
 
 .form_container h1 {

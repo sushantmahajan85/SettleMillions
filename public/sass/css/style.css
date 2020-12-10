@@ -98,7 +98,7 @@ body {
 
 .side_bar {
   top: 8rem;
-  width: 12%;
+  width: 13%;
   background-color: white;
   height: 90%;
   border: solid 1px lightgrey;
@@ -951,7 +951,8 @@ nav li {
   @media (max-width: 75em) {
     .nav_logo {
       display: block;
-      visibility: visible; } }
+      visibility: visible;
+      top: 1.7rem; } }
   @media (max-width: 1380px) {
     .nav_logo .p {
       font-size: 2rem; }
@@ -1100,7 +1101,7 @@ nav li {
     margin-right: 1rem; } }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -1291,7 +1292,7 @@ body {
   box-sizing: border-box; }
 
 .page-content {
-  margin-left: 12%;
+  margin-left: 13%;
   background-color: white; }
   @media (max-width: 75em) {
     .page-content {
@@ -2049,6 +2050,7 @@ figure {
   border: none;
   height: 2rem;
   width: 2rem;
+  border-radius: 50%;
   display: block;
   background-image: url("../../img/deals/ml.PNG");
   background-size: 2rem 2rem;
@@ -2158,6 +2160,27 @@ figure {
 .mp_icon1 {
   position: relative;
   top: 0.13rem; }
+
+.navbar_wrapper {
+  height: 12vh; }
+  @media (max-width: 1380px) {
+    .navbar_wrapper {
+      height: 8vh; } }
+  @media (max-width: 1380px) {
+    .navbar_wrapper .p {
+      font-size: 2rem; }
+    .navbar_wrapper .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .navbar_wrapper {
+      height: 7vh; } }
+  @media (max-width: 1380px) {
+    .navbar_wrapper .p {
+      font-size: 2rem; }
+    .navbar_wrapper .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .dealPageContent {
   display: flex;
@@ -2641,7 +2664,7 @@ figure {
   font-size: 2rem; }
   @media (max-width: 75em) {
     .add-review-text-area {
-      width: 68%; } }
+      width: 75%; } }
   @media (max-width: 1380px) {
     .add-review-text-area .p {
       font-size: 2rem; }
@@ -2650,7 +2673,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 56.25em) {
     .add-review-text-area {
-      width: 50%; } }
+      width: 73%; } }
   @media (max-width: 1380px) {
     .add-review-text-area .p {
       font-size: 2rem; }
@@ -2724,6 +2747,25 @@ figure {
   background-color: white;
   width: 95rem;
   margin: 0.5rem 0rem 0.5rem 3rem; }
+  @media (max-width: 75em) {
+    .reviews {
+      width: 68vw; } }
+  @media (max-width: 1380px) {
+    .reviews .p {
+      font-size: 2rem; }
+    .reviews .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .reviews {
+      width: 66vw;
+      margin: 0.5rem 0rem 0.5rem 0rem; } }
+  @media (max-width: 1380px) {
+    .reviews .p {
+      font-size: 2rem; }
+    .reviews .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .reviews {
       width: 90vw; } }
@@ -2803,6 +2845,15 @@ figure {
 
 .deal_box_nameTime {
   margin-bottom: 2rem; }
+  @media (max-width: 56.25em) {
+    .deal_box_nameTime {
+      margin-bottom: 1.2rem; } }
+  @media (max-width: 1380px) {
+    .deal_box_nameTime .p {
+      font-size: 2rem; }
+    .deal_box_nameTime .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .deal_box_nameTime {
       margin-bottom: 1.55rem; } }
@@ -2873,7 +2924,7 @@ figure {
   float: left; }
 
 .deal_area {
-  padding-top: 6.5rem; }
+  padding-top: 7.5rem; }
 
 .member-page-content {
   background-color: white; }
@@ -3370,6 +3421,15 @@ figure {
   margin-left: 1.6rem;
   height: 16rem;
   padding-top: 1rem; }
+  @media (max-width: 56.25em) {
+    .side_deals .deal_area_content {
+      padding-top: 0; } }
+  @media (max-width: 1380px) {
+    .side_deals .deal_area_content .p {
+      font-size: 2rem; }
+    .side_deals .deal_area_content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 .side_deals .deal_box_name {
   margin-right: 0rem; }
@@ -3435,6 +3495,15 @@ figure {
 
 .dp-price-row {
   margin-bottom: 1.2rem; }
+  @media (max-width: 56.25em) {
+    .dp-price-row {
+      margin-bottom: 1rem; } }
+  @media (max-width: 1380px) {
+    .dp-price-row .p {
+      font-size: 2rem; }
+    .dp-price-row .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media (max-width: 75em) {
   .bigImg_container {
@@ -3465,7 +3534,7 @@ figure {
   background: #000000;
   opacity: 0.5;
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3905,32 +3974,92 @@ figure {
     top: 25%;
     left: 5%;
     width: 32rem; }
+    @media (max-width: 37.5em) {
+      .latest-deals-deal1 {
+        width: 18rem;
+        left: 1%; } }
+    @media (max-width: 1380px) {
+      .latest-deals-deal1 .p {
+        font-size: 2rem; }
+      .latest-deals-deal1 .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     .latest-deals-deal1 img {
       object-fit: scale-down;
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply;
       border: 2px solid #ecf0f1; }
+      @media (max-width: 37.5em) {
+        .latest-deals-deal1 img {
+          width: 10rem;
+          height: 16rem; } }
+      @media (max-width: 1380px) {
+        .latest-deals-deal1 img .p {
+          font-size: 2rem; }
+        .latest-deals-deal1 img .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
   .latest-deals-deal2 {
     position: absolute;
     top: 25%;
     left: 35%;
     width: 32rem; }
+    @media (max-width: 37.5em) {
+      .latest-deals-deal2 {
+        width: 18rem;
+        left: 34%; } }
+    @media (max-width: 1380px) {
+      .latest-deals-deal2 .p {
+        font-size: 2rem; }
+      .latest-deals-deal2 .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     .latest-deals-deal2 img {
       object-fit: scale-down;
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply; }
+      @media (max-width: 37.5em) {
+        .latest-deals-deal2 img {
+          width: 10rem;
+          height: 16rem; } }
+      @media (max-width: 1380px) {
+        .latest-deals-deal2 img .p {
+          font-size: 2rem; }
+        .latest-deals-deal2 img .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
   .latest-deals-deal3 {
     position: absolute;
     top: 25%;
     left: 65%;
     width: 32rem; }
+    @media (max-width: 37.5em) {
+      .latest-deals-deal3 {
+        width: 18rem;
+        left: 67%; } }
+    @media (max-width: 1380px) {
+      .latest-deals-deal3 .p {
+        font-size: 2rem; }
+      .latest-deals-deal3 .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
     .latest-deals-deal3 img {
       object-fit: scale-down;
       height: 20rem;
       width: 20rem;
       mix-blend-mode: multiply; }
+      @media (max-width: 37.5em) {
+        .latest-deals-deal3 img {
+          width: 10rem;
+          height: 16rem; } }
+      @media (max-width: 1380px) {
+        .latest-deals-deal3 img .p {
+          font-size: 2rem; }
+        .latest-deals-deal3 img .para {
+          font-size: 1.5rem;
+          margin-right: 1rem; } }
 
 .deal1-det,
 .deal2-det,
@@ -3991,7 +4120,6 @@ figure {
 .mep_deal-box {
   display: flex;
   margin: 0.5rem;
-  margin-left: 10rem;
   width: 100rem;
   height: 25rem;
   margin-bottom: 3.5rem;
@@ -4003,11 +4131,29 @@ figure {
   transition: all 0.3s;
   border: 1px solid #f2f2f2;
   background-color: #f2f2f2; }
+  @media (max-width: 75em) {
+    .mep_deal-box {
+      width: 90rem; } }
+  @media (max-width: 1380px) {
+    .mep_deal-box .p {
+      font-size: 2rem; }
+    .mep_deal-box .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .mep_deal-box {
+      width: 90rem; } }
+  @media (max-width: 1380px) {
+    .mep_deal-box .p {
+      font-size: 2rem; }
+    .mep_deal-box .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .mep_deal-box {
       margin-left: 0rem;
-      width: 98%;
-      height: 23rem; } }
+      width: 53rem;
+      height: 21rem; } }
   @media (max-width: 1380px) {
     .mep_deal-box .p {
       font-size: 2rem; }
@@ -4023,7 +4169,7 @@ figure {
   @media (max-width: 37.5em) {
     .mep_deal_box_img {
       margin-left: 0rem;
-      width: 46%; } }
+      width: 28%; } }
   @media (max-width: 1380px) {
     .mep_deal_box_img .p {
       font-size: 2rem; }
@@ -6523,7 +6669,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -6605,9 +6751,9 @@ rgba(0, 0, 0, 0.349);
       margin-right: 1rem; } }
 
 .heading-normal {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -6628,7 +6774,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

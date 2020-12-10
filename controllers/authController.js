@@ -13,6 +13,7 @@ const signToken = (id) =>
   });
 
 exports.signUp = async (req, res) => {
+  console.log("tesing server");
   try {
     const newz = await User.findOne({ gSignin: req.body.gSignin });
     console.log(newz);

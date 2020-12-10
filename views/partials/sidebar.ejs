@@ -71,7 +71,7 @@
 
       <% if (user) { %>
          <% if (subs.length != 0 ) { %>
-          <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem">
+          <h3 class="heading-normal" style="margin: 1rem 0 0.5rem 1rem">
         SUBSCRIPTIONS
       </h3>
        <% var i = 0; %>
@@ -232,13 +232,92 @@
 
       
          <% } else {%>
-           <h1 class="heading-normal" style="margin: 1rem 0 0.5rem 1.8rem;">
+           <h1 class="heading-normal" style="margin: 1rem 0 0.5rem 1rem;">
              SUBSCRIPTIONS
            </h1>
              <h3 class="heading-normal" style="margin: 0 auto; border-bottom: 1px solid rgb(212,211,211); color: rgb(100, 96, 96); padding-left: 1rem;">You have not yet subscribed to any user</h3>
+             <a href="">
+              <div class="item2 categories_title" >
+                <h4 class="heading-normal categories_title">Categories</h4>
+              </div>
+            </a>
+            <a href=<%= `/category/electronics` %>>
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar fas fa-shopping-bag font_icon"></i> Electronics
+                </h4>
+              </div>
+            </a>
+            <a href=<%= `/category/menFashion` %>>
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar fas fa-shopping-bag font_icon"></i> Men's Fashion
+                </h4>
+              </div>
+            </a>
+            <a href=<%= `/category/womenFashion` %>>
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar fas fa-shopping-bag font_icon"></i> Women's Fashion
+                </h4>
+              </div>
+            </a>
+            <a href=<%= `/category/home&kitchen` %>>
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar fas fa-shopping-bag font_icon"></i> Home & Kitchen
+                </h4>
+              </div>
+            </a>
+            <a href=<%= `/category/beauty` %>>
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar fas fa-shopping-bag font_icon"></i> Beauty
+                </h4>
+              </div>
+            </a>
+            <a href =<%= `/category/personalCare` %>>
+              <div class="item2" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:1.5rem">
+                <h4 class="heading-normal">
+                  <i class="small-sidebar fas fa-shopping-bag font_icon"></i> Personal Case
+                </h4>
+              </div>
+            </a>
+            <a href=" ">
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar far fa-arrow-alt-circle-right"></i> About Us
+                </h4>
+              </div>
+            </a>
+            
+        
+            <a href=" ">
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar far fa-arrow-alt-circle-right"></i> Contact Us
+                </h4>
+              </div>
+            </a>
+        
+            <a href=" ">
+              <div class="item2" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar far fa-arrow-alt-circle-right"></i> Terms & Conditions
+                </h4>
+              </div>
+            </a>
+        
+            <a href=" ">
+              <div class="item2" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" >
+                <h4 class="heading-normal">
+                  <i class="small-sidebar far fa-arrow-alt-circle-right"></i> Privacy Policy
+                </h4>
+              </div>
+            </a>
          <% } %> 
       <% } else {%>
-        <h3 class="heading-normal" style="margin: 1rem 0.5rem 0.5rem 1.8rem">
+        <h3 class="heading-normal" style="margin: 1rem 0.5rem 0.5rem 1rem">
           Sign in to like deals subscribe and earn
         </h3>
         <div class="deal-deets_buttons" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem">

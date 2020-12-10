@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-signin-client_id"
-      content="881941748196-g7mq7257r81aq3abb7k7e0np92rcioaf.apps.googleusercontent.com"
+      content="881941748196-9v850vpb75a5ab8u2ii0nouo84u6lee5.apps.googleusercontent.com"
     />
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
     <script
@@ -51,13 +51,13 @@
 
       function checkLoginState() {
         // Called when a person is finished with the Login Button.
-        FB.getLoginStatus(function(response) {
+        FB.getLoginStatus(function (response) {
           // See the onlogin handler
           statusChangeCallback(response);
         });
       }
 
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         FB.init({
           appId: "{app-id}",
           cookie: true, // Enable cookies to allow the server to access the session.
@@ -65,13 +65,13 @@
           version: "{api-version}", // Use this Graph API version for this call.
         });
 
-        FB.getLoginStatus(function(response) {
+        FB.getLoginStatus(function (response) {
           // Called after the JS SDK has been initialized.
           statusChangeCallback(response); // Returns the login status.
         });
       };
 
-      (function(d, s, id) {
+      (function (d, s, id) {
         // Load the SDK asynchronously
         var js,
           fjs = d.getElementsByTagName(s)[0];
@@ -86,7 +86,7 @@
         // Testing Graph API after login.
         //See statusChangeCallback() for  when this call is made.
         console.log("Welcome!  Fetching your information.... ");
-        FB.api("/me", { fields: "name, email" }, function(response) {
+        FB.api("/me", { fields: "name, email" }, function (response) {
           console.log(response);
           console.log("Successful login : " + response.name);
 
@@ -154,7 +154,7 @@
           data-theme="dark"
           data-onsuccess="onSignIn"
           class="g-signin2"
-          style="margin-top: 1.5rem;"
+          style="margin-top: 1.5rem"
         ></div>
 
         <!-- <div
@@ -327,13 +327,13 @@
       }, 2000);
     </script> -->
     <script>
-      window.onload = function() {
+      window.onload = function () {
         console.log("run kar rha");
         var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function() {
+        auth2.signOut().then(function () {
           console.log("User signed out.");
         });
-      }
+      };
     </script>
     <!--===============================================================================================-->
     <script src="/vendor/bootstrap/js/popper.js"></script>
@@ -345,6 +345,5 @@
     <!--===============================================================================================-->
     <script src="js/signup.js"></script>
     <script src="js/fbSignup.js"></script>
-    
   </body>
 </html>

@@ -540,6 +540,15 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9999999999999999999999999 !important; }
+  @media (max-width: 37.5em) {
+    .header {
+      font-size: 2.2rem; } }
+  @media (max-width: 1380px) {
+    .header .p {
+      font-size: 2rem; }
+    .header .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media only screen and (max-width: 31.25em) {
   .header {
@@ -648,6 +657,15 @@ h2 {
   @media (max-width: 75em) {
     .Navb_logo-text {
       margin-left: 0rem; } }
+  @media (max-width: 1380px) {
+    .Navb_logo-text .p {
+      font-size: 2rem; }
+    .Navb_logo-text .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .Navb_logo-text {
+      margin-left: 6rem; } }
   @media (max-width: 1380px) {
     .Navb_logo-text .p {
       font-size: 2rem; }
@@ -972,6 +990,16 @@ nav li {
       visibility: visible;
       top: 1.5rem;
       left: 3rem; } }
+  @media (max-width: 1380px) {
+    .nav_logo .p {
+      font-size: 2rem; }
+    .nav_logo .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .nav_logo {
+      top: 2.6rem;
+      left: 2.5rem; } }
   @media (max-width: 1380px) {
     .nav_logo .p {
       font-size: 2rem; }

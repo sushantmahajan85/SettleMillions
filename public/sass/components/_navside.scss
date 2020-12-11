@@ -484,7 +484,12 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9999999999999999999999999 !important;
+
+  @include respond(phone) {
+    font-size: 2.2rem;
+  }
 }
+
 @media only screen and (max-width: 31.25em) {
   .header {
     -ms-flex-wrap: wrap;
@@ -633,6 +638,10 @@ h2 {
 
   @include respond(tab-land) {
     margin-left: 0rem;
+  }
+
+  @include respond(phone) {
+    margin-left: 6rem;
   }
 
   &:hover {
@@ -1113,7 +1122,11 @@ nav li {
     top: 1.5rem;
     left: 3rem;
   }
-  // background-color: black;
+
+  @include respond(phone) {
+    top: 2.6rem;
+    left: 2.5rem;
+  }
 }
 // @media (max-width: 56.25em) {
 //   .nav_logo {

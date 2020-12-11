@@ -916,10 +916,11 @@
   }
 
   @include respond(tab-port) {
-    top: 97%;
+    top: 43%;
   }
+
   @include respond(phone) {
-    top: 63%;
+    top: 40;
   }
 
   @include respond(small-phone) {

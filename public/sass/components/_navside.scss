@@ -1144,29 +1144,36 @@ nav li {
     visibility: visible;
   }
 }
-.nav_tff {
-  text-align: start;
-  color: white;
-  font-size: 3.5rem;
-  margin-left: 4rem;
-  // margin-bottom: 4rem;
-  font-family: "Amaranth";
+// .nav_grabzy {
+//   text-align: start;
+//   color: white;
+//   font-size: 3.5rem;
+//   margin-left: 4rem;
+//   // margin-bottom: 4rem;
+//   font-family: "Amaranth";
 
-  @include respond(tab-land) {
-    margin-left: 3rem;
-  }
+//   @include respond(tab-land) {
+//     margin-left: 3rem;
+//   }
 
-  @include respond(tab-port) {
-    margin-left: 3.6rem;
-  }
+//   @include respond(tab-port) {
+//     margin-left: 3.6rem;
+//   }
 
-  @include respond(phone) {
-    margin-left: 4.2rem !important;
-  }
+//   @include respond(phone) {
+//     margin-left: 4.2rem !important;
+//   }
 
-  @include respond(small-phone) {
-    margin-left: 4.9rem !important;
-  }
+//   @include respond(small-phone) {
+//     margin-left: 4.9rem !important;
+//   }
+// }
+
+.nav_grabzy {
+  height: 6rem;
+  width: 18rem;
+  margin-left: 3rem;
+  margin-right: -11rem;
 }
 
 .scale_button1 {

@@ -1021,48 +1021,11 @@ nav li {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
-.nav_tff {
-  text-align: start;
-  color: white;
-  font-size: 3.5rem;
-  margin-left: 4rem;
-  font-family: "Amaranth"; }
-  @media (max-width: 75em) {
-    .nav_tff {
-      margin-left: 3rem; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-  @media (max-width: 56.25em) {
-    .nav_tff {
-      margin-left: 3.6rem; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-  @media (max-width: 37.5em) {
-    .nav_tff {
-      margin-left: 4.2rem !important; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-  @media (max-width: 22.2em) {
-    .nav_tff {
-      margin-left: 4.9rem !important; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
+.nav_grabzy {
+  height: 6rem;
+  width: 18rem;
+  margin-left: 3rem;
+  margin-right: -11rem; }
 
 @media (max-width: 1380px) {
   .scale_button1 {
@@ -2245,7 +2208,7 @@ figure {
   justify-content: space-between; }
   @media (max-width: 1380px) {
     .dealPageContent {
-      margin-top: 3rem; } }
+      margin-top: 6rem; } }
   @media (max-width: 1380px) {
     .dealPageContent .p {
       font-size: 2rem; }

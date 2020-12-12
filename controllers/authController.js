@@ -259,8 +259,8 @@ exports.login = async (req, res, next) => {
 
   /////////////////////////////////Error in Production/////////////////////////////////////////////
   try {
-    const url = "amazon.in";
-    await new Email(user, url).sendWelcome();
+    // const url = "amazon.in";
+    // await new Email(user, url).sendWelcome();
     // }catch (err) {
     //   console.log(err);
     // }

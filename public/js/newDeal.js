@@ -46,10 +46,10 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   form.append("dealPrice", document.getElementById("dealPrice").value);
   form.append("mrp", document.getElementById("mrp").value);
   form.append("category", document.getElementById("category").value);
-  // form.append(
-  //   "categorySelect",
-  //   document.getElementById("categorySelect").value
-  // );
+  form.append(
+    "categorySelect",
+    document.getElementById("categorySelect").value
+  );
   if (document.getElementById("photos").files[0]) {
     form.append("titleImg", document.getElementById("photos").files[0]);
   }
@@ -65,7 +65,7 @@ document.getElementById("regForm").addEventListener("submit", (e) => {
   if (document.getElementById("corousel4").files[0]) {
     form.append("corouselImgs", document.getElementById("corousel4").files[0]);
   }
-
+  form.append("brand", document.getElementById("brand").value);
   // form.append("corousel", document.getElementById("corousel").files[0]);
   form.append("titleDis", document.getElementById("titleDis").value);
   form.append("biggerDis", document.getElementById("biggerDis").value);

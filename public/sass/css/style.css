@@ -479,6 +479,15 @@ h2 {
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff; }
+  @media (max-width: 75em) {
+    .header_small {
+      display: none; } }
+  @media (max-width: 1380px) {
+    .header_small .p {
+      font-size: 2rem; }
+    .header_small .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .header_small {
       display: none;
@@ -531,6 +540,15 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9999999999999999999999999 !important; }
+  @media (max-width: 37.5em) {
+    .header {
+      font-size: 2.2rem; } }
+  @media (max-width: 1380px) {
+    .header .p {
+      font-size: 2rem; }
+    .header .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media only screen and (max-width: 31.25em) {
   .header {
@@ -636,6 +654,24 @@ h2 {
   max-width: 400px;
   vertical-align: middle;
   font-family: "Montserrat", sans-serif; }
+  @media (max-width: 75em) {
+    .Navb_logo-text {
+      margin-left: 0rem; } }
+  @media (max-width: 1380px) {
+    .Navb_logo-text .p {
+      font-size: 2rem; }
+    .Navb_logo-text .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .Navb_logo-text {
+      margin-left: 6rem; } }
+  @media (max-width: 1380px) {
+    .Navb_logo-text .p {
+      font-size: 2rem; }
+    .Navb_logo-text .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .Navb_logo-text:hover {
     color: #e74c3c; }
   .Navb_logo-text .Sidebar_logo {
@@ -952,7 +988,18 @@ nav li {
     .nav_logo {
       display: block;
       visibility: visible;
-      top: 1.7rem; } }
+      top: 1.5rem;
+      left: 3rem; } }
+  @media (max-width: 1380px) {
+    .nav_logo .p {
+      font-size: 2rem; }
+    .nav_logo .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .nav_logo {
+      top: 2.6rem;
+      left: 2.5rem; } }
   @media (max-width: 1380px) {
     .nav_logo .p {
       font-size: 2rem; }
@@ -974,48 +1021,11 @@ nav li {
       font-size: 1.5rem;
       margin-right: 1rem; } }
 
-.nav_tff {
-  text-align: start;
-  color: white;
-  font-size: 3.5rem;
-  margin-left: 4rem;
-  font-family: "Amaranth"; }
-  @media (max-width: 75em) {
-    .nav_tff {
-      margin-left: 3rem; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-  @media (max-width: 56.25em) {
-    .nav_tff {
-      margin-left: 3.6rem; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-  @media (max-width: 37.5em) {
-    .nav_tff {
-      margin-left: 4.2rem !important; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
-  @media (max-width: 22.2em) {
-    .nav_tff {
-      margin-left: 4.9rem !important; } }
-  @media (max-width: 1380px) {
-    .nav_tff .p {
-      font-size: 2rem; }
-    .nav_tff .para {
-      font-size: 1.5rem;
-      margin-right: 1rem; } }
+.nav_grabzy {
+  height: 6rem;
+  width: 19.5rem;
+  margin-left: 3rem;
+  margin-right: -11rem; }
 
 @media (max-width: 1380px) {
   .scale_button1 {
@@ -1101,7 +1111,7 @@ nav li {
     margin-right: 1rem; } }
 
 .sidenav {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999; }
 
 .follow_us {
@@ -1359,6 +1369,16 @@ body {
     .phn_res .para {
       font-size: 1.5rem;
       margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .phn_res {
+      width: 100%;
+      height: 36rem; } }
+  @media (max-width: 1380px) {
+    .phn_res .p {
+      font-size: 2rem; }
+    .phn_res .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media (max-width: 75em) {
   .boxes_five {
@@ -1385,7 +1405,7 @@ body {
     .trending {
       margin-left: 3rem;
       padding-top: 3.6rem;
-      margin: 0rem 1.8rem 3rem 1.8rem; } }
+      margin: 0rem 0.8rem 3rem 1.8rem; } }
   @media (max-width: 1380px) {
     .trending .p {
       font-size: 2rem; }
@@ -1476,7 +1496,7 @@ img {
   padding-top: 1rem; }
   @media (max-width: 75em) {
     .slideshow-container_phn {
-      height: 52vh; } }
+      height: 45vh; } }
   @media (max-width: 1380px) {
     .slideshow-container_phn .p {
       font-size: 2rem; }
@@ -1485,8 +1505,8 @@ img {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .slideshow-container_phn {
-      padding-top: 7.8rem;
-      height: 25rem; } }
+      padding-top: 10.6rem;
+      height: 36rem; } }
   @media (max-width: 1380px) {
     .slideshow-container_phn .p {
       font-size: 2rem; }
@@ -1824,7 +1844,7 @@ figure {
   margin: 2rem 2rem; }
   @media (max-width: 37.5em) {
     .titles_main {
-      margin: 5rem 2rem 0rem 5rem; } }
+      margin: 3rem 2rem 0rem 5rem; } }
   @media (max-width: 1380px) {
     .titles_main .p {
       font-size: 2rem; }
@@ -2131,7 +2151,7 @@ figure {
   height: 25vh; }
   @media (max-width: 75em) {
     .carousel_image_small-1 {
-      height: 53vh; } }
+      height: 45vh; } }
   @media (max-width: 1380px) {
     .carousel_image_small-1 .p {
       font-size: 2rem; }
@@ -2140,7 +2160,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .carousel_image_small-1 {
-      height: 43vh; } }
+      height: 36rem; } }
   @media (max-width: 1380px) {
     .carousel_image_small-1 .p {
       font-size: 2rem; }
@@ -2149,7 +2169,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .carousel_image_small-1 {
-      height: 34vh; } }
+      height: 33rem; } }
   @media (max-width: 1380px) {
     .carousel_image_small-1 .p {
       font-size: 2rem; }
@@ -2188,7 +2208,7 @@ figure {
   justify-content: space-between; }
   @media (max-width: 1380px) {
     .dealPageContent {
-      margin-top: 3rem; } }
+      margin-top: 6rem; } }
   @media (max-width: 1380px) {
     .dealPageContent .p {
       font-size: 2rem; }
@@ -2274,9 +2294,9 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .deal-deets {
-      margin-left: 0rem;
       height: 49.5rem;
-      width: 40.5rem; } }
+      margin-left: 3rem;
+      max-width: 55.5rem; } }
   @media (max-width: 1380px) {
     .deal-deets .p {
       font-size: 2rem; }
@@ -2334,7 +2354,7 @@ figure {
     width: 20rem; }
     @media (max-width: 37.5em) {
       .deal-deets_buy {
-        padding: 1rem 8.35rem 1rem 4rem; } }
+        padding: 1rem 2.35rem 1rem 4rem; } }
     @media (max-width: 1380px) {
       .deal-deets_buy .p {
         font-size: 2rem; }
@@ -2517,6 +2537,15 @@ figure {
     width: 16.5rem;
     border-radius: 1rem;
     font-size: 2rem; }
+    @media (max-width: 37.5em) {
+      .deal-deets_user {
+        width: auto; } }
+    @media (max-width: 1380px) {
+      .deal-deets_user .p {
+        font-size: 2rem; }
+      .deal-deets_user .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .deal-deets_paragraph {
     padding: 0.5rem 0rem 0rem 0.5rem;
     font-family: "Montserrat", sans-serif;
@@ -2531,7 +2560,7 @@ figure {
     width: 100%; }
     @media (max-width: 37.5em) {
       .deal-deets_affiliate {
-        width: 88%; } }
+        width: 89%; } }
     @media (max-width: 1380px) {
       .deal-deets_affiliate .p {
         font-size: 2rem; }
@@ -2567,7 +2596,7 @@ figure {
 .deal-with-review {
   display: flex;
   flex-direction: column;
-  width: inherit;
+  max-width: 100%;
   margin-top: 2.5rem; }
 
 .review-section {
@@ -2583,8 +2612,9 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .review-section {
-      width: 91vw !important;
-      padding: 3.5rem 0.5rem 2rem 2rem; } }
+      width: 91rem !important;
+      padding: 2.5rem 0rem 2rem 2rem;
+      margin-left: 3rem; } }
   @media (max-width: 1380px) {
     .review-section .p {
       font-size: 2rem; }
@@ -2682,7 +2712,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .add-review-text-area {
-      width: 76%; } }
+      width: 62%; } }
   @media (max-width: 1380px) {
     .add-review-text-area .p {
       font-size: 2rem; }
@@ -2768,7 +2798,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .reviews {
-      width: 90vw; } }
+      width: 51rem; } }
   @media (max-width: 1380px) {
     .reviews .p {
       font-size: 2rem; }
@@ -3017,7 +3047,8 @@ figure {
   height: 100%; }
   @media (max-width: 37.5em) {
     .deal-carousel-img {
-      left: 44%; } }
+      left: 53%;
+      max-width: 57rem; } }
   @media (max-width: 1380px) {
     .deal-carousel-img .p {
       font-size: 2rem; }
@@ -3041,8 +3072,9 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .deal-with-deal-deets {
-      display: flex;
-      height: 55.5rem; } }
+      display: block;
+      height: 103.5rem;
+      width: 100%; } }
   @media (max-width: 1380px) {
     .deal-with-deal-deets .p {
       font-size: 2rem; }
@@ -3084,7 +3116,8 @@ figure {
   @media (max-width: 37.5em) {
     .deal-with-deal-reviews {
       display: block;
-      height: 68.5rem; } }
+      height: 119.5rem;
+      width: 100%; } }
   @media (max-width: 1380px) {
     .deal-with-deal-reviews .p {
       font-size: 2rem; }
@@ -3149,7 +3182,7 @@ figure {
   @media (max-width: 56.25em) {
     .prev,
     .next {
-      top: 97%; } }
+      top: 43%; } }
   @media (max-width: 1380px) {
     .prev .p,
     .next .p {
@@ -3161,7 +3194,7 @@ figure {
   @media (max-width: 37.5em) {
     .prev,
     .next {
-      top: 63%; } }
+      top: 40; } }
   @media (max-width: 1380px) {
     .prev .p,
     .next .p {
@@ -3267,7 +3300,8 @@ figure {
     .side_deals {
       height: unset !important;
       width: 94.5%;
-      margin-top: 0; } }
+      margin-top: 0;
+      margin-left: 1rem; } }
   @media (max-width: 1380px) {
     .side_deals .p {
       font-size: 2rem; }
@@ -3376,7 +3410,9 @@ figure {
   margin-right: 2rem; }
 
 #big-three-dots {
-  position: relative; }
+  position: relative;
+  right: 1rem;
+  bottom: -2rem; }
 
 .deal_area_container {
   display: flex;
@@ -3395,7 +3431,7 @@ figure {
   margin-right: 2rem; }
   @media (max-width: 37.5em) {
     .side_deals {
-      margin-left: 5.5rem;
+      margin-left: 1rem;
       margin-bottom: 2rem; } }
   @media (max-width: 1380px) {
     .side_deals .p {
@@ -3515,6 +3551,46 @@ figure {
   .bigImg_container .para {
     font-size: 1.5rem;
     margin-right: 1rem; } }
+
+@media screen and (max-width: 585px) {
+  .deal-deets {
+    margin-left: 9rem; }
+  .reviews {
+    width: 73rem; }
+  .review-section {
+    margin-left: 1rem; } }
+
+@media screen and (max-width: 455px) {
+  .deal-deets {
+    margin-left: 7rem; }
+  .reviews {
+    width: 65rem; }
+  .review-section {
+    margin-left: 3rem; } }
+
+@media screen and (max-width: 423px) {
+  .deal-deets {
+    margin-left: 5rem; }
+  .reviews {
+    width: 54rem; }
+  .review-section {
+    margin-left: 3rem; } }
+
+@media screen and (max-width: 405px) {
+  .deal-deets {
+    margin-left: 4rem; }
+  .reviews {
+    width: 54rem; }
+  .review-section {
+    margin-left: 3rem; } }
+
+@media screen and (max-width: 377px) {
+  .deal-deets {
+    margin-left: 2rem; }
+  .reviews {
+    width: 51rem; }
+  .review-section {
+    margin-left: 3rem; } }
 
 .cover {
   width: 100%;
@@ -4265,7 +4341,7 @@ figure {
 
 .big-deal_pic {
   object-fit: scale-down;
-  height: 26rem;
+  height: 25rem;
   width: 100%;
   padding: 0rem; }
 
@@ -6107,7 +6183,8 @@ Down
   background-image: linear-gradient(to right, rgba(238, 247, 255, 0.3), rgba(238, 247, 255, 0.3)), url("/img/newDealbackg.jpg");
   background-size: cover;
   background-size: cover;
-  padding: 6rem 0; }
+  padding: 6rem 0;
+  padding-bottom: 14rem; }
 
 .form_container {
   background-color: #f2f3f4;
@@ -6228,6 +6305,82 @@ Down
     border: 1px solid #bdc3c7;
     border-radius: 0.6rem;
     background-color: #f8f9f9; }
+
+.form_container input[type="submit"] {
+  width: 80%;
+  margin-left: 10%;
+  /* box-sizing: border-box; */
+  padding: 1rem 4rem;
+  margin-top: 4rem;
+  outline: none;
+  border: none;
+  background-color: #d10024;
+  /* opacity:0.1; */
+  border-radius: 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  /* height: 4rem; */
+  color: white;
+  transition: all 0.2s; }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] {
+      width: 80%;
+      margin-left: 10.5%; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 75em) {
+    .form_container input[type="submit"] {
+      width: 80%;
+      margin-left: 10.5%; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 56.25em) {
+    .form_container input[type="submit"] {
+      width: 80%;
+      margin-left: 9%; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 37.5em) {
+    .form_container input[type="submit"] {
+      width: 70%;
+      margin-left: 14%;
+      font-size: 1.9rem; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+  @media (max-width: 22.2em) {
+    .form_container input[type="submit"] {
+      width: 70%;
+      margin-left: 12%;
+      font-size: 1.8rem;
+      padding: 1rem 2.2rem; } }
+  @media (max-width: 1380px) {
+    .form_container input[type="submit"] .p {
+      font-size: 2rem; }
+    .form_container input[type="submit"] .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
+
+.form_container input[type="submit"]:hover {
+  transform: translateY(-2px);
+  /* opacity:1; */
+  cursor: pointer; }
 
 .form_container h1 {
   text-align: center; }
@@ -6669,7 +6822,7 @@ input#price-max {
 
 .paragraph {
   font-size: 1.75rem;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #555555;
   line-height: 3rem; }
   @media (max-width: 75em) {
@@ -6753,7 +6906,7 @@ rgba(0, 0, 0, 0.349);
 .heading-normal {
   font-size: 1.4rem;
   font-weight: 400;
-  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Signika", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #030303; }
 
 .header_logo-box {
@@ -6774,7 +6927,7 @@ rgba(0, 0, 0, 0.349);
   margin-right: 2rem;
   margin-top: 0.2rem;
   border-radius: 10rem;
-  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: white; }

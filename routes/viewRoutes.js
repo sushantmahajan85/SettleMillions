@@ -23,6 +23,7 @@ router.get("/", viewController.mainPage);
 router.get("/search", viewController.autocomplete);
 router.get("/analytics", viewController.analytics);
 router.get("/member/:id", viewController.getMemberData);
+router.get("/:short", viewController.shortshort);
 router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
 router.get("/forgotPassword", viewController.forgot);
 router.get("/resetPassword/:bytes", viewController.reset);
@@ -42,7 +43,7 @@ router.get(
 );
 
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
-router.get("/:short", viewController.shortshort);
+
 
 
 router.get("/category/:cat", viewController.category);

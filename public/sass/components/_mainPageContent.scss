@@ -52,14 +52,22 @@ body {
     height: 25vh;
   }
 }
+
 .phn_res {
   height: 0;
   width: 0;
+
   @include respond(tab-land) {
     width: 100%;
     height: 25vh;
   }
+
+  @include respond(phone) {
+    width: 100%;
+    height: 36rem;
+  }
 }
+
 .boxes_five {
   @include respond(tab-land) {
     display: none;
@@ -82,7 +90,7 @@ body {
   @include respond(phone) {
     margin-left: 3rem;
     padding-top: 3.6rem;
-    margin: 0rem 1.8rem 3rem 1.8rem;
+    margin: 0rem 0.8rem 3rem 1.8rem;
   }
 
   @include respond(small-phone) {
@@ -167,12 +175,14 @@ img {
   //   margin: auto;
   //   float: right;
   @include respond(tab-land) {
-    height: 52vh;
+    height: 45vh;
   }
+
   @include respond(phone) {
-    padding-top: 7.8rem;
-    height: 25rem;
+    padding-top: 10.6rem;
+    height: 36rem;
   }
+
   @include respond(small-phone) {
     padding-top: 11.1rem;
     height: 25rem;
@@ -638,7 +648,7 @@ figure {
   margin: 2rem 2rem;
 
   @include respond(phone) {
-    margin: 5rem 2rem 0rem 5rem;
+    margin: 3rem 2rem 0rem 5rem;
   }
 
   @include respond(small-phone) {
@@ -1007,15 +1017,15 @@ figure {
   height: 25vh;
 
   @include respond(tab-land) {
-    height: 53vh;
+    height: 45vh;
   }
 
   @include respond(phone) {
-    height: 43vh;
+    height: 36rem;
   }
 
   @include respond(small-phone) {
-    height: 34vh;
+    height: 33rem;
   }
 }
 

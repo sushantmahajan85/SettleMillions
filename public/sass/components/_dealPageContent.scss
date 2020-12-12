@@ -16,7 +16,7 @@
   justify-content: space-between;
 
   @include respond(achi2) {
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
 
   @include respond(phone) {
@@ -44,6 +44,7 @@
 
 .below-image {
   display: flex;
+  // width: 0rem;
 }
 
 .deal-deets {
@@ -72,9 +73,12 @@
   }
 
   @include respond(phone) {
-    margin-left: 0rem;
+    // margin-left: 0rem;
     height: 49.5rem;
-    width: 40.5rem;
+    // width: 40.5rem;
+
+    margin-left: 3rem;
+    max-width: 55.5rem;
   }
   @include respond(small-phone) {
     margin-left: 4.4rem;
@@ -126,7 +130,8 @@
     width: 20rem;
 
     @include respond(phone) {
-      padding: 1rem 8.35rem 1rem 4rem;
+      // padding: 1rem 8.35rem 1rem 4rem;
+      padding: 1rem 2.35rem 1rem 4rem;
     }
 
     @include respond(small-phone) {
@@ -290,6 +295,10 @@
     width: 16.5rem;
     border-radius: 1rem;
     font-size: 2rem;
+
+    @include respond(phone) {
+      width: auto;
+    }
   }
   &_paragraph {
     padding: 0.5rem 0rem 0rem 0.5rem;
@@ -309,7 +318,9 @@
     width: 100%;
 
     @include respond(phone) {
-      width: 88%;
+      // width: 88%;
+
+      width: 89%;
     }
 
     &_pic {
@@ -358,7 +369,9 @@
 .deal-with-review {
   display: flex;
   flex-direction: column;
-  width: inherit;
+  // width: inherit;
+  max-width: 100%;
+
   margin-top: 2.5rem;
 }
 
@@ -371,8 +384,12 @@
   }
 
   @include respond(phone) {
-    width: 91vw !important;
-    padding: 3.5rem 0.5rem 2rem 2rem;
+    // width: 91vw !important;
+    // padding: 3.5rem 0.5rem 2rem 2rem;
+
+    width: 91rem !important;
+    padding: 2.5rem 0rem 2rem 2rem;
+    margin-left: 3rem;
   }
 }
 
@@ -469,7 +486,9 @@
   }
 
   @include respond(phone) {
-    width: 76%;
+    // width: 76%;
+
+    width: 62%;
   }
 
   @include respond(small-phone) {
@@ -543,7 +562,9 @@
   }
 
   @include respond(phone) {
-    width: 90vw;
+    // width: 90vw;
+
+    width: 51rem;
   }
 }
 
@@ -816,7 +837,11 @@
   // }
 
   @include respond(phone) {
-    left: 44%;
+    // left: 44%;
+
+    left: 53%;
+
+    max-width: 57rem;
   }
 }
 
@@ -839,8 +864,11 @@
   }
 
   @include respond(phone) {
-    display: flex;
-    height: 55.5rem;
+    // display: flex;
+    // height: 55.5rem;
+    display: block;
+    height: 103.5rem;
+    width: 100%;
   }
   @include respond(small-phone) {
     display: block;
@@ -862,7 +890,9 @@
 
   @include respond(phone) {
     display: block;
-    height: 68.5rem;
+    // height: 68.5rem;
+    height: 119.5rem;
+    width: 100%;
   }
 
   @include respond(small-phone) {
@@ -916,10 +946,11 @@
   }
 
   @include respond(tab-port) {
-    top: 97%;
+    top: 43%;
   }
+
   @include respond(phone) {
-    top: 63%;
+    top: 40;
   }
 
   @include respond(small-phone) {
@@ -1018,6 +1049,8 @@
     height: unset !important;
     width: 94.5%;
     margin-top: 0;
+
+    margin-left: 1rem;
   }
 }
 
@@ -1242,6 +1275,8 @@
 
 #big-three-dots {
   position: relative;
+  right: 1rem;
+  bottom: -2rem;
 }
 
 .deal_area_container {
@@ -1264,7 +1299,8 @@
   margin-right: 2rem;
 
   @include respond(phone) {
-    margin-left: 5.5rem;
+    // margin-left: 5.5rem;
+    margin-left: 1rem;
     margin-bottom: 2rem;
   }
   @include respond(small-phone) {
@@ -1358,5 +1394,72 @@
 .bigImg_container {
   @include respond(tab-land) {
     width: 37rem !important;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .deal-deets {
+    margin-left: 9rem;
+  }
+
+  .reviews {
+    width: 73rem;
+  }
+
+  .review-section {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .deal-deets {
+    margin-left: 7rem;
+  }
+
+  .reviews {
+    width: 65rem;
+  }
+  .review-section {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .deal-deets {
+    margin-left: 5rem;
+  }
+  .reviews {
+    width: 54rem;
+  }
+  .review-section {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .deal-deets {
+    margin-left: 4rem;
+  }
+
+  .reviews {
+    width: 54rem;
+  }
+
+  .review-section {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  .deal-deets {
+    margin-left: 2rem;
+  }
+
+  .reviews {
+    width: 51rem;
+  }
+
+  .review-section {
+    margin-left: 3rem;
   }
 }

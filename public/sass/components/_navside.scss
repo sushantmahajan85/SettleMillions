@@ -434,10 +434,16 @@ h2 {
   justify-content: space-between;
   padding-top: 8.1rem;
   background-color: #fff;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+
   @include respond(phone) {
     display: none;
     visibility: hidden;
   }
+
   &-nav {
     display: flex;
     color: #333;
@@ -478,7 +484,12 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9999999999999999999999999 !important;
+
+  @include respond(phone) {
+    font-size: 2.2rem;
+  }
 }
+
 @media only screen and (max-width: 31.25em) {
   .header {
     -ms-flex-wrap: wrap;
@@ -624,6 +635,14 @@ h2 {
   // font-family: "Metal Mania", cursive;
   font-family: $family2;
   // D *changes * end
+
+  @include respond(tab-land) {
+    margin-left: 0rem;
+  }
+
+  @include respond(phone) {
+    margin-left: 6rem;
+  }
 
   &:hover {
     color: rgb(231, 76, 60);
@@ -1100,9 +1119,14 @@ nav li {
   @include respond(tab-land) {
     display: block;
     visibility: visible;
-    top: 1.7rem;
+    top: 1.5rem;
+    left: 3rem;
   }
-  // background-color: black;
+
+  @include respond(phone) {
+    top: 2.6rem;
+    left: 2.5rem;
+  }
 }
 // @media (max-width: 56.25em) {
 //   .nav_logo {
@@ -1120,29 +1144,36 @@ nav li {
     visibility: visible;
   }
 }
-.nav_tff {
-  text-align: start;
-  color: white;
-  font-size: 3.5rem;
-  margin-left: 4rem;
-  // margin-bottom: 4rem;
-  font-family: "Amaranth";
+// .nav_grabzy {
+//   text-align: start;
+//   color: white;
+//   font-size: 3.5rem;
+//   margin-left: 4rem;
+//   // margin-bottom: 4rem;
+//   font-family: "Amaranth";
 
-  @include respond(tab-land) {
-    margin-left: 3rem;
-  }
+//   @include respond(tab-land) {
+//     margin-left: 3rem;
+//   }
 
-  @include respond(tab-port) {
-    margin-left: 3.6rem;
-  }
+//   @include respond(tab-port) {
+//     margin-left: 3.6rem;
+//   }
 
-  @include respond(phone) {
-    margin-left: 4.2rem !important;
-  }
+//   @include respond(phone) {
+//     margin-left: 4.2rem !important;
+//   }
 
-  @include respond(small-phone) {
-    margin-left: 4.9rem !important;
-  }
+//   @include respond(small-phone) {
+//     margin-left: 4.9rem !important;
+//   }
+// }
+
+.nav_grabzy {
+  height: 6rem;
+  width: 19.5rem;
+  margin-left: 3rem;
+  margin-right: -11rem;
 }
 
 .scale_button1 {

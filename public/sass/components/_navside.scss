@@ -288,6 +288,10 @@
   text-decoration: none !important;
 }
 
+.sidebar_popup_entry {
+  cursor: pointer;
+}
+
 .social_icons {
   height: 3rem;
   width: 3rem;
@@ -325,7 +329,7 @@ body a {
 .titles {
   display: flex;
   justify-content: space-between;
-  margin-left: -1.6rem;
+  // margin-left: -1.6rem;
 }
 
 .title-with-icon {
@@ -341,7 +345,7 @@ body a {
 }
 .titles_nv {
   display: block;
-  margin: 0.5rem 1.55rem 0 1.55rem;
+  margin: 0.5rem 0rem 0rem 4rem;
   // font-family: "Bitter", serif;
   text-transform: capitalize;
   font-family: $family2;
@@ -484,7 +488,12 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9999999999999999999999999 !important;
+
+  @include respond(phone) {
+    font-size: 2.2rem;
+  }
 }
+
 @media only screen and (max-width: 31.25em) {
   .header {
     -ms-flex-wrap: wrap;
@@ -500,9 +509,7 @@ h2 {
   // background-color: silver;
   border-radius: 0.1rem;
   height: 3.5rem;
-  margin-left: 1rem;
   width: 10rem;
-
   -webkit-box-flex: 0;
   -ms-flex: 0 0 40%;
   flex: 0 0 40%;
@@ -515,6 +522,7 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
   @include respond(tab-land) {
     display: none;
     visibility: hidden;
@@ -635,6 +643,10 @@ h2 {
     margin-left: 0rem;
   }
 
+  @include respond(phone) {
+    margin-left: 6rem;
+  }
+
   &:hover {
     color: rgb(231, 76, 60);
   }
@@ -660,7 +672,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0rem;
+  margin-right: 4rem;
   //justify-content: flex-end;
   @include respond(tab-land) {
     display: none;
@@ -1113,7 +1125,11 @@ nav li {
     top: 1.5rem;
     left: 3rem;
   }
-  // background-color: black;
+
+  @include respond(phone) {
+    top: 2.6rem;
+    left: 2.5rem;
+  }
 }
 // @media (max-width: 56.25em) {
 //   .nav_logo {
@@ -1131,29 +1147,35 @@ nav li {
     visibility: visible;
   }
 }
-.nav_tff {
-  text-align: start;
-  color: white;
-  font-size: 3.5rem;
-  margin-left: 4rem;
-  // margin-bottom: 4rem;
-  font-family: "Amaranth";
+// .nav_grabzy {
+//   text-align: start;
+//   color: white;
+//   font-size: 3.5rem;
+//   margin-left: 4rem;
+//   // margin-bottom: 4rem;
+//   font-family: "Amaranth";
 
-  @include respond(tab-land) {
-    margin-left: 3rem;
-  }
+//   @include respond(tab-land) {
+//     margin-left: 3rem;
+//   }
 
-  @include respond(tab-port) {
-    margin-left: 3.6rem;
-  }
+//   @include respond(tab-port) {
+//     margin-left: 3.6rem;
+//   }
 
-  @include respond(phone) {
-    margin-left: 4.2rem !important;
-  }
+//   @include respond(phone) {
+//     margin-left: 4.2rem !important;
+//   }
 
-  @include respond(small-phone) {
-    margin-left: 4.9rem !important;
-  }
+//   @include respond(small-phone) {
+//     margin-left: 4.9rem !important;
+//   }
+// }
+
+.nav_grabzy {
+  height: 6rem;
+  width: 19.5rem;
+  margin-left: 6rem;
 }
 
 .scale_button1 {

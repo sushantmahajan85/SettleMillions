@@ -50,8 +50,45 @@ const passvalueo = async function(dealId, whoLiked) {
 // var id = url.substring(url.lastIndexOf('/') + 1);
 // alert(id);
 
+const passvalueunlike = async function(documentId) {
+  console.log(documentId);
+  const hideAlert = () => {
+    const el = document.querySelector(".alerts");
+    if (el) {
+      el.parentElement.removeChild(el);
+    }
+  };
 
+  const showAlert = (type, msg) => {
+    hideAlert();
 
+    const markup = `<div class="alerts alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+
+    window.setTimeout(hideAlert, 5000);
+  };
+  var url = window.location.pathname;
+  var id = url.substring(url.lastIndexOf("/") + 1);
+  console.log(url);
+  //const deal = await Deal.findById(id);
+
+  try {
+    const result = await axios({
+      method: "DELETE",
+      url: `/api/v1/likedDeal/${documentId}`,
+    });
+    if (result.data.status === "success") {
+      //   alert("subscribed");
+      showAlert("success", "Unliked");
+      console.log("subscribed");
+      window.setTimeout(() => {
+        location.assign(`${url}`);
+      }, 1000);
+    }
+  } catch (err) {
+    showAlert("error", err.response.data.message);
+  }
+};
 
 document.getElementById("like_deal").addEventListener("click", (e) => {
   e.preventDefault();

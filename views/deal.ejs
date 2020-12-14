@@ -148,7 +148,7 @@
       <hr />
       <div class="deal-deets_price">
         <li class="price"><span class="price_avail">
-            Rs. <%= deal.mrp %> </span> <span class="price_mrp">Rs. <%= deal.dealPrice %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
+            Rs. <%= deal.dealPrice %> </span> <span class="price_mrp">Rs. <%= deal.mrp %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
             </span>
         </li>
       </div>
@@ -159,7 +159,7 @@
         <div class="below-image">
           <% if (user) { %>
             <% if (like) { %>
-            <a href="" class="deal-deets_save" id="dislike_deal">Unlike</a>
+            <a href="" class="deal-deets_save" id="dislike_deal" onclick="passvalueunlike(`<%= like.id %>`)"><i class="fa fa-heart" style="margin-right: 1rem; color: #EF233C;"></i></a>
             <% } else { %>
             <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i></a>
     

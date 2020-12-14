@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
     <script
       src="https://kit.fontawesome.com/6e422c4989.js"
@@ -23,11 +23,44 @@
   </head>
   <body>
     <%- include('partials/navbar.ejs') %>
-   
 
-    
+    <div class="form_box">
+      <div class="form_container">
+        <form id="regForm">
+          <h1 class="Post-box-title">Post Deal News</h1>
 
-    <section class="form_section">
+          <div class="tab" style="display: block">
+            <p>
+              <input
+                placeholder="Title Description"
+                id="cpassword"
+                name="titledescription"
+                class="needed"
+              />
+            </p>
+            <p>
+              <input
+                placeholder="Bigger Description"
+                id="password"
+                name="biggerdescription"
+                class="needed"
+              />
+            </p>
+            <p>
+              <input
+                placeholder="News Link"
+                id="newsLink"
+                name="newslink"
+                class="needed"
+              />
+            </p>
+            <input type="submit" value="Submit" id="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <section class="form_section">
       <div class="wrap">
         <h2 class="wrap_title">Your Deal</h2>
         <h4 class="wrap_subtext">
@@ -54,7 +87,7 @@
           
         </form>
       </div>
-    </section>
+    </section> -->
     <div class="footer">
       <div class="footer-content">
         <div class="footer-section about">
@@ -170,7 +203,7 @@
     <script src="vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
- 
+
     <!-- <script>
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();

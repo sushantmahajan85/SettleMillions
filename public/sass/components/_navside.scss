@@ -345,7 +345,7 @@ body a {
 }
 .titles_nv {
   display: block;
-  margin: 0.5rem 0rem 0rem 15.55rem;
+  margin: 0.5rem 0rem 0rem 4rem;
   // font-family: "Bitter", serif;
   text-transform: capitalize;
   font-family: $family2;
@@ -509,9 +509,7 @@ h2 {
   // background-color: silver;
   border-radius: 0.1rem;
   height: 3.5rem;
-  margin-left: 1rem;
   width: 10rem;
-
   -webkit-box-flex: 0;
   -ms-flex: 0 0 40%;
   flex: 0 0 40%;
@@ -524,6 +522,7 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
   @include respond(tab-land) {
     display: none;
     visibility: hidden;
@@ -673,7 +672,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0rem;
+  margin-right: 4rem;
   //justify-content: flex-end;
   @include respond(tab-land) {
     display: none;
@@ -1176,8 +1175,7 @@ nav li {
 .nav_grabzy {
   height: 6rem;
   width: 19.5rem;
-  margin-left: 3rem;
-  margin-right: -11rem;
+  margin-left: 6rem;
 }
 
 .scale_button1 {

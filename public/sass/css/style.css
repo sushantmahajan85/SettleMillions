@@ -391,8 +391,7 @@ body a {
 
 .titles {
   display: flex;
-  justify-content: space-between;
-  margin-left: -1.6rem; }
+  justify-content: space-between; }
 
 .title-with-icon {
   display: flex;
@@ -405,7 +404,7 @@ body a {
 
 .titles_nv {
   display: block;
-  margin: 0.5rem 1.55rem 0 1.55rem;
+  margin: 0.5rem 0rem 0rem 4rem;
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -566,7 +565,6 @@ h2 {
 .search {
   border-radius: 0.1rem;
   height: 3.5rem;
-  margin-left: 1rem;
   width: 10rem;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 40%;
@@ -692,7 +690,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0rem; }
+  margin-right: 4rem; }
   @media (max-width: 75em) {
     .user-nav {
       display: none;
@@ -1028,8 +1026,7 @@ nav li {
 .nav_grabzy {
   height: 6rem;
   width: 19.5rem;
-  margin-left: 3rem;
-  margin-right: -11rem; }
+  margin-left: 6rem; }
 
 @media (max-width: 1380px) {
   .scale_button1 {
@@ -2906,7 +2903,7 @@ figure {
     box-shadow: none; }
 
 .deal_box_nameTime {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.3rem; }
   @media (max-width: 56.25em) {
     .deal_box_nameTime {
       margin-bottom: 1.2rem; } }

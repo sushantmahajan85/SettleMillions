@@ -12,13 +12,17 @@ router.get("/newDeal", viewController.createNewDeal);
 router.get("/login", viewController.getLoginForm);
 router.get("/signup", viewController.getSignupForm);
 router.get("/verification", viewController.getVerificationForm);
-router.get(
-  "/recruitments",
-  authController.protect,
-  viewController.getRecruitmentsData
-);
+// router.get(
+//   "/recruitments",
+//   authController.protect,
+//   viewController.getRecruitmentsData
+// );
 router.get("/pageDeal",viewController.pageDeal);
 router.get("/newsDeal",viewController.newsDeal);
+router.get("/logout", authController.logout);
+router.get("/trending", viewController.getTrendingDeals);
+
+router.get("/liveDeal",viewController.livePage);
 router.get("/", viewController.mainPage);
 router.get("/search", viewController.autocomplete);
 router.get("/analytics", viewController.analytics);
@@ -27,9 +31,7 @@ router.get("/:short", viewController.shortshort);
 router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
 router.get("/forgotPassword", viewController.forgot);
 router.get("/resetPassword/:bytes", viewController.reset);
-router.get("/trending", viewController.getTrendingDeals);
-router.get("/logout", authController.logout);
-router.get("/liveDeal",viewController.livePage);
+
 
 router.get(
   "/updateUserSettings",

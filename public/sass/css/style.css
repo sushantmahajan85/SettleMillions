@@ -545,7 +545,8 @@ h2 {
   z-index: 9999999999999999999999999 !important; }
   @media (max-width: 37.5em) {
     .header {
-      font-size: 2.2rem; } }
+      font-size: 2.2rem;
+      height: 11rem; } }
   @media (max-width: 1380px) {
     .header .p {
       font-size: 2rem; }
@@ -2189,6 +2190,28 @@ figure {
   display: flex;
   height: 100%;
   padding: 0.5rem 1.5rem; }
+
+@media (max-width: 22.2em) {
+  .pop1_1 {
+    font-size: 1.2rem !important; } }
+
+@media (max-width: 1380px) {
+  .pop1_1 .p {
+    font-size: 2rem; }
+  .pop1_1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 22.2em) {
+  .pop1_2 {
+    width: 95% !important; } }
+
+@media (max-width: 1380px) {
+  .pop1_2 .p {
+    font-size: 2rem; }
+  .pop1_2 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
 
 .navbar_wrapper {
   height: 12vh; }
@@ -7715,7 +7738,7 @@ div#GoogeSigninButton {
       margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .footer {
-      width: 62.2rem; } }
+      width: 100%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }

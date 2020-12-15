@@ -473,6 +473,7 @@ h2 {
 .header {
   font-size: 1.7rem;
   height: 8rem;
+
   width: 100%;
   // padding: 1.6rem 0;
   background-color: #15161d;
@@ -491,6 +492,7 @@ h2 {
 
   @include respond(phone) {
     font-size: 2.2rem;
+    height: 11rem;
   }
 }
 

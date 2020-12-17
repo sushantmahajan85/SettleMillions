@@ -351,7 +351,7 @@ body a {
   font-family: $family2;
   font-weight: 500;
   font-size: 1.7rem;
-  color: white;
+  color: #fff8da;
   transition: all 0.2s;
   cursor: pointer;
   &:hover {
@@ -692,7 +692,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: rgba($color: #fff, $alpha: 1);
+  color: rgba($color: #fff8da, $alpha: 1);
   margin: 0.5rem 1rem 0.5rem 0.5rem;
 }
 

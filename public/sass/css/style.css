@@ -6547,7 +6547,7 @@ Down
   text-transform: uppercase; }
 
 .tagify {
-  height: 4rem;
+  height: 8rem;
   margin-top: 1rem;
   padding: 9px 7px 7px 0px;
   width: 100%;
@@ -6556,6 +6556,9 @@ Down
   border: 1px solid #bdc3c7;
   border-radius: 0.6rem;
   background-color: #f8f9f9; }
+
+.two_box_1 {
+  margin-top: 0.2rem; }
 
 .tp_diff_page-content {
   margin-top: 6rem; }

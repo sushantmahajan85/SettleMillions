@@ -7740,10 +7740,10 @@ div#GoogeSigninButton {
   background: #15161d;
   color: #fff;
   height: 30rem;
-  position: relative;
   margin-left: -20rem;
   padding-left: 35rem;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  position: relative; }
   @media (max-width: 1500px) {
     .footer {
       margin-left: 0rem;

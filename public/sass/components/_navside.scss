@@ -288,6 +288,10 @@
   text-decoration: none !important;
 }
 
+.sidebar_popup_entry {
+  cursor: pointer;
+}
+
 .social_icons {
   height: 3rem;
   width: 3rem;
@@ -325,7 +329,7 @@ body a {
 .titles {
   display: flex;
   justify-content: space-between;
-  margin-left: -1.6rem;
+  // margin-left: -1.6rem;
 }
 
 .title-with-icon {
@@ -341,13 +345,13 @@ body a {
 }
 .titles_nv {
   display: block;
-  margin: 0.5rem 1.55rem 0 1.55rem;
+  margin: 0.5rem 0rem 0rem 4rem;
   // font-family: "Bitter", serif;
   text-transform: capitalize;
   font-family: $family2;
   font-weight: 500;
   font-size: 1.7rem;
-  color: white;
+  color: #fff8da;
   transition: all 0.2s;
   cursor: pointer;
   &:hover {
@@ -469,6 +473,7 @@ h2 {
 .header {
   font-size: 1.7rem;
   height: 8rem;
+
   width: 100%;
   // padding: 1.6rem 0;
   background-color: #15161d;
@@ -487,6 +492,7 @@ h2 {
 
   @include respond(phone) {
     font-size: 2.2rem;
+    height: 11rem;
   }
 }
 
@@ -505,9 +511,7 @@ h2 {
   // background-color: silver;
   border-radius: 0.1rem;
   height: 3.5rem;
-  margin-left: 1rem;
   width: 10rem;
-
   -webkit-box-flex: 0;
   -ms-flex: 0 0 40%;
   flex: 0 0 40%;
@@ -520,6 +524,7 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
   @include respond(tab-land) {
     display: none;
     visibility: hidden;
@@ -669,7 +674,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0rem;
+  margin-right: 4rem;
   //justify-content: flex-end;
   @include respond(tab-land) {
     display: none;
@@ -687,7 +692,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: rgba($color: #fff, $alpha: 1);
+  color: rgba($color: #fff8da, $alpha: 1);
   margin: 0.5rem 1rem 0.5rem 0.5rem;
 }
 
@@ -1172,8 +1177,7 @@ nav li {
 .nav_grabzy {
   height: 6rem;
   width: 19.5rem;
-  margin-left: 3rem;
-  margin-right: -11rem;
+  margin-left: 6rem;
 }
 
 .scale_button1 {

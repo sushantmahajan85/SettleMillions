@@ -74,7 +74,7 @@
 
   @include respond(phone) {
     // margin-left: 0rem;
-    height: 49.5rem;
+    height: 53.5rem;
     // width: 40.5rem;
 
     margin-left: 3rem;
@@ -102,6 +102,14 @@
     text-transform: capitalize;
     font-weight: 700;
     line-height: 1.1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    @include respond(phone) {
+      -webkit-line-clamp: 1;
+    }
 
     color: $heading-color;
   }
@@ -649,7 +657,7 @@
 }
 
 .deal_box_nameTime {
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
   // @include respond(tab-port) {
   //   font-size: 12.5px !important;
   // }
@@ -867,7 +875,7 @@
     // display: flex;
     // height: 55.5rem;
     display: block;
-    height: 103.5rem;
+    height: 106.5rem;
     width: 100%;
   }
   @include respond(small-phone) {
@@ -1287,7 +1295,7 @@
 }
 .deal_area_box {
   background-color: white;
-  height: 15rem;
+  height: 16rem;
 
   box-shadow: 0px 1px 2.5px rgba(175, 175, 175, 0.4);
   &:hover {
@@ -1360,6 +1368,7 @@
   margin-bottom: -0.5rem;
   padding: 5px 0;
 }
+
 #copied {
   width: 20%;
   padding: 1rem 0;
@@ -1370,6 +1379,11 @@
   font-family: $family2;
   text-transform: uppercase;
   border: none;
+  position: relative;
+
+  @include respond(phone) {
+    position: relative;
+  }
 }
 
 .clock_icon1 {

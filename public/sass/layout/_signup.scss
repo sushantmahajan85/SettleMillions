@@ -573,11 +573,19 @@ div#GoogeSigninButton {
   background: #15161d;
   color: #fff;
   height: 30rem;
-  position: relative;
+  
   margin-left: -20rem;
   padding-left: 35rem;
   // margin-left: 17rem;
   font-size: 1.2rem;
+
+  position: relative;
+
+  // position: fixed;
+  // width: 100%;
+  // left: 0;
+  // bottom: 0;
+  // text-align: center;
 
   @include respond(achi) {
     // width: 132.5rem;
@@ -614,7 +622,8 @@ div#GoogeSigninButton {
   }
 
   @include respond(small-phone) {
-    width: 62.2rem;
+    // width: 62.2rem;
+    width: 100%;
   }
 }
 .footer-content {

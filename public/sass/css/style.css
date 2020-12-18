@@ -352,6 +352,9 @@ body {
   font-size: 1.1rem;
   text-decoration: none !important; }
 
+.sidebar_popup_entry {
+  cursor: pointer; }
+
 .social_icons {
   height: 3rem;
   width: 3rem;
@@ -388,8 +391,7 @@ body a {
 
 .titles {
   display: flex;
-  justify-content: space-between;
-  margin-left: -1.6rem; }
+  justify-content: space-between; }
 
 .title-with-icon {
   display: flex;
@@ -402,12 +404,12 @@ body a {
 
 .titles_nv {
   display: block;
-  margin: 0.5rem 1.55rem 0 1.55rem;
+  margin: 0.5rem 0rem 0rem 4rem;
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.7rem;
-  color: white;
+  color: #fff8da;
   transition: all 0.2s;
   cursor: pointer; }
   .titles_nv:hover {
@@ -542,7 +544,8 @@ h2 {
   z-index: 9999999999999999999999999 !important; }
   @media (max-width: 37.5em) {
     .header {
-      font-size: 2.2rem; } }
+      font-size: 2.2rem;
+      height: 11rem; } }
   @media (max-width: 1380px) {
     .header .p {
       font-size: 2rem; }
@@ -562,7 +565,6 @@ h2 {
 .search {
   border-radius: 0.1rem;
   height: 3.5rem;
-  margin-left: 1rem;
   width: 10rem;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 40%;
@@ -688,7 +690,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0rem; }
+  margin-right: 4rem; }
   @media (max-width: 75em) {
     .user-nav {
       display: none;
@@ -710,7 +712,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: white;
+  color: #fff8da;
   margin: 0.5rem 1rem 0.5rem 0.5rem; }
 
 .user-nav > *:hover {
@@ -1024,8 +1026,7 @@ nav li {
 .nav_grabzy {
   height: 6rem;
   width: 19.5rem;
-  margin-left: 3rem;
-  margin-right: -11rem; }
+  margin-left: 6rem; }
 
 @media (max-width: 1380px) {
   .scale_button1 {
@@ -1398,9 +1399,9 @@ body {
   display: flex;
   flex: 0 0 25%;
   flex-wrap: wrap;
-  align-content: center;
   padding-top: 3.5rem;
-  justify-content: center; }
+  justify-content: center;
+  height: 100%; }
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
@@ -1711,6 +1712,15 @@ a.show-hide-link {
   height: 20rem;
   width: 30rem;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .news_box {
+      height: 23rem; } }
+  @media (max-width: 1380px) {
+    .news_box .p {
+      font-size: 2rem; }
+    .news_box .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   .news_box:hover {
     transform: scale(1.03);
     transition: transform 0.2s; }
@@ -1747,7 +1757,20 @@ a.show-hide-link {
   margin-bottom: 10px; }
 
 #news_content {
-  font-size: 15px; }
+  font-size: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; }
+  @media (max-width: 37.5em) {
+    #news_content {
+      -webkit-line-clamp: 3; } }
+  @media (max-width: 1380px) {
+    #news_content .p {
+      font-size: 2rem; }
+    #news_content .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 #news_heading {
   font-size: 38px;
@@ -1882,7 +1905,7 @@ figure {
   text-align: center;
   text-justify: center;
   display: block;
-  max-height: 2rem;
+  height: 4rem;
   font-size: 1.6rem;
   margin-top: 1rem;
   color: #000000;
@@ -1970,7 +1993,7 @@ figure {
   -webkit-perspective: 150rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 41rem;
+  height: 43.5rem;
   width: 25.75rem;
   margin: 0 5rem 4rem 0rem;
   border-radius: 1rem; }
@@ -1995,7 +2018,7 @@ figure {
   @media (max-width: 75em) {
     .card {
       width: 22rem;
-      height: 38rem; } }
+      height: 43.5rem; } }
   @media (max-width: 1380px) {
     .card .p {
       font-size: 2rem; }
@@ -2062,8 +2085,8 @@ figure {
 .mp_dealbox_three-dots {
   float: right;
   position: absolute;
-  bottom: 20%;
-  right: 2%;
+  bottom: 7%;
+  right: 12%;
   font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
@@ -2181,6 +2204,34 @@ figure {
   position: relative;
   top: 0.13rem; }
 
+#popup_privacy,
+#popup_terms .popup1_content {
+  display: flex;
+  height: 100%;
+  padding: 0.5rem 1.5rem; }
+
+@media (max-width: 22.2em) {
+  .pop1_1 {
+    font-size: 1.2rem !important; } }
+
+@media (max-width: 1380px) {
+  .pop1_1 .p {
+    font-size: 2rem; }
+  .pop1_1 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
+@media (max-width: 22.2em) {
+  .pop1_2 {
+    width: 95% !important; } }
+
+@media (max-width: 1380px) {
+  .pop1_2 .p {
+    font-size: 2rem; }
+  .pop1_2 .para {
+    font-size: 1.5rem;
+    margin-right: 1rem; } }
+
 .navbar_wrapper {
   height: 12vh; }
   @media (max-width: 1380px) {
@@ -2294,7 +2345,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .deal-deets {
-      height: 49.5rem;
+      height: 53.5rem;
       margin-left: 3rem;
       max-width: 55.5rem; } }
   @media (max-width: 1380px) {
@@ -2333,7 +2384,20 @@ figure {
     text-transform: capitalize;
     font-weight: 700;
     line-height: 1.1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     color: #171722; }
+    @media (max-width: 37.5em) {
+      .deal-deets_name {
+        -webkit-line-clamp: 1; } }
+    @media (max-width: 1380px) {
+      .deal-deets_name .p {
+        font-size: 2rem; }
+      .deal-deets_name .para {
+        font-size: 1.5rem;
+        margin-right: 1rem; } }
   .deal-deets_price {
     padding: 0.5rem 1rem 0rem 1rem;
     list-style: none;
@@ -2874,7 +2938,7 @@ figure {
     box-shadow: none; }
 
 .deal_box_nameTime {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.3rem; }
   @media (max-width: 56.25em) {
     .deal_box_nameTime {
       margin-bottom: 1.2rem; } }
@@ -3073,7 +3137,7 @@ figure {
   @media (max-width: 37.5em) {
     .deal-with-deal-deets {
       display: block;
-      height: 103.5rem;
+      height: 106.5rem;
       width: 100%; } }
   @media (max-width: 1380px) {
     .deal-with-deal-deets .p {
@@ -3422,7 +3486,7 @@ figure {
 
 .deal_area_box {
   background-color: white;
-  height: 15rem;
+  height: 16rem;
   box-shadow: 0px 1px 2.5px rgba(175, 175, 175, 0.4); }
   .deal_area_box:hover {
     box-shadow: 0px 5px 10px rgba(175, 175, 175, 0.4); }
@@ -3515,7 +3579,17 @@ figure {
   background-color: #d10024;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  border: none; }
+  border: none;
+  position: relative; }
+  @media (max-width: 37.5em) {
+    #copied {
+      position: relative; } }
+  @media (max-width: 1380px) {
+    #copied .p {
+      font-size: 2rem; }
+    #copied .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
 
 @media (max-width: 22.2em) {
   .clock_icon1 {
@@ -4379,7 +4453,8 @@ figure {
   color: #110e0e;
   background-color: #d4d3d3;
   border-radius: 0.5rem;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  width: 80%; }
 
 .user-view {
   background-color: #fff;
@@ -5820,6 +5895,15 @@ Down
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
   display: none;
   transition: all 0.3s; }
+  @media (max-width: 37.5em) {
+    #share_popup {
+      width: 85%; } }
+  @media (max-width: 1380px) {
+    #share_popup .p {
+      font-size: 2rem; }
+    #share_popup .para {
+      font-size: 1.5rem;
+      margin-right: 1rem; } }
   #share_popup_content {
     opacity: 1;
     height: 50rem;
@@ -6458,7 +6542,7 @@ Down
   text-transform: uppercase; }
 
 .tagify {
-  height: 4rem;
+  height: 8rem;
   margin-top: 1rem;
   padding: 9px 7px 7px 0px;
   width: 100%;
@@ -6467,6 +6551,9 @@ Down
   border: 1px solid #bdc3c7;
   border-radius: 0.6rem;
   background-color: #f8f9f9; }
+
+.two_box_1 {
+  margin-top: 0.2rem; }
 
 .tp_diff_page-content {
   margin-top: 6rem; }
@@ -7648,10 +7735,10 @@ div#GoogeSigninButton {
   background: #15161d;
   color: #fff;
   height: 30rem;
-  position: relative;
   margin-left: -20rem;
   padding-left: 35rem;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  position: relative; }
   @media (max-width: 1500px) {
     .footer {
       margin-left: 0rem;
@@ -7706,7 +7793,7 @@ div#GoogeSigninButton {
       margin-right: 1rem; } }
   @media (max-width: 22.2em) {
     .footer {
-      width: 62.2rem; } }
+      width: 100%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7921,4 +8008,5 @@ hr {
   margin-left: 1rem;
   color: white;
   font-size: 15px;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  cursor: pointer; }

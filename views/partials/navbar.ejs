@@ -95,7 +95,7 @@
     </div>
     <span
       class="nav_logo"
-      style="font-size:20px; cursor:pointer; color:white; position: fixed"
+      style="font-size:20px; cursor:pointer; color:#FFF8DA; position: fixed"
       onclick="openNav()"
       >&#9776;
     </span>
@@ -201,7 +201,7 @@
     </form>
   </div>
   <div class="search_ii">
-    <i class="fas fa-search search_i" style="color: white;"></i>
+    <i class="fas fa-search search_i" style="color: #FFF8DA;"></i>
   </div>
   <script>
       document.querySelector('.search_i').addEventListener('click', () => { 
@@ -244,19 +244,21 @@
       <% if (user) { %>
         <a class="titles_nv" href=<%=` /trending `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot</div>
+            <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: #FFF8DA; font-size:1.6rem;"></i>Hot</div>
           </div>
         </a>
         <a class="titles_nv" href="/liveDeal" id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: white; font-size:1.6rem;"></i>Live</div>
+            <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: #FFF8DA; font-size:1.6rem;"></i>Live</div>
           </div>
         </a>  
       <!-- <a class="titles_nv" href=<%=` /analytics `%> id="signup"> -->
         <% if (user.role == 'admin') { %>
+          <a class="titles_nv" href="/liveDeal" id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon" style="margin-top: 0.1rem;"><i class="fas fa-plus" style="margin: 0.591rem;color: white; font-size:1.6rem;"></i>Earn</div>
+            <div class="title-with-icon" style="margin-top: -0.2rem;"><i class="fas fa-plus" style="margin: 0.591rem;color:#FFF8DA; font-size:1.6rem;"></i>Earn</div>
           </div>
+        </a>
 
         <% } %>
        
@@ -264,16 +266,16 @@
        
         <a class="titles_nv" href=<%=` /trending `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon"><i class="fas fa-fire" style="margin-bottom: 0.591rem; color: white; font-size:1.6rem;"></i>Hot</div>
+            <div class="title-with-icon"><i class="fas fa-fire"  color: #FFF8DA; font-size:1.6rem;"></i>Hot</div>
           </div>
         <a class="titles_nv" href="/liveDeal" id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: white; font-size:1.6rem;"></i>Live</div>
+            <div class="title-with-icon"><i class="fas fa-plus" color: #FFF8DA; font-size:1.6rem;"></i>Live</div>
           </div>
         </a>  
       <a class="titles_nv" href=<%=` /signup `%> id="signup"> 
         <div class="postDeal" style="display: flex; align-items: center; ">
-          <div class="title-with-icon"><i class="fas fa-user-plus" style="margin-bottom: 0.591rem;"></i>Sign Up</div>
+          <div class="title-with-icon" ><i class="fas fa-user-plus"  color: #FFF8DA; font-size:1.6rem;"></i>Sign Up</div>
         </div>
       </a>
       <% } %>

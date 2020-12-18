@@ -121,6 +121,11 @@
   display: none;
   transition: all 0.3s;
 
+  @include respond(phone) {
+    width: 85%;
+  }
+
+
   // &:target {
   //   opacity: 1;
   //   // animation: cssAnimation 5s forwards;

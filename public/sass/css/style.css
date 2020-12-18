@@ -2345,7 +2345,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .deal-deets {
-      height: 49.5rem;
+      height: 53.5rem;
       margin-left: 3rem;
       max-width: 55.5rem; } }
   @media (max-width: 1380px) {
@@ -3137,7 +3137,7 @@ figure {
   @media (max-width: 37.5em) {
     .deal-with-deal-deets {
       display: block;
-      height: 103.5rem;
+      height: 106.5rem;
       width: 100%; } }
   @media (max-width: 1380px) {
     .deal-with-deal-deets .p {
@@ -3580,12 +3580,10 @@ figure {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   border: none;
-  position: relative;
-  bottom: 5rem; }
+  position: relative; }
   @media (max-width: 37.5em) {
     #copied {
-      position: relative;
-      bottom: 4rem; } }
+      position: relative; } }
   @media (max-width: 1380px) {
     #copied .p {
       font-size: 2rem; }
@@ -4455,7 +4453,8 @@ figure {
   color: #110e0e;
   background-color: #d4d3d3;
   border-radius: 0.5rem;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  width: 80%; }
 
 .user-view {
   background-color: #fff;

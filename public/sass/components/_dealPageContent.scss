@@ -74,7 +74,7 @@
 
   @include respond(phone) {
     // margin-left: 0rem;
-    height: 49.5rem;
+    height: 53.5rem;
     // width: 40.5rem;
 
     margin-left: 3rem;
@@ -875,7 +875,7 @@
     // display: flex;
     // height: 55.5rem;
     display: block;
-    height: 103.5rem;
+    height: 106.5rem;
     width: 100%;
   }
   @include respond(small-phone) {
@@ -1368,6 +1368,7 @@
   margin-bottom: -0.5rem;
   padding: 5px 0;
 }
+
 #copied {
   width: 20%;
   padding: 1rem 0;
@@ -1379,11 +1380,9 @@
   text-transform: uppercase;
   border: none;
   position: relative;
-  bottom: 5rem;
 
   @include respond(phone) {
     position: relative;
-    bottom: 4rem;
   }
 }
 

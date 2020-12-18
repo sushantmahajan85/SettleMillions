@@ -46,7 +46,7 @@ type: String
     time: { type: Number, default: 0 },
     createdAt: {
       type: Number,
-      default: Date.now(),
+      // default: Date.now(),
     },
     titleDis: {
       type: String,
@@ -111,6 +111,7 @@ dealSchema.virtual("reviews", {
 
 dealSchema.post("save", async function() {
   const shorter = shortid.generate();
+  this.createdAt = Date.now();
   this.short = shorter;
   this.discount = Math.round((((this.dealPrice - this.mrp)/(this.dealPrice))*100));
   this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;

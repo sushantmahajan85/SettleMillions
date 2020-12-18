@@ -172,6 +172,7 @@
 
             
             var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
             var day = Math.round((tem/2.4))/10;
             %>
             <% function timeSince(date) {
@@ -229,7 +230,7 @@
                                         <%= deal.dealName %>
                                     </h3>
                                     <div>
-                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
+                                        <a class="aff_name" href=<%= `/member/${deal.user}` %>><span style="margin-right: 1rem;"><%= deal.owner.channelName %></span> | <i style="margin-left: 1rem;" class="mp_icon1 fa fa-amazon"></i>
                                         </a>
                                     </div>
                                     <!-- <i class=" mp_aff-name-tag fas fa-check-circle"></i> -->
@@ -249,7 +250,7 @@
                                             <% } else if (tem > 1) { %>
                                             <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                             <% } else { %>
-                                            <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                            <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                             <% } %>
 
                                         </div>
@@ -303,6 +304,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -347,7 +349,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -427,6 +429,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -471,7 +474,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -525,6 +528,7 @@
             
                         
                         var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                         var day = Math.round((tem/2.4))/10;
                         %>
                         <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -569,7 +573,7 @@
                                                         <% } else if (tem > 1) { %>
                                                         <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                         <% } else { %>
-                                                        <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                        <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                         <% } %>
             
                                                     </div>
@@ -647,6 +651,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -691,7 +696,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -746,6 +751,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -790,7 +796,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -871,6 +877,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -915,7 +922,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -970,6 +977,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -1014,7 +1022,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -1089,6 +1097,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -1133,7 +1142,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -1191,6 +1200,7 @@
     
                 
                 var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                 var day = Math.round((tem/2.4))/10;
                 %>
                 <a href=<%= `/deal/${deal._id}/postedBy/${deal.user}` %>>
@@ -1235,7 +1245,7 @@
                                                 <% } else if (tem > 1) { %>
                                                 <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                 <% } else { %>
-                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                 <% } %>
     
                                             </div>
@@ -1443,6 +1453,7 @@
         
                     
                     var tem = Math.round(deal.time/360000)/10;
+            var minutes = Math.round(deal.time/6000)/10;
                     var day = Math.round((tem/2.4))/10; %>
                     
                    
@@ -1489,7 +1500,7 @@
                                                     <% } else if (tem > 1) { %>
                                                     <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem} hr`%></span>
                                                     <% } else { %>
-                                                    <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${tem*60} min`%></span>
+                                                    <span style="margin-left: 0.5rem; font-weight: 600;"><%=`${minutes} min`%></span>
                                                     <% } %>
         
                                                 </div>

@@ -27,7 +27,7 @@ const passvaluePage = async (titleDescript, descript, link) => {
       },
     });
     if (result.data.status === "success") {
-      showAlert("success", "login successful");
+      showAlert("success", "Successfully posted");
       //   alert("successful");
       window.setTimeout(() => {
         location.assign("/");

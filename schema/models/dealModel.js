@@ -24,7 +24,7 @@ const dealSchema = new mongoose.Schema(
     },
     short: {
       type: String,
-      // default: shortid.generate(),
+      default: shortid.generate(),
       //required: true,
       //unique: true
     },
@@ -46,7 +46,7 @@ type: String
     time: { type: Number, default: 0 },
     createdAt: {
       type: Number,
-      default: Date.now(),
+    default : Date.now()
     },
     titleDis: {
       type: String,
@@ -108,10 +108,13 @@ dealSchema.virtual("reviews", {
   foreignField: "deal",
   localField: "_id",
 });
-
+dealSchema.pre("save",async function(next){
+  // const shorter = shortid.generate();
+  // this.createdAt = Date.now();
+  // this.short = shorter;
+next();
+})
 dealSchema.post("save", async function() {
-  const shorter = shortid.generate();
-  this.short = shorter;
   this.discount = Math.round((((this.dealPrice - this.mrp)/(this.dealPrice))*100));
   this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
   this.save();

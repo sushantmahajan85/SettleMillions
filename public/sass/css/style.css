@@ -2618,11 +2618,7 @@ figure {
     line-height: 1.567;
     hyphens: auto;
     margin-bottom: 1rem;
-    font-weight: 400;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical; }
+    font-weight: 400; }
   .deal-deets_affiliate {
     padding: 2rem 0rem 2rem 1rem;
     width: 100%; }

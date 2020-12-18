@@ -10,7 +10,7 @@ router.use(authController.protect);
 router.route('/')
     .get(likeDealController.getAllLikedDeals)
     .post(
-        authController.restrictTo('user'),
+        authController.restrictTo('admin','user'),
         likeDealController.setDealUserIds,
         likeDealController.createLikedDeals);
 

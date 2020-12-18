@@ -155,7 +155,7 @@
 
       
       <div class="deal-deets_buttons" style="display: flex;">
-        <a href="<%= deal.affiliateLink %>" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i><span class="buy-now_text"> Buy now</span></a>
+        <a href="<%= deal.affiliateLink %>" target="_blank" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i><span class="buy-now_text"> Buy now</span></a>
         <div class="below-image">
           <% if (user) { %>
             <% if (like) { %>
@@ -565,8 +565,8 @@
   
   
                 <div class="deal_box_nameTime dp-price-row" style="display: flex;flex-direction: row ">
-                  <div class="deal_box_dp">Rs.<%= dealo.dealPrice %></div>
-                  <div class="deal_box_mrp">Rs.<%= dealo.mrp %></div>
+                  <div class="deal_box_dp">Rs.<%= dealo.mrp %></div>
+                  <div class="deal_box_mrp">Rs.<%= dealo.dealPrice %></div>
                   <div class="deal_box_dis">-<%= dealo.discount%>%</div>
                 </div>
   

@@ -183,6 +183,7 @@ img {
   @include respond(phone) {
     padding-top: 10.6rem;
     height: 33rem;
+    margin-bottom: 14rem;
   }
 
   @include respond(small-phone) {

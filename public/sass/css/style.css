@@ -1725,16 +1725,23 @@ body {
   }
 }
 
-.phn_res {
-  height: 0;
-  width: 0;
+@media (max-width: 1380px) {
+  .carousel_phn .p {
+    font-size: 2rem;
+  }
+  .carousel_phn .para {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
 }
+
 @media (max-width: 75em) {
   .phn_res {
     width: 100%;
     height: 25vh;
   }
 }
+
 @media (max-width: 1380px) {
   .phn_res .p {
     font-size: 2rem;
@@ -1744,12 +1751,14 @@ body {
     margin-right: 1rem;
   }
 }
+
 @media (max-width: 37.5em) {
   .phn_res {
     width: 100%;
     height: 33rem;
   }
 }
+
 @media (max-width: 1380px) {
   .phn_res .p {
     font-size: 2rem;
@@ -1933,6 +1942,7 @@ img {
   .slideshow-container_phn {
     padding-top: 10.6rem;
     height: 33rem;
+    margin-bottom: 14rem;
   }
 }
 @media (max-width: 1380px) {

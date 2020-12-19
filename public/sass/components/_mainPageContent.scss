@@ -40,11 +40,11 @@ body {
 }
 
 .carousel_phn {
-  // display: none;
-  // visibility: hidden;
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 
-  // height: 0;
-  // width: 0;
   @include respond(tab-land) {
     display: block;
     visibility: visible;

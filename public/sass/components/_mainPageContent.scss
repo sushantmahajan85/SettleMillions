@@ -196,7 +196,7 @@ img {
   display: flex;
   // flex-wrap: wrap;
   //   position: absolute;
-  height: 30rem;
+  height: 35rem;
   //   margin: auto;
   //   float: right;
   @include respond(phone) {
@@ -213,7 +213,7 @@ img {
   margin-left: 0.7rem;
 }
 .carousel_box-small {
-  width: 25%;
+  width: 100%;
   height: 50%;
   flex-grow: 1;
   flex-basis: 50%;

@@ -436,7 +436,7 @@ h2 {
   display: flex;
   width: 100% !important;
   justify-content: space-between;
-  padding-top: 8.1rem;
+  padding-top: 7.1rem;
   background-color: #fff;
 
   @include respond(tab-land) {
@@ -451,7 +451,7 @@ h2 {
   &-nav {
     display: flex;
     color: #333;
-    height: 5rem;
+    height: 6rem;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;

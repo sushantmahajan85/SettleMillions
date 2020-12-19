@@ -39,13 +39,25 @@
             <img style="margin-top: 0rem;" src=<%=`/img/users/${user.photo}` %> alt="User Photo">
             <div class="sidebar_username"><%= user.name %></div>
           </a>
+          <div class="navigation_link navigation_item">
+            <a href=<%= `/member/${user.id}` %>><i class="small-sidebar fas fa-user"></i> Profile</a>
+            <a href="/updateUserSettings"><i class="small-sidebar fas fa-user-edit font_icon" style="color:white;"></i> Edit Profile</a>
+            <a onclick="loca();signOut()"><i class="small-sidebar fas fa-sign-out-alt font_icon" style="color:white;"></i> Logout</a>
+          </div>
         <% } else { %>
           <a href=<%= `/member/${user.id}` %>>
             <img style="margin-top: 0rem;" data-name=<%=user.name %> data-color="#85e0ce" class="profile user-nav__user-photo">
             <div class="sidebar_username"><%= user.name %></div>
           </a>
+          <div class="navigation_link navigation_item">
+            <a href=<%= `/member/${user.id}` %>><i class="small-sidebar fas fa-user"></i> Profile</a>
+            <a href="/updateUserSettings"><i class="small-sidebar fas fa-user-edit font_icon" style="color:white;"></i> Edit Profile</a>
+            <a onclick="loca();signOut()"><i class="small-sidebar fas fa-sign-out-alt font_icon" style="color:white;"></i> Logout</a>
+          </div>
         <% } %>
       <% } %>
+
+      <hr>
 
       <div class="navigation_link navigation_item">
         <a href="#popup" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>

@@ -32,6 +32,21 @@
         >&times;</a
       >
       <!-- <h3 class="nav_grabzy">Grabzy</h3> -->
+
+      <% if (user) { %>
+        <% if (user.photo) { %>
+          <a href=<%= `/member/${user.id}` %>>
+            <img style="margin-top: 0rem;" src=<%=`/img/users/${user.photo}` %> alt="User Photo">
+            <div class="sidebar_username"><%= user.name %></div>
+          </a>
+        <% } else { %>
+          <a href=<%= `/member/${user.id}` %>>
+            <img style="margin-top: 0rem;" data-name=<%=user.name %> data-color="#85e0ce" class="profile user-nav__user-photo">
+            <div class="sidebar_username"><%= user.name %></div>
+          </a>
+        <% } %>
+      <% } %>
+
       <div class="navigation_link navigation_item">
         <a href="#popup" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>
         <a href="events.html" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>

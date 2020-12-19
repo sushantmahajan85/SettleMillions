@@ -64,7 +64,7 @@ body {
 
   @include respond(phone) {
     width: 100%;
-    height: 36rem;
+    height: 33rem;
   }
 }
 
@@ -182,7 +182,7 @@ img {
 
   @include respond(phone) {
     padding-top: 10.6rem;
-    height: 36rem;
+    height: 33rem;
   }
 
   @include respond(small-phone) {
@@ -203,15 +203,18 @@ img {
     padding-top: 10rem;
   }
 }
+
 img {
   padding: 0.5rem !important;
 }
+
 .corousel_box-large {
-  width: 50% !important;
+  width: 55% !important;
   flex-grow: 1;
   flex-shrink: 0;
   margin-left: 0.7rem;
 }
+
 .carousel_box-small {
   width: 100%;
   height: 50%;
@@ -1035,7 +1038,7 @@ figure {
   }
 
   @include respond(phone) {
-    height: 36rem;
+    height: 33rem;
   }
 
   @include respond(small-phone) {

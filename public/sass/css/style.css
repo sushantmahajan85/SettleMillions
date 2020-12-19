@@ -479,7 +479,7 @@ h2 {
   display: flex;
   width: 100% !important;
   justify-content: space-between;
-  padding-top: 8.1rem;
+  padding-top: 7.1rem;
   background-color: #fff; }
   @media (max-width: 75em) {
     .header_small {
@@ -503,7 +503,7 @@ h2 {
   .header_small-nav {
     display: flex;
     color: #333;
-    height: 5rem;
+    height: 6rem;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center; }
@@ -1373,7 +1373,7 @@ body {
   @media (max-width: 37.5em) {
     .phn_res {
       width: 100%;
-      height: 36rem; } }
+      height: 33rem; } }
   @media (max-width: 1380px) {
     .phn_res .p {
       font-size: 2rem; }
@@ -1507,7 +1507,7 @@ img {
   @media (max-width: 37.5em) {
     .slideshow-container_phn {
       padding-top: 10.6rem;
-      height: 36rem; } }
+      height: 33rem; } }
   @media (max-width: 1380px) {
     .slideshow-container_phn .p {
       font-size: 2rem; }
@@ -1544,7 +1544,7 @@ img {
   padding: 0.5rem !important; }
 
 .corousel_box-large {
-  width: 50% !important;
+  width: 55% !important;
   flex-grow: 1;
   flex-shrink: 0;
   margin-left: 0.7rem; }
@@ -2183,7 +2183,7 @@ figure {
       margin-right: 1rem; } }
   @media (max-width: 37.5em) {
     .carousel_image_small-1 {
-      height: 36rem; } }
+      height: 33rem; } }
   @media (max-width: 1380px) {
     .carousel_image_small-1 .p {
       font-size: 2rem; }

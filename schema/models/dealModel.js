@@ -46,7 +46,7 @@ type: String
     time: { type: Number, default: 0 },
     createdAt: {
       type: Number,
-      default : Date.now()
+      // default : Date.now()
     },
     titleDis: {
       type: String,

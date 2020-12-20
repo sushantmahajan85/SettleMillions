@@ -148,7 +148,7 @@
       <hr />
       <div class="deal-deets_price">
         <li class="price"><span class="price_avail">
-            Rs. <%= deal.dealPrice %> </span> <span class="price_mrp">Rs. <%= deal.mrp %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
+            Rs. <%= deal.mrp %> </span> <span class="price_mrp">Rs. <%= deal.dealPrice %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
             </span>
         </li>
       </div>
@@ -196,7 +196,7 @@
           <% } else { %>
           <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
           <% } %></p>
-        <span class="deal-deets_categ" >Category: <%= deal.category %></span>
+        <!-- <span class="deal-deets_categ" >Category: <%= deal.category %></span> -->
       
       </div>
 

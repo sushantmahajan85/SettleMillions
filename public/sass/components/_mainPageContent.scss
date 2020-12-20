@@ -42,9 +42,9 @@ body {
 .carousel_phn {
   display: none;
   visibility: hidden;
-
   height: 0;
   width: 0;
+
   @include respond(tab-land) {
     display: block;
     visibility: visible;
@@ -54,8 +54,8 @@ body {
 }
 
 .phn_res {
-  height: 0;
-  width: 0;
+  // height: 0;
+  // width: 0;
 
   @include respond(tab-land) {
     width: 100%;
@@ -64,7 +64,7 @@ body {
 
   @include respond(phone) {
     width: 100%;
-    height: 36rem;
+    height: 33rem;
   }
 }
 
@@ -182,7 +182,7 @@ img {
 
   @include respond(phone) {
     padding-top: 10.6rem;
-    height: 36rem;
+    height: 33rem;
   }
 
   @include respond(small-phone) {
@@ -196,24 +196,27 @@ img {
   display: flex;
   // flex-wrap: wrap;
   //   position: absolute;
-  height: 30rem;
+  height: 35rem;
   //   margin: auto;
   //   float: right;
   @include respond(phone) {
     padding-top: 10rem;
   }
 }
+
 img {
   padding: 0.5rem !important;
 }
+
 .corousel_box-large {
-  width: 50% !important;
+  width: 55% !important;
   flex-grow: 1;
   flex-shrink: 0;
   margin-left: 0.7rem;
 }
+
 .carousel_box-small {
-  width: 25%;
+  width: 100%;
   height: 50%;
   flex-grow: 1;
   flex-basis: 50%;
@@ -705,7 +708,7 @@ figure {
   line-height: 2rem;
   font-family: $family2;
   letter-spacing: 0.05rem;
-  white-space: nowrap;
+  // white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 1.2rem;
@@ -1035,7 +1038,7 @@ figure {
   }
 
   @include respond(phone) {
-    height: 36rem;
+    height: 33rem;
   }
 
   @include respond(small-phone) {

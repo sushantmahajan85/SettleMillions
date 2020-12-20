@@ -117,9 +117,6 @@ next();
 dealSchema.post("save", async function() {
   this.discount = Math.round((((this.dealPrice - this.mrp)/(this.dealPrice))*100));
   this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
-  const shorter = shortid.generate();
-  this.createdAt = Date.now();
-  this.short = shorter;
   this.save();
 });
 const Deal = mongoose.model("Deal", dealSchema);

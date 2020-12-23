@@ -682,6 +682,12 @@
     <script src="/vendor/tagify-master/dist/tagify.min.js"></script>
     <script>
       var channel = '<%- user.channelName %>';
+      var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < 5; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
       document.getElementById("regForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const form = new FormData();
@@ -691,6 +697,7 @@
       form.append("mrp", document.getElementById("mrp").value);
       form.append("category", document.getElementById("category").value);
       form.append("owner", channel);
+      form.append("short", result);
       form.append(
         "categorySelect",
         document.getElementById("categorySelect").value

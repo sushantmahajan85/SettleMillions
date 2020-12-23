@@ -45,7 +45,7 @@ exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
 
   if (deal) {
-    res.redirect(deal.long.split("4000")[1]);
+    res.redirect(deal.long.split("grabzy.in")[1]);
   }
 });
 
@@ -1133,7 +1133,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   const deal = await Deal.findById({ _id: req.params.dealId }).populate({
     path: "reviews",
   });
-  var fullUrl = req.protocol + "://" + req.get("host") + "/" + deal.short;
+  var fullUrl ="https://" + req.get("host") + "/" + deal.short;
   if (!deal) {
     return next(new appError("No Deal With That Id", 404));
   }

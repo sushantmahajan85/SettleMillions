@@ -4,7 +4,8 @@
    <meta charset="UTF-8">
    <link rel="stylesheet" href="/sass/css/style.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Your Deal</title>
+   <title>Grabzy - Shop More, Spend Less</title>
+   <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162941654-1"></script>
    <script>
       window.dataLayer = window.dataLayer || [];
@@ -310,9 +311,9 @@ window.location.href = url;
                     </div> -->
             
                   <div class="mep_deal-r3" style="display: flex;flex-direction: row ">
-                    <div class="mep_deal-r3-dp">₹<%= deal.dealPrice %></div>
-                    <div class="mep_deal-r3-mrp">₹<%= deal.mrp %></div>
-                    <div class="mep_deal-r3-dis">50% OFF</div>
+                    <div class="mep_deal-r3-dp">₹<%= deal.mrp %></div>
+                    <div class="mep_deal-r3-mrp">₹<%= deal.dealPrice %></div>
+                    <div class="mep_deal-r3-dis"><%= deal.discount %>% OFF</div>
                   </div>
             
                   <!-- <div class="big-deal_price">

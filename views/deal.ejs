@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affiliate</title>
+  <title>Grabzy - Shop More, Spend Less</title>
+  <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
   <link rel="stylesheet" href="/sass/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- <link rel="shortcut icon" type="image/png" href="sass/img/Black-and-White-Logo-PNG.png"> -->
@@ -148,7 +149,7 @@
       <hr />
       <div class="deal-deets_price">
         <li class="price"><span class="price_avail">
-            Rs. <%= deal.dealPrice %> </span> <span class="price_mrp">Rs. <%= deal.mrp %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
+            Rs. <%= deal.mrp %> </span> <span class="price_mrp">Rs. <%= deal.dealPrice %> </span> <span class="price_dis">(<%= deal.discount%>% OFF)
             </span>
         </li>
       </div>
@@ -196,11 +197,12 @@
           <% } else { %>
           <span style="margin-left: 1rem;"><%=`${tem*60} min ago`%></span>
           <% } %></p>
-        <span class="deal-deets_categ" >Category: <%= deal.category %></span>
+        <!-- <span class="deal-deets_categ" >Category: <%= deal.category %></span> -->
       
       </div>
 
       <div class="deal-deets_affiliate">
+        <% if(postedBy){ %>
         <% if (postedBy.photo) { %>
           <img src=<%=`/img/users/${postedBy.photo}`%> alt="User photo" class="user-nav__user-photo review-photo">
           <% } else { %>
@@ -223,6 +225,7 @@
 
         <button class="deal-deets_subs" id="subscribe_btn_no">Subscribe</button>
 
+        <% } %>
         <% } %>
 
       </div>
@@ -318,7 +321,17 @@
       </div> -->
       <div class="review-section">
         <span class="review-head">
-          <img src=<%=`/img/deals/${deal.titleImg}`%> alt="User photo" class="user-nav__user-photo review-photo">
+          <% if (user) { %>
+            <% if (user.photo) { %>
+              <a href=<%= `/member/${user.id}` %>>
+                <img style="margin-top: 0rem; height: 6rem; width: 6rem; border-radius: 100%;" src=<%=`/img/users/${user.photo}` %> alt="User Photo">
+              </a>
+            <% } else { %>
+              <a href=<%= `/member/${user.id}` %>>
+                <img style="margin-top: 0rem;" data-name=<%=user.name %> data-color="#85e0ce" class="profile user-nav__user-photo">
+              </a>
+            <% } %>
+          <% } %>
         </span>
         <input placeholder="Add A Review" id="review_input" class="add-review-text-area" style="padding-left: 2rem;">
         <button id="review_post">Post</button>
@@ -469,8 +482,8 @@
   
   
                 <div class="deal_box_nameTime dp-price-row" style="display: flex; flex-direction: row">
-                  <div class="deal_box_dp">Rs.<%= deala.dealPrice %></div>
-                  <div class="deal_box_mrp">Rs.<%= deala.mrp %></div>
+                  <div class="deal_box_dp">Rs.<%= deala.mrp %></div>
+                  <div class="deal_box_mrp">Rs.<%= deala.dealPrice %></div>
                   <div class="deal_box_dis">-<%= deala.discount%>%</div>
                 </div>
   

@@ -953,7 +953,7 @@ nav li {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 25px;
+  font-size: 25px !important;
   margin-left: 50px;
   color: white;
   background-image: none; }
@@ -1289,6 +1289,11 @@ nav li {
   .small_sidebar_cat1 .para {
     font-size: 1.5rem;
     margin-right: 1rem; } }
+
+.sidebar_username {
+  display: inline;
+  font-size: 14px;
+  margin-left: 1rem; }
 
 body {
   height: 100%;
@@ -5880,6 +5885,12 @@ Down
     opacity: 1; }
   100% {
     opacity: 0; } }
+
+.popup_scroll_content {
+  font-size: 1.2rem !important;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 23rem; }
 
 #share_popup {
   background-color: white;

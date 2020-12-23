@@ -105,6 +105,14 @@
     opacity: 0;
   }
 }
+
+.popup_scroll_content {
+  font-size: 1.2rem !important;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 23rem;
+}
+
 #share_popup {
   background-color: white;
   position: fixed;
@@ -124,7 +132,6 @@
   @include respond(phone) {
     width: 85%;
   }
-
 
   // &:target {
   //   opacity: 1;

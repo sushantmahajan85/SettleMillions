@@ -116,7 +116,7 @@ next();
 })
 dealSchema.post("save", async function() {
   this.discount = Math.round((((this.dealPrice - this.mrp)/(this.dealPrice))*100));
-  this.long = `127.0.0.1:4000/deal/${this._id}/postedBy/${this.user}`;
+  this.long = `grabzy.in/deal/${this._id}/postedBy/${this.user}`;
   this.save();
 });
 const Deal = mongoose.model("Deal", dealSchema);

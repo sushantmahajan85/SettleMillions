@@ -7,32 +7,6 @@ const router = express.Router();
 //router.get(viewController.getSignupApp);
 
 router.use(authController.isLoggedIn);
-
-router.get("/newDeal", viewController.createNewDeal);
-router.get("/login", viewController.getLoginForm);
-router.get("/signup", viewController.getSignupForm);
-router.get("/verification", viewController.getVerificationForm);
-// router.get(
-//   "/recruitments",
-//   authController.protect,
-//   viewController.getRecruitmentsData
-// );
-router.get("/pageDeal",viewController.pageDeal);
-router.get("/newsDeal",viewController.newsDeal);
-router.get("/logout", authController.logout);
-router.get("/trending", viewController.getTrendingDeals);
-
-router.get("/liveDeal",viewController.livePage);
-router.get("/", viewController.mainPage);
-router.get("/search", viewController.autocomplete);
-router.get("/analytics", viewController.analytics);
-router.get("/member/:id", viewController.getMemberData);
-router.get("/:short", viewController.shortshort);
-router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
-router.get("/forgotPassword", viewController.forgot);
-router.get("/resetPassword/:bytes", viewController.reset);
-
-
 router.get(
   "/updateUserSettings",
   authController.protect,
@@ -46,8 +20,30 @@ router.get(
 
 router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
 
+router.get("/newDeal", viewController.createNewDeal);
+router.get("/login", viewController.getLoginForm);
+router.get("/signup", viewController.getSignupForm);
+router.get("/verification", viewController.getVerificationForm);
+// router.get(
+//   "/recruitments",
+//   authController.protect,
+//   viewController.getRecruitmentsData
+// );
 
+router.get("/search", viewController.autocomplete);
+router.get("/pageDeal",viewController.pageDeal);
+router.get("/newsDeal",viewController.newsDeal);
+router.get("/logout", authController.logout);
+router.get("/trending", viewController.getTrendingDeals);
 
+router.get("/liveDeal",viewController.livePage);
+router.get("/", viewController.mainPage);
+router.get("/analytics", viewController.analytics);
+router.get("/member/:id", viewController.getMemberData);
+router.get("/:short", viewController.shortshort);
+router.get("/deal/:dealId/postedBy/:sellerId", viewController.dealPage);
+router.get("/forgotPassword", viewController.forgot);
+router.get("/resetPassword/:bytes", viewController.reset);
 router.get("/category/:cat", viewController.category);
 
 router.get("/edit/:id", viewController.editDeal);

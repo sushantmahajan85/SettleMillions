@@ -52,8 +52,15 @@
             </h2>
             <form class="form form-user-data" id="form-user-data">
               <div class="form__group form__photo-upload">
-                <img class="form__user-photo"
-                src=<%=`/img/users/${user.photo}`%> alt="User photo" />
+                <% if (user.photo) { %>
+                  <img class="form__user-photo"
+                  src=<%=`/img/users/${user.photo}`%> alt="User photo" />
+                  
+                  <% } else { %>
+                  <a href=<%= `/member/${user.id}` %> ><img class="form__user-photo profile" 
+                    data-name=<%=user.name %> data-color="#85e0ce" /></a>
+                    <% } %>
+               
                 <input
                   type="file"
                   accept="image/*"
@@ -69,13 +76,11 @@
               <div class="form__group">
                 <label class="form__label" for="name">Username</label
                 ><input
+
                   class="form__input"
                   id="name"
                   type="text"
-                  value="<%"
-                  ="user.name"
-                  %
-                />
+                  value=<%= user.name %>
                 />
               </div>
               <div class="form__group">
@@ -84,10 +89,7 @@
                   class="form__input"
                   id="email"
                   type="email"
-                  value="<%"
-                  ="user.email"
-                  %
-                />
+                  value=<%=user.email%>
                 />
               </div>
 
@@ -244,12 +246,10 @@
     </div>
 
     <script src="vendor/initial.min.js"></script>
-    <script>
-      $(".profile").initial();
-    </script>
-    <script>
-      $(".profile1").initial();
-    </script>
+    
+  <script>
+    $(".profile").initial();
+  </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="/js/userData.js"></script>
     <script src="/js/password.js"></script>

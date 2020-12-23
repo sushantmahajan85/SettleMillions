@@ -24,7 +24,7 @@ const dealSchema = new mongoose.Schema(
     },
     short: {
       type: String,
-      default: shortid.generate(),
+      // default: shortid.generate(),
       //required: true,
       //unique: true
     },

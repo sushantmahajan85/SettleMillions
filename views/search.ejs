@@ -311,9 +311,9 @@ window.location.href = url;
                     </div> -->
             
                   <div class="mep_deal-r3" style="display: flex;flex-direction: row ">
-                    <div class="mep_deal-r3-dp">₹<%= deal.dealPrice %></div>
-                    <div class="mep_deal-r3-mrp">₹<%= deal.mrp %></div>
-                    <div class="mep_deal-r3-dis">50% OFF</div>
+                    <div class="mep_deal-r3-dp">₹<%= deal.mrp %></div>
+                    <div class="mep_deal-r3-mrp">₹<%= deal.dealPrice %></div>
+                    <div class="mep_deal-r3-dis"><%= deal.discount %>% OFF</div>
                   </div>
             
                   <!-- <div class="big-deal_price">

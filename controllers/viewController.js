@@ -30,15 +30,15 @@ let rec5 = "";
 // };
 
 exports.calcul = catchAsync(async (req, res) => {
-  const tempideals = await Deal.find();
+  // const tempideals = await Deal.find();
 
-  for (var deal of tempideals) {
-    var now = new Date(Date.now());
-    var tem = (now.getTime() - 1000000000000) / 3600000;
-    tem = deal.views / tem;
+  // for (var deal of tempideals) {
+  //   var now = new Date(Date.now());
+  //   var tem = (now.getTime() - 1000000000000) / 3600000;
+  //   tem = deal.views / tem;
 
-    await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
-  }
+  //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
+  // }
 });
 
 exports.shortshort = catchAsync(async (req, res) => {
@@ -1366,18 +1366,18 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     fullUrl,
   });
 
-  const tempDeals = await Deal.find();
+  // const tempDeals = await Deal.find();
 
-  for (var dealing of tempDeals) {
-    var now = new Date(Date.now());
-    console.log(dealing.time);
-    var tem = (now.getTime() - dealing.time) / 3600000;
-    tem = dealing.views / tem;
+  // for (var dealing of tempDeals) {
+  //   var now = new Date(Date.now());
+  //   console.log(dealing.time);
+  //   var tem = (now.getTime() - dealing.time) / 3600000;
+  //   tem = dealing.views / tem;
 
-    //console.log(deal._id);
+  //   //console.log(deal._id);
 
-    await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
-  }
+  //   await Deal.findByIdAndUpdate({ _id: dealing._id }, { trendRatio: tem });
+  // }
 });
 // function escapeRegex(text) {
 //   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");

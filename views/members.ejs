@@ -30,14 +30,14 @@
     <div class="cover">
       <div class="cover_pic">
         <div class="cover_aff-pic">
-          <img src="/img/users/default.jpg" alt=" " class="mep_pic-user">
+          <img src=<%= `/img/users/${user.photo}` %> alt=" " class="mep_pic-user">
           <div class="mep_pic-user-overlay">
             <a href="#" class="mep_add-icon" title="User Profile">
               <i class="add-icon fas fa-plus"></i>
             </a>
             </div>
         </div>  
-        <div class="cover_aff-name">Cooper Deals <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
+        <div class="cover_aff-name"><%= user.channelName %>  <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
         <div class="cover_aff-subs"><%=`${numSub} subscribers`%></div>
 
         <!-- <div class="cover_aff-bio">• Add your bio here •</div> -->
@@ -175,9 +175,9 @@
           </div> -->
   
         <div class="mep_deal-r3" style="display: flex;flex-direction: row ">
-          <div class="mep_deal-r3-dp">₹<%= deal.dealPrice %></div>
-          <div class="mep_deal-r3-mrp">₹<%= deal.mrp %></div>
-          <div class="mep_deal-r3-dis">50% OFF</div>
+          <div class="mep_deal-r3-dp">₹<%= deal.mrp %></div>
+          <div class="mep_deal-r3-mrp">₹<%= deal.dealPrice %></div>
+          <div class="mep_deal-r3-dis"><%= deal.discount %>% OFF</div>
         </div>
   
         <!-- <div class="big-deal_price">

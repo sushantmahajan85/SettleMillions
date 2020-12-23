@@ -77,7 +77,7 @@
             <a href="/category/womenFashion"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Women's Fashion </a>
             <a href="/category/homeKitchen"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Home & Kitchen </a>
             <a href="/category/beauty"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Beauty </a>
-            <a href="/category/personalCare" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Personal Case </a>
+            <a href="/category/personalCare" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem"  onclick="closeNav()"><i class="small-sidebar fas fa-shopping-bag font_icon"></i> Personal Care </a>
           </div>
 
           <div class="navigation_link navigation_item">
@@ -278,18 +278,8 @@
           <div class="postDeal" style="display: flex; align-items: center; ">
             <div class="title-with-icon" style="margin-top: 0.32rem;"><i class="fas fa-plus" style="margin-bottom: 0.591rem;color: #FFF8DA; font-size:1.6rem;"></i>Live</div>
           </div>
-        </a>  
-      <!-- <a class="titles_nv" href=<%=` /analytics `%> id="signup"> -->
-        <% if (user.role == 'admin') { %>
-          <a class="titles_nv" href="/liveDeal" id="signup">
-          <div class="postDeal" style="display: flex; align-items: center; ">
-            <div class="title-with-icon" style="margin-top: -0.2rem;"><i class="fas fa-plus" style="margin: 0.591rem;color:#FFF8DA; font-size:1.6rem;"></i>Earn</div>
-          </div>
         </a>
-
-        <% } %>
-       
-      <% } else { %>
+<% } else { %>
        
         <a class="titles_nv" href=<%=` /trending `%> id="signup">
           <div class="postDeal" style="display: flex; align-items: center; ">

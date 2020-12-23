@@ -619,7 +619,9 @@ exports.mainPage = catchAsync(async (req, res) => {
       deals.sort(dynamicSort("-trendRatio"));
     }
 
-    res.status(200).render("search", { deals /*recommendedDeals*/ });
+    var subs = new Array();
+
+    res.status(200).render("search", { deals, subs /*recommendedDeals*/ });
   } else {
     // const topUsersToday = await User.find().sort([["rankLatest", -1]]);
     var subDeals = new Array();

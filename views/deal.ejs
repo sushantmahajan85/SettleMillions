@@ -323,7 +323,7 @@
           <% if (user) { %>
             <% if (user.photo) { %>
               <a href=<%= `/member/${user.id}` %>>
-                <img style="margin-top: 0rem;" src=<%=`/img/users/${user.photo}` %> alt="User Photo">
+                <img style="margin-top: 0rem; height: 6rem; width: 6rem; border-radius: 100%;" src=<%=`/img/users/${user.photo}` %> alt="User Photo">
               </a>
             <% } else { %>
               <a href=<%= `/member/${user.id}` %>>

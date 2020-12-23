@@ -641,12 +641,12 @@ exports.mainPage = catchAsync(async (req, res) => {
     // const newlyJoined = await User.find();
     // const topUsers = await User.find().sort([["rank", -1]]);
 
-    const apnaUser = await User.findById("5f6b9fc84df4c90017adb18b");
+    const apnaUser = await User.findById("5fe314f1a341e7637e8c060f");
     // console.log(apnaUser);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 270 == 0) {
       await User.findByIdAndUpdate(
-        { _id: "5f6b9fc84df4c90017adb18b" },
+        { _id: "5fe314f1a341e7637e8c060f" },
         { groupCount: 0, $inc: { numberOfGroups: 1 } }
       );
     }
@@ -1370,7 +1370,8 @@ exports.dealPage = catchAsync(async (req, res, next) => {
 
   for (var dealing of tempDeals) {
     var now = new Date(Date.now());
-    var tem = (now.getTime() - dealing.time.getTime()) / 3600000;
+    console.log(dealing.time);
+    var tem = (now.getTime() - dealing.time) / 3600000;
     tem = dealing.views / tem;
 
     //console.log(deal._id);

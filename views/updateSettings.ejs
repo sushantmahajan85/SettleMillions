@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grabzy - Shop More, Spend Less</title>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
     <link rel="stylesheet" href="/sass/css/style.css" />
-
-    <title>Update</title>
   </head>
 
   <body>
@@ -67,14 +67,28 @@
                 > -->
               </div>
               <div class="form__group">
-                <label class="form__label" for="name">Username</label><input
-                class="form__input" id="name" type="text" value=<%= user.name %>
+                <label class="form__label" for="name">Username</label
+                ><input
+                  class="form__input"
+                  id="name"
+                  type="text"
+                  value="<%"
+                  ="user.name"
+                  %
+                />
                 />
               </div>
               <div class="form__group">
                 <label class="form__label" for="email">Email address</label
-                ><input class="form__input" id="email" type="email" value=<%=
-                user.email %> />
+                ><input
+                  class="form__input"
+                  id="email"
+                  type="email"
+                  value="<%"
+                  ="user.email"
+                  %
+                />
+                />
               </div>
 
               <div class="form__group">
@@ -94,9 +108,7 @@
               <!-- <img data-name=<%= user.name %> data-color="#85e0ce"
               class="profile1 " /> -->
               <div class="form__group right">
-                <button class="btn-update-settings">
-                  Save settings
-                </button>
+                <button class="btn-update-settings">Save settings</button>
               </div>
             </form>
           </div>
@@ -151,7 +163,7 @@
             <h2 class="heading-secondary" id="securityLogin">
               Security & Login
             </h2>
-            <form class="form form-user-settings " id="pass">
+            <form class="form form-user-settings" id="pass">
               <div class="form__group">
                 <label class="form__label" for="password-current"
                   >Current Password</label
@@ -188,9 +200,7 @@
                 />
               </div>
               <div class="form__group right">
-                <button class="btn-update-settings">
-                  Save password
-                </button>
+                <button class="btn-update-settings">Save password</button>
                 <button class="user_settings_forgot_password">
                   Forgot Password
                 </button>

@@ -78,13 +78,22 @@ const userSchema = new mongoose.Schema(
     },
     rank_difference: Number,
     cookies: Array,
-    r1: String,
-    r2: String,
-    r3: String,
-    r4: String,
-    r5: String,
+    
+    r1:{type: String,
+      default: '0'
+      },r2:{type: String,
+        default: '0'
+        },r3:{type: String,
+          default: '0'
+          },r4:{type: String,
+            default: '0'
+            },
+            r5:{type: String,
+              default: '0'
+              },
     groupCount: Number,
     numberOfGroups: Number,
+    id:String,
     reportChannelCount: { type: Number, default: 0 },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
@@ -125,7 +134,7 @@ userSchema.pre("save", async function(next) {
 });
 userSchema.post("save", async function() {
   const message = `Here is your 5 digit OTP : ${this.verification_token}`;
-
+this.id = this._id;
   // await sendEmail({
   //     email: this.email,
   //     subject: 'your 5 digit otp valid for 10 mins only',

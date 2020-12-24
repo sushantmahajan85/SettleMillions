@@ -129,12 +129,13 @@ userSchema.pre("save", async function(next) {
   this.verification_token = random();
   this.verification_token_time = Date.now() + 10 * 60 * 1000;
   this.timeStamp = Date.now();
-
+  console.log(this._id);
+  this.id = this._id;
   next();
 });
 userSchema.post("save", async function() {
   const message = `Here is your 5 digit OTP : ${this.verification_token}`;
-this.id = this._id;
+
   // await sendEmail({
   //     email: this.email,
   //     subject: 'your 5 digit otp valid for 10 mins only',

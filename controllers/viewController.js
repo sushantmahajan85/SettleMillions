@@ -11,6 +11,8 @@ const url = require("url");
 const { del } = require("request");
 const Review = require("../schema/models/reviewModel");
 
+const spawn = require("child_process").spawn;
+
 let cookieCount = 0;
 let cookieArray = ["one", "two", "three", "four", "five"];
 let cookieOneDealId = "";
@@ -330,6 +332,13 @@ exports.category = catchAsync(async (req, res) => {
 
 exports.mainPage = catchAsync(async (req, res) => {
   console.log("ec2 checking");
+
+  const process = spawn('python', ['--version']);
+
+  process.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
+
   if (req.query.dealOps) {
     let joChahiye = req.query.dealOps.split("/");
 

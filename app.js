@@ -6,6 +6,22 @@ const rateLimit = require("express-rate-limit");
 const url = require("url");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
+const spawn = require("child_process").spawn;
+
+const processPython = spawn('python', ['./../model_creation.py']);
+
+processPython.stdout.on('data', (data) => {
+  console.log(`${data}`);
+});
+
+// processPython.stderr.on('data', (data) => {
+//   console.log(`Error: ${data}`);
+// });
+
+// processPython.on('close', (data) => {
+//   console.log(`${data}`);
+// });
+
 const appError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 const userRouter = require("./routes/userRoutes");

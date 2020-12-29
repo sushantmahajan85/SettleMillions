@@ -350,11 +350,7 @@ exports.mainPage = catchAsync(async (req, res) => {
     console.log(`${data}`);
   });
 
-  const process = spawn('python', ['--version']);
-
-  process.stdout.on('data', (data) => {
-    console.log(`${data}`);
-  });
+  
 
   if (req.query.dealOps) {
     const processPython = spawn('python', ['./model_creation.py']);
@@ -386,6 +382,11 @@ exports.mainPage = catchAsync(async (req, res) => {
   const user = await User.findById(req.logged);
 
   if (req.logged) {
+    const process = spawn('python', ['./user_recommender.py'],req.logged);
+
+  process.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
     if (req.cookies.one !== undefined) {
       user.cookies[0] = req.cookies.one.id;
 

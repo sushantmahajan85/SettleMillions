@@ -94,7 +94,7 @@ exports.reset = (req, res) => {
 };
 
 exports.getLoginForm = (req, res) => {
-  const processPython = spawn('python', ['./../model_creation.py']);
+  const processPython = spawn('python', ['./model_creation.py']);
 
   processPython.stdout.on('data', (data) => {
     console.log(`${data}`);
@@ -104,7 +104,7 @@ exports.getLoginForm = (req, res) => {
 };
 
 exports.getSignupForm = (req, res) => {
-  const processPython = spawn('python', ['./../model_creation.py']);
+  const processPython = spawn('python', ['./model_creation.py']);
 
   processPython.stdout.on('data', (data) => {
     console.log(`${data}`);
@@ -344,7 +344,11 @@ exports.category = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
-  console.log("ec2 checking");
+  const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
 
   const process = spawn('python', ['--version']);
 
@@ -353,6 +357,11 @@ exports.mainPage = catchAsync(async (req, res) => {
   });
 
   if (req.query.dealOps) {
+    const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
     let joChahiye = req.query.dealOps.split("/");
 
     // if (joChahiye[0] == "report") {
@@ -1106,6 +1115,11 @@ exports.recently = catchAsync(async (req, res) => {
 
 exports.updateUserSettings = catchAsync(async (req, res) => {
   const user = await User.findById(req.user);
+  const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
   // const xyz = await User.findById(req.user).populate({
   //   path: "subscribers",
   // });
@@ -1200,7 +1214,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     return next(new appError("No Deal With That Id", 404));
   }
 
-  const processPython = spawn('python', ['./../recommender.py', req.params.dealId]);
+  const processPython = spawn('python', ['./recommender.py', req.params.dealId]);
 
   processPython.stdout.on('data', (data) => {
     console.log(`${data}`);

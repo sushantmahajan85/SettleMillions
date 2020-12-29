@@ -6818,10 +6818,10 @@ input#price-max {
   line-height: 1;
   box-shadow: 1px 0px 3px 1.5px #f0f3f4; }
   .ld_deal_box_img {
-    background-image: url(../../images/81xK62lJiML._SL1500_.jpg);
-    padding: 10.5rem;
-    background-size: 100% 100%;
-    overflow: hidden; }
+    height: 100%;
+    width: 35%;
+    overflow: hidden;
+    object-fit: cover; }
   .ld_deal_box:hover {
     box-shadow: 1px 0px 3px 5px #f0f3f4; }
 

@@ -10,6 +10,7 @@ const exec = require("child_process").exec;
 const url = require("url");
 const { del } = require("request");
 const Review = require("../schema/models/reviewModel");
+const RecommendedDeal =  require("../schema/models/dealRecommendations");
 
 const spawn = require("child_process").spawn;
 
@@ -93,10 +94,22 @@ exports.reset = (req, res) => {
 };
 
 exports.getLoginForm = (req, res) => {
+  const processPython = spawn('python', ['./../model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
+  
   res.status(200).render("login");
 };
 
 exports.getSignupForm = (req, res) => {
+  const processPython = spawn('python', ['./../model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
+
   res.status(200).render("signup");
 };
 
@@ -1187,6 +1200,12 @@ exports.dealPage = catchAsync(async (req, res, next) => {
     return next(new appError("No Deal With That Id", 404));
   }
 
+  const processPython = spawn('python', ['./../recommender.py', req.params.dealId]);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
+
   const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
@@ -1364,11 +1383,21 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //console.log(rec);
   //const t = await Deal.find({ trendRatio: { $gte: 4 } });
 
-  const reco = await Deal.find(
-    { $text: { $search: rec } },
-    { score: { $meta: "textScore" } }
-    //{ trendRatio: { $gte: 4 } }
-  ).sort({ score: { $meta: "textScore" } });
+  // const reco = await Deal.find(
+  //   { $text: { $search: rec } },
+  //   { score: { $meta: "textScore" } }
+  //   //{ trendRatio: { $gte: 4 } }
+  // ).sort({ score: { $meta: "textScore" } });
+
+  const recommendationsArray = await RecommendedDeal.findOne({ prod_id: req.params.dealId });
+  // console.log(recommendationsArray);
+
+  let reco = new Array();
+  if(recommendationsArray){
+    reco = await Deal.find({ _id: { $in: recommendationsArray.recommendations } });
+  }
+
+  console.log(reco);
 
   // for(var k=cooCount; k<reco.length; k++){
   //   if(reco[k].trendRatio < 4){
@@ -1376,9 +1405,9 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //   }
   // }
 
-  for (var i = 0; i < cooCount; i++) {
-    reco[i] = undefined;
-  }
+  // for (var i = 0; i < cooCount; i++) {
+  //   reco[i] = undefined;
+  // }
 
   //console.log(reco);
 

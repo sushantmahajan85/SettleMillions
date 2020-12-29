@@ -232,7 +232,7 @@ exports.getSubscriptions = catchAsync(async (req, res) => {
   var allDeals3 = new Array();
 
   for (sub of subs) {
-    var ekdin = 1000 * 60 * 60 * 24 * 100;
+    var ekdin = 1000 * 60 * 60 * 24 * 1;
     var dodin = 1000 * 60 * 60 * 24 * 2;
     var teendin = 1000 * 60 * 60 * 24 * 3;
     var temp1 = await Deal.find({

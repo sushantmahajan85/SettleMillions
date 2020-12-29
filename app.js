@@ -9,7 +9,7 @@ const cookieParser = require("cookie-parser");
 
 const spawn = require("child_process").spawn;
 
-const processPython = spawn('python', ['./../model_creation.py']);
+const processPython = spawn('python', ['./model_creation.py']);
 
 processPython.stdout.on('data', (data) => {
   console.log(`${data}`);

@@ -31,12 +31,12 @@ router.get("/verification", viewController.getVerificationForm);
 // );
 
 router.get("/search", viewController.autocomplete);
-router.get("/pageDeal",viewController.pageDeal);
-router.get("/newsDeal",viewController.newsDeal);
+router.get("/pageDeal", viewController.pageDeal);
+router.get("/newsDeal", viewController.newsDeal);
 router.get("/logout", authController.logout);
 router.get("/trending", viewController.getTrendingDeals);
 
-router.get("/liveDeal",viewController.livePage);
+router.get("/liveDeal", viewController.livePage);
 router.get("/", viewController.mainPage);
 router.get("/analytics", viewController.analytics);
 router.get("/member/:id", viewController.getMemberData);

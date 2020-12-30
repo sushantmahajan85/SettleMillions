@@ -49,7 +49,7 @@ exports.shortshort = catchAsync(async (req, res) => {
 
   if (deal) {
     res.status(200).render('shortid',{deal});
-    res.redirect(deal.long.split("grabzy.in")[1]);
+    // res.redirect(deal.long.split("grabzy.in")[1]);
   }
 });
 

@@ -37,6 +37,15 @@
 </head>
 
 <body>
-    <p>hihihihihihihi</p>
+    <!-- <p>hihihihihihihi</p> -->
+    <!-- <button style="display: none;" id="invisiButton"><a href=""> submit invisible </a></button> -->
 </body>
+<script>
+    var dealid = '<%- deal._id  %>';
+    var userid = '<%- deal.user  %>'; 
+  
+    window.onload = function() {
+     location.assign(`/deal/${dealid}/postedBy/${userid}`)  
+    };
+</script>
 </html>

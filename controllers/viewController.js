@@ -48,6 +48,7 @@ exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
 
   if (deal) {
+    res.status(200).render('shortid',{deal});
     res.redirect(deal.long.split("grabzy.in")[1]);
   }
 });

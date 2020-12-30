@@ -292,10 +292,15 @@ input#price-max {
     // border: 0.5px solid #f4f6f7;
     // border-right: 1px solid #f2f3f4;
   }
+
   &:hover {
     box-shadow: 1px 0px 3px 5px #f0f3f4;
     // border: 1.5px solid #f2f3f4;
   }
+}
+
+.ld_deal_box_img img {
+  height: 100%;
 }
 
 .ld_deal-title {

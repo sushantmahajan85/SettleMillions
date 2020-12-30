@@ -45,17 +45,17 @@
       <% } %>
       
       <% if (user) { %>
-      <a href="../likedDeals">
+      <a href="/savedDeals">
         <div class="item2">
           <h4 class="heading-normal">
-            <i class="small-sidebar fas fa-heart font_icon"></i> Favourites
+            <i class="small-sidebar fas fa-heart font_icon"></i> Saved For Later
           </h4>
         </div>
       </a>
       <% } else { %>
         <div class="item2" onclick="document.getElementById('popup_like_sidebar').style.display = 'block'">
           <h4 class="heading-normal">
-            <i class="small-sidebar fas fa-heart font_icon"></i> Favourites
+            <i class="small-sidebar fas fa-heart font_icon"></i> Saved For Later
           </h4>
         </div>
       <% } %>
@@ -317,7 +317,7 @@
          <% } %> 
       <% } else {%>
         <h3 class="heading-normal" style="margin: 1rem 0.5rem 0.5rem 1rem">
-          Sign in to like deals subscribe and earn
+          Sign in to save deals subscribe and earn
         </h3>
         <div class="deal-deets_buttons" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem">
           <a href="/signup" class="sidebar_button"> <i
@@ -445,7 +445,7 @@
         <div class="popup_cross" id="popup_cross_like_sidebar" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="document.getElementById('popup_like_sidebar').style.display = 'none'">&times;</div>
     </div>
     <div class="popup_content" style="font-size: 2rem; text-align: center;">
-        Signup / Login to like deals
+        Signup / Login to save deals
         <br>
         <a href="../signup">
         <button id="like_sidebar" style="margin: 2rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Signup / Login</button>

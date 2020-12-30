@@ -1,6 +1,6 @@
 // console.log('hey there');
 
-const passvalueo = async function(dealId, whoLiked) {
+const passvalueo = async function (dealId, whoLiked) {
   const hideAlert = () => {
     const el = document.querySelector(".alerts");
     if (el) {
@@ -20,23 +20,23 @@ const passvalueo = async function(dealId, whoLiked) {
   var full_url = window.location.pathname;
   // var full_url = document.URL; // Get current url
   var url_array = full_url.split("/"); // Split the string into an array with / as separator
-  var last_segment = url_array[url_array.length - 3]; 
-  console.log(last_segment);// Get the last part of the array (-1)
+  var last_segment = url_array[url_array.length - 3];
+  console.log(last_segment); // Get the last part of the array (-1)
   // alert(last_segment);
   try {
     const result = await axios({
       method: "POST",
       url: "/api/v1/likedDeal",
       data: {
-        deal: last_segment
+        deal: last_segment,
         //user: whoLiked
       },
     });
     if (result.data.status === "success") {
       // alert("liked");
-      showAlert("success", "Liked");
+      showAlert("success", "Saved For Later!");
       //alert("liked");
-      console.log("liked");
+      console.log("Saved For Later!");
       // window.setTimeout(() => {
       //   location.assign("/");
       // }, 1000);
@@ -50,7 +50,7 @@ const passvalueo = async function(dealId, whoLiked) {
 // var id = url.substring(url.lastIndexOf('/') + 1);
 // alert(id);
 
-const passvalueunlike = async function(documentId) {
+const passvalueunlike = async function (documentId) {
   console.log(documentId);
   const hideAlert = () => {
     const el = document.querySelector(".alerts");

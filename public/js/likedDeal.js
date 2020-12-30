@@ -34,9 +34,9 @@ const passvalueo = async function (dealId, whoLiked) {
     });
     if (result.data.status === "success") {
       // alert("liked");
-      showAlert("success", "Liked");
+      showAlert("success", "Saved For Later!");
       //alert("liked");
-      console.log("liked");
+      console.log("Saved For Later!");
       // window.setTimeout(() => {
       //   location.assign("/");
       // }, 1000);

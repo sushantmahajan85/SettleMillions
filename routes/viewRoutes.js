@@ -18,7 +18,7 @@ router.get(
   viewController.getSubscriptions
 );
 
-router.get("/likedDeals", authController.protect, viewController.getLikedDeals);
+router.get("/savedDeals", authController.protect, viewController.getLikedDeals);
 
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/login", viewController.getLoginForm);

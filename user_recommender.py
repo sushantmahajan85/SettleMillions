@@ -22,12 +22,14 @@ client = MongoClient(mongo_url)
 
 
 db= client['user']
-
+print(sys.argv)
 i= f"{sys.argv[1]}"
-print(i)
+print("hi")
 x= db.users.find_one({"id" : i})
-#cur = db.users.find({"id": i})
+# like = list(db.likeddeals.find({"fromUser": i}))
+# print(like)
 
+# liked.append(like["toDeal"])
 lm=[]
 #for a in cur:
 #    lm.append(a["deal_id"])
@@ -44,6 +46,8 @@ filepath= f"{cwd}/kuchfile.pickle"
 SVD = pickle.load(open(filepath, 'rb'))
 
 user_recomm=[]
+# for abc in like:
+#     lm.append(abc["toDeal"])
 
 for i in lm:
     if(i!='0'):
@@ -67,12 +71,13 @@ for i in lm:
         for j in Recommend:
             if(j!='0'):
                 if (j not in user_recomm):
-                    user_recomm.append(j)
+                    if(j not in lm):    
+                        user_recomm.append(j)
 #db.recoms.find_one_and_delete({prod_id = i})
 
 user_recomm[0:15]
 
-user_recomm.remove('0')
+# user_recomm.remove('0')
 print(user_recomm)
 #company_cuisine = ['Pizza', 'Bar Food', 'Fast Food', 'Italian', 'Mexican', 'American', 'Sushi Bar', 'Vegetarian']
 #for x in recommends:

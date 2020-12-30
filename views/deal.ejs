@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grabzy - Shop More, Spend Less</title>
+  <title><%= deal.dealName %></title>
+  <meta property="og:title" content=<%= deal.dealName %> />
+  <meta name="description" content= <%= deal.dealName %> />
+  <meta property="og:image" content=<%=`/img/deals/${deal.titleImg}` %>>
   <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
   <link rel="stylesheet" href="/sass/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">

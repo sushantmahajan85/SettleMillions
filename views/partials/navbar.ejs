@@ -61,9 +61,13 @@
       <div class="navigation_link navigation_item">
         <a href="#popup" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>
         <a href="events.html" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
-        <a href="#section_pic" onclick="closeNav()"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+        <% if(user){ %>
+          <a href="#section_pic" onclick="closeNav()"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+        <% } %>
         <a href="#popup4" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
-        <a href="#team_section" onclick="closeNav()"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
+        <% if(user){ %>
+          <a href="#team_section" onclick="closeNav()"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
+        <% } %>
         <a href="coupons.html" onclick="closeNav()"><i class="small-sidebar fas fa-clock font_icon"></i> Live Deals</a>
       </div>
       

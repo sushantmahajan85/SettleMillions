@@ -30,7 +30,7 @@ print(sys.argv)
 cwd = os.getcwd()
 filepath= f"{cwd}/kuchfile.pickle"
 SVD = pickle.load(open(filepath, 'rb'))
-    
+print(sys.argv[2]["one"])
 i= f"{sys.argv[1]}"
 print(i)
 # input()

@@ -6641,7 +6641,8 @@ Down
   margin-top: 0.2rem; }
 
 .tp_diff_page-content {
-  margin-top: 6rem; }
+  margin-top: 6rem;
+  height: 100%; }
 
 .body {
   background-color: #fbfcfc; }

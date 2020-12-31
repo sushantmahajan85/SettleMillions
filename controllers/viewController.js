@@ -48,7 +48,8 @@ exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
 
   if (deal) {
-    res.redirect(deal.long.split("grabzy.in")[1]);
+    res.status(200).render('shortid',{deal});
+    // res.redirect(deal.long.split("grabzy.in")[1]);
   }
 });
 
@@ -382,7 +383,7 @@ exports.mainPage = catchAsync(async (req, res) => {
   const user = await User.findById(req.logged);
 
   if (req.logged) {
-    const process = spawn('python', ['./user_recommender.py'],req.logged);
+    const process = spawn('python', ['./user_recommender.py',req.logged._id]);
 
   process.stdout.on('data', (data) => {
     console.log(`${data}`);
@@ -745,7 +746,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       subs,
       yesNo,
       news,
-      page,
+      page, 
     });
 
     // for (var deal of deals) {
@@ -773,7 +774,11 @@ exports.getMemberData = catchAsync(async (req, res) => {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });
     }
   }
+  
+  let cooCount = 0;
+  let recentlyViewed = [];
   if (req.logged) {
+    const user = await User.findById(req.logged);
     if (req.cookies.one !== undefined) {
       user.cookies[0] = req.cookies.one.id;
 

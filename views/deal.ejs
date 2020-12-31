@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title><%= deal.dealName %></title>
-  <!-- <meta property="og:title" content="<%= deal.dealName %>" /> -->
-  <!-- <meta name="description" content="<%= deal.dealName %>" />
-  <meta property="og:description" content="<%= deal.dealName %>"> -->
+  
+  <meta property="og:title" content=<%= deal.dealName %> />
+  <meta name="description" content=<%= deal.dealName %> />
+  <meta property="og:description" content=<%= deal.dealName %>>
   <meta property="og:type" content="article" />
-  <meta property="og:url" content=<%= deal.short %> />
+  <!-- <meta property="og:url" content=<%= deal.short %> /> -->
   <meta property="og:image" itemprop="image" content=<%=`/img/deals/${deal.titleImg}` %>>
   <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
   <link rel="stylesheet" href="/sass/css/style.css">
@@ -134,8 +135,13 @@
       var titu = timeSince(nowx - 100000000000);
       var aDay = 24*60*60*1000;
        %>
-      <div class="deal-deets_name">
-        <h4><%= deal.dealName %>
+      <div class="deal-deets_name_share">
+        <div class="deal-deets_name">
+          <h4><%= deal.dealName %>
+        </div>
+        <a class="deal-deets_share" id="share_popup_btn" onclick="disaplay()">
+          <div class="deal-deets_share_button" ><i class="fa fa-share alt"  style="margin-right: 1rem;font-size:2.4rem"></i></div>
+        </a>
       </div>
       <div class="deal-highlights-dp">
         <!-- <div class="deal-ratings-dp">
@@ -159,29 +165,32 @@
             </span>
         </li>
       </div>
-
       
       <div class="deal-deets_buttons" style="display: flex;">
-        <a href="<%= deal.affiliateLink %>" target="_blank" class="deal-deets_buy"><i class="fa fa-shopping-cart"></i><span class="buy-now_text"> Buy now</span></a>
-        <div class="below-image">
-          <% if (user) { %>
-            <% if (like) { %>
-            <a href="" class="deal-deets_save" id="dislike_deal" onclick="passvalueunlike(`<%= like.id %>`)"><i class="fa fa-heart" style="margin-right: 1rem; color: #EF233C;"></i></a>
-            <% } else { %>
-            <a href="" class="deal-deets_save" id="like_deal"><i class="fa fa-heart" style="margin-right: 1rem;"></i></a>
-    
-            <% } %>
-            <% }else{ %>
-    
-            <a href="#" class="deal-deets_save" id="like_btn_no"><i class="fa fa-heart" style="margin-right: 1rem;"></i></a>
-    
-            <% } %>
-    
-            <a class="deal-deets_share" id="share_popup_btn" onclick="disaplay()">
-              <div class="deal-deets_share_button" ><i class="fa fa-share alt"  style="margin-right: 1rem;font-size:2.4rem"></i></div>
+        <a href="<%= deal.affiliateLink %>" target="_blank">
+          <button class="deal-deets_buy"><i class="fa fa-shopping-cart"></i><span> Buy Now</span></button>
+        </a>
+        <% if (user) { %>
+          <% if (like) { %>
+            <a href="" id="dislike_deal" style="margin-left: 1.5rem;" onclick="passvalueunlike(`<%= like.id %>`)">
+              <button class="deal-deets_save"><i class="fa fa-shopping-cart"></i><span> Save for Later</span></button>
             </a>
-          </div>
+          <% } else { %>
+            <a href="" id="like_deal" style="margin-left: 1.5rem;">
+              <button class="deal-deets_save"><i class="fa fa-shopping-cart"></i><span> Save for Later</span></button>
+            </a>
+  
+          <% } %>
+          <% }else{ %>
+  
+            <a href="" id="like_btn_no" style="margin-left: 1.5rem;">
+              <button class="deal-deets_save"><i class="fa fa-shopping-cart"></i><span> Save for Later</span></button>
+            </a>
+  
+          <% } %>
+
       </div>
+
       <div class="deal-deets_vt">
           <div class="deal-views-dp">
           <div class="views-icon-dp">

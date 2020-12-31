@@ -19,6 +19,7 @@ router.get(
 );
 
 router.get("/savedDeals", authController.protect, viewController.getLikedDeals);
+router.get("/share/:id", viewController.createNewDeal);
 
 router.get("/newDeal", viewController.createNewDeal);
 router.get("/login", viewController.getLoginForm);

@@ -92,7 +92,7 @@ body {
   @include respond(phone) {
     margin-left: 3rem;
     padding-top: 3.6rem;
-    margin: 0rem 0.8rem 3rem 1.8rem;
+    margin: 0rem 0rem 3rem 0rem;
   }
 
   @include respond(small-phone) {
@@ -181,7 +181,7 @@ img {
   }
 
   @include respond(phone) {
-    padding-top: 10.6rem;
+    padding-top: 11.6rem;
     height: 33rem;
   }
 
@@ -1065,6 +1065,11 @@ figure {
 }
 
 .pop1_2 {
+
+  @include respond(phone) {
+    width: 95% !important;
+    margin-top: 5rem;
+  }
   @include respond(small-phone) {
     width: 95% !important;
   }

@@ -634,14 +634,14 @@ exports.mainPage = catchAsync(async (req, res) => {
     rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
   }
 
-  const recommendedDeals = await Deal.find(
-    { $text: { $search: rec } },
-    { score: { $meta: "textScore" } }
-  ).sort({ score: { $meta: "textScore" } });
+  // const recommendedDeals = await Deal.find(
+  //   { $text: { $search: rec } },
+  //   { score: { $meta: "textScore" } }
+  // ).sort({ score: { $meta: "textScore" } });
 
-  for (var i = 0; i < cooCount; i++) {
-    recommendedDeals[i] = undefined;
-  }
+  // for (var i = 0; i < cooCount; i++) {
+  //   recommendedDeals[i] = undefined;
+  // }
 
   // console.log(recommendedDeals);
 
@@ -735,7 +735,7 @@ exports.mainPage = catchAsync(async (req, res) => {
 
     res.status(200).render("main", {
       deals,
-      recommendedDeals,
+      //recommendedDeals,
       liveDeals,
       cooCount,
       recentlyViewed,

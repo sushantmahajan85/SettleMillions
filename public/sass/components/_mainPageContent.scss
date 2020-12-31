@@ -1065,6 +1065,11 @@ figure {
 }
 
 .pop1_2 {
+
+  @include respond(phone) {
+    width: 95% !important;
+    margin-top: 5rem;
+  }
   @include respond(small-phone) {
     width: 95% !important;
   }

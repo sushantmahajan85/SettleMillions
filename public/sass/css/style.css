@@ -2451,7 +2451,8 @@ figure {
     transition: 0.2s all; }
     @media (max-width: 56.25em) {
       .deal-deets_buy > i {
-        top: 0.2rem; } }
+        top: -0.1rem;
+        width: 35px; } }
     @media (max-width: 1380px) {
       .deal-deets_buy > i .p {
         font-size: 2rem; }
@@ -2460,7 +2461,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .deal-deets_buy > i {
-        top: -0.1rem; } }
+        top: -0.5rem;
+        width: 30px; } }
     @media (max-width: 1380px) {
       .deal-deets_buy > i .p {
         font-size: 2rem; }
@@ -2469,7 +2471,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 22.2em) {
       .deal-deets_buy > i {
-        top: -0.7rem; } }
+        top: -1.2rem;
+        width: 20px; } }
     @media (max-width: 1380px) {
       .deal-deets_buy > i .p {
         font-size: 2rem; }
@@ -2491,7 +2494,7 @@ figure {
     width: 20rem; }
     @media (max-width: 37.5em) {
       .deal-deets_save {
-        padding: 1rem 2.35rem 1rem 4rem; } }
+        padding: 1rem 0rem 1rem 4rem; } }
     @media (max-width: 1380px) {
       .deal-deets_save .p {
         font-size: 2rem; }
@@ -2517,7 +2520,8 @@ figure {
     transition: 0.2s all; }
     @media (max-width: 56.25em) {
       .deal-deets_save > i {
-        top: 0.2rem; } }
+        top: -0.1rem;
+        width: 35px; } }
     @media (max-width: 1380px) {
       .deal-deets_save > i .p {
         font-size: 2rem; }
@@ -2526,7 +2530,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .deal-deets_save > i {
-        top: -0.1rem; } }
+        top: -0.5rem;
+        width: 30px; } }
     @media (max-width: 1380px) {
       .deal-deets_save > i .p {
         font-size: 2rem; }
@@ -2535,7 +2540,8 @@ figure {
         margin-right: 1rem; } }
     @media (max-width: 22.2em) {
       .deal-deets_save > i {
-        top: -0.7rem; } }
+        top: -1.2rem;
+        width: 20px; } }
     @media (max-width: 1380px) {
       .deal-deets_save > i .p {
         font-size: 2rem; }

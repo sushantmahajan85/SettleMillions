@@ -151,16 +151,21 @@
     transition: 0.2s all;
 
     @include respond(tab-port) {
-      top: 0.2rem;
+      top: -0.1rem;
+      width: 35px;
     }
 
     @include respond(phone) {
-      top: -0.1rem;
+      top: -0.5rem;
+      width: 30px;
     }
+
     @include respond(small-phone) {
-      top: -0.7rem;
+      top: -1.2rem;
+      width: 20px;
     }
   }
+
   &_save {
     position: relative;
     background-color: #ef233c;
@@ -176,7 +181,7 @@
     width: 20rem;
 
     @include respond(phone) {
-      padding: 1rem 2.35rem 1rem 4rem;
+      padding: 1rem 0rem 1rem 4rem;
     }
 
     @include respond(small-phone) {
@@ -193,14 +198,18 @@
     transition: 0.2s all;
 
     @include respond(tab-port) {
-      top: 0.2rem;
+      top: -0.1rem;
+      width: 35px;
     }
 
     @include respond(phone) {
-      top: -0.1rem;
+      top: -0.5rem;
+      width: 30px;
     }
+
     @include respond(small-phone) {
-      top: -0.7rem;
+      top: -1.2rem;
+      width: 20px;
     }
   }
 

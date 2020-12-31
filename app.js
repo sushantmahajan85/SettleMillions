@@ -91,7 +91,7 @@ app.use(cookieParser());
 //     next();
 // });
 
-// app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 
 app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);
@@ -106,7 +106,7 @@ app.use("/", viewRouter);
 app.all("*", (req, res, next) => {
   res.status(200).render('error');
 });
-// app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 const port = process.env.PORT;
 app.listen(port || 4000, () => {
   console.log("Listening bro");

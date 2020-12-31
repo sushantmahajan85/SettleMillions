@@ -59,16 +59,14 @@
       <hr>
 
       <div class="navigation_link navigation_item">
-        <a href="#popup" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>
-        <a href="events.html" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
-        <% if(user){ %>
-          <a href="#section_pic" onclick="closeNav()"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+        <a href="/" onclick="closeNav()"><i class="small-sidebar fas fa-h-square font_icon"></i> Home</a>
+        <a href="../trending" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Hot Deals</a>
+        <% if (user) { %>
+        <a href="../subscriptions" onclick="closeNav()"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+          <a href=<%=`/member/${user._id}`%> ><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
+        <a href="/savedDeals" onclick="closeNav()"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
         <% } %>
-        <a href="#popup4" onclick="closeNav()"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
-        <% if(user){ %>
-          <a href="#team_section" onclick="closeNav()"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
-        <% } %>
-        <a href="coupons.html" onclick="closeNav()"><i class="small-sidebar fas fa-clock font_icon"></i> Live Deals</a>
+        <a href="../liveDeal" onclick="closeNav()"><i class="small-sidebar fas fa-clock font_icon"></i> Live Deals</a>
       </div>
       
       <div class="nav_logos">
@@ -84,10 +82,10 @@
           </div>
 
           <div class="navigation_link navigation_item">
-          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> About Us </a>
-          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Contact Us </a>
-          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Terms & Conditions </a>
-          <a href="" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Privacy Policy </a>
+          <a href="#"  onclick="about()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> About Us </a>
+          <a href="#"  onclick="contact()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Contact Us </a>
+          <a href="#"  onclick="terms()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Terms & Conditions </a>
+          <a href="#" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" onclick="privacy()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Privacy Policy </a>
         </div>
         <% } else {%>
           <h3 class="follow_us">Follow Us On</h3>
@@ -111,10 +109,10 @@
           </div>
 
           <div class="navigation_link navigation_item">
-          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> About Us </a>
-          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Contact Us </a>
-          <a href=""  onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Terms & Conditions </a>
-          <a href="" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" onclick="closeNav()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Privacy Policy </a>
+          <a href="#"  onclick="about()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> About Us </a>
+          <a href="#"  onclick="contact()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Contact Us </a>
+          <a href="#"  onclick="terms()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Terms & Conditions </a>
+          <a href="#" style="border-bottom:1px solid rgb(212,211,211);margin-right:0.2rem ;margin-bottom:0.7rem" onclick="privacy()"><i class="small-sidebar far fa-arrow-alt-circle-right font_icon"></i> Privacy Policy </a>
         </div>
 
 
@@ -144,7 +142,9 @@
       <!-- <div class="title">
         <h2 class="Navb_logo-text">Grabzy</h2>
       </div> -->
-      <img src="/img/grabzylogo.png" alt="Grabzy Logo" class="nav_grabzy">
+      <div class="title">
+      <img src="/img/grabzylogo.png" alt="Grabzy Logo" class="nav_grabzy Navb_logo-text">
+    </div>
     </a>
 
     <div class="titles">

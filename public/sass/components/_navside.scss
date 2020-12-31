@@ -1128,6 +1128,7 @@ nav li {
   padding: 0rem 0.5rem;
   display: none;
   visibility: hidden;
+  width: 6.5%;
 
   @include respond(tab-land) {
     display: block;

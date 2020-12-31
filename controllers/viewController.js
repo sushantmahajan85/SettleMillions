@@ -10,6 +10,7 @@ const exec = require("child_process").exec;
 const url = require("url");
 const { del } = require("request");
 const Review = require("../schema/models/reviewModel");
+const RecommendedDeal =  require("../schema/models/dealRecommendations");
 
 const spawn = require("child_process").spawn;
 
@@ -47,7 +48,8 @@ exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
 
   if (deal) {
-    res.redirect(deal.long.split("grabzy.in")[1]);
+    res.status(200).render('shortid',{deal});
+    // res.redirect(deal.long.split("grabzy.in")[1]);
   }
 });
 
@@ -93,10 +95,22 @@ exports.reset = (req, res) => {
 };
 
 exports.getLoginForm = (req, res) => {
+  const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
+  
   res.status(200).render("login");
 };
 
 exports.getSignupForm = (req, res) => {
+  const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
+
   res.status(200).render("signup");
 };
 
@@ -331,15 +345,20 @@ exports.category = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
-  console.log("ec2 checking");
+  const processPython = spawn('python', ['./model_creation.py']);
 
-  const process = spawn('python', ['--version']);
-
-  process.stdout.on('data', (data) => {
+  processPython.stdout.on('data', (data) => {
     console.log(`${data}`);
   });
 
+  
+
   if (req.query.dealOps) {
+    const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
     let joChahiye = req.query.dealOps.split("/");
 
     // if (joChahiye[0] == "report") {
@@ -364,6 +383,11 @@ exports.mainPage = catchAsync(async (req, res) => {
   const user = await User.findById(req.logged);
 
   if (req.logged) {
+    const process = spawn('python', ['./user_recommender.py',req.logged._id]);
+
+  process.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
     if (req.cookies.one !== undefined) {
       user.cookies[0] = req.cookies.one.id;
 
@@ -380,7 +404,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user;
+        req.cookies.one.user + 
+        " " + 
+        req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
           user.r1 = user.r1 + " " + req.cookies.one.tags[i];
@@ -403,7 +429,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user;
+        req.cookies.two.user + 
+        " " + 
+        req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
           user.r2 = user.r2 + " " + req.cookies.two.tags[i];
@@ -425,7 +453,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user;
+        req.cookies.three.user + 
+        " " + 
+        req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
           user.r3 = user.r3 + " " + req.cookies.three.tags[i];
@@ -447,7 +477,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user;
+        req.cookies.four.user + 
+        " " + 
+        req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
           user.r4 = user.r4 + " " + req.cookies.four.tags[i];
@@ -469,7 +501,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user;
+        req.cookies.five.user + 
+        " " + 
+        req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
           user.r5 = user.r5 + " " + req.cookies.five.tags[i];
@@ -495,7 +529,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user;
+        req.cookies.one.user + 
+        " " + 
+        req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
           rec1 = rec1 + " " + req.cookies.one.tags[i];
@@ -517,7 +553,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user;
+        req.cookies.two.user + 
+        " " + 
+        req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
           rec2 = rec2 + " " + req.cookies.two.tags[i];
@@ -538,7 +576,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user;
+        req.cookies.three.user + 
+        " " + 
+        req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
           rec3 = rec3 + " " + req.cookies.three.tags[i];
@@ -559,7 +599,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user;
+        req.cookies.four.user + 
+        " " + 
+        req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
           rec4 = rec4 + " " + req.cookies.four.tags[i];
@@ -580,7 +622,9 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user;
+        req.cookies.five.user + 
+        " " + 
+        req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
           rec5 = rec5 + " " + req.cookies.five.tags[i];
@@ -702,7 +746,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       subs,
       yesNo,
       news,
-      page,
+      page, 
     });
 
     // for (var deal of deals) {
@@ -730,13 +774,16 @@ exports.getMemberData = catchAsync(async (req, res) => {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });
     }
   }
+  
+  let cooCount = 0;
+  let recentlyViewed = [];
   if (req.logged) {
     const user = await User.findById(req.logged);
     if (req.cookies.one !== undefined) {
       user.cookies[0] = req.cookies.one.id;
 
-      // recentlyViewed[cooCount] = req.cookies.one;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.one;
+      cooCount++;
       user.r1 =
         req.cookies.one.dealName +
         " " +
@@ -748,7 +795,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user;
+        req.cookies.one.user + 
+        " " + 
+        req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
           user.r1 = user.r1 + " " + req.cookies.one.tags[i];
@@ -758,8 +807,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
     //console.log(Object.keys(req.cookies.one.tags).length);
     if (req.cookies.two !== undefined) {
       user.cookies[1] = req.cookies.two.id;
-      // recentlyViewed[cooCount] = req.cookies.two;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.two;
+      cooCount++;
       user.r2 =
         req.cookies.two.dealName +
         " " +
@@ -771,7 +820,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user;
+        req.cookies.two.user + 
+        " " + 
+        req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
           user.r2 = user.r2 + " " + req.cookies.two.tags[i];
@@ -780,8 +831,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
     }
     if (req.cookies.three !== undefined) {
       user.cookies[2] = req.cookies.three.id;
-      // recentlyViewed[cooCount] = req.cookies.three;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.three;
+      cooCount++;
       user.r3 =
         req.cookies.three.dealName +
         " " +
@@ -793,7 +844,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user;
+        req.cookies.three.user + 
+        " " + 
+        req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
           user.r3 = user.r3 + " " + req.cookies.three.tags[i];
@@ -802,8 +855,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
     }
     if (req.cookies.four !== undefined) {
       user.cookies[3] = req.cookies.four.id;
-      // recentlyViewed[cooCount] = req.cookies.four;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.four;
+      cooCount++;
       user.r4 =
         req.cookies.four.dealName +
         " " +
@@ -815,7 +868,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user;
+        req.cookies.four.user + 
+        " " + 
+        req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
           user.r4 = user.r4 + " " + req.cookies.four.tags[i];
@@ -824,8 +879,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
     }
     if (req.cookies.five !== undefined) {
       user.cookies[4] = req.cookies.five.id;
-      // recentlyViewed[cooCount] = req.cookies.five;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.five;
+      cooCount++;
       user.r5 =
         req.cookies.five.dealName +
         " " +
@@ -837,7 +892,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user;
+        req.cookies.five.user + 
+        " " + 
+        req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
           user.r5 = user.r5 + " " + req.cookies.five.tags[i];
@@ -850,8 +907,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
       user.r1 + " " + user.r2 + " " + user.r3 + " " + user.r4 + " " + user.r5;
   } else {
     if (req.cookies.one !== undefined) {
-      // recentlyViewed[cooCount] = req.cookies.one;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.one;
+      cooCount++;
       rec1 =
         req.cookies.one.dealName +
         " " +
@@ -863,7 +920,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user;
+        req.cookies.one.user + 
+        " " + 
+        req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
           rec1 = rec1 + " " + req.cookies.one.tags[i];
@@ -872,8 +931,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
     }
     //console.log(Object.keys(req.cookies.one.tags).length);
     if (req.cookies.two !== undefined) {
-      // recentlyViewed[cooCount] = req.cookies.two;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.two;
+      cooCount++;
       rec2 =
         req.cookies.two.dealName +
         " " +
@@ -885,7 +944,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user;
+        req.cookies.two.user + 
+        " " + 
+        req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
           rec2 = rec2 + " " + req.cookies.two.tags[i];
@@ -893,8 +954,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
       }
     }
     if (req.cookies.three !== undefined) {
-      // recentlyViewed[cooCount] = req.cookies.three;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.three;
+      cooCount++;
       rec3 =
         req.cookies.three.dealName +
         " " +
@@ -906,7 +967,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user;
+        req.cookies.three.user + 
+        " " + 
+        req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
           rec3 = rec3 + " " + req.cookies.three.tags[i];
@@ -914,8 +977,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
       }
     }
     if (req.cookies.four !== undefined) {
-      // recentlyViewed[cooCount] = req.cookies.four;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.four;
+      cooCount++;
       rec4 =
         req.cookies.four.dealName +
         " " +
@@ -927,7 +990,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user;
+        req.cookies.four.user + 
+        " " + 
+        req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
           rec4 = rec4 + " " + req.cookies.four.tags[i];
@@ -935,8 +1000,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
       }
     }
     if (req.cookies.five !== undefined) {
-      // recentlyViewed[cooCount] = req.cookies.five;
-      // cooCount++;
+      recentlyViewed[cooCount] = req.cookies.five;
+      cooCount++;
       rec5 =
         req.cookies.five.dealName +
         " " +
@@ -948,7 +1013,9 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user;
+        req.cookies.five.user + 
+        " " + 
+        req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
           rec5 = rec5 + " " + req.cookies.five.tags[i];
@@ -958,6 +1025,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
 
     rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
   }
+
 
   const dealTime = await Deal.find({ user: req.params.id });
   const numDeals = dealTime.length;
@@ -1053,6 +1121,11 @@ exports.recently = catchAsync(async (req, res) => {
 
 exports.updateUserSettings = catchAsync(async (req, res) => {
   const user = await User.findById(req.user);
+  const processPython = spawn('python', ['./model_creation.py']);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
   // const xyz = await User.findById(req.user).populate({
   //   path: "subscribers",
   // });
@@ -1146,6 +1219,12 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   if (!deal) {
     return next(new appError("No Deal With That Id", 404));
   }
+
+  const processPython = spawn('python', ['./recommender.py', req.params.dealId]);
+
+  processPython.stdout.on('data', (data) => {
+    console.log(`${data}`);
+  });
 
   const cookieOptions = {
     expires: new Date(
@@ -1324,11 +1403,21 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //console.log(rec);
   //const t = await Deal.find({ trendRatio: { $gte: 4 } });
 
-  const reco = await Deal.find(
-    { $text: { $search: rec } },
-    { score: { $meta: "textScore" } }
-    //{ trendRatio: { $gte: 4 } }
-  ).sort({ score: { $meta: "textScore" } });
+  // const reco = await Deal.find(
+  //   { $text: { $search: rec } },
+  //   { score: { $meta: "textScore" } }
+  //   //{ trendRatio: { $gte: 4 } }
+  // ).sort({ score: { $meta: "textScore" } });
+
+  const recommendationsArray = await RecommendedDeal.findOne({ prod_id: req.params.dealId });
+  // console.log(recommendationsArray);
+
+  let reco = new Array();
+  if(recommendationsArray){
+    reco = await Deal.find({ _id: { $in: recommendationsArray.recommendations } });
+  }
+
+  console.log(reco);
 
   // for(var k=cooCount; k<reco.length; k++){
   //   if(reco[k].trendRatio < 4){
@@ -1336,9 +1425,9 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //   }
   // }
 
-  for (var i = 0; i < cooCount; i++) {
-    reco[i] = undefined;
-  }
+  // for (var i = 0; i < cooCount; i++) {
+  //   reco[i] = undefined;
+  // }
 
   //console.log(reco);
 

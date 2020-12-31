@@ -557,7 +557,7 @@
                 maxlength="300"
               ></textarea>
             </p>
-            <p>
+            <!-- <p>
               <input
                 placeholder="Tags..."
                 type="text"
@@ -566,7 +566,7 @@
                 name="tagtagtag"
                 id="tags"
               />
-            </p>
+            </p> -->
           </div>
           <div style="overflow: auto;">
             <div class="two_box_1" style="float: right;">
@@ -718,12 +718,12 @@
       // form.append("titleDis", document.getElementById("titleDis").value);
       form.append("biggerDis", document.getElementById("biggerDis").value);
       // form.append("tags", document.getElementById("tags").value);
-      if (document.getElementById("tags").value) {
-        var tags = JSON.parse(document.getElementById("tags").value);
-        for (var key in tags) {
-          form.append("tags", tags[key].value);
-        }
-      }
+   //   if (document.getElementById("tags").value) {
+     //   var tags = JSON.parse(document.getElementById("tags").value);
+   //     for (var key in tags) {
+     //     form.append("tags", tags[key].value);
+   //     }
+   //   }
 
       // console.log(document.getElementById("photo").files[0]);
       // passvaluec(form);

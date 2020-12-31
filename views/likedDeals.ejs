@@ -195,13 +195,22 @@
 
         <div class="liked_D_container">
         <% if (user.likedDeals.length === 0) { %>
- <h1 >You haven't liked any deal yet.</h1>
+ <h1 >You haven't saved any deal yet.</h1>
  <% } else { %>
     <% for(var likedDeal of user.likedDeals) { %>
+        <%  function kFormatter(num) {
+            return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num);
+          } 
+          var vui = kFormatter(likedDeal.deal.views);
+        
+        
+          var tem = Math.round(likedDeal.deal.time/360000)/10;
+          var day = Math.round((tem/2.4))/10;
+          %>
         <a href=<%= `/deal/${likedDeal.deal._id}/postedBy/${likedDeal.deal.user}` %>>
             <div class="ld_deal_box">
-                <div class="bigImg_container">
-                    <div class="ld_deal_box_img"></div>
+                    <div class="ld_deal_box_img">
+                        <img src=<%= `/img/deals/${likedDeal.deal.titleImg}` %> alt="Deal Photo" />
                 </div>
                 <div class="deal_area_content">
                     <!-- <div class="picture_container">
@@ -219,27 +228,31 @@
                             <div class="ld_deal-r1-det"><%= likedDeal.deal.owner %> </div>
                             <div class="ld_deal-r1-det"><%= likedDeal.deal.company %> </div>
                             <div class="ld_deal-r1-det">
-                                <%= likedDeal.deal.time.toLocaleString('en-us',{ month:'long',year:'numeric'})  %>
+                                <% if (tem > 24) { %>
+                                <div class="mep_deal-r1-det"><%=`${day} day(s)`%></div>
+                                <% } else if (tem > 1) { %>
+                                <div class="mep_deal-r1-det"><%=`${tem} hr`%></div>
+                                <% } else { %>
+                                <div class="mep_deal-r1-det"><%=`${tem*60} min`%></div>
+                                <% } %>
                             </div>
 
                         </div>
 
                         <div class="ld_deal-r2" style="display: flex;flex-direction: row;align-items: center; ">
-                            <div class="ld_deal-r2-det">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="ld_deal-r2-det"><%= likedDeal.deal.biggerDis %></div>
                         </div>
 
                         <div class="ld_deal-r3" style="display: flex;flex-direction: row ">
-                            <div class="ld_deal-r3-dp"><%=`₹${likedDeal.deal.dealPrice}`%></div>
-                            <div class="ld_deal-r3-mrp"><%=`₹${likedDeal.deal.mrp}`%></div>
-                            <div class="ld_deal-r3-dis">80% OFF</div>
+                            <div class="ld_deal-r3-dp"><%=`₹${likedDeal.deal.mrp}`%></div>
+                            <div class="ld_deal-r3-mrp"><%=`₹${likedDeal.deal.dealPrice}`%></div>
+                            <div class="ld_deal-r3-dis"><%=`${likedDeal.deal.discount}`%>% OFF</div>
                         </div>
                         
 
                         <div class="ld_deal-r4" style="display: flex;flex-direction: row">
-                            <div class="ld_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div>
-                            <div class="ld_deal-r4-det"><i id="img_ld_deal_views" class="far fa-eye"></i><%= `${likedDeal.deal.views} views`%></div>
+                            <!-- <div class="ld_deal-r4-det"><i class="fas fa-heart"></i>49 likes</div> -->
+                            <div class="ld_deal-r4-det"><i id="img_ld_deal_views" class="far fa-eye"></i><%= `${vui} views` %></div>
                             <!-- <div class="ld_deal-r4-det"><%= likedDeal.deal.titleDis %></div> -->
                             
                         </div>

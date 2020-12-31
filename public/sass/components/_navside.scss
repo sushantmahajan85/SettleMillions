@@ -1090,6 +1090,11 @@ nav li {
   &:hover {
     color: purple;
   }
+
+  @include respond(phone) {
+    top: -11px;
+    font-size: 20px !important;
+  }
 }
 
 @media screen and (max-height: 450px) {

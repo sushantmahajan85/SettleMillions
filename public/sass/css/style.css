@@ -2600,13 +2600,8 @@ figure {
     font-size: 1.8rem;
     word-spacing: 0.3rem; }
   .deal-deets_time {
-    color: #7a7a7a;
-    text-align: right;
-    word-spacing: 0.2rem;
-    border-radius: 1rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.4rem;
-    color: #333;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.8);
     display: inline; }
     @media (max-width: 37.5em) {
       .deal-deets_time {

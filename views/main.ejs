@@ -957,8 +957,27 @@
         <div class="popup_news" id="popup_news3">
             <div class="popup_news_content">
                 <div class="popup_cross" id="popup_cross" onclick="hideNewsBox()" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+<<<<<<< HEAD
                 <h1 class="heading-secondary popup_news_heading center"><span id="popup_news_headings">about us</span></h1>
                 <p class="paragraph popup_news_content"></p>
+=======
+                <h1 class="heading-secondary popup_news_heading center">about us</h1>
+                <p class="paragraph popup_news_content_text">Thapar Food Festival is the most magnificent and awe-inspiring
+                    festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
+                    to
+                    content the ever-growing foodie in you. TFF is not just a festival, but also a mission to
+                    let
+                    food break barriers and make everyone happy on a common stage. We are a journey,
+                    ever-growing
+                    indulging masses in merry-making. Come, experience edible infinity.</p>
+>>>>>>> b841524dba607819cd9439d6d17696250d468a76
+            </div>
+            <div class="popup_news_button_container">
+                <a href="#">
+                    <button class="popup_news_button">
+                        View Deal
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -1422,15 +1441,14 @@
         function showNewsBox (el) {
             var heading = el.querySelector('#news_headline').innerHTML.trim();
             var content = el.querySelector('#news_content').innerHTML.trim();
-            console.log(document.querySelector('#popup_news_headings').innerHTML);
-            document.querySelector('#popup_news_headings').innerHTML = heading;
-            document.querySelector('.popup_news_content').innerHTML = content;
+            document.querySelector('.popup_news_heading').innerHTML = heading;
+            document.querySelector('.popup_news_content_text').innerHTML = content;
             document.getElementById("popup_news3").style.display = "block";
             
             document.querySelector("#popup_news_heading").style.display = "block";
         }
         function hideNewsBox () {
-            
+
             document.getElementById("popup_news3").style.display = "none";
         }
     </script>

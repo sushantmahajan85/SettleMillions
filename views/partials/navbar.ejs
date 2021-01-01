@@ -65,9 +65,27 @@
         <a href="../subscriptions" onclick="closeNav()"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
           <a href=<%=`/member/${user._id}`%> ><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
         <a href="/savedDeals" onclick="closeNav()"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
+        <% }else{ %>
+          <a href="#" onclick="document.getElementById('popupSidebar').style.display = 'block';"><i class="small-sidebar fas fa-user font_icon" style="color:white;"></i> Subscriptions</a>
+          <a href="#" onclick="document.getElementById('popupSidebar').style.display = 'block';"><i class="small-sidebar fas fa-fire font_icon" style="color:white;"></i> Your Deals</a>
+          <a href="#" onclick="document.getElementById('popupSidebar').style.display = 'block';"><i class="small-sidebar fas fa-heart font_icon"></i> Favourites</a>
         <% } %>
         <a href="../liveDeal" onclick="closeNav()"><i class="small-sidebar fas fa-clock font_icon"></i> Live Deals</a>
       </div>
+
+      <div class="popup" id="popupSidebar" style="height: 30rem;">
+        <div class="popup_right">
+            <div class="popup_cross" id="popupCrossSidebar" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="document.getElementById('popupSidebar').style.display = 'none'">&times;</div>
+        </div>
+        <div class="popup_content" style="font-size: 2rem; text-align: center;">
+            Signup / Login
+            <br>
+            <a href="../signup">
+            <button id="like_sidebar" style="margin: 2rem 3.33rem 2rem 0rem; border: none; background-color: red; padding: 1rem 3rem; color: white; border-radius: 5.3%">Signup / Login</button>
+            </a>
+            <button id="popupCancelSidebar" style="margin: 2rem; border: none; background-color: grey; padding: 1rem 3rem; color: white; border-radius: 5.3%; opacity: 0.68" onclick="document.getElementById('popupSidebar').style.display = 'none'">Cancel</button>
+        </div>
+    </div>
       
       <div class="nav_logos">
         <% if (user) { %>

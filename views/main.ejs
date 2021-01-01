@@ -118,31 +118,30 @@
             
             </div>
         
-
-<div class="slideshow-container boxes_five">
+            <div class="slideshow-container boxes_five">
            
-            <div class="corousel_box-large">
-                <a href="#">
-                <img src="/img/poster1.jpg">
-            </a>
+                <div class="corousel_box-large">
+                    <a href="https://amzn.to/3pGHnS4" target="_blank">
+                    <img src="/img/poster1.jpg">
+                </a>
+                </div>
+        
+            <div>
+                    <div class="carousel_box-small">
+                        <a href="https://amzn.to/3o5ai1R" target="_blank">
+                        <img src="/img/poster2stretch.png">
+                    </a>
+                    </div>
+                
+                    <div class="carousel_box-small">
+                        <a href="https://amzn.to/38SIHuk" target="_blank">
+                        <img src="/img/poster3stretch.jpg">
+                    </a>
+                    </div>
             </div>
     
-        <div>
-                <div class="carousel_box-small">
-                    <a href="#">
-                    <img src="/img/poster2stretch.png">
-                </a>
-                </div>
-            
-                <div class="carousel_box-small">
-                    <a href="">
-                    <img src="/img/poster3stretch.jpg">
-                </a>
-                </div>
-        </div>
-
-
-</div>
+    
+    </div>
 
 <div class="titles_main">
         <a href="/trending">
@@ -856,11 +855,11 @@
             
             
                 
-            <div class="news_box" id="news_box3">
+            <div class="news_box" id="news_box3" onclick="showNewsBox(this)">
                 <div class="news_item">
                     <!-- <img src="/img/users/default.jpg" alt="" style="display: unset !important;width:unset !important">
                     <p id="profile_name">Raman</p> -->
-                    <p id="news_headline"> <%= khabar.titleDescript  %> 
+                    <p id="news_headline" class="news_headline" > <%= khabar.titleDescript  %> 
                     <p>
                     <p id="news_content"> <%= khabar.descript  %>  </p>
                     <!-- <div class="news_tag_container">
@@ -916,7 +915,7 @@
             </div>
     </div>
         </div>
-        <div class="popup_news" id="popup_news1">
+        <!-- <div class="popup_news" id="popup_news1">
             <div class="popup_news_content">
                 <div class="popup_news_left">
                     <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
@@ -934,8 +933,8 @@
                         indulging masses in merry-making. Come, experience edible infinity.</p>
                 </div>
             </div>
-        </div>
-        <div class="popup_news" id="popup_news2">
+        </div> -->
+        <!-- <div class="popup_news" id="popup_news2">
             <div class="popup_news_content">
                 <div class="popup_news_left">
                     <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
@@ -953,24 +952,26 @@
                         indulging masses in merry-making. Come, experience edible infinity.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="popup_news" id="popup_news3">
             <div class="popup_news_content">
-                <div class="popup_news_left">
-                    <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
-                        class="popup_news_img">
-                </div>
-                <div class="popup_news_right">
-                    <h1 class="heading-secondary popup_news_heading center">about us</h1>
-                    <p class="paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
-                        festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
-                        to
-                        content the ever-growing foodie in you. TFF is not just a festival, but also a mission to
-                        let
-                        food break barriers and make everyone happy on a common stage. We are a journey,
-                        ever-growing
-                        indulging masses in merry-making. Come, experience edible infinity.</p>
-                </div>
+                <div class="popup_cross" id="popup_cross" onclick="hideNewsBox()" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+                <h1 class="heading-secondary popup_news_heading center">about us</h1>
+                <p class="paragraph popup_news_content_text">Thapar Food Festival is the most magnificent and awe-inspiring
+                    festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
+                    to
+                    content the ever-growing foodie in you. TFF is not just a festival, but also a mission to
+                    let
+                    food break barriers and make everyone happy on a common stage. We are a journey,
+                    ever-growing
+                    indulging masses in merry-making. Come, experience edible infinity.</p>
+            </div>
+            <div class="popup_news_button_container">
+                <a href="#">
+                    <button class="popup_news_button">
+                        View Deal
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -1427,6 +1428,20 @@
             if (cookie) {
                 document.getElementById("popup_whatsapp_telegram").style.display = "none";
             }
+        }
+    </script>
+
+    <script>
+        function showNewsBox (el) {
+            var heading = el.querySelector('#news_headline').innerHTML.trim();
+            var content = el.querySelector('#news_content').innerHTML.trim();
+            document.querySelector('.popup_news_heading').innerHTML = heading;
+            document.querySelector('.popup_news_content_text').innerHTML = content;
+            document.getElementById("popup_news3").style.display = "block";
+        }
+        function hideNewsBox () {
+            
+            document.getElementById("popup_news3").style.display = "none";
         }
     </script>
 

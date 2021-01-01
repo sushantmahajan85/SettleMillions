@@ -236,22 +236,18 @@
   z-index: 99999999999999999;
   border-radius: 10px;
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
-  // opacity: 0;
-  // visibility: hidden;
   display: none;
   transition: all 0.3s;
+  background-color: white;
 
-  // &:target {
-  //   opacity: 1;
-  //   // animation: cssAnimation 5s forwards;
-  //   visibility: visible;
-  // }
   &_content {
     opacity: 1;
     background-color: white;
     overflow: hidden;
     display: table;
     border-radius: inherit;
+    padding: 2rem 3rem;
+    font-size: 14px;
   }
   &_left {
     width: 33.33333333334%;
@@ -317,6 +313,20 @@
     @include respond(tab-port) {
       text-align: center;
     }
+  }
+  &_button_container {
+    background-color: white;
+    text-align: center;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  &_button {
+    color: white;
+    background-color: #d10024;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
   }
 }
 

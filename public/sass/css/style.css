@@ -6115,7 +6115,8 @@ Down
   border-radius: 10px;
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
   display: none;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  background-color: white; }
   .popup_news_content {
     opacity: 1;
     background-color: white;

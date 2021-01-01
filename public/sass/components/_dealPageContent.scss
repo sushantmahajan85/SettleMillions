@@ -109,7 +109,7 @@
     width: 88%;
 
     @include respond(phone) {
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 2;
     }
 
     color: $heading-color;

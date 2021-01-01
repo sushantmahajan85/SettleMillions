@@ -6121,7 +6121,8 @@ Down
     background-color: white;
     overflow: hidden;
     display: table;
-    border-radius: inherit; }
+    border-radius: inherit;
+    padding: 2rem 3rem; }
   .popup_news_left {
     width: 33.33333333334%;
     vertical-align: top;

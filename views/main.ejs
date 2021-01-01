@@ -958,14 +958,7 @@
             <div class="popup_news_content">
                 <div class="popup_cross" id="popup_cross" onclick="hideNewsBox()" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
                 <h1 class="heading-secondary popup_news_heading center"><span id="popup_news_headings">about us</span></h1>
-                <p class="paragraph popup_news_content">Thapar Food Festival is the most magnificent and awe-inspiring
-                    festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
-                    to
-                    content the ever-growing foodie in you. TFF is not just a festival, but also a mission to
-                    let
-                    food break barriers and make everyone happy on a common stage. We are a journey,
-                    ever-growing
-                    indulging masses in merry-making. Come, experience edible infinity.</p>
+                <p class="paragraph popup_news_content"></p>
             </div>
         </div>
 
@@ -1426,19 +1419,15 @@
     </script>
 
     <script>
-<<<<<<< HEAD
-        function showNewsBox(el) {        
-            var titleData=  el.querySelector('#news_headline').innerHTML.trim();
-
-=======
         function showNewsBox (el) {
             var heading = el.querySelector('#news_headline').innerHTML.trim();
             var content = el.querySelector('#news_content').innerHTML.trim();
             console.log(document.querySelector('#popup_news_headings').innerHTML);
             document.querySelector('#popup_news_headings').innerHTML = heading;
             document.querySelector('.popup_news_content').innerHTML = content;
->>>>>>> 879efd7ee1b5db410101d4a3a58ab5bd3026cea2
             document.getElementById("popup_news3").style.display = "block";
+            
+            document.querySelector("#popup_news_heading").style.display = "block";
         }
         function hideNewsBox () {
             

@@ -93,7 +93,7 @@
                     <a class="butons_mp prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="butons_mp next" onclick="plusSlides(1)">&#10095;</a>
                     <!-- <div class="numbertext">1 / 3</div> -->
-                    <img class="carousel_image_small-1" src="/img/poster2.jpg" >
+                    <img class="carousel_image_small-1" src="/img/poster1.jpg" >
                     
                     <!-- <div class="text">Caption Text</div> -->
                 </div>
@@ -102,7 +102,7 @@
                     <a class="butons_mp prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="butons_mp next" onclick="plusSlides(1)">&#10095;</a>
                     <!-- <div class="numbertext">2 / 3</div> -->
-                    <img class="carousel_image_small-1" src="/img/poster1.png">
+                    <img class="carousel_image_small-1" src="/img/poster2.jpg">
                     <!-- <div class="text">Caption Two</div> -->
                 </div>
         
@@ -123,20 +123,20 @@
            
             <div class="corousel_box-large">
                 <a href="#">
-                <img src="/img/poster2.jpg">
+                <img src="/img/poster1.jpg">
             </a>
             </div>
     
         <div>
                 <div class="carousel_box-small">
                     <a href="#">
-                    <img src="/img/poster1stretch.jpg">
+                    <img src="/img/poster2stretch.png">
                 </a>
                 </div>
             
                 <div class="carousel_box-small">
                     <a href="">
-                    <img src="/img/poster5stretch.jpg">
+                    <img src="/img/poster3stretch.jpg">
                 </a>
                 </div>
         </div>
@@ -856,7 +856,7 @@
             
             
                 
-            <div class="news_box" id="news_box3">
+            <div class="news_box" id="news_box3" onclick="showNewsBox()">
                 <div class="news_item">
                     <!-- <img src="/img/users/default.jpg" alt="" style="display: unset !important;width:unset !important">
                     <p id="profile_name">Raman</p> -->
@@ -956,21 +956,16 @@
         </div>
         <div class="popup_news" id="popup_news3">
             <div class="popup_news_content">
-                <div class="popup_news_left">
-                    <img src="/images/32-kjb-1409-dnft-gry-killer-original-imafz9xjgkhguknc.jpeg" alt="hi"
-                        class="popup_news_img">
-                </div>
-                <div class="popup_news_right">
-                    <h1 class="heading-secondary popup_news_heading center">about us</h1>
-                    <p class="paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
-                        festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
-                        to
-                        content the ever-growing foodie in you. TFF is not just a festival, but also a mission to
-                        let
-                        food break barriers and make everyone happy on a common stage. We are a journey,
-                        ever-growing
-                        indulging masses in merry-making. Come, experience edible infinity.</p>
-                </div>
+                <div class="popup_cross" id="popup_cross" onclick="hideNewsBox()" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;">&times;</div>
+                <h1 class="heading-secondary popup_news_heading center">about us</h1>
+                <p class="paragraph">Thapar Food Festival is the most magnificent and awe-inspiring
+                    festivity ever happened, one-of-a-kind. Keeping the sky as the limit, we always venture hard
+                    to
+                    content the ever-growing foodie in you. TFF is not just a festival, but also a mission to
+                    let
+                    food break barriers and make everyone happy on a common stage. We are a journey,
+                    ever-growing
+                    indulging masses in merry-making. Come, experience edible infinity.</p>
             </div>
         </div>
 
@@ -1115,9 +1110,7 @@
 
         
         <%- include('partials/footer.ejs') %>
-        
 
-      </div>
 
     <script defer src="/js/report.js"></script>
     <script defer src="/js/groupCount.js"></script>
@@ -1391,156 +1384,13 @@
         </div>
     </div>
     <% } %>
-<div class="popup pop-up_about" id="popup_about">
-        <div class="popup1_content" style="display: flex; height: 100%;">
-            <div class="popup1_left" style="width: 150%;">
-                <img src="/img/popup.png" alt="Grabzy poster" class="popup1_img">
-            </div>
-            <div class="popup1_right">
-                <div class="popup_cross" id="popup_cross_about" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
-                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Join our exclusive <span style="color:#d10024">Social</span> channels</p>
-                <p class="pop-up_about_font">Welcome to Grabzy, your number one source for buying products. We're dedicated to providing you the very best of deals, with an emphasis on discount, your liking, and newest trends.<br>
-                <p class="pop-up_about_font">We hope you enjoy our deals as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us. </p>
-                
-                <div style="display: flex; justify-content: space-around; align-items: center;">
-                    <div style="display: flex;">
-                      <div style="display: flex;justify-content:center"><a href="https://chat.whatsapp.com/IshaomwRwCpF8FuwsWs6nD" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
-                    </div>
-                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzyofficial" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
-                </div>
-            
-            </div>
-        </div>
-    </div>
-    <div class="popup pop-up_content" id="popup_contact">
-        <div class="popup1_content" style="display: flex; height: 100%;">
-            <div class="popup1_left" style="width: 65%;">
-                <img src="/img/popup.png" alt="Grabzy poster" class="popup1_img_content">
-            </div>
-            <div class="popup1_right">
-                <div class="popup_cross" id="popup_cross_contact" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
-                <p class="pop-up_content_heading" id="newsletter_heading" > <span style="color:#d10024">Contact Us</span></p>
-                <p class="pop-up_content_subheading" > <strong>We would love to receive your feedback and product suggestions </strong> </p>
-                <p  class="pop-up_content_text" class="pop-up_about_font" style="font-size: 1.5rem !important;"> <strong>Email: </strong> <span>xyz@gmail.com</span></p>
-                <p class="pop-up_content_text" style="font-size: 1.5rem !important;"> <strong>Numbers: </strong> <span> +91-8872703300,+91-8556881616</span></p>
-                <p class="pop-up_content_text" style="font-size: 1.5rem !important;"> <strong>Timings: </strong><span></span>Monday-Sunday 9AM-9PM </span></p>
-                
-                <div class="pop-up_content_buttons-bar" style="display: flex; justify-content: space-around; align-items: center;">
-                    <div style="display: flex;">
-                      <div style="display: flex;justify-content:center"><a href="https://chat.whatsapp.com/IshaomwRwCpF8FuwsWs6nD" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'W', 20);" style="background-color: #3ADA57; border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 0.2rem; color: white; border: none; padding: 0.3rem 1rem;"><i class="fa fa-whatsapp" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
-                    </div>
-                    <div style="display: flex;justify-content:center; color: white; border: none;"><a href="https://t.me/grabzyofficial" id="aTag"><button onclick="incrementGC(); setCookie('Joined', 'T', 20)" style="background-color: rgb(45,160,214); border-radius: 5%; font-size: 2rem; display: flex; align-items: center; margin-left: 3rem; padding: 0.3rem 1rem"><i class="fa fa-telegram" style="font-size: 4rem;"></i>&nbsp Join</button></a></div>
-                </div>
-            
-            </div>
-        </div>
-    </div>
-    <div class="popup" id="popup_terms" style="display: none; height: 30rem; width: 55rem;">          
-        <div class="popup1_content">
-            <div class="popup1_right">
-                <div class="popup_cross" id="popup_cross_terms" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
-                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Terms and Conditions</p>
-                <div class="popup_scroll_content">
-                    <p>Grabzy Inc. operates the grabzy.in website, which provides you third-party product recommendations and deals.</p>
-                    <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the grabzy.in website.</p>
-                    <p>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
-                    <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at grabzy.in, unless otherwise defined in this Privacy Policy.</p>
-                    <h2>Information Collection and Use</h3>
-                    <p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</p>
-                    <h2>Log Data</h2>
-                    <p>We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol (“IP”) address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
-                    <h2>Cookies</h3>
-                    <p>Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.</p>
-                    <p>Our website uses these “cookies” to collection information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.</p>
-                    <h2>Service Providers</h2>
-                    <p>We may employ third-party companies and individuals due to the following reasons:
-                        • To facilitate our Service; 
-                        • To provide the Service on our behalf; 
-                        • To perform Service-related services; or 
-                        • To assist us in analyzing how our Service is used.</p>
-                    <p>We want to inform our Service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-                    <h2>Security</h2>
-                    <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-                    <h2>Links to Other Sites</h2>
-                    <p>Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-                    <h2>Children's Privacy</h2>
-                    <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
-                    <h2>Changes to This Privacy Policy</h2>
-                    <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this policy periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-                </div> 
-            </div>
-        </div>
-    </div><div class="popup" id="popup_privacy" style="display: none; height: 30rem; width: 55rem;">
-        <div class="popup1_content">
-            <div class="popup1_right">
-                <div class="popup_cross" id="popup_cross_privacy" style="font-size: 3rem; position: absolute; top: 0; right: 1.5%; line-height: 1;" onclick="setCookie('NotJoined', 'N', 3);">&times;</div>
-                <p id="newsletter_heading" style="font-size: 2.5rem !important;">Privacy Policy</p>
-                <div class="popup_scroll_content">
-                    <p>Grabzy Inc. operates the grabzy.in website, which provides you third-party product recommendations and deals.</p>
-                    <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the grabzy.in website.</p>
-                    <p>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
-                    <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at grabzy.in, unless otherwise defined in this Privacy Policy.</p>
-                    <h2>Information Collection and Use</h3>
-                    <p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</p>
-                    <h2>Log Data</h2>
-                    <p>We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol (“IP”) address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
-                    <h2>Cookies</h3>
-                    <p>Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.</p>
-                    <p>Our website uses these “cookies” to collection information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.</p>
-                    <h2>Service Providers</h2>
-                    <p>We may employ third-party companies and individuals due to the following reasons:
-                        • To facilitate our Service; 
-                        • To provide the Service on our behalf; 
-                        • To perform Service-related services; or 
-                        • To assist us in analyzing how our Service is used.</p>
-                    <p>We want to inform our Service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-                    <h2>Security</h2>
-                    <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-                    <h2>Links to Other Sites</h2>
-                    <p>Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-                    <h2>Children's Privacy</h2>
-                    <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
-                    <h2>Changes to This Privacy Policy</h2>
-                    <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this policy periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-                </div> 
-            </div>
-        </div>
-    </div>
+
+    
     <script src="/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <!-- <script src="/vendor/jquery/jquery-3.5.1.min.js"></script>
     <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
     <script defer src="/vendor/bootstrap/bootstrap.min.js"></script> -->
-    <script>
-function about(){
-    document.getElementById("popup_about").style.display = "block";
-}
-function privacy(){
-    document.getElementById("popup_privacy").style.display = "block";
-}
-function terms(){
-    document.getElementById("popup_terms").style.display = "block";
-}
-function contact(){
-    document.getElementById("popup_contact").style.display = "block";
-}
-document.getElementById("popup_cross_about").addEventListener("click",()=>{
-    document.getElementById("popup_about").style.display = "none";
-})
-document.getElementById("popup_cross_privacy").addEventListener("click",()=>{
-    document.getElementById("popup_privacy").style.display = "none";
-})
-document.getElementById("popup_cross_terms").addEventListener("click",()=>{
-    document.getElementById("popup_terms").style.display = "none";
-})
-document.getElementById("popup_cross_contact").addEventListener("click",()=>{
-    document.getElementById("popup_contact").style.display = "none";
-})
-
-    </script>
+    
     <script>
         function setCookie(cname, cvalue, exdays) {
             var d = new Date();
@@ -1572,6 +1422,15 @@ document.getElementById("popup_cross_contact").addEventListener("click",()=>{
             if (cookie) {
                 document.getElementById("popup_whatsapp_telegram").style.display = "none";
             }
+        }
+    </script>
+
+    <script>
+        function showNewsBox () {
+            document.getElementById("popup_news3").style.display = "block";
+        }
+        function hideNewsBox () {
+            document.getElementById("popup_news3").style.display = "none";
         }
     </script>
 

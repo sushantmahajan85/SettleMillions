@@ -107,11 +107,6 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     width: 88%;
-
-    @include respond(phone) {
-      -webkit-line-clamp: 1;
-    }
-
     color: $heading-color;
   }
   &_price {

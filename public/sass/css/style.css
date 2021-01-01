@@ -2432,15 +2432,6 @@ figure {
     -webkit-box-orient: vertical;
     width: 88%;
     color: #171722; }
-    @media (max-width: 37.5em) {
-      .deal-deets_name {
-        -webkit-line-clamp: 1; } }
-    @media (max-width: 1380px) {
-      .deal-deets_name .p {
-        font-size: 2rem; }
-      .deal-deets_name .para {
-        font-size: 1.5rem;
-        margin-right: 1rem; } }
   .deal-deets_price {
     padding: 0.5rem 1rem 0rem 1rem;
     list-style: none;

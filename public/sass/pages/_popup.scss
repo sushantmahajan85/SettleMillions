@@ -253,6 +253,7 @@
     display: table;
     border-radius: inherit;
     padding: 2rem 3rem;
+    font-size: 14px;
   }
   &_left {
     width: 33.33333333334%;
@@ -318,6 +319,20 @@
     @include respond(tab-port) {
       text-align: center;
     }
+  }
+  &_button_container {
+    background-color: white;
+    text-align: center;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  &_button {
+    color: white;
+    background-color: #d10024;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
   }
 }
 

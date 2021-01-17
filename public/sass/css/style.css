@@ -1420,8 +1420,7 @@ body {
   flex: 0 0 25%;
   flex-wrap: wrap;
   padding-top: 3.5rem;
-  justify-content: center;
-  height: 100%; }
+  justify-content: center; }
   @media (max-width: 37.5em) {
     .trending {
       margin-left: 3rem;
@@ -2434,7 +2433,7 @@ figure {
     color: #171722; }
     @media (max-width: 37.5em) {
       .deal-deets_name {
-        -webkit-line-clamp: 1; } }
+        -webkit-line-clamp: 2; } }
     @media (max-width: 1380px) {
       .deal-deets_name .p {
         font-size: 2rem; }
@@ -6115,7 +6114,8 @@ Down
   border-radius: 10px;
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
   display: none;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  background-color: white; }
   .popup_news_content {
     opacity: 1;
     background-color: white;
@@ -7858,7 +7858,7 @@ div#GoogeSigninButton {
   @media (max-width: 1500px) {
     .footer {
       margin-left: 0rem;
-      padding-left: 23%; } }
+      padding-left: 16%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }
@@ -7868,7 +7868,7 @@ div#GoogeSigninButton {
   @media (max-width: 1380px) {
     .footer {
       margin-left: 0rem;
-      padding-left: 17%; } }
+      padding-left: 13%; } }
   @media (max-width: 1380px) {
     .footer .p {
       font-size: 2rem; }

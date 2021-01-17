@@ -10,7 +10,7 @@ const exec = require("child_process").exec;
 const url = require("url");
 const { del } = require("request");
 const Review = require("../schema/models/reviewModel");
-const RecommendedDeal =  require("../schema/models/dealRecommendations");
+const RecommendedDeal = require("../schema/models/dealRecommendations");
 
 const spawn = require("child_process").spawn;
 
@@ -34,12 +34,10 @@ let rec5 = "";
 
 exports.calcul = catchAsync(async (req, res) => {
   // const tempideals = await Deal.find();
-
   // for (var deal of tempideals) {
   //   var now = new Date(Date.now());
   //   var tem = (now.getTime() - 1000000000000) / 3600000;
   //   tem = deal.views / tem;
-
   //   await Deal.findByIdAndUpdate({ _id: deal._id }, { trendRatio: tem });
   // }
 });
@@ -48,7 +46,7 @@ exports.shortshort = catchAsync(async (req, res) => {
   const deal = await Deal.findOne({ short: req.params.short });
 
   if (deal) {
-    res.status(200).render('shortid',{deal});
+    res.status(200).render("shortid", { deal });
     // res.redirect(deal.long.split("grabzy.in")[1]);
   }
 });
@@ -95,19 +93,19 @@ exports.reset = (req, res) => {
 };
 
 exports.getLoginForm = (req, res) => {
-  const processPython = spawn('python', ['./model_creation.py']);
+  const processPython = spawn("python", ["./model_creation.py"]);
 
-  processPython.stdout.on('data', (data) => {
+  processPython.stdout.on("data", (data) => {
     console.log(`${data}`);
   });
-  
+
   res.status(200).render("login");
 };
 
 exports.getSignupForm = (req, res) => {
-  const processPython = spawn('python', ['./model_creation.py']);
+  const processPython = spawn("python", ["./model_creation.py"]);
 
-  processPython.stdout.on('data', (data) => {
+  processPython.stdout.on("data", (data) => {
     console.log(`${data}`);
   });
 
@@ -345,20 +343,18 @@ exports.category = catchAsync(async (req, res) => {
 });
 
 exports.mainPage = catchAsync(async (req, res) => {
-  const processPython = spawn('python', ['./model_creation.py']);
+  const processPython = spawn("python", ["./model_creation.py"]);
 
-  processPython.stdout.on('data', (data) => {
+  processPython.stdout.on("data", (data) => {
     console.log(`${data}`);
   });
-
-  
 
   if (req.query.dealOps) {
-    const processPython = spawn('python', ['./model_creation.py']);
+    const processPython = spawn("python", ["./model_creation.py"]);
 
-  processPython.stdout.on('data', (data) => {
-    console.log(`${data}`);
-  });
+    processPython.stdout.on("data", (data) => {
+      console.log(`${data}`);
+    });
     let joChahiye = req.query.dealOps.split("/");
 
     // if (joChahiye[0] == "report") {
@@ -383,11 +379,11 @@ exports.mainPage = catchAsync(async (req, res) => {
   const user = await User.findById(req.logged);
 
   if (req.logged) {
-    const process = spawn('python', ['./user_recommender.py',req.logged._id]);
+    const process = spawn("python", ["./user_recommender.py", req.logged._id]);
 
-  process.stdout.on('data', (data) => {
-    console.log(`${data}`);
-  });
+    process.stdout.on("data", (data) => {
+      console.log(`${data}`);
+    });
     if (req.cookies.one !== undefined) {
       user.cookies[0] = req.cookies.one.id;
 
@@ -404,8 +400,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user + 
-        " " + 
+        req.cookies.one.user +
+        " " +
         req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
@@ -429,8 +425,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user + 
-        " " + 
+        req.cookies.two.user +
+        " " +
         req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
@@ -453,8 +449,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user + 
-        " " + 
+        req.cookies.three.user +
+        " " +
         req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
@@ -477,8 +473,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user + 
-        " " + 
+        req.cookies.four.user +
+        " " +
         req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
@@ -501,8 +497,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user + 
-        " " + 
+        req.cookies.five.user +
+        " " +
         req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
@@ -529,8 +525,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user + 
-        " " + 
+        req.cookies.one.user +
+        " " +
         req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
@@ -553,8 +549,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user + 
-        " " + 
+        req.cookies.two.user +
+        " " +
         req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
@@ -576,8 +572,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user + 
-        " " + 
+        req.cookies.three.user +
+        " " +
         req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
@@ -599,8 +595,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user + 
-        " " + 
+        req.cookies.four.user +
+        " " +
         req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
@@ -622,8 +618,8 @@ exports.mainPage = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user + 
-        " " + 
+        req.cookies.five.user +
+        " " +
         req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
@@ -696,12 +692,12 @@ exports.mainPage = catchAsync(async (req, res) => {
     // const newlyJoined = await User.find();
     // const topUsers = await User.find().sort([["rank", -1]]);
 
-    const apnaUser = await User.findById("5fe39ecba499c3417826e1cf");
+    const apnaUser = await User.findById("5fee4472ee18af49ce76138c");
     // console.log(apnaUser);
 
     if (apnaUser.groupCount > 0 && apnaUser.groupCount % 270 == 0) {
       await User.findByIdAndUpdate(
-        { _id: "5fe39ecba499c3417826e1cf" },
+        { _id: "5fee4472ee18af49ce76138c" },
         { groupCount: 0, $inc: { numberOfGroups: 1 } }
       );
     }
@@ -746,7 +742,7 @@ exports.mainPage = catchAsync(async (req, res) => {
       subs,
       yesNo,
       news,
-      page, 
+      page,
     });
 
     // for (var deal of deals) {
@@ -774,7 +770,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
       await Deal.findOneAndDelete({ _id: joChahiye[0] });
     }
   }
-  
+
   let cooCount = 0;
   let recentlyViewed = [];
   if (req.logged) {
@@ -795,8 +791,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user + 
-        " " + 
+        req.cookies.one.user +
+        " " +
         req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
@@ -820,8 +816,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user + 
-        " " + 
+        req.cookies.two.user +
+        " " +
         req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
@@ -844,8 +840,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user + 
-        " " + 
+        req.cookies.three.user +
+        " " +
         req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
@@ -868,8 +864,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user + 
-        " " + 
+        req.cookies.four.user +
+        " " +
         req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
@@ -892,8 +888,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user + 
-        " " + 
+        req.cookies.five.user +
+        " " +
         req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
@@ -920,8 +916,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.one.category +
         " " +
-        req.cookies.one.user + 
-        " " + 
+        req.cookies.one.user +
+        " " +
         req.cookies.one._id;
       if (req.cookies.one.tags) {
         for (var i = 0; i < Object.keys(req.cookies.one.tags).length; i++) {
@@ -944,8 +940,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.two.category +
         " " +
-        req.cookies.two.user + 
-        " " + 
+        req.cookies.two.user +
+        " " +
         req.cookies.two._id;
       if (req.cookies.two.tags) {
         for (var i = 0; i < Object.keys(req.cookies.two.tags).length; i++) {
@@ -967,8 +963,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.three.category +
         " " +
-        req.cookies.three.user + 
-        " " + 
+        req.cookies.three.user +
+        " " +
         req.cookies.three._id;
       if (req.cookies.three.tags) {
         for (var i = 0; i < Object.keys(req.cookies.three.tags).length; i++) {
@@ -990,8 +986,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.four.category +
         " " +
-        req.cookies.four.user + 
-        " " + 
+        req.cookies.four.user +
+        " " +
         req.cookies.four._id;
       if (req.cookies.four.tags) {
         for (var i = 0; i < Object.keys(req.cookies.four.tags).length; i++) {
@@ -1013,8 +1009,8 @@ exports.getMemberData = catchAsync(async (req, res) => {
         " " +
         req.cookies.five.category +
         " " +
-        req.cookies.five.user + 
-        " " + 
+        req.cookies.five.user +
+        " " +
         req.cookies.five._id;
       if (req.cookies.five.tags) {
         for (var i = 0; i < Object.keys(req.cookies.five.tags).length; i++) {
@@ -1025,7 +1021,6 @@ exports.getMemberData = catchAsync(async (req, res) => {
 
     rec = rec1 + " " + rec2 + " " + rec3 + " " + rec4 + " " + rec5;
   }
-
 
   const dealTime = await Deal.find({ user: req.params.id });
   const numDeals = dealTime.length;
@@ -1061,6 +1056,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
   //   //{ trendRatio: { $gte: 4 } }
   // ).sort({ score: { $meta: "textScore" } });
   const userId = req.params.id;
+  const channelUser = await User.findById(req.params.id);
   if (req.logged) {
     const xyz = await User.findById(req.logged.id);
 
@@ -1103,6 +1099,7 @@ exports.getMemberData = catchAsync(async (req, res) => {
     numSub,
     // subModel,
     subs,
+    channelUser,
   });
 });
 
@@ -1121,9 +1118,9 @@ exports.recently = catchAsync(async (req, res) => {
 
 exports.updateUserSettings = catchAsync(async (req, res) => {
   const user = await User.findById(req.user);
-  const processPython = spawn('python', ['./model_creation.py']);
+  const processPython = spawn("python", ["./model_creation.py"]);
 
-  processPython.stdout.on('data', (data) => {
+  processPython.stdout.on("data", (data) => {
     console.log(`${data}`);
   });
   // const xyz = await User.findById(req.user).populate({
@@ -1215,14 +1212,17 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   const deal = await Deal.findById({ _id: req.params.dealId }).populate({
     path: "reviews",
   });
-  var fullUrl ="https://" + req.get("host") + "/" + deal.short;
+  var fullUrl = "https://" + req.get("host") + "/" + deal.short;
   if (!deal) {
     return next(new appError("No Deal With That Id", 404));
   }
 
-  const processPython = spawn('python', ['./recommender.py', req.params.dealId]);
+  const processPython = spawn("python", [
+    "./recommender.py",
+    req.params.dealId,
+  ]);
 
-  processPython.stdout.on('data', (data) => {
+  processPython.stdout.on("data", (data) => {
     console.log(`${data}`);
   });
 
@@ -1409,12 +1409,16 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   //   //{ trendRatio: { $gte: 4 } }
   // ).sort({ score: { $meta: "textScore" } });
 
-  const recommendationsArray = await RecommendedDeal.findOne({ prod_id: req.params.dealId });
+  const recommendationsArray = await RecommendedDeal.findOne({
+    prod_id: req.params.dealId,
+  });
   // console.log(recommendationsArray);
 
   let reco = new Array();
-  if(recommendationsArray){
-    reco = await Deal.find({ _id: { $in: recommendationsArray.recommendations } });
+  if (recommendationsArray) {
+    reco = await Deal.find({
+      _id: { $in: recommendationsArray.recommendations },
+    });
   }
 
   console.log(reco);

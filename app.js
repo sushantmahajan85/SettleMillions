@@ -9,9 +9,9 @@ const cookieParser = require("cookie-parser");
 
 const spawn = require("child_process").spawn;
 
-const processPython = spawn('python', ['./model_creation.py']);
+const processPython = spawn("python", ["./model_creation.py"]);
 
-processPython.stdout.on('data', (data) => {
+processPython.stdout.on("data", (data) => {
   console.log(`${data}`);
 });
 
@@ -91,7 +91,7 @@ app.use(cookieParser());
 //     next();
 // });
 
-app.use(globalErrorHandler);
+// app.use(globalErrorHandler);
 
 app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/users", userRouter);
@@ -104,9 +104,9 @@ app.use("/api/v1/subscribe", subscriberRouter);
 app.use("/api/v1/testing", testingRouter);
 app.use("/", viewRouter);
 app.all("*", (req, res, next) => {
-  res.status(200).render('error');
+  res.status(200).render("error");
 });
-app.use(globalErrorHandler);
+// app.use(globalErrorHandler);
 const port = process.env.PORT;
 app.listen(port || 4000, () => {
   console.log("Listening bro");

@@ -236,16 +236,10 @@
   z-index: 99999999999999999;
   border-radius: 10px;
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
-  // opacity: 0;
-  // visibility: hidden;
   display: none;
   transition: all 0.3s;
+  background-color: white;
 
-  // &:target {
-  //   opacity: 1;
-  //   // animation: cssAnimation 5s forwards;
-  //   visibility: visible;
-  // }
   &_content {
     opacity: 1;
     background-color: white;

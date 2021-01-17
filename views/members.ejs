@@ -31,7 +31,7 @@
     <div class="cover">
       <div class="cover_pic">
         <div class="cover_aff-pic">
-          <% if (user.photo) { %>
+          <% if (channelUser.photo) { %>
             <img class="mep_pic-user"
             src=<%=`/img/users/${user.photo}`%> alt="User photo" />
             
@@ -46,7 +46,7 @@
             </a>
             </div>
         </div>  
-        <div class="cover_aff-name"><%= user.channelName %>  <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
+        <div class="cover_aff-name"><%= channelUser.channelName %>  <i class="cover_aff-name-tag fas fa-check-circle"></i></div>
         <div class="cover_aff-subs"><%=`${numSub} subscribers`%></div>
 
         <!-- <div class="cover_aff-bio">• Add your bio here •</div> -->

@@ -2175,7 +2175,6 @@ figure {
   padding-top: 1rem; }
 
 #mybutton {
-  background-color: white;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -2446,6 +2445,7 @@ figure {
     font-size: 2rem; }
   .deal-deets_buy {
     position: relative;
+    border-color: oldlace;
     background-color: #ef233c;
     text-align: center;
     height: 5rem;
@@ -2516,6 +2516,7 @@ figure {
   .deal-deets_save {
     position: relative;
     background-color: #ef233c;
+    border-color: oldlace;
     text-align: center;
     height: 5rem;
     text-transform: uppercase;
@@ -3056,7 +3057,11 @@ figure {
   font-weight: 600;
   text-transform: capitalize;
   margin-right: 1rem;
-  margin-bottom: -0.5rem; }
+  margin-bottom: -0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
   @media (max-width: 22.2em) {
     .deal_box_name {
       font-size: 2.2rem !important; } }
@@ -6675,7 +6680,7 @@ Down
   background-color: #fbfcfc; }
 
 .deal_area {
-  height: 200rem;
+  height: 100%;
   padding-top: 6.5rem;
   margin-left: 12%; }
   @media (max-width: 75em) {

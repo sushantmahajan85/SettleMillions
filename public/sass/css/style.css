@@ -4448,10 +4448,14 @@ figure {
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   margin-top: 1rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
 
 .mep_deal-r1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #626567;
   margin-left: 0.3rem; }
   .mep_deal-r1-det {
@@ -4462,7 +4466,7 @@ figure {
       color: black; }
 
 .mep_deal-r2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #000;
   margin-left: 0.3rem;
   line-height: 2rem; }

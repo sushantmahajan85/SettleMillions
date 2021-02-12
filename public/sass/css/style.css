@@ -6675,7 +6675,7 @@ Down
   background-color: #fbfcfc; }
 
 .deal_area {
-  height: 200rem;
+  height: 100%;
   padding-top: 6.5rem;
   margin-left: 12%; }
   @media (max-width: 75em) {

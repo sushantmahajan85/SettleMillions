@@ -1419,7 +1419,7 @@ body {
   display: flex;
   flex: 0 0 25%;
   flex-wrap: wrap;
-  padding-top: 3.5rem;
+  padding-top: 0.5rem;
   justify-content: center; }
   @media (max-width: 37.5em) {
     .trending {
@@ -1895,7 +1895,7 @@ figure {
 .titles_main {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 2rem; }
+  margin: 4rem 2rem 2rem 2rem; }
   @media (max-width: 37.5em) {
     .titles_main {
       margin: 3rem 2rem 0rem 5rem; } }
@@ -4426,7 +4426,8 @@ figure {
 .mep_deal_area-content {
   margin-left: 3.5rem;
   width: 75rem;
-  padding-top: 1.5rem; }
+  padding-top: 0.5rem;
+  height: 100%; }
   @media (max-width: 37.5em) {
     .mep_deal_area-content {
       margin-left: 1.5rem;

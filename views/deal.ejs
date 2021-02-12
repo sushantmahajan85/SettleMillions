@@ -227,7 +227,7 @@
             <% } %>
         <!-- <img class="deal-deets_affiliate_pic" src="/images/aff_pic.png" alt="c"> -->
 
-        <a href="" class="deal-deets_user"> <%= postedBy.name %> </a>
+        <a href=<%= `/member/${postedBy.id}` %> class="deal-deets_user"> <%= postedBy.name %> </a>
         <% if (user) { %>
 
         <% if (log) { %>

@@ -4421,7 +4421,8 @@ figure {
 .mep_deal_area-content {
   margin-left: 3.5rem;
   width: 75rem;
-  padding-top: 1.5rem; }
+  padding-top: 0.5rem;
+  height: 100%; }
   @media (max-width: 37.5em) {
     .mep_deal_area-content {
       margin-left: 1.5rem;

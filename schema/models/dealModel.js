@@ -34,19 +34,10 @@ type: String
     views: {
       type: Number,
       default: 0,
-      // validate: {
-      //   validator: function kFormatter(el) {
-      //     return Math.abs(el) > 999
-      //       ? Math.sign(el) * (Math.abs(el) / 1000).toFixed(1) + "k"
-      //       : Math.sign(el) * Math.abs(el);
-      //   },
-      //   message: "Passwords Do Not Match",
-      // },
     },
     time: { type: Number, default: 0 },
     createdAt: {
       type: Number,
-      // default : Date.now()
     },
     titleDis: {
       type: String,

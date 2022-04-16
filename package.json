@@ -36,18 +36,11 @@
     "path": "^0.12.7",
     "pug": "^3.0.1",
     "require": "^2.4.20",
+    "sharp": "^0.30.3",
     "shortid": "^2.2.15",
     "simplebar": "^5.1.0",
     "url": "^0.11.0",
     "validator": "^13.7.0"
-  },
-  "devDependencies": {
-    "@popperjs/core": "^2.4.0",
-    "node-fetch": "^2.6.1",
-    "parcel": "^1.12.4",
-    "parcel-bundler": "^1.12.4",
-    "request": "^2.88.2",
-    "sharp": "^0.29.3"
   },
   "engines": {
     "node": "14.x"

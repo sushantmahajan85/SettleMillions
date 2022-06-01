@@ -11,7 +11,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "require": "^2.4.20",
     "require.js": "^1.0.0",
-    "sharp": "^0.25.2",
+    "sharp": "^0.30.5",
     "simplebar": "^5.1.0"
   },
   "devDependencies": {

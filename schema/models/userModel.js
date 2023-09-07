@@ -6,185 +6,185 @@ const random = require("../../utils/utils");
 const sendEmail = require("../../utils/email");
 
 const userSchema = new mongoose.Schema(
-    {
-        name: {
-            type: String,
-            required: [true, "Name is Required"],
-            trim: true,
-            maxLength: [20, "Name Too Large"],
-            minLength: [0, "Name Too Small"],
-            //validate: [validator.isAlpha, 'Tour Name Should Not Have Numbers']
-        },
-        channelName: {
-            type: String,
-            trim: true,
-            default: "Channel",
-        },
-        photo: { type: String },
-        email: {
-            type: String,
-            required: [true, "Email is Required"],
-            unique: true,
-            lowercase: true,
-            validate: [validator.isEmail, "Invalid Email"],
-        },
-        phoneNo: {
-            type: Number,
-            //maxLength: [10, 'Invalid Phone Number'], minLength: [10, 'Invalid Phone Number']
-        },
-        role: { type: String, enum: ["user", "admin"], default: "user" },
-        password: {
-            type: String,
-            required: [true, "Password is Required"],
-            minLength: [8, "Password Too Small"],
-            select: false,
-        },
-        gSignin: String,
-        passwordConfirm: {
-            type: String,
-            required: [true, "Comfirm Password is Required"],
-            minLength: [8, "Password Too Small"],
-            select: false,
-            validate: {
-                validator: function(el) {
-                    return el === this.password;
-                },
-                message: "Passwords Do Not Match",
-            },
-        },
-        passwordChangedAt: Date,
-        passwordResetToken: String,
-        passwordResetExpires: Date,
-        active: { type: Boolean, default: true, select: false },
-        verified: {
-            type: Boolean,
-            // required: true,
-            default: false,
-        },
-        verification_token: {
-            type: Number,
-            select: false,
-        },
-        rank: {
-            type: Number,
-            default: 100000,
-        },
-        rankLatest: {
-            type: Number,
-            default: 100000,
-        },
-        verification_token_time: {
-            type: Date,
-        },
-        rank_difference: Number,
-        cookies: Array,
-
-        r1: { type: String, default: "0" },
-        r2: { type: String, default: "0" },
-        r3: { type: String, default: "0" },
-        r4: { type: String, default: "0" },
-        r5: { type: String, default: "0" },
-        groupCount: Number,
-        numberOfGroups: Number,
-        id: String,
-        reportChannelCount: { type: Number, default: 0 },
+  {
+    name: {
+      type: String,
+      required: [true, "Name is Required"],
+      trim: true,
+      // maxLength: [20, "Name Too Large"],
+      // minLength: [0, "Name Too Small"],
+      //validate: [validator.isAlpha, 'Tour Name Should Not Have Numbers']
     },
-    { toJSON: { virtuals: true }, toObject: { virtuals: true } }
+    channelName: {
+      type: String,
+      trim: true,
+      default: "Channel",
+    },
+    photo: { type: String },
+    email: {
+      type: String,
+      // required: [true, "Email is Required"],
+      unique: true,
+      lowercase: true,
+      // validate: [validator.isEmail, "Invalid Email"],
+    },
+    phoneNo: {
+      type: Number,
+      //maxLength: [10, 'Invalid Phone Number'], minLength: [10, 'Invalid Phone Number']
+    },
+    role: { type: String, enum: ["user", "admin"], default: "user" },
+    password: {
+      type: String,
+      // required: [true, "Password is Required"],
+      // minLength: [8, "Password Too Small"],
+      select: false,
+    },
+    gSignin: String,
+    passwordConfirm: {
+      type: String,
+      // required: [true, "Comfirm Password is Required"],
+      // minLength: [8, "Password Too Small"],
+      select: false,
+      // validate: {
+      //     validator: function(el) {
+      //         return el === this.password;
+      //     },
+      //     message: "Passwords Do Not Match",
+      // },
+    },
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
+    active: { type: Boolean, default: true, select: false },
+    verified: {
+      type: Boolean,
+      // required: true,
+      default: false,
+    },
+    verification_token: {
+      type: Number,
+      select: false,
+    },
+    rank: {
+      type: Number,
+      default: 100000,
+    },
+    rankLatest: {
+      type: Number,
+      default: 100000,
+    },
+    verification_token_time: {
+      type: Date,
+    },
+    rank_difference: Number,
+    cookies: Array,
+
+    r1: { type: String, default: "0" },
+    r2: { type: String, default: "0" },
+    r3: { type: String, default: "0" },
+    r4: { type: String, default: "0" },
+    r5: { type: String, default: "0" },
+    groupCount: Number,
+    numberOfGroups: Number,
+    id: String,
+    reportChannelCount: { type: Number, default: 0 },
+  },
+  { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
 //userSchema.aggregate({$sort: {'rank': 1}});
 
 userSchema.virtual("likedDeals", {
-    ref: "LikedDeal",
-    foreignField: "user",
-    localField: "_id",
+  ref: "LikedDeal",
+  foreignField: "user",
+  localField: "_id",
 });
 userSchema.virtual("subscribers", {
-    ref: "Subscriber",
-    foreignField: "user",
-    localField: "_id",
+  ref: "Subscriber",
+  foreignField: "user",
+  localField: "_id",
 });
 
-userSchema.pre("save", async function(next) {
-    if (!this.isModified("password")) {
-        return next();
-    }
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    return next();
+  }
 
-    this.password = await bcrypt.hash(this.password, 12);
+  this.password = await bcrypt.hash(this.password, 12);
 
-    this.passwordConfirm = undefined;
+  this.passwordConfirm = undefined;
 
-    next();
+  next();
 });
 
-userSchema.pre("save", async function(next) {
-    // this.password = await bcrypt.hash(this.password, 12);
-    this.verification_token = random();
-    this.verification_token_time = Date.now() + 10 * 60 * 1000;
-    this.timeStamp = Date.now();
-    console.log(this._id);
-    this.id = this._id;
-    next();
+userSchema.pre("save", async function (next) {
+  // this.password = await bcrypt.hash(this.password, 12);
+  this.verification_token = random();
+  this.verification_token_time = Date.now() + 10 * 60 * 1000;
+  this.timeStamp = Date.now();
+  console.log(this._id);
+  this.id = this._id;
+  next();
 });
-userSchema.post("save", async function() {
-    const message = `Here is your 5 digit OTP : ${this.verification_token}`;
+userSchema.post("save", async function () {
+  const message = `Here is your 5 digit OTP : ${this.verification_token}`;
 
-    // await sendEmail({
-    //     email: this.email,
-    //     subject: 'your 5 digit otp valid for 10 mins only',
-    //     message
-    // });
-});
-
-userSchema.pre("save", function(next) {
-    if (!this.isModified("password") || this.isNew) {
-        return next();
-    }
-
-    this.passwordChangedAt = Date.now() - 1000;
-    next();
+  // await sendEmail({
+  //     email: this.email,
+  //     subject: 'your 5 digit otp valid for 10 mins only',
+  //     message
+  // });
 });
 
-userSchema.pre(/^find/, function(next) {
-    this.find({ active: { $ne: false } });
-    next();
+userSchema.pre("save", function (next) {
+  if (!this.isModified("password") || this.isNew) {
+    return next();
+  }
+
+  this.passwordChangedAt = Date.now() - 1000;
+  next();
 });
 
-userSchema.methods.verifyPassword = async function(
-    LoginPassword,
-    signUpPassword
+userSchema.pre(/^find/, function (next) {
+  this.find({ active: { $ne: false } });
+  next();
+});
+
+userSchema.methods.verifyPassword = async function (
+  LoginPassword,
+  signUpPassword
 ) {
-    return await bcrypt.compare(LoginPassword, signUpPassword);
+  return await bcrypt.compare(LoginPassword, signUpPassword);
 };
 
-userSchema.methods.changedPasswordAfter = function(JWTTimestamp) {
-    if (this.passwordChangedAt) {
-        const changedTimestamp = parseInt(
-            this.passwordChangedAt.getTime() / 1000,
-            10
-        );
+userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
+  if (this.passwordChangedAt) {
+    const changedTimestamp = parseInt(
+      this.passwordChangedAt.getTime() / 1000,
+      10
+    );
 
-        //console.log(changedTimestamp, JWTTimestamp);
+    //console.log(changedTimestamp, JWTTimestamp);
 
-        return JWTTimestamp < changedTimestamp;
-    }
+    return JWTTimestamp < changedTimestamp;
+  }
 
-    return false;
+  return false;
 };
 
-userSchema.methods.createPasswordResetToken = function() {
-    const resetToken = crypto.randomBytes(32).toString("hex");
+userSchema.methods.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString("hex");
 
-    this.passwordResetToken = crypto
-        .createHash("sha256")
-        .update(resetToken)
-        .digest("hex");
+  this.passwordResetToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
 
-    //console.log({ resetToken }, this.passwordResetToken);
+  //console.log({ resetToken }, this.passwordResetToken);
 
-    this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
 
-    return resetToken;
+  return resetToken;
 };
 
 // userSchema.methods.emailVerify = function () {

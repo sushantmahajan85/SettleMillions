@@ -1227,7 +1227,7 @@ exports.dealPage = catchAsync(async (req, res, next) => {
   });
 
   const cookieOptions = {
-    expires: new Date(
+    expiresIn: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
     ),
     // secure: true,

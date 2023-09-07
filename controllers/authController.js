@@ -62,8 +62,7 @@ exports.signUp = async (req, res) => {
           newz,
         },
       });
-    }else{
-
+    } else {
       //   /////////////////////////////////Error in Production/////////////////////////////////////////////
       //   try {
       //     const url = "amazon.in";
@@ -83,7 +82,7 @@ exports.signUp = async (req, res) => {
       });
       const token = signToken(newUser._id);
       const cookieOptions = {
-        expires: new Date(
+        expiresIn: new Date(
           Date.now() + process.env.JWT_COOKIE_EXPIRESIN * 24 * 60 * 60 * 1000
         ),
         // secure: true,
@@ -221,10 +220,7 @@ exports.login = async (req, res, next) => {
   // await new Email(user, url).sendWelcome();
   if (
     !user ||
-    !(await user.verifyPassword(
-      password,
-      user.password
-    )) /*||
+    !(await user.verifyPassword(password, user.password)) /*||
       !user.verified*/
   ) {
     return next(new AppError("No user found", 400));
@@ -281,7 +277,7 @@ exports.login = async (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
-  console.log('fdfdfdfdfdfd');
+  console.log("fdfdfdfdfdfd");
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 1),
     // secure: true,
